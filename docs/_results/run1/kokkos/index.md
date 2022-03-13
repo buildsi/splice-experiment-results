@@ -10,8 +10,8 @@ spack-test-pdf: spack-test-run1-kokkos.pdf
 spack-test-png: spack-test-run1-kokkos.png
 spack-test-svg: spack-test-run1-kokkos.svg
 results: results-list.json
-outcomes: {'splice-install-failed': 1, 'splice-success': 2, 'splice-concretization-failed': 3, 'rewiring-failed': 4}
-summary: {'splice-success': 711, 'splice-install-failed': 13, 'splice-concretization-failed': 1, 'rewiring-failed': 511, 'success-no-prediction': 0, 'predictions': {'spack-test': 711}, 'no-results-generated': 0, 'results-generated': 12, 'total-runs': 12}
+outcomes: {'splice-success': 1, 'splice-concretization-failed': 2, 'splice-install-failed': 3, 'rewiring-failed': 4}
+summary: {'splice-success': 711, 'splice-install-failed': 13, 'rewiring-failed': 511, 'splice-concretization-failed': 1, 'success-no-prediction': 0, 'predictions': {'spack-test': 711}, 'no-results-generated': 0, 'results-generated': 12, 'total-runs': 12}
 logs_existing: logs-existing.json
 
 maths: 1
