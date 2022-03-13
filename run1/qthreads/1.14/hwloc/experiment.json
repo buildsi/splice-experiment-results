@@ -1,0 +1,1073 @@
+[
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test byccbxxf5ne3dirmve4adckh4fc7in2u\n==> Testing package qthreads-1.14-fwseikk\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:10:01.044787] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:10:01.045421] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-fwseikkma7mfal6i5feiwsekit2hrnvj/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-fwseikkma7mfal6i5feiwsekit2hrnvj/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-f\n           wseikkma7mfal6i5feiwsekit2hrnvj/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-fwseikkma7mfal6i5feiwsekit2hrnvj/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-fwseikkma7mfal6i5feiwsekit2hr\n           nvj/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:10:01.188019] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:10:01.188554] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:10:01.409128] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:10:01.409666] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/byccbxxf5ne3dirmve4adckh4fc7in2u/qthreads-1.14-fwseikk-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /fwseik"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@master%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-master-cg2w6gnejsqvoxlzzkm4e3xyvdnsygz3/lib/libnetloc.so.0.0.0",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-master-cg2w6gnejsqvoxlzzkm4e3xyvdnsygz3/lib/libhwloc.so.0.0.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@master",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {},
+        "predictions": {},
+        "libs": {},
+        "experiment": "experiment",
+        "result": "splice-concretization-failed",
+        "success": false,
+        "splice": "hwloc@2.7.0",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test qbcqh3gkoczzcbm7bpkcppaxk56g5uwd\n==> Testing package qthreads-1.14-66udoq4\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:10:12.542477] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:10:12.543203] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-66udoq45z5fsyz3xbttlczw5gsnjbuci/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-66udoq45z5fsyz3xbttlczw5gsnjbuci/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-6\n           6udoq45z5fsyz3xbttlczw5gsnjbuci/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-66udoq45z5fsyz3xbttlczw5gsnjbuci/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-66udoq45z5fsyz3xbttlczw5gsnjb\n           uci/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:10:12.690846] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:10:12.691383] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:10:12.771180] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:10:12.771762] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/qbcqh3gkoczzcbm7bpkcppaxk56g5uwd/qthreads-1.14-66udoq4-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /66udoq"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@2.6.0%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-2.6.0-cxn7eow3mqe2pjeaz7u4tyw4xadzqtri/lib/libhwloc.so.15.5.1"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@2.6.0",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test lxr455lgrsll75pxazk2xaqkcsfxxeu4\n==> Testing package qthreads-1.14-a4kxmev\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:10:22.713502] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:10:22.714008] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-a4kxmevjat55f237qqphugkadr6jnhbb/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-a4kxmevjat55f237qqphugkadr6jnhbb/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-a\n           4kxmevjat55f237qqphugkadr6jnhbb/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-a4kxmevjat55f237qqphugkadr6jnhbb/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-a4kxmevjat55f237qqphugkadr6jn\n           hbb/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:10:22.844731] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:10:22.845249] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:10:22.920413] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:10:22.920922] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/lxr455lgrsll75pxazk2xaqkcsfxxeu4/qthreads-1.14-a4kxmev-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /a4kxme"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@2.5.0%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-2.5.0-orqyrrj22337ebbgbjcz35fj3ztwdi4a/lib/libhwloc.so.15.5.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@2.5.0",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test x56y3lilyxvvh5qn6blmi7dqxnw7vkwi\n==> Testing package qthreads-1.14-tgyd2f6\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:10:34.104865] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:10:34.105552] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-tgyd2f6pwp6j47gvcu7lwjj2jt3pgktt/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-tgyd2f6pwp6j47gvcu7lwjj2jt3pgktt/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-t\n           gyd2f6pwp6j47gvcu7lwjj2jt3pgktt/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-tgyd2f6pwp6j47gvcu7lwjj2jt3pgktt/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-tgyd2f6pwp6j47gvcu7lwjj2jt3pg\n           ktt/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:10:34.252527] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:10:34.253078] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:10:34.333009] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:10:34.333508] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/x56y3lilyxvvh5qn6blmi7dqxnw7vkwi/qthreads-1.14-tgyd2f6-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /tgyd2f"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@2.4.1%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-2.4.1-yegeqk5hdqrb5br2hseff42kheb4rptd/lib/libhwloc.so.15.4.1"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@2.4.1",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test p4i6o62ymol6vgl5snf2l3h6i74ikm6a\n==> Testing package qthreads-1.14-b56iimn\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:10:45.974433] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:10:45.975085] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-b56iimn65ednahdrlil5m3ctju4tpjcn/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-b56iimn65ednahdrlil5m3ctju4tpjcn/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-b\n           56iimn65ednahdrlil5m3ctju4tpjcn/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-b56iimn65ednahdrlil5m3ctju4tpjcn/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-b56iimn65ednahdrlil5m3ctju4tp\n           jcn/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:10:46.121180] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:10:46.121715] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:10:46.202872] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:10:46.203360] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/p4i6o62ymol6vgl5snf2l3h6i74ikm6a/qthreads-1.14-b56iimn-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /b56iim"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@2.4.0%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-2.4.0-flmcnhyohuatigquxgb5y65kvjzaorcn/lib/libhwloc.so.15.4.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@2.4.0",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {},
+        "predictions": {},
+        "libs": {},
+        "experiment": "experiment",
+        "result": "splice-concretization-failed",
+        "success": false,
+        "splice": "hwloc@2.3.0",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "original": []
+        },
+        "predictions": {},
+        "libs": {
+            "dep": [],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                },
+                {
+                    "dep": "libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libpciaccess-0.16-vzg6r6gyrqyboudgxfqbdwe36epu6s7s/lib/libpciaccess.so.0.11.1"
+                    ]
+                },
+                {
+                    "dep": "libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libxml2-2.9.12-rs3llxgrrh537ywuyzjxyebuzo3gnxpt/lib/libxml2.so.2.9.12"
+                    ]
+                },
+                {
+                    "dep": "ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libformw.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libpanelw.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libform.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libpanel.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libncursesw.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libtinfo.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libncurses++.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libncurses++w.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libmenu.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libncurses.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libmenuw.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libtinfow.so.6.2"
+                    ]
+                },
+                {
+                    "dep": "pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0"
+                    ]
+                },
+                {
+                    "dep": "libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libtool-2.4.6-v5tvhyer33lc2hhisqrztia7bmreecdr/lib/libltdl.so.7.3.1"
+                    ]
+                },
+                {
+                    "dep": "util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": []
+                },
+                {
+                    "dep": "libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libiconv-1.16-glggocpnh7m2dgmtu4fedhbfeessepbe/lib/libiconv.so.2.6.1",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libiconv-1.16-glggocpnh7m2dgmtu4fedhbfeessepbe/lib/libcharset.so.1.0.0"
+                    ]
+                },
+                {
+                    "dep": "xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/xz-5.2.5-d536jz4ora4tt45q72d2lklqr3dqx34m/lib/liblzma.so.5.2.5"
+                    ]
+                },
+                {
+                    "dep": "zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/zlib-1.2.11-su2ldy5ofm424qnly3kitbbdgwovpfk4/lib/libz.so.1.2.11"
+                    ]
+                },
+                {
+                    "dep": "m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": []
+                },
+                {
+                    "dep": "libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libsigsegv-2.13-7rh3iftx6wqudr26scqm7nyzm4xxgqcc/lib/libsigsegv.so.2.0.6"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "rewiring-failed",
+        "success": false,
+        "splice": "hwloc@2.2.0",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "original": []
+        },
+        "predictions": {},
+        "libs": {
+            "dep": [],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                },
+                {
+                    "dep": "libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libpciaccess-0.16-vzg6r6gyrqyboudgxfqbdwe36epu6s7s/lib/libpciaccess.so.0.11.1"
+                    ]
+                },
+                {
+                    "dep": "libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libxml2-2.9.12-rs3llxgrrh537ywuyzjxyebuzo3gnxpt/lib/libxml2.so.2.9.12"
+                    ]
+                },
+                {
+                    "dep": "ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libformw.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libpanelw.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libform.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libpanel.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libncursesw.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libtinfo.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libncurses++.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libncurses++w.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libmenu.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libncurses.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libmenuw.so.6.2",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib/libtinfow.so.6.2"
+                    ]
+                },
+                {
+                    "dep": "pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0"
+                    ]
+                },
+                {
+                    "dep": "libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libtool-2.4.6-v5tvhyer33lc2hhisqrztia7bmreecdr/lib/libltdl.so.7.3.1"
+                    ]
+                },
+                {
+                    "dep": "util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": []
+                },
+                {
+                    "dep": "libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libiconv-1.16-glggocpnh7m2dgmtu4fedhbfeessepbe/lib/libiconv.so.2.6.1",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libiconv-1.16-glggocpnh7m2dgmtu4fedhbfeessepbe/lib/libcharset.so.1.0.0"
+                    ]
+                },
+                {
+                    "dep": "xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/xz-5.2.5-d536jz4ora4tt45q72d2lklqr3dqx34m/lib/liblzma.so.5.2.5"
+                    ]
+                },
+                {
+                    "dep": "zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/zlib-1.2.11-su2ldy5ofm424qnly3kitbbdgwovpfk4/lib/libz.so.1.2.11"
+                    ]
+                },
+                {
+                    "dep": "m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": []
+                },
+                {
+                    "dep": "libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libsigsegv-2.13-7rh3iftx6wqudr26scqm7nyzm4xxgqcc/lib/libsigsegv.so.2.0.6"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "rewiring-failed",
+        "success": false,
+        "splice": "hwloc@2.1.0",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test aoci3ya34gtrgmv4sqpoviaai4z5ktag\n==> Testing package qthreads-1.14-4bfkfnn\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:10:56.387952] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:10:56.388492] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-4bfkfnn7elymb34v3zousdjv3jsgtmfm/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-4bfkfnn7elymb34v3zousdjv3jsgtmfm/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-4\n           bfkfnn7elymb34v3zousdjv3jsgtmfm/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-4bfkfnn7elymb34v3zousdjv3jsgtmfm/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-4bfkfnn7elymb34v3zousdjv3jsgt\n           mfm/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:10:56.535505] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:10:56.536235] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:10:56.651010] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:10:56.651446] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/aoci3ya34gtrgmv4sqpoviaai4z5ktag/qthreads-1.14-4bfkfnn-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /4bfkfn"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@2.0.2%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-2.0.2-tucyvjmba4ei7c6tmddz3pvo2hebpsww/lib/libhwloc.so.15.0.1"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@2.0.2",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test e6sxupisg2t3lbafm6qqmbxiqlidobcc\n==> Testing package qthreads-1.14-yexi4ol\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:11:08.759754] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:11:08.760348] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-yexi4olglzhsudsuzqilhoh4jgvqrszu/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-yexi4olglzhsudsuzqilhoh4jgvqrszu/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-y\n           exi4olglzhsudsuzqilhoh4jgvqrszu/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-yexi4olglzhsudsuzqilhoh4jgvqrszu/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-yexi4olglzhsudsuzqilhoh4jgvqr\n           szu/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:11:08.912669] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:11:08.913130] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:11:08.988814] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:11:08.989254] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/e6sxupisg2t3lbafm6qqmbxiqlidobcc/qthreads-1.14-yexi4ol-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /yexi4o"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@2.0.1%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-2.0.1-3awzfh7e27lns7lq24nlc4uh2oqdppwh/lib/libhwloc.so.15.0.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@2.0.1",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test bukfiyzqpqopu4d4wdwvs5sdvkbqtrzy\n==> Testing package qthreads-1.14-f56t2d7\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:11:20.253215] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:11:20.253806] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-f56t2d7mz6azgbwwgbiw6xe3zkezun6r/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-f56t2d7mz6azgbwwgbiw6xe3zkezun6r/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-f\n           56t2d7mz6azgbwwgbiw6xe3zkezun6r/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-f56t2d7mz6azgbwwgbiw6xe3zkezun6r/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-f56t2d7mz6azgbwwgbiw6xe3zkezu\n           n6r/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:11:20.398689] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:11:20.399276] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:11:20.475985] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:11:20.476483] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/bukfiyzqpqopu4d4wdwvs5sdvkbqtrzy/qthreads-1.14-f56t2d7-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /f56t2d"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@2.0.0%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-2.0.0-hdduqa2yeqmedsam3dx7mgiv4t6qkqin/lib/libhwloc.so.12.0.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@2.0.0",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test nvaum44bdvoyux3who2npike4dqfjykz\n==> Testing package qthreads-1.14-meebava\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:11:31.694372] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:11:31.694902] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-meebavaewobyz3kxsw5c4l4rydkxfymd/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-meebavaewobyz3kxsw5c4l4rydkxfymd/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-m\n           eebavaewobyz3kxsw5c4l4rydkxfymd/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-meebavaewobyz3kxsw5c4l4rydkxfymd/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-meebavaewobyz3kxsw5c4l4rydkxf\n           ymd/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:11:31.843924] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:11:31.844422] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:11:31.924810] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:11:31.925285] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/nvaum44bdvoyux3who2npike4dqfjykz/qthreads-1.14-meebava-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /meebav"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.13",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test opqti7brj7zfgqcaneiewf2yrqez6qtd\n==> Testing package qthreads-1.14-w4poodn\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:11:44.184745] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:11:44.185586] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-w4poodnazfbidhn5xltjov4zxh2tprxj/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-w4poodnazfbidhn5xltjov4zxh2tprxj/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-w\n           4poodnazfbidhn5xltjov4zxh2tprxj/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-w4poodnazfbidhn5xltjov4zxh2tprxj/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-w4poodnazfbidhn5xltjov4zxh2tp\n           rxj/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:11:44.334507] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:11:44.335115] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:11:44.422720] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:11:44.423160] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/opqti7brj7zfgqcaneiewf2yrqez6qtd/qthreads-1.14-w4poodn-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /w4pood"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.12%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.12-rl6lcedffwfmfews2rn6tgm5uwelxstp/lib/libhwloc.so.5.7.9"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.12",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test evnpvijxvk3lprf4shkfuqs75tt5sn6r\n==> Testing package qthreads-1.14-hk3oeof\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:11:54.110854] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:11:54.111556] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-hk3oeofkxfsbchkwugetkezqmekbjujz/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-hk3oeofkxfsbchkwugetkezqmekbjujz/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-h\n           k3oeofkxfsbchkwugetkezqmekbjujz/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-hk3oeofkxfsbchkwugetkezqmekbjujz/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-hk3oeofkxfsbchkwugetkezqmekbj\n           ujz/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:11:54.252497] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:11:54.253166] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:11:54.335446] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:11:54.335978] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/evnpvijxvk3lprf4shkfuqs75tt5sn6r/qthreads-1.14-hk3oeof-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /hk3oeo"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.11%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^numactl@2.0.14%gcc@10.2.1 patches=4e1d78c,62fc8a8,ff37630 arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.11-h7qjeehlpm3qju7mb7l44skzhrr4ivra/lib/libhwloc.so.5.7.8"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.11",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test ayaqhnx6zg3gf77v6uanbexx5gpa7kiz\n==> Testing package qthreads-1.14-vy5jf5f\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:12:04.702278] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:12:04.703021] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-vy5jf5f5itii22zzbmomguzrt4o73gl2/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-vy5jf5f5itii22zzbmomguzrt4o73gl2/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-v\n           y5jf5f5itii22zzbmomguzrt4o73gl2/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-vy5jf5f5itii22zzbmomguzrt4o73gl2/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-vy5jf5f5itii22zzbmomguzrt4o73\n           gl2/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:12:04.852852] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:12:04.853411] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:12:04.932782] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:12:04.933357] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/ayaqhnx6zg3gf77v6uanbexx5gpa7kiz/qthreads-1.14-vy5jf5f-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /vy5jf5"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.10%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^numactl@2.0.14%gcc@10.2.1 patches=4e1d78c,62fc8a8,ff37630 arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.10-dzksg6ezj7i6zhypvmizp2ul6ef5f344/lib/libhwloc.so.5.7.7"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.10",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test 45pnfjcd5ecxtlprkzfnkvs6su3dzeoc\n==> Testing package qthreads-1.14-6qe3hd3\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:12:16.451607] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:12:16.452173] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-6qe3hd3bk6aamhgifad2vdvya6uh45lz/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-6qe3hd3bk6aamhgifad2vdvya6uh45lz/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-6\n           qe3hd3bk6aamhgifad2vdvya6uh45lz/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-6qe3hd3bk6aamhgifad2vdvya6uh45lz/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-6qe3hd3bk6aamhgifad2vdvya6uh4\n           5lz/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:12:16.598711] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:12:16.599276] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:12:16.714719] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:12:16.715196] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/45pnfjcd5ecxtlprkzfnkvs6su3dzeoc/qthreads-1.14-6qe3hd3-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /6qe3hd"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.9%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^numactl@2.0.14%gcc@10.2.1 patches=4e1d78c,62fc8a8,ff37630 arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.9-u4rin6jxmcsb4tyrxgz2ss6i3qgoac2b/lib/libhwloc.so.5.7.6"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.9",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test pgzza7log7bwna7cy37kvj3lgfnarfgz\n==> Testing package qthreads-1.14-bprvyf5\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:12:29.493193] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:12:29.493742] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-bprvyf5qzyyziiq3stui64axeujtjrrn/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-bprvyf5qzyyziiq3stui64axeujtjrrn/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-b\n           prvyf5qzyyziiq3stui64axeujtjrrn/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-bprvyf5qzyyziiq3stui64axeujtjrrn/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-bprvyf5qzyyziiq3stui64axeujtj\n           rrn/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:12:29.648193] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:12:29.648696] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:12:29.732376] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:12:29.732812] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/pgzza7log7bwna7cy37kvj3lgfnarfgz/qthreads-1.14-bprvyf5-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /bprvyf"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.8%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^numactl@2.0.14%gcc@10.2.1 patches=4e1d78c,62fc8a8,ff37630 arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.8-jxehzs7uligxzwdvy5ka25qdm7mvbdg2/lib/libhwloc.so.5.7.5"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.8",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test epybq4zc3nppxyyz4spyixs76c3z4544\n==> Testing package qthreads-1.14-opjh7jo\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:12:41.732315] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:12:41.732956] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-opjh7joum5i4wavpvocyfavml6je3sdq/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-opjh7joum5i4wavpvocyfavml6je3sdq/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-o\n           pjh7joum5i4wavpvocyfavml6je3sdq/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-opjh7joum5i4wavpvocyfavml6je3sdq/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-opjh7joum5i4wavpvocyfavml6je3\n           sdq/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:12:41.881175] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:12:41.881692] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:12:41.962728] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:12:41.963285] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/epybq4zc3nppxyyz4spyixs76c3z4544/qthreads-1.14-opjh7jo-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /opjh7j"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.7%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^numactl@2.0.14%gcc@10.2.1 patches=4e1d78c,62fc8a8,ff37630 arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.7-mgbymekrs637ldt4pstifaxmowckddad/lib/libhwloc.so.5.7.4"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.7",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test qry75tdaiuj4nqnitizayrziefgrqzkb\n==> Testing package qthreads-1.14-4ddl4yg\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:12:53.783386] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:12:53.784043] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-4ddl4ygzdqdd5b3jqgmas74ekl4motwm/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-4ddl4ygzdqdd5b3jqgmas74ekl4motwm/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-4\n           ddl4ygzdqdd5b3jqgmas74ekl4motwm/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-4ddl4ygzdqdd5b3jqgmas74ekl4motwm/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-4ddl4ygzdqdd5b3jqgmas74ekl4mo\n           twm/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:12:53.931660] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:12:53.932342] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:12:54.030412] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:12:54.031159] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/qry75tdaiuj4nqnitizayrziefgrqzkb/qthreads-1.14-4ddl4yg-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /4ddl4y"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.6%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^numactl@2.0.14%gcc@10.2.1 patches=4e1d78c,62fc8a8,ff37630 arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.6-wdul53zht4wxufykcmq4hn5ax7ns3r37/lib/libhwloc.so.5.7.3"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.6",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test bzeygowddxxvclut4bgb4zfebld45wi7\n==> Testing package qthreads-1.14-5oeptvy\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:13:05.514580] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:13:05.515289] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-5oeptvygcpczlhfppoktb7rygx3uom2v/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-5oeptvygcpczlhfppoktb7rygx3uom2v/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-5\n           oeptvygcpczlhfppoktb7rygx3uom2v/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-5oeptvygcpczlhfppoktb7rygx3uom2v/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-5oeptvygcpczlhfppoktb7rygx3uo\n           m2v/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:13:05.662634] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:13:05.663199] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:13:05.750546] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:13:05.751090] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/bzeygowddxxvclut4bgb4zfebld45wi7/qthreads-1.14-5oeptvy-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /5oeptv"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.5%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^numactl@2.0.14%gcc@10.2.1 patches=4e1d78c,62fc8a8,ff37630 arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.5-bn6vfgszm4br4l777fusw3kmofgqyzvm/lib/libhwloc.so.5.7.2"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.5",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test wa66uve3ujlwafa4ygh2k3twamlbinoq\n==> Testing package qthreads-1.14-w6ddiun\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:13:17.642851] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:13:17.643507] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-w6ddiun4cspa65kldmqpr5e3da7gzyud/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-w6ddiun4cspa65kldmqpr5e3da7gzyud/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-w\n           6ddiun4cspa65kldmqpr5e3da7gzyud/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-w6ddiun4cspa65kldmqpr5e3da7gzyud/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-w6ddiun4cspa65kldmqpr5e3da7gz\n           yud/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:13:17.812360] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:13:17.812984] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:13:17.899762] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:13:17.900322] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/wa66uve3ujlwafa4ygh2k3twamlbinoq/qthreads-1.14-w6ddiun-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /w6ddiu"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.4%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^numactl@2.0.14%gcc@10.2.1 patches=4e1d78c,62fc8a8,ff37630 arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.4-epkr2oxia2fnr37pt3muvbv7o7zmbdsl/lib/libhwloc.so.5.7.1"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.4",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test nw4tnp4inolhicwr5idbmfy5jxdbhr4o\n==> Testing package qthreads-1.14-krz5wqg\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:13:30.589282] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:13:30.589908] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-krz5wqgnhkjzxbpzdnkqgcbqlfws3mis/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-krz5wqgnhkjzxbpzdnkqgcbqlfws3mis/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-k\n           rz5wqgnhkjzxbpzdnkqgcbqlfws3mis/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-krz5wqgnhkjzxbpzdnkqgcbqlfws3mis/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-krz5wqgnhkjzxbpzdnkqgcbqlfws3\n           mis/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:13:30.737954] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:13:30.738469] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:13:30.821965] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:13:30.822479] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/nw4tnp4inolhicwr5idbmfy5jxdbhr4o/qthreads-1.14-krz5wqg-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /krz5wq"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.3%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^numactl@2.0.14%gcc@10.2.1 patches=4e1d78c,62fc8a8,ff37630 arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.3-d6ho7o5fbs2f4n772q4u7toe7rpidvdz/lib/libhwloc.so.5.7.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.3",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test ychhs5lm6uke2rlmwegshecnb6pyh3o2\n==> Testing package qthreads-1.14-k2dmn6t\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:13:41.664449] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:13:41.665030] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-k2dmn6thh7dwqrsyoibh6zuqbdq244nh/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-k2dmn6thh7dwqrsyoibh6zuqbdq244nh/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-k\n           2dmn6thh7dwqrsyoibh6zuqbdq244nh/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-k2dmn6thh7dwqrsyoibh6zuqbdq244nh/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-k2dmn6thh7dwqrsyoibh6zuqbdq24\n           4nh/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:13:41.814239] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:13:41.814792] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:13:41.899950] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:13:41.900426] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/ychhs5lm6uke2rlmwegshecnb6pyh3o2/qthreads-1.14-k2dmn6t-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /k2dmn6"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.2%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^numactl@2.0.14%gcc@10.2.1 patches=4e1d78c,62fc8a8,ff37630 arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.2-rn2l4aifpk22udm7szemtkhgpljmi3z7/lib/libhwloc.so.5.6.8"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.2",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test bgmpnsga6i4l5u7wnfwsxmmljc5cshsy\n==> Testing package qthreads-1.14-4572xdj\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:13:54.730222] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:13:54.730851] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-4572xdjql4yodlm3fyqggfxcd67cnjih/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-4572xdjql4yodlm3fyqggfxcd67cnjih/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-4\n           572xdjql4yodlm3fyqggfxcd67cnjih/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-4572xdjql4yodlm3fyqggfxcd67cnjih/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-4572xdjql4yodlm3fyqggfxcd67cn\n           jih/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:13:54.876684] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:13:54.877228] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:13:54.977342] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:13:54.977828] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/bgmpnsga6i4l5u7wnfwsxmmljc5cshsy/qthreads-1.14-4572xdj-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /4572xd"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.11.1%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^numactl@2.0.14%gcc@10.2.1 patches=4e1d78c,62fc8a8,ff37630 arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.1-a65yve4js4jmp3pe7ftvjwvne24z4phb/lib/libhwloc.so.5.6.7"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.11.1",
+        "package": "qthreads@1.14"
+    },
+    {
+        "binaries": {
+            "spliced": [],
+            "original": []
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test 5rvcvfu2esswshqijeolclpsd7p7jml7\n==> Testing package qthreads-1.14-dv45zwo\n==> Error: TestFailure: 2 tests failed.\n\n\nCommand exited with status 1:\n    './hello_world_multi'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     6     ==> [2022-03-10-15:14:08.410663] test:hello_world: Checking ability \n           to link to the library.\n     7     ==> [2022-03-10-15:14:08.411362] '/p/vast1/build/spack/lib/spack/env\n           /cc' '-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.\n           2.1/qthreads-1.14-dv45zwobhdvthaasflxyvnzbkugslmfq/include' '-I/p/va\n           st1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-\n           1.14-dv45zwobhdvthaasflxyvnzbkugslmfq/.spack/test/test' '/p/vast1/bu\n           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/qthreads-1.14-d\n           v45zwobhdvthaasflxyvnzbkugslmfq/.spack/test/test/basics/hello_world.\n           c' '-o' 'hello_world' '-L/p/vast1/build/spack/opt/spack/linux-rhel7-\n           broadwell/gcc-10.2.1/qthreads-1.14-dv45zwobhdvthaasflxyvnzbkugslmfq/\n           lib' '-lqthread' '-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh\n           el7-broadwell/gcc-10.2.1/qthreads-1.14-dv45zwobhdvthaasflxyvnzbkugsl\n           mfq/lib'\n     8     PASSED\n     9     ==> [2022-03-10-15:14:08.556224] test:hello_world_multi: Checking ab\n           ility to execute.\n     10    ==> [2022-03-10-15:14:08.556715] './hello_world_multi'\n     11    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 12    FAILED: Command exited with status 1:\n     13        './hello_world_multi'\n     14    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     15    \n     16      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     17        sys.exit(spack.main.main())\n     18      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\nCommand exited with status 1:\n    './hello_world'\nQTHREADS ERROR: attempted to use 36 workers per shepherd with scheduler that only supports 1 worker per shepherd.\n\n\n\n1 error found in test log:\n     55        self.run_tests()\n     56      File \"/p/vast1/build/spack/var/spack/repos/builtin/packages/qthrea\n           ds/package.py\", line 136, in run_tests\n     57        self.run_test(test, [], purpose=reason)\n     58    ==> [2022-03-10-15:14:08.656518] test:hello_world: Checking ability \n           to execute.\n     59    ==> [2022-03-10-15:14:08.657088] './hello_world'\n     60    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n  >> 61    FAILED: Command exited with status 1:\n     62        './hello_world'\n     63    QTHREADS ERROR: attempted to use 36 workers per shepherd with schedu\n           ler that only supports 1 worker per shepherd.\n     64    \n     65      File \"/p/vast1/build/spack/bin/spack\", line 98, in <module>\n     66        sys.exit(spack.main.main())\n     67      File \"/p/vast1/build/spack/lib/spack/spack/main.py\", line 916, in \n           main\n\n\n\n/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:\n       1058        tb_string = traceback.format_exc()\n       1059\n       1060        # build up some context from the offending package so we can\n  >>   1061        # show that, too.\n       1062        package_context = get_package_context(tb)\n       1063\n       1064        logfile = None\n\nSee test log for details:\n  /g/g0/sochat1/.spack/test/5rvcvfu2esswshqijeolclpsd7p7jml7/qthreads-1.14-dv45zwo-test-out.txt\n\n==> Error: 1 test(s) in the suite failed.\n\n======================== 1 failed, 0 passed of 1 specs =========================\n",
+                    "return_code": 1,
+                    "prediction": false,
+                    "command": "/p/vast1/build/spack/bin/spack test run /dv45zw"
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "hwloc@1.9%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared arch=linux-rhel7-broadwell ^autoconf@2.69%gcc@10.2.1 patches=35c4492,7793209,a49dd5b arch=linux-rhel7-broadwell ^automake@1.16.5%gcc@10.2.1 arch=linux-rhel7-broadwell ^berkeley-db@18.1.40%gcc@10.2.1+cxx~docs+stl patches=b231fcc arch=linux-rhel7-broadwell ^bzip2@1.0.8%gcc@10.2.1~debug~pic+shared arch=linux-rhel7-broadwell ^diffutils@3.8%gcc@10.2.1 arch=linux-rhel7-broadwell ^gdbm@1.19%gcc@10.2.1 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks~termlib abi=none arch=linux-rhel7-broadwell ^numactl@2.0.14%gcc@10.2.1 patches=4e1d78c,62fc8a8,ff37630 arch=linux-rhel7-broadwell ^perl@5.34.0%gcc@10.2.1+cpanm+shared+threads arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^readline@8.1%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.9-p5bu377hmxwwkh4vbmhnfx7m2kl5gu6o/lib/libhwloc.so.5.5.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "hwloc@1.11.13%gcc@10.2.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~opencl+pci~rocm+shared patches=d1d94a4 arch=linux-rhel7-broadwell ^libiconv@1.16%gcc@10.2.1 libs=shared,static arch=linux-rhel7-broadwell ^libpciaccess@0.16%gcc@10.2.1 arch=linux-rhel7-broadwell ^libsigsegv@2.13%gcc@10.2.1 arch=linux-rhel7-broadwell ^libtool@2.4.6%gcc@10.2.1 arch=linux-rhel7-broadwell ^libxml2@2.9.12%gcc@10.2.1~python arch=linux-rhel7-broadwell ^m4@1.4.19%gcc@10.2.1+sigsegv patches=9dc5fbd,bfdffa7 arch=linux-rhel7-broadwell ^ncurses@6.2%gcc@10.2.1~symlinks+termlib abi=none arch=linux-rhel7-broadwell ^pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell ^util-macros@1.19.3%gcc@10.2.1 arch=linux-rhel7-broadwell ^xz@5.2.5%gcc@10.2.1~pic libs=shared,static arch=linux-rhel7-broadwell ^zlib@1.2.11%gcc@10.2.1+optimize+pic+shared arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib/libhwloc.so.5.7.10"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "hwloc@1.9",
+        "package": "qthreads@1.14"
+    }
+]

@@ -1,0 +1,133 @@
+Traceback (most recent call last):
+  File "/p/vast1/build/anaconda3/bin/spliced", line 11, in <module>
+    load_entry_point('spliced', 'console_scripts', 'spliced')()
+  File "/p/vast1/build/spliced/spliced/client/__init__.py", line 237, in run_spliced
+    main(args=args, parser=parser, extra=extra, subparser=helper)
+  File "/p/vast1/build/spliced/spliced/client/splice.py", line 15, in main
+    run_spack_experiment(args, command=" ".join(extra))
+  File "/p/vast1/build/spliced/spliced/client/splice.py", line 47, in run_spack_experiment
+    experiment.run()
+  File "/p/vast1/build/spliced/spliced/experiment/spack.py", line 52, in run
+    spec_main = Spec(self.package).concretized()
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2684, in concretized
+    clone.concretize(tests=tests)
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2646, in concretize
+    self._new_concretize(tests)
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2619, in _new_concretize
+    result = solver.solve([self], tests=tests)
+  File "/p/vast1/build/spack/lib/spack/spack/solver/asp.py", line 2114, in solve
+    setup_only=setup_only,
+  File "/p/vast1/build/spack/lib/spack/spack/solver/asp.py", line 639, in solve
+    answers = builder.build_specs(tuples)
+  File "/p/vast1/build/spack/lib/spack/spack/solver/asp.py", line 2037, in build_specs
+    spack.spec.Spec.ensure_no_deprecated(s)
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2594, in ensure_no_deprecated
+    with spack.store.db.read_transaction():
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 684, in __enter__
+    if self._enter() and self._acquire_fn:
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 711, in _enter
+    return self._lock.acquire_read(self._timeout)
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 423, in acquire_read
+    wait_time, nattempts = self._lock(fcntl.LOCK_SH, timeout=timeout)
+  File "/p/vast1/build/spack/lib/spack/spack/util/lock.py", line 32, in _lock
+    return super(Lock, self)._lock(op, timeout)
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 316, in _lock
+    .format(lock_type[op]))
+llnl.util.lock.LockTimeoutError: Timed out waiting for a read lock.
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j16' 'V=1'
+
+11 errors found in build log:
+     10416    
+     10417       12 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     10418          |                                                          
+                                2
+     10419    ......
+     10420       26 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     10421          |                                                          
+                                1
+  >> 10422    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+     10423    mpi_waitall_f90.f90:18:45:
+     10424    
+     10425        8 |   call MPI_Waitall(count, array_of_requests, array_of_sta
+              tuses, ierr)
+     10426          |                                             2
+     10427    ......
+     10428       18 |   call MPI_Waitall(count, array_of_requests, array_of_sta
+              tuses, ierr)
+     10429          |                                             1
+  >> 10430    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+     10431    mpi_waitsome_f90.f90:26:76:
+     10432    
+     10433       12 |   call MPI_Waitsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     10434          |                                                          
+                                2
+     10435    ......
+     10436       26 |   call MPI_Waitsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     10437          |                                                          
+                                1
+  >> 10438    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+  >> 10439    make[5]: *** [mpi_testsome_f90.lo] Error 1
+     10440    make[5]: *** Waiting for unfinished jobs....
+  >> 10441    make[5]: *** [mpi_waitall_f90.lo] Error 1
+  >> 10442    make[5]: *** [mpi_waitsome_f90.lo] Error 1
+     10443    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.2-6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi/i
+              nclude -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.2
+              -6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi/mpi/f90 -I../../
+              ../ompi/mpi/f90 -c mpi_wtick_f90.f90 -o mpi_wtick_f90.o >/dev/nul
+              l 2>&1
+     10444    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.2-6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi/i
+              nclude -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.2
+              -6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi/mpi/f90 -I../../
+              ../ompi/mpi/f90 -c mpi_wtime_f90.f90 -o mpi_wtime_f90.o >/dev/nul
+              l 2>&1
+     10445    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.2-6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi/i
+              nclude -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.2
+              -6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi/mpi/f90 -I../../
+              ../ompi/mpi/f90 -c mpi_sizeof.f90 -o mpi_sizeof.o >/dev/null 2>&1
+     10446    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.2-6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi/i
+              nclude -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.2
+              -6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi/mpi/f90 -I../../
+              ../ompi/mpi/f90 -c mpi.f90 -o mpi.o >/dev/null 2>&1
+     10447    make[5]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2-6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi/mpi/f
+              90'
+  >> 10448    make[4]: *** [all-recursive] Error 1
+     10449    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2-6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi/mpi/f
+              90'
+  >> 10450    make[3]: *** [all] Error 2
+     10451    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2-6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi/mpi/f
+              90'
+  >> 10452    make[2]: *** [all-recursive] Error 1
+     10453    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2-6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi/mpi'
+  >> 10454    make[1]: *** [all-recursive] Error 1
+     10455    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2-6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-src/ompi'
+  >> 10456    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.2-6j3xkej42gtvvgnvboh5vcnqdrobrziz/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

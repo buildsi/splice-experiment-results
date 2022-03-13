@@ -1,0 +1,82 @@
+==> Error: Failed to upgrade to a write lock for perl-5.32.1-co2wjbhhz6xv2ofe6z4oiziplhmatga4 due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for perl-5.32.1-co2wjbhhz6xv2ofe6z4oiziplhmatga4: 
+==> Warning: perl-5.24.1-qomsd3cjxred2h36pby2mozfpfuwds3s failed to install
+==> Warning: AssertionError exception when releasing read lock for perl-5.24.1-qomsd3cjxred2h36pby2mozfpfuwds3s: 
+==> Error: perl-5.24.1-qomsd3cjxred2h36pby2mozfpfuwds3s: Package was not installed
+==> Error: ChecksumError: sha256 checksum failed for /var/tmp/sochat1/spack-stage/spack-stage-perl-5.22.4-nmbmnokvvmsjv37nfhupjt2upqmvveqh/perl-5.22.4.tar.gz
+    Expected ba9ef57c2b709f2dad9c5f6acf3111d9dfac309c484801e0152edbca89ed61fa but got 035a6b5d397b16688d08d0729d45340d871bc29c44b3a7edcac9cab14db50924
+
+/p/vast1/build/spack/lib/spack/spack/package.py:1404, in do_fetch:
+       1401        self.stage.fetch(mirror_only, err_msg=err_msg)
+       1402        self._fetch_time = time.time() - start_time
+       1403
+  >>   1404        if checksum and self.version in self.versions:
+       1405            self.stage.check()
+       1406
+       1407        self.stage.cache_local()
+
+
+==> Error: FileNotFoundError: [Errno 2] No such file or directory: 'lib/perlbug.t'
+
+/p/vast1/build/spack/var/spack/repos/builtin/packages/perl/package.py:135, in patch:
+        133    def patch(self):
+        134        # https://github.com/Perl/perl5/issues/15544 long PATH(>1000 chars) fails a test
+  >>    135        os.chmod('lib/perlbug.t', 0o644)
+        136        filter_file('!/$B/', '! (/(?:$B|PATH)/)', 'lib/perlbug.t')
+
+
+==> Error: FileNotFoundError: [Errno 2] No such file or directory: 'lib/perlbug.t'
+
+/p/vast1/build/spack/var/spack/repos/builtin/packages/perl/package.py:135, in patch:
+        133    def patch(self):
+        134        # https://github.com/Perl/perl5/issues/15544 long PATH(>1000 chars) fails a test
+  >>    135        os.chmod('lib/perlbug.t', 0o644)
+        136        filter_file('!/$B/', '! (/(?:$B|PATH)/)', 'lib/perlbug.t')
+
+
+==> Error: FileNotFoundError: [Errno 2] No such file or directory: 'lib/perlbug.t'
+
+/p/vast1/build/spack/var/spack/repos/builtin/packages/perl/package.py:135, in patch:
+        133    def patch(self):
+        134        # https://github.com/Perl/perl5/issues/15544 long PATH(>1000 chars) fails a test
+  >>    135        os.chmod('lib/perlbug.t', 0o644)
+        136        filter_file('!/$B/', '! (/(?:$B|PATH)/)', 'lib/perlbug.t')
+
+
+==> Error: FileNotFoundError: [Errno 2] No such file or directory: 'lib/perlbug.t'
+
+/p/vast1/build/spack/var/spack/repos/builtin/packages/perl/package.py:135, in patch:
+        133    def patch(self):
+        134        # https://github.com/Perl/perl5/issues/15544 long PATH(>1000 chars) fails a test
+  >>    135        os.chmod('lib/perlbug.t', 0o644)
+        136        filter_file('!/$B/', '! (/(?:$B|PATH)/)', 'lib/perlbug.t')
+
+
+/var/spool/slurmd/job97807/slurm_script: line 12: 50867 Killed                  spliced splice --package openmpi@3.1.2 --splice perl --runner spack --replace perl --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/openmpi/3.1.2/perl/experiment.json
+==> Error: Failed to upgrade to a write lock for perl-5.24.1-qomsd3cjxred2h36pby2mozfpfuwds3s due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for perl-5.24.1-qomsd3cjxred2h36pby2mozfpfuwds3s: 
+==> Warning: perl-5.22.4-nmbmnokvvmsjv37nfhupjt2upqmvveqh failed to install
+==> Warning: AssertionError exception when releasing read lock for perl-5.22.4-nmbmnokvvmsjv37nfhupjt2upqmvveqh: 
+==> Error: perl-5.22.4-nmbmnokvvmsjv37nfhupjt2upqmvveqh: Package was not installed
+==> Error: Failed to upgrade to a write lock for perl-5.22.3-5f4pgummlrva2d3on5eiqsewg4wfd3mf due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for perl-5.22.3-5f4pgummlrva2d3on5eiqsewg4wfd3mf: 
+==> Warning: perl-5.22.2-mnsbrrcxg6r5edw63byrwn6e2t332ett failed to install
+==> Warning: AssertionError exception when releasing read lock for perl-5.22.2-mnsbrrcxg6r5edw63byrwn6e2t332ett: 
+==> Error: perl-5.22.2-mnsbrrcxg6r5edw63byrwn6e2t332ett: Package was not installed
+==> Error: Failed to upgrade to a write lock for perl-5.22.1-zsiv4op6nklvmyeqw4hi3cjl27j5maa4 due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for perl-5.22.1-zsiv4op6nklvmyeqw4hi3cjl27j5maa4: 
+==> Error: Failed to upgrade to a write lock for perl-5.22.0-otratc55yymjtlgqhr74me7ewm5zlgl7 due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for perl-5.22.0-otratc55yymjtlgqhr74me7ewm5zlgl7: 
+==> Error: Failed to upgrade to a write lock for perl-5.20.3-2zbthsh6qvvyt6z5dumjdxvj4axmlczz due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for perl-5.20.3-2zbthsh6qvvyt6z5dumjdxvj4axmlczz: 
+==> Warning: perl-5.18.4-wdizifxzkclidl4lvortc5uztisr3bvf failed to install
+==> Warning: AssertionError exception when releasing read lock for perl-5.18.4-wdizifxzkclidl4lvortc5uztisr3bvf: 
+==> Error: perl-5.18.4-wdizifxzkclidl4lvortc5uztisr3bvf: Package was not installed
+==> Warning: perl-5.16.3-fvkuhyy2tj2tkrgxiob7wz63v7wke3wo failed to install
+==> Warning: AssertionError exception when releasing read lock for perl-5.16.3-fvkuhyy2tj2tkrgxiob7wz63v7wke3wo: 
+==> Error: perl-5.16.3-fvkuhyy2tj2tkrgxiob7wz63v7wke3wo: Package was not installed
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

@@ -1,0 +1,212 @@
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j2'
+
+4 errors found in build log:
+     428                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.3.0-aeqejk7rhfivtkbs7rr3hz6trw27e5oz/spack-src/src/tbb/.
+            ./../include/tbb/concurrent_set.h:17,
+     429                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.3.0-aeqejk7rhfivtkbs7rr3hz6trw27e5oz/spack-src/test/tbb/
+            test_concurrent_set.cpp:20:
+     430    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h: In instantiation of 'class std::basic_string<char, std::ch
+            ar_traits<char>, tbb::detail::d1::tbb_allocator<char> >':
+     431    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-aeqejk7
+            rhfivtkbs7rr3hz6trw27e5oz/spack-src/test/tbb/test_concurrent_set.cp
+            p:66:67:   required from 'void OrderedSetTypesTester::check(const s
+            td::list<ValueType>&) [with bool DefCtorPresent = true; ValueType =
+             std::basic_string<char, std::char_traits<char>, tbb::detail::d1::t
+            bb_allocator<char> >]'
+     432    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-aeqejk7
+            rhfivtkbs7rr3hz6trw27e5oz/spack-src/test/common/concurrent_associat
+            ive_common.h:879:58:   required from 'void test_set_specific_types(
+            ) [with Checker = OrderedSetTypesTester]'
+     433    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-aeqejk7
+            rhfivtkbs7rr3hz6trw27e5oz/spack-src/test/tbb/test_concurrent_set.cp
+            p:72:52:   required from here
+  >> 434    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h:3150:57: error: no type named 'size_type' in 'std::basic_st
+            ring<char, std::char_traits<char>, tbb::detail::d1::tbb_allocator<c
+            har> >::_CharT_alloc_type' {aka 'std::allocator_traits<tbb::detail:
+            :d1::tbb_allocator<char> >::rebind_alloc<char>'}
+     435     3150 |       typedef typename _CharT_alloc_type::size_type     siz
+            e_type;
+     436          |                                                         ^~~
+            ~~~~~~
+     437    compilation terminated due to -Wfatal-errors.
+  >> 438    make[2]: *** [test/CMakeFiles/test_concurrent_set.dir/tbb/test_conc
+            urrent_set.cpp.o] Error 1
+     439    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.3.0-aeqejk7rhfivtkbs7rr3hz6trw27e5oz/spack-build-aeqej
+            k7'
+  >> 440    make[1]: *** [test/CMakeFiles/test_concurrent_set.dir/all] Error 2
+     441    make[1]: *** Waiting for unfinished jobs....
+     442    [ 24%] Linking CXX executable ../gnu_10.2_cxx11_64_relwithdebinfo/c
+            onformance_limiter_node
+     443    cd /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-aeqejk7r
+            hfivtkbs7rr3hz6trw27e5oz/spack-build-aeqejk7/test && /p/vast1/build
+            /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/cmake-3.21.4-hvgw
+            gb6duea6jzf2rywitb4a5lqdrpii/bin/cmake -E cmake_link_script CMakeFi
+            les/conformance_limiter_node.dir/link.txt --verbose=1
+     444    /p/vast1/build/spack/lib/spack/env/gcc/g++ -O2 -g -DNDEBUG -rdynami
+            c CMakeFiles/conformance_limiter_node.dir/conformance/conformance_l
+            imiter_node.cpp.o -o ../gnu_10.2_cxx11_64_relwithdebinfo/conformanc
+            e_limiter_node  -Wl,-rpath,/tmp/sochat1/spack-stage/spack-stage-int
+            el-tbb-2021.3.0-aeqejk7rhfivtkbs7rr3hz6trw27e5oz/spack-build-aeqejk
+            7/gnu_10.2_cxx11_64_relwithdebinfo ../gnu_10.2_cxx11_64_relwithdebi
+            nfo/libtbb.so.12.3 -ldl -pthread
+     445    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.3.0-aeqejk7rhfivtkbs7rr3hz6trw27e5oz/spack-build-aeqej
+            k7'
+     446    [ 24%] Built target conformance_limiter_node
+     447    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.3.0-aeqejk7rhfivtkbs7rr3hz6trw27e5oz/spack-build-aeqej
+            k7'
+  >> 448    make: *** [all] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-aeqejk7rhfivtkbs7rr3hz6trw27e5oz/spack-build-out.txt
+
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j2'
+
+4 errors found in build log:
+     361                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-src/src/tbb/.
+            ./../include/tbb/concurrent_set.h:17,
+     362                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-src/test/tbb/
+            test_concurrent_set.cpp:20:
+     363    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h: In instantiation of 'class std::basic_string<char, std::ch
+            ar_traits<char>, tbb::detail::d1::tbb_allocator<char> >':
+     364    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.2.0-tmrx3cw
+            2e3p2j57skufw344he7fv6sdw/spack-src/test/tbb/test_concurrent_set.cp
+            p:66:67:   required from 'void OrderedSetTypesTester::check(const s
+            td::list<ValueType>&) [with bool DefCtorPresent = true; ValueType =
+             std::basic_string<char, std::char_traits<char>, tbb::detail::d1::t
+            bb_allocator<char> >]'
+     365    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.2.0-tmrx3cw
+            2e3p2j57skufw344he7fv6sdw/spack-src/test/common/concurrent_associat
+            ive_common.h:871:58:   required from 'void test_set_specific_types(
+            ) [with Checker = OrderedSetTypesTester]'
+     366    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.2.0-tmrx3cw
+            2e3p2j57skufw344he7fv6sdw/spack-src/test/tbb/test_concurrent_set.cp
+            p:72:52:   required from here
+  >> 367    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h:3150:57: error: no type named 'size_type' in 'std::basic_st
+            ring<char, std::char_traits<char>, tbb::detail::d1::tbb_allocator<c
+            har> >::_CharT_alloc_type' {aka 'std::allocator_traits<tbb::detail:
+            :d1::tbb_allocator<char> >::rebind_alloc<char>'}
+     368     3150 |       typedef typename _CharT_alloc_type::size_type     siz
+            e_type;
+     369          |                                                         ^~~
+            ~~~~~~
+     370    compilation terminated due to -Wfatal-errors.
+  >> 371    make[2]: *** [test/CMakeFiles/test_concurrent_set.dir/tbb/test_conc
+            urrent_set.cpp.o] Error 1
+     372    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-build-tmrx3
+            cw'
+  >> 373    make[1]: *** [test/CMakeFiles/test_concurrent_set.dir/all] Error 2
+     374    make[1]: *** Waiting for unfinished jobs....
+     375    [ 18%] Linking CXX executable ../gnu_10.2_cxx11_64_relwithdebinfo/t
+            est_enumerable_thread_specific
+     376    cd /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.2.0-tmrx3cw2
+            e3p2j57skufw344he7fv6sdw/spack-build-tmrx3cw/test && /p/vast1/build
+            /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/cmake-3.21.4-hvgw
+            gb6duea6jzf2rywitb4a5lqdrpii/bin/cmake -E cmake_link_script CMakeFi
+            les/test_enumerable_thread_specific.dir/link.txt --verbose=1
+     377    /p/vast1/build/spack/lib/spack/env/gcc/g++ -O2 -g -DNDEBUG -rdynami
+            c CMakeFiles/test_enumerable_thread_specific.dir/tbb/test_enumerabl
+            e_thread_specific.cpp.o -o ../gnu_10.2_cxx11_64_relwithdebinfo/test
+            _enumerable_thread_specific  -Wl,-rpath,/tmp/sochat1/spack-stage/sp
+            ack-stage-intel-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack
+            -build-tmrx3cw/gnu_10.2_cxx11_64_relwithdebinfo ../gnu_10.2_cxx11_6
+            4_relwithdebinfo/libtbb.so.12.2 -ldl -pthread
+     378    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-build-tmrx3
+            cw'
+     379    [ 18%] Built target test_enumerable_thread_specific
+     380    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-build-tmrx3
+            cw'
+  >> 381    make: *** [all] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-build-out.txt
+
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j2'
+
+4 errors found in build log:
+     457                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-src/src/tbb/.
+            ./../include/tbb/concurrent_set.h:17,
+     458                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-src/test/tbb/
+            test_concurrent_set.cpp:20:
+     459    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h: In instantiation of 'class std::basic_string<char, std::ch
+            ar_traits<char>, tbb::detail::d1::tbb_allocator<char> >':
+     460    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.1.1-tbgytyw
+            72xutxni4tzzpsbzfaufc7bzp/spack-src/test/tbb/test_concurrent_set.cp
+            p:66:67:   required from 'void OrderedSetTypesTester::check(const s
+            td::list<ValueType>&) [with bool DefCtorPresent = true; ValueType =
+             std::basic_string<char, std::char_traits<char>, tbb::detail::d1::t
+            bb_allocator<char> >]'
+     461    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.1.1-tbgytyw
+            72xutxni4tzzpsbzfaufc7bzp/spack-src/test/common/concurrent_associat
+            ive_common.h:870:58:   required from 'void test_set_specific_types(
+            ) [with Checker = OrderedSetTypesTester]'
+     462    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.1.1-tbgytyw
+            72xutxni4tzzpsbzfaufc7bzp/spack-src/test/tbb/test_concurrent_set.cp
+            p:72:52:   required from here
+  >> 463    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h:3150:57: error: no type named 'size_type' in 'std::basic_st
+            ring<char, std::char_traits<char>, tbb::detail::d1::tbb_allocator<c
+            har> >::_CharT_alloc_type' {aka 'std::allocator_traits<tbb::detail:
+            :d1::tbb_allocator<char> >::rebind_alloc<char>'}
+     464     3150 |       typedef typename _CharT_alloc_type::size_type     siz
+            e_type;
+     465          |                                                         ^~~
+            ~~~~~~
+     466    compilation terminated due to -Wfatal-errors.
+  >> 467    make[2]: *** [test/CMakeFiles/test_concurrent_set.dir/tbb/test_conc
+            urrent_set.cpp.o] Error 1
+     468    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-build-tbgyt
+            yw'
+  >> 469    make[1]: *** [test/CMakeFiles/test_concurrent_set.dir/all] Error 2
+     470    make[1]: *** Waiting for unfinished jobs....
+     471    [ 26%] Linking CXX executable ../gnu_10.2_cxx11_64_relwithdebinfo/t
+            est_enumerable_thread_specific
+     472    cd /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.1.1-tbgytyw7
+            2xutxni4tzzpsbzfaufc7bzp/spack-build-tbgytyw/test && /p/vast1/build
+            /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/cmake-3.21.4-hvgw
+            gb6duea6jzf2rywitb4a5lqdrpii/bin/cmake -E cmake_link_script CMakeFi
+            les/test_enumerable_thread_specific.dir/link.txt --verbose=1
+     473    /p/vast1/build/spack/lib/spack/env/gcc/g++ -O2 -g -DNDEBUG -rdynami
+            c CMakeFiles/test_enumerable_thread_specific.dir/tbb/test_enumerabl
+            e_thread_specific.cpp.o -o ../gnu_10.2_cxx11_64_relwithdebinfo/test
+            _enumerable_thread_specific  -Wl,-rpath,/tmp/sochat1/spack-stage/sp
+            ack-stage-intel-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack
+            -build-tbgytyw/gnu_10.2_cxx11_64_relwithdebinfo ../gnu_10.2_cxx11_6
+            4_relwithdebinfo/libtbb.so.12.1 -ldl -pthread
+     474    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-build-tbgyt
+            yw'
+     475    [ 26%] Built target test_enumerable_thread_specific
+     476    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-build-tbgyt
+            yw'
+  >> 477    make: *** [all] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-build-out.txt
+
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+/var/spool/slurmd/job100355/slurm_script: line 12:  8854 Killed                  spliced splice --package hpctoolkit@2020.08.03 --splice intel-tbb --runner spack --replace intel-tbb --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/hpctoolkit/2020.08.03/intel-tbb/experiment.json
+slurmstepd: error: *** JOB 2468633 ON borax26 CANCELLED AT 2022-03-02T17:25:32 DUE TO TIME LIMIT ***

@@ -1,0 +1,144 @@
+==> Error: Failed to upgrade to a write lock for intel-tbb-2021.3.0-aeqejk7rhfivtkbs7rr3hz6trw27e5oz due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j2'
+
+4 errors found in build log:
+     478                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-src/src/tbb/.
+            ./../include/tbb/concurrent_set.h:17,
+     479                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-src/test/tbb/
+            test_concurrent_set.cpp:20:
+     480    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h: In instantiation of 'class std::basic_string<char, std::ch
+            ar_traits<char>, tbb::detail::d1::tbb_allocator<char> >':
+     481    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.2.0-tmrx3cw
+            2e3p2j57skufw344he7fv6sdw/spack-src/test/tbb/test_concurrent_set.cp
+            p:66:67:   required from 'void OrderedSetTypesTester::check(const s
+            td::list<ValueType>&) [with bool DefCtorPresent = true; ValueType =
+             std::basic_string<char, std::char_traits<char>, tbb::detail::d1::t
+            bb_allocator<char> >]'
+     482    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.2.0-tmrx3cw
+            2e3p2j57skufw344he7fv6sdw/spack-src/test/common/concurrent_associat
+            ive_common.h:871:58:   required from 'void test_set_specific_types(
+            ) [with Checker = OrderedSetTypesTester]'
+     483    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.2.0-tmrx3cw
+            2e3p2j57skufw344he7fv6sdw/spack-src/test/tbb/test_concurrent_set.cp
+            p:72:52:   required from here
+  >> 484    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h:3150:57: error: no type named 'size_type' in 'std::basic_st
+            ring<char, std::char_traits<char>, tbb::detail::d1::tbb_allocator<c
+            har> >::_CharT_alloc_type' {aka 'std::allocator_traits<tbb::detail:
+            :d1::tbb_allocator<char> >::rebind_alloc<char>'}
+     485     3150 |       typedef typename _CharT_alloc_type::size_type     siz
+            e_type;
+     486          |                                                         ^~~
+            ~~~~~~
+     487    compilation terminated due to -Wfatal-errors.
+  >> 488    make[2]: *** [test/CMakeFiles/test_concurrent_set.dir/tbb/test_conc
+            urrent_set.cpp.o] Error 1
+     489    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-build-tmrx3
+            cw'
+  >> 490    make[1]: *** [test/CMakeFiles/test_concurrent_set.dir/all] Error 2
+     491    make[1]: *** Waiting for unfinished jobs....
+     492    [ 31%] Linking CXX executable ../gnu_10.2_cxx11_64_relwithdebinfo/c
+            onformance_limiter_node
+     493    cd /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.2.0-tmrx3cw2
+            e3p2j57skufw344he7fv6sdw/spack-build-tmrx3cw/test && /p/vast1/build
+            /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/cmake-3.21.4-hvgw
+            gb6duea6jzf2rywitb4a5lqdrpii/bin/cmake -E cmake_link_script CMakeFi
+            les/conformance_limiter_node.dir/link.txt --verbose=1
+     494    /p/vast1/build/spack/lib/spack/env/gcc/g++ -O2 -g -DNDEBUG -rdynami
+            c CMakeFiles/conformance_limiter_node.dir/conformance/conformance_l
+            imiter_node.cpp.o -o ../gnu_10.2_cxx11_64_relwithdebinfo/conformanc
+            e_limiter_node  -Wl,-rpath,/tmp/sochat1/spack-stage/spack-stage-int
+            el-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-build-tmrx3c
+            w/gnu_10.2_cxx11_64_relwithdebinfo ../gnu_10.2_cxx11_64_relwithdebi
+            nfo/libtbb.so.12.2 -ldl -pthread
+     495    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-build-tmrx3
+            cw'
+     496    [ 31%] Built target conformance_limiter_node
+     497    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-build-tmrx3
+            cw'
+  >> 498    make: *** [all] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw/spack-build-out.txt
+
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j2'
+
+4 errors found in build log:
+     531                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-src/src/tbb/.
+            ./../include/tbb/concurrent_set.h:17,
+     532                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-src/test/tbb/
+            test_concurrent_set.cpp:20:
+     533    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h: In instantiation of 'class std::basic_string<char, std::ch
+            ar_traits<char>, tbb::detail::d1::tbb_allocator<char> >':
+     534    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.1.1-tbgytyw
+            72xutxni4tzzpsbzfaufc7bzp/spack-src/test/tbb/test_concurrent_set.cp
+            p:66:67:   required from 'void OrderedSetTypesTester::check(const s
+            td::list<ValueType>&) [with bool DefCtorPresent = true; ValueType =
+             std::basic_string<char, std::char_traits<char>, tbb::detail::d1::t
+            bb_allocator<char> >]'
+     535    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.1.1-tbgytyw
+            72xutxni4tzzpsbzfaufc7bzp/spack-src/test/common/concurrent_associat
+            ive_common.h:870:58:   required from 'void test_set_specific_types(
+            ) [with Checker = OrderedSetTypesTester]'
+     536    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.1.1-tbgytyw
+            72xutxni4tzzpsbzfaufc7bzp/spack-src/test/tbb/test_concurrent_set.cp
+            p:72:52:   required from here
+  >> 537    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h:3150:57: error: no type named 'size_type' in 'std::basic_st
+            ring<char, std::char_traits<char>, tbb::detail::d1::tbb_allocator<c
+            har> >::_CharT_alloc_type' {aka 'std::allocator_traits<tbb::detail:
+            :d1::tbb_allocator<char> >::rebind_alloc<char>'}
+     538     3150 |       typedef typename _CharT_alloc_type::size_type     siz
+            e_type;
+     539          |                                                         ^~~
+            ~~~~~~
+     540    compilation terminated due to -Wfatal-errors.
+  >> 541    make[2]: *** [test/CMakeFiles/test_concurrent_set.dir/tbb/test_conc
+            urrent_set.cpp.o] Error 1
+     542    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-build-tbgyt
+            yw'
+  >> 543    make[1]: *** [test/CMakeFiles/test_concurrent_set.dir/all] Error 2
+     544    make[1]: *** Waiting for unfinished jobs....
+     545    [ 37%] Linking CXX executable ../gnu_10.2_cxx11_64_relwithdebinfo/c
+            onformance_limiter_node
+     546    cd /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.1.1-tbgytyw7
+            2xutxni4tzzpsbzfaufc7bzp/spack-build-tbgytyw/test && /p/vast1/build
+            /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/cmake-3.21.4-hvgw
+            gb6duea6jzf2rywitb4a5lqdrpii/bin/cmake -E cmake_link_script CMakeFi
+            les/conformance_limiter_node.dir/link.txt --verbose=1
+     547    /p/vast1/build/spack/lib/spack/env/gcc/g++ -O2 -g -DNDEBUG -rdynami
+            c CMakeFiles/conformance_limiter_node.dir/conformance/conformance_l
+            imiter_node.cpp.o -o ../gnu_10.2_cxx11_64_relwithdebinfo/conformanc
+            e_limiter_node  -Wl,-rpath,/tmp/sochat1/spack-stage/spack-stage-int
+            el-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-build-tbgyty
+            w/gnu_10.2_cxx11_64_relwithdebinfo ../gnu_10.2_cxx11_64_relwithdebi
+            nfo/libtbb.so.12.1 -ldl -pthread
+     548    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-build-tbgyt
+            yw'
+     549    [ 37%] Built target conformance_limiter_node
+     550    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-build-tbgyt
+            yw'
+  >> 551    make: *** [all] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp/spack-build-out.txt
+
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+/var/spool/slurmd/job100360/slurm_script: line 12: 43226 Killed                  spliced splice --package hpctoolkit@2021.10.15 --splice intel-tbb --runner spack --replace intel-tbb --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/hpctoolkit/2021.10.15/intel-tbb/experiment.json
+slurmstepd: error: *** JOB 2468637 ON borax31 CANCELLED AT 2022-03-02T17:32:32 DUE TO TIME LIMIT ***

@@ -1,0 +1,86 @@
+/var/spool/slurmd/job98022/slurm_script: line 12: 38232 Killed                  spliced splice --package openmpi@1.2.9 --splice zlib --runner spack --replace zlib --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/openmpi/1.2.9/zlib/experiment.json
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j16' 'V=1'
+
+9 errors found in build log:
+     10456    
+     10457       12 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     10458          |                                                          
+                                2
+     10459    ......
+     10460       26 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     10461          |                                                          
+                                1
+  >> 10462    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+     10463    mpi_comm_spawn_multiple_f90.f90:36:57:
+     10464    
+     10465       16 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     10466          |                                                         2
+     10467    ......
+     10468       36 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     10469          |                                                         1
+  >> 10470    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/CHARACTER(*)).
+  >> 10471    make[5]: *** [mpi_testsome_f90.lo] Error 1
+     10472    make[5]: *** Waiting for unfinished jobs....
+  >> 10473    make[5]: *** [mpi_comm_spawn_multiple_f90.lo] Error 1
+     10474    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi_wtime_f90.f90 -o mpi_wtime_f90.o >/dev
+              /null 2>&1
+     10475    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi_wtick_f90.f90 -o mpi_wtick_f90.o >/dev
+              /null 2>&1
+     10476    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi_sizeof.f90 -o mpi_sizeof.o >/dev/null 
+              2>&1
+     10477    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi.f90 -o mpi.o >/dev/null 2>&1
+     10478    make[5]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi/mpi
+              /f90'
+  >> 10479    make[4]: *** [all-recursive] Error 1
+     10480    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi/mpi
+              /f90'
+  >> 10481    make[3]: *** [all] Error 2
+     10482    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi/mpi
+              /f90'
+  >> 10483    make[2]: *** [all-recursive] Error 1
+     10484    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi/mpi
+              '
+  >> 10485    make[1]: *** [all-recursive] Error 1
+     10486    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-src/ompi'
+  >> 10487    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.2.9-n5hvibn336mjk2qglpekjttgyrx4y35c/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

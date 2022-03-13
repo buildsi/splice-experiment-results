@@ -1,0 +1,433 @@
+==> Warning: Missing a source id for llvm-openmp-ompt@tr6_forwards
+==> Warning: pcre-8.44-lxo5u6idberuvszo4i25b6yd2rr4xmhh failed to install
+==> Warning: Skipping build of swig-4.0.2-e6fiypiqu2ddcc4cw2j5jricvo5d3khx since pcre-8.44-lxo5u6idberuvszo4i25b6yd2rr4xmhh failed
+==> Warning: Skipping build of llvm-8.0.0-os3muxuco45ceyjakvumahfvp6rocd3i since swig-4.0.2-e6fiypiqu2ddcc4cw2j5jricvo5d3khx failed
+==> Warning: Skipping build of archer-1.0.0-6y3ev7vcfsqkdt3o3mult5fv6cskcne4 since llvm-8.0.0-os3muxuco45ceyjakvumahfvp6rocd3i failed
+==> Warning: Skipping build of llvm-openmp-ompt-tr6_forwards-wza5txvawwihrjqi3kpnfszgdgeeaj47 since llvm-8.0.0-os3muxuco45ceyjakvumahfvp6rocd3i failed
+==> Error: archer-1.0.0-6y3ev7vcfsqkdt3o3mult5fv6cskcne4: Package was not installed
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+/var/spool/slurmd/job99960/slurm_script: line 12: 16741 Killed                  spliced splice --package archer@1.0.0 --splice cmake --runner spack --replace cmake --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/archer/1.0.0/cmake/experiment.json
+==> Warning: Missing a source id for llvm-openmp-ompt@tr6_forwards
+==> Error: ProcessError: Command exited with status 1:
+    'ninja' '-j16' '-v'
+
+19 errors found in build log:
+     134    [3/15] /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.
+            2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/bin/clang++ -DLLVM_
+            VERSION=80 -DLLVM_VERSION="80 -D__STDC_CONSTANT_MACROS -D__STDC_FOR
+            MAT_MACROS -D__STDC_LIMIT_MACROS" -D__STDC_CONSTANT_MACROS -D__STDC
+            _FORMAT_MACROS -D__STDC_LIMIT_MACROS -Darcher_EXPORTS -I/p/vast1/bu
+            ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llvm-8.0.0-z5a
+            2veqecju7emfez2eez7nmlveccixj/include -I/p/vast1/build/spack/opt/sp
+            ack/linux-rhel7-broadwell/gcc-10.2.1/llvm-openmp-ompt-tr6_forwards-
+            yxqjzdhmqukwwwgure37beui4n34boqq/include -fPIC -fvisibility-inlines
+            -hidden -Werror=date-time -Werror=unguarded-availability-new -std=c
+            ++11 -w -fdiagnostics-color -ffunction-sections -fdata-sections -O2
+             -g -DNDEBUG -fPIC -MD -MT rtl/CMakeFiles/archer.dir/counter.cpp.o 
+            -MF rtl/CMakeFiles/archer.dir/counter.cpp.o.d -o rtl/CMakeFiles/arc
+            her.dir/counter.cpp.o -c /var/tmp/sochat1/spack-stage/spack-stage-a
+            rcher-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-src/rtl/counter.
+            cpp
+     135    [4/15] : && /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gc
+            c-10.2.1/cmake-3.22.2-7oku4yd37mfoi65gi3alunjbl35euphw/bin/cmake -E
+             rm -f rtl/libfarcher_static.a && /p/vast1/build/spack/opt/spack/li
+            nux-rhel7-broadwell/gcc-10.2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nml
+            veccixj/bin/llvm-ar qc rtl/libfarcher_static.a  rtl/CMakeFiles/farc
+            her_static.dir/ftsan.c.o && /p/vast1/build/spack/opt/spack/linux-rh
+            el7-broadwell/gcc-10.2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlveccix
+            j/bin/llvm-ranlib rtl/libfarcher_static.a && :
+     136    [5/15] /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.
+            2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/bin/clang++ -DLLVM_
+            VERSION=80 -DLLVM_VERSION="80 -D__STDC_CONSTANT_MACROS -D__STDC_FOR
+            MAT_MACROS -D__STDC_LIMIT_MACROS" -D__STDC_CONSTANT_MACROS -D__STDC
+            _FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/p/vast1/build/spack/opt/spa
+            ck/linux-rhel7-broadwell/gcc-10.2.1/llvm-8.0.0-z5a2veqecju7emfez2ee
+            z7nmlveccixj/include -I/p/vast1/build/spack/opt/spack/linux-rhel7-b
+            roadwell/gcc-10.2.1/llvm-openmp-ompt-tr6_forwards-yxqjzdhmqukwwwgur
+            e37beui4n34boqq/include -fPIC -fvisibility-inlines-hidden -Werror=d
+            ate-time -Werror=unguarded-availability-new -std=c++11 -w -fdiagnos
+            tics-color -ffunction-sections -fdata-sections -O2 -g -DNDEBUG -MD 
+            -MT rtl/CMakeFiles/archer_static.dir/counter.cpp.o -MF rtl/CMakeFil
+            es/archer_static.dir/counter.cpp.o.d -o rtl/CMakeFiles/archer_stati
+            c.dir/counter.cpp.o -c /var/tmp/sochat1/spack-stage/spack-stage-arc
+            her-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-src/rtl/counter.cp
+            p
+     137    [6/15] : && /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gc
+            c-10.2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/bin/clang -fPI
+            C -fPIC -Werror=date-time -Werror=unguarded-availability-new -w -fd
+            iagnostics-color -ffunction-sections -fdata-sections -O2 -g -DNDEBU
+            G  -Wl,-z,nodelete -shared  -o rtl/libfarcher.so rtl/CMakeFiles/far
+            cher.dir/ftsan.c.o -L/p/vast1/build/spack/opt/spack/linux-rhel7-bro
+            adwell/gcc-10.2.1/llvm-openmp-ompt-tr6_forwards-yxqjzdhmqukwwwgure3
+            7beui4n34boqq/lib -Wl,-rpath,::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            :::::::::: && :
+     138    [7/15] /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.
+            2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/bin/clang++ -DGTEST
+            _HAS_RTTI=0 -DLLVM_VERSION=80 -DLLVM_VERSION="80 -D__STDC_CONSTANT_
+            MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS" -D__STDC_CONST
+            ANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/p/vast1/
+            build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llvm-8.0.0-z
+            5a2veqecju7emfez2eez7nmlveccixj/include -I/p/vast1/build/spack/opt/
+            spack/linux-rhel7-broadwell/gcc-10.2.1/llvm-openmp-ompt-tr6_forward
+            s-yxqjzdhmqukwwwgure37beui4n34boqq/include -I/var/tmp/sochat1/spack
+            -stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/sp
+            ack-src/include -fPIC -fvisibility-inlines-hidden -Werror=date-time
+             -Werror=unguarded-availability-new -std=c++11 -w -fdiagnostics-col
+            or -ffunction-sections -fdata-sections -O2 -g -DNDEBUG -fPIC  -fno-
+            exceptions -fno-rtti -MD -MT lib/CMakeFiles/LLVMArcher.dir/Support/
+            Util.cpp.o -MF lib/CMakeFiles/LLVMArcher.dir/Support/Util.cpp.o.d -
+            o lib/CMakeFiles/LLVMArcher.dir/Support/Util.cpp.o -c /var/tmp/soch
+            at1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi2pvqrek7cf2py
+            bchcmd/spack-src/lib/Support/Util.cpp
+     139    [8/15] /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.
+            2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/bin/clang++ -DLLVM_
+            VERSION=80 -DLLVM_VERSION="80 -D__STDC_CONSTANT_MACROS -D__STDC_FOR
+            MAT_MACROS -D__STDC_LIMIT_MACROS" -D__STDC_CONSTANT_MACROS -D__STDC
+            _FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/p/vast1/build/spack/opt/spa
+            ck/linux-rhel7-broadwell/gcc-10.2.1/llvm-8.0.0-z5a2veqecju7emfez2ee
+            z7nmlveccixj/include -I/p/vast1/build/spack/opt/spack/linux-rhel7-b
+            roadwell/gcc-10.2.1/llvm-openmp-ompt-tr6_forwards-yxqjzdhmqukwwwgur
+            e37beui4n34boqq/include -fPIC -fvisibility-inlines-hidden -Werror=d
+            ate-time -Werror=unguarded-availability-new -std=c++11 -w -fdiagnos
+            tics-color -ffunction-sections -fdata-sections -O2 -g -DNDEBUG -MD 
+            -MT rtl/CMakeFiles/archer_static.dir/ompt-tsan.cpp.o -MF rtl/CMakeF
+            iles/archer_static.dir/ompt-tsan.cpp.o.d -o rtl/CMakeFiles/archer_s
+            tatic.dir/ompt-tsan.cpp.o -c /var/tmp/sochat1/spack-stage/spack-sta
+            ge-archer-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-src/rtl/ompt
+            -tsan.cpp
+  >> 140    FAILED: rtl/CMakeFiles/archer_static.dir/ompt-tsan.cpp.o
+     141    /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llv
+            m-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/bin/clang++ -DLLVM_VERSION
+            =80 -DLLVM_VERSION="80 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MAC
+            ROS -D__STDC_LIMIT_MACROS" -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT
+            _MACROS -D__STDC_LIMIT_MACROS -I/p/vast1/build/spack/opt/spack/linu
+            x-rhel7-broadwell/gcc-10.2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlve
+            ccixj/include -I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwel
+            l/gcc-10.2.1/llvm-openmp-ompt-tr6_forwards-yxqjzdhmqukwwwgure37beui
+            4n34boqq/include -fPIC -fvisibility-inlines-hidden -Werror=date-tim
+            e -Werror=unguarded-availability-new -std=c++11 -w -fdiagnostics-co
+            lor -ffunction-sections -fdata-sections -O2 -g -DNDEBUG -MD -MT rtl
+            /CMakeFiles/archer_static.dir/ompt-tsan.cpp.o -MF rtl/CMakeFiles/ar
+            cher_static.dir/ompt-tsan.cpp.o.d -o rtl/CMakeFiles/archer_static.d
+            ir/ompt-tsan.cpp.o -c /var/tmp/sochat1/spack-stage/spack-stage-arch
+            er-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.c
+            pp
+  >> 142    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:881:3: error: unkno
+            wn type name 'ompt_fns_t'
+     143      ompt_fns_t* fns
+     144      ^
+  >> 145    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:912:3: error: canno
+            t initialize a variable of type 'ompt_callback_task_create_t' (aka 
+            'void (*)(ompt_data_t *, const ompt_frame_t *, ompt_data_t *, int, 
+            int, const void *)') with an rvalue of type 'void (*)(ompt_data_t *
+            , const ompt_frame_t *, ompt_data_t *, ompt_task_type_t, int, const
+             void *)': type mismatch at 4th parameter ('int' vs 'ompt_task_type
+            _t')
+     146      SET_CALLBACK(task_create);
+     147      ^~~~~~~~~~~~~~~~~~~~~~~~~
+     148    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:876:29: note: expan
+            ded from macro 'SET_CALLBACK'
+     149    #define SET_CALLBACK(event) SET_CALLBACK_T(event, event)
+     150                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     151    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:873:28: note: expan
+            ded from macro 'SET_CALLBACK_T'
+     152      ompt_callback_##type##_t tsan_##event = &ompt_tsan_##event; \
+     153                               ^              ~~~~~~~~~~~~~~~~~~
+     154    <scratch space>:74:1: note: expanded from here
+     155    tsan_task_create
+     156    ^
+  >> 157    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:922:32: error: unkn
+            own type name 'ompt_fns_t'
+     158    static void ompt_tsan_finalize(ompt_fns_t* fns)
+     159                                   ^
+  >> 160    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:940:1: error: unkno
+            wn type name 'ompt_fns_t'
+     161    ompt_fns_t* ompt_start_tool(
+     162    ^
+  >> 163    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:944:10: error: unkn
+            own type name 'ompt_fns_t'
+     164      static ompt_fns_t ompt_fns = {&ompt_tsan_initialize,&ompt_tsan_fi
+            nalize};
+     165             ^
+     166    5 errors generated.
+     167    [9/15] /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.
+            2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/bin/clang++ -DLLVM_
+            VERSION=80 -DLLVM_VERSION="80 -D__STDC_CONSTANT_MACROS -D__STDC_FOR
+            MAT_MACROS -D__STDC_LIMIT_MACROS" -D__STDC_CONSTANT_MACROS -D__STDC
+            _FORMAT_MACROS -D__STDC_LIMIT_MACROS -Darcher_EXPORTS -I/p/vast1/bu
+            ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llvm-8.0.0-z5a
+            2veqecju7emfez2eez7nmlveccixj/include -I/p/vast1/build/spack/opt/sp
+            ack/linux-rhel7-broadwell/gcc-10.2.1/llvm-openmp-ompt-tr6_forwards-
+            yxqjzdhmqukwwwgure37beui4n34boqq/include -fPIC -fvisibility-inlines
+            -hidden -Werror=date-time -Werror=unguarded-availability-new -std=c
+            ++11 -w -fdiagnostics-color -ffunction-sections -fdata-sections -O2
+             -g -DNDEBUG -fPIC -MD -MT rtl/CMakeFiles/archer.dir/ompt-tsan.cpp.
+            o -MF rtl/CMakeFiles/archer.dir/ompt-tsan.cpp.o.d -o rtl/CMakeFiles
+            /archer.dir/ompt-tsan.cpp.o -c /var/tmp/sochat1/spack-stage/spack-s
+            tage-archer-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-src/rtl/om
+            pt-tsan.cpp
+  >> 168    FAILED: rtl/CMakeFiles/archer.dir/ompt-tsan.cpp.o
+     169    /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llv
+            m-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/bin/clang++ -DLLVM_VERSION
+            =80 -DLLVM_VERSION="80 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MAC
+            ROS -D__STDC_LIMIT_MACROS" -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT
+            _MACROS -D__STDC_LIMIT_MACROS -Darcher_EXPORTS -I/p/vast1/build/spa
+            ck/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llvm-8.0.0-z5a2veqecj
+            u7emfez2eez7nmlveccixj/include -I/p/vast1/build/spack/opt/spack/lin
+            ux-rhel7-broadwell/gcc-10.2.1/llvm-openmp-ompt-tr6_forwards-yxqjzdh
+            mqukwwwgure37beui4n34boqq/include -fPIC -fvisibility-inlines-hidden
+             -Werror=date-time -Werror=unguarded-availability-new -std=c++11 -w
+             -fdiagnostics-color -ffunction-sections -fdata-sections -O2 -g -DN
+            DEBUG -fPIC -MD -MT rtl/CMakeFiles/archer.dir/ompt-tsan.cpp.o -MF r
+            tl/CMakeFiles/archer.dir/ompt-tsan.cpp.o.d -o rtl/CMakeFiles/archer
+            .dir/ompt-tsan.cpp.o -c /var/tmp/sochat1/spack-stage/spack-stage-ar
+            cher-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan
+            .cpp
+  >> 170    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:881:3: error: unkno
+            wn type name 'ompt_fns_t'
+     171      ompt_fns_t* fns
+     172      ^
+  >> 173    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:912:3: error: canno
+            t initialize a variable of type 'ompt_callback_task_create_t' (aka 
+            'void (*)(ompt_data_t *, const ompt_frame_t *, ompt_data_t *, int, 
+            int, const void *)') with an rvalue of type 'void (*)(ompt_data_t *
+            , const ompt_frame_t *, ompt_data_t *, ompt_task_type_t, int, const
+             void *)': type mismatch at 4th parameter ('int' vs 'ompt_task_type
+            _t')
+     174      SET_CALLBACK(task_create);
+     175      ^~~~~~~~~~~~~~~~~~~~~~~~~
+     176    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:876:29: note: expan
+            ded from macro 'SET_CALLBACK'
+     177    #define SET_CALLBACK(event) SET_CALLBACK_T(event, event)
+     178                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     179    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:873:28: note: expan
+            ded from macro 'SET_CALLBACK_T'
+     180      ompt_callback_##type##_t tsan_##event = &ompt_tsan_##event; \
+     181                               ^              ~~~~~~~~~~~~~~~~~~
+     182    <scratch space>:74:1: note: expanded from here
+     183    tsan_task_create
+     184    ^
+  >> 185    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:922:32: error: unkn
+            own type name 'ompt_fns_t'
+     186    static void ompt_tsan_finalize(ompt_fns_t* fns)
+     187                                   ^
+  >> 188    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:940:1: error: unkno
+            wn type name 'ompt_fns_t'
+     189    ompt_fns_t* ompt_start_tool(
+     190    ^
+  >> 191    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/rtl/ompt-tsan.cpp:944:10: error: unkn
+            own type name 'ompt_fns_t'
+     192      static ompt_fns_t ompt_fns = {&ompt_tsan_initialize,&ompt_tsan_fi
+            nalize};
+     193             ^
+     194    5 errors generated.
+     195    [10/15] /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10
+            .2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/bin/clang++ -DGTES
+            T_HAS_RTTI=0 -DLLVM_VERSION=80 -DLLVM_VERSION="80 -D__STDC_CONSTANT
+            _MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS" -D__STDC_CONS
+            TANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/p/vast1
+            /build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llvm-8.0.0-
+            z5a2veqecju7emfez2eez7nmlveccixj/include -I/p/vast1/build/spack/opt
+            /spack/linux-rhel7-broadwell/gcc-10.2.1/llvm-openmp-ompt-tr6_forwar
+            ds-yxqjzdhmqukwwwgure37beui4n34boqq/include -I/var/tmp/sochat1/spac
+            k-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/s
+            pack-src/include -fPIC -fvisibility-inlines-hidden -Werror=date-tim
+            e -Werror=unguarded-availability-new -std=c++11 -w -fdiagnostics-co
+            lor -ffunction-sections -fdata-sections -O2 -g -DNDEBUG -fPIC  -fno
+            -exceptions -fno-rtti -MD -MT lib/CMakeFiles/LLVMArcher.dir/Archer.
+            cpp.o -MF lib/CMakeFiles/LLVMArcher.dir/Archer.cpp.o.d -o lib/CMake
+            Files/LLVMArcher.dir/Archer.cpp.o -c /var/tmp/sochat1/spack-stage/s
+            pack-stage-archer-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-src/
+            lib/Archer.cpp
+     196    [11/15] /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10
+            .2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/bin/clang++ -DGTES
+            T_HAS_RTTI=0 -DLLVM_VERSION=80 -DLLVM_VERSION="80 -D__STDC_CONSTANT
+            _MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS" -D__STDC_CONS
+            TANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/p/vast1
+            /build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llvm-8.0.0-
+            z5a2veqecju7emfez2eez7nmlveccixj/include -I/p/vast1/build/spack/opt
+            /spack/linux-rhel7-broadwell/gcc-10.2.1/llvm-openmp-ompt-tr6_forwar
+            ds-yxqjzdhmqukwwwgure37beui4n34boqq/include -I/var/tmp/sochat1/spac
+            k-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/s
+            pack-src/include -fPIC -fvisibility-inlines-hidden -Werror=date-tim
+            e -Werror=unguarded-availability-new -std=c++11 -w -fdiagnostics-co
+            lor -ffunction-sections -fdata-sections -O2 -g -DNDEBUG -fPIC  -fno
+            -exceptions -fno-rtti -MD -MT lib/CMakeFiles/LLVMArcher.dir/Support
+            /RegisterPasses.cpp.o -MF lib/CMakeFiles/LLVMArcher.dir/Support/Reg
+            isterPasses.cpp.o.d -o lib/CMakeFiles/LLVMArcher.dir/Support/Regist
+            erPasses.cpp.o -c /var/tmp/sochat1/spack-stage/spack-stage-archer-1
+            .0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-src/lib/Support/Registe
+            rPasses.cpp
+     197    [12/15] /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10
+            .2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/bin/clang++ -DGTES
+            T_HAS_RTTI=0 -DLLVM_VERSION=80 -DLLVM_VERSION="80 -D__STDC_CONSTANT
+            _MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS" -D__STDC_CONS
+            TANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/p/vast1
+            /build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llvm-8.0.0-
+            z5a2veqecju7emfez2eez7nmlveccixj/include -I/p/vast1/build/spack/opt
+            /spack/linux-rhel7-broadwell/gcc-10.2.1/llvm-openmp-ompt-tr6_forwar
+            ds-yxqjzdhmqukwwwgure37beui4n34boqq/include -I/var/tmp/sochat1/spac
+            k-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/s
+            pack-src/include -fPIC -fvisibility-inlines-hidden -Werror=date-tim
+            e -Werror=unguarded-availability-new -std=c++11 -w -fdiagnostics-co
+            lor -ffunction-sections -fdata-sections -O2 -g -DNDEBUG -fPIC  -fno
+            -exceptions -fno-rtti -MD -MT lib/CMakeFiles/LLVMArcher.dir/Transfo
+            rms/Instrumentation/InstrumentParallel.cpp.o -MF lib/CMakeFiles/LLV
+            MArcher.dir/Transforms/Instrumentation/InstrumentParallel.cpp.o.d -
+            o lib/CMakeFiles/LLVMArcher.dir/Transforms/Instrumentation/Instrume
+            ntParallel.cpp.o -c /var/tmp/sochat1/spack-stage/spack-stage-archer
+            -1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-src/lib/Transforms/In
+            strumentation/InstrumentParallel.cpp
+  >> 198    FAILED: lib/CMakeFiles/LLVMArcher.dir/Transforms/Instrumentation/In
+            strumentParallel.cpp.o
+     199    /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llv
+            m-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/bin/clang++ -DGTEST_HAS_RT
+            TI=0 -DLLVM_VERSION=80 -DLLVM_VERSION="80 -D__STDC_CONSTANT_MACROS 
+            -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS" -D__STDC_CONSTANT_MAC
+            ROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/p/vast1/build/s
+            pack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llvm-8.0.0-z5a2veqe
+            cju7emfez2eez7nmlveccixj/include -I/p/vast1/build/spack/opt/spack/l
+            inux-rhel7-broadwell/gcc-10.2.1/llvm-openmp-ompt-tr6_forwards-yxqjz
+            dhmqukwwwgure37beui4n34boqq/include -I/var/tmp/sochat1/spack-stage/
+            spack-stage-archer-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-src
+            /include -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werro
+            r=unguarded-availability-new -std=c++11 -w -fdiagnostics-color -ffu
+            nction-sections -fdata-sections -O2 -g -DNDEBUG -fPIC  -fno-excepti
+            ons -fno-rtti -MD -MT lib/CMakeFiles/LLVMArcher.dir/Transforms/Inst
+            rumentation/InstrumentParallel.cpp.o -MF lib/CMakeFiles/LLVMArcher.
+            dir/Transforms/Instrumentation/InstrumentParallel.cpp.o.d -o lib/CM
+            akeFiles/LLVMArcher.dir/Transforms/Instrumentation/InstrumentParall
+            el.cpp.o -c /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-t
+            fnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-src/lib/Transforms/Instrument
+            ation/InstrumentParallel.cpp
+  >> 200    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/lib/Transforms/Instrumentation/Instru
+            mentParallel.cpp:269:15: error: no member named 'ArgumentListType' 
+            in 'llvm::Function'
+     201        Function::ArgumentListType::iterator it = F.getArgumentList().b
+            egin();
+     202        ~~~~~~~~~~^
+  >> 203    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/lib/Transforms/Instrumentation/Instru
+            mentParallel.cpp:269:49: error: no member named 'getArgumentList' i
+            n 'llvm::Function'
+     204        Function::ArgumentListType::iterator it = F.getArgumentList().b
+            egin();
+     205                                                  ~ ^
+  >> 206    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/lib/Transforms/Instrumentation/Instru
+            mentParallel.cpp:270:15: error: no member named 'ArgumentListType' 
+            in 'llvm::Function'
+     207        Function::ArgumentListType::iterator end = F.getArgumentList().
+            end();
+     208        ~~~~~~~~~~^
+  >> 209    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/lib/Transforms/Instrumentation/Instru
+            mentParallel.cpp:270:42: error: use of undeclared identifier 'end';
+             did you mean 'std::end'?
+     210        Function::ArgumentListType::iterator end = F.getArgumentList().
+            end();
+     211                                             ^~~
+     212                                             std::end
+     213    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/lib/gcc/x86_64-redhat-linux
+            /10/../../../../include/c++/10/initializer_list:101:5: note: 'std::
+            end' declared here
+     214        end(initializer_list<_Tp> __ils) noexcept
+     215        ^
+  >> 216    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/lib/Transforms/Instrumentation/Instru
+            mentParallel.cpp:272:18: error: use of undeclared identifier 'end';
+             did you mean 'std::end'?
+     217        while (it != end) {
+     218                     ^~~
+     219                     std::end
+     220    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/lib/gcc/x86_64-redhat-linux
+            /10/../../../../include/c++/10/initializer_list:101:5: note: 'std::
+            end' declared here
+     221        end(initializer_list<_Tp> __ils) noexcept
+     222        ^
+     223    In file included from /var/tmp/sochat1/spack-stage/spack-stage-arch
+            er-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-src/lib/Transforms/
+            Instrumentation/InstrumentParallel.cpp:56:
+     224    In file included from /p/vast1/build/spack/opt/spack/linux-rhel7-br
+            oadwell/gcc-10.2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/incl
+            ude/llvm/Analysis/AliasAnalysis.h:45:
+     225    In file included from /p/vast1/build/spack/opt/spack/linux-rhel7-br
+            oadwell/gcc-10.2.1/llvm-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/incl
+            ude/llvm/Analysis/TargetLibraryInfo.h:18:
+  >> 226    /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llv
+            m-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/include/llvm/IR/Module.h:3
+            58:50: error: non-constant-expression cannot be narrowed from type 
+            'long' to 'size_t' (aka 'unsigned long') in initializer list [-Wc++
+            11-narrowing]
+     227        SmallVector<Type*, sizeof...(ArgsTy)> ArgTys{Args...};
+     228                                                     ^~~~
+     229    /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/llv
+            m-8.0.0-z5a2veqecju7emfez2eez7nmlveccixj/include/llvm/IR/Module.h:3
+            67:12: note: in instantiation of function template specialization '
+            llvm::Module::getOrInsertFunction<long>' requested here
+     230        return getOrInsertFunction(Name, AttributeList{}, RetTy, Args..
+            .);
+     231               ^
+     232    /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi
+            2pvqrek7cf2pybchcmd/spack-src/lib/Transforms/Instrumentation/Instru
+            mentParallel.cpp:184:22: note: in instantiation of function templat
+            e specialization 'llvm::Module::getOrInsertFunction<long>' requeste
+            d here
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-archer-1.0.0-tfnwroz3y6wmi2pvqrek7cf2pybchcmd/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

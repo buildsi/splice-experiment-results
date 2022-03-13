@@ -1,0 +1,71 @@
+/var/spool/slurmd/job97775/slurm_script: line 12: 56604 Killed                  spliced splice --package openmpi@1.1.1 --splice perl --runner spack --replace perl --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/openmpi/1.1.1/perl/experiment.json
+==> Error: ProcessError: Command exited with status 1:
+    '/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.1.1-tqd4e4p5nxeecwucwy3qjhwfphyp6vao/spack-src/configure' '--prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-1.1.1-tqd4e4p5nxeecwucwy3qjhwfphyp6vao' '--enable-shared' '--disable-silent-rules' '--disable-builtin-atomics' '--enable-static' '--without-pmi' '--without-xpmem' '--without-psm2' '--without-ucx' '--without-psm' '--without-mxm' '--without-openib' '--without-cma' '--without-hcoll' '--without-libfabric' '--without-fca' '--without-knem' '--without-loadleveler' '--without-slurm' '--without-lsf' '--without-tm' '--without-alps' '--without-sge' '--disable-memchecker' '--with-gpfs' '--without-sqlite3' '--disable-wrapper-rpath' '--disable-mpi-cxx' '--disable-cxx-exceptions'
+
+7 errors found in build log:
+     2       ==> openmpi: Executing phase: 'configure'
+     3       ==> [2022-03-04-08:14:36.424872] '/var/tmp/sochat1/spack-stage/spa
+             ck-stage-openmpi-1.1.1-tqd4e4p5nxeecwucwy3qjhwfphyp6vao/spack-src/
+             configure' '--prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-br
+             oadwell/gcc-10.2.1/openmpi-1.1.1-tqd4e4p5nxeecwucwy3qjhwfphyp6vao'
+              '--enable-shared' '--disable-silent-rules' '--disable-builtin-ato
+             mics' '--enable-static' '--without-pmi' '--without-xpmem' '--witho
+             ut-psm2' '--without-ucx' '--without-psm' '--without-mxm' '--withou
+             t-openib' '--without-cma' '--without-hcoll' '--without-libfabric' 
+             '--without-fca' '--without-knem' '--without-loadleveler' '--withou
+             t-slurm' '--without-lsf' '--without-tm' '--without-alps' '--withou
+             t-sge' '--disable-memchecker' '--with-gpfs' '--without-sqlite3' '-
+             -disable-wrapper-rpath' '--disable-mpi-cxx' '--disable-cxx-excepti
+             ons'
+     4       checking for a BSD-compatible install... /usr/bin/install -c
+     5       checking whether build environment is sane... yes
+     6       checking for gawk... gawk
+     7       checking whether make sets $(MAKE)... yes
+  >> 8       configure: error: source directory already configured; run "make d
+             istclean" there first
+     9       ==> openmpi: Executing phase: 'build'
+     10      ==> [2022-03-04-02:03:28.399821] 'make' '-j16' 'V=1'
+     11      Making all in config
+     12      make[1]: Entering directory `/tmp/sochat1/spack-stage/spack-stage-
+             openmpi-1.1.1-tqd4e4p5nxeecwucwy3qjhwfphyp6vao/spack-src/config'
+     13      make[1]: Nothing to be done for `all'.
+     14      make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penmpi-1.1.1-tqd4e4p5nxeecwucwy3qjhwfphyp6vao/spack-src/config'
+
+     ...
+
+     8447    
+     8448       16 |   call MPI_Comm_spawn_multiple(count, array_of_commands, a
+             rray_of_argv, &
+     8449          |                                                         2
+     8450    ......
+     8451       36 |   call MPI_Comm_spawn_multiple(count, array_of_commands, a
+             rray_of_argv, &
+     8452          |                                                         1
+  >> 8453    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(8)/CHARACTER(*)).
+  >> 8454    make[4]: *** [mpi_comm_spawn_multiple_f90.o] Error 1
+     8455    make[4]: *** Waiting for unfinished jobs....
+     8456    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penmpi-1.1.1-tqd4e4p5nxeecwucwy3qjhwfphyp6vao/spack-src/ompi/mpi/f
+             90'
+  >> 8457    make[3]: *** [all-recursive] Error 1
+     8458    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penmpi-1.1.1-tqd4e4p5nxeecwucwy3qjhwfphyp6vao/spack-src/ompi/mpi/f
+             90'
+  >> 8459    make[2]: *** [all-recursive] Error 1
+     8460    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penmpi-1.1.1-tqd4e4p5nxeecwucwy3qjhwfphyp6vao/spack-src/ompi/mpi'
+  >> 8461    make[1]: *** [all-recursive] Error 1
+     8462    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penmpi-1.1.1-tqd4e4p5nxeecwucwy3qjhwfphyp6vao/spack-src/ompi'
+  >> 8463    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.1.1-tqd4e4p5nxeecwucwy3qjhwfphyp6vao/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

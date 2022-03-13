@@ -1,0 +1,54 @@
+Traceback (most recent call last):
+  File "/p/vast1/build/anaconda3/bin/spliced", line 11, in <module>
+    load_entry_point('spliced', 'console_scripts', 'spliced')()
+  File "/p/vast1/build/spliced/spliced/client/__init__.py", line 237, in run_spliced
+    main(args=args, parser=parser, extra=extra, subparser=helper)
+  File "/p/vast1/build/spliced/spliced/client/splice.py", line 15, in main
+    run_spack_experiment(args, command=" ".join(extra))
+  File "/p/vast1/build/spliced/spliced/client/splice.py", line 47, in run_spack_experiment
+    experiment.run()
+  File "/p/vast1/build/spliced/spliced/experiment/spack.py", line 52, in run
+    spec_main = Spec(self.package).concretized()
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2684, in concretized
+    clone.concretize(tests=tests)
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2646, in concretize
+    self._new_concretize(tests)
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2619, in _new_concretize
+    result = solver.solve([self], tests=tests)
+  File "/p/vast1/build/spack/lib/spack/spack/solver/asp.py", line 2114, in solve
+    setup_only=setup_only,
+  File "/p/vast1/build/spack/lib/spack/spack/solver/asp.py", line 566, in solve
+    setup.setup(self, specs)
+  File "/p/vast1/build/spack/lib/spack/spack/solver/asp.py", line 1706, in setup
+    deptype=spack.dependency.all_deptypes
+  File "/p/vast1/build/spack/lib/spack/spack/package.py", line 2836, in possible_dependencies
+    if spack.repo.path.is_virtual(pos.name):
+  File "/p/vast1/build/spack/lib/spack/spack/repo.py", line 676, in is_virtual
+    return have_name and pkg_name in self.provider_index
+  File "/p/vast1/build/spack/lib/spack/spack/repo.py", line 524, in provider_index
+    self._provider_index.merge(repo.provider_index)
+  File "/p/vast1/build/spack/lib/spack/spack/repo.py", line 948, in provider_index
+    return self.index['providers']
+  File "/p/vast1/build/spack/lib/spack/spack/repo.py", line 354, in __getitem__
+    self._build_all_indexes()
+  File "/p/vast1/build/spack/lib/spack/spack/repo.py", line 369, in _build_all_indexes
+    self.indexes[name] = self._build_index(name, indexer)
+  File "/p/vast1/build/spack/lib/spack/spack/repo.py", line 394, in _build_index
+    with misc_cache.write_transaction(cache_filename) as (old, new):
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 684, in __enter__
+    if self._enter() and self._acquire_fn:
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 720, in _enter
+    return self._lock.acquire_write(self._timeout)
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 448, in acquire_write
+    wait_time, nattempts = self._lock(fcntl.LOCK_EX, timeout=timeout)
+  File "/p/vast1/build/spack/lib/spack/spack/util/lock.py", line 32, in _lock
+    return super(Lock, self)._lock(op, timeout)
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 316, in _lock
+    .format(lock_type[op]))
+llnl.util.lock.LockTimeoutError: Timed out waiting for a write lock.
+/var/spool/slurmd/job100499/slurm_script: line 12: 15549 Killed                  spliced splice --package hpctoolkit@2021.03.01 --splice zlib --runner spack --replace zlib --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/hpctoolkit/2021.03.01/zlib/experiment.json
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

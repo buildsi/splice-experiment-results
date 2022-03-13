@@ -1,0 +1,415 @@
+==> Error: Failed to upgrade to a write lock for intel-tbb-2021.3.0-aeqejk7rhfivtkbs7rr3hz6trw27e5oz due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: intel-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw failed to install
+==> Error: intel-tbb-2021.2.0-tmrx3cw2e3p2j57skufw344he7fv6sdw: Package was not installed
+==> Warning: intel-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp failed to install
+==> Error: intel-tbb-2021.1.1-tbgytyw72xutxni4tzzpsbzfaufc7bzp: Package was not installed
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j2' 'compiler=gcc'
+
+6 errors found in build log:
+     1     ==> intel-tbb: Executing phase: 'cmake'
+     2     ==> intel-tbb: Executing phase: 'build'
+     3     ==> [2022-02-25-10:45:30.117595] 'make' '-j2' 'compiler=gcc'
+     4     Created ./build/linux_intel64_gcc_cc10_libc2.17_kernel3.10.0_release
+            and ..._debug directories
+     5     make -C "./build/linux_intel64_gcc_cc10_libc2.17_kernel3.10.0_debug"
+             -r -f ../../build/Makefile.tbb cfg=debug
+     6     make[1]: Entering directory `/tmp/sochat1/spack-stage/spack-stage-in
+           tel-tbb-4.4-v45pgcjj4nxlrpoogjck5grz2gbl4gh4/spack-src/build/linux_i
+           ntel64_gcc_cc10_libc2.17_kernel3.10.0_debug'
+  >> 7     ../../build/Makefile.tbb:31: CONFIG: cfg=debug arch=intel64 compiler
+           =gcc target=linux runtime=cc10_libc2.17_kernel3.10.0
+     8     /p/vast1/build/spack/lib/spack/env/gcc/g++ -o concurrent_hash_map.o 
+           -c -MMD -DTBB_USE_DEBUG -DDO_ITT_NOTIFY -g -O0 -DUSE_PTHREAD -m64  -
+           fPIC -D__TBB_BUILD=1 -Wall -Wno-parentheses -Wno-non-virtual-dtor   
+            -I../../src -I../../src/rml/include -I../../include ../../src/tbb/c
+           oncurrent_hash_map.cpp
+     9     /p/vast1/build/spack/lib/spack/env/gcc/g++ -o concurrent_queue.o -c 
+           -MMD -DTBB_USE_DEBUG -DDO_ITT_NOTIFY -g -O0 -DUSE_PTHREAD -m64  -fPI
+           C -D__TBB_BUILD=1 -Wall -Wno-parentheses -Wno-non-virtual-dtor    -I
+           ../../src -I../../src/rml/include -I../../include ../../src/tbb/conc
+           urrent_queue.cpp
+     10    In file included from ../../src/tbb/concurrent_hash_map.cpp:21:
+     11    ../../include/tbb/concurrent_hash_map.h: In constructor 'tbb::interf
+           ace5::internal::hash_map_base::hash_map_base()':
+     12    ../../include/tbb/concurrent_hash_map.h:135:51: warning: 'void* mems
+           et(void*, int, size_t)' clearing an object of type 'class tbb::inter
+           face5::internal::hash_map_base' with no trivial copy-assignment; use
+            value-initialization instead [-Wclass-memaccess]
+     13      135 |                 + embedded_buckets*sizeof(bucket) ); // n*8 
+           or n*16
+
+     ...
+
+     33    /p/vast1/build/spack/lib/spack/env/gcc/g++ -o dynamic_link.o -c -MMD
+            -DTBB_USE_DEBUG -DDO_ITT_NOTIFY -g -O0 -DUSE_PTHREAD -m64  -fPIC -D
+           __TBB_BUILD=1 -Wall -Wno-parentheses -Wno-non-virtual-dtor    -I../.
+           ./src -I../../src/rml/include -I../../include ../../src/tbb/dynamic_
+           link.cpp
+     34    /p/vast1/build/spack/lib/spack/env/gcc/g++ -o itt_notify.o -c -MMD -
+           DTBB_USE_DEBUG -DDO_ITT_NOTIFY -g -O0 -DUSE_PTHREAD -m64  -fPIC -D__
+           TBB_BUILD=1 -Wall -Wno-parentheses -Wno-non-virtual-dtor    -I../../
+           src -I../../src/rml/include -I../../include ../../src/tbb/itt_notify
+           .cpp
+     35    /p/vast1/build/spack/lib/spack/env/gcc/g++ -o cache_aligned_allocato
+           r.o -c -MMD -DTBB_USE_DEBUG -DDO_ITT_NOTIFY -g -O0 -DUSE_PTHREAD -m6
+           4  -fPIC -D__TBB_BUILD=1 -Wall -Wno-parentheses -Wno-non-virtual-dto
+           r    -I../../src -I../../src/rml/include -I../../include ../../src/t
+           bb/cache_aligned_allocator.cpp
+     36    /p/vast1/build/spack/lib/spack/env/gcc/g++ -o pipeline.o -c -MMD -DT
+           BB_USE_DEBUG -DDO_ITT_NOTIFY -g -O0 -DUSE_PTHREAD -m64  -fPIC -D__TB
+           B_BUILD=1 -Wall -Wno-parentheses -Wno-non-virtual-dtor    -I../../sr
+           c -I../../src/rml/include -I../../include ../../src/tbb/pipeline.cpp
+     37    /p/vast1/build/spack/lib/spack/env/gcc/g++ -o queuing_mutex.o -c -MM
+           D -DTBB_USE_DEBUG -DDO_ITT_NOTIFY -g -O0 -DUSE_PTHREAD -m64  -fPIC -
+           D__TBB_BUILD=1 -Wall -Wno-parentheses -Wno-non-virtual-dtor    -I../
+           ../src -I../../src/rml/include -I../../include ../../src/tbb/queuing
+           _mutex.cpp
+     38    In file included from ../../src/tbb/pipeline.cpp:21:
+  >> 39    ../../include/tbb/pipeline.h:328:74: error: 'has_trivial_copy_constr
+           uctor' is not a member of 'std'; did you mean 'is_trivially_copy_con
+           structible'?
+     40      328 | template<typename T> struct tbb_trivially_copyable { enum { 
+           value = std::has_trivial_copy_constructor<T>::value }; };
+     41          |                                                             
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     42          |                                                             
+                        is_trivially_copy_constructible
+  >> 43    ../../include/tbb/pipeline.h:328:104: error: expected primary-expres
+           sion before '>' token
+     44      328 | template<typename T> struct tbb_trivially_copyable { enum { 
+           value = std::has_trivial_copy_constructor<T>::value }; };
+     45          |                                                             
+                                                      ^
+  >> 46    ../../include/tbb/pipeline.h:328:107: error: '::value' has not been 
+           declared
+     47      328 | template<typename T> struct tbb_trivially_copyable { enum { 
+           value = std::has_trivial_copy_constructor<T>::value }; };
+     48          |                                                             
+                                                         ^~~~~
+  >> 49    make[1]: *** [pipeline.o] Error 1
+     50    make[1]: *** Waiting for unfinished jobs....
+     51    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-int
+           el-tbb-4.4-v45pgcjj4nxlrpoogjck5grz2gbl4gh4/spack-src/build/linux_in
+           tel64_gcc_cc10_libc2.17_kernel3.10.0_debug'
+  >> 52    make: *** [tbb] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-4.4-v45pgcjj4nxlrpoogjck5grz2gbl4gh4/spack-build-out.txt
+
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+/var/spool/slurmd/job100361/slurm_script: line 12:  8847 Killed                  spliced splice --package hpctoolkit@2021.03.01 --splice intel-tbb --runner spack --replace intel-tbb --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/hpctoolkit/2021.03.01/intel-tbb/experiment.json
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j16'
+
+13 errors found in build log:
+     455                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src/src/tbb/.
+            ./../include/tbb/../oneapi/tbb/concurrent_unordered_map.h:21,
+     456                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src/src/tbb/.
+            ./../include/tbb/concurrent_unordered_map.h:17,
+     457                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src/test/tbb/
+            test_concurrent_unordered_map.cpp:22:
+     458    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h: In instantiation of 'class std::basic_string<char, std::ch
+            ar_traits<char>, tbb::detail::d1::tbb_allocator<char> >':
+     459    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g
+            6kcj52vpwflko3l5tydp2yg7w/spack-src/test/common/concurrent_associat
+            ive_common.h:934:29:   required from 'void test_map_specific_types(
+            ) [with Checker = UnorderedMapTypesTester]'
+     460    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g
+            6kcj52vpwflko3l5tydp2yg7w/spack-src/test/tbb/test_concurrent_unorde
+            red_map.cpp:97:54:   required from here
+  >> 461    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h:3150:57: error: no type named 'size_type' in 'std::basic_st
+            ring<char, std::char_traits<char>, tbb::detail::d1::tbb_allocator<c
+            har> >::_CharT_alloc_type' {aka 'std::allocator_traits<tbb::detail:
+            :d1::tbb_allocator<char> >::rebind_alloc<char>'}
+     462     3150 |       typedef typename _CharT_alloc_type::size_type     siz
+            e_type;
+     463          |                                                         ^~~
+            ~~~~~~
+     464    compilation terminated due to -Wfatal-errors.
+     465    [ 27%] Built target test_dynamic_link
+     466    make  -f test/CMakeFiles/test_parallel_for_each.dir/build.make test
+            /CMakeFiles/test_parallel_for_each.dir/depend
+     467    make[2]: Entering directory `/tmp/sochat1/spack-stage/spack-stage-i
+            ntel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplb
+            x6g'
+     468    cd /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g6
+            kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx6g && /p/vast1/build/spac
+            k/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/cmake-3.22.2-7oku4yd37
+            mfoi65gi3alunjbl35euphw/bin/cmake -E cmake_depends "Unix Makefiles"
+             /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6
+            g6kcj52vpwflko3l5tydp2yg7w/spack-src /var/tmp/sochat1/spack-stage/s
+            pack-stage-intel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spac
+            k-src/test /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-
+            uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx6g /tmp/sochat1/s
+            pack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5ty
+            dp2yg7w/spack-build-uplbx6g/test /tmp/sochat1/spack-stage/spack-sta
+            ge-intel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-
+            uplbx6g/test/CMakeFiles/test_parallel_for_each.dir/DependInfo.cmake
+             --color=
+     469    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx
+            6g'
+     470    make  -f test/CMakeFiles/test_parallel_for_each.dir/build.make test
+            /CMakeFiles/test_parallel_for_each.dir/build
+     471    make[2]: Entering directory `/tmp/sochat1/spack-stage/spack-stage-i
+            ntel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplb
+            x6g'
+  >> 472    make[2]: *** [test/CMakeFiles/test_concurrent_unordered_map.dir/tbb
+            /test_concurrent_unordered_map.cpp.o] Error 1
+     473    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx
+            6g'
+     474    [ 27%] Building CXX object test/CMakeFiles/test_parallel_for_each.d
+            ir/tbb/test_parallel_for_each.cpp.o
+  >> 475    make[1]: *** [test/CMakeFiles/test_concurrent_unordered_map.dir/all
+            ] Error 2
+     476    make[1]: *** Waiting for unfinished jobs....
+     477    cd /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g6
+            kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx6g/test && /p/vast1/build
+            /spack/lib/spack/env/gcc/g++ -D__TBB_CPF_BUILD=1 -I/var/tmp/sochat1
+            /spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5
+            tydp2yg7w/spack-src/test/.. -I/var/tmp/sochat1/spack-stage/spack-st
+            age-intel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src/t
+            est -I/var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-u
+            plbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src/src/tbb/../../include -O2
+             -g -DNDEBUG -Wall -Wextra -Wfatal-errors -Wshadow -Wcast-qual -Wov
+            erloaded-virtual -Wnon-virtual-dtor -mrtm -pthread -std=c++11 -MD -
+            MT test/CMakeFiles/test_parallel_for_each.dir/tbb/test_parallel_for
+            _each.cpp.o -MF CMakeFiles/test_parallel_for_each.dir/tbb/test_para
+            llel_for_each.cpp.o.d -o CMakeFiles/test_parallel_for_each.dir/tbb/
+            test_parallel_for_each.cpp.o -c /var/tmp/sochat1/spack-stage/spack-
+            stage-intel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src
+            /test/tbb/test_parallel_for_each.cpp
+     478    [ 27%] Linking CXX executable ../gnu_10.2_cxx11_64_relwithdebinfo/t
+            est_tick_count
+     479    cd /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g6
+            kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx6g/test && /p/vast1/build
+            /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/cmake-3.22.2-7oku
+            4yd37mfoi65gi3alunjbl35euphw/bin/cmake -E cmake_link_script CMakeFi
+            les/test_tick_count.dir/link.txt --verbose=1
+     480    /p/vast1/build/spack/lib/spack/env/gcc/g++ -O2 -g -DNDEBUG -rdynami
+            c CMakeFiles/test_tick_count.dir/tbb/test_tick_count.cpp.o -o ../gn
+            u_10.2_cxx11_64_relwithdebinfo/test_tick_count  -Wl,-rpath,/tmp/soc
+            hat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g6kcj52vpwflk
+            o3l5tydp2yg7w/spack-build-uplbx6g/gnu_10.2_cxx11_64_relwithdebinfo 
+            ../gnu_10.2_cxx11_64_relwithdebinfo/libtbb.so.12.3 -ldl -pthread
+     481    In file included from /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/inclu
+            de/c++/10/string:55,
+
+     ...
+
+     490                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src/src/tbb/.
+            ./../include/tbb/../oneapi/tbb/concurrent_map.h:21,
+     491                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src/src/tbb/.
+            ./../include/tbb/concurrent_map.h:17,
+     492                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src/test/tbb/
+            test_concurrent_map.cpp:19:
+     493    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h: In instantiation of 'class std::basic_string<char, std::ch
+            ar_traits<char>, tbb::detail::d1::tbb_allocator<char> >':
+     494    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g
+            6kcj52vpwflko3l5tydp2yg7w/spack-src/test/common/concurrent_associat
+            ive_common.h:934:29:   required from 'void test_map_specific_types(
+            ) [with Checker = OrderedMapTypesTester]'
+     495    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g
+            6kcj52vpwflko3l5tydp2yg7w/spack-src/test/tbb/test_concurrent_map.cp
+            p:90:52:   required from here
+  >> 496    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h:3150:57: error: no type named 'size_type' in 'std::basic_st
+            ring<char, std::char_traits<char>, tbb::detail::d1::tbb_allocator<c
+            har> >::_CharT_alloc_type' {aka 'std::allocator_traits<tbb::detail:
+            :d1::tbb_allocator<char> >::rebind_alloc<char>'}
+     497     3150 |       typedef typename _CharT_alloc_type::size_type     siz
+            e_type;
+     498          |                                                         ^~~
+            ~~~~~~
+     499    compilation terminated due to -Wfatal-errors.
+     500    In file included from /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/inclu
+            de/c++/10/string:55,
+     501                     from /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/inclu
+            de/c++/10/bits/locale_classes.h:40,
+     502                     from /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/inclu
+            de/c++/10/bits/ios_base.h:41,
+
+     ...
+
+     510                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src/src/tbb/.
+            ./../include/tbb/concurrent_unordered_set.h:17,
+     511                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src/test/tbb/
+            test_concurrent_unordered_set.cpp:22:
+     512    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h: In instantiation of 'class std::basic_string<char, std::ch
+            ar_traits<char>, tbb::detail::d1::tbb_allocator<char> >':
+     513    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g
+            6kcj52vpwflko3l5tydp2yg7w/spack-src/test/tbb/test_concurrent_unorde
+            red_set.cpp:72:115:   required from 'void UnorderedSetTypesTester::
+            check(const std::list<ValueType>&) [with bool DefCtorPresent = true
+            ; ValueType = std::basic_string<char, std::char_traits<char>, tbb::
+            detail::d1::tbb_allocator<char> >]'
+     514    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g
+            6kcj52vpwflko3l5tydp2yg7w/spack-src/test/common/concurrent_associat
+            ive_common.h:879:58:   required from 'void test_set_specific_types(
+            ) [with Checker = UnorderedSetTypesTester]'
+     515    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g
+            6kcj52vpwflko3l5tydp2yg7w/spack-src/test/tbb/test_concurrent_unorde
+            red_set.cpp:78:54:   required from here
+  >> 516    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h:3150:57: error: no type named 'size_type' in 'std::basic_st
+            ring<char, std::char_traits<char>, tbb::detail::d1::tbb_allocator<c
+            har> >::_CharT_alloc_type' {aka 'std::allocator_traits<tbb::detail:
+            :d1::tbb_allocator<char> >::rebind_alloc<char>'}
+     517     3150 |       typedef typename _CharT_alloc_type::size_type     siz
+            e_type;
+     518          |                                                         ^~~
+            ~~~~~~
+     519    compilation terminated due to -Wfatal-errors.
+  >> 520    make[2]: *** [test/CMakeFiles/test_concurrent_map.dir/tbb/test_conc
+            urrent_map.cpp.o] Error 1
+     521    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx
+            6g'
+  >> 522    make[1]: *** [test/CMakeFiles/test_concurrent_map.dir/all] Error 2
+  >> 523    make[2]: *** [test/CMakeFiles/test_concurrent_unordered_set.dir/tbb
+            /test_concurrent_unordered_set.cpp.o] Error 1
+     524    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx
+            6g'
+  >> 525    make[1]: *** [test/CMakeFiles/test_concurrent_unordered_set.dir/all
+            ] Error 2
+     526    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx
+            6g'
+     527    [ 27%] Built target test_tick_count
+     528    [ 27%] Linking CXX executable ../gnu_10.2_cxx11_64_relwithdebinfo/t
+            est_malloc_compliance
+     529    cd /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g6
+            kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx6g/test && /p/vast1/build
+            /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/cmake-3.22.2-7oku
+            4yd37mfoi65gi3alunjbl35euphw/bin/cmake -E cmake_link_script CMakeFi
+            les/test_malloc_compliance.dir/link.txt --verbose=1
+     530    /p/vast1/build/spack/lib/spack/env/gcc/g++ -O2 -g -DNDEBUG -rdynami
+            c CMakeFiles/test_malloc_compliance.dir/tbbmalloc/test_malloc_compl
+            iance.cpp.o -o ../gnu_10.2_cxx11_64_relwithdebinfo/test_malloc_comp
+            liance  -Wl,-rpath,/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2
+            021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx6g/gnu_10
+            .2_cxx11_64_relwithdebinfo ../gnu_10.2_cxx11_64_relwithdebinfo/libt
+            bbmalloc.so.2.3 -ldl -pthread
+     531    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx
+            6g'
+
+     ...
+
+     543                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src/src/tbb/.
+            ./../include/tbb/concurrent_set.h:17,
+     544                     from /var/tmp/sochat1/spack-stage/spack-stage-inte
+            l-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-src/test/tbb/
+            test_concurrent_set.cpp:20:
+     545    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h: In instantiation of 'class std::basic_string<char, std::ch
+            ar_traits<char>, tbb::detail::d1::tbb_allocator<char> >':
+     546    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g
+            6kcj52vpwflko3l5tydp2yg7w/spack-src/test/tbb/test_concurrent_set.cp
+            p:66:67:   required from 'void OrderedSetTypesTester::check(const s
+            td::list<ValueType>&) [with bool DefCtorPresent = true; ValueType =
+             std::basic_string<char, std::char_traits<char>, tbb::detail::d1::t
+            bb_allocator<char> >]'
+     547    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g
+            6kcj52vpwflko3l5tydp2yg7w/spack-src/test/common/concurrent_associat
+            ive_common.h:879:58:   required from 'void test_set_specific_types(
+            ) [with Checker = OrderedSetTypesTester]'
+     548    /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g
+            6kcj52vpwflko3l5tydp2yg7w/spack-src/test/tbb/test_concurrent_set.cp
+            p:72:52:   required from here
+  >> 549    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/include/c++/10/bits/basic_s
+            tring.h:3150:57: error: no type named 'size_type' in 'std::basic_st
+            ring<char, std::char_traits<char>, tbb::detail::d1::tbb_allocator<c
+            har> >::_CharT_alloc_type' {aka 'std::allocator_traits<tbb::detail:
+            :d1::tbb_allocator<char> >::rebind_alloc<char>'}
+     550     3150 |       typedef typename _CharT_alloc_type::size_type     siz
+            e_type;
+     551          |                                                         ^~~
+            ~~~~~~
+     552    compilation terminated due to -Wfatal-errors.
+  >> 553    make[2]: *** [test/CMakeFiles/test_concurrent_set.dir/tbb/test_conc
+            urrent_set.cpp.o] Error 1
+     554    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx
+            6g'
+  >> 555    make[1]: *** [test/CMakeFiles/test_concurrent_set.dir/all] Error 2
+     556    [ 27%] Linking CXX executable ../gnu_10.2_cxx11_64_relwithdebinfo/t
+            est_malloc_pools
+     557    cd /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g6
+            kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx6g/test && /p/vast1/build
+            /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/cmake-3.22.2-7oku
+            4yd37mfoi65gi3alunjbl35euphw/bin/cmake -E cmake_link_script CMakeFi
+            les/test_malloc_pools.dir/link.txt --verbose=1
+     558    /p/vast1/build/spack/lib/spack/env/gcc/g++ -O2 -g -DNDEBUG -rdynami
+            c CMakeFiles/test_malloc_pools.dir/tbbmalloc/test_malloc_pools.cpp.
+            o -o ../gnu_10.2_cxx11_64_relwithdebinfo/test_malloc_pools  -Wl,-rp
+            ath,/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g
+            6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx6g/gnu_10.2_cxx11_64_rel
+            withdebinfo ../gnu_10.2_cxx11_64_relwithdebinfo/libtbbmalloc.so.2.3
+             -ldl -pthread
+     559    [ 28%] Linking CXX executable ../gnu_10.2_cxx11_64_relwithdebinfo/t
+            est_arena_priorities
+     560    cd /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g6
+            kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx6g/test && /p/vast1/build
+            /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/cmake-3.22.2-7oku
+            4yd37mfoi65gi3alunjbl35euphw/bin/cmake -E cmake_link_script CMakeFi
+            les/test_arena_priorities.dir/link.txt --verbose=1
+     561    /p/vast1/build/spack/lib/spack/env/gcc/g++ -O2 -g -DNDEBUG -rdynami
+            c CMakeFiles/test_arena_priorities.dir/tbb/test_arena_priorities.cp
+            p.o -o ../gnu_10.2_cxx11_64_relwithdebinfo/test_arena_priorities  -
+            Wl,-rpath,/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-u
+            plbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx6g/gnu_10.2_cxx11_
+            64_relwithdebinfo ../gnu_10.2_cxx11_64_relwithdebinfo/libtbb.so.12.
+            3 -ldl -pthread
+
+     ...
+
+     601    [ 30%] Linking CXX executable ../gnu_10.2_cxx11_64_relwithdebinfo/t
+            est_parallel_for_each
+     602    cd /tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g6
+            kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx6g/test && /p/vast1/build
+            /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/cmake-3.22.2-7oku
+            4yd37mfoi65gi3alunjbl35euphw/bin/cmake -E cmake_link_script CMakeFi
+            les/test_parallel_for_each.dir/link.txt --verbose=1
+     603    /p/vast1/build/spack/lib/spack/env/gcc/g++ -O2 -g -DNDEBUG -rdynami
+            c CMakeFiles/test_parallel_for_each.dir/tbb/test_parallel_for_each.
+            cpp.o -o ../gnu_10.2_cxx11_64_relwithdebinfo/test_parallel_for_each
+              -Wl,-rpath,/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.
+            0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx6g/gnu_10.2_cxx
+            11_64_relwithdebinfo ../gnu_10.2_cxx11_64_relwithdebinfo/libtbb.so.
+            12.3 -ldl -pthread
+     604    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx
+            6g'
+     605    [ 30%] Built target test_parallel_for_each
+     606    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-in
+            tel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-uplbx
+            6g'
+  >> 607    make: *** [all] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-intel-tbb-2021.3.0-uplbx6g6kcj52vpwflko3l5tydp2yg7w/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

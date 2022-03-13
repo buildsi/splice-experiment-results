@@ -1,0 +1,884 @@
+[
+    {
+        "binaries": {},
+        "predictions": {},
+        "libs": {},
+        "experiment": "experiment",
+        "result": "splice-concretization-failed",
+        "success": false,
+        "splice": "pkgconf@1.8.0",
+        "package": "swig@4.0.2"
+    },
+    {
+        "binaries": {
+            "spliced": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig"
+            ],
+            "original": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/ccache-swig"
+            ]
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test 3gil32vikn7vwxt5o3dm6acwt6e4pnjj\n==> Testing package swig-4.0.2-xia2iia\n============================= 1 passed of 1 specs ==============================\n",
+                    "return_code": 0,
+                    "prediction": true,
+                    "command": "/p/vast1/build/spack/bin/spack test run /xia2ii"
+                }
+            ],
+            "symbolator": [
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.4-undwekwfnoadmtca2gklapyszqo6fbqc/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.4-undwekwfnoadmtca2gklapyszqo6fbqc/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.4-undwekwfnoadmtca2gklapyszqo6fbqc/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.4-undwekwfnoadmtca2gklapyszqo6fbqc/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.4-undwekwfnoadmtca2gklapyszqo6fbqc/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.4-undwekwfnoadmtca2gklapyszqo6fbqc/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "pkgconf@1.7.4%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.4-undwekwfnoadmtca2gklapyszqo6fbqc/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "pkgconf@1.7.4",
+        "package": "swig@4.0.2"
+    },
+    {
+        "binaries": {
+            "spliced": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig"
+            ],
+            "original": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/ccache-swig"
+            ]
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test 3gil32vikn7vwxt5o3dm6acwt6e4pnjj\n==> Testing package swig-4.0.2-xia2iia\n============================= 1 passed of 1 specs ==============================\n",
+                    "return_code": 0,
+                    "prediction": true,
+                    "command": "/p/vast1/build/spack/bin/spack test run /xia2ii"
+                }
+            ],
+            "symbolator": [
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.3-7hgm7il7fkby77dpxqp72np3ihfyc2tn/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.3-7hgm7il7fkby77dpxqp72np3ihfyc2tn/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.3-7hgm7il7fkby77dpxqp72np3ihfyc2tn/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.3-7hgm7il7fkby77dpxqp72np3ihfyc2tn/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.3-7hgm7il7fkby77dpxqp72np3ihfyc2tn/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.3-7hgm7il7fkby77dpxqp72np3ihfyc2tn/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "pkgconf@1.7.3%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.7.3-7hgm7il7fkby77dpxqp72np3ihfyc2tn/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "pkgconf@1.7.3",
+        "package": "swig@4.0.2"
+    },
+    {
+        "binaries": {
+            "spliced": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig"
+            ],
+            "original": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/ccache-swig"
+            ]
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test 3gil32vikn7vwxt5o3dm6acwt6e4pnjj\n==> Testing package swig-4.0.2-xia2iia\n============================= 1 passed of 1 specs ==============================\n",
+                    "return_code": 0,
+                    "prediction": true,
+                    "command": "/p/vast1/build/spack/bin/spack test run /xia2ii"
+                }
+            ],
+            "symbolator": [
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.3-wx7wxute6htyt7arhoksznfq56yoelvh/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.3-wx7wxute6htyt7arhoksznfq56yoelvh/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.3-wx7wxute6htyt7arhoksznfq56yoelvh/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.3-wx7wxute6htyt7arhoksznfq56yoelvh/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.3-wx7wxute6htyt7arhoksznfq56yoelvh/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.3-wx7wxute6htyt7arhoksznfq56yoelvh/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "pkgconf@1.6.3%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.3-wx7wxute6htyt7arhoksznfq56yoelvh/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "pkgconf@1.6.3",
+        "package": "swig@4.0.2"
+    },
+    {
+        "binaries": {
+            "spliced": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig"
+            ],
+            "original": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/ccache-swig"
+            ]
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test 3gil32vikn7vwxt5o3dm6acwt6e4pnjj\n==> Testing package swig-4.0.2-xia2iia\n============================= 1 passed of 1 specs ==============================\n",
+                    "return_code": 0,
+                    "prediction": true,
+                    "command": "/p/vast1/build/spack/bin/spack test run /xia2ii"
+                }
+            ],
+            "symbolator": [
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.1-i2ayheogpfexopiqqg3qz7t4upgsmtba/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.1-i2ayheogpfexopiqqg3qz7t4upgsmtba/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.1-i2ayheogpfexopiqqg3qz7t4upgsmtba/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.1-i2ayheogpfexopiqqg3qz7t4upgsmtba/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.1-i2ayheogpfexopiqqg3qz7t4upgsmtba/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.1-i2ayheogpfexopiqqg3qz7t4upgsmtba/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "pkgconf@1.6.1%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.6.1-i2ayheogpfexopiqqg3qz7t4upgsmtba/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "pkgconf@1.6.1",
+        "package": "swig@4.0.2"
+    },
+    {
+        "binaries": {
+            "original": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/ccache-swig"
+            ]
+        },
+        "predictions": {},
+        "libs": {
+            "dep": [],
+            "original": [
+                {
+                    "dep": "pcre@8.45%gcc@10.2.1~jit+multibyte+utf arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pcre-8.45-glwmib6eqndwnobkbazxag5fm4js7em3/lib/libpcreposix.so.0.0.7",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pcre-8.45-glwmib6eqndwnobkbazxag5fm4js7em3/lib/libpcre16.so.0.2.13",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pcre-8.45-glwmib6eqndwnobkbazxag5fm4js7em3/lib/libpcre32.so.0.0.13",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pcre-8.45-glwmib6eqndwnobkbazxag5fm4js7em3/lib/libpcre.so.1.2.13",
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pcre-8.45-glwmib6eqndwnobkbazxag5fm4js7em3/lib/libpcrecpp.so.0.0.2"
+                    ]
+                },
+                {
+                    "dep": "pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "rewiring-failed",
+        "success": false,
+        "splice": "pkgconf@1.6.0",
+        "package": "swig@4.0.2"
+    },
+    {
+        "binaries": {
+            "spliced": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig"
+            ],
+            "original": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/ccache-swig"
+            ]
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test 3gil32vikn7vwxt5o3dm6acwt6e4pnjj\n==> Testing package swig-4.0.2-xia2iia\n============================= 1 passed of 1 specs ==============================\n",
+                    "return_code": 0,
+                    "prediction": true,
+                    "command": "/p/vast1/build/spack/bin/spack test run /xia2ii"
+                }
+            ],
+            "symbolator": [
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.5.4-5bz4ozzvn3jbawxtzq6hvkfckuo2szic/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.5.4-5bz4ozzvn3jbawxtzq6hvkfckuo2szic/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.5.4-5bz4ozzvn3jbawxtzq6hvkfckuo2szic/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.5.4-5bz4ozzvn3jbawxtzq6hvkfckuo2szic/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.5.4-5bz4ozzvn3jbawxtzq6hvkfckuo2szic/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.5.4-5bz4ozzvn3jbawxtzq6hvkfckuo2szic/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "pkgconf@1.5.4%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.5.4-5bz4ozzvn3jbawxtzq6hvkfckuo2szic/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "pkgconf@1.5.4",
+        "package": "swig@4.0.2"
+    },
+    {
+        "binaries": {
+            "spliced": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig"
+            ],
+            "original": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/ccache-swig"
+            ]
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test 3gil32vikn7vwxt5o3dm6acwt6e4pnjj\n==> Testing package swig-4.0.2-xia2iia\n============================= 1 passed of 1 specs ==============================\n",
+                    "return_code": 0,
+                    "prediction": true,
+                    "command": "/p/vast1/build/spack/bin/spack test run /xia2ii"
+                }
+            ],
+            "symbolator": [
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.2-jpd7blzfco2pa72yl2jvfxu5xs3vucqf/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.2-jpd7blzfco2pa72yl2jvfxu5xs3vucqf/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.2-jpd7blzfco2pa72yl2jvfxu5xs3vucqf/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.2-jpd7blzfco2pa72yl2jvfxu5xs3vucqf/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.2-jpd7blzfco2pa72yl2jvfxu5xs3vucqf/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.2-jpd7blzfco2pa72yl2jvfxu5xs3vucqf/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "pkgconf@1.4.2%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.2-jpd7blzfco2pa72yl2jvfxu5xs3vucqf/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "pkgconf@1.4.2",
+        "package": "swig@4.0.2"
+    },
+    {
+        "binaries": {
+            "spliced": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig"
+            ],
+            "original": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/ccache-swig"
+            ]
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test 3gil32vikn7vwxt5o3dm6acwt6e4pnjj\n==> Testing package swig-4.0.2-xia2iia\n============================= 1 passed of 1 specs ==============================\n",
+                    "return_code": 0,
+                    "prediction": true,
+                    "command": "/p/vast1/build/spack/bin/spack test run /xia2ii"
+                }
+            ],
+            "symbolator": [
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.0-e3inpigv7qvo7xyvjfpg6j2yfvggdhfa/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.0-e3inpigv7qvo7xyvjfpg6j2yfvggdhfa/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.0-e3inpigv7qvo7xyvjfpg6j2yfvggdhfa/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.0-e3inpigv7qvo7xyvjfpg6j2yfvggdhfa/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                },
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.0-e3inpigv7qvo7xyvjfpg6j2yfvggdhfa/lib/libpkgconf.so.3.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.0-e3inpigv7qvo7xyvjfpg6j2yfvggdhfa/lib/libpkgconf.so.3.0.0",
+                    "prediction": true
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "pkgconf@1.4.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.4.0-e3inpigv7qvo7xyvjfpg6j2yfvggdhfa/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "pkgconf@1.4.0",
+        "package": "swig@4.0.2"
+    },
+    {
+        "binaries": {
+            "spliced": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig"
+            ],
+            "original": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/ccache-swig"
+            ]
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test 3gil32vikn7vwxt5o3dm6acwt6e4pnjj\n==> Testing package swig-4.0.2-xia2iia\n============================= 1 passed of 1 specs ==============================\n",
+                    "return_code": 0,
+                    "prediction": true,
+                    "command": "/p/vast1/build/spack/bin/spack test run /xia2ii"
+                }
+            ],
+            "symbolator": [
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.10-jtx7kucfxrepgtxdyx5nrgfammidiou6/lib/libpkgconf.so.2.0.0",
+                    "prediction": true
+                },
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.10-jtx7kucfxrepgtxdyx5nrgfammidiou6/lib/libpkgconf.so.2.0.0",
+                    "prediction": true
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF file '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig' is not ABI compatible with '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.10-jtx7kucfxrepgtxdyx5nrgfammidiou6/lib/libpkgconf.so.2.0.0' due to differences with '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0' below:\nELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\nSONAME changed from 'libpkgconf.so.3' to 'libpkgconf.so.2'\n\n",
+                    "return_code": 12,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.10-jtx7kucfxrepgtxdyx5nrgfammidiou6/lib/libpkgconf.so.2.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.10-jtx7kucfxrepgtxdyx5nrgfammidiou6/lib/libpkgconf.so.2.0.0",
+                    "prediction": false
+                },
+                {
+                    "message": "ELF file '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig' is not ABI compatible with '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.10-jtx7kucfxrepgtxdyx5nrgfammidiou6/lib/libpkgconf.so.2.0.0' due to differences with '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0' below:\nELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\nSONAME changed from 'libpkgconf.so.3' to 'libpkgconf.so.2'\n\n",
+                    "return_code": 12,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.10-jtx7kucfxrepgtxdyx5nrgfammidiou6/lib/libpkgconf.so.2.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.10-jtx7kucfxrepgtxdyx5nrgfammidiou6/lib/libpkgconf.so.2.0.0",
+                    "prediction": false
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "pkgconf@1.3.10%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.10-jtx7kucfxrepgtxdyx5nrgfammidiou6/lib/libpkgconf.so.2.0.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "pkgconf@1.3.10",
+        "package": "swig@4.0.2"
+    },
+    {
+        "binaries": {
+            "spliced": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig"
+            ],
+            "original": [
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/swig",
+                "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-ttwxjzjx6eorcvdhpcqhcokyqu7txqiy/bin/ccache-swig"
+            ]
+        },
+        "predictions": {
+            "spack-test": [
+                {
+                    "message": "==> Spack test 3gil32vikn7vwxt5o3dm6acwt6e4pnjj\n==> Testing package swig-4.0.2-xia2iia\n============================= 1 passed of 1 specs ==============================\n",
+                    "return_code": 0,
+                    "prediction": true,
+                    "command": "/p/vast1/build/spack/bin/spack test run /xia2ii"
+                }
+            ],
+            "symbolator": [
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.8-umai66ztule5uqv26ykigysqrhsgoiyd/lib/libpkgconf.so.2.0.0",
+                    "prediction": true
+                },
+                {
+                    "missing": [],
+                    "selected": [
+                        [
+                            "libc.so.6",
+                            "libc.so.6"
+                        ]
+                    ],
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.8-umai66ztule5uqv26ykigysqrhsgoiyd/lib/libpkgconf.so.2.0.0",
+                    "prediction": true
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF file '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig' is not ABI compatible with '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.8-umai66ztule5uqv26ykigysqrhsgoiyd/lib/libpkgconf.so.2.0.0' due to differences with '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0' below:\nELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\nSONAME changed from 'libpkgconf.so.3' to 'libpkgconf.so.2'\n\n",
+                    "return_code": 12,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/ccache-swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.8-umai66ztule5uqv26ykigysqrhsgoiyd/lib/libpkgconf.so.2.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.8-umai66ztule5uqv26ykigysqrhsgoiyd/lib/libpkgconf.so.2.0.0",
+                    "prediction": false
+                },
+                {
+                    "message": "ELF file '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig' is not ABI compatible with '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.8-umai66ztule5uqv26ykigysqrhsgoiyd/lib/libpkgconf.so.2.0.0' due to differences with '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0' below:\nELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\nSONAME changed from 'libpkgconf.so.3' to 'libpkgconf.so.2'\n\n",
+                    "return_code": 12,
+                    "binary": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/swig-4.0.2-xia2iiaugqihpsdig3omx6ra4swqkycs/bin/swig",
+                    "splice_type": "same_lib",
+                    "lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.8-umai66ztule5uqv26ykigysqrhsgoiyd/lib/libpkgconf.so.2.0.0",
+                    "original_lib": "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.8-umai66ztule5uqv26ykigysqrhsgoiyd/lib/libpkgconf.so.2.0.0",
+                    "prediction": false
+                }
+            ]
+        },
+        "libs": {
+            "spliced": [
+                {
+                    "dep": "pkgconf@1.3.8%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.3.8-umai66ztule5uqv26ykigysqrhsgoiyd/lib/libpkgconf.so.2.0.0"
+                    ]
+                }
+            ],
+            "original": [
+                {
+                    "dep": "pkgconf@1.8.0%gcc@10.2.1 arch=linux-rhel7-broadwell",
+                    "paths": [
+                        "/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/pkgconf-1.8.0-gp2xp6yplvubgic6eunbnl7emqdq3dye/lib/libpkgconf.so.3.0.0"
+                    ]
+                }
+            ]
+        },
+        "experiment": "experiment",
+        "result": "splice-success",
+        "success": true,
+        "splice": "pkgconf@1.3.8",
+        "package": "swig@4.0.2"
+    }
+]

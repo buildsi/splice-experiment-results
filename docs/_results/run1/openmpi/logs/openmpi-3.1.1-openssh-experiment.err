@@ -1,0 +1,219 @@
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j2' 'V=1'
+
+3 errors found in build log:
+     772    (cd openbsd-compat && make)
+     773    make[1]: Entering directory `/tmp/sochat1/spack-stage/spack-stage-o
+            penssh-7.9p1-cehat7jbrnl2rjln3ggidredhodl7syp/spack-src/openbsd-com
+            pat'
+     774    make[1]: Nothing to be done for `all'.
+     775    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-op
+            enssh-7.9p1-cehat7jbrnl2rjln3ggidredhodl7syp/spack-src/openbsd-comp
+            at'
+     776    /p/vast1/build/spack/lib/spack/env/gcc/gcc -o sshd sshd.o auth-rhos
+            ts.o auth-passwd.o audit.o audit-bsm.o audit-linux.o platform.o ssh
+            pty.o sshlogin.o servconf.o serverloop.o auth.o auth2.o auth-option
+            s.o session.o auth2-chall.o groupaccess.o auth-bsdauth.o auth2-host
+            based.o auth2-kbdint.o auth2-none.o auth2-passwd.o auth2-pubkey.o m
+            onitor.o monitor_wrap.o auth-krb5.o auth2-gss.o gss-serv.o gss-serv
+            -krb5.o loginrec.o auth-pam.o auth-shadow.o auth-sia.o md5crypt.o s
+            ftp-server.o sftp-common.o sandbox-null.o sandbox-rlimit.o sandbox-
+            systrace.o sandbox-darwin.o sandbox-seccomp-filter.o sandbox-capsic
+            um.o sandbox-pledge.o sandbox-solaris.o uidswap.o -L. -Lopenbsd-com
+            pat/  -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -fstack-protector-
+            strong -pie  -lssh -lopenbsd-compat  -lcrypto -ldl -lutil -lz  -lcr
+            ypt -lresolv
+     777    /p/vast1/build/spack/lib/spack/env/gcc/gcc -o ssh-pkcs11-helper ssh
+            -pkcs11-helper.o ssh-pkcs11.o -L. -Lopenbsd-compat/  -Wl,-z,relro -
+            Wl,-z,now -Wl,-z,noexecstack -fstack-protector-strong -pie  -lssh -
+            lopenbsd-compat -lssh -lopenbsd-compat -lcrypto -ldl -lutil -lz  -l
+            crypt -lresolv
+  >> 778    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/bin/../libexec/gcc/x86_64-r
+            edhat-linux/10/ld: session.o:/tmp/sochat1/spack-stage/spack-stage-o
+            penssh-7.9p1-cehat7jbrnl2rjln3ggidredhodl7syp/spack-src/session.c:1
+            45: multiple definition of `tun_fwd_ifnames'; serverloop.o:/tmp/soc
+            hat1/spack-stage/spack-stage-openssh-7.9p1-cehat7jbrnl2rjln3ggidred
+            hodl7syp/spack-src/serverloop.c:104: first defined here
+     779    /p/vast1/build/spack/lib/spack/env/gcc/gcc -o ssh-agent ssh-agent.o
+             ssh-pkcs11-client.o -L. -Lopenbsd-compat/  -Wl,-z,relro -Wl,-z,now
+             -Wl,-z,noexecstack -fstack-protector-strong -pie  -lssh -lopenbsd-
+            compat -lcrypto -ldl -lutil -lz  -lcrypt -lresolv
+  >> 780    collect2: error: ld returned 1 exit status
+  >> 781    make: *** [sshd] Error 1
+     782    make: *** Waiting for unfinished jobs....
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openssh-7.9p1-cehat7jbrnl2rjln3ggidredhodl7syp/spack-build-out.txt
+
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: openssl@1.0.2u is deprecated and may be removed in a future Spack release.
+==> Error: FetchError: Will not fetch openssl@1.0.2u
+    If you are willing to be a maintainer for this version of the package, submit a PR to remove `deprecated=False`, or use `--deprecated` to skip this check.
+
+/p/vast1/build/spack/lib/spack/spack/package.py:1395, in do_fetch:
+       1392                        dp_msg))
+       1393
+       1394            if not ignore_deprecation:
+  >>   1395                raise FetchError("Will not fetch {0}".format(
+       1396                    self.spec.format('{name}{@version}')), dp_msg)
+       1397
+       1398        self.stage.create()
+
+
+==> Warning: Skipping build of openssh-7.6p1-w373w7jvg7bdzhokbfaohznyyuqn5vpp since openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed
+==> Error: openssh-7.6p1-w373w7jvg7bdzhokbfaohznyyuqn5vpp: Package was not installed
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: openssl@1.0.2u is deprecated and may be removed in a future Spack release.
+==> Error: FetchError: Will not fetch openssl@1.0.2u
+    If you are willing to be a maintainer for this version of the package, submit a PR to remove `deprecated=False`, or use `--deprecated` to skip this check.
+
+/p/vast1/build/spack/lib/spack/spack/package.py:1395, in do_fetch:
+       1392                        dp_msg))
+       1393
+       1394            if not ignore_deprecation:
+  >>   1395                raise FetchError("Will not fetch {0}".format(
+       1396                    self.spec.format('{name}{@version}')), dp_msg)
+       1397
+       1398        self.stage.create()
+
+
+==> Warning: Skipping build of openssh-7.4p1-sbgjhkkcv2u3q6uxaupvii6ca6fq6rje since openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed
+==> Error: openssh-7.4p1-sbgjhkkcv2u3q6uxaupvii6ca6fq6rje: Package was not installed
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: openssl@1.0.2u is deprecated and may be removed in a future Spack release.
+==> Error: FetchError: Will not fetch openssl@1.0.2u
+    If you are willing to be a maintainer for this version of the package, submit a PR to remove `deprecated=False`, or use `--deprecated` to skip this check.
+
+/p/vast1/build/spack/lib/spack/spack/package.py:1395, in do_fetch:
+       1392                        dp_msg))
+       1393
+       1394            if not ignore_deprecation:
+  >>   1395                raise FetchError("Will not fetch {0}".format(
+       1396                    self.spec.format('{name}{@version}')), dp_msg)
+       1397
+       1398        self.stage.create()
+
+
+==> Warning: Skipping build of openssh-7.2p2-b6hitlsbslvsiaea4lygrprl4anfjlyu since openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed
+==> Error: openssh-7.2p2-b6hitlsbslvsiaea4lygrprl4anfjlyu: Package was not installed
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: openssl@1.0.2u is deprecated and may be removed in a future Spack release.
+==> Error: FetchError: Will not fetch openssl@1.0.2u
+    If you are willing to be a maintainer for this version of the package, submit a PR to remove `deprecated=False`, or use `--deprecated` to skip this check.
+
+/p/vast1/build/spack/lib/spack/spack/package.py:1395, in do_fetch:
+       1392                        dp_msg))
+       1393
+       1394            if not ignore_deprecation:
+  >>   1395                raise FetchError("Will not fetch {0}".format(
+       1396                    self.spec.format('{name}{@version}')), dp_msg)
+       1397
+       1398        self.stage.create()
+
+
+==> Warning: Skipping build of openssh-7.0p1-4rhq7lhltizwaunc4exmkpzttjkogwsx since openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed
+==> Error: openssh-7.0p1-4rhq7lhltizwaunc4exmkpzttjkogwsx: Package was not installed
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: openssl@1.0.2u is deprecated and may be removed in a future Spack release.
+==> Error: FetchError: Will not fetch openssl@1.0.2u
+    If you are willing to be a maintainer for this version of the package, submit a PR to remove `deprecated=False`, or use `--deprecated` to skip this check.
+
+/p/vast1/build/spack/lib/spack/spack/package.py:1395, in do_fetch:
+       1392                        dp_msg))
+       1393
+       1394            if not ignore_deprecation:
+  >>   1395                raise FetchError("Will not fetch {0}".format(
+       1396                    self.spec.format('{name}{@version}')), dp_msg)
+       1397
+       1398        self.stage.create()
+
+
+==> Warning: Skipping build of openssh-6.8p1-se5qvnkblcigfxk2hbhhv42elsvn75c5 since openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed
+==> Error: openssh-6.8p1-se5qvnkblcigfxk2hbhhv42elsvn75c5: Package was not installed
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: openssl@1.0.2u is deprecated and may be removed in a future Spack release.
+==> Error: FetchError: Will not fetch openssl@1.0.2u
+    If you are willing to be a maintainer for this version of the package, submit a PR to remove `deprecated=False`, or use `--deprecated` to skip this check.
+
+/p/vast1/build/spack/lib/spack/spack/package.py:1395, in do_fetch:
+       1392                        dp_msg))
+       1393
+       1394            if not ignore_deprecation:
+  >>   1395                raise FetchError("Will not fetch {0}".format(
+       1396                    self.spec.format('{name}{@version}')), dp_msg)
+       1397
+       1398        self.stage.create()
+
+
+==> Warning: Skipping build of openssh-6.6p1-ujmnreshhu4pc3aqru5to7bav745kdxz since openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed
+==> Error: openssh-6.6p1-ujmnreshhu4pc3aqru5to7bav745kdxz: Package was not installed
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+==> Warning: openssh-7.9p1-cehat7jbrnl2rjln3ggidredhodl7syp failed to install
+==> Warning: AssertionError exception when releasing read lock for openssh-7.9p1-cehat7jbrnl2rjln3ggidredhodl7syp: 
+==> Error: openssh-7.9p1-cehat7jbrnl2rjln3ggidredhodl7syp: Package was not installed
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed to install
+==> Warning: Skipping build of openssh-7.6p1-w373w7jvg7bdzhokbfaohznyyuqn5vpp since openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed
+==> Warning: AssertionError exception when releasing read lock for openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2: 
+==> Error: openssh-7.6p1-w373w7jvg7bdzhokbfaohznyyuqn5vpp: Package was not installed
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Error: Failed to upgrade to a write lock for openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2: 
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed to install
+==> Warning: Skipping build of openssh-7.4p1-sbgjhkkcv2u3q6uxaupvii6ca6fq6rje since openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed
+==> Error: openssh-7.4p1-sbgjhkkcv2u3q6uxaupvii6ca6fq6rje: Package was not installed
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed to install
+==> Warning: Skipping build of openssh-7.3p1-u5qwidvhu7lvsjbbxqyualwonw55fd7s since openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed
+==> Error: openssh-7.3p1-u5qwidvhu7lvsjbbxqyualwonw55fd7s: Package was not installed
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Error: Failed to upgrade to a write lock for openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2: 
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Error: Failed to upgrade to a write lock for openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2: 
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed to install
+==> Warning: Skipping build of openssh-7.0p1-4rhq7lhltizwaunc4exmkpzttjkogwsx since openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed
+==> Warning: AssertionError exception when releasing read lock for openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2: 
+==> Error: openssh-7.0p1-4rhq7lhltizwaunc4exmkpzttjkogwsx: Package was not installed
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed to install
+==> Warning: Skipping build of openssh-6.9p1-lisg7lebws7liifpvpf3vgt6c2rsf7hq since openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed
+==> Error: openssh-6.9p1-lisg7lebws7liifpvpf3vgt6c2rsf7hq: Package was not installed
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Error: Failed to upgrade to a write lock for openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2: 
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Error: Failed to upgrade to a write lock for openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2: 
+==> Warning: using "openssl@1.0.2u" which is a deprecated version
+==> Warning: openssl@1.0.2u is deprecated and may be removed in a future Spack release.
+==> Error: FetchError: Will not fetch openssl@1.0.2u
+    If you are willing to be a maintainer for this version of the package, submit a PR to remove `deprecated=False`, or use `--deprecated` to skip this check.
+
+/p/vast1/build/spack/lib/spack/spack/package.py:1395, in do_fetch:
+       1392                        dp_msg))
+       1393
+       1394            if not ignore_deprecation:
+  >>   1395                raise FetchError("Will not fetch {0}".format(
+       1396                    self.spec.format('{name}{@version}')), dp_msg)
+       1397
+       1398        self.stage.create()
+
+
+==> Warning: Skipping build of openssh-6.6p1-ujmnreshhu4pc3aqru5to7bav745kdxz since openssl-1.0.2u-jg3ilhwnnge5yk5gd46f7izmlwt6izi2 failed
+==> Error: openssh-6.6p1-ujmnreshhu4pc3aqru5to7bav745kdxz: Package was not installed
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

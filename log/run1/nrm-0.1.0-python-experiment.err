@@ -1,0 +1,17 @@
+==> Error: LockTimeoutError: Timed out waiting for a read lock.
+
+/p/vast1/build/spack/lib/spack/spack/build_environment.py:1061, in _setup_pkg_and_run:
+       1058        tb_string = traceback.format_exc()
+       1059
+       1060        # build up some context from the offending package so we can
+  >>   1061        # show that, too.
+       1062        package_context = get_package_context(tb)
+       1063
+       1064        logfile = None
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-py-greenlet-1.1.2-vgjn64qkz4yob67qhuxeqdanpwelsww2/spack-build-out.txt
+
+slurmstepd: error: *** JOB 97280 ON oslic10 CANCELLED AT 2022-02-25T17:46:59 DUE TO TIME LIMIT ***
+/var/spool/slurmd/job100635/slurm_script: line 12: 67610 Killed                  spliced splice --package nrm@0.1.0 --splice python --runner spack --replace python --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/nrm/0.1.0/python/experiment.json
+slurmstepd: error: *** JOB 2468909 ON borax29 CANCELLED AT 2022-03-03T18:52:17 DUE TO TIME LIMIT ***

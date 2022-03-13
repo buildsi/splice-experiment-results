@@ -1,0 +1,395 @@
+slurmstepd: error: *** JOB 97191 ON oslic11 CANCELLED AT 2022-02-25T17:05:59 DUE TO TIME LIMIT ***
+/var/spool/slurmd/job100532/slurm_script: line 12: 44533 Killed                  spliced splice --package hypre@2.11.2 --splice openmpi --runner spack --replace openmpi --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/hypre/2.11.2/openmpi/experiment.json
+==> Warning: Missing a source id for openmpi@master
+==> Error: ProcessError: Command exited with status 1:
+    '/var/tmp/sochat1/spack-stage/spack-stage-openmpi-master-ihentoup3voecdrmavxloehqek66e446/spack-src/configure' '--prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-master-ihentoup3voecdrmavxloehqek66e446' '--enable-shared' '--disable-silent-rules' '--disable-builtin-atomics' '--enable-static' '--without-pmi' '--with-zlib=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/zlib-1.2.11-su2ldy5ofm424qnly3kitbbdgwovpfk4' '--enable-mpi1-compatibility' '--without-fca' '--without-mxm' '--without-ucx' '--without-cma' '--without-xpmem' '--without-verbs' '--without-hcoll' '--without-ofi' '--without-knem' '--without-psm' '--without-psm2' '--without-cray-xpmem' '--without-alps' '--without-lsf' '--without-tm' '--without-sge' '--without-loadleveler' '--without-slurm' '--disable-memchecker' '--with-libevent=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libevent-2.1.12-ojhvas6alyezjgn2r2flj4slwat4cowk' '--with-hwloc=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-2.7.0-zcvfxqfecuheq2vakvpuosok2avakr6j' '--disable-java' '--disable-mpi-java' '--with-gpfs' '--without-cuda' '--enable-wrapper-rpath' '--disable-wrapper-runpath' '--with-wrapper-ldflags=-Wl,-rpath,/usr/tce/packages/gcc/gcc-10.2.1/rh/usr/lib/gcc/x86_64-redhat-linux/10'
+
+29 errors found in build log:
+     573     libtoolize: copying file './config/ltsugar.m4'
+     574     libtoolize: copying file './config/ltversion.m4'
+     575     libtoolize: copying file './config/lt~obsolete.m4'
+     576     autoreconf: running: /p/vast1/build/spack/opt/spack/linux-rhel7-br
+             oadwell/gcc-10.2.1/autoconf-2.69-pfmcbnykmtv5mjmsmwbesqcoea22hrrx/
+             bin/autoconf --include=config --force --warnings=all,no-obsolete,n
+             o-override
+     577     autoreconf: running: /p/vast1/build/spack/opt/spack/linux-rhel7-br
+             oadwell/gcc-10.2.1/autoconf-2.69-pfmcbnykmtv5mjmsmwbesqcoea22hrrx/
+             bin/autoheader --include=config --force --warnings=all,no-obsolete
+             ,no-override
+     578     autoreconf: running: automake --add-missing --copy --force-missing
+              --warnings=all,no-obsolete,no-override
+  >> 579     configure.ac:228: installing './config/ar-lib'
+  >> 580     configure.ac:111: installing './config/compile'
+  >> 581     configure.ac:96: installing './config/config.guess'
+  >> 582     configure.ac:96: installing './config/config.sub'
+  >> 583     configure.ac:99: installing './config/install-sh'
+  >> 584     configure.ac:99: installing './config/missing'
+     585     examples/Makefile.am: installing './config/depcomp'
+     586     configure.ac: installing './config/ylwrap'
+     587     parallel-tests: installing './config/test-driver'
+     588     autoreconf: Leaving directory `.'
+     589     === Patching PGI compiler version numbers in ltmain.sh
+     590     === Patching "-pthread" option for NAG compiler in ltmain.sh
+
+     ...
+
+     802     libtoolize: copying file 'config/ltsugar.m4'
+     803     libtoolize: copying file 'config/ltversion.m4'
+     804     libtoolize: copying file 'config/lt~obsolete.m4'
+     805     autoreconf: running: /p/vast1/build/spack/opt/spack/linux-rhel7-br
+             oadwell/gcc-10.2.1/autoconf-2.69-pfmcbnykmtv5mjmsmwbesqcoea22hrrx/
+             bin/autoconf --include=config --force --warnings=all,no-obsolete,n
+             o-override
+     806     autoreconf: running: /p/vast1/build/spack/opt/spack/linux-rhel7-br
+             oadwell/gcc-10.2.1/autoconf-2.69-pfmcbnykmtv5mjmsmwbesqcoea22hrrx/
+             bin/autoheader --include=config --force --warnings=all,no-obsolete
+             ,no-override
+     807     autoreconf: running: automake --add-missing --copy --force-missing
+              --warnings=all,no-obsolete,no-override
+  >> 808     configure.ac:110: installing 'config/compile'
+  >> 809     configure.ac:97: installing 'config/config.guess'
+  >> 810     configure.ac:97: installing 'config/config.sub'
+  >> 811     configure.ac:124: installing 'config/install-sh'
+  >> 812     configure.ac:124: installing 'config/missing'
+     813     src/Makefile.am: installing 'config/depcomp'
+     814     configure.ac: installing 'config/ylwrap'
+     815     autoreconf: Leaving directory `.'
+     816     === Patching PGI compiler version numbers in ltmain.sh
+     817     === Patching "-pthread" option for NAG compiler in ltmain.sh
+     818     
+
+     ...
+
+     854     libtoolize: copying file 'confdb/ltsugar.m4'
+     855     libtoolize: copying file 'confdb/ltversion.m4'
+     856     libtoolize: copying file 'confdb/lt~obsolete.m4'
+     857     autoreconf: running: /p/vast1/build/spack/opt/spack/linux-rhel7-br
+             oadwell/gcc-10.2.1/autoconf-2.69-pfmcbnykmtv5mjmsmwbesqcoea22hrrx/
+             bin/autoconf --include=confdb --force
+     858     autoreconf: running: /p/vast1/build/spack/opt/spack/linux-rhel7-br
+             oadwell/gcc-10.2.1/autoconf-2.69-pfmcbnykmtv5mjmsmwbesqcoea22hrrx/
+             bin/autoheader --include=confdb --force
+     859     autoreconf: running: automake --add-missing --copy --force-missing
+  >> 860     configure.ac:50: installing 'confdb/ar-lib'
+  >> 861     configure.ac:42: installing 'confdb/compile'
+  >> 862     configure.ac:52: installing 'confdb/config.guess'
+  >> 863     configure.ac:52: installing 'confdb/config.sub'
+  >> 864     configure.ac:38: installing 'confdb/install-sh'
+  >> 865     configure.ac:38: installing 'confdb/missing'
+     866     Makefile.am: installing 'confdb/depcomp'
+     867     autoreconf: Leaving directory `.'
+     868     === running autoreconf in 'mpl' ===
+     869     autoreconf: Entering directory `.'
+     870     autoreconf: configure.ac: not using Gettext
+     871     autoreconf: running: aclocal --force -I confdb
+
+     ...
+
+     879     libtoolize: copying file 'confdb/ltsugar.m4'
+     880     libtoolize: copying file 'confdb/ltversion.m4'
+     881     libtoolize: copying file 'confdb/lt~obsolete.m4'
+     882     autoreconf: running: /p/vast1/build/spack/opt/spack/linux-rhel7-br
+             oadwell/gcc-10.2.1/autoconf-2.69-pfmcbnykmtv5mjmsmwbesqcoea22hrrx/
+             bin/autoconf --force
+     883     autoreconf: running: /p/vast1/build/spack/opt/spack/linux-rhel7-br
+             oadwell/gcc-10.2.1/autoconf-2.69-pfmcbnykmtv5mjmsmwbesqcoea22hrrx/
+             bin/autoheader --force
+     884     autoreconf: running: automake --add-missing --copy --force-missing
+  >> 885     configure.ac:24: installing 'confdb/ar-lib'
+  >> 886     configure.ac:18: installing 'confdb/compile'
+  >> 887     configure.ac:30: installing 'confdb/config.guess'
+  >> 888     configure.ac:30: installing 'confdb/config.sub'
+  >> 889     configure.ac:15: installing 'confdb/install-sh'
+  >> 890     configure.ac:15: installing 'confdb/missing'
+     891     Makefile.am: installing 'confdb/depcomp'
+     892     parallel-tests: installing 'confdb/test-driver'
+     893     autoreconf: Leaving directory `.'
+     894         Patching configure for Libtool PGI 10 fortran compiler name
+     895         Patching configure for Libtool PGI version number regexps
+     896         Patching configure for flang Fortran ()
+
+     ...
+
+     928     libtoolize: copying file 'config/ltsugar.m4'
+     929     libtoolize: copying file 'config/ltversion.m4'
+     930     libtoolize: copying file 'config/lt~obsolete.m4'
+     931     autoreconf: running: /p/vast1/build/spack/opt/spack/linux-rhel7-br
+             oadwell/gcc-10.2.1/autoconf-2.69-pfmcbnykmtv5mjmsmwbesqcoea22hrrx/
+             bin/autoconf --include=config --force --warnings=all,no-obsolete,n
+             o-override
+     932     autoreconf: running: /p/vast1/build/spack/opt/spack/linux-rhel7-br
+             oadwell/gcc-10.2.1/autoconf-2.69-pfmcbnykmtv5mjmsmwbesqcoea22hrrx/
+             bin/autoheader --include=config --force --warnings=all,no-obsolete
+             ,no-override
+     933     autoreconf: running: automake --add-missing --copy --force-missing
+              --warnings=all,no-obsolete,no-override
+  >> 934     configure.ac:373: installing 'config/compile'
+  >> 935     configure.ac:89: installing 'config/config.guess'
+  >> 936     configure.ac:89: installing 'config/config.sub'
+  >> 937     configure.ac:101: installing 'config/install-sh'
+  >> 938     configure.ac:101: installing 'config/missing'
+     939     3rd-party/treematch/Makefile.am: installing 'config/depcomp'
+     940     parallel-tests: installing 'config/test-driver'
+     941     configure.ac: installing 'config/ylwrap'
+     942     autoreconf: Leaving directory `.'
+     943     === Patching PGI compiler version numbers in ltmain.sh
+     944     === Patching "-pthread" option for NAG compiler in ltmain.sh
+
+     ...
+
+     4759    checking gpfs.h usability... no
+     4760    checking gpfs.h presence... no
+     4761    checking for gpfs.h... no
+     4762    checking gpfs.h usability... no
+     4763    checking gpfs.h presence... no
+     4764    checking for gpfs.h... no
+  >> 4765    configure: error: GPFS support requested but not found.  Aborting
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-master-ihentoup3voecdrmavxloehqek66e446/spack-build-out.txt
+
+==> Warning: openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt failed to install
+==> Warning: AssertionError exception when releasing read lock for openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt: 
+==> Error: openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt: Package was not installed
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j16' 'V=1'
+
+20 errors found in build log:
+     2775     checking whether linking with -ldl works... yes
+     2776     checking whether RTLD_DEFAULT is declared... yes
+     2777     checking whether RTLD_NEXT is declared... yes
+     2778     checking BPatch.h usability... no
+     2779     checking BPatch.h presence... no
+     2780     checking for BPatch.h... no
+  >> 2781     configure: error: no BPatch.h found; check path for Dyninst packa
+              ge first...
+     2782     checking for tau_instrumentor... no
+  >> 2783     configure: error: no tau_instrumentor found; check path for PDToo
+              lkit first...
+     2784     configure: we are configuring inside Open MPI; preset some test r
+              esults
+     2785     checking for mpicc... (cached) /p/vast1/build/spack/lib/spack/env
+              /gcc/gcc
+     2786     checking for mpicxx... (cached) /p/vast1/build/spack/lib/spack/en
+              v/gcc/g++
+     2787     checking whether MPI_IN_PLACE is declared... (cached) yes
+     2788     checking whether MPI_ROOT is declared... (cached) yes
+     2789     checking for MPI_Add_error_class... (cached) yes
+
+     ...
+
+     2806     checking for MPI_Register_datarep... (cached) yes
+     2807     checking for PMPI_File_read_ordered... (cached) yes
+     2808     checking for PMPI_File_read_ordered_begin... (cached) yes
+     2809     checking for PMPI_File_write_ordered... (cached) yes
+     2810     checking for PMPI_File_write_ordered_begin... (cached) yes
+     2811     checking for unimci-config... no
+  >> 2812     configure: error: no unimci-config found; check path for UniMCI p
+              ackage first...
+     2813     checking math.h usability... yes
+     2814     checking math.h presence... yes
+     2815     checking for math.h... yes
+     2816     checking whether we need to link -lm to get math functions... no
+     2817     checking f2c.h usability... no
+     2818     checking f2c.h presence... no
+     2819     checking for f2c.h... no
+  >> 2820     configure: error: no f2c.h found; check path for CLAPACK package 
+              first...
+     2821     checking for C++ runtime library... -lstdc++
+     2822     checking for the pthreads library -lpthreads... no
+     2823     checking whether pthreads work without any flags... yes
+     2824     checking for joinable pthread attribute... PTHREAD_CREATE_JOINABL
+              E
+     2825     checking if more special flags are required for pthreads... no
+     2826     checking for cc_r... /p/vast1/build/spack/lib/spack/env/gcc/gcc
+
+     ...
+
+     2855     checking for sched.h... yes
+     2856     checking for sched_getcpu... yes
+     2857     checking whether sched_getcpu works... yes
+     2858     checking cuda.h usability... no
+     2859     checking cuda.h presence... no
+     2860     checking for cuda.h... no
+  >> 2861     configure: error: no cuda.h found; check path for CUDA Toolkit fi
+              rst...
+     2862     checking cuda_runtime_api.h usability... no
+     2863     checking cuda_runtime_api.h presence... no
+     2864     checking for cuda_runtime_api.h... no
+  >> 2865     configure: error: no cuda_runtime_api.h found; check path for CUD
+              A Toolkit first...
+     2866     checking cupti.h usability... no
+     2867     checking cupti.h presence... no
+     2868     checking for cupti.h... no
+  >> 2869     configure: error: no cupti.h found; check path for CUPTI package 
+              first...
+     2870     checking for dlfcn.h... (cached) yes
+     2871     checking whether linking with -ldl works... yes
+     2872     checking whether RTLD_DEFAULT is declared... (cached) yes
+     2873     checking whether RTLD_NEXT is declared... (cached) yes
+     2874     checking for shared LIBC's pathname... /lib64/libc.so.6
+     2875     checking whether __errno_location is declared... yes
+     2876     checking ctool/ctool.h usability... no
+     2877     checking ctool/ctool.h presence... no
+     2878     checking for ctool/ctool.h... no
+  >> 2879     configure: error: no ctool/ctool.h found; check path for CTool pa
+              ckage first...
+     2880     checking for __WAIT_STATUS... yes
+     2881     checking whether environ is declared... yes
+     2882     checking for execvpe... yes
+     2883     checking for fexecve... yes
+     2884     checking for waitid... yes
+     2885     checking for wait3... yes
+
+     ...
+
+     2912     checking zlib.h presence... yes
+     2913     checking for zlib.h... yes
+     2914     checking whether linking with -lz works... yes
+     2915     checking bmi.h usability... no
+     2916     checking bmi.h presence... no
+     2917     checking for bmi.h... no
+  >> 2918     configure: error: no bmi.h found; check path for BMI package firs
+              t...
+     2919     configure: configuring in extlib/otf (/tmp/sochat1/spack-stage/sp
+              ack-stage-openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-sr
+              c/ompi/contrib/vt/vt/extlib/otf)
+     2920     configure: running /bin/sh /var/tmp/sochat1/spack-stage/spack-sta
+              ge-openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/
+              contrib/vt/vt/extlib/otf/configure  '--with-openmpi-inside=1.7' '
+              --prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc
+              -10.2.1/openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv' '--enable
+              -shared' '--disable-silent-rules' '--disable-builtin-atomics' '--
+              enable-static' '--without-pmi' '--without-fca' '--without-mxm' '-
+              -without-ucx' '--without-cma' '--without-xpmem' '--without-verbs'
+               '--without-hcoll' '--without-libfabric' '--without-knem' '--with
+              out-psm' '--without-psm2' '--without-alps' '--without-lsf' '--wit
+              hout-tm' '--without-sge' '--without-loadleveler' '--without-slurm
+              ' '--disable-memchecker' '--with-hwloc=/p/vast1/build/spack/opt/s
+              pack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd7
+              7w4csoothe3vdimspeo' '--disable-java' '--disable-mpi-java' '--wit
+              h-gpfs' '--without-sqlite3' '--disable-mpi-thread-multiple' '--wi
+              thout-cuda' '--enable-wrapper-rpath' '--disable-mpi-cxx' '--disab
+              le-cxx-exceptions' '--with-wrapper-ldflags=-Wl,-rpath,/usr/tce/pa
+              ckages/gcc/gcc-10.2.1/rh/usr/lib/gcc/x86_64-redhat-linux/10' 'CC=
+              /p/vast1/build/spack/lib/spack/env/gcc/gcc' 'CXX=/p/vast1/build/s
+              pack/lib/spack/env/gcc/g++' 'FC=/p/vast1/build/spack/lib/spack/en
+              v/gcc/gfortran' '--disable-option-checking' 'CFLAGS=-O3 -DNDEBUG 
+              -finline-functions -fno-strict-aliasing -pthread' 'LDFLAGS=   -L/
+              p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hw
+              loc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo/lib -L/tmp/sochat1/s
+              pack-stage/spack-stage-openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnj
+              faxv/spack-src/ompi/contrib/vt/vt/../../../.libs' 'LIBS=-lrt -lns
+              l  -lutil -lm  -lhwloc ' 'CPPFLAGS=-DINSIDE_OPENMPI    -I/p/vast1
+              /build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.1
+              1.13-u34fwahc4tbd77w4csoothe3vdimspeo/include -I/tmp/sochat1/spac
+              k-stage/spack-stage-openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfax
+              v/spack-src/opal/mca/hwloc/external/hwloc/include -I/var/tmp/soch
+              at1/spack-stage/spack-stage-openmpi-1.8.1-xzp3ife7okxvasltdpa4iob
+              i3xnjfaxv/spack-src/opal/mca/event/libevent2021/libevent -I/var/t
+              mp/sochat1/spack-stage/spack-stage-openmpi-1.8.1-xzp3ife7okxvaslt
+              dpa4iobi3xnjfaxv/spack-src/opal/mca/event/libevent2021/libevent/i
+              nclude -I/tmp/sochat1/spack-stage/spack-stage-openmpi-1.8.1-xzp3i
+              fe7okxvasltdpa4iobi3xnjfaxv/spack-src/opal/mca/event/libevent2021
+              /libevent/include -I/var/tmp/sochat1/spack-stage/spack-stage-open
+              mpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/contrib
+              /vt/vt/../../../include -I/tmp/sochat1/spack-stage/spack-stage-op
+              enmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/contr
+              ib/vt/vt/../../../include' 'CXXFLAGS=-O3 -DNDEBUG -finline-functi
+              ons -pthread' 'FCFLAGS=' MPICC="/p/vast1/build/spack/lib/spack/en
+              v/gcc/gcc" MPICXX="/p/vast1/build/spack/lib/spack/env/gcc/g++" --
+              with-mpi --with-mpi-lib="-lmpi" --with-zlib-lib="-lz" --without-z
+              oidfs --includedir="${prefix}/include/vampirtrace" --docdir="${da
+              tarootdir}/doc/otf"  --cache-file="/dev/null" --srcdir="/var/tmp/
+              sochat1/spack-stage/spack-stage-openmpi-1.8.1-xzp3ife7okxvasltdpa
+              4iobi3xnjfaxv/spack-src/ompi/contrib/vt/vt/extlib/otf" --disable-
+              option-checking
+     2921     checking build system type... x86_64-unknown-linux-gnu
+     2922     checking host system type... x86_64-unknown-linux-gnu
+     2923     checking target system type... x86_64-unknown-linux-gnu
+     2924     checking for a BSD-compatible install... /usr/bin/install -c
+
+     ...
+
+     3012     checking for mpicc... /p/vast1/build/spack/lib/spack/env/gcc/gcc
+     3013     checking for mpic++... /p/vast1/build/spack/lib/spack/env/gcc/g++
+     3014     checking for OpenMP flag of C++ compiler... -fopenmp
+     3015     checking vtf3.h usability... no
+     3016     checking vtf3.h presence... no
+     3017     checking for vtf3.h... no
+  >> 3018     configure: error: no vtf3.h found; check path for VTF3 package fi
+              rst...
+     3019     checking zlib.h usability... yes
+     3020     checking zlib.h presence... yes
+     3021     checking for zlib.h... yes
+     3022     checking whether linking with -lm works... yes
+     3023     checking whether we need to link -lm to get math functions... no
+     3024     checking for pdflatex... pdflatex
+
+     ...
+
+     18429    
+     18430       10 |   call MPI_Testall(count, array_of_requests, flag, array_
+              of_statuses, ierr)
+     18431          |                                                   2
+     18432    ......
+     18433       22 |   call MPI_Testall(count, array_of_requests, flag, array_
+              of_statuses, ierr)
+     18434          |                                                   1
+  >> 18435    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+     18436    mpi_comm_spawn_multiple_f90.f90:36:57:
+     18437    
+     18438       16 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     18439          |                                                         2
+     18440    ......
+     18441       36 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     18442          |                                                         1
+  >> 18443    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/CHARACTER(*)).
+     18444    mpi_testsome_f90.f90:26:76:
+     18445    
+     18446       12 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     18447          |                                                          
+                                2
+     18448    ......
+     18449       26 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     18450          |                                                          
+                                1
+  >> 18451    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+  >> 18452    make[4]: *** [mpi_testall_f90.lo] Error 1
+     18453    make[4]: *** Waiting for unfinished jobs....
+  >> 18454    make[4]: *** [mpi_comm_spawn_multiple_f90.lo] Error 1
+  >> 18455    make[4]: *** [mpi_testsome_f90.lo] Error 1
+     18456    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack
+              -stage-openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/o
+              mpi/include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmp
+              i-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/mpi/fortr
+              an/use-mpi-tkr -I../../../../ompi/mpi/fortran/use-mpi-tkr -c mpi_
+              sizeof.f90 -o mpi_sizeof.o >/dev/null 2>&1
+     18457    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/mpi
+              /fortran/use-mpi-tkr'
+  >> 18458    make[3]: *** [all-recursive] Error 1
+     18459    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/mpi
+              /fortran/use-mpi-tkr'
+  >> 18460    make[2]: *** [all] Error 2
+     18461    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/mpi
+              /fortran/use-mpi-tkr'
+  >> 18462    make[1]: *** [all-recursive] Error 1
+     18463    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi'
+  >> 18464    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-build-out.txt
+
+slurmstepd: error: *** JOB 2468819 ON borax37 CANCELLED AT 2022-03-03T13:38:03 DUE TO TIME LIMIT ***

@@ -1,0 +1,11 @@
+/var/spool/slurmd/job97776/slurm_script: line 12: 38919 Killed                  spliced splice --package openmpi@4.0.5 --splice perl --runner spack --replace perl --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/openmpi/4.0.5/perl/experiment.json
+==> Error: FileNotFoundError: [Errno 2] No such file or directory: 'lib/perlbug.t'
+
+/p/vast1/build/spack/var/spack/repos/builtin/packages/perl/package.py:135, in patch:
+        133    def patch(self):
+        134        # https://github.com/Perl/perl5/issues/15544 long PATH(>1000 chars) fails a test
+  >>    135        os.chmod('lib/perlbug.t', 0o644)
+        136        filter_file('!/$B/', '! (/(?:$B|PATH)/)', 'lib/perlbug.t')
+
+
+slurmstepd: error: *** JOB 2469382 ON borax20 CANCELLED AT 2022-03-04T14:09:53 DUE TO TIME LIMIT ***

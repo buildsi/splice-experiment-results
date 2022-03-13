@@ -1,0 +1,284 @@
+==> Warning: Missing a source id for openmpi@master
+==> Warning: openmpi-master-ihentoup3voecdrmavxloehqek66e446 failed to install
+==> Warning: AssertionError exception when releasing read lock for openmpi-master-ihentoup3voecdrmavxloehqek66e446: 
+==> Error: openmpi-master-ihentoup3voecdrmavxloehqek66e446: Package was not installed
+==> Error: ProcessError: Command exited with status 1:
+    '/var/tmp/sochat1/spack-stage/spack-stage-openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src/configure' '--prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt' '--enable-shared' '--disable-silent-rules' '--disable-builtin-atomics' '--enable-static' '--without-pmi' '--with-zlib=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/zlib-1.2.11-su2ldy5ofm424qnly3kitbbdgwovpfk4' '--enable-mca-no-build=btl-uct' '--without-psm2' '--without-xpmem' '--without-hcoll' '--without-knem' '--without-cma' '--without-psm' '--without-ofi' '--without-verbs' '--without-ucx' '--without-fca' '--without-mxm' '--without-cray-xpmem' '--without-tm' '--without-slurm' '--without-loadleveler' '--without-lsf' '--without-sge' '--without-alps' '--disable-memchecker' '--with-libevent=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libevent-2.1.12-ojhvas6alyezjgn2r2flj4slwat4cowk' '--with-hwloc=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-2.7.0-zcvfxqfecuheq2vakvpuosok2avakr6j' '--disable-java' '--disable-mpi-java' '--with-gpfs' '--without-cuda' '--enable-wrapper-rpath' '--disable-wrapper-runpath' '--disable-mpi-cxx' '--disable-cxx-exceptions' '--with-wrapper-ldflags=-Wl,-rpath,/usr/tce/packages/gcc/gcc-10.2.1/rh/usr/lib/gcc/x86_64-redhat-linux/10'
+
+5 errors found in build log:
+     54       checking whether build environment is sane... yes
+     55       checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+     56       checking for gawk... gawk
+     57       checking whether make sets $(MAKE)... yes
+     58       checking for style of include used by make... GNU
+     59       checking whether make supports nested variables... yes
+  >> 60       configure: error: source directory already configured; run "make 
+              distclean" there first
+     61       ==> openmpi: Executing phase: 'build'
+     62       ==> [2022-02-25-15:19:51.775590] 'make' '-j2' 'V=1'
+     63       Making all in config
+     64       make[1]: Entering directory `/tmp/sochat1/spack-stage/spack-stage
+              -openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src/config'
+     65       make[1]: Nothing to be done for `all'.
+     66       make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src/config'
+
+     ...
+
+     43040    /bin/sh ../../../../libtool  --tag=FC   --mode=compile /p/vast1/b
+              uild/spack/lib/spack/env/gcc/gfortran -DHAVE_CONFIG_H -I. -I/var/
+              tmp/sochat1/spack-stage/spack-stage-openmpi-4.0.0-4aq66zz3ecihvbx
+              ofzhr4vtugap7vamt/spack-src/ompi/mpi/fortran/mpiext-use-mpi -I../
+              ../../../opal/include -I../../../../ompi/include -I../../../../os
+              hmem/include -I../../../../opal/mca/hwloc/hwloc201/hwloc/include/
+              private/autogen -I../../../../opal/mca/hwloc/hwloc201/hwloc/inclu
+              de/hwloc/autogen -I../../../../ompi/mpiext/cuda/c   -I/var/tmp/so
+              chat1/spack-stage/spack-stage-openmpi-4.0.0-4aq66zz3ecihvbxofzhr4
+              vtugap7vamt/spack-src -I../../../.. -I/var/tmp/sochat1/spack-stag
+              e/spack-stage-openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spac
+              k-src/opal/include -I/var/tmp/sochat1/spack-stage/spack-stage-ope
+              nmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src/orte/includ
+              e -I../../../../orte/include -I/var/tmp/sochat1/spack-stage/spack
+              -stage-openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src/o
+              mpi/include -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-4.
+              0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src/oshmem/include   -
+              I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/
+              zlib-1.2.11-su2ldy5ofm424qnly3kitbbdgwovpfk4/include   -I/p/vast1
+              /build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-2.7
+              .0-zcvfxqfecuheq2vakvpuosok2avakr6j/include  -I/p/vast1/build/spa
+              ck/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libevent-2.1.12-ojh
+              vas6alyezjgn2r2flj4slwat4cowk/include -I../../../../ompi/include 
+              -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-4.0.0-4aq66zz3
+              ecihvbxofzhr4vtugap7vamt/spack-src/ompi/include -I../../../../omp
+              i/mpi/fortran/base -I/var/tmp/sochat1/spack-stage/spack-stage-ope
+              nmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src   -c -o mpi
+              -ext-module.lo mpi-ext-module.F90
+     43041    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -DHAVE_CONFIG_H -I. -I/var/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src/ompi/mpi
+              /fortran/mpiext-use-mpi -I../../../../opal/include -I../../../../
+              ompi/include -I../../../../oshmem/include -I../../../../opal/mca/
+              hwloc/hwloc201/hwloc/include/private/autogen -I../../../../opal/m
+              ca/hwloc/hwloc201/hwloc/include/hwloc/autogen -I../../../../ompi/
+              mpiext/cuda/c -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-
+              4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src -I../../../.. -I
+              /var/tmp/sochat1/spack-stage/spack-stage-openmpi-4.0.0-4aq66zz3ec
+              ihvbxofzhr4vtugap7vamt/spack-src/opal/include -I/var/tmp/sochat1/
+              spack-stage/spack-stage-openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap
+              7vamt/spack-src/orte/include -I../../../../orte/include -I/var/tm
+              p/sochat1/spack-stage/spack-stage-openmpi-4.0.0-4aq66zz3ecihvbxof
+              zhr4vtugap7vamt/spack-src/ompi/include -I/var/tmp/sochat1/spack-s
+              tage/spack-stage-openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/s
+              pack-src/oshmem/include -I/p/vast1/build/spack/opt/spack/linux-rh
+              el7-broadwell/gcc-10.2.1/zlib-1.2.11-su2ldy5ofm424qnly3kitbbdgwov
+              pfk4/include -I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwe
+              ll/gcc-10.2.1/hwloc-2.7.0-zcvfxqfecuheq2vakvpuosok2avakr6j/includ
+              e -I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2
+              .1/libevent-2.1.12-ojhvas6alyezjgn2r2flj4slwat4cowk/include -I../
+              ../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src/ompi/inc
+              lude -I../../../../ompi/mpi/fortran/base -I/var/tmp/sochat1/spack
+              -stage/spack-stage-openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt
+              /spack-src -c mpi-ext-module.F90  -fPIC -o .libs/mpi-ext-module.o
+     43042    mpi-ext-module.F90:29:132:
+     43043    
+     43044       29 |       include '/var/tmp/sochat1/spack-stage/spack-stage-o
+              penmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src/ompi/mpie
+              xt/pcollreq/mpif-h/mpiext_pcollreq_mpifh.h'
+     43045          |                                                          
+                                                                               
+                       1
+  >> 43046    Error: Line truncated at (1) [-Werror=line-truncation]
+     43047    f951: some warnings being treated as errors
+  >> 43048    make[2]: *** [mpi-ext-module.lo] Error 1
+     43049    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src/ompi/mpi
+              /fortran/mpiext-use-mpi'
+  >> 43050    make[1]: *** [all-recursive] Error 1
+     43051    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-src/ompi'
+  >> 43052    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-4.0.0-4aq66zz3ecihvbxofzhr4vtugap7vamt/spack-build-out.txt
+
+==> Error: ProcessError: Command exited with status 1:
+    '/var/tmp/sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/configure' '--prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda' '--enable-shared' '--disable-silent-rules' '--disable-builtin-atomics' '--enable-static' '--without-pmi' '--with-zlib=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/zlib-1.2.11-su2ldy5ofm424qnly3kitbbdgwovpfk4' '--without-psm2' '--without-xpmem' '--without-hcoll' '--without-knem' '--without-cma' '--without-psm' '--without-ofi' '--without-verbs' '--without-ucx' '--without-fca' '--without-mxm' '--without-cray-xpmem' '--without-tm' '--without-slurm' '--without-loadleveler' '--without-lsf' '--without-sge' '--without-alps' '--disable-memchecker' '--with-hwloc=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo' '--disable-java' '--disable-mpi-java' '--with-gpfs' '--without-cuda' '--enable-wrapper-rpath' '--disable-wrapper-runpath' '--disable-mpi-cxx' '--disable-cxx-exceptions' '--with-wrapper-ldflags=-Wl,-rpath,/usr/tce/packages/gcc/gcc-10.2.1/rh/usr/lib/gcc/x86_64-redhat-linux/10'
+
+2 errors found in build log:
+     54       checking whether build environment is sane... yes
+     55       checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+     56       checking for gawk... gawk
+     57       checking whether make sets $(MAKE)... yes
+     58       checking for style of include used by make... GNU
+     59       checking whether make supports nested variables... yes
+  >> 60       configure: error: source directory already configured; run "make 
+              distclean" there first
+     61       ==> openmpi: Executing phase: 'build'
+     62       ==> [2022-02-25-16:41:04.765434] 'make' '-j2' 'V=1'
+     63       Making all in config
+     64       make[1]: Entering directory `/tmp/sochat1/spack-stage/spack-stage
+              -openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/config'
+     65       make[1]: Nothing to be done for `all'.
+     66       make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/config'
+
+     ...
+
+     21604    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -DHAVE_CONFIG_H -I. -I/var/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/ompi/mpi
+              /fortran/use-mpi-f08 -I../../../../opal/include -I../../../../omp
+              i/include -I../../../../oshmem/include -I../../../../opal/mca/hwl
+              oc/hwloc1117/hwloc/include/private/autogen -I../../../../opal/mca
+              /hwloc/hwloc1117/hwloc/include/hwloc/autogen -I../../../../ompi/m
+              piext/cuda/c -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-3
+              .1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src -I../../../.. -I/
+              var/tmp/sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepz
+              rzfgylibpnifcxkjn3hda/spack-src/opal/include -I/var/tmp/sochat1/s
+              pack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn
+              3hda/spack-src/orte/include -I../../../../orte/include -I/var/tmp
+              /sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgyli
+              bpnifcxkjn3hda/spack-src/ompi/include -I/var/tmp/sochat1/spack-st
+              age/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/sp
+              ack-src/oshmem/include -I/tmp/sochat1/spack-stage/spack-stage-ope
+              nmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/opal/mca/ev
+              ent/libevent2022/libevent/include -I/var/tmp/sochat1/spack-stage/
+              spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-
+              src/opal/mca/event/libevent2022/libevent -I/var/tmp/sochat1/spack
+              -stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda
+              /spack-src/opal/mca/event/libevent2022/libevent/include -I/p/vast
+              1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/zlib-1.2
+              .11-su2ldy5ofm424qnly3kitbbdgwovpfk4/include -I/p/vast1/build/spa
+              ck/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fw
+              ahc4tbd77w4csoothe3vdimspeo/include -I/tmp/sochat1/spack-stage/sp
+              ack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-sr
+              c/opal/mca/hwloc/external/hwloc/include -I../../../../ompi/includ
+              e -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5
+              pyepzrzfgylibpnifcxkjn3hda/spack-src/ompi/include -I../../../../o
+              mpi/mpi/fortran/use-mpi-ignore-tkr -Imod -I/var/tmp/sochat1/spack
+              -stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda
+              /spack-src -c profile/pineighbor_allgather_f08.F90  -fPIC -o prof
+              ile/.libs/pineighbor_allgather_f08.o
+     21605    /bin/sh ../../../../libtool  --tag=FC   --mode=compile /p/vast1/b
+              uild/spack/lib/spack/env/gcc/gfortran -DHAVE_CONFIG_H -I. -I/var/
+              tmp/sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfg
+              ylibpnifcxkjn3hda/spack-src/ompi/mpi/fortran/use-mpi-f08 -I../../
+              ../../opal/include -I../../../../ompi/include -I../../../../oshme
+              m/include -I../../../../opal/mca/hwloc/hwloc1117/hwloc/include/pr
+              ivate/autogen -I../../../../opal/mca/hwloc/hwloc1117/hwloc/includ
+              e/hwloc/autogen -I../../../../ompi/mpiext/cuda/c   -I/var/tmp/soc
+              hat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpni
+              fcxkjn3hda/spack-src -I../../../.. -I/var/tmp/sochat1/spack-stage
+              /spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack
+              -src/opal/include -I/var/tmp/sochat1/spack-stage/spack-stage-open
+              mpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/orte/include
+               -I../../../../orte/include -I/var/tmp/sochat1/spack-stage/spack-
+              stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/om
+              pi/include -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-3.1
+              .4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/oshmem/include -I/t
+              mp/sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgy
+              libpnifcxkjn3hda/spack-src/opal/mca/event/libevent2022/libevent/i
+              nclude -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-3.1.4-6
+              ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/opal/mca/event/libevent
+              2022/libevent -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-
+              3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/opal/mca/event/l
+              ibevent2022/libevent/include   -I/p/vast1/build/spack/opt/spack/l
+              inux-rhel7-broadwell/gcc-10.2.1/zlib-1.2.11-su2ldy5ofm424qnly3kit
+              bbdgwovpfk4/include   -I/p/vast1/build/spack/opt/spack/linux-rhel
+              7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdim
+              speo/include -I/tmp/sochat1/spack-stage/spack-stage-openmpi-3.1.4
+              -6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/opal/mca/hwloc/extern
+              al/hwloc/include -I../../../../ompi/include -I/var/tmp/sochat1/sp
+              ack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3
+              hda/spack-src/ompi/include -I../../../../ompi/mpi/fortran/use-mpi
+              -ignore-tkr -Imod -I/var/tmp/sochat1/spack-stage/spack-stage-open
+              mpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src   -c -o prof
+              ile/pineighbor_allgatherv_f08.lo profile/pineighbor_allgatherv_f0
+              8.F90
+     21606    f951: Warning: Nonexistent include directory '/tmp/sochat1/spack-
+              stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/
+              spack-src/opal/mca/hwloc/external/hwloc/include' [-Wmissing-inclu
+              de-dirs]
+     21607    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -DHAVE_CONFIG_H -I. -I/var/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/ompi/mpi
+              /fortran/use-mpi-f08 -I../../../../opal/include -I../../../../omp
+              i/include -I../../../../oshmem/include -I../../../../opal/mca/hwl
+              oc/hwloc1117/hwloc/include/private/autogen -I../../../../opal/mca
+              /hwloc/hwloc1117/hwloc/include/hwloc/autogen -I../../../../ompi/m
+              piext/cuda/c -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-3
+              .1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src -I../../../.. -I/
+              var/tmp/sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepz
+              rzfgylibpnifcxkjn3hda/spack-src/opal/include -I/var/tmp/sochat1/s
+              pack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn
+              3hda/spack-src/orte/include -I../../../../orte/include -I/var/tmp
+              /sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgyli
+              bpnifcxkjn3hda/spack-src/ompi/include -I/var/tmp/sochat1/spack-st
+              age/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/sp
+              ack-src/oshmem/include -I/tmp/sochat1/spack-stage/spack-stage-ope
+              nmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/opal/mca/ev
+              ent/libevent2022/libevent/include -I/var/tmp/sochat1/spack-stage/
+              spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-
+              src/opal/mca/event/libevent2022/libevent -I/var/tmp/sochat1/spack
+              -stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda
+              /spack-src/opal/mca/event/libevent2022/libevent/include -I/p/vast
+              1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/zlib-1.2
+              .11-su2ldy5ofm424qnly3kitbbdgwovpfk4/include -I/p/vast1/build/spa
+              ck/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fw
+              ahc4tbd77w4csoothe3vdimspeo/include -I/tmp/sochat1/spack-stage/sp
+              ack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-sr
+              c/opal/mca/hwloc/external/hwloc/include -I../../../../ompi/includ
+              e -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5
+              pyepzrzfgylibpnifcxkjn3hda/spack-src/ompi/include -I../../../../o
+              mpi/mpi/fortran/use-mpi-ignore-tkr -Imod -I/var/tmp/sochat1/spack
+              -stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda
+              /spack-src -c profile/pineighbor_allgather_f08.F90 -o profile/pin
+              eighbor_allgather_f08.o >/dev/null 2>&1
+     21608    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -DHAVE_CONFIG_H -I. -I/var/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/ompi/mpi
+              /fortran/use-mpi-f08 -I../../../../opal/include -I../../../../omp
+              i/include -I../../../../oshmem/include -I../../../../opal/mca/hwl
+              oc/hwloc1117/hwloc/include/private/autogen -I../../../../opal/mca
+              /hwloc/hwloc1117/hwloc/include/hwloc/autogen -I../../../../ompi/m
+              piext/cuda/c -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-3
+              .1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src -I../../../.. -I/
+              var/tmp/sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepz
+              rzfgylibpnifcxkjn3hda/spack-src/opal/include -I/var/tmp/sochat1/s
+              pack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn
+              3hda/spack-src/orte/include -I../../../../orte/include -I/var/tmp
+              /sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgyli
+              bpnifcxkjn3hda/spack-src/ompi/include -I/var/tmp/sochat1/spack-st
+              age/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/sp
+              ack-src/oshmem/include -I/tmp/sochat1/spack-stage/spack-stage-ope
+              nmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/opal/mca/ev
+              ent/libevent2022/libevent/include -I/var/tmp/sochat1/spack-stage/
+              spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-
+              src/opal/mca/event/libevent2022/libevent -I/var/tmp/sochat1/spack
+              -stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda
+              /spack-src/opal/mca/event/libevent2022/libevent/include -I/p/vast
+              1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/zlib-1.2
+              .11-su2ldy5ofm424qnly3kitbbdgwovpfk4/include -I/p/vast1/build/spa
+              ck/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fw
+              ahc4tbd77w4csoothe3vdimspeo/include -I/tmp/sochat1/spack-stage/sp
+              ack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-sr
+              c/opal/mca/hwloc/external/hwloc/include -I../../../../ompi/includ
+              e -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5
+              pyepzrzfgylibpnifcxkjn3hda/spack-src/ompi/include -I../../../../o
+              mpi/mpi/fortran/use-mpi-ignore-tkr -Imod -I/var/tmp/sochat1/spack
+              -stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda
+              /spack-src -c profile/pineighbor_allgatherv_f08.F90  -fPIC -o pro
+              file/.libs/pineighbor_allgatherv_f08.o
+     21609    /bin/sh: line 12: 57455 Killed                  ( CDPATH="${ZSH_V
+              ERSION+.}:" && cd $subdir && make $local_target )
+  >> 21610    make[1]: *** [all-recursive] Error 1
+     21611    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-src/ompi'
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-3.1.4-6ti3h5pyepzrzfgylibpnifcxkjn3hda/spack-build-out.txt
+
+slurmstepd: error: *** JOB 97298 ON oslic11 CANCELLED AT 2022-02-25T17:56:29 DUE TO TIME LIMIT ***
+/var/spool/slurmd/job100657/slurm_script: line 12:   556 Killed                  spliced splice --package omega-h@9.13.14 --splice openmpi --runner spack --replace openmpi --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/omega-h/9.13.14/openmpi/experiment.json
+slurmstepd: error: *** JOB 2468923 ON borax13 CANCELLED AT 2022-03-03T20:19:35 DUE TO TIME LIMIT ***

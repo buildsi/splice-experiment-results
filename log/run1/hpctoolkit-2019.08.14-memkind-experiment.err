@@ -1,0 +1,231 @@
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j2' 'V=1'
+
+9 errors found in build log:
+     6      libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+     7      libtoolize: copying file 'm4/libtool.m4'
+     8      libtoolize: copying file 'm4/ltoptions.m4'
+     9      libtoolize: copying file 'm4/ltsugar.m4'
+     10     libtoolize: copying file 'm4/ltversion.m4'
+     11     libtoolize: copying file 'm4/lt~obsolete.m4'
+  >> 12     configure.ac:39: installing './ar-lib'
+  >> 13     configure.ac:39: installing './compile'
+  >> 14     configure.ac:44: installing './config.guess'
+  >> 15     configure.ac:44: installing './config.sub'
+  >> 16     configure.ac:35: installing './install-sh'
+  >> 17     configure.ac:35: installing './missing'
+     18     Makefile.am: installing './depcomp'
+     19     parallel-tests: installing './test-driver'
+     20     ==> memkind: Executing phase: 'configure'
+     21     ==> [2022-02-25-10:40:29.323867] './configure' '--prefix=/p/vast1/b
+            uild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/memkind-1.10.
+            0-ts5ebnjtfx4jkik6jaajyxsxyscwbdqr'
+     22     checking for a BSD-compatible install... /usr/bin/install -c
+     23     checking whether build environment is sane... yes
+
+     ...
+
+     713    libtool: link: /p/vast1/build/spack/lib/spack/env/gcc/g++ -std=c++1
+            1 -fvisibility=hidden -Wall -Werror -D_GNU_SOURCE -DJE_PREFIX=jemk_
+             -g -O2 -Wl,-z -Wl,relro -Wl,-z -Wl,now -o examples/.libs/memkind_a
+            llocated examples/memkind_allocated_example.o  ./.libs/libmemkind.s
+            o -ldl -lrt -lnuma -pthread -Wl,-rpath -Wl,/p/vast1/build/spack/opt
+            /spack/linux-rhel7-broadwell/gcc-10.2.1/memkind-1.10.0-ts5ebnjtfx4j
+            kik6jaajyxsxyscwbdqr/lib
+     714    depbase=`echo examples/memkind_cpp_allocator.o | sed 's|[^/]*$|.dep
+            s/&|;s|\.o$||'`;\
+     715    /p/vast1/build/spack/lib/spack/env/gcc/g++ -std=c++11 -DHAVE_CONFIG
+            _H -I.  -I./include -I./jemalloc/include -Itest/gtest_fused -DMEMKI
+            ND_DEPRECATED\(x\)=x  -fvisibility=hidden -Wall -Werror -D_GNU_SOUR
+            CE -DJE_PREFIX=jemk_ -g -O2 -MT examples/memkind_cpp_allocator.o -M
+            D -MP -MF $depbase.Tpo -c -o examples/memkind_cpp_allocator.o examp
+            les/memkind_cpp_allocator.cpp &&\
+     716    mv -f $depbase.Tpo $depbase.Po
+     717    In file included from examples/memkind_cpp_allocator.cpp:34:
+     718    ./include/memkind_allocator.h: In constructor 'libmemkind::static_k
+            ind::allocator<T>::allocator(libmemkind::kinds)':
+  >> 719    ./include/memkind_allocator.h:144:36: error: 'runtime_error' is not
+             a member of 'std'
+     720      144 |                         throw std::runtime_error("Unknown l
+            ibmemkind::kinds");
+     721          |                                    ^~~~~~~~~~~~~
+  >> 722    make[1]: *** [examples/memkind_cpp_allocator.o] Error 1
+     723    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-me
+            mkind-1.10.0-ts5ebnjtfx4jkik6jaajyxsxyscwbdqr/spack-src'
+  >> 724    make: *** [all] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-memkind-1.10.0-ts5ebnjtfx4jkik6jaajyxsxyscwbdqr/spack-build-out.txt
+
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j2' 'V=1'
+
+9 errors found in build log:
+     605    libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+     606    libtoolize: copying file 'm4/libtool.m4'
+     607    libtoolize: copying file 'm4/ltoptions.m4'
+     608    libtoolize: copying file 'm4/ltsugar.m4'
+     609    libtoolize: copying file 'm4/ltversion.m4'
+     610    libtoolize: copying file 'm4/lt~obsolete.m4'
+  >> 611    configure.ac:39: installing './ar-lib'
+  >> 612    configure.ac:39: installing './compile'
+  >> 613    configure.ac:44: installing './config.guess'
+  >> 614    configure.ac:44: installing './config.sub'
+  >> 615    configure.ac:35: installing './install-sh'
+  >> 616    configure.ac:35: installing './missing'
+     617    Makefile.am: installing './depcomp'
+     618    parallel-tests: installing './test-driver'
+     619    ==> memkind: Executing phase: 'configure'
+     620    ==> [2022-02-25-10:43:47.996356] './configure' '--prefix=/p/vast1/b
+            uild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/memkind-1.9.0
+            -kqy3c6k77ejxq5sqjkz3zhw5w2i3lg66'
+     621    checking for a BSD-compatible install... /usr/bin/install -c
+     622    checking whether build environment is sane... yes
+
+     ...
+
+     871    mv -f $depbase.Tpo $depbase.Po
+     872    depbase=`echo examples/pmem_cpp_allocator.o | sed 's|[^/]*$|.deps/&
+            |;s|\.o$||'`;\
+     873    /p/vast1/build/spack/lib/spack/env/gcc/g++ -DHAVE_CONFIG_H -I.  -I.
+            /include -I./jemalloc/obj/include -Itest/gtest_fused -DMEMKIND_DEPR
+            ECATED\(x\)=x  -fvisibility=hidden -Wall -Werror -D_GNU_SOURCE -DME
+            MKIND_INTERNAL_API -DJE_PREFIX= -g -O2 -MT examples/pmem_cpp_alloca
+            tor.o -MD -MP -MF $depbase.Tpo -c -o examples/pmem_cpp_allocator.o 
+            examples/pmem_cpp_allocator.cpp &&\
+     874    mv -f $depbase.Tpo $depbase.Po
+     875    In file included from examples/pmem_cpp_allocator.cpp:34:
+     876    ./include/pmem_allocator.h: In constructor 'pmem::internal::kind_wr
+            apper_t::kind_wrapper_t(const char*, std::size_t)':
+  >> 877    ./include/pmem_allocator.h:56:32: error: 'runtime_error' is not a m
+            ember of 'std'
+     878       56 |                     throw std::runtime_error(
+     879          |                                ^~~~~~~~~~~~~
+     880    depbase=`echo autohbw/autohbw.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||
+            '`;\
+     881    /bin/sh ./libtool  --tag=CC   --mode=compile /p/vast1/build/spack/l
+            ib/spack/env/gcc/gcc -DHAVE_CONFIG_H -I.  -I./include -I./jemalloc/
+            obj/include -Itest/gtest_fused -DMEMKIND_DEPRECATED\(x\)=x  -fvisib
+            ility=hidden -Wall -Werror -D_GNU_SOURCE -DMEMKIND_INTERNAL_API -DJ
+            E_PREFIX= -g -O2 -pthread -fstack-protector -D_FORTIFY_SOURCE=2 -MT
+             autohbw/autohbw.lo -MD -MP -MF $depbase.Tpo -c -o autohbw/autohbw.
+            lo autohbw/autohbw.c &&\
+     882    mv -f $depbase.Tpo $depbase.Plo
+     883    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gcc -DHAV
+            E_CONFIG_H -I. -I./include -I./jemalloc/obj/include -Itest/gtest_fu
+            sed "-DMEMKIND_DEPRECATED(x)=x" -fvisibility=hidden -Wall -Werror -
+            D_GNU_SOURCE -DMEMKIND_INTERNAL_API -DJE_PREFIX= -g -O2 -pthread -f
+            stack-protector -D_FORTIFY_SOURCE=2 -MT autohbw/autohbw.lo -MD -MP 
+            -MF autohbw/.deps/autohbw.Tpo -c autohbw/autohbw.c  -fPIC -DPIC -o 
+            autohbw/.libs/autohbw.o
+  >> 884    make[1]: *** [examples/pmem_cpp_allocator.o] Error 1
+     885    make[1]: *** Waiting for unfinished jobs....
+     886    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gcc -DHAV
+            E_CONFIG_H -I. -I./include -I./jemalloc/obj/include -Itest/gtest_fu
+            sed "-DMEMKIND_DEPRECATED(x)=x" -fvisibility=hidden -Wall -Werror -
+            D_GNU_SOURCE -DMEMKIND_INTERNAL_API -DJE_PREFIX= -g -O2 -pthread -f
+            stack-protector -D_FORTIFY_SOURCE=2 -MT autohbw/autohbw.lo -MD -MP 
+            -MF autohbw/.deps/autohbw.Tpo -c autohbw/autohbw.c -o autohbw/autoh
+            bw.o >/dev/null 2>&1
+     887    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-me
+            mkind-1.9.0-kqy3c6k77ejxq5sqjkz3zhw5w2i3lg66/spack-src'
+  >> 888    make: *** [all] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-memkind-1.9.0-kqy3c6k77ejxq5sqjkz3zhw5w2i3lg66/spack-build-out.txt
+
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j2' 'V=1'
+
+9 errors found in build log:
+     610    libtoolize: copying file 'm4/ltoptions.m4'
+     611    libtoolize: copying file 'm4/ltsugar.m4'
+     612    libtoolize: copying file 'm4/ltversion.m4'
+     613    libtoolize: copying file 'm4/lt~obsolete.m4'
+     614    libtoolize: Consider adding 'AC_CONFIG_MACRO_DIRS([m4])' to configu
+            re.ac,
+     615    libtoolize: and rerunning libtoolize and aclocal.
+  >> 616    configure.ac:38: installing './ar-lib'
+  >> 617    configure.ac:38: installing './compile'
+  >> 618    configure.ac:43: installing './config.guess'
+  >> 619    configure.ac:43: installing './config.sub'
+  >> 620    configure.ac:34: installing './install-sh'
+  >> 621    configure.ac:34: installing './missing'
+     622    Makefile.am: installing './depcomp'
+     623    parallel-tests: installing './test-driver'
+     624    ==> memkind: Executing phase: 'configure'
+     625    ==> [2022-02-25-10:45:19.879510] './configure' '--prefix=/p/vast1/b
+            uild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/memkind-1.8.0
+            -velx4xpejyznrmxtzr7vgugshmy2svjg'
+     626    checking for a BSD-compatible install... /usr/bin/install -c
+     627    checking whether build environment is sane... yes
+
+     ...
+
+     870    mv -f $depbase.Tpo $depbase.Po
+     871    depbase=`echo examples/pmem_cpp_allocator.o | sed 's|[^/]*$|.deps/&
+            |;s|\.o$||'`;\
+     872    /p/vast1/build/spack/lib/spack/env/gcc/g++ -DHAVE_CONFIG_H -I.  -I.
+            /include -I./jemalloc/obj/include -Itest/gtest_fused -DMEMKIND_DEPR
+            ECATED\(x\)=x  -fvisibility=hidden -Wall -Werror -msse4.2 -D_GNU_SO
+            URCE -DMEMKIND_INTERNAL_API -DJE_PREFIX= -g -O2 -MT examples/pmem_c
+            pp_allocator.o -MD -MP -MF $depbase.Tpo -c -o examples/pmem_cpp_all
+            ocator.o examples/pmem_cpp_allocator.cpp &&\
+     873    mv -f $depbase.Tpo $depbase.Po
+     874    In file included from examples/pmem_cpp_allocator.cpp:34:
+     875    ./include/pmem_allocator.h: In constructor 'pmem::internal::kind_wr
+            apper_t::kind_wrapper_t(const char*, std::size_t)':
+  >> 876    ./include/pmem_allocator.h:56:32: error: 'runtime_error' is not a m
+            ember of 'std'
+     877       56 |                     throw std::runtime_error(
+     878          |                                ^~~~~~~~~~~~~
+     879    depbase=`echo autohbw/autohbw.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||
+            '`;\
+     880    /bin/sh ./libtool  --tag=CC   --mode=compile /p/vast1/build/spack/l
+            ib/spack/env/gcc/gcc -DHAVE_CONFIG_H -I.  -I./include -I./jemalloc/
+            obj/include -Itest/gtest_fused -DMEMKIND_DEPRECATED\(x\)=x  -fvisib
+            ility=hidden -Wall -Werror -msse4.2 -D_GNU_SOURCE -DMEMKIND_INTERNA
+            L_API -DJE_PREFIX= -g -O2 -pthread -fstack-protector -D_FORTIFY_SOU
+            RCE=2 -MT autohbw/autohbw.lo -MD -MP -MF $depbase.Tpo -c -o autohbw
+            /autohbw.lo autohbw/autohbw.c &&\
+     881    mv -f $depbase.Tpo $depbase.Plo
+     882    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gcc -DHAV
+            E_CONFIG_H -I. -I./include -I./jemalloc/obj/include -Itest/gtest_fu
+            sed "-DMEMKIND_DEPRECATED(x)=x" -fvisibility=hidden -Wall -Werror -
+            msse4.2 -D_GNU_SOURCE -DMEMKIND_INTERNAL_API -DJE_PREFIX= -g -O2 -p
+            thread -fstack-protector -D_FORTIFY_SOURCE=2 -MT autohbw/autohbw.lo
+             -MD -MP -MF autohbw/.deps/autohbw.Tpo -c autohbw/autohbw.c  -fPIC 
+            -DPIC -o autohbw/.libs/autohbw.o
+  >> 883    make[1]: *** [examples/pmem_cpp_allocator.o] Error 1
+     884    make[1]: *** Waiting for unfinished jobs....
+     885    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gcc -DHAV
+            E_CONFIG_H -I. -I./include -I./jemalloc/obj/include -Itest/gtest_fu
+            sed "-DMEMKIND_DEPRECATED(x)=x" -fvisibility=hidden -Wall -Werror -
+            msse4.2 -D_GNU_SOURCE -DMEMKIND_INTERNAL_API -DJE_PREFIX= -g -O2 -p
+            thread -fstack-protector -D_FORTIFY_SOURCE=2 -MT autohbw/autohbw.lo
+             -MD -MP -MF autohbw/.deps/autohbw.Tpo -c autohbw/autohbw.c -o auto
+            hbw/autohbw.o >/dev/null 2>&1
+     886    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-me
+            mkind-1.8.0-velx4xpejyznrmxtzr7vgugshmy2svjg/spack-src'
+  >> 887    make: *** [all] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-memkind-1.8.0-velx4xpejyznrmxtzr7vgugshmy2svjg/spack-build-out.txt
+
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+/var/spool/slurmd/job100447/slurm_script: line 12: 12387 Killed                  spliced splice --package hpctoolkit@2019.08.14 --splice memkind --runner spack --replace memkind --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/hpctoolkit/2019.08.14/memkind/experiment.json
+==> Error: Failed to upgrade to a write lock for memkind-1.10.0-ts5ebnjtfx4jkik6jaajyxsxyscwbdqr due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for memkind-1.10.0-ts5ebnjtfx4jkik6jaajyxsxyscwbdqr: 
+==> Warning: memkind-1.9.0-kqy3c6k77ejxq5sqjkz3zhw5w2i3lg66 failed to install
+==> Warning: AssertionError exception when releasing read lock for memkind-1.9.0-kqy3c6k77ejxq5sqjkz3zhw5w2i3lg66: 
+==> Error: memkind-1.9.0-kqy3c6k77ejxq5sqjkz3zhw5w2i3lg66: Package was not installed
+==> Warning: memkind-1.8.0-velx4xpejyznrmxtzr7vgugshmy2svjg failed to install
+==> Warning: AssertionError exception when releasing read lock for memkind-1.8.0-velx4xpejyznrmxtzr7vgugshmy2svjg: 
+==> Error: memkind-1.8.0-velx4xpejyznrmxtzr7vgugshmy2svjg: Package was not installed
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

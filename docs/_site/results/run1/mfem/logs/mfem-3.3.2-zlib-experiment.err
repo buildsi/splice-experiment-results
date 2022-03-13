@@ -1,0 +1,112 @@
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-C' 'examples' 'ex1p'
+
+3 errors found in build log:
+     208    r - fem/fe_coll.o
+     209    r - fem/pgridfunc.o
+     210    ranlib libmfem.a
+     211    ==> [2022-02-25-11:47:43.229097] 'make' '-C' 'examples' 'ex1p'
+     212    make: Entering directory `/tmp/sochat1/spack-stage/spack-stage-mfem
+            -3.3.2-5aig66lcmw4iodpkmh2rpnk3uap4pqzb/spack-src/examples'
+     213    /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ope
+            nmpi-4.1.2-mtnsjnbj5kuefhd6gtupaglpuytu6vhz/bin/mpic++  -O3 -I.. -I
+            /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hyp
+            re-2.13.0-pkg3owmsbige5jyhq3m6f7sppnxczvcx/include -I/p/vast1/build
+            /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/metis-5.1.0-d4ylk
+            f6ddvvzijmxcx4enefij3v2hjjr/include ex1p.cpp -o ex1p -L.. -lmfem -W
+            l,-rpath,/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-1
+            0.2.1/hypre-2.13.0-pkg3owmsbige5jyhq3m6f7sppnxczvcx/lib -Wl,-rpath,
+            /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ope
+            nblas-0.3.19-jubz2yn2ui3jzqphbt3w2jyqt2pwvz7f/lib -L/p/vast1/build/
+            spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hypre-2.13.0-pkg3o
+            wmsbige5jyhq3m6f7sppnxczvcx/lib -L/p/vast1/build/spack/opt/spack/li
+            nux-rhel7-broadwell/gcc-10.2.1/openblas-0.3.19-jubz2yn2ui3jzqphbt3w
+            2jyqt2pwvz7f/lib -lHYPRE -lopenblas -Wl,-rpath,/p/vast1/build/spack
+            /opt/spack/linux-rhel7-broadwell/gcc-10.2.1/metis-5.1.0-d4ylkf6ddvv
+            zijmxcx4enefij3v2hjjr/lib -L/p/vast1/build/spack/opt/spack/linux-rh
+            el7-broadwell/gcc-10.2.1/metis-5.1.0-d4ylkf6ddvvzijmxcx4enefij3v2hj
+            jr/lib -lmetis -lrt -lz
+  >> 214    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/bin/../libexec/gcc/x86_64-r
+            edhat-linux/10/ld: /p/vast1/build/spack/opt/spack/linux-rhel7-broad
+            well/gcc-10.2.1/openblas-0.3.19-jubz2yn2ui3jzqphbt3w2jyqt2pwvz7f/li
+            b/libopenblas.so: undefined reference to `_gfortran_concat_string'
+  >> 215    collect2: error: ld returned 1 exit status
+  >> 216    make: *** [ex1p] Error 1
+     217    make: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-mfem-
+            3.3.2-5aig66lcmw4iodpkmh2rpnk3uap4pqzb/spack-src/examples'
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-mfem-3.3.2-5aig66lcmw4iodpkmh2rpnk3uap4pqzb/spack-build-out.txt
+
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+/var/spool/slurmd/job100611/slurm_script: line 12: 38972 Killed                  spliced splice --package mfem@3.3.2 --splice zlib --runner spack --replace zlib --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/mfem/3.3.2/zlib/experiment.json
+==> Error: ProcessError: Command exited with status 2:
+    'make' 'config' 'PREFIX=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/mfem-3.3.2-5aig66lcmw4iodpkmh2rpnk3uap4pqzb' 'MFEM_USE_MEMALLOC=YES' 'MFEM_DEBUG=NO' 'CXX=/p/vast1/build/spack/lib/spack/env/gcc/g++' 'MFEM_USE_LIBUNWIND=NO' 'MFEM_USE_GZSTREAM=YES' 'MFEM_USE_METIS=YES' 'MFEM_USE_METIS_5=YES' 'MFEM_THREAD_SAFE=NO' 'MFEM_USE_MPI=YES' 'MFEM_USE_LAPACK=NO' 'MFEM_USE_SUPERLU=NO' 'MFEM_USE_STRUMPACK=NO' 'MFEM_USE_SUITESPARSE=NO' 'MFEM_USE_SUNDIALS=NO' 'MFEM_USE_PETSC=NO' 'MFEM_USE_SLEPC=NO' 'MFEM_USE_PUMI=NO' 'MFEM_USE_GSLIB=NO' 'MFEM_USE_NETCDF=NO' 'MFEM_USE_MPFR=NO' 'MFEM_USE_GNUTLS=NO' 'MFEM_USE_OPENMP=NO' 'MFEM_USE_CONDUIT=NO' 'MFEM_USE_CUDA=NO' 'MFEM_USE_HIP=NO' 'MFEM_USE_OCCA=NO' 'MFEM_USE_RAJA=NO' 'MFEM_USE_AMGX=NO' 'MFEM_USE_CEED=NO' 'MFEM_USE_UMPIRE=NO' 'MFEM_MPIEXEC=srun' 'MFEM_MPIEXEC_NP=-n' 'MPICXX=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-4.1.2-mtnsjnbj5kuefhd6gtupaglpuytu6vhz/bin/mpic++' 'HYPRE_OPT=-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hypre-2.13.0-pkg3owmsbige5jyhq3m6f7sppnxczvcx/include' 'HYPRE_LIB=-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hypre-2.13.0-pkg3owmsbige5jyhq3m6f7sppnxczvcx/lib -Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openblas-0.3.19-jubz2yn2ui3jzqphbt3w2jyqt2pwvz7f/lib -L/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hypre-2.13.0-pkg3owmsbige5jyhq3m6f7sppnxczvcx/lib -L/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openblas-0.3.19-jubz2yn2ui3jzqphbt3w2jyqt2pwvz7f/lib -lHYPRE -lopenblas' 'METIS_OPT=-I/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/metis-5.1.0-d4ylkf6ddvvzijmxcx4enefij3v2hjjr/include' 'METIS_LIB=-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/metis-5.1.0-d4ylkf6ddvvzijmxcx4enefij3v2hjjr/lib -L/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/metis-5.1.0-d4ylkf6ddvvzijmxcx4enefij3v2hjjr/lib -lmetis' 'ZLIB_DIR=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/zlib-1.2.11-su2ldy5ofm424qnly3kitbbdgwovpfk4'
+
+4 errors found in build log:
+     1     ==> mfem: Executing phase: 'configure'
+     2     ==> [2022-03-03-11:12:25.583539] 'make' 'config' 'PREFIX=/p/vast1/bu
+           ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/mfem-3.3.2-5aig
+           66lcmw4iodpkmh2rpnk3uap4pqzb' 'MFEM_USE_MEMALLOC=YES' 'MFEM_DEBUG=NO
+           ' 'CXX=/p/vast1/build/spack/lib/spack/env/gcc/g++' 'MFEM_USE_LIBUNWI
+           ND=NO' 'MFEM_USE_GZSTREAM=YES' 'MFEM_USE_METIS=YES' 'MFEM_USE_METIS_
+           5=YES' 'MFEM_THREAD_SAFE=NO' 'MFEM_USE_MPI=YES' 'MFEM_USE_LAPACK=NO'
+            'MFEM_USE_SUPERLU=NO' 'MFEM_USE_STRUMPACK=NO' 'MFEM_USE_SUITESPARSE
+           =NO' 'MFEM_USE_SUNDIALS=NO' 'MFEM_USE_PETSC=NO' 'MFEM_USE_SLEPC=NO' 
+           'MFEM_USE_PUMI=NO' 'MFEM_USE_GSLIB=NO' 'MFEM_USE_NETCDF=NO' 'MFEM_US
+           E_MPFR=NO' 'MFEM_USE_GNUTLS=NO' 'MFEM_USE_OPENMP=NO' 'MFEM_USE_CONDU
+           IT=NO' 'MFEM_USE_CUDA=NO' 'MFEM_USE_HIP=NO' 'MFEM_USE_OCCA=NO' 'MFEM
+           _USE_RAJA=NO' 'MFEM_USE_AMGX=NO' 'MFEM_USE_CEED=NO' 'MFEM_USE_UMPIRE
+           =NO' 'MFEM_MPIEXEC=srun' 'MFEM_MPIEXEC_NP=-n' 'MPICXX=/p/vast1/build
+           /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-4.1.2-mtns
+           jnbj5kuefhd6gtupaglpuytu6vhz/bin/mpic++' 'HYPRE_OPT=-I/p/vast1/build
+           /spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hypre-2.13.0-pkg3o
+           wmsbige5jyhq3m6f7sppnxczvcx/include' 'HYPRE_LIB=-Wl,-rpath,/p/vast1/
+           build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hypre-2.13.0-
+           pkg3owmsbige5jyhq3m6f7sppnxczvcx/lib -Wl,-rpath,/p/vast1/build/spack
+           /opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openblas-0.3.19-jubz2yn2
+           ui3jzqphbt3w2jyqt2pwvz7f/lib -L/p/vast1/build/spack/opt/spack/linux-
+           rhel7-broadwell/gcc-10.2.1/hypre-2.13.0-pkg3owmsbige5jyhq3m6f7sppnxc
+           zvcx/lib -L/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-
+           10.2.1/openblas-0.3.19-jubz2yn2ui3jzqphbt3w2jyqt2pwvz7f/lib -lHYPRE 
+           -lopenblas' 'METIS_OPT=-I/p/vast1/build/spack/opt/spack/linux-rhel7-
+           broadwell/gcc-10.2.1/metis-5.1.0-d4ylkf6ddvvzijmxcx4enefij3v2hjjr/in
+           clude' 'METIS_LIB=-Wl,-rpath,/p/vast1/build/spack/opt/spack/linux-rh
+           el7-broadwell/gcc-10.2.1/metis-5.1.0-d4ylkf6ddvvzijmxcx4enefij3v2hjj
+           r/lib -L/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.
+           2.1/metis-5.1.0-d4ylkf6ddvvzijmxcx4enefij3v2hjjr/lib -lmetis' 'ZLIB_
+           DIR=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/
+           zlib-1.2.11-su2ldy5ofm424qnly3kitbbdgwovpfk4'
+     3     make -C config all
+     4     make[1]: Entering directory `/tmp/sochat1/spack-stage/spack-stage-mf
+           em-3.3.2-5aig66lcmw4iodpkmh2rpnk3uap4pqzb/spack-src/config'
+     5     /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/open
+           mpi-4.1.2-mtnsjnbj5kuefhd6gtupaglpuytu6vhz/bin/mpic++ -I/p/vast1/bui
+           ld/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hypre-2.13.0-pkg
+           3owmsbige5jyhq3m6f7sppnxczvcx/include get_hypre_version.cpp -o get_h
+           ypre_version
+     6     /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/bin/../libexec/gcc/x86_64-re
+           dhat-linux/10/ld: warning: libgpfs.so, needed by /p/vast1/build/spac
+           k/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-4.1.2-mtnsjnbj5
+           kuefhd6gtupaglpuytu6vhz/lib/libmpi.so, not found (try using -rpath o
+           r -rpath-link)
+  >> 7     /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/bin/../libexec/gcc/x86_64-re
+           dhat-linux/10/ld: /p/vast1/build/spack/opt/spack/linux-rhel7-broadwe
+           ll/gcc-10.2.1/openmpi-4.1.2-mtnsjnbj5kuefhd6gtupaglpuytu6vhz/lib/lib
+           mpi.so: undefined reference to `gpfs_fcntl'
+  >> 8     collect2: error: ld returned 1 exit status
+  >> 9     make[1]: *** [get_hypre_version] Error 1
+     10    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-mfe
+           m-3.3.2-5aig66lcmw4iodpkmh2rpnk3uap4pqzb/spack-src/config'
+  >> 11    make: *** [local-config] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-mfem-3.3.2-5aig66lcmw4iodpkmh2rpnk3uap4pqzb/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

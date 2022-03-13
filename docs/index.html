@@ -1,0 +1,109 @@
+---
+layout: page
+css: ["index.css"]
+permalink: /
+---
+
+<div class="row">
+
+  <h1>Splice Results</h1>
+
+  <div>
+    {% include search_form.html %}
+  </div>
+
+  <h2>Overview</h2>
+  <div>{% include overview.html %}</div>
+
+  <h2>Terms</h2>
+  <p>Read these terms and <a href="https://github.com/buildsi/splice-experiment" target="_blank">understand the experiment</a> before looking at results. A build will fail somewhere and a developer will cry if you do not.</p>
+  <div>{% include terms.html %}</div>
+
+  <h2>Results</h2>
+  <hr>
+
+  {% for name in site.data.experiments.names %}
+  <h5>{{ name }}</h5>
+
+   <div class="thi-columns" style="padding-bottom:30px">
+    <div class="col-md-6">
+    <table>{% capture data_name %}{{ name }}-summary{% endcapture %}
+      <tbody>{% for row in site.data[data_name] %}
+         <tr>
+         {% include table_link.html %}
+         {% if row[0] contains "success" %}<td style="background-color:green; color:white">{{row[0]}}</td><td>{% if link != "" %}<a href="{{ link }}" target="_blank">{% endif %}{{row[1]}}{% if link != "" %}</a>{% endif %}</td>{% endif %}
+         {% if row[0] contains "fail" %}<td style="background-color:red; color:white">{{row[0]}}</td><td>{% if link != "" %}<a href="{{ link }}" target="_blank">{% endif %}{{row[1]}}{% if link != "" %}</a>{% endif %}</td>{% endif %}
+         {% if row[0] == "jobs-recorded" %}<td style="background-color:yellow">{{row[0]}}</td><td>{{row[1]}}</td>{% endif %}
+         </tr>{% endfor %}
+      </tbody>
+    </table>
+    </div>
+    <div class="col-md-6">
+    <p>Total predictions made by each tool</p>
+    <table style="padding-bottom:20px">{% capture data_name %}{{ name }}-summary{% endcapture %}
+      <tbody>{% for row in site.data[data_name] %}
+         <tr>
+         {% if row[0] == "predictions" %}<td style="background-color:yellow;">predictions</td><td>
+            <table><tbody>
+            {% for pred in row[1] %}<tr><td>{{ pred[0]}}</td><td>{{pred[1]}}</td></tr>{% endfor %}
+            </tbody></table>
+            </td>{% endif %}
+         </tr>{% endfor %}
+      </tbody>
+    </table>
+     <quote style="font-style:italic">Note that the table doesn't summarize to anything logical. Each of the {{ site.data[data_name].jobs-recorded }} result files (one experiment) has a variable number of splices, and that total does not include jobs that did not produce results (shown on the experiment pages).</quote>
+    </div>
+  </div>
+
+   <div class="thi-columns">
+    <ul class="tag-post">{% for result in site.results %}{% assign experiment = result.path | split: "/" %}
+      {% if name == experiment[1] %}<a class="post-title" href="{{ site.baseurl }}{{ result.url }}">
+        <li>
+          {{ result.title }}
+        </li>
+      </a>{% endif %}{% endfor %}
+   </ul>
+  </div>{% endfor %}
+
+  <div class="col s12 center-align">
+    <ul class="pagination">
+      <li class="{% unless paginator.previous_page %}disabled{% else %}waves-effect{% endunless %}">
+      {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+      <a href="{{site.baseurl}}/">
+      {% else %}
+      <a href="{{site.baseurl}}/page{{paginator.previous_page}}">
+      {% endif %}
+      {% else %}
+      <a href="#!">
+      {% endif %}
+        <i class="material-icons">chevron_left</i>
+      </a>
+      </li>
+      {% if paginator.page == 1 %}
+      <li class="active teal">
+        <a href="#!">1</a>
+      {% else %}
+      <li class="waves-effect">
+        <a href="{{site.baseurl}}/">1</a>
+      {% endif %}
+      </li>
+      {% for count in (2..paginator.total_pages) %}
+      {% if count == paginator.page %}
+      <li class="active teal"><a href="#!">{{count}}</a></li>
+      {% else %}
+      <li class="waves-effect"><a href="{{site.baseurl}}/page{{count}}">{{count}}</a></li>
+      {% endif %}
+      {% endfor %}
+      <li class="{% unless paginator.next_page %}disabled{% else %}waves-effect{% endunless %}">
+      {% if paginator.next_page %}
+      <a href="{{site.baseurl}}/page{{paginator.next_page}}">
+      {% else %}
+      <a href="#!">
+      {% endif %}
+        <i class="material-icons">chevron_right</i>
+      </a>
+      </li>
+    </ul>
+  </div>
+</div>

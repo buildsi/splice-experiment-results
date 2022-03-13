@@ -1,0 +1,591 @@
+==> Warning: Skipping build of numactl-2.0.14-wiobx4m5fgmgis4po6hi44kpy7ad57vj since automake-1.16.5-7gugpvl5tq7e3xqgw7wna3fwdlbrszqs failed
+==> Warning: Skipping build of openmpi-4.1.2-mtnsjnbj5kuefhd6gtupaglpuytu6vhz since numactl-2.0.14-wiobx4m5fgmgis4po6hi44kpy7ad57vj failed
+==> Warning: Skipping build of hypre-2.12.1-bi5gvwwiqudv2wmucqyxntrdpw4zrgeh since openmpi-4.1.2-mtnsjnbj5kuefhd6gtupaglpuytu6vhz failed
+==> Error: Failed to install automake due to LockTimeoutError: Timed out waiting for a write lock.
+==> Error: hypre-2.12.1-bi5gvwwiqudv2wmucqyxntrdpw4zrgeh: Package was not installed
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+/var/spool/slurmd/job100528/slurm_script: line 12: 44543 Killed                  spliced splice --package hypre@2.12.1 --splice openblas --runner spack --replace openblas --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/hypre/2.12.1/openblas/experiment.json
+==> Warning: Missing a source id for openblas@develop
+==> Error: Failed to upgrade to a write lock for openblas-0.3.3-5azsjzpnupoiiluag7bg6vcwsfxfy5xo due to LockUpgradeError: Cannot upgrade lock from read to write on file: /p/vast1/build/spack/opt/spack/.spack-db/prefix_lock
+==> Warning: AssertionError exception when releasing read lock for openblas-0.3.3-5azsjzpnupoiiluag7bg6vcwsfxfy5xo: 
+==> Warning: openblas-0.3.2-zoeklqzbjjfazmsynrgi5ip43uycbdcf failed to install
+==> Warning: AssertionError exception when releasing read lock for openblas-0.3.2-zoeklqzbjjfazmsynrgi5ip43uycbdcf: 
+==> Error: openblas-0.3.2-zoeklqzbjjfazmsynrgi5ip43uycbdcf: Package was not installed
+==> Warning: openblas-0.3.1-6ahkovd4z2d3xhev6ba3jgr7natgq2c3 failed to install
+==> Warning: AssertionError exception when releasing read lock for openblas-0.3.1-6ahkovd4z2d3xhev6ba3jgr7natgq2c3: 
+==> Error: openblas-0.3.1-6ahkovd4z2d3xhev6ba3jgr7natgq2c3: Package was not installed
+==> Warning: openblas-0.3.0-7kvu2zss36ancm7c2jse2dnzhlpdgwze failed to install
+==> Warning: AssertionError exception when releasing read lock for openblas-0.3.0-7kvu2zss36ancm7c2jse2dnzhlpdgwze: 
+==> Error: openblas-0.3.0-7kvu2zss36ancm7c2jse2dnzhlpdgwze: Package was not installed
+==> Warning: openblas-0.2.19-gnnxdhop3nk3baqqhkdaigwjuh62ncir failed to install
+==> Warning: AssertionError exception when releasing read lock for openblas-0.2.19-gnnxdhop3nk3baqqhkdaigwjuh62ncir: 
+==> Error: openblas-0.2.19-gnnxdhop3nk3baqqhkdaigwjuh62ncir: Package was not installed
+==> Warning: openblas-0.2.18-yidpq3fwlkztu5dl5hbjjgj7bskpjbpv failed to install
+==> Warning: AssertionError exception when releasing read lock for openblas-0.2.18-yidpq3fwlkztu5dl5hbjjgj7bskpjbpv: 
+==> Error: openblas-0.2.18-yidpq3fwlkztu5dl5hbjjgj7bskpjbpv: Package was not installed
+==> Warning: openblas-0.2.17-v7y7naztgn7ktcnz65vqbk6nj666v66m failed to install
+==> Warning: AssertionError exception when releasing read lock for openblas-0.2.17-v7y7naztgn7ktcnz65vqbk6nj666v66m: 
+==> Error: openblas-0.2.17-v7y7naztgn7ktcnz65vqbk6nj666v66m: Package was not installed
+==> Error: ProcessError: Command exited with status 2:
+    'make' 'CC=/p/vast1/build/spack/lib/spack/env/gcc/gcc' 'FC=/p/vast1/build/spack/lib/spack/env/gcc/gfortran' 'MAKE_NO_J=1' 'TARGET=HASWELL' 'BUILD_LAPACK_DEPRECATED=1' 'USE_OPENMP=0' 'USE_THREAD=0' 'libs' 'netlib' 'shared'
+
+26 errors found in build log:
+     3238    
+     3239      365 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     3240          |                                      2
+     3241    ......
+     3242      388 |      $                   0, V1T, LDV1T, 0, 1, U1, LDU1, U2
+             , LDU2, 0, 0,
+     3243          |                                        1
+  >> 3244    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (INTEGER(4)/REAL(4)).
+     3245    sorcsd2by1.f:411:35:
+     3246    
+     3247      365 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     3248          |                            2
+     3249    ......
+     3250      411 |      $                   THETA, 0, 0, 1, V1T, LDV1T, U2, L
+             DU2, U1, LDU1,
+     3251          |                                   1
+  >> 3252    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (INTEGER(4)/REAL(4)).
+     3253    sorcsd2by1.f:435:55:
+     3254    
+     3255      365 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     3256          |                                                2
+     3257    ......
+     3258      435 |      $                   THETA, 0, U2, LDU2, U1, LDU1, 0, 
+             1, V1T, LDV1T,
+     3259          |                                                       1
+  >> 3260    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (INTEGER(4)/REAL(4)).
+     3261    sorcsd2by1.f:472:23:
+     3262    
+     3263      346 |             CALL SORBDB1( M, P, Q, X11, LDX11, X21, LDX21,
+              THETA, 0, 0,
+     3264          |                                                           
+                    2
+     3265    ......
+     3266      472 |      $                 WORK(IPHI), WORK(ITAUP1), WORK(ITAU
+             P2),
+     3267          |                       1
+  >> 3268    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3269    sorcsd2by1.f:479:44:
+     3270    
+     3271      350 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     3272          |                                               2
+     3273    ......
+     3274      479 |             CALL SORGQR( P, P, Q, U1, LDU1, WORK(ITAUP1), 
+             WORK(IORGQR),
+     3275          |                                            1
+  >> 3276    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3277    sorcsd2by1.f:484:48:
+     3278    
+     3279      350 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     3280          |                                               2
+     3281    ......
+     3282      484 |             CALL SORGQR( M-P, M-P, Q, U2, LDU2, WORK(ITAUP
+             2),
+     3283          |                                                1
+  >> 3284    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3285    sorcsd2by1.f:495:57:
+     3286    
+     3287      361 |      $                   0, WORK(1), -1, CHILDINFO )
+     3288          |                         2
+     3289    ......
+     3290      495 |             CALL SORGLQ( Q-1, Q-1, Q-1, V1T(2,2), LDV1T, W
+             ORK(ITAUQ1),
+     3291          |                                                         1
+  >> 3292    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3293    sorcsd2by1.f:502:22:
+     3294    
+     3295      365 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     3296          |                         2
+     3297    ......
+     3298      502 |      $                WORK(IPHI), U1, LDU1, U2, LDU2, V1T,
+              LDV1T, 0, 1,
+     3299          |                      1
+  >> 3300    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3301    sorcsd2by1.f:527:23:
+     3302    
+     3303      369 |             CALL SORBDB2( M, P, Q, X11, LDX11, X21, LDX21,
+              THETA, 0, 0,
+     3304          |                                                           
+                    2
+     3305    ......
+     3306      527 |      $                 WORK(IPHI), WORK(ITAUP1), WORK(ITAU
+             P2),
+     3307          |                       1
+  >> 3308    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3309    sorcsd2by1.f:539:55:
+     3310    
+     3311      350 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     3312          |                                               2
+     3313    ......
+     3314      539 |             CALL SORGQR( P-1, P-1, P-1, U1(2,2), LDU1, WOR
+             K(ITAUP1),
+     3315          |                                                       1
+  >> 3316    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3317    sorcsd2by1.f:544:48:
+     3318    
+     3319      350 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     3320          |                                               2
+     3321    ......
+     3322      544 |             CALL SORGQR( M-P, M-P, Q, U2, LDU2, WORK(ITAUP
+             2),
+     3323          |                                                1
+  >> 3324    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3325    sorcsd2by1.f:549:46:
+     3326    
+     3327      361 |      $                   0, WORK(1), -1, CHILDINFO )
+     3328          |                         2
+     3329    ......
+     3330      549 |             CALL SORGLQ( Q, Q, R, V1T, LDV1T, WORK(ITAUQ1)
+             ,
+     3331          |                                              1
+  >> 3332    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3333    sorcsd2by1.f:556:22:
+     3334    
+     3335      365 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     3336          |                         2
+     3337    ......
+     3338      556 |      $                WORK(IPHI), V1T, LDV1T, 0, 1, U1, LD
+             U1, U2, LDU2,
+     3339          |                      1
+  >> 3340    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3341    sorcsd2by1.f:581:23:
+     3342    
+     3343      392 |             CALL SORBDB3( M, P, Q, X11, LDX11, X21, LDX21,
+              THETA, 0, 0,
+     3344          |                                                           
+                    2
+     3345    ......
+     3346      581 |      $                 WORK(IPHI), WORK(ITAUP1), WORK(ITAU
+             P2),
+     3347          |                       1
+  >> 3348    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3349    sorcsd2by1.f:588:44:
+     3350    
+     3351      350 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     3352          |                                               2
+     3353    ......
+     3354      588 |             CALL SORGQR( P, P, Q, U1, LDU1, WORK(ITAUP1), 
+             WORK(IORGQR),
+     3355          |                                            1
+  >> 3356    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3357    sorcsd2by1.f:600:25:
+     3358    
+     3359      350 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     3360          |                                               2
+     3361    ......
+     3362      600 |      $                   WORK(ITAUP2), WORK(IORGQR), LORGQ
+             R, CHILDINFO )
+     3363          |                         1
+  >> 3364    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3365    sorcsd2by1.f:604:46:
+     3366    
+     3367      361 |      $                   0, WORK(1), -1, CHILDINFO )
+     3368          |                         2
+     3369    ......
+     3370      604 |             CALL SORGLQ( Q, Q, R, V1T, LDV1T, WORK(ITAUQ1)
+             ,
+     3371          |                                              1
+  >> 3372    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3373    sorcsd2by1.f:611:29:
+     3374    
+     3375      365 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     3376          |                         2
+     3377    ......
+     3378      611 |      $                THETA, WORK(IPHI), 0, 1, V1T, LDV1T,
+              U2, LDU2, U1,
+     3379          |                             1
+  >> 3380    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3381    sorcsd2by1.f:641:23:
+     3382    
+     3383      416 |             CALL SORBDB4( M, P, Q, X11, LDX11, X21, LDX21,
+              THETA, 0, 0,
+     3384          |                                                           
+                    2
+     3385    ......
+     3386      641 |      $                 WORK(IPHI), WORK(ITAUP1), WORK(ITAU
+             P2),
+     3387          |                       1
+  >> 3388    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3389    sorcsd2by1.f:654:46:
+     3390    
+     3391      350 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     3392          |                                               2
+     3393    ......
+     3394      654 |             CALL SORGQR( P, P, M-Q, U1, LDU1, WORK(ITAUP1)
+             ,
+     3395          |                                              1
+  >> 3396    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3397    sorcsd2by1.f:664:50:
+     3398    
+     3399      350 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     3400          |                                               2
+     3401    ......
+     3402      664 |             CALL SORGQR( M-P, M-P, M-Q, U2, LDU2, WORK(ITA
+             UP2),
+     3403          |                                                  1
+  >> 3404    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3405    sorcsd2by1.f:673:46:
+     3406    
+     3407      361 |      $                   0, WORK(1), -1, CHILDINFO )
+     3408          |                         2
+     3409    ......
+     3410      673 |             CALL SORGLQ( Q, Q, Q, V1T, LDV1T, WORK(ITAUQ1)
+             ,
+     3411          |                                              1
+  >> 3412    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     3413    sorcsd2by1.f:680:29:
+     3414    
+     3415      365 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     3416          |                         2
+     3417    ......
+     3418      680 |      $                THETA, WORK(IPHI), U2, LDU2, U1, LDU
+             1, 0, 1, V1T,
+     3419          |                             1
+  >> 3420    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+  >> 3421    make[2]: *** [sorcsd2by1.o] Error 1
+     3422    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penblas-0.2.16-yhnqacqy2ipmez3a6biqhs5du67jtlml/spack-src/lapack-n
+             etlib/SRC'
+  >> 3423    make[1]: *** [lapacklib] Error 2
+     3424    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penblas-0.2.16-yhnqacqy2ipmez3a6biqhs5du67jtlml/spack-src/lapack-n
+             etlib'
+  >> 3425    make: *** [netlib] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openblas-0.2.16-yhnqacqy2ipmez3a6biqhs5du67jtlml/spack-build-out.txt
+
+==> Error: ProcessError: Command exited with status 2:
+    'make' 'CC=/p/vast1/build/spack/lib/spack/env/gcc/gcc' 'FC=/p/vast1/build/spack/lib/spack/env/gcc/gfortran' 'MAKE_NO_J=1' 'TARGET=HASWELL' 'USE_OPENMP=0' 'USE_THREAD=0' 'libs' 'netlib' 'shared'
+
+26 errors found in build log:
+     4385    
+     4386      366 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     4387          |                                      2
+     4388    ......
+     4389      389 |      $                   0, V1T, LDV1T, 0, 1, U1, LDU1, U2
+             , LDU2, 0, 0,
+     4390          |                                        1
+  >> 4391    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (INTEGER(4)/REAL(4)).
+     4392    sorcsd2by1.f:412:35:
+     4393    
+     4394      366 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     4395          |                            2
+     4396    ......
+     4397      412 |      $                   THETA, 0, 0, 1, V1T, LDV1T, U2, L
+             DU2, U1, LDU1,
+     4398          |                                   1
+  >> 4399    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (INTEGER(4)/REAL(4)).
+     4400    sorcsd2by1.f:436:55:
+     4401    
+     4402      366 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     4403          |                                                2
+     4404    ......
+     4405      436 |      $                   THETA, 0, U2, LDU2, U1, LDU1, 0, 
+             1, V1T, LDV1T,
+     4406          |                                                       1
+  >> 4407    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (INTEGER(4)/REAL(4)).
+     4408    sorcsd2by1.f:473:23:
+     4409    
+     4410      347 |             CALL SORBDB1( M, P, Q, X11, LDX11, X21, LDX21,
+              THETA, 0, 0,
+     4411          |                                                           
+                    2
+     4412    ......
+     4413      473 |      $                 WORK(IPHI), WORK(ITAUP1), WORK(ITAU
+             P2),
+     4414          |                       1
+  >> 4415    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4416    sorcsd2by1.f:480:44:
+     4417    
+     4418      351 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     4419          |                                               2
+     4420    ......
+     4421      480 |             CALL SORGQR( P, P, Q, U1, LDU1, WORK(ITAUP1), 
+             WORK(IORGQR),
+     4422          |                                            1
+  >> 4423    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4424    sorcsd2by1.f:485:48:
+     4425    
+     4426      351 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     4427          |                                               2
+     4428    ......
+     4429      485 |             CALL SORGQR( M-P, M-P, Q, U2, LDU2, WORK(ITAUP
+             2),
+     4430          |                                                1
+  >> 4431    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4432    sorcsd2by1.f:496:57:
+     4433    
+     4434      362 |      $                   0, WORK(1), -1, CHILDINFO )
+     4435          |                         2
+     4436    ......
+     4437      496 |             CALL SORGLQ( Q-1, Q-1, Q-1, V1T(2,2), LDV1T, W
+             ORK(ITAUQ1),
+     4438          |                                                         1
+  >> 4439    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4440    sorcsd2by1.f:503:22:
+     4441    
+     4442      366 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     4443          |                         2
+     4444    ......
+     4445      503 |      $                WORK(IPHI), U1, LDU1, U2, LDU2, V1T,
+              LDV1T, 0, 1,
+     4446          |                      1
+  >> 4447    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4448    sorcsd2by1.f:528:23:
+     4449    
+     4450      370 |             CALL SORBDB2( M, P, Q, X11, LDX11, X21, LDX21,
+              THETA, 0, 0,
+     4451          |                                                           
+                    2
+     4452    ......
+     4453      528 |      $                 WORK(IPHI), WORK(ITAUP1), WORK(ITAU
+             P2),
+     4454          |                       1
+  >> 4455    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4456    sorcsd2by1.f:540:55:
+     4457    
+     4458      351 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     4459          |                                               2
+     4460    ......
+     4461      540 |             CALL SORGQR( P-1, P-1, P-1, U1(2,2), LDU1, WOR
+             K(ITAUP1),
+     4462          |                                                       1
+  >> 4463    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4464    sorcsd2by1.f:545:48:
+     4465    
+     4466      351 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     4467          |                                               2
+     4468    ......
+     4469      545 |             CALL SORGQR( M-P, M-P, Q, U2, LDU2, WORK(ITAUP
+             2),
+     4470          |                                                1
+  >> 4471    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4472    sorcsd2by1.f:550:46:
+     4473    
+     4474      362 |      $                   0, WORK(1), -1, CHILDINFO )
+     4475          |                         2
+     4476    ......
+     4477      550 |             CALL SORGLQ( Q, Q, R, V1T, LDV1T, WORK(ITAUQ1)
+             ,
+     4478          |                                              1
+  >> 4479    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4480    sorcsd2by1.f:557:22:
+     4481    
+     4482      366 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     4483          |                         2
+     4484    ......
+     4485      557 |      $                WORK(IPHI), V1T, LDV1T, 0, 1, U1, LD
+             U1, U2, LDU2,
+     4486          |                      1
+  >> 4487    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4488    sorcsd2by1.f:582:23:
+     4489    
+     4490      393 |             CALL SORBDB3( M, P, Q, X11, LDX11, X21, LDX21,
+              THETA, 0, 0,
+     4491          |                                                           
+                    2
+     4492    ......
+     4493      582 |      $                 WORK(IPHI), WORK(ITAUP1), WORK(ITAU
+             P2),
+     4494          |                       1
+  >> 4495    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4496    sorcsd2by1.f:589:44:
+     4497    
+     4498      351 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     4499          |                                               2
+     4500    ......
+     4501      589 |             CALL SORGQR( P, P, Q, U1, LDU1, WORK(ITAUP1), 
+             WORK(IORGQR),
+     4502          |                                            1
+  >> 4503    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4504    sorcsd2by1.f:601:25:
+     4505    
+     4506      351 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     4507          |                                               2
+     4508    ......
+     4509      601 |      $                   WORK(ITAUP2), WORK(IORGQR), LORGQ
+             R, CHILDINFO )
+     4510          |                         1
+  >> 4511    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4512    sorcsd2by1.f:605:46:
+     4513    
+     4514      362 |      $                   0, WORK(1), -1, CHILDINFO )
+     4515          |                         2
+     4516    ......
+     4517      605 |             CALL SORGLQ( Q, Q, R, V1T, LDV1T, WORK(ITAUQ1)
+             ,
+     4518          |                                              1
+  >> 4519    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4520    sorcsd2by1.f:612:29:
+     4521    
+     4522      366 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     4523          |                         2
+     4524    ......
+     4525      612 |      $                THETA, WORK(IPHI), 0, 1, V1T, LDV1T,
+              U2, LDU2, U1,
+     4526          |                             1
+  >> 4527    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4528    sorcsd2by1.f:642:23:
+     4529    
+     4530      417 |             CALL SORBDB4( M, P, Q, X11, LDX11, X21, LDX21,
+              THETA, 0, 0,
+     4531          |                                                           
+                    2
+     4532    ......
+     4533      642 |      $                 WORK(IPHI), WORK(ITAUP1), WORK(ITAU
+             P2),
+     4534          |                       1
+  >> 4535    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4536    sorcsd2by1.f:655:46:
+     4537    
+     4538      351 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     4539          |                                               2
+     4540    ......
+     4541      655 |             CALL SORGQR( P, P, M-Q, U1, LDU1, WORK(ITAUP1)
+             ,
+     4542          |                                              1
+  >> 4543    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4544    sorcsd2by1.f:665:50:
+     4545    
+     4546      351 |                CALL SORGQR( P, P, Q, U1, LDU1, 0, WORK(1),
+              -1,
+     4547          |                                               2
+     4548    ......
+     4549      665 |             CALL SORGQR( M-P, M-P, M-Q, U2, LDU2, WORK(ITA
+             UP2),
+     4550          |                                                  1
+  >> 4551    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4552    sorcsd2by1.f:674:46:
+     4553    
+     4554      362 |      $                   0, WORK(1), -1, CHILDINFO )
+     4555          |                         2
+     4556    ......
+     4557      674 |             CALL SORGLQ( Q, Q, Q, V1T, LDV1T, WORK(ITAUQ1)
+             ,
+     4558          |                                              1
+  >> 4559    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4560    sorcsd2by1.f:681:29:
+     4561    
+     4562      366 |      $                   0, U1, LDU1, U2, LDU2, V1T, LDV1T
+             , 0, 1, 0, 0,
+     4563          |                         2
+     4564    ......
+     4565      681 |      $                THETA, WORK(IPHI), U2, LDU2, U1, LDU
+             1, 0, 1, V1T,
+     4566          |                             1
+  >> 4567    Error: Type mismatch between actual argument at (1) and actual arg
+             ument at (2) (REAL(4)/INTEGER(4)).
+     4568    /p/vast1/build/spack/lib/spack/env/gcc/gfortran -O2 -Wall -m64 -fP
+             IC -c dgbtrs.f -o dgbtrs.o
+  >> 4569    make[2]: *** [sorcsd2by1.o] Error 1
+     4570    make[2]: *** Waiting for unfinished jobs....
+     4571    stgsyl.f:606:0:
+     4572    
+     4573      606 |                SCALE = SCALE2
+     4574          |
+     4575    Warning: 'scale2' may be used uninitialized in this function [-Wma
+             ybe-uninitialized]
+
+     ...
+
+     4667    slansf.f:234:40:
+     4668    
+     4669      234 |       REAL               SCALE, S, VALUE, AA, TEMP
+     4670          |                                        ^
+     4671    Warning: 'value' may be used uninitialized in this function [-Wmay
+             be-uninitialized]
+     4672    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penblas-0.2.15-v3lxndobuxrhunbkbuhzvqhbumk4jame/spack-src/lapack-n
+             etlib/SRC'
+  >> 4673    make[1]: *** [lapacklib] Error 2
+     4674    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penblas-0.2.15-v3lxndobuxrhunbkbuhzvqhbumk4jame/spack-src/lapack-n
+             etlib'
+  >> 4675    make: *** [netlib] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openblas-0.2.15-v3lxndobuxrhunbkbuhzvqhbumk4jame/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

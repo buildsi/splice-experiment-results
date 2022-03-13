@@ -1,0 +1,156 @@
+==> Error: ProcessError: Command exited with status 1:
+    '/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/configure' '--prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv' '--enable-shared' '--disable-silent-rules' '--disable-builtin-atomics' '--enable-static' '--without-pmi' '--without-knem' '--without-hcoll' '--without-psm2' '--without-libfabric' '--without-fca' '--without-xpmem' '--without-psm' '--without-verbs' '--without-mxm' '--without-ucx' '--without-cma' '--without-tm' '--without-sge' '--without-slurm' '--without-loadleveler' '--without-alps' '--without-lsf' '--disable-memchecker' '--with-hwloc=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo' '--disable-java' '--disable-mpi-java' '--with-gpfs' '--without-sqlite3' '--disable-mpi-thread-multiple' '--without-cuda' '--enable-wrapper-rpath' '--disable-mpi-cxx' '--disable-cxx-exceptions' '--with-wrapper-ldflags=-Wl,-rpath,/usr/tce/packages/gcc/gcc-10.2.1/rh/usr/lib/gcc/x86_64-redhat-linux/10'
+
+7 errors found in build log:
+     51       checking for a BSD-compatible install... /usr/bin/install -c
+     52       checking whether build environment is sane... yes
+     53       checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+     54       checking for gawk... gawk
+     55       checking whether make sets $(MAKE)... yes
+     56       checking for style of include used by make... GNU
+  >> 57       configure: error: source directory already configured; run "make 
+              distclean" there first
+     58       ==> openmpi: Executing phase: 'build'
+     59       ==> [2022-02-25-16:30:19.331593] 'make' '-j2' 'V=1'
+     60       Making all in config
+     61       make[1]: Entering directory `/tmp/sochat1/spack-stage/spack-stage
+              -openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/config'
+     62       make[1]: Nothing to be done for `all'.
+     63       make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/config'
+
+     ...
+
+     14717    
+     14718       16 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     14719          |                                                         2
+     14720    ......
+     14721       36 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     14722          |                                                         1
+  >> 14723    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/CHARACTER(*)).
+  >> 14724    make[4]: *** [mpi_comm_spawn_multiple_f90.lo] Error 1
+     14725    make[4]: *** Waiting for unfinished jobs....
+     14726    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack
+              -stage-openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/o
+              mpi/include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmp
+              i-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/mpi/fortr
+              an/use-mpi-tkr -I../../../../ompi/mpi/fortran/use-mpi-tkr -c mpi_
+              sizeof.f90 -o mpi_sizeof.o >/dev/null 2>&1
+     14727    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/mpi
+              /fortran/use-mpi-tkr'
+  >> 14728    make[3]: *** [all-recursive] Error 1
+     14729    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/mpi
+              /fortran/use-mpi-tkr'
+  >> 14730    make[2]: *** [all] Error 2
+     14731    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/mpi
+              /fortran/use-mpi-tkr'
+  >> 14732    make[1]: *** [all-recursive] Error 1
+     14733    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi'
+  >> 14734    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-build-out.txt
+
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+==> Error: ProcessError: Command exited with status 1:
+    '/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/configure' '--prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv' '--enable-shared' '--disable-silent-rules' '--disable-builtin-atomics' '--enable-static' '--without-pmi' '--without-verbs' '--without-psm2' '--without-cma' '--without-fca' '--without-libfabric' '--without-knem' '--without-psm' '--without-mxm' '--without-hcoll' '--without-ucx' '--without-xpmem' '--without-slurm' '--without-loadleveler' '--without-alps' '--without-sge' '--without-lsf' '--without-tm' '--disable-memchecker' '--with-hwloc=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo' '--disable-java' '--disable-mpi-java' '--with-gpfs' '--without-sqlite3' '--disable-mpi-thread-multiple' '--without-cuda' '--enable-wrapper-rpath' '--disable-mpi-cxx' '--disable-cxx-exceptions' '--with-wrapper-ldflags=-Wl,-rpath,/usr/tce/packages/gcc/gcc-10.2.1/rh/usr/lib/gcc/x86_64-redhat-linux/10'
+
+11 errors found in build log:
+     51       checking for a BSD-compatible install... /usr/bin/install -c
+     52       checking whether build environment is sane... yes
+     53       checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+     54       checking for gawk... gawk
+     55       checking whether make sets $(MAKE)... yes
+     56       checking for style of include used by make... GNU
+  >> 57       configure: error: source directory already configured; run "make 
+              distclean" there first
+     58       ==> openmpi: Executing phase: 'build'
+     59       ==> [2022-03-04-02:04:22.802646] 'make' '-j16' 'V=1'
+     60       Making all in config
+     61       make[1]: Entering directory `/tmp/sochat1/spack-stage/spack-stage
+              -openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/config'
+     62       make[1]: Nothing to be done for `all'.
+     63       make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/config'
+
+     ...
+
+     14721    
+     14722       16 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     14723          |                                                         2
+     14724    ......
+     14725       36 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     14726          |                                                         1
+  >> 14727    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/CHARACTER(*)).
+     14728    mpi_testall_f90.f90:22:51:
+     14729    
+     14730       10 |   call MPI_Testall(count, array_of_requests, flag, array_
+              of_statuses, ierr)
+     14731          |                                                   2
+     14732    ......
+     14733       22 |   call MPI_Testall(count, array_of_requests, flag, array_
+              of_statuses, ierr)
+     14734          |                                                   1
+  >> 14735    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+     14736    mpi_testsome_f90.f90:26:76:
+     14737    
+     14738       12 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     14739          |                                                          
+                                2
+     14740    ......
+     14741       26 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     14742          |                                                          
+                                1
+  >> 14743    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+  >> 14744    make[4]: *** [mpi_comm_spawn_multiple_f90.lo] Error 1
+     14745    make[4]: *** Waiting for unfinished jobs....
+  >> 14746    make[4]: *** [mpi_testall_f90.lo] Error 1
+  >> 14747    make[4]: *** [mpi_testsome_f90.lo] Error 1
+     14748    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack
+              -stage-openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/o
+              mpi/include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmp
+              i-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/mpi/fortr
+              an/use-mpi-tkr -I../../../../ompi/mpi/fortran/use-mpi-tkr -c mpi_
+              sizeof.f90 -o mpi_sizeof.o >/dev/null 2>&1
+     14749    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/mpi
+              /fortran/use-mpi-tkr'
+  >> 14750    make[3]: *** [all-recursive] Error 1
+     14751    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/mpi
+              /fortran/use-mpi-tkr'
+  >> 14752    make[2]: *** [all] Error 2
+     14753    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi/mpi
+              /fortran/use-mpi-tkr'
+  >> 14754    make[1]: *** [all-recursive] Error 1
+     14755    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-src/ompi'
+  >> 14756    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.8.1-xzp3ife7okxvasltdpa4iobi3xnjfaxv/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

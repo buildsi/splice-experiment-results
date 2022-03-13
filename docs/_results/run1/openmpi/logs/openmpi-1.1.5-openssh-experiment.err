@@ -1,0 +1,130 @@
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j2' 'V=1'
+
+6 errors found in build log:
+     10102    
+     10103       16 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     10104          |                                                         2
+     10105    ......
+     10106       36 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     10107          |                                                         1
+  >> 10108    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/CHARACTER(*)).
+  >> 10109    make[4]: *** [mpi_comm_spawn_multiple_f90.o] Error 1
+     10110    make[4]: *** Waiting for unfinished jobs....
+     10111    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.1.5-bucvf7khf33x7urtvsbxxzb4oxshpn35/spack-src/ompi/mpi
+              /f90'
+  >> 10112    make[3]: *** [all-recursive] Error 1
+     10113    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.1.5-bucvf7khf33x7urtvsbxxzb4oxshpn35/spack-src/ompi/mpi
+              /f90'
+  >> 10114    make[2]: *** [all-recursive] Error 1
+     10115    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.1.5-bucvf7khf33x7urtvsbxxzb4oxshpn35/spack-src/ompi/mpi
+              '
+  >> 10116    make[1]: *** [all-recursive] Error 1
+     10117    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.1.5-bucvf7khf33x7urtvsbxxzb4oxshpn35/spack-src/ompi'
+  >> 10118    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.1.5-bucvf7khf33x7urtvsbxxzb4oxshpn35/spack-build-out.txt
+
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j16' 'V=1'
+
+14 errors found in build log:
+     10294    
+     10295       10 |   call MPI_Testall(count, array_of_requests, flag, array_
+              of_statuses, ierr)
+     10296          |                                                   2
+     10297    ......
+     10298       22 |   call MPI_Testall(count, array_of_requests, flag, array_
+              of_statuses, ierr)
+     10299          |                                                   1
+  >> 10300    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+     10301    mpi_waitall_f90.f90:18:45:
+     10302    
+     10303        8 |   call MPI_Waitall(count, array_of_requests, array_of_sta
+              tuses, ierr)
+     10304          |                                             2
+     10305    ......
+     10306       18 |   call MPI_Waitall(count, array_of_requests, array_of_sta
+              tuses, ierr)
+     10307          |                                             1
+  >> 10308    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+     10309    mpi_testsome_f90.f90:26:76:
+     10310    
+     10311       12 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     10312          |                                                          
+                                2
+     10313    ......
+     10314       26 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     10315          |                                                          
+                                1
+  >> 10316    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+     10317    mpi_waitsome_f90.f90:26:76:
+     10318    
+     10319       12 |   call MPI_Waitsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     10320          |                                                          
+                                2
+     10321    ......
+     10322       26 |   call MPI_Waitsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     10323          |                                                          
+                                1
+  >> 10324    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+  >> 10325    make[4]: *** [mpi_testall_f90.o] Error 1
+     10326    make[4]: *** Waiting for unfinished jobs....
+  >> 10327    make[4]: *** [mpi_testsome_f90.o] Error 1
+  >> 10328    make[4]: *** [mpi_waitall_f90.o] Error 1
+  >> 10329    make[4]: *** [mpi_waitsome_f90.o] Error 1
+     10330    mpi_comm_spawn_multiple_f90.f90:36:57:
+     10331    
+     10332       16 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     10333          |                                                         2
+     10334    ......
+     10335       36 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     10336          |                                                         1
+  >> 10337    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/CHARACTER(*)).
+  >> 10338    make[4]: *** [mpi_comm_spawn_multiple_f90.o] Error 1
+     10339    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.1.5-bucvf7khf33x7urtvsbxxzb4oxshpn35/spack-src/ompi/mpi
+              /f90'
+  >> 10340    make[3]: *** [all-recursive] Error 1
+     10341    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.1.5-bucvf7khf33x7urtvsbxxzb4oxshpn35/spack-src/ompi/mpi
+              /f90'
+  >> 10342    make[2]: *** [all-recursive] Error 1
+     10343    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.1.5-bucvf7khf33x7urtvsbxxzb4oxshpn35/spack-src/ompi/mpi
+              '
+  >> 10344    make[1]: *** [all-recursive] Error 1
+     10345    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.1.5-bucvf7khf33x7urtvsbxxzb4oxshpn35/spack-src/ompi'
+  >> 10346    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.1.5-bucvf7khf33x7urtvsbxxzb4oxshpn35/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

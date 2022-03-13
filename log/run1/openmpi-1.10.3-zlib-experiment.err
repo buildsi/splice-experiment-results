@@ -1,0 +1,91 @@
+==> Error: ProcessError: Command exited with status 1:
+    '/var/tmp/sochat1/spack-stage/spack-stage-hwloc-1.11.13-a4qypmzb2cvagfmdevm5pjxbpxbu4imw/spack-src/configure' '--prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-a4qypmzb2cvagfmdevm5pjxbpxbu4imw' '--disable-opencl' '--disable-rsmi' '--disable-cairo' '--disable-nvml' '--disable-gl' '--disable-cuda' '--enable-libxml2' '--disable-libudev' '--enable-pci' '--enable-shared'
+
+1 error found in build log:
+     13    checking for a BSD-compatible install... /usr/bin/install -c
+     14    checking whether build environment is sane... yes
+     15    checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+     16    checking for gawk... gawk
+     17    checking whether make sets $(MAKE)... yes
+     18    checking whether make supports nested variables... yes
+  >> 19    configure: error: source directory already configured; run "make dis
+           tclean" there first
+     20    ==> hwloc: Executing phase: 'build'
+     21    ==> [2022-02-26-04:49:00.954036] 'make' '-j2' 'V=1'
+     22    Making all in src
+     23    make[1]: Entering directory `/tmp/sochat1/spack-stage/spack-stage-hw
+           loc-1.11.13-a4qypmzb2cvagfmdevm5pjxbpxbu4imw/spack-src/src'
+     24    depbase=`echo topology.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+     25    /bin/sh ../libtool  --tag=CC   --mode=compile /p/vast1/build/spack/l
+           ib/spack/env/gcc/gcc -DHAVE_CONFIG_H -I. -I/var/tmp/sochat1/spack-st
+           age/spack-stage-hwloc-1.11.13-a4qypmzb2cvagfmdevm5pjxbpxbu4imw/spack
+           -src/src -I../include/private/autogen -I../include/hwloc/autogen  -I
+           /tmp/sochat1/spack-stage/spack-stage-hwloc-1.11.13-a4qypmzb2cvagfmde
+           vm5pjxbpxbu4imw/spack-src/include -I/var/tmp/sochat1/spack-stage/spa
+           ck-stage-hwloc-1.11.13-a4qypmzb2cvagfmdevm5pjxbpxbu4imw/spack-src/in
+           clude -DHWLOC_INSIDE_LIBHWLOC -DHWLOC_PLUGINS_PATH=\"/p/vast1/build/
+           spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-a4qyp
+           mzb2cvagfmdevm5pjxbpxbu4imw/lib/hwloc\" -DRUNSTATEDIR=\"/p/vast1/bui
+           ld/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-a4
+           qypmzb2cvagfmdevm5pjxbpxbu4imw/var/run\"   -fvisibility=hidden -I/p/
+           vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libpcia
+           ccess-0.16-vzg6r6gyrqyboudgxfqbdwe36epu6s7s/include  -I/p/vast1/buil
+           d/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libxml2-2.9.12-6d
+           ef26phqaj7n3ehcsrdvdqrmrlokr63/include/libxml2 -I/p/vast1/build/spac
+           k/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libiconv-1.16-glggocpnh
+           7m2dgmtu4fedhbfeessepbe/include  -g -O2 -MT topology.lo -MD -MP -MF 
+           $depbase.Tpo -c -o topology.lo topology.c &&\
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-hwloc-1.11.13-a4qypmzb2cvagfmdevm5pjxbpxbu4imw/spack-build-out.txt
+
+Traceback (most recent call last):
+  File "/p/vast1/build/spliced/spliced/experiment/spack.py", line 192, in do_splice
+    spack.rewiring.rewire(spliced_spec)
+  File "/p/vast1/build/spack/lib/spack/spack/rewiring.py", line 40, in rewire
+    spec.build_spec.package.do_install(force=True)
+  File "/p/vast1/build/spack/lib/spack/spack/package.py", line 1772, in do_install
+    builder.install()
+  File "/p/vast1/build/spack/lib/spack/spack/installer.py", line 1697, in install
+    self._install_task(task)
+  File "/p/vast1/build/spack/lib/spack/spack/installer.py", line 1231, in _install_task
+    pkg, build_process, install_args)
+  File "/p/vast1/build/spack/lib/spack/spack/build_environment.py", line 1175, in start_build_process
+    raise child_result
+spack.build_environment.ChildError: ProcessError: Command exited with status 1:
+    '/var/tmp/sochat1/spack-stage/spack-stage-hwloc-1.11.13-a4qypmzb2cvagfmdevm5pjxbpxbu4imw/spack-src/configure' '--prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-a4qypmzb2cvagfmdevm5pjxbpxbu4imw' '--disable-opencl' '--disable-rsmi' '--disable-cairo' '--disable-nvml' '--disable-gl' '--disable-cuda' '--enable-libxml2' '--disable-libudev' '--enable-pci' '--enable-shared'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/p/vast1/build/anaconda3/bin/spliced", line 11, in <module>
+    load_entry_point('spliced', 'console_scripts', 'spliced')()
+  File "/p/vast1/build/spliced/spliced/client/__init__.py", line 237, in run_spliced
+    main(args=args, parser=parser, extra=extra, subparser=helper)
+  File "/p/vast1/build/spliced/spliced/client/splice.py", line 15, in main
+    run_spack_experiment(args, command=" ".join(extra))
+  File "/p/vast1/build/spliced/spliced/client/splice.py", line 47, in run_spack_experiment
+    experiment.run()
+  File "/p/vast1/build/spliced/spliced/experiment/spack.py", line 93, in run
+    self.do_splice(splice, spec_main, transitive)
+  File "/p/vast1/build/spliced/spliced/experiment/spack.py", line 197, in do_splice
+    self._populate_failed_splice(splice, dep, spec_main)
+  File "/p/vast1/build/spliced/spliced/experiment/spack.py", line 253, in _populate_failed_splice
+    splice.binaries["original"] = list(add_contenders(original, "bin", binary))
+  File "/p/vast1/build/spliced/spliced/experiment/spack.py", line 317, in add_contenders
+    manifest = bindist.get_buildfile_manifest(spec.build_spec)
+  File "/p/vast1/build/spack/lib/spack/spack/binary_distribution.py", line 632, in get_buildfile_manifest
+    m_type, m_subtype = relocate.mime_type(path_name)
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lang.py", line 181, in _memoized_function
+    func.cache[args] = func(*args)
+  File "/p/vast1/build/spack/lib/spack/spack/relocate.py", line 987, in mime_type
+    output = _get_mime_type()(filename, output=str, error=str).strip()
+  File "/p/vast1/build/spack/lib/spack/spack/util/executable.py", line 226, in __call__
+    proc.returncode, long_msg)
+spack.util.executable.ProcessError: Command exited with status -9:
+    '/usr/bin/file' '-b' '-h' '--mime-type' '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-1.10.3-6p2edrrpeqtyvr4tljmlb6h3zk6cpcxj/bin/vtcc'
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

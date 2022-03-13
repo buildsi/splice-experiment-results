@@ -1,0 +1,391 @@
+slurmstepd: error: *** JOB 97274 ON oslic10 CANCELLED AT 2022-02-25T17:45:29 DUE TO TIME LIMIT ***
+/var/spool/slurmd/job100628/slurm_script: line 12:  6161 Killed                  spliced splice --package nrm@0.1.0 --splice py-pyzmq --runner spack --replace py-pyzmq --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/nrm/0.1.0/py-pyzmq/experiment.json
+==> Warning: Skipping build of py-gevent-21.12.0-oxvmzjhpo4jonxjor6vxgdw4ufvs4kil since py-cffi-1.15.0-ep6t4wi6kis6jcejbyghpafn534coigr failed
+==> Warning: Skipping build of py-pyzmq-22.3.0-27pu7uptv5k2s47kc42n3pjmvecvoyqj since py-gevent-21.12.0-oxvmzjhpo4jonxjor6vxgdw4ufvs4kil failed
+==> Error: Failed to install py-cffi due to LockTimeoutError: Timed out waiting for a write lock.
+==> Error: py-pyzmq-22.3.0-27pu7uptv5k2s47kc42n3pjmvecvoyqj: Package was not installed
+==> Error: ProcessError: Command exited with status 1:
+    '/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/python-3.8.12-mk6fh4mmk44yg56krxkvawwx2327d7jx/bin/python3.8' '-m' 'pip' '-vvv' '--no-input' '--no-cache-dir' '--disable-pip-version-check' 'install' '--no-deps' '--ignore-installed' '--no-build-isolation' '--no-warn-script-location' '--no-index' '--prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/py-pyzmq-16.0.2-v2gt37xw5ozeqc7cmqrmayvi42jno2df' '.'
+
+37 errors found in build log:
+     225      /var/tmp/sochat1/timer_createrhvs7u1_.c: In function 'main':
+     226      /var/tmp/sochat1/timer_createrhvs7u1_.c:2:5: warning: implicit de
+            claration of function 'timer_create' [-Wimplicit-function-declarati
+            on]
+     227          2 |     timer_create();
+     228            |     ^~~~~~~~~~~~
+     229      cc build/temp.linux-x86_64-3.8/scratch/var/tmp/sochat1/timer_crea
+            terhvs7u1_.o -o build/temp.linux-x86_64-3.8/scratch/a.out
+     230      /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/bin/../libexec/gcc/x86_64
+            -redhat-linux/10/ld: build/temp.linux-x86_64-3.8/scratch/var/tmp/so
+            chat1/timer_createrhvs7u1_.o: in function `main':
+  >> 231    /var/tmp/sochat1/timer_createrhvs7u1_.c:2: undefined reference to `
+            timer_create'
+  >> 232      collect2: error: ld returned 1 exit status
+     233      /p/vast1/build/spack/lib/spack/env/gcc/gcc -Wno-unused-result -Ws
+            ign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -I/p/vast1/bu
+            ild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libzmq-4.3.4-f
+            qtryno4zlelddu3pj4cexkeorwlsxjq/include -Izmq/utils -Izmq/backend/c
+            ython -Izmq/devices -c build/temp.linux-x86_64-3.8/scratch/vers.c -
+            o build/temp.linux-x86_64-3.8/scratch/vers.o
+     234      /p/vast1/build/spack/lib/spack/env/gcc/gcc build/temp.linux-x86_6
+            4-3.8/scratch/vers.o -L/p/vast1/build/spack/opt/spack/linux-rhel7-b
+            roadwell/gcc-10.2.1/libzmq-4.3.4-fqtryno4zlelddu3pj4cexkeorwlsxjq/l
+            ib -Wl,--enable-new-dtags,-R/p/vast1/build/spack/opt/spack/linux-rh
+            el7-broadwell/gcc-10.2.1/libzmq-4.3.4-fqtryno4zlelddu3pj4cexkeorwls
+            xjq/lib -lzmq -lrt -o build/temp.linux-x86_64-3.8/scratch/vers
+     235          ZMQ version detected: 4.3.4
+     236      Warning: Detected ZMQ version: 4.3.4. Some new features in libzmq
+             may not be exposed by pyzmq.
+     237      ************************************************
+     238      ************************************************
+
+     ...
+
+     276      zmq/backend/cython/_device.c:193:48: warning: suggest parentheses
+             around comparison in operand of '&' [-Wparentheses]
+     277        193 |     ((PyCFunction_Check(func) && METH_FASTCALL == PyCFunc
+            tion_GET_FLAGS(func) & ~(METH_CLASS | METH_STATIC | METH_COEXIST)))
+     278      zmq/backend/cython/_device.c:2361:13: note: in expansion of macro
+             '__Pyx_PyFastCFunction_Check'
+     279       2361 |         if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+     280            |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+     281      zmq/backend/cython/_device.c: In function '__Pyx_PyCFunction_Fast
+            Call':
+  >> 282    zmq/backend/cython/_device.c:3093:13: error: too many arguments to 
+            function '(PyObject * (*)(PyObject *, PyObject * const*, Py_ssize_t
+            ))meth'
+     283       3093 |     return (*((__Pyx_PyCFunctionFast)meth)) (self, args, 
+            nargs, NULL);
+     284            |            ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     285      zmq/backend/cython/_device.c:3084:9: warning: unused variable 'fl
+            ags' [-Wunused-variable]
+     286       3084 |     int flags;
+     287            |         ^~~~~
+     288      zmq/backend/cython/_device.c:3083:15: warning: unused variable 'r
+            esult' [-Wunused-variable]
+     289       3083 |     PyObject *result;
+     290            |               ^~~~~~
+     291      zmq/backend/cython/_device.c: In function '__Pyx__ExceptionSave':
+  >> 292    zmq/backend/cython/_device.c:3120:21: error: 'PyThreadState' {aka '
+            struct _ts'} has no member named 'exc_type'; did you mean 'curexc_t
+            ype'?
+     293       3120 |     *type = tstate->exc_type;
+     294            |                     ^~~~~~~~
+     295            |                     curexc_type
+  >> 296      zmq/backend/cython/_device.c:3121:22: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_value'; did you mean 'curex
+            c_value'?
+     297       3121 |     *value = tstate->exc_value;
+     298            |                      ^~~~~~~~~
+     299            |                      curexc_value
+  >> 300      zmq/backend/cython/_device.c:3122:19: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_traceback'; did you mean 'c
+            urexc_traceback'?
+     301       3122 |     *tb = tstate->exc_traceback;
+     302            |                   ^~~~~~~~~~~~~
+     303            |                   curexc_traceback
+     304      zmq/backend/cython/_device.c: In function '__Pyx__ExceptionReset'
+            :
+  >> 305      zmq/backend/cython/_device.c:3129:24: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_type'; did you mean 'curexc
+            _type'?
+     306       3129 |     tmp_type = tstate->exc_type;
+     307            |                        ^~~~~~~~
+     308            |                        curexc_type
+  >> 309      zmq/backend/cython/_device.c:3130:25: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_value'; did you mean 'curex
+            c_value'?
+     310       3130 |     tmp_value = tstate->exc_value;
+     311            |                         ^~~~~~~~~
+     312            |                         curexc_value
+  >> 313      zmq/backend/cython/_device.c:3131:22: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_traceback'; did you mean 'c
+            urexc_traceback'?
+     314       3131 |     tmp_tb = tstate->exc_traceback;
+     315            |                      ^~~~~~~~~~~~~
+     316            |                      curexc_traceback
+  >> 317      zmq/backend/cython/_device.c:3132:13: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_type'; did you mean 'curexc
+            _type'?
+     318       3132 |     tstate->exc_type = type;
+     319            |             ^~~~~~~~
+     320            |             curexc_type
+  >> 321      zmq/backend/cython/_device.c:3133:13: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_value'; did you mean 'curex
+            c_value'?
+     322       3133 |     tstate->exc_value = value;
+     323            |             ^~~~~~~~~
+     324            |             curexc_value
+  >> 325      zmq/backend/cython/_device.c:3134:13: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_traceback'; did you mean 'c
+            urexc_traceback'?
+     326       3134 |     tstate->exc_traceback = tb;
+     327            |             ^~~~~~~~~~~~~
+     328            |             curexc_traceback
+     329      zmq/backend/cython/_device.c: In function '__Pyx__GetException':
+  >> 330      zmq/backend/cython/_device.c:3189:24: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_type'; did you mean 'curexc
+            _type'?
+     331       3189 |     tmp_type = tstate->exc_type;
+     332            |                        ^~~~~~~~
+     333            |                        curexc_type
+  >> 334      zmq/backend/cython/_device.c:3190:25: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_value'; did you mean 'curex
+            c_value'?
+     335       3190 |     tmp_value = tstate->exc_value;
+     336            |                         ^~~~~~~~~
+     337            |                         curexc_value
+  >> 338      zmq/backend/cython/_device.c:3191:22: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_traceback'; did you mean 'c
+            urexc_traceback'?
+     339       3191 |     tmp_tb = tstate->exc_traceback;
+     340            |                      ^~~~~~~~~~~~~
+     341            |                      curexc_traceback
+  >> 342      zmq/backend/cython/_device.c:3192:13: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_type'; did you mean 'curexc
+            _type'?
+     343       3192 |     tstate->exc_type = local_type;
+     344            |             ^~~~~~~~
+     345            |             curexc_type
+  >> 346      zmq/backend/cython/_device.c:3193:13: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_value'; did you mean 'curex
+            c_value'?
+     347       3193 |     tstate->exc_value = local_value;
+     348            |             ^~~~~~~~~
+     349            |             curexc_value
+  >> 350      zmq/backend/cython/_device.c:3194:13: error: 'PyThreadState' {aka
+             'struct _ts'} has no member named 'exc_traceback'; did you mean 'c
+            urexc_traceback'?
+     351       3194 |     tstate->exc_traceback = local_tb;
+     352            |             ^~~~~~~~~~~~~
+     353            |             curexc_traceback
+     354      error: command '/p/vast1/build/spack/lib/spack/env/gcc/gcc' faile
+            d with exit status 1
+     355      Building wheel for pyzmq (setup.py): finished with status 'error'
+     356      ERROR: Failed building wheel for pyzmq
+
+     ...
+
+     363    Failed to build pyzmq
+     364    Installing collected packages: pyzmq
+     365      Created temporary directory: /tmp/sochat1/pip-record-9cqoghu4
+     366        Running setup.py install for pyzmq: started
+     367        Running command /p/vast1/build/spack/opt/spack/linux-rhel7-broa
+            dwell/gcc-10.2.1/python-3.8.12-mk6fh4mmk44yg56krxkvawwx2327d7jx/bin
+            /python3.8 -u -c 'import io, os, sys, setuptools, tokenize; sys.arg
+            v[0] = '"'"'/tmp/sochat1/spack-stage/spack-stage-py-pyzmq-16.0.2-v2
+            gt37xw5ozeqc7cmqrmayvi42jno2df/spack-src/setup.py'"'"'; __file__='"
+            '"'/tmp/sochat1/spack-stage/spack-stage-py-pyzmq-16.0.2-v2gt37xw5oz
+            eqc7cmqrmayvi42jno2df/spack-src/setup.py'"'"';f = getattr(tokenize,
+             '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else i
+            o.StringIO('"'"'from setuptools import setup; setup()'"'"');code = 
+            f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compi
+            le(code, __file__, '"'"'exec'"'"'))' install --record /tmp/sochat1/
+            pip-record-9cqoghu4/install-record.txt --single-version-externally-
+            managed --prefix /p/vast1/build/spack/opt/spack/linux-rhel7-broadwe
+            ll/gcc-10.2.1/py-pyzmq-16.0.2-v2gt37xw5ozeqc7cmqrmayvi42jno2df --co
+            mpile --install-headers /p/vast1/build/spack/opt/spack/linux-rhel7-
+            broadwell/gcc-10.2.1/py-pyzmq-16.0.2-v2gt37xw5ozeqc7cmqrmayvi42jno2
+            df/include/python3.8/pyzmq
+     368        running install
+  >> 369    /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/py-
+            setuptools-59.4.0-hsdjhjl4tss6r4karycay4bn3det7ybb/lib/python3.8/si
+            te-packages/setuptools/command/install.py:34: SetuptoolsDeprecation
+            Warning: setup.py install is deprecated. Use build and pip and othe
+            r standards-based tools.
+     370          warnings.warn(
+     371        running build
+     372        running build_py
+     373        creating build
+     374        creating build/lib.linux-x86_64-3.8
+     375        creating build/lib.linux-x86_64-3.8/zmq
+
+     ...
+
+     531        /var/tmp/sochat1/timer_create939x9_0h.c: In function 'main':
+     532        /var/tmp/sochat1/timer_create939x9_0h.c:2:5: warning: implicit 
+            declaration of function 'timer_create' [-Wimplicit-function-declara
+            tion]
+     533            2 |     timer_create();
+     534              |     ^~~~~~~~~~~~
+     535        cc build/temp.linux-x86_64-3.8/scratch/var/tmp/sochat1/timer_cr
+            eate939x9_0h.o -o build/temp.linux-x86_64-3.8/scratch/a.out
+     536        /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/bin/../libexec/gcc/x86_
+            64-redhat-linux/10/ld: build/temp.linux-x86_64-3.8/scratch/var/tmp/
+            sochat1/timer_create939x9_0h.o: in function `main':
+  >> 537    /var/tmp/sochat1/timer_create939x9_0h.c:2: undefined reference to `
+            timer_create'
+  >> 538        collect2: error: ld returned 1 exit status
+     539        /p/vast1/build/spack/lib/spack/env/gcc/gcc -Wno-unused-result -
+            Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -fPIC -I/p/vast1/
+            build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libzmq-4.3.4
+            -fqtryno4zlelddu3pj4cexkeorwlsxjq/include -Izmq/utils -Izmq/backend
+            /cython -Izmq/devices -c build/temp.linux-x86_64-3.8/scratch/vers.c
+             -o build/temp.linux-x86_64-3.8/scratch/vers.o
+     540        /p/vast1/build/spack/lib/spack/env/gcc/gcc build/temp.linux-x86
+            _64-3.8/scratch/vers.o -L/p/vast1/build/spack/opt/spack/linux-rhel7
+            -broadwell/gcc-10.2.1/libzmq-4.3.4-fqtryno4zlelddu3pj4cexkeorwlsxjq
+            /lib -Wl,--enable-new-dtags,-R/p/vast1/build/spack/opt/spack/linux-
+            rhel7-broadwell/gcc-10.2.1/libzmq-4.3.4-fqtryno4zlelddu3pj4cexkeorw
+            lsxjq/lib -lzmq -lrt -o build/temp.linux-x86_64-3.8/scratch/vers
+     541            ZMQ version detected: 4.3.4
+     542        Warning: Detected ZMQ version: 4.3.4. Some new features in libz
+            mq may not be exposed by pyzmq.
+     543        ************************************************
+     544        ************************************************
+
+     ...
+
+     582        zmq/backend/cython/_device.c:193:48: warning: suggest parenthes
+            es around comparison in operand of '&' [-Wparentheses]
+     583          193 |     ((PyCFunction_Check(func) && METH_FASTCALL == PyCFu
+            nction_GET_FLAGS(func) & ~(METH_CLASS | METH_STATIC | METH_COEXIST)
+            ))
+     584        zmq/backend/cython/_device.c:2361:13: note: in expansion of mac
+            ro '__Pyx_PyFastCFunction_Check'
+     585         2361 |         if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+     586              |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+     587        zmq/backend/cython/_device.c: In function '__Pyx_PyCFunction_Fa
+            stCall':
+  >> 588    zmq/backend/cython/_device.c:3093:13: error: too many arguments to 
+            function '(PyObject * (*)(PyObject *, PyObject * const*, Py_ssize_t
+            ))meth'
+     589         3093 |     return (*((__Pyx_PyCFunctionFast)meth)) (self, args
+            , nargs, NULL);
+     590              |            ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     591        zmq/backend/cython/_device.c:3084:9: warning: unused variable '
+            flags' [-Wunused-variable]
+     592         3084 |     int flags;
+     593              |         ^~~~~
+     594        zmq/backend/cython/_device.c:3083:15: warning: unused variable 
+            'result' [-Wunused-variable]
+     595         3083 |     PyObject *result;
+     596              |               ^~~~~~
+     597        zmq/backend/cython/_device.c: In function '__Pyx__ExceptionSave
+            ':
+  >> 598    zmq/backend/cython/_device.c:3120:21: error: 'PyThreadState' {aka '
+            struct _ts'} has no member named 'exc_type'; did you mean 'curexc_t
+            ype'?
+     599         3120 |     *type = tstate->exc_type;
+     600              |                     ^~~~~~~~
+     601              |                     curexc_type
+  >> 602        zmq/backend/cython/_device.c:3121:22: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_value'; did you mean 'cur
+            exc_value'?
+     603         3121 |     *value = tstate->exc_value;
+     604              |                      ^~~~~~~~~
+     605              |                      curexc_value
+  >> 606        zmq/backend/cython/_device.c:3122:19: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_traceback'; did you mean 
+            'curexc_traceback'?
+     607         3122 |     *tb = tstate->exc_traceback;
+     608              |                   ^~~~~~~~~~~~~
+     609              |                   curexc_traceback
+     610        zmq/backend/cython/_device.c: In function '__Pyx__ExceptionRese
+            t':
+  >> 611        zmq/backend/cython/_device.c:3129:24: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_type'; did you mean 'cure
+            xc_type'?
+     612         3129 |     tmp_type = tstate->exc_type;
+     613              |                        ^~~~~~~~
+     614              |                        curexc_type
+  >> 615        zmq/backend/cython/_device.c:3130:25: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_value'; did you mean 'cur
+            exc_value'?
+     616         3130 |     tmp_value = tstate->exc_value;
+     617              |                         ^~~~~~~~~
+     618              |                         curexc_value
+  >> 619        zmq/backend/cython/_device.c:3131:22: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_traceback'; did you mean 
+            'curexc_traceback'?
+     620         3131 |     tmp_tb = tstate->exc_traceback;
+     621              |                      ^~~~~~~~~~~~~
+     622              |                      curexc_traceback
+  >> 623        zmq/backend/cython/_device.c:3132:13: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_type'; did you mean 'cure
+            xc_type'?
+     624         3132 |     tstate->exc_type = type;
+     625              |             ^~~~~~~~
+     626              |             curexc_type
+  >> 627        zmq/backend/cython/_device.c:3133:13: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_value'; did you mean 'cur
+            exc_value'?
+     628         3133 |     tstate->exc_value = value;
+     629              |             ^~~~~~~~~
+     630              |             curexc_value
+  >> 631        zmq/backend/cython/_device.c:3134:13: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_traceback'; did you mean 
+            'curexc_traceback'?
+     632         3134 |     tstate->exc_traceback = tb;
+     633              |             ^~~~~~~~~~~~~
+     634              |             curexc_traceback
+     635        zmq/backend/cython/_device.c: In function '__Pyx__GetException'
+            :
+  >> 636        zmq/backend/cython/_device.c:3189:24: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_type'; did you mean 'cure
+            xc_type'?
+     637         3189 |     tmp_type = tstate->exc_type;
+     638              |                        ^~~~~~~~
+     639              |                        curexc_type
+  >> 640        zmq/backend/cython/_device.c:3190:25: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_value'; did you mean 'cur
+            exc_value'?
+     641         3190 |     tmp_value = tstate->exc_value;
+     642              |                         ^~~~~~~~~
+     643              |                         curexc_value
+  >> 644        zmq/backend/cython/_device.c:3191:22: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_traceback'; did you mean 
+            'curexc_traceback'?
+     645         3191 |     tmp_tb = tstate->exc_traceback;
+     646              |                      ^~~~~~~~~~~~~
+     647              |                      curexc_traceback
+  >> 648        zmq/backend/cython/_device.c:3192:13: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_type'; did you mean 'cure
+            xc_type'?
+     649         3192 |     tstate->exc_type = local_type;
+     650              |             ^~~~~~~~
+     651              |             curexc_type
+  >> 652        zmq/backend/cython/_device.c:3193:13: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_value'; did you mean 'cur
+            exc_value'?
+     653         3193 |     tstate->exc_value = local_value;
+     654              |             ^~~~~~~~~
+     655              |             curexc_value
+  >> 656        zmq/backend/cython/_device.c:3194:13: error: 'PyThreadState' {a
+            ka 'struct _ts'} has no member named 'exc_traceback'; did you mean 
+            'curexc_traceback'?
+     657         3194 |     tstate->exc_traceback = local_tb;
+     658              |             ^~~~~~~~~~~~~
+     659              |             curexc_traceback
+     660        error: command '/p/vast1/build/spack/lib/spack/env/gcc/gcc' fai
+            led with exit status 1
+     661        Running setup.py install for pyzmq: finished with status 'error
+            '
+     662    ERROR: Command errored out with exit status 1: /p/vast1/build/spack
+            /opt/spack/linux-rhel7-broadwell/gcc-10.2.1/python-3.8.12-mk6fh4mmk
+            44yg56krxkvawwx2327d7jx/bin/python3.8 -u -c 'import io, os, sys, se
+            tuptools, tokenize; sys.argv[0] = '"'"'/tmp/sochat1/spack-stage/spa
+            ck-stage-py-pyzmq-16.0.2-v2gt37xw5ozeqc7cmqrmayvi42jno2df/spack-src
+            /setup.py'"'"'; __file__='"'"'/tmp/sochat1/spack-stage/spack-stage-
+            py-pyzmq-16.0.2-v2gt37xw5ozeqc7cmqrmayvi42jno2df/spack-src/setup.py
+            '"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.p
+            ath.exists(__file__) else io.StringIO('"'"'from setuptools import s
+            etup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n
+            '"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' ins
+            tall --record /tmp/sochat1/pip-record-9cqoghu4/install-record.txt -
+            -single-version-externally-managed --prefix /p/vast1/build/spack/op
+            t/spack/linux-rhel7-broadwell/gcc-10.2.1/py-pyzmq-16.0.2-v2gt37xw5o
+            zeqc7cmqrmayvi42jno2df --compile --install-headers /p/vast1/build/s
+            pack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/py-pyzmq-16.0.2-v2g
+            t37xw5ozeqc7cmqrmayvi42jno2df/include/python3.8/pyzmq Check the log
+            s for full command output.
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-py-pyzmq-16.0.2-v2gt37xw5ozeqc7cmqrmayvi42jno2df/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

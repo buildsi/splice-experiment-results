@@ -1,0 +1,88 @@
+==> Error: ProcessError: Command exited with status 1:
+    '/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/configure' '--prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-1.2.6-qw6lord362e7gavmnd6xugqxrnnamg4y' '--enable-shared' '--disable-silent-rules' '--disable-builtin-atomics' '--enable-static' '--without-pmi' '--without-fca' '--without-hcoll' '--without-cma' '--without-psm2' '--without-psm' '--without-ucx' '--without-libfabric' '--without-knem' '--without-xpmem' '--without-openib' '--without-mxm' '--without-lsf' '--without-slurm' '--without-loadleveler' '--without-sge' '--without-alps' '--without-tm' '--disable-memchecker' '--with-gpfs' '--without-sqlite3' '--disable-wrapper-rpath' '--disable-mpi-cxx' '--disable-cxx-exceptions'
+/var/spool/slurmd/job97862/slurm_script: line 12: 63293 Killed                  spliced splice --package openmpi@1.2.6 --splice pkgconf --runner spack --replace pkgconf --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/openmpi/1.2.6/pkgconf/experiment.json
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j16' 'V=1'
+
+9 errors found in build log:
+     10450    
+     10451       16 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     10452          |                                                         2
+     10453    ......
+     10454       36 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     10455          |                                                         1
+  >> 10456    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/CHARACTER(*)).
+     10457    mpi_testsome_f90.f90:26:76:
+     10458    
+     10459       12 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     10460          |                                                          
+                                2
+     10461    ......
+     10462       26 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     10463          |                                                          
+                                1
+  >> 10464    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+  >> 10465    make[5]: *** [mpi_comm_spawn_multiple_f90.lo] Error 1
+     10466    make[5]: *** Waiting for unfinished jobs....
+  >> 10467    make[5]: *** [mpi_testsome_f90.lo] Error 1
+     10468    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi_wtick_f90.f90 -o mpi_wtick_f90.o >/dev
+              /null 2>&1
+     10469    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi_wtime_f90.f90 -o mpi_wtime_f90.o >/dev
+              /null 2>&1
+     10470    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi_sizeof.f90 -o mpi_sizeof.o >/dev/null 
+              2>&1
+     10471    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi.f90 -o mpi.o >/dev/null 2>&1
+     10472    make[5]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi/mpi
+              /f90'
+  >> 10473    make[4]: *** [all-recursive] Error 1
+     10474    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi/mpi
+              /f90'
+  >> 10475    make[3]: *** [all] Error 2
+     10476    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi/mpi
+              /f90'
+  >> 10477    make[2]: *** [all-recursive] Error 1
+     10478    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi/mpi
+              '
+  >> 10479    make[1]: *** [all-recursive] Error 1
+     10480    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-src/ompi'
+  >> 10481    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.2.6-qw6lord362e7gavmnd6xugqxrnnamg4y/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

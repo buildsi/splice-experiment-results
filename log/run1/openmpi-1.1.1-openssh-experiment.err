@@ -1,0 +1,37 @@
+/var/spool/slurmd/job97654/slurm_script: line 12: 34666 Killed                  spliced splice --package openmpi@1.1.1 --splice openssh --runner spack --replace openssh --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/openmpi/1.1.1/openssh/experiment.json
+Traceback (most recent call last):
+  File "/p/vast1/build/anaconda3/bin/spliced", line 11, in <module>
+    load_entry_point('spliced', 'console_scripts', 'spliced')()
+  File "/p/vast1/build/spliced/spliced/client/__init__.py", line 228, in run_spliced
+    main(args=args, parser=parser, extra=extra, subparser=helper)
+  File "/p/vast1/build/spliced/spliced/client/splice.py", line 14, in main
+    run_spack_experiment(args, command=" ".join(extra))
+  File "/p/vast1/build/spliced/spliced/client/splice.py", line 40, in run_spack_experiment
+    experiment.run()
+  File "/p/vast1/build/spliced/spliced/experiment/spack.py", line 46, in run
+    spec_main = Spec(self.package).concretized()
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2684, in concretized
+    clone.concretize(tests=tests)
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2646, in concretize
+    self._new_concretize(tests)
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2619, in _new_concretize
+    result = solver.solve([self], tests=tests)
+  File "/p/vast1/build/spack/lib/spack/spack/solver/asp.py", line 2114, in solve
+    setup_only=setup_only,
+  File "/p/vast1/build/spack/lib/spack/spack/solver/asp.py", line 639, in solve
+    answers = builder.build_specs(tuples)
+  File "/p/vast1/build/spack/lib/spack/spack/solver/asp.py", line 2037, in build_specs
+    spack.spec.Spec.ensure_no_deprecated(s)
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2594, in ensure_no_deprecated
+    with spack.store.db.read_transaction():
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 684, in __enter__
+    if self._enter() and self._acquire_fn:
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 711, in _enter
+    return self._lock.acquire_read(self._timeout)
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 423, in acquire_read
+    wait_time, nattempts = self._lock(fcntl.LOCK_SH, timeout=timeout)
+  File "/p/vast1/build/spack/lib/spack/spack/util/lock.py", line 32, in _lock
+    return super(Lock, self)._lock(op, timeout)
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 316, in _lock
+    .format(lock_type[op]))
+llnl.util.lock.LockTimeoutError: Timed out waiting for a read lock.

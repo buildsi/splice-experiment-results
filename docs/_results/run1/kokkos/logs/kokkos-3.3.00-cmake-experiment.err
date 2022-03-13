@@ -1,0 +1,64 @@
+slurmstepd: error: *** JOB 97205 ON oslic11 CANCELLED AT 2022-02-25T17:13:59 DUE TO TIME LIMIT ***
+/var/spool/slurmd/job100558/slurm_script: line 12: 36502 Killed                  spliced splice --package kokkos@3.3.00 --splice cmake --runner spack --replace cmake --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/kokkos/3.3.00/cmake/experiment.json
+==> Warning: Missing a source id for cmake@master
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j16'
+
+6 errors found in build log:
+     1923    [ 93%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cm
+             CPackDocumentMacros.cxx.o
+     1924    [ 93%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cm
+             CPackDebGenerator.cxx.o
+     1925    [ 93%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cm
+             CPackRPMGenerator.cxx.o
+     1926    Linking CXX executable ../bin/ccmake
+     1927    [ 93%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cm
+             CTestLaunch.cxx.o
+     1928    [ 94%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cm
+             CTestMemCheckCommand.cxx.o
+  >> 1929    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/bin/../libexec/gcc/x86_64-
+             redhat-linux/10/ld: CMakeFiles/ccmake.dir/CursesDialog/ccmake.cxx.
+             o: undefined reference to symbol 'cbreak@@@@NCURSES6_TINFO_5.0.19991
+             023'
+  >> 1930    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/bin/../libexec/gcc/x86_64-
+             redhat-linux/10/ld: /p/vast1/build/spack/opt/spack/linux-rhel7-bro
+             adwell/gcc-10.2.1/ncurses-6.2-2xef6sx47tqatqlceqguyz3rza5okbhy/lib
+             /libtinfo.so.6: error adding symbols: DSO missing from command lin
+             e
+  >> 1931    collect2: error: ld returned 1 exit status
+  >> 1932    make[2]: *** [bin/ccmake] Error 1
+  >> 1933    make[1]: *** [Source/CMakeFiles/ccmake.dir/all] Error 2
+     1934    make[1]: *** Waiting for unfinished jobs....
+     1935    [ 94%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cm
+             CTestMemCheckHandler.cxx.o
+     1936    [ 94%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cm
+             CTestMultiProcessHandler.cxx.o
+     1937    [ 94%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cm
+             CTestReadCustomFilesCommand.cxx.o
+     1938    [ 95%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cm
+             CTestRunScriptCommand.cxx.o
+     1939    [ 95%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cm
+             CTestRunTest.cxx.o
+
+     ...
+
+     1971    [ 98%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cm
+             CTestSVN.cxx.o
+     1972    [ 98%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cm
+             CTestBZR.cxx.o
+     1973    [ 99%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cm
+             CTestGIT.cxx.o
+     1974    [ 99%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cm
+             CTestHG.cxx.o
+     1975    Linking CXX static library libCTestLib.a
+     1976    [ 99%] Built target CTestLib
+  >> 1977    make: *** [all] Error 2
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-cmake-2.8.10.2-62xh3dj52yzayczfgo4de6xhzsuerhm2/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

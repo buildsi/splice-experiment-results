@@ -1,0 +1,175 @@
+/var/spool/slurmd/job97984/slurm_script: line 12: 57237 Killed                  spliced splice --package openmpi@1.3.2 --splice zlib --runner spack --replace zlib --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/openmpi/1.3.2/zlib/experiment.json
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j16' 'V=1'
+
+17 errors found in build log:
+     1820     checking whether the /p/vast1/build/spack/lib/spack/env/gcc/g++ l
+              inker (/usr/tce/packages/gcc/gcc-10.2.1/rh/usr/libexec/gcc/x86_64
+              -redhat-linux/10/ld -m elf_x86_64) supports shared libraries... y
+              es
+     1821     checking dynamic linker characteristics... GNU/Linux ld.so
+     1822     checking how to hardcode library paths into programs... immediate
+     1823     checking vtf3.h usability... no
+     1824     checking vtf3.h presence... no
+     1825     checking for vtf3.h... no
+  >> 1826     configure: error: no vtf3.h found; check path for VTF3 package fi
+              rst...
+     1827     checking zlib.h usability... yes
+     1828     checking zlib.h presence... yes
+     1829     checking for zlib.h... yes
+     1830     checking for ANSI C header files... (cached) yes
+     1831     checking stddef.h usability... yes
+     1832     checking stddef.h presence... yes
+
+     ...
+
+     1881     checking demangle.h usability... yes
+     1882     checking demangle.h presence... yes
+     1883     checking for demangle.h... yes
+     1884     checking BPatch.h usability... no
+     1885     checking BPatch.h presence... no
+     1886     checking for BPatch.h... no
+  >> 1887     configure: error: no BPatch.h found; check path for Dyninst packa
+              ge first...
+     1888     checking for mpicc... /p/vast1/build/spack/lib/spack/env/gcc/gcc
+     1889     checking for the value of MPI_STATUS_SIZE... skipped (--with-mpi-
+              status-size=5)
+     1890     checking for MPI_File_open... no
+     1891     checking for OpenMP flag of C compiler... -fopenmp
+     1892     checking omp.h usability... yes
+     1893     checking omp.h presence... yes
+
+     ...
+
+     1915     checking for pwrite64... yes
+     1916     checking papi.h usability... yes
+     1917     checking papi.h presence... yes
+     1918     checking for papi.h... yes
+     1919     checking whether linking with -lpapi works... yes
+     1920     checking whether PAPI version = 3.x... no
+  >> 1921     configure: error: PAPI version could not be determined and/or is 
+              incompatible (!= 3.x)
+     1922     See `config.log' for more details.
+     1923     configure: creating ./config.status
+     1924     config.status: creating Makefile
+     1925     config.status: creating util/Makefile
+     1926     config.status: creating extlib/Makefile
+     1927     config.status: creating vtlib/Makefile
+
+     ...
+
+     13330    
+     13331       10 |   call MPI_Testall(count, array_of_requests, flag, array_
+              of_statuses, ierr)
+     13332          |                                                   2
+     13333    ......
+     13334       22 |   call MPI_Testall(count, array_of_requests, flag, array_
+              of_statuses, ierr)
+     13335          |                                                   1
+  >> 13336    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+     13337    mpi_waitall_f90.f90:18:45:
+     13338    
+     13339        8 |   call MPI_Waitall(count, array_of_requests, array_of_sta
+              tuses, ierr)
+     13340          |                                             2
+     13341    ......
+     13342       18 |   call MPI_Waitall(count, array_of_requests, array_of_sta
+              tuses, ierr)
+     13343          |                                             1
+  >> 13344    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+     13345    mpi_comm_spawn_multiple_f90.f90:36:57:
+     13346    
+     13347       16 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     13348          |                                                         2
+     13349    ......
+     13350       36 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     13351          |                                                         1
+  >> 13352    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/CHARACTER(*)).
+     13353    mpi_testsome_f90.f90:26:76:
+     13354    
+     13355       12 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     13356          |                                                          
+                                2
+     13357    ......
+     13358       26 |   call MPI_Testsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     13359          |                                                          
+                                1
+  >> 13360    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+     13361    mpi_waitsome_f90.f90:26:76:
+     13362    
+     13363       12 |   call MPI_Waitsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     13364          |                                                          
+                                2
+     13365    ......
+     13366       26 |   call MPI_Waitsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     13367          |                                                          
+                                1
+  >> 13368    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+  >> 13369    make[4]: *** [mpi_testall_f90.lo] Error 1
+     13370    make[4]: *** Waiting for unfinished jobs....
+  >> 13371    make[4]: *** [mpi_waitall_f90.lo] Error 1
+  >> 13372    make[4]: *** [mpi_comm_spawn_multiple_f90.lo] Error 1
+  >> 13373    make[4]: *** [mpi_testsome_f90.lo] Error 1
+  >> 13374    make[4]: *** [mpi_waitsome_f90.lo] Error 1
+     13375    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi_wtick_f90.f90 -o mpi_wtick_f90.o >/dev
+              /null 2>&1
+     13376    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi_wtime_f90.f90 -o mpi_wtime_f90.o >/dev
+              /null 2>&1
+     13377    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi_sizeof.f90 -o mpi_sizeof.o >/dev/null 
+              2>&1
+     13378    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi.f90 -o mpi.o >/dev/null 2>&1
+     13379    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-src/ompi/mpi
+              /f90'
+  >> 13380    make[3]: *** [all-recursive] Error 1
+     13381    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-src/ompi/mpi
+              /f90'
+  >> 13382    make[2]: *** [all] Error 2
+     13383    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-src/ompi/mpi
+              /f90'
+  >> 13384    make[1]: *** [all-recursive] Error 1
+     13385    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-src/ompi'
+  >> 13386    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.3.2-5ewuwjuqtov76etfqhylti4by4aip6kb/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

@@ -1,0 +1,60 @@
+==> Warning: mfem-3.2-lm73zt6lcb25g4glmmxzwl7vahbdkdtw failed to install
+==> Warning: AssertionError exception when releasing read lock for mfem-3.2-lm73zt6lcb25g4glmmxzwl7vahbdkdtw: 
+==> Error: mfem-3.2-lm73zt6lcb25g4glmmxzwl7vahbdkdtw: Package was not installed
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+/var/spool/slurmd/job100588/slurm_script: line 12: 38956 Killed                  spliced splice --package mfem@3.2 --splice metis --runner spack --replace metis --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/mfem/3.2/metis/experiment.json
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-C' 'examples' 'ex1p'
+
+4 errors found in build log:
+     162    a - fem/gridfunc.o
+     163    ranlib libmfem.a
+     164    ==> [2022-03-03-11:08:17.757841] 'make' '-C' 'examples' 'ex1p'
+     165    make: Entering directory `/tmp/sochat1/spack-stage/spack-stage-mfem
+            -3.2-lm73zt6lcb25g4glmmxzwl7vahbdkdtw/spack-src/examples'
+     166    /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/ope
+            nmpi-4.1.2-mtnsjnbj5kuefhd6gtupaglpuytu6vhz/bin/mpic++  -O3 -I.. -I
+            /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/met
+            is-5.1.0-d4ylkf6ddvvzijmxcx4enefij3v2hjjr/include -I/p/vast1/build/
+            spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hypre-2.13.0-pkg3o
+            wmsbige5jyhq3m6f7sppnxczvcx/include ex1p.cpp -o ex1p -L.. -lmfem -W
+            l,-rpath,/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-1
+            0.2.1/metis-5.1.0-d4ylkf6ddvvzijmxcx4enefij3v2hjjr/lib -L/p/vast1/b
+            uild/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/metis-5.1.0-d
+            4ylkf6ddvvzijmxcx4enefij3v2hjjr/lib -lmetis -Wl,-rpath,/p/vast1/bui
+            ld/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hypre-2.13.0-pk
+            g3owmsbige5jyhq3m6f7sppnxczvcx/lib -Wl,-rpath,/p/vast1/build/spack/
+            opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openblas-0.3.19-jubz2yn2
+            ui3jzqphbt3w2jyqt2pwvz7f/lib -L/p/vast1/build/spack/opt/spack/linux
+            -rhel7-broadwell/gcc-10.2.1/hypre-2.13.0-pkg3owmsbige5jyhq3m6f7sppn
+            xczvcx/lib -L/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/g
+            cc-10.2.1/openblas-0.3.19-jubz2yn2ui3jzqphbt3w2jyqt2pwvz7f/lib -lHY
+            PRE -lopenblas -lrt
+     167    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/bin/../libexec/gcc/x86_64-r
+            edhat-linux/10/ld: warning: libgpfs.so, needed by /p/vast1/build/sp
+            ack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-4.1.2-mtnsjn
+            bj5kuefhd6gtupaglpuytu6vhz/lib/libmpi.so, not found (try using -rpa
+            th or -rpath-link)
+  >> 168    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/bin/../libexec/gcc/x86_64-r
+            edhat-linux/10/ld: /p/vast1/build/spack/opt/spack/linux-rhel7-broad
+            well/gcc-10.2.1/openblas-0.3.19-jubz2yn2ui3jzqphbt3w2jyqt2pwvz7f/li
+            b/libopenblas.so: undefined reference to `_gfortran_concat_string'
+  >> 169    /usr/tce/packages/gcc/gcc-10.2.1/rh/usr/bin/../libexec/gcc/x86_64-r
+            edhat-linux/10/ld: /p/vast1/build/spack/opt/spack/linux-rhel7-broad
+            well/gcc-10.2.1/openmpi-4.1.2-mtnsjnbj5kuefhd6gtupaglpuytu6vhz/lib/
+            libmpi.so: undefined reference to `gpfs_fcntl'
+  >> 170    collect2: error: ld returned 1 exit status
+  >> 171    make: *** [ex1p] Error 1
+     172    make: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-mfem-
+            3.2-lm73zt6lcb25g4glmmxzwl7vahbdkdtw/spack-src/examples'
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-mfem-3.2-lm73zt6lcb25g4glmmxzwl7vahbdkdtw/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

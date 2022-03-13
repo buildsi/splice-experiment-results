@@ -1,0 +1,61 @@
+==> Warning: Missing a source id for intel-xed@master
+warning: Could not find remote branch master to clone.
+fatal: Remote branch master not found in upstream origin
+==> Error: FetchError: All fetchers failed for spack-stage-intel-xed-master-hozhtwq4vhsuc4cxhozt7yhwzomrz3gk
+
+/p/vast1/build/spack/lib/spack/spack/package.py:1386, in do_fetch:
+       1383
+       1384        self.stage.create()
+       1385        err_msg = None if not self.manual_download else self.download_instr
+  >>   1386        start_time = time.time()
+       1387        self.stage.fetch(mirror_only, err_msg=err_msg)
+       1388        self._fetch_time = time.time() - start_time
+       1389
+
+
+==> Warning: Fetching from mirror without a checksum!
+  This package is normally checked out from a version control system, but it has been archived on a spack mirror.  This means we cannot know a checksum for the tarball in advance. Be sure that your connection to this mirror is secure!
+==> Error: ProcessError: Command exited with status 1:
+    'cmake' '-G' 'Unix Makefiles' '-DCMAKE_INSTALL_PREFIX:STRING=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/dyninst-12.0.1-d2hyaakz6pccbdmllcya5mhwjjxbc4hv' '-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo' '-DCMAKE_INTERPROCEDURAL_OPTIMIZATION:BOOL=OFF' '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON' '-DCMAKE_INSTALL_RPATH_USE_LINK_PATH:BOOL=OFF' '-DCMAKE_INSTALL_RPATH:STRING=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/dyninst-12.0.1-d2hyaakz6pccbdmllcya5mhwjjxbc4hv/lib;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/dyninst-12.0.1-d2hyaakz6pccbdmllcya5mhwjjxbc4hv/lib64;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/boost-1.77.0-rhgr7u3ntzen67on6n6hbhsl4h5khdon/lib;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/bzip2-1.0.8-jmjklgubcyryaddwqvzuvzeiq6zfqmst/lib;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/zlib-1.2.11-su2ldy5ofm424qnly3kitbbdgwovpfk4/lib;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/elfutils-0.186-dw6npkswgfa2j5qouvicbtltte3q64gj/lib;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/xz-5.2.5-d536jz4ora4tt45q72d2lklqr3dqx34m/lib;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/intel-tbb-2020.3-ssbpnrc5drf2pk7bx53asgnpwsqmigs6/lib;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libiberty-2.33.1-2zvihvo2nzmx5fg75kwtuaf2ysirqfqh/lib;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libiberty-2.33.1-2zvihvo2nzmx5fg75kwtuaf2ysirqfqh/lib64' '-DCMAKE_PREFIX_PATH:STRING=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libiberty-2.33.1-2zvihvo2nzmx5fg75kwtuaf2ysirqfqh;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/intel-tbb-2020.3-ssbpnrc5drf2pk7bx53asgnpwsqmigs6;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/elfutils-0.186-dw6npkswgfa2j5qouvicbtltte3q64gj;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/xz-5.2.5-d536jz4ora4tt45q72d2lklqr3dqx34m;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/cmake-3.21.4-zczi6en7lnw5wb3dnucbuaubcs5jx3gs;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/boost-1.77.0-rhgr7u3ntzen67on6n6hbhsl4h5khdon;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/zlib-1.2.11-su2ldy5ofm424qnly3kitbbdgwovpfk4;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/bzip2-1.0.8-jmjklgubcyryaddwqvzuvzeiq6zfqmst' '-DBoost_ROOT_DIR=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/boost-1.77.0-rhgr7u3ntzen67on6n6hbhsl4h5khdon' '-DElfUtils_ROOT_DIR=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/elfutils-0.186-dw6npkswgfa2j5qouvicbtltte3q64gj' '-DLibIberty_ROOT_DIR=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libiberty-2.33.1-2zvihvo2nzmx5fg75kwtuaf2ysirqfqh' '-DTBB_ROOT_DIR=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/intel-tbb-2020.3-ssbpnrc5drf2pk7bx53asgnpwsqmigs6' '-DLibIberty_LIBRARIES:STRING=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/libiberty-2.33.1-2zvihvo2nzmx5fg75kwtuaf2ysirqfqh/lib64/libiberty.a' '-DUSE_OpenMP=ON' '-DENABLE_STATIC_LIBS=NO' '-DSTERILE_BUILD=ON' '/var/tmp/sochat1/spack-stage/spack-stage-dyninst-12.0.1-d2hyaakz6pccbdmllcya5mhwjjxbc4hv/spack-src'
+
+1 error found in build log:
+     131    -- Found /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-1
+            0.2.1/intel-tbb-2020.3-ssbpnrc5drf2pk7bx53asgnpwsqmigs6/lib/libtbb.
+            so
+     132    -- Found TBB: /p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/
+            gcc-10.2.1/intel-tbb-2020.3-ssbpnrc5drf2pk7bx53asgnpwsqmigs6/includ
+            e (found suitable version "2020.3", minimum required is "2018.6") f
+            ound components: tbb tbbmalloc tbbmalloc_proxy
+     133    -- TBB include directory: /p/vast1/build/spack/opt/spack/linux-rhel
+            7-broadwell/gcc-10.2.1/intel-tbb-2020.3-ssbpnrc5drf2pk7bx53asgnpwsq
+            migs6/include
+     134    -- TBB library directory: /p/vast1/build/spack/opt/spack/linux-rhel
+            7-broadwell/gcc-10.2.1/intel-tbb-2020.3-ssbpnrc5drf2pk7bx53asgnpwsq
+            migs6/lib;/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-
+            10.2.1/intel-tbb-2020.3-ssbpnrc5drf2pk7bx53asgnpwsqmigs6/lib;/p/vas
+            t1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/intel-tbb
+            -2020.3-ssbpnrc5drf2pk7bx53asgnpwsqmigs6/lib
+     135    -- TBB libraries: /p/vast1/build/spack/opt/spack/linux-rhel7-broadw
+            ell/gcc-10.2.1/intel-tbb-2020.3-ssbpnrc5drf2pk7bx53asgnpwsqmigs6/li
+            b/libtbbmalloc_proxy.so;/p/vast1/build/spack/opt/spack/linux-rhel7-
+            broadwell/gcc-10.2.1/intel-tbb-2020.3-ssbpnrc5drf2pk7bx53asgnpwsqmi
+            gs6/lib/libtbbmalloc.so;/p/vast1/build/spack/opt/spack/linux-rhel7-
+            broadwell/gcc-10.2.1/intel-tbb-2020.3-ssbpnrc5drf2pk7bx53asgnpwsqmi
+            gs6/lib/libtbb.so
+     136    -- TBB definitions:
+  >> 137    CMake Error at cmake/Modules/FindLibElf.cmake:64 (if):
+     138      if given arguments:
+     139    
+     140        "VERSION_GREATER" "0.0"
+     141    
+     142      Unknown arguments specified
+     143    Call Stack (most recent call first):
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-dyninst-12.0.1-d2hyaakz6pccbdmllcya5mhwjjxbc4hv/spack-build-out.txt
+
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+/var/spool/slurmd/job100377/slurm_script: line 12: 73263 Killed                  spliced splice --package hpctoolkit@2020.03.01 --splice intel-xed --runner spack --replace intel-xed --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/hpctoolkit/2020.03.01/intel-xed/experiment.json
+slurmstepd: error: *** JOB 2468649 ON borax47 CANCELLED AT 2022-03-02T18:29:32 DUE TO TIME LIMIT ***

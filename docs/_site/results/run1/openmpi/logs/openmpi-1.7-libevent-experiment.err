@@ -1,0 +1,284 @@
+==> Error: ProcessError: Command exited with status 1:
+    '/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/configure' '--prefix=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5' '--enable-shared' '--disable-silent-rules' '--disable-builtin-atomics' '--enable-static' '--without-pmi' '--without-hcoll' '--without-knem' '--without-libfabric' '--without-fca' '--without-ucx' '--without-psm' '--without-psm2' '--without-cma' '--without-xpmem' '--without-verbs' '--without-mxm' '--without-slurm' '--without-loadleveler' '--without-lsf' '--without-tm' '--without-alps' '--without-sge' '--disable-memchecker' '--with-hwloc=/p/vast1/build/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoothe3vdimspeo' '--disable-java' '--disable-mpi-java' '--with-gpfs' '--without-sqlite3' '--disable-mpi-thread-multiple' '--without-cuda' '--disable-wrapper-rpath' '--disable-mpi-cxx' '--disable-cxx-exceptions'
+
+7 errors found in build log:
+     40       checking for a BSD-compatible install... /usr/bin/install -c
+     41       checking whether build environment is sane... yes
+     42       checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+     43       checking for gawk... gawk
+     44       checking whether make sets $(MAKE)... yes
+     45       checking for style of include used by make... GNU
+  >> 46       configure: error: source directory already configured; run "make 
+              distclean" there first
+     47       ==> openmpi: Executing phase: 'build'
+     48       ==> [2022-02-25-17:09:49.958456] 'make' '-j2' 'V=1'
+     49       Making all in config
+     50       make[1]: Entering directory `/tmp/sochat1/spack-stage/spack-stage
+              -openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/config'
+     51       make[1]: Nothing to be done for `all'.
+     52       make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/config'
+
+     ...
+
+     12918    
+     12919       16 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     12920          |                                                         2
+     12921    ......
+     12922       36 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     12923          |                                                         1
+  >> 12924    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/CHARACTER(*)).
+  >> 12925    make[4]: *** [mpi_comm_spawn_multiple_f90.lo] Error 1
+     12926    make[4]: *** Waiting for unfinished jobs....
+     12927    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/ompi/mpi/f
+              ortran/use-mpi-tkr'
+  >> 12928    make[3]: *** [all-recursive] Error 1
+     12929    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/ompi/mpi/f
+              ortran/use-mpi-tkr'
+  >> 12930    make[2]: *** [all] Error 2
+     12931    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/ompi/mpi/f
+              ortran/use-mpi-tkr'
+  >> 12932    make[1]: *** [all-recursive] Error 1
+     12933    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/ompi'
+  >> 12934    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-build-out.txt
+
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+slurmstepd: error: *** JOB 100809 ON oslic10 CANCELLED AT 2022-03-01T15:28:33 ***
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j16' 'V=1'
+
+18 errors found in build log:
+     2513     checking whether linking with -ldl works... yes
+     2514     checking whether RTLD_DEFAULT is declared... yes
+     2515     checking whether RTLD_NEXT is declared... yes
+     2516     checking BPatch.h usability... no
+     2517     checking BPatch.h presence... no
+     2518     checking for BPatch.h... no
+  >> 2519     configure: error: no BPatch.h found; check path for Dyninst packa
+              ge first...
+     2520     checking for tau_instrumentor... no
+  >> 2521     configure: error: no tau_instrumentor found; check path for PDToo
+              lkit first...
+     2522     configure: we are configuring inside Open MPI; preset some test r
+              esults
+     2523     checking for mpicc... (cached) /p/vast1/build/spack/lib/spack/env
+              /gcc/gcc
+     2524     checking for mpicxx... (cached) /p/vast1/build/spack/lib/spack/en
+              v/gcc/g++
+     2525     checking whether MPI_IN_PLACE is declared... (cached) yes
+     2526     checking whether MPI_ROOT is declared... (cached) yes
+     2527     checking for MPI_Add_error_class... (cached) yes
+
+     ...
+
+     2544     checking for MPI_Register_datarep... (cached) yes
+     2545     checking for PMPI_File_read_ordered... (cached) yes
+     2546     checking for PMPI_File_read_ordered_begin... (cached) yes
+     2547     checking for PMPI_File_write_ordered... (cached) yes
+     2548     checking for PMPI_File_write_ordered_begin... (cached) yes
+     2549     checking for unimci-config... no
+  >> 2550     configure: error: no unimci-config found; check path for UniMCI p
+              ackage first...
+     2551     checking math.h usability... yes
+     2552     checking math.h presence... yes
+     2553     checking for math.h... yes
+     2554     checking whether we need to link -lm to get math functions... no
+     2555     checking f2c.h usability... no
+     2556     checking f2c.h presence... no
+     2557     checking for f2c.h... no
+  >> 2558     configure: error: no f2c.h found; check path for CLAPACK package 
+              first...
+     2559     checking for C++ runtime library... -lstdc++
+     2560     checking for the pthreads library -lpthreads... no
+     2561     checking whether pthreads work without any flags... yes
+     2562     checking for joinable pthread attribute... PTHREAD_CREATE_JOINABL
+              E
+     2563     checking if more special flags are required for pthreads... no
+     2564     checking for cc_r... /p/vast1/build/spack/lib/spack/env/gcc/gcc
+
+     ...
+
+     2593     checking for sched.h... yes
+     2594     checking for sched_getcpu... yes
+     2595     checking whether sched_getcpu works... yes
+     2596     checking cuda.h usability... no
+     2597     checking cuda.h presence... no
+     2598     checking for cuda.h... no
+  >> 2599     configure: error: no cuda.h found; check path for CUDA Toolkit fi
+              rst...
+     2600     checking cuda_runtime_api.h usability... no
+     2601     checking cuda_runtime_api.h presence... no
+     2602     checking for cuda_runtime_api.h... no
+  >> 2603     configure: error: no cuda_runtime_api.h found; check path for CUD
+              A Toolkit first...
+     2604     checking cupti.h usability... no
+     2605     checking cupti.h presence... no
+     2606     checking for cupti.h... no
+  >> 2607     configure: error: no cupti.h found; check path for CUPTI package 
+              first...
+     2608     checking for dlfcn.h... (cached) yes
+     2609     checking whether linking with -ldl works... yes
+     2610     checking whether RTLD_DEFAULT is declared... (cached) yes
+     2611     checking whether RTLD_NEXT is declared... (cached) yes
+     2612     checking for shared LIBC's pathname... /lib64/libc.so.6
+     2613     checking whether __errno_location is declared... yes
+     2614     checking ctool/ctool.h usability... no
+     2615     checking ctool/ctool.h presence... no
+     2616     checking for ctool/ctool.h... no
+  >> 2617     configure: error: no ctool/ctool.h found; check path for CTool pa
+              ckage first...
+     2618     checking for __WAIT_STATUS... yes
+     2619     checking whether environ is declared... yes
+     2620     checking for execvpe... yes
+     2621     checking for fexecve... yes
+     2622     checking for waitid... yes
+     2623     checking for wait3... yes
+
+     ...
+
+     2650     checking zlib.h presence... yes
+     2651     checking for zlib.h... yes
+     2652     checking whether linking with -lz works... yes
+     2653     checking bmi.h usability... no
+     2654     checking bmi.h presence... no
+     2655     checking for bmi.h... no
+  >> 2656     configure: error: no bmi.h found; check path for BMI package firs
+              t...
+     2657     configure: configuring in extlib/otf (/tmp/sochat1/spack-stage/sp
+              ack-stage-openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/
+              ompi/contrib/vt/vt/extlib/otf)
+     2658     configure: running /bin/sh /var/tmp/sochat1/spack-stage/spack-sta
+              ge-openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/ompi/co
+              ntrib/vt/vt/extlib/otf/configure --with-openmpi-inside=1.7 --enab
+              le-static=yes --enable-shared=yes --with-mpi --with-mpi-lib="-lmp
+              i" --with-zlib-lib="-lz" --without-zoidfs --prefix="/p/vast1/buil
+              d/spack/opt/spack/linux-rhel7-broadwell/gcc-10.2.1/openmpi-1.7-25
+              7lnry4yp4f5ohfc2vvxah5totls6d5" --exec-prefix="${prefix}" --bindi
+              r="${exec_prefix}/bin" --libdir="${exec_prefix}/lib" --includedir
+              ="${prefix}/include/vampirtrace" --docdir="${datarootdir}/doc/otf
+              "  --cache-file="/dev/null" --srcdir="/var/tmp/sochat1/spack-stag
+              e/spack-stage-openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-
+              src/ompi/contrib/vt/vt/extlib/otf"
+     2659     checking build system type... x86_64-unknown-linux-gnu
+     2660     checking host system type... x86_64-unknown-linux-gnu
+     2661     checking target system type... x86_64-unknown-linux-gnu
+     2662     checking for a BSD-compatible install... /usr/bin/install -c
+
+     ...
+
+     2750     checking for mpicc... /p/vast1/build/spack/lib/spack/env/gcc/gcc
+     2751     checking for mpic++... /p/vast1/build/spack/lib/spack/env/gcc/g++
+     2752     checking for OpenMP flag of C++ compiler... -fopenmp
+     2753     checking vtf3.h usability... no
+     2754     checking vtf3.h presence... no
+     2755     checking for vtf3.h... no
+  >> 2756     configure: error: no vtf3.h found; check path for VTF3 package fi
+              rst...
+     2757     checking zlib.h usability... yes
+     2758     checking zlib.h presence... yes
+     2759     checking for zlib.h... yes
+     2760     checking whether linking with -lm works... yes
+     2761     checking whether we need to link -lm to get math functions... no
+     2762     checking for pdflatex... pdflatex
+
+     ...
+
+     16299    
+     16300       16 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     16301          |                                                         2
+     16302    ......
+     16303       36 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     16304          |                                                         1
+  >> 16305    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/CHARACTER(*)).
+     16306    mpi_testall_f90.f90:22:51:
+     16307    
+     16308       10 |   call MPI_Testall(count, array_of_requests, flag, array_
+              of_statuses, ierr)
+     16309          |                                                   2
+     16310    ......
+     16311       22 |   call MPI_Testall(count, array_of_requests, flag, array_
+              of_statuses, ierr)
+     16312          |                                                   1
+  >> 16313    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+  >> 16314    make[4]: *** [mpi_comm_spawn_multiple_f90.lo] Error 1
+     16315    make[4]: *** Waiting for unfinished jobs....
+  >> 16316    make[4]: *** [mpi_testall_f90.lo] Error 1
+     16317    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack
+              -stage-openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/omp
+              i/include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-
+              1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/ompi/mpi/fortran/u
+              se-mpi-tkr -I../../../../ompi/mpi/fortran/use-mpi-tkr -c mpi_size
+              of.f90 -o mpi_sizeof.o >/dev/null 2>&1
+     16318    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -DHAVE_CONFIG_H -I. -I/var/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/ompi/mpi/f
+              ortran/use-mpi-tkr -I../../../../opal/include -I../../../../orte/
+              include -I../../../../ompi/include -I../../../../opal/mca/hwloc/h
+              wloc151/hwloc/include/private/autogen -I../../../../opal/mca/hwlo
+              c/hwloc151/hwloc/include/hwloc/autogen -I/var/tmp/sochat1/spack-s
+              tage/spack-stage-openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spa
+              ck-src -I../../../.. -I/var/tmp/sochat1/spack-stage/spack-stage-o
+              penmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/opal/includ
+              e -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.7-257lnry4
+              yp4f5ohfc2vvxah5totls6d5/spack-src/orte/include -I/var/tmp/sochat
+              1/spack-stage/spack-stage-openmpi-1.7-257lnry4yp4f5ohfc2vvxah5tot
+              ls6d5/spack-src/ompi/include -I/p/vast1/build/spack/opt/spack/lin
+              ux-rhel7-broadwell/gcc-10.2.1/hwloc-1.11.13-u34fwahc4tbd77w4csoot
+              he3vdimspeo/include -I/tmp/sochat1/spack-stage/spack-stage-openmp
+              i-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/opal/mca/hwloc/e
+              xternal/hwloc/include -I/var/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/opal/mca/e
+              vent/libevent2019/libevent -I/var/tmp/sochat1/spack-stage/spack-s
+              tage-openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/opal/
+              mca/event/libevent2019/libevent/include -I/tmp/sochat1/spack-stag
+              e/spack-stage-openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-
+              src/opal/mca/event/libevent2019/libevent/include -I/usr/include/i
+              nfiniband -I/usr/include/infiniband -I/usr/include/infiniband -I/
+              usr/include/infiniband -I/usr/include/infiniband -I/usr/include/i
+              nfiniband -I../../../../ompi/include -I/var/tmp/sochat1/spack-sta
+              ge/spack-stage-openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack
+              -src/ompi/include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/ompi/mpi/f
+              ortran/use-mpi-tkr -I../../../../ompi/mpi/fortran/use-mpi-tkr -c 
+              mpi.F90 -o mpi.o >/dev/null 2>&1
+     16319    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/ompi/mpi/f
+              ortran/use-mpi-tkr'
+  >> 16320    make[3]: *** [all-recursive] Error 1
+     16321    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/ompi/mpi/f
+              ortran/use-mpi-tkr'
+  >> 16322    make[2]: *** [all] Error 2
+     16323    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/ompi/mpi/f
+              ortran/use-mpi-tkr'
+  >> 16324    make[1]: *** [all-recursive] Error 1
+     16325    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-src/ompi'
+  >> 16326    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.7-257lnry4yp4f5ohfc2vvxah5totls6d5/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

@@ -1,0 +1,109 @@
+==> Warning: openmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt failed to install
+==> Warning: AssertionError exception when releasing read lock for openmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt: 
+==> Error: openmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt: Package was not installed
+Making predictions for symbolator
+Making predictions for libabigail
+Making predictions for actual
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j16' 'V=1'
+
+6 errors found in build log:
+     2211    then mv -f "$depbase.Tpo" "$depbase.Plo"; else rm -f "$depbase.Tpo
+             "; exit 1; fi
+     2212    mkdir .libs
+     2213    mkdir .libs
+     2214    mkdir: cannot create directory '.libs': File exists
+     2215     /p/vast1/build/spack/lib/spack/env/gcc/gcc -DHAVE_CONFIG_H -I. -I
+             /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.0.1-j2phqgatuik
+             djlgrgtpplso6mlr4abyt/spack-src/opal/mca/memory/malloc_hooks -I../
+             ../../../include -I../../../../include -I/var/tmp/sochat1/spack-st
+             age/spack-stage-openmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spa
+             ck-src/include -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-
+             1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src -I../../../.. -I.
+             ./../../../include -I/var/tmp/sochat1/spack-stage/spack-stage-open
+             mpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src/opal -I/var/t
+             mp/sochat1/spack-stage/spack-stage-openmpi-1.0.1-j2phqgatuikdjlgrg
+             tpplso6mlr4abyt/spack-src/orte -I/var/tmp/sochat1/spack-stage/spac
+             k-stage-openmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src/o
+             mpi -O3 -DNDEBUG -fno-strict-aliasing -pthread -MT memory_malloc_h
+             ooks_component.lo -MD -MP -MF .deps/memory_malloc_hooks_component.
+             Tpo -c memory_malloc_hooks_component.c  -fPIC -DPIC -o .libs/memor
+             y_malloc_hooks_component.o
+     2216     /p/vast1/build/spack/lib/spack/env/gcc/gcc -DHAVE_CONFIG_H -I. -I
+             /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.0.1-j2phqgatuik
+             djlgrgtpplso6mlr4abyt/spack-src/opal/mca/memory/malloc_hooks -I../
+             ../../../include -I../../../../include -I/var/tmp/sochat1/spack-st
+             age/spack-stage-openmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spa
+             ck-src/include -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-
+             1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src -I../../../.. -I.
+             ./../../../include -I/var/tmp/sochat1/spack-stage/spack-stage-open
+             mpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src/opal -I/var/t
+             mp/sochat1/spack-stage/spack-stage-openmpi-1.0.1-j2phqgatuikdjlgrg
+             tpplso6mlr4abyt/spack-src/orte -I/var/tmp/sochat1/spack-stage/spac
+             k-stage-openmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src/o
+             mpi -O3 -DNDEBUG -fno-strict-aliasing -pthread -MT memory_malloc_h
+             ooks.lo -MD -MP -MF .deps/memory_malloc_hooks.Tpo -c memory_malloc
+             _hooks.c  -fPIC -DPIC -o .libs/memory_malloc_hooks.o
+  >> 2217    memory_malloc_hooks.c:34:8: error: conflicting type qualifiers for
+              '__malloc_initialize_hook'
+     2218       34 | void (*__malloc_initialize_hook) (void) = opal_memory_mall
+             oc_hooks_init;
+     2219          |        ^~~~~~~~~~~~~~~~~~~~~~~~
+     2220    In file included from memory_malloc_hooks.c:24:
+     2221    /usr/include/malloc.h:169:38: note: previous declaration of '__mal
+             loc_initialize_hook' was here
+     2222      169 | extern void (*__MALLOC_HOOK_VOLATILE __malloc_initialize_h
+             ook) (void)
+     2223          |                                      ^~~~~~~~~~~~~~~~~~~~~
+             ~~~
+
+     ...
+
+     2291       98 |     __realloc_hook = opal_mem_free_realloc_hook;
+     2292          |     ^~~~~~~~~~~~~~
+     2293    In file included from memory_malloc_hooks.c:24:
+     2294    /usr/include/malloc.h:178:39: note: declared here
+     2295      178 | extern void *(*__MALLOC_HOOK_VOLATILE __realloc_hook) (voi
+             d *__ptr,
+     2296          |                                       ^~~~~~~~~~~~~~
+  >> 2297    make[4]: *** [memory_malloc_hooks.lo] Error 1
+     2298    make[4]: *** Waiting for unfinished jobs....
+     2299     /p/vast1/build/spack/lib/spack/env/gcc/gcc -DHAVE_CONFIG_H -I. -I
+             /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.0.1-j2phqgatuik
+             djlgrgtpplso6mlr4abyt/spack-src/opal/mca/memory/malloc_hooks -I../
+             ../../../include -I../../../../include -I/var/tmp/sochat1/spack-st
+             age/spack-stage-openmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spa
+             ck-src/include -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-
+             1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src -I../../../.. -I.
+             ./../../../include -I/var/tmp/sochat1/spack-stage/spack-stage-open
+             mpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src/opal -I/var/t
+             mp/sochat1/spack-stage/spack-stage-openmpi-1.0.1-j2phqgatuikdjlgrg
+             tpplso6mlr4abyt/spack-src/orte -I/var/tmp/sochat1/spack-stage/spac
+             k-stage-openmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src/o
+             mpi -O3 -DNDEBUG -fno-strict-aliasing -pthread -MT memory_malloc_h
+             ooks_component.lo -MD -MP -MF .deps/memory_malloc_hooks_component.
+             Tpo -c memory_malloc_hooks_component.c -o memory_malloc_hooks_comp
+             onent.o >/dev/null 2>&1
+     2300    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src/opal/mca/m
+             emory/malloc_hooks'
+  >> 2301    make[3]: *** [all-recursive] Error 1
+     2302    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src/opal/mca/m
+             emory'
+  >> 2303    make[2]: *** [all-recursive] Error 1
+     2304    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src/opal/mca'
+  >> 2305    make[1]: *** [all-recursive] Error 1
+     2306    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-o
+             penmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-src/opal'
+  >> 2307    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.0.1-j2phqgatuikdjlgrgtpplso6mlr4abyt/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

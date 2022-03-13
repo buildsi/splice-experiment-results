@@ -1,0 +1,197 @@
+Traceback (most recent call last):
+  File "/p/vast1/build/anaconda3/bin/spliced", line 11, in <module>
+    load_entry_point('spliced', 'console_scripts', 'spliced')()
+  File "/p/vast1/build/spliced/spliced/client/__init__.py", line 237, in run_spliced
+    main(args=args, parser=parser, extra=extra, subparser=helper)
+  File "/p/vast1/build/spliced/spliced/client/splice.py", line 15, in main
+    run_spack_experiment(args, command=" ".join(extra))
+  File "/p/vast1/build/spliced/spliced/client/splice.py", line 47, in run_spack_experiment
+    experiment.run()
+  File "/p/vast1/build/spliced/spliced/experiment/spack.py", line 52, in run
+    spec_main = Spec(self.package).concretized()
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2684, in concretized
+    clone.concretize(tests=tests)
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2646, in concretize
+    self._new_concretize(tests)
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2619, in _new_concretize
+    result = solver.solve([self], tests=tests)
+  File "/p/vast1/build/spack/lib/spack/spack/solver/asp.py", line 2114, in solve
+    setup_only=setup_only,
+  File "/p/vast1/build/spack/lib/spack/spack/solver/asp.py", line 639, in solve
+    answers = builder.build_specs(tuples)
+  File "/p/vast1/build/spack/lib/spack/spack/solver/asp.py", line 2037, in build_specs
+    spack.spec.Spec.ensure_no_deprecated(s)
+  File "/p/vast1/build/spack/lib/spack/spack/spec.py", line 2594, in ensure_no_deprecated
+    with spack.store.db.read_transaction():
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 684, in __enter__
+    if self._enter() and self._acquire_fn:
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 711, in _enter
+    return self._lock.acquire_read(self._timeout)
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 423, in acquire_read
+    wait_time, nattempts = self._lock(fcntl.LOCK_SH, timeout=timeout)
+  File "/p/vast1/build/spack/lib/spack/spack/util/lock.py", line 32, in _lock
+    return super(Lock, self)._lock(op, timeout)
+  File "/p/vast1/build/spack/lib/spack/llnl/util/lock.py", line 316, in _lock
+    .format(lock_type[op]))
+llnl.util.lock.LockTimeoutError: Timed out waiting for a read lock.
+==> Error: ProcessError: Command exited with status 2:
+    'make' '-j16' 'V=1'
+
+15 errors found in build log:
+     1928     checking whether the /p/vast1/build/spack/lib/spack/env/gcc/g++ l
+              inker (/usr/tce/packages/gcc/gcc-10.2.1/rh/usr/libexec/gcc/x86_64
+              -redhat-linux/10/ld -m elf_x86_64) supports shared libraries... y
+              es
+     1929     checking dynamic linker characteristics... GNU/Linux ld.so
+     1930     checking how to hardcode library paths into programs... immediate
+     1931     checking vtf3.h usability... no
+     1932     checking vtf3.h presence... no
+     1933     checking for vtf3.h... no
+  >> 1934     configure: error: no vtf3.h found; check path for VTF3 package fi
+              rst...
+     1935     checking zlib.h usability... yes
+     1936     checking zlib.h presence... yes
+     1937     checking for zlib.h... yes
+     1938     checking for ANSI C header files... (cached) yes
+     1939     checking stddef.h usability... yes
+     1940     checking stddef.h presence... yes
+
+     ...
+
+     1982     checking for compiler instrumentation... gnu
+     1983     checking if /usr/bin/nm -B demangle option --demangle works... ye
+              s
+     1984     checking if /usr/bin/nm -B line numbers option --line-numbers wor
+              ks... yes
+     1985     checking BPatch.h usability... no
+     1986     checking BPatch.h presence... no
+     1987     checking for BPatch.h... no
+  >> 1988     configure: error: no BPatch.h found; check path for Dyninst packa
+              ge first...
+     1989     configure: skipped further tests for MPI
+     1990     checking for OpenMP flag of C compiler... -fopenmp
+     1991     checking omp.h usability... yes
+     1992     checking omp.h presence... yes
+     1993     checking for omp.h... yes
+     1994     checking malloc.h usability... yes
+
+     ...
+
+     2013     checking for pwrite64... yes
+     2014     checking papi.h usability... yes
+     2015     checking papi.h presence... yes
+     2016     checking for papi.h... yes
+     2017     checking whether linking with -lpapi works... yes
+     2018     checking whether PAPI version = 3.x... no
+  >> 2019     configure: error: PAPI version could not be determined and/or is 
+              incompatible (!= 3.x)
+     2020     See `config.log' for more details.
+     2021     configure: creating ./config.status
+     2022     config.status: creating Makefile
+     2023     config.status: creating util/Makefile
+     2024     config.status: creating util/installdirs_conf.h
+     2025     config.status: creating extlib/Makefile
+
+     ...
+
+     13420    
+     13421       10 |   call MPI_Testall(count, array_of_requests, flag, array_
+              of_statuses, ierr)
+     13422          |                                                   2
+     13423    ......
+     13424       22 |   call MPI_Testall(count, array_of_requests, flag, array_
+              of_statuses, ierr)
+     13425          |                                                   1
+  >> 13426    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+  >> 13427    make[4]: *** [mpi_testall_f90.lo] Error 1
+     13428    make[4]: *** Waiting for unfinished jobs....
+     13429    mpi_waitsome_f90.f90:26:76:
+     13430    
+     13431       12 |   call MPI_Waitsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     13432          |                                                          
+                                2
+     13433    ......
+     13434       26 |   call MPI_Waitsome(incount, array_of_requests, outcount,
+               array_of_indices, array_of_statuses, ierr)
+     13435          |                                                          
+                                1
+  >> 13436    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+     13437    mpi_waitall_f90.f90:18:45:
+     13438    
+     13439        8 |   call MPI_Waitall(count, array_of_requests, array_of_sta
+              tuses, ierr)
+     13440          |                                             2
+     13441    ......
+     13442       18 |   call MPI_Waitall(count, array_of_requests, array_of_sta
+              tuses, ierr)
+     13443          |                                             1
+  >> 13444    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/INTEGER(4)).
+  >> 13445    make[4]: *** [mpi_waitsome_f90.lo] Error 1
+  >> 13446    make[4]: *** [mpi_waitall_f90.lo] Error 1
+     13447    mpi_comm_spawn_multiple_f90.f90:36:57:
+     13448    
+     13449       16 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     13450          |                                                         2
+     13451    ......
+     13452       36 |   call MPI_Comm_spawn_multiple(count, array_of_commands, 
+              array_of_argv, &
+     13453          |                                                         1
+  >> 13454    Error: Type mismatch between actual argument at (1) and actual ar
+              gument at (2) (REAL(8)/CHARACTER(*)).
+  >> 13455    make[4]: *** [mpi_comm_spawn_multiple_f90.lo] Error 1
+     13456    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi_wtick_f90.f90 -o mpi_wtick_f90.o >/dev
+              /null 2>&1
+     13457    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi_wtime_f90.f90 -o mpi_wtime_f90.o >/dev
+              /null 2>&1
+     13458    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi_sizeof.f90 -o mpi_sizeof.o >/dev/null 
+              2>&1
+     13459    libtool: compile:  /p/vast1/build/spack/lib/spack/env/gcc/gfortra
+              n -I../../../ompi/include -I/var/tmp/sochat1/spack-stage/spack-st
+              age-openmpi-1.4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-src/ompi
+              /include -I. -I/var/tmp/sochat1/spack-stage/spack-stage-openmpi-1
+              .4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-src/ompi/mpi/f90 -I..
+              /../../ompi/mpi/f90 -c mpi.f90 -o mpi.o >/dev/null 2>&1
+     13460    make[4]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-src/ompi/mpi
+              /f90'
+  >> 13461    make[3]: *** [all-recursive] Error 1
+     13462    make[3]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-src/ompi/mpi
+              /f90'
+  >> 13463    make[2]: *** [all] Error 2
+     13464    make[2]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-src/ompi/mpi
+              /f90'
+  >> 13465    make[1]: *** [all-recursive] Error 1
+     13466    make[1]: Leaving directory `/tmp/sochat1/spack-stage/spack-stage-
+              openmpi-1.4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-src/ompi'
+  >> 13467    make: *** [all-recursive] Error 1
+
+See build log for details:
+  /var/tmp/sochat1/spack-stage/spack-stage-openmpi-1.4.5-skr6ewaebkotscdxnhtosykc5rv4bo2d/spack-build-out.txt
+
+Making predictions for spack-test
+Making predictions for symbolator
+Making predictions for libabigail
+abicompat not found on path, will look for spack instead.
+Making predictions for actual

@@ -1,0 +1,20 @@
+slurmstepd: error: *** JOB 97275 ON oslic10 CANCELLED AT 2022-02-25T17:45:29 DUE TO TIME LIMIT ***
+/var/spool/slurmd/job100629/slurm_script: line 12: 63120 Killed                  spliced splice --package nrm@0.1.0 --splice py-scipy --runner spack --replace py-scipy --experiment experiment --outfile /p/vast1/build/spliced-experiment/results/nrm/0.1.0/py-scipy/experiment.json
+==> Warning: Missing a source id for py-scipy@master
+warning: Could not find remote branch master to clone.
+fatal: Remote branch master not found in upstream origin
+==> Error: FetchError: All fetchers failed for spack-stage-py-scipy-master-3sjsqcwiwjprxv5n7dpspvcyt5ru6u2s
+
+/p/vast1/build/spack/lib/spack/spack/package.py:1400, in do_fetch:
+       1397
+       1398        self.stage.create()
+       1399        err_msg = None if not self.manual_download else self.download_instr
+  >>   1400        start_time = time.time()
+       1401        self.stage.fetch(mirror_only, err_msg=err_msg)
+       1402        self._fetch_time = time.time() - start_time
+       1403
+
+
+==> Warning: Skipping build of py-scipy-1.7.3-yu4dqhv7auo2dbg6cu34fwu32hnvuntq since py-pybind11-2.7.1-opbaea74mbsq7cojdhf37yfpbf44p5rx failed
+==> Error: Failed to install py-pybind11 due to LockTimeoutError: Timed out waiting for a write lock.
+slurmstepd: error: *** JOB 2468903 ON borax43 CANCELLED AT 2022-03-03T18:30:12 DUE TO TIME LIMIT ***
