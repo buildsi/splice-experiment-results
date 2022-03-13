@@ -60,11 +60,11 @@
 <meta property="og:url" content="http://localhost:4000/splice-experiment-results/results/run1/legion/" />
 <meta property="og:site_name" content="Splice Experiment Results" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-03-12T21:26:16-07:00" />
+<meta property="article:published_time" content="2022-03-12T23:46:03-07:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Package legion Experiment run1 results" />
 <script type="application/ld+json">
-{"headline":"Package legion Experiment run1 results","dateModified":"2022-03-12T21:26:16-07:00","datePublished":"2022-03-12T21:26:16-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/splice-experiment-results/results/run1/legion/"},"url":"http://localhost:4000/splice-experiment-results/results/run1/legion/","description":"I want to write it down, and for it to be pretty.","@context":"https://schema.org"}</script>
+{"headline":"Package legion Experiment run1 results","dateModified":"2022-03-12T23:46:03-07:00","datePublished":"2022-03-12T23:46:03-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/splice-experiment-results/results/run1/legion/"},"url":"http://localhost:4000/splice-experiment-results/results/run1/legion/","description":"I want to write it down, and for it to be pretty.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -163,8 +163,11 @@ tr.group:hover {
 
  
         <br>
-        <p>This plot shows the top level splice outcomes, meaning across predictors. For example, If a package or splice didn't concretize we will see it here. Note that not every label might show up in the table, e.g., the value of 0 for "combination-not-run" is added to all results.</p>
-        <h2>Outcomes</h2>
+        <p>Welcome to the results page! This page has build or splice results, along with predictions for the things we could successfully build or splice, along with a table of full results and logs. Logs are important because some jobs might not have ever produced an output file, and this is because HPC is terrible. For this first round, we are able to represent the results in a single data structure (small enough for GitHub) however with more testers we (Vanessa) will need to refactor the interface again to break apart the results into smaller pieces.</p>
+
+        <h2>Plot of Outcomes</h2>
+
+        <p>This plot shows the top level splice and build outcomes, meaning before we get to any kind of prediction. For example, If a package or splice didn't concretize we will see it here. The labels in the first table below represent the values you'll find in the plot. Note that not every label might show up in the table, e.g., the value of 0 for "combination-not-run" is added to all results.</p>
         <p>
           <table class="table table-bordered table-hover dt-responsive display dataTable no-footer dtr-inline">
             <thead>
@@ -178,11 +181,10 @@ tr.group:hover {
                 <td>combination-not-run</td>
                 <td>0</td>
               </tr>
-                <tr><td>rewiring-failed</td><td>1</td></tr><tr><td>splice-install-failed</td><td>2</td></tr><tr><td>splice-success</td><td>3</td></tr> 
+                <tr><td>splice-success</td><td>1</td></tr><tr><td>splice-install-failed</td><td>2</td></tr><tr><td>rewiring-failed</td><td>3</td></tr> 
             </tbody>
-          </table>        
+          </table><br>
 
-        <h2>Plot of Outcomes</h2>
         <p>Across an experiment, we have multiple testers. However, sometimes there is a failure unrelated to the tester. For example, a concretization fails, spack can't install
         the package, and then we can't be sure if the splice failed (or otherwise had a bad outcome) or if it's spack. This is a visualization of the outcomes above, colored by the
         values indicated. E.g., if you only see one color, this means there is only one outcome. The package name (experiment) is in the column, and versions are in rows.<span style="font-weight:600">This plot does not hold any prediction information, it only shows statuses of being able to build, splice, etc.</span></p>
@@ -191,9 +193,32 @@ tr.group:hover {
         <a href="/splice-experiment-results/results/run1/legion//run1-legion.png">Download PNG</a> |           
         <a href="/splice-experiment-results/results/run1/legion//run1-legion.svg">Download SVG</a>           
         <img src="/splice-experiment-results/results/run1/legion/run1-legion.svg"/>
+
+        <h2>Predictions</h2>
+
+          <p>Remember that the predictions are already a biased set because the can ONLY include finished binaries/libraries from which we can derive predictions. E.g., a spack failure to build or splice or some transient error that makes the job exit produces no binaries or libraries and it cannot be represented here. We can only make predictions on successful splices, and we can only make predictions given that a package can output some combination of binaries and/or libraries needed by a predictor. A prediction is not a prediction for a successful build or splice, but rather GIVEN a successful build or splice, do we think the ABI compatibility will hold? Thus, if there are no successful builds or splices, we have no predictions.</p>
+        <p><span style="font-weight:600">Important!</span> Since we have many libraries and binaries within each package and splice, the scores here represent a value between 0 and 1 that are the total predicted to work / the total predictions. E.g., a value of "1" says "out of all the predictions made across binaries and libraries, we think they will ALL work. A value of 0.5 says we predict about half of them to work. We have to do this because there are a variable number of predictions for any given package and dependency splice. In the case of the "spack-test" predictor, this is the actual results of running the spack test "package" so it's less a prediction and more a ground truth. And since there is only one spack test run per package and dependency, this value is derived from that one run.</p>
+
+        <h4>Sorry we couldn't make any predictions for libabigail</h4>
+                   
+                   
+                   
         
+
+        <h4>Spack Test</h4>
+        <a href="/splice-experiment-results/results/run1/legion//spack-test-run1-legion.pdf">Download Spack Test PDF</a> |           
+        <a href="/splice-experiment-results/results/run1/legion//spack-test-run1-legion.png">Download Spack Test PNG</a> |           
+        <a href="/splice-experiment-results/results/run1/legion//spack-test-run1-legion.svg">Download Spack Test SVG</a> |           
+        <img src="/splice-experiment-results/results/run1/legion/spack-test-run1-legion.svg"/>
+
+        <h4>Sorry we couldn't make any predictions for Symbolator</h4>
+                   
+                   
+                   
+        
+
         <h2>Results</h2>
-        <p>Since results (and outputs) can vary across testers, we provide an interactive table here for you to explore instead of trying to shove them into a visualization. The raw data is provided alongside each results directory, so you are free to grab it to generate a custom visualization to your liking.</p>
+        <p>Since results (and outputs) can vary across testers, we provide an interactive table here for you to explore instead of trying to shove them into a visualization. For each row, you can click the "+" to expand to see more data. Try doing a search for a result type or predictor of choice in the search box at the top right. The raw data is provided alongside each results directory, so you are free to grab it to generate a custom visualization to your liking.</p>
 
   <table id="results-table"  class="table table-hover table-bordered display" cellspacing="0" width="100%">
     <thead>
