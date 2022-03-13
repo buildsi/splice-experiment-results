@@ -316,16 +316,16 @@ def visualize_package(pkg_dir, experiment, outdir, log_dir):
                     )
 
     # These logs don't have associated results
-    no_results = {}
+    has_no_results = {}
     for log in found_logs:
         exp_id, log_type = log.rsplit(".", 1)
-        if exp_id not in no_results:
-            no_results[exp_id] = {}
-        no_results[exp_id][log_type] = os.path.join("logs", log)
+        if exp_id not in has_no_results:
+            has_no_results[exp_id] = {}
+        has_no_results[exp_id][log_type] = os.path.join("logs", log)
 
-    summary["no-results-generated"] = len(no_results)
+    summary["no-results-generated"] = len(has_no_results)
     summary["results-generated"] = len(logs)
-    summary["total-runs"] = len(logs) + len(no_results)
+    summary["total-runs"] = len(logs) + len(has_no_results)
     if testers:
         print("Found %s testers: %s" % (len(testers), " ".join(testers)))
     else:
@@ -333,6 +333,7 @@ def visualize_package(pkg_dir, experiment, outdir, log_dir):
     print(summary)
 
     # Create top level data frame
+    # This data frame is the high level "did it work" df
     df = pandas.DataFrame(0, index=rows, columns=cols)
 
     # Assign each outcome a number
@@ -365,8 +366,13 @@ def visualize_package(pkg_dir, experiment, outdir, log_dir):
     write_json(outcomes, os.path.join(result_dir, "outcomes.json"))
     if logs:
         write_json(logs, os.path.join(result_dir, "logs-existing.json"))
-    if no_results:
-        write_json(no_results, os.path.join(result_dir, "logs-missing.json"))
+        logs = True
+    if has_no_results:
+        write_json(has_no_results, os.path.join(result_dir, "logs-missing.json"))
+        has_no_results = True
+
+    # Clean up
+    del results
 
     # These get killed
     skips = ["py-libensemble", "heffte"]
@@ -391,12 +397,98 @@ def visualize_package(pkg_dir, experiment, outdir, log_dir):
             save_to = os.path.join(result_dir, "%s-%s.%s" % (experiment, package, ext))
             fig = plot_heatmap(df, save_to)
 
+    del df
+
+    # These next dataframes are the "what do the predictions say" data frames
+    # IMPORTANT this only represents what we can ACTUALLY PREDICT
+    # failures to splice or spack choking cannot be here
+    predicts = {}
+
+    # Get rows and cols for each predictor
+    for _, exps in experiments.items():
+        for exp in exps:
+
+            # We only have predictions on successful splice
+            # to be clear, this experiment is not about predicting splices
+            # we ASSUME correct splicing and then predict ABI compatibility
+            for tester_name, preds in exp["predictions"].items():
+
+                # here we are collapsing a set of predictions (across libs and binaries) into one set
+                for pred in preds:
+                    if tester_name not in predicts:
+                        predicts[tester_name] = {}
+                    if exp["package"] not in predicts[tester_name]:
+                        predicts[tester_name][exp["package"]] = {}
+                    if exp["splice"] not in predicts[tester_name][exp["package"]]:
+                        predicts[tester_name][exp["package"]][exp["splice"]] = {
+                            "total": 0,
+                            "predict_work": 0,
+                            "predict_fail": 0,
+                        }
+                    predicts[tester_name][exp["package"]][exp["splice"]]["total"] += 1
+                    if pred["prediction"] == True:
+                        predicts[tester_name][exp["package"]][exp["splice"]][
+                            "predict_work"
+                        ] += 1
+                    else:
+                        predicts[tester_name][exp["package"]][exp["splice"]][
+                            "predict_fail"
+                        ] += 1
+
+    dfs = {}
+    for tester_name, preds in predicts.items():
+        rows = set()
+        cols = set()
+        for pkg, deps in preds.items():
+            rows.add(pkg)
+            [cols.add(x) for x in deps.keys()]
+        dfs[tester_name] = pandas.DataFrame(0, index=list(rows), columns=list(cols))
+        for pkg, deps in preds.items():
+            for dep, counts in deps.items():
+                dfs[tester_name].loc[pkg, dep] = (
+                    counts["predict_work"] / counts["total"]
+                )
+
+    # Clean up
+    del predicts
+
+    # Save each matrix to file
+    no_results = False
+    for tester_name, df in dfs.items():
+        if df.shape[1] == 0:
+            print("Warning - empty data frame! No results to show for %s" % pkg_dir)
+            no_results = True
+
+        elif df.shape[1] > 1 and df.shape[0] > 1:
+            for ext in ["pdf", "png", "svg"]:
+                save_to = os.path.join(
+                    result_dir, "%s-%s-%s.%s" % (tester_name, experiment, package, ext)
+                )
+                fig = plot_clustermap(df, save_to)
+        else:
+            for ext in ["pdf", "png", "svg"]:
+                save_to = os.path.join(
+                    result_dir, "%s-%s-%s.%s" % (tester_name, experiment, package, ext)
+                )
+                fig = plot_heatmap(df, save_to)
+        del df
+
     # Save the filenames for images
     listing = ""
     if not no_results:
         if package not in skips:
             for ext in ["pdf", "png", "svg"]:
                 listing += "%s: %s-%s.%s\n" % (ext, experiment, package, ext)
+            for tester_name, _ in dfs.items():
+                for ext in ["pdf", "png", "svg"]:
+                    listing += "%s-%s: %s-%s-%s.%s\n" % (
+                        tester_name,
+                        ext,
+                        tester_name,
+                        experiment,
+                        package,
+                        ext,
+                    )
 
         # And the entry for the results
         listing += "results: results-list.json\n"
@@ -404,7 +496,7 @@ def visualize_package(pkg_dir, experiment, outdir, log_dir):
         listing += "summary: %s\n" % summary
         if logs:
             listing += "logs_existing: logs-existing.json\n"
-        if no_results:
+        if has_no_results:
             listing += "logs_missing: logs-missing.json"
 
         # Generate a markdown for each
