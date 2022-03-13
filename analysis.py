@@ -32,9 +32,12 @@ def get_parser():
 # Helper Functions
 
 
-def write_json(obj, filename):
+def write_json(obj, filename, compact=False):
     with open(filename, "w") as fd:
-        fd.write(json.dumps(obj, indent=4))
+        if compact:
+            fd.write(json.dumps(obj))
+        else:
+            fd.write(json.dumps(obj, indent=4))
 
 
 def read_json(filename):
@@ -361,7 +364,7 @@ def visualize_package(pkg_dir, experiment, outdir, log_dir):
         )
 
     # Save the json to file
-    write_json(results, os.path.join(result_dir, "results-list.json"))
+    write_json(results, os.path.join(result_dir, "results-list.json"), compact=True)
     df.to_json(os.path.join(result_dir, "results-table.json"))
     write_json(outcomes, os.path.join(result_dir, "outcomes.json"))
     if logs:
