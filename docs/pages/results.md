@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Papers
+title: Results
 css: ["about.css", "animate.css", "morphext.css"]
 js: ["morphext.min.js", "about.js"]
 permalink: /results/
