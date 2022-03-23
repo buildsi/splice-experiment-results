@@ -16,7 +16,7 @@ libabigail-pdf: libabigail-run1-hpctoolkit.pdf
 libabigail-png: libabigail-run1-hpctoolkit.png
 libabigail-svg: libabigail-run1-hpctoolkit.svg
 results: results-list.json
-outcomes: {'splice-failed': 1, 'splice-concretization-failed': 2, 'splice-install-failed': 3, 'rewiring-failed': 4, 'splice-success': 5, 'package-install-failed': 6}
+outcomes: {'splice-concretization-failed': 1, 'splice-install-failed': 2, 'splice-success': 3, 'rewiring-failed': 4, 'package-install-failed': 5, 'splice-failed': 6}
 summary: {'rewiring-failed': 1459, 'splice-install-failed': 704, 'splice-success': 757, 'splice-concretization-failed': 33, 'splice-failed': 25, 'package-install-failed': 15, 'success-no-prediction': 290, 'predictions': {'spack-test': 467, 'symbolator': 50, 'libabigail': 50}, 'no-results-generated': 10, 'results-generated': 242, 'total-runs': 252}
 logs_existing: logs-existing.json
 logs_missing: logs-missing.json

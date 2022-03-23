@@ -339,6 +339,10 @@ def visualize_package(pkg_dir, experiment, outdir, log_dir):
     # This data frame is the high level "did it work" df
     df = pandas.DataFrame(0, index=rows, columns=cols)
 
+    # Ensure we have sorted rows and cols
+    rows = sorted(list(rows))
+    cols = sorted(list(cols))
+
     # Assign each outcome a number
     outcomes = {result_type: i + 1 for i, result_type in enumerate(result_types)}
 

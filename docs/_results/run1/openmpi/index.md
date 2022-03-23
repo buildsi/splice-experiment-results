@@ -16,7 +16,7 @@ libabigail-pdf: libabigail-run1-openmpi.pdf
 libabigail-png: libabigail-run1-openmpi.png
 libabigail-svg: libabigail-run1-openmpi.svg
 results: results-list.json
-outcomes: {'splice-failed': 1, 'splice-install-failed': 2, 'rewiring-failed': 3, 'splice-concretization-failed': 4, 'splice-success': 5, 'package-install-failed': 6}
+outcomes: {'splice-concretization-failed': 1, 'splice-install-failed': 2, 'splice-success': 3, 'rewiring-failed': 4, 'package-install-failed': 5, 'splice-failed': 6}
 summary: {'package-install-failed': 372, 'rewiring-failed': 2392, 'splice-failed': 600, 'splice-success': 641, 'splice-install-failed': 819, 'splice-concretization-failed': 14, 'success-no-prediction': 0, 'predictions': {'spack-test': 614, 'symbolator': 641, 'libabigail': 614}, 'no-results-generated': 16, 'results-generated': 698, 'total-runs': 714}
 logs_existing: logs-existing.json
 logs_missing: logs-missing.json
