@@ -16,7 +16,7 @@ libabigail-pdf: libabigail-run1-swig.pdf
 libabigail-png: libabigail-run1-swig.png
 libabigail-svg: libabigail-run1-swig.svg
 results: results-list.json
-outcomes: {'splice-concretization-failed': 1, 'rewiring-failed': 2, 'splice-install-failed': 3, 'splice-success': 4, 'package-install-failed': 5}
+outcomes: {'splice-concretization-failed': 1, 'splice-install-failed': 2, 'splice-success': 3, 'rewiring-failed': 4, 'package-install-failed': 5}
 summary: {'package-install-failed': 16, 'rewiring-failed': 60, 'splice-success': 29, 'splice-install-failed': 11, 'splice-concretization-failed': 3, 'success-no-prediction': 0, 'predictions': {'spack-test': 29, 'symbolator': 29, 'libabigail': 29}, 'no-results-generated': 0, 'results-generated': 27, 'total-runs': 27}
 logs_existing: logs-existing.json
 
