@@ -2,44 +2,53 @@
 
 ![https://avatars.githubusercontent.com/u/85255731?s=200&v=4](https://avatars.githubusercontent.com/u/85255731?s=200&v=4)
 
-This is a repository of spliced experiment results generated from the experiment defined in [spliced-experiment](https://github.com/buildsi/spliced-experiment). 
-In total, there were about ~3400 jobs (give or take) each running a spliced experiment, which corresponds to a particular version of a package
-and one dependency (across versions) to splice.
+This is a repository of spliced experiment results generated from the experiment defined in [spliced-experiment](https://github.com/buildsi/spliced-experiment), and run on GitHub actions at [spliced-experiment-runs](https://github.com/buildsi/splice-experiment-runs). Each experiment includes one top level package and a dependency, and within each run we select to splice all non-deprecated versions of the dependency. We are running on GitHub actions for reproducibility, and because HPC didn't work due to file-systems issues.
 
 ## Retrieving Results
 
-To retrieve results, you'll want to get each of the results and logs separately and
-name according to the run.
+The results are provided via a GitHub submodule, added like this:
 
 ```bash
-$ scp -r sochat1@borax.llnl.gov:/p/vast1/build/spliced-experiment/results .
-$ mv results run1
-$ scp -r sochat1@borax.llnl.gov:/p/vast1/build/spliced-experiment/logs .
-$ mkdir log
-$ mv logs log/run1
+$ git submodule add https://github.com/buildsi/splice-experiment-artifacts results
 ```
+
+And this means if you clone this fresh you can do:
+
+```
+$ git submodule update
+```
+
 
 ## Runs
 
- - [run1](run1): was a first shot running libabigail, symbolator, and a limited number of spack tests (a subset that were working). Logs are in [log/run1](log/run1) so we can determine errors / issues with running (that would have missing results)
-
 ## Organization 
 
-Each directory is a different run, and there is a nested struture that captures the package name, version, and at the
-lowest level the results from an experiment, `experiment.json`. As a small expample, here is the aml experiment:
+Results have a cache for raw data at `results/artifacts/cache`, and the main result organization at `results/artifacts/results`l. Each directory there is a different run, and there is a nested struture that captures the package name, version, and at the lowest level the results from an experiment, `experiment.json`. As a small example:
 
 ```
-results/aml/
-├── 0.1.0
-│   └── numactl
-│       └── experiment.json
-└── master
-    └── numactl
-        └── experiment.json
+results/artifacts/results/
+└── qthreads
+    ├── 1.10
+    │   └── hwloc
+    │       └── experiment.json
+    ├── 1.11
+    │   └── hwloc
+    │       └── experiment.json
+    ├── 1.12
+    │   └── hwloc
+    │       └── experiment.json
+    ├── 1.14
+    │   └── hwloc
+    │       └── experiment.json
+    ├── 1.15
+    │   └── hwloc
+    │       └── experiment.json
+    └── 1.16
+        └── hwloc
+            └── experiment.json
 ```
 
-The above shows that we tested two versions of aml, both master and 0.1.0, and for each spliced
-some number of versions of numactl (the results are in each of those files).
+The above shows that we tested five versions of qthreads, and within that version there was one library to splice (hwloc) and within each experiment.json there will be multiple versions of that tested.
 
 ## Analysis
 
