@@ -1,0 +1,80 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/enum/example"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_to_sizeenum/lib.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "smeagle": [
+                {
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/example",
+                    "lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_to_sizeenum/lib.so",
+                    "prediction": true,
+                    "seconds": 0.002825498580932617
+                }
+            ],
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "example",
+                    "spliced_lib": "lib.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.0067901611328125e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "example",
+                    "spliced_lib": "lib.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.821487426757812e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (1 filtered out), 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
+                    "return_code": 0,
+                    "seconds": 0.00839090347290039,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/enum/example /__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_to_sizeenum/lib.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_to_sizeenum/lib.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/example",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/enum/example\nnew: /__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_to_sizeenum/lib.so\nreport: /cache/__w/splice-experiment-runs/splice-experiment-runs/enum/example-abi-laboratory-example|lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-x5fWK.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nERROR: can't find exported symbols in object(s), please add a shared object on command line\nERROR: specified ABI dump '/tmp/ABI-2-6nmn8.dump' is not valid, try to recreate it\nPreparing, please wait ...\n",
+                    "return_code": 0,
+                    "seconds": 0.34682679176330566,
+                    "command": "/bin/bash /__w/splice-experiment-runs/splice-experiment-runs/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/enum/example /__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_to_sizeenum/lib.so example|lib-so /cache/__w/splice-experiment-runs/splice-experiment-runs/enum/example-abi-laboratory-example|lib-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_to_sizeenum/lib.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/example",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/enum/example": 4736,
+                "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_to_sizeenum/lib.so": 4768
+            },
+            "example|lib.so": {}
+        },
+        "experiment": "/__w/splice-experiment-runs/splice-experiment-runs/enum/example-/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_to_sizeenum/lib.so-gpp-9.4.0",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_to_sizeenum/lib.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/enum/example",
+        "different_libs": true
+    }
+]

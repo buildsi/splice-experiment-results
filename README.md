@@ -1,84 +1,20 @@
-# Spliced Experiment Results
+# Spliced Experiment Artifacts
 
 ![https://avatars.githubusercontent.com/u/85255731?s=200&v=4](https://avatars.githubusercontent.com/u/85255731?s=200&v=4)
 
-This is a repository of spliced experiment results generated from the experiment defined in [spliced-experiment](https://github.com/buildsi/spliced-experiment). 
-In total, there were about ~3400 jobs (give or take) each running a spliced experiment, which corresponds to a particular version of a package
-and one dependency (across versions) to splice.
-
-## Retrieving Results
-
-To retrieve results, you'll want to get each of the results and logs separately and
-name according to the run.
+This repository does an automated retrieval of results from [splice-experiment-runs](https://github.com/buildsi/splice-experiment-runs). It used to derive from [build-abi-containers](https://github.com/builsi/build-abi-containers), a (previously written) GitHub pipeline that I wrote, but we didn't use.
+Now I'm back to GitHub because HPC never seems to work :) The process of retrieving artifacts works via the [GitHub workflow](.github/workflows/artifacts.yml) that runs the script [get_artifacts.py](get_artifacts.py). Since the data is smaller (a matrix of results across compilers) it can be ru manually:
 
 ```bash
-$ scp -r sochat1@borax.llnl.gov:/p/vast1/build/spliced-experiment/results .
-$ mv results run1
-$ scp -r sochat1@borax.llnl.gov:/p/vast1/build/spliced-experiment/logs .
-$ mkdir log
-$ mv logs log/run1
+export GITHUB_TOKEN=xxxxxxxxxxx
+export INPUT_REPOSITORY=buildsi/splice-experiment-runs
 ```
-
-## Runs
-
- - [run1](run1): was a first shot running libabigail, symbolator, and a limited number of spack tests (a subset that were working). Logs are in [log/run1](log/run1) so we can determine errors / issues with running (that would have missing results)
-
-## Organization 
-
-Each directory is a different run, and there is a nested struture that captures the package name, version, and at the
-lowest level the results from an experiment, `experiment.json`. As a small expample, here is the aml experiment:
-
-```
-results/aml/
-├── 0.1.0
-│   └── numactl
-│       └── experiment.json
-└── master
-    └── numactl
-        └── experiment.json
-```
-
-The above shows that we tested two versions of aml, both master and 0.1.0, and for each spliced
-some number of versions of numactl (the results are in each of those files).
-
-## Analysis
-
-### 1. Interface Generation
-
-You'll need some basic dependencies for data frames, etc.
-
 ```bash
-$ python -m venv env
-$ source env/bin/activate
-$ pip install -r requirements.txt
+$ python get_artifacts.py
 ```
 
-I will write scripts to summarize results, and if appropriate, to provide an interface to explore. As an example,
-here is how to parse results:
+ - [artifacts/cache](artifacts/cache) has cached results (Smeagle and ABI laboratory report)
+ - [artifacts/results](artifacts/results) has the experiment.json results.
 
-```bash
-$ mkdir -p ./docs
-$ python analysis.py run1 --outdir ./docs
-```
-
-Notice that we provide the input folder run1 and the output directory for the data,
-where a subfolder run1 will be created. We are creating in a jekyll structure under docs
-anticipating creating some kind of interface to explore results. **Important** I had to minify
-the `results-list.json` for openmpi because it was too big. Once we have even bigger results
-we will need to refactor the interface to render tables for differen testers or similar.
-
-### 2. Graph Generation
-
-Ben had an idea to generate a graph, so you can do that:
-
-```bash
-$ mkdir docs/graph
-$ python graph.py run1 --outdir docs/graph
-```
-
-It will generate `docs/graph/cypher.graph` that you can copy paste into a neo4j interface,
-usually a [sandbox](https://neo4j.com/sandbox/) will work. To then see ALL the graph:
-
-```cypher
-MATCH p=()-->() RETURN p
-```
+**important** when we have actual results (have moved out of development) we will want to delete
+all the data here and start fresh with a limit on the number of days we go back (to only get the final result).
