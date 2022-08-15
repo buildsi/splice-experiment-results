@@ -14,7 +14,7 @@ abi_typelocation("a","_Z8boolfunc8BoolEnum","Import","Integer8","%rdi").
 abi_typelocation("a","_Z8sizefunc8SizeEnum","Import","Integer64","%rdi").
 
 %----------------------------------------------------------------------------
-% Library: /__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_to_sizeenum/lib.so
+% Library: /__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/remove_enumclass_enumerator/lib.so
 %----------------------------------------------------------------------------
 abi_typelocation("b","_Z3foo14ColorClassEnum","Import","Integer32","%rdi").
 abi_typelocation("b","_Z11print_color5Color","Import","Integer32","%rdi").

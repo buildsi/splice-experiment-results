@@ -94,7 +94,9 @@ def get_file_hash(filepath, algorithm="sha256"):
 
 
 def get_creation_timestamp(filename):
-    """Get creation timestamp for a file"""
+    """
+    Get creation timestamp for a file
+    """
     filen = pathlib.Path(filename)
     assert filen.exists()
     return filen.stat().st_ctime
@@ -160,7 +162,7 @@ def get_artifacts(repository, days=10):
 
         results += artifacts
         # We are on the last page
-        count = len(response['artifacts'])
+        count = len(response["artifacts"])
         if count == 0:
             break
         page += 1
@@ -227,7 +229,7 @@ def download_artifacts(artifacts, output, days):
         zipfile = ZipFile(BytesIO(response.content))
         res = zipfile.extractall(tmp)
 
-        if "cache" in artifact['name']:
+        if "cache" in artifact["name"]:
             save_to = os.path.join(output, "cache")
         else:
             save_to = os.path.join(output, "results")
@@ -278,11 +280,15 @@ def save_artifact(source, destination):
 
 
 def main():
-    """main primarily parses environment variables to prepare for creation"""
+    """
+    main primarily parses environment variables to prepare for creation
+    """
 
     # Github repository to check
-    repository = os.environ.get("INPUT_REPOSITORY") or os.environ.get(
-        "GITHUB_REPOSITORY"
+    repository = (
+        os.environ.get("INPUT_REPOSITORY")
+        or os.environ.get("GITHUB_REPOSITORY")
+        or "buildsi/splice-experiment-runs"
     )
     output = os.environ.get("INPUT_OUTPUT", os.path.join(here, "artifacts"))
 
