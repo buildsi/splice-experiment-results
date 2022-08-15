@@ -1,0 +1,135 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_narrow_unsigned/lib.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "smeagle": [
+                {
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so",
+                    "lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_narrow_unsigned/lib.so",
+                    "prediction": false,
+                    "message": {
+                        "missing_imports": [
+                            [
+                                "_Z3addii",
+                                "Integer32",
+                                "%rdi"
+                            ],
+                            [
+                                "_Z3addii",
+                                "Integer32",
+                                "%rsi"
+                            ],
+                            [
+                                "_Z8multiplyii",
+                                "Integer32",
+                                "%rdi"
+                            ],
+                            [
+                                "_Z8multiplyii",
+                                "Integer32",
+                                "%rsi"
+                            ],
+                            [
+                                "_Z6invokeiiPFiiiE",
+                                "Integer32",
+                                "%rdi"
+                            ],
+                            [
+                                "_Z6invokeiiPFiiiE",
+                                "Integer32",
+                                "%rsi"
+                            ]
+                        ],
+                        "missing_exports": [
+                            [
+                                "_Z3addii",
+                                "Integer32",
+                                "%rax"
+                            ],
+                            [
+                                "_Z8multiplyii",
+                                "Integer32",
+                                "%rax"
+                            ],
+                            [
+                                "_Z6invokeiiPFiiiE",
+                                "Integer32",
+                                "%rax"
+                            ]
+                        ]
+                    },
+                    "seconds": 0.004378795623779297
+                }
+            ],
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "lib.so",
+                    "spliced_lib": "lib.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.76837158203125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "lib.so",
+                    "spliced_lib": "lib.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_Z6invokeiiPFiiiE",
+                        "_Z3addii",
+                        "_Z8multiplyii"
+                    ],
+                    "prediction": false,
+                    "seconds": 9.775161743164062e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 3 Removed, 0 Changed, 3 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n3 Removed functions:\n\n  [D] 'function int add(int, int)'    {_Z3addii}\n  [D] 'function int invoke(int, int, int (int, int)*)'    {_Z6invokeiiPFiiiE}\n  [D] 'function int multiply(int, int)'    {_Z8multiplyii}\n\n3 Added functions:\n\n  [A] 'function int add(unsigned char, unsigned char)'    {_Z3addhh}\n  [A] 'function int invoke(int, int, int (unsigned char, unsigned char)*)'    {_Z6invokeiiPFihhE}\n  [A] 'function int multiply(unsigned char, unsigned char)'    {_Z8multiplyhh}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.008825302124023438,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_narrow_unsigned/lib.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_narrow_unsigned/lib.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_narrow_unsigned/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-2DVpj.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-kGkbS.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 25%\nSource compatibility: 62.5%\nTotal binary compatibility problems: 6, warnings: 0\nTotal source compatibility problems: 6, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\n",
+                    "return_code": 1,
+                    "seconds": 0.41608405113220215,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_narrow_unsigned/lib.so lib-so-lib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_narrow_unsigned/lib.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so": 17240,
+                "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_narrow_unsigned/lib.so": 17296
+            },
+            "lib.so-lib.so": {}
+        },
+        "experiment": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_narrow_unsigned/lib.so-clang-11",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_narrow_unsigned/lib.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so",
+        "different_libs": true
+    }
+]

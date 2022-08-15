@@ -1,0 +1,80 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/remove_enumclass_enumerator/lib.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "smeagle": [
+                {
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so",
+                    "lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/remove_enumclass_enumerator/lib.so",
+                    "prediction": true,
+                    "seconds": 0.002624034881591797
+                }
+            ],
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "lib.so",
+                    "spliced_lib": "lib.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.4373016357421875e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "lib.so",
+                    "spliced_lib": "lib.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.245208740234375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function void sizefunc(SizeEnum)' at example.cpp:17:1 has some indirect sub-type changes:\n    parameter 1 of type 'enum SizeEnum' has sub-type changes:\n      type size hasn't changed\n      1 enumerator deletion:\n        'SizeEnum::c' value '3'\n\n",
+                    "return_code": 4,
+                    "seconds": 0.007854938507080078,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so /__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/remove_enumclass_enumerator/lib.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/remove_enumclass_enumerator/lib.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/remove_enumclass_enumerator/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-4I6qy.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-RV64o.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 80%\nTotal binary compatibility problems: 0, warnings: 1\nTotal source compatibility problems: 1, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so-abi-laboratory-lib-so-lib-so.html\n",
+                    "return_code": 1,
+                    "seconds": 0.28759074211120605,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so /__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/remove_enumclass_enumerator/lib.so lib-so-lib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so-abi-laboratory-lib-so-lib-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/remove_enumclass_enumerator/lib.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so": 17472,
+                "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/remove_enumclass_enumerator/lib.so": 17504
+            },
+            "lib.so-lib.so": {}
+        },
+        "experiment": "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so-/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/remove_enumclass_enumerator/lib.so-clang-12",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/remove_enumclass_enumerator/lib.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so",
+        "different_libs": true
+    }
+]

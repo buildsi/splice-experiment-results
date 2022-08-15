@@ -1,0 +1,82 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "smeagle": [
+                {
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",
+                    "lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so",
+                    "prediction": true,
+                    "seconds": 0.0018663406372070312
+                }
+            ],
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "lib.so",
+                    "spliced_lib": "lib.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.62939453125e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "lib.so",
+                    "spliced_lib": "lib.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_Z3fooCeS_"
+                    ],
+                    "prediction": false,
+                    "seconds": 4.291534423828125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 1 Removed, 0 Changed, 1 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function void foo(complex, complex)'    {_Z3fooCeS_}\n\n1 Added function:\n\n  [A] 'function void foo(complex, complex)'    {_Z3fooCfS_}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.008714914321899414,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nlibsvml.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ptKoG.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nlibsvml.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-bK9oI.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 50%\nSource compatibility: 50%\nTotal binary compatibility problems: 1, warnings: 0\nTotal source compatibility problems: 1, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html\n",
+                    "return_code": 1,
+                    "seconds": 0.3900284767150879,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so lib-so-lib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so": 18224,
+                "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so": 18256
+            },
+            "lib.so-lib.so": {}
+        },
+        "experiment": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so-dpcpp-2022.2",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",
+        "different_libs": true
+    }
+]
