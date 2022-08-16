@@ -66,7 +66,7 @@
                             ]
                         ]
                     },
-                    "seconds": 0.004977226257324219
+                    "seconds": 0.003860950469970703
                 }
             ],
             "symbols": [
@@ -75,9 +75,13 @@
                     "original_lib": "lib.so",
                     "spliced_lib": "lib.so",
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 2.3365020751953125e-05
+                    "message": [
+                        "_Z3addii",
+                        "_Z8multiplyii",
+                        "_Z6invokeiiPFiiiE"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.4781951904296875e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -90,7 +94,7 @@
                         "_Z8multiplyii"
                     ],
                     "prediction": false,
-                    "seconds": 1.1205673217773438e-05
+                    "seconds": 4.76837158203125e-06
                 }
             ],
             "libabigail": [
@@ -107,9 +111,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_widen_unsigned/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-61VAB.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-kuSOi.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 25%\nSource compatibility: 62.5%\nTotal binary compatibility problems: 6, warnings: 0\nTotal source compatibility problems: 6, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_widen_unsigned/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-iVxCB.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-qe0VB.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 25%\nSource compatibility: 62.5%\nTotal binary compatibility problems: 6, warnings: 0\nTotal source compatibility problems: 6, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\n",
                     "return_code": 1,
-                    "seconds": 0.41747212409973145,
+                    "seconds": 0.34927868843078613,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_widen_unsigned/lib.so lib-so-lib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_widen_unsigned/lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so",

@@ -66,7 +66,7 @@
                             ]
                         ]
                     },
-                    "seconds": 0.0034105777740478516
+                    "seconds": 0.0044765472412109375
                 }
             ],
             "symbols": [
@@ -75,9 +75,13 @@
                     "original_lib": "lib.so",
                     "spliced_lib": "lib.so",
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 6.198883056640625e-06
+                    "message": [
+                        "_Z6invokeiiPFiiiE",
+                        "_Z8multiplyii",
+                        "_Z3addii"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.1920928955078125e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -90,14 +94,14 @@
                         "_Z8multiplyii"
                     ],
                     "prediction": false,
-                    "seconds": 4.5299530029296875e-06
+                    "seconds": 5.9604644775390625e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "Functions changes summary: 3 Removed, 0 Changed, 3 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n3 Removed functions:\n\n  [D] 'function int add(int, int)'    {_Z3addii}\n  [D] 'function int invoke(int, int, int (int, int)*)'    {_Z6invokeiiPFiiiE}\n  [D] 'function int multiply(int, int)'    {_Z8multiplyii}\n\n3 Added functions:\n\n  [A] 'function int add(unsigned int, unsigned int)'    {_Z3addjj}\n  [A] 'function int invoke(int, int, int (unsigned int, unsigned int)*)'    {_Z6invokeiiPFijjE}\n  [A] 'function int multiply(unsigned int, unsigned int)'    {_Z8multiplyjj}\n\n",
                     "return_code": 12,
-                    "seconds": 0.008904457092285156,
+                    "seconds": 0.009499073028564453,
                     "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_no_narrow_unsigned/lib.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_no_narrow_unsigned/lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so",
@@ -107,9 +111,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_no_narrow_unsigned/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nlibsvml.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-BtPZ0.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nlibsvml.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-m9ciy.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 25%\nSource compatibility: 62.5%\nTotal binary compatibility problems: 6, warnings: 0\nTotal source compatibility problems: 6, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_no_narrow_unsigned/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nlibsvml.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-R9Hbs.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nlibsvml.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Og3Gp.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 25%\nSource compatibility: 62.5%\nTotal binary compatibility problems: 6, warnings: 0\nTotal source compatibility problems: 6, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\n",
                     "return_code": 1,
-                    "seconds": 0.3893301486968994,
+                    "seconds": 0.4916517734527588,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_no_narrow_unsigned/lib.so lib-so-lib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_no_narrow_unsigned/lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so",

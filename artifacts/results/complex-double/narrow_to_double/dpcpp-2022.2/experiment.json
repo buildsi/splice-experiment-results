@@ -15,7 +15,7 @@
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",
                     "lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so",
                     "prediction": true,
-                    "seconds": 0.0020024776458740234
+                    "seconds": 0.0032520294189453125
                 }
             ],
             "symbols": [
@@ -24,9 +24,11 @@
                     "original_lib": "lib.so",
                     "spliced_lib": "lib.so",
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 2.5987625122070312e-05
+                    "message": [
+                        "_Z3fooCeS_"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.1444091796875e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -37,14 +39,14 @@
                         "_Z3fooCeS_"
                     ],
                     "prediction": false,
-                    "seconds": 5.0067901611328125e-06
+                    "seconds": 5.4836273193359375e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "Functions changes summary: 1 Removed, 0 Changed, 1 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function void foo(complex, complex)'    {_Z3fooCeS_}\n\n1 Added function:\n\n  [A] 'function void foo(complex, complex)'    {_Z3fooCdS_}\n\n",
                     "return_code": 12,
-                    "seconds": 0.013216733932495117,
+                    "seconds": 0.014089345932006836,
                     "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",
@@ -54,9 +56,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nlibsvml.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-3xRq7.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nlibsvml.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-m2wEp.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 50%\nSource compatibility: 50%\nTotal binary compatibility problems: 1, warnings: 0\nTotal source compatibility problems: 1, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nlibsvml.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-v2BG9.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nlibsvml.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-VW0hw.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 50%\nSource compatibility: 50%\nTotal binary compatibility problems: 1, warnings: 0\nTotal source compatibility problems: 1, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html\n",
                     "return_code": 1,
-                    "seconds": 0.39294934272766113,
+                    "seconds": 0.46544647216796875,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so lib-so-lib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",

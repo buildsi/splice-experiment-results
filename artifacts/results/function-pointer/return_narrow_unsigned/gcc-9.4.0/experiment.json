@@ -46,7 +46,7 @@
                             ]
                         ]
                     },
-                    "seconds": 0.003529787063598633
+                    "seconds": 0.0036573410034179688
                 }
             ],
             "symbols": [
@@ -55,9 +55,11 @@
                     "original_lib": "lib.so",
                     "spliced_lib": "lib.so",
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 6.198883056640625e-06
+                    "message": [
+                        "_Z6invokeiiPFiiiE"
+                    ],
+                    "prediction": false,
+                    "seconds": 8.821487426757812e-06
                 },
                 {
                     "splice_type": "different_lib",
@@ -68,14 +70,14 @@
                         "_Z6invokeiiPFiiiE"
                     ],
                     "prediction": false,
-                    "seconds": 5.0067901611328125e-06
+                    "seconds": 4.5299530029296875e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "Functions changes summary: 1 Removed, 2 Changed, 1 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function int invoke(int, int, int (int, int)*)'    {_Z6invokeiiPFiiiE}\n\n1 Added function:\n\n  [A] 'function int invoke(int, int, unsigned char (int, int)*)'    {_Z6invokeiiPFhiiE}\n\n2 functions with some indirect sub-type change:\n\n  [C] 'function int add(int, int)' at example.cpp:5:1 has some indirect sub-type changes:\n    return type changed:\n      type name changed from 'int' to 'unsigned char'\n      type size changed from 32 to 8 (in bits)\n\n  [C] 'function int multiply(int, int)' at example.cpp:12:1 has some indirect sub-type changes:\n    return type changed:\n      type name changed from 'int' to 'unsigned char'\n      type size changed from 32 to 8 (in bits)\n\n",
                     "return_code": 12,
-                    "seconds": 0.007985830307006836,
+                    "seconds": 0.00764918327331543,
                     "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/return_narrow_unsigned/lib.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/return_narrow_unsigned/lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so",
@@ -85,9 +87,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/return_narrow_unsigned/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-dqowg.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-EDeS2.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 50%\nSource compatibility: 87.5%\nTotal binary compatibility problems: 4, warnings: 0\nTotal source compatibility problems: 2, warnings: 2\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/return_narrow_unsigned/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-kJ6QY.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-PkvIP.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 50%\nSource compatibility: 87.5%\nTotal binary compatibility problems: 4, warnings: 0\nTotal source compatibility problems: 2, warnings: 2\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\n",
                     "return_code": 1,
-                    "seconds": 0.31488704681396484,
+                    "seconds": 0.30650782585144043,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/return_narrow_unsigned/lib.so lib-so-lib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/return_narrow_unsigned/lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so",

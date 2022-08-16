@@ -66,7 +66,7 @@
                             ]
                         ]
                     },
-                    "seconds": 0.0046367645263671875
+                    "seconds": 0.0038368701934814453
                 }
             ],
             "symbols": [
@@ -75,9 +75,13 @@
                     "original_lib": "lib.so",
                     "spliced_lib": "lib.so",
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 1.5020370483398438e-05
+                    "message": [
+                        "_Z6invokeiiPFiiiE",
+                        "_Z3addii",
+                        "_Z8multiplyii"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.0251998901367188e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -90,14 +94,14 @@
                         "_Z8multiplyii"
                     ],
                     "prediction": false,
-                    "seconds": 3.0279159545898438e-05
+                    "seconds": 4.291534423828125e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "Functions changes summary: 3 Removed, 0 Changed, 3 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n3 Removed functions:\n\n  [D] 'function int add(int, int)'    {_Z3addii}\n  [D] 'function int invoke(int, int, int (int, int)*)'    {_Z6invokeiiPFiiiE}\n  [D] 'function int multiply(int, int)'    {_Z8multiplyii}\n\n3 Added functions:\n\n  [A] 'function int add(long int, long int)'    {_Z3addll}\n  [A] 'function int invoke(int, int, int (long int, long int)*)'    {_Z6invokeiiPFillE}\n  [A] 'function int multiply(long int, long int)'    {_Z8multiplyll}\n\n",
                     "return_code": 12,
-                    "seconds": 0.009714126586914062,
+                    "seconds": 0.008175134658813477,
                     "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_widen_no_conversion/lib.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_widen_no_conversion/lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so",
@@ -107,9 +111,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_widen_no_conversion/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-peNBD.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-rIrBW.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 25%\nSource compatibility: 62.5%\nTotal binary compatibility problems: 6, warnings: 0\nTotal source compatibility problems: 6, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_widen_no_conversion/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-bQTx0.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-FUaTm.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 25%\nSource compatibility: 62.5%\nTotal binary compatibility problems: 6, warnings: 0\nTotal source compatibility problems: 6, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html\n",
                     "return_code": 1,
-                    "seconds": 0.3892629146575928,
+                    "seconds": 0.35004258155822754,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so /__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_widen_no_conversion/lib.so lib-so-lib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so-abi-laboratory-lib-so-lib-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/breaks/param_widen_no_conversion/lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/function-pointer/lib.so",

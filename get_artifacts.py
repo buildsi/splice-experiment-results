@@ -115,6 +115,12 @@ def get_size(filename):
 API_VERSION = "v3"
 BASE = "https://api.github.com"
 
+# Github repository to check
+repository = (
+    os.environ.get("INPUT_REPOSITORY") or os.environ.get("GITHUB_REPOSITORY")
+) or "buildsi/splice-experiment-runs"
+
+
 HEADERS = {
     "Authorization": "token %s" % get_envar("GITHUB_TOKEN"),
     "Accept": "application/vnd.github.%s+json;application/vnd.github.antiope-preview+json;application/vnd.github.shadow-cat-preview+json"
@@ -126,18 +132,20 @@ today = datetime.now()
 
 
 # URLs
-REPO_URL = "%s/repos/%s" % (BASE, get_envar("INPUT_REPOSITORY"))
-ARTIFACTS_URL = "%s/actions/artifacts" % REPO_URL
+REPO_URL = "%s/repos/%s" % (BASE, repository)
 
 
-def get_artifacts(repository, days=10):
+def get_artifacts(repository, days=10, runid=None):
     """
     Retrieve artifacts for a repository.
     """
     # Check if the branch already has a pull request open
-
     results = []
     page = 1
+
+    ARTIFACTS_URL = "%s/actions/artifacts" % REPO_URL
+    if runid:
+        ARTIFACTS_URL = "%s/actions/runs/%s/artifacts" % (REPO_URL, runid)
 
     while True:
         params = {"per_page": 100, "page": page}
@@ -279,28 +287,25 @@ def save_artifact(source, destination):
     shutil.copyfile(source, destination)
 
 
-def main():
+def main(runid=None):
     """
     main primarily parses environment variables to prepare for creation
     """
 
-    # Github repository to check
-    repository = (
-        os.environ.get("INPUT_REPOSITORY")
-        or os.environ.get("GITHUB_REPOSITORY")
-        or "buildsi/splice-experiment-runs"
-    )
     output = os.environ.get("INPUT_OUTPUT", os.path.join(here, "artifacts"))
 
     # Number of days to go back (stick to max otherwise cannot run)
     days = int(os.environ.get("INPUT_DAYS", 2))
 
     # Retrieve artifacts
-    artifacts = get_artifacts(repository, days)
+    artifacts = get_artifacts(repository, days, runid)
 
     # Download artifacts to output directory
     download_artifacts(artifacts, output, days)
 
 
 if __name__ == "__main__":
-    main()
+    runid = None
+    if len(sys.argv) > 1:
+        runid = sys.argv[1]
+    main(runid)

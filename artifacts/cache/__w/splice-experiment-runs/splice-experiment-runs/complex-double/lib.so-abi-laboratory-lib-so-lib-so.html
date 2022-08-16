@@ -1,5 +1,5 @@
-<!-- kind:binary;verdict:incompatible;affected:50;added:1;removed:1;type_problems_high:0;type_problems_medium:0;type_problems_low:0;interface_problems_high:0;interface_problems_medium:0;interface_problems_low:0;changed_constants:0;tool_version:2.3 -->
-<!-- kind:source;verdict:incompatible;affected:50;added:1;removed:1;type_problems_high:0;type_problems_medium:0;type_problems_low:0;interface_problems_high:0;interface_problems_medium:0;interface_problems_low:0;changed_constants:0;tool_version:2.3 -->
+<!-- kind:binary;verdict:incompatible;affected:50;added:1;removed:1;type_problems_high:0;type_problems_medium:0;type_problems_low:0;interface_problems_high:1;interface_problems_medium:0;interface_problems_low:0;changed_constants:0;tool_version:2.3 -->
+<!-- kind:source;verdict:incompatible;affected:25;added:1;removed:1;type_problems_high:0;type_problems_medium:0;type_problems_low:0;interface_problems_high:0;interface_problems_medium:1;interface_problems_low:0;changed_constants:0;tool_version:2.3 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -394,7 +394,7 @@ else if (window.attachEvent) window.attachEvent('onload', initTabs);
 <tr><th>Version #1</th><td>1</td></tr>
 <tr><th>Version #2</th><td>2</td></tr>
 <tr><th>Arch</th><td>x86_64</td></tr>
-<tr><th>Clang Version</th><td>10.0.0</td></tr>
+<tr><th>GCC Version</th><td>9.4.0</td></tr>
 <tr><th>Subject</th><td width='150px'>Binary Compatibility</td></tr>
 </table>
 <h2>Test Results</h2><hr/>
@@ -411,7 +411,7 @@ else if (window.attachEvent) window.attachEvent('onload', initTabs);
 <tr><th rowspan='3'>Problems with<br/>Data Types</th><td>High</td><td>0</td></tr>
 <tr><td>Medium</td><td>0</td></tr>
 <tr><td>Low</td><td>0</td></tr>
-<tr><th rowspan='3'>Problems with<br/>Symbols</th><td>High</td><td>0</td></tr>
+<tr><th rowspan='3'>Problems with<br/>Symbols</th><td>High</td><td class='failed'><a href='#Symbol_Binary_Problems_High' style='color:Blue;'>1</a></td></tr>
 <tr><td>Medium</td><td>0</td></tr>
 <tr><td>Low</td><td>0</td></tr>
 <tr><th>Problems with<br/>Constants</th><td>Low</td><td>0</td></tr>
@@ -420,7 +420,7 @@ else if (window.attachEvent) window.attachEvent('onload', initTabs);
 <a name='Binary_Added'></a><h2>Added Symbols <span class='new'>&nbsp;1&nbsp;</span></h2><hr/>
 <span class='h_name'>example.cpp</span>, <span class='lib_name'>lib.so</span><br/>
 <span class="section" onclick="javascript:showContent(this, 'c_1')">
-foo&#160;<span class='sym_p'><span>(&#160;complex <span class='color_p'>c1</span></span>, <span>complex <span class='color_p'>c2</span></span>&#160;)</span></span>
+foo&#160;<span class='sym_p'><span>(&#160;complex float <span class='color_p'>c1</span></span>, <span>complex float <span class='color_p'>c2</span></span>&#160;)</span></span>
 <br/>
 <div id="c_1" style="display:none;">
 <span class='mngl'>_Z3fooCfS_</span>
@@ -433,7 +433,7 @@ foo&#160;<span class='sym_p'><span>(&#160;complex <span class='color_p'>c1</span
 <a name='Binary_Removed'></a><a name='Binary_Withdrawn'></a><h2>Removed Symbols <span class='failed'>&nbsp;1&nbsp;</span></h2><hr/>
 <span class='h_name'>example.cpp</span>, <span class='lib_name'>lib.so</span><br/>
 <span class="section" onclick="javascript:showContent(this, 'c_2')">
-foo&#160;<span class='sym_p'><span>(&#160;complex <span class='color_p'>c1</span></span>, <span>complex <span class='color_p'>c2</span></span>&#160;)</span></span>
+foo&#160;<span class='sym_p'><span>(&#160;complex long double <span class='color_p'>c1</span></span>, <span>complex long double <span class='color_p'>c2</span></span>&#160;)</span></span>
 <br/>
 <div id="c_2" style="display:none;">
 <span class='mngl'>_Z3fooCeS_</span>
@@ -441,6 +441,35 @@ foo&#160;<span class='sym_p'><span>(&#160;complex <span class='color_p'>c1</span
 <br/>
 </div>
 
+<br/>
+<a class='top_ref' href='#Top'>to the top</a><br/>
+<a name='High_Risk_Binary_Problems'></a><a name='Symbol_Binary_Problems_High'></a><a name='Interface_Binary_Problems_High'></a>
+<h2>Problems with Symbols, High Severity <span class='failed'>&nbsp;1&nbsp;</span></h2><hr/>
+<span class='h_name'>example.cpp</span>, <span class='lib_name'>lib.so</span><br/>
+<span class="section" onclick="javascript:showContent(this, 'c_3')">
+<span class='ext'>[+]</span> foo&#160;<span class='sym_p'><span>(&#160;complex long double <span class='color_p'>c1</span></span>, <span>complex long double <span class='color_p'>c2</span></span>&#160;)</span> <span class='failed'>&nbsp;1&nbsp;</span></span>
+<br/>
+<div id="c_3" style="display:none;">
+
+
+<span class='new_sign_lbl'>&#8675;</span>
+<br/>
+<span class='new_sign'>foo&#160;<span class='sym_p'><span>(&#160;complex float <span class='color_p'>c1</span></span>, <span>complex float <span class='color_p'>c2</span></span>&#160;)</span></span><br/>
+<span class='mngl pleft'>_Z3fooCeS_</span><br/>
+<table class='ptable'>
+<tr>
+<th class='pn'></th>
+<th class='chg'>Change</th>
+<th>Effect</th>
+</tr>
+<tr>
+<th>1</th>
+<td>Parameters list has been changed.</td>
+<td>The name of the appropriate symbol for this function on binary level has been changed from <b>_Z3fooCeS_</b> to <b>_Z3fooCfS_</b>. This may cause undefined reference linker error in old client applications.</td>
+</tr>
+</table>
+<br/>
+</div>
 <br/>
 <a class='top_ref' href='#Top'>to the top</a><br/>
 <a name='Sources'></a><h2>Source Files <span class='gray'>&nbsp;1&nbsp;</span></h2><hr/>
@@ -467,7 +496,7 @@ lib.so<br/>
 <tr><th>Total Objects</th><td><a href='#Libs' style='color:Blue;'>1</a></td></tr>
 <tr><th>Total Symbols / Types</th><td>2 / 2</td></tr>
 <tr><th>Compatibility</th>
-<td class='incompatible'>50%</td>
+<td class='incompatible'>75%</td>
 </tr>
 </table>
 <h2>Problem Summary</h2><hr/>
@@ -477,17 +506,17 @@ lib.so<br/>
 <tr><td>Medium</td><td>0</td></tr>
 <tr><td>Low</td><td>0</td></tr>
 <tr><th rowspan='3'>Problems with<br/>Symbols</th><td>High</td><td>0</td></tr>
-<tr><td>Medium</td><td>0</td></tr>
+<tr><td>Medium</td><td class='failed'><a href='#Symbol_Source_Problems_Medium' style='color:Blue;'>1</a></td></tr>
 <tr><td>Low</td><td>0</td></tr>
 <tr><th>Problems with<br/>Constants</th><td>Low</td><td>0</td></tr>
 </table>
 
 <a name='Source_Added'></a><h2>Added Symbols <span class='new'>&nbsp;1&nbsp;</span></h2><hr/>
 <span class='h_name'>example.cpp</span><br/>
-<span class="section" onclick="javascript:showContent(this, 'c_3')">
-foo&#160;<span class='sym_p'><span>(&#160;complex <span class='color_p'>c1</span></span>, <span>complex <span class='color_p'>c2</span></span>&#160;)</span></span>
+<span class="section" onclick="javascript:showContent(this, 'c_4')">
+foo&#160;<span class='sym_p'><span>(&#160;complex float <span class='color_p'>c1</span></span>, <span>complex float <span class='color_p'>c2</span></span>&#160;)</span></span>
 <br/>
-<div id="c_3" style="display:none;">
+<div id="c_4" style="display:none;">
 <span class='mngl'>_Z3fooCfS_</span>
 <br/>
 <br/>
@@ -497,15 +526,44 @@ foo&#160;<span class='sym_p'><span>(&#160;complex <span class='color_p'>c1</span
 <a class='top_ref' href='#Top'>to the top</a><br/>
 <a name='Source_Removed'></a><a name='Source_Withdrawn'></a><h2>Removed Symbols <span class='failed'>&nbsp;1&nbsp;</span></h2><hr/>
 <span class='h_name'>example.cpp</span><br/>
-<span class="section" onclick="javascript:showContent(this, 'c_4')">
-foo&#160;<span class='sym_p'><span>(&#160;complex <span class='color_p'>c1</span></span>, <span>complex <span class='color_p'>c2</span></span>&#160;)</span></span>
+<span class="section" onclick="javascript:showContent(this, 'c_5')">
+foo&#160;<span class='sym_p'><span>(&#160;complex long double <span class='color_p'>c1</span></span>, <span>complex long double <span class='color_p'>c2</span></span>&#160;)</span></span>
 <br/>
-<div id="c_4" style="display:none;">
+<div id="c_5" style="display:none;">
 <span class='mngl'>_Z3fooCeS_</span>
 <br/>
 <br/>
 </div>
 
+<br/>
+<a class='top_ref' href='#Top'>to the top</a><br/>
+<a name='Medium_Risk_Source_Problems'></a><a name='Symbol_Source_Problems_Medium'></a><a name='Interface_Source_Problems_Medium'></a>
+<h2>Problems with Symbols, Medium Severity <span class='failed'>&nbsp;1&nbsp;</span></h2><hr/>
+<span class='h_name'>example.cpp</span><br/>
+<span class="section" onclick="javascript:showContent(this, 'c_6')">
+<span class='ext'>[+]</span> foo&#160;<span class='sym_p'><span>(&#160;complex long double <span class='color_p'>c1</span></span>, <span>complex long double <span class='color_p'>c2</span></span>&#160;)</span> <span class='failed'>&nbsp;1&nbsp;</span></span>
+<br/>
+<div id="c_6" style="display:none;">
+
+
+<span class='new_sign_lbl'>&#8675;</span>
+<br/>
+<span class='new_sign'>foo&#160;<span class='sym_p'><span>(&#160;complex float <span class='color_p'>c1</span></span>, <span>complex float <span class='color_p'>c2</span></span>&#160;)</span></span><br/>
+<span class='mngl pleft'>_Z3fooCeS_</span><br/>
+<table class='ptable'>
+<tr>
+<th class='pn'></th>
+<th class='chg'>Change</th>
+<th>Effect</th>
+</tr>
+<tr>
+<th>1</th>
+<td>Parameters list has been changed.</td>
+<td>Recompilation of a client program may be broken.</td>
+</tr>
+</table>
+<br/>
+</div>
 <br/>
 <a class='top_ref' href='#Top'>to the top</a><br/>
 <a name='Sources'></a><h2>Source Files <span class='gray'>&nbsp;1&nbsp;</span></h2><hr/>

@@ -3,7 +3,19 @@
     "locations": [
         {
             "function": {
-                "name": "_Z3addii",
+                "name": "main",
+                "class": "Function",
+                "return": {
+                    "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
+                    "direction": "export",
+                    "location": "%rax"
+                },
+                "direction": "export"
+            }
+        },
+        {
+            "function": {
+                "name": "_Z6invokeiiPFciiE",
                 "class": "Function",
                 "parameters": [
                     {
@@ -17,10 +29,16 @@
                         "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
                         "location": "%rsi",
                         "direction": "import"
+                    },
+                    {
+                        "name": "func",
+                        "type": "662387e8be37e32293e638a2fa2fe86a",
+                        "location": "%rdx",
+                        "direction": "both"
                     }
                 ],
                 "return": {
-                    "type": "dbef5bff425a8e631e2bc5fba7cc20e6",
+                    "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
                     "direction": "export",
                     "location": "%rax"
                 },
@@ -55,7 +73,7 @@
         },
         {
             "function": {
-                "name": "_Z6invokeiiPFciiE",
+                "name": "_Z3addii",
                 "class": "Function",
                 "parameters": [
                     {
@@ -69,28 +87,10 @@
                         "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
                         "location": "%rsi",
                         "direction": "import"
-                    },
-                    {
-                        "name": "func",
-                        "type": "0b18dc941a2a9c148470f3b6f3289561",
-                        "location": "%rdx",
-                        "direction": "both"
                     }
                 ],
                 "return": {
-                    "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
-                    "direction": "export",
-                    "location": "%rax"
-                },
-                "direction": "export"
-            }
-        },
-        {
-            "function": {
-                "name": "main",
-                "class": "Function",
-                "return": {
-                    "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
+                    "type": "dbef5bff425a8e631e2bc5fba7cc20e6",
                     "direction": "export",
                     "location": "%rax"
                 },
@@ -99,11 +99,6 @@
         }
     ],
     "types": {
-        "dbef5bff425a8e631e2bc5fba7cc20e6": {
-            "type": "char",
-            "size": 1,
-            "class": "Integer"
-        },
         "9c67aaa6ef89dd4db8543f00bd1f472f": {
             "type": "int",
             "size": 4,
@@ -116,13 +111,18 @@
             "type": "void",
             "class": "Void"
         },
-        "0b18dc941a2a9c148470f3b6f3289561": {
+        "662387e8be37e32293e638a2fa2fe86a": {
             "class": "Pointer",
-            "size": 0,
+            "size": 8,
             "underlying_type": {
                 "type": "4fc7ba059a1711e8c26bd491510ea170"
             },
             "name": "func"
+        },
+        "dbef5bff425a8e631e2bc5fba7cc20e6": {
+            "type": "char",
+            "size": 1,
+            "class": "Integer"
         }
     }
 }

@@ -29,7 +29,7 @@
                             ]
                         ]
                     },
-                    "seconds": 0.0029022693634033203
+                    "seconds": 0.0025615692138671875
                 }
             ],
             "symbols": [
@@ -38,9 +38,11 @@
                     "original_lib": "lib.so",
                     "spliced_lib": "lib.so",
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 6.4373016357421875e-06
+                    "message": [
+                        "_Z3fooCeS_"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.1444091796875e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -51,14 +53,14 @@
                         "_Z3fooCeS_"
                     ],
                     "prediction": false,
-                    "seconds": 7.62939453125e-06
+                    "seconds": 3.814697265625e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "Functions changes summary: 1 Removed, 0 Changed, 1 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function void foo(complex long double, complex long double)'    {_Z3fooCeS_}\n\n1 Added function:\n\n  [A] 'function void foo(complex float, complex float)'    {_Z3fooCfS_}\n\n",
                     "return_code": 12,
-                    "seconds": 0.008481502532958984,
+                    "seconds": 0.0073926448822021484,
                     "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",
@@ -68,9 +70,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-m0fPK.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-YWO72.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 50%\nSource compatibility: 75%\nTotal binary compatibility problems: 2, warnings: 0\nTotal source compatibility problems: 2, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-UEsDb.dump\nReading debug-info\nWARNING: the object should be compiled with -Og option for better analysis\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-6Vi8p.dump\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 50%\nSource compatibility: 75%\nTotal binary compatibility problems: 2, warnings: 0\nTotal source compatibility problems: 2, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html\n",
                     "return_code": 1,
-                    "seconds": 0.3219733238220215,
+                    "seconds": 0.31047773361206055,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so lib-so-lib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_float/lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",

@@ -3,20 +3,38 @@
     "locations": [
         {
             "function": {
-                "name": "_Z3adddd",
+                "name": "main",
+                "class": "Function",
+                "return": {
+                    "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
+                    "direction": "export",
+                    "location": "%rax"
+                },
+                "direction": "export"
+            }
+        },
+        {
+            "function": {
+                "name": "_Z6invokeiiPFiddE",
                 "class": "Function",
                 "parameters": [
                     {
                         "name": "x",
-                        "type": "d20be53e889d2cee0c86d0ef9b0fbbc8",
-                        "location": "%xmm0",
+                        "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
+                        "location": "%rdi",
                         "direction": "import"
                     },
                     {
                         "name": "y",
-                        "type": "d20be53e889d2cee0c86d0ef9b0fbbc8",
-                        "location": "%xmm1",
+                        "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
+                        "location": "%rsi",
                         "direction": "import"
+                    },
+                    {
+                        "name": "func",
+                        "type": "662387e8be37e32293e638a2fa2fe86a",
+                        "location": "%rdx",
+                        "direction": "both"
                     }
                 ],
                 "return": {
@@ -55,40 +73,22 @@
         },
         {
             "function": {
-                "name": "_Z6invokeiiPFiddE",
+                "name": "_Z3adddd",
                 "class": "Function",
                 "parameters": [
                     {
                         "name": "x",
-                        "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
-                        "location": "%rdi",
+                        "type": "d20be53e889d2cee0c86d0ef9b0fbbc8",
+                        "location": "%xmm0",
                         "direction": "import"
                     },
                     {
                         "name": "y",
-                        "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
-                        "location": "%rsi",
+                        "type": "d20be53e889d2cee0c86d0ef9b0fbbc8",
+                        "location": "%xmm1",
                         "direction": "import"
-                    },
-                    {
-                        "name": "func",
-                        "type": "0b18dc941a2a9c148470f3b6f3289561",
-                        "location": "%rdx",
-                        "direction": "both"
                     }
                 ],
-                "return": {
-                    "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
-                    "direction": "export",
-                    "location": "%rax"
-                },
-                "direction": "export"
-            }
-        },
-        {
-            "function": {
-                "name": "main",
-                "class": "Function",
                 "return": {
                     "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
                     "direction": "export",
@@ -104,11 +104,6 @@
             "size": 4,
             "class": "Integer"
         },
-        "d20be53e889d2cee0c86d0ef9b0fbbc8": {
-            "type": "double",
-            "size": 8,
-            "class": "Float"
-        },
         "3136b53c7788b73670691bd7c934571c": {
             "type": "unknown"
         },
@@ -116,13 +111,18 @@
             "type": "void",
             "class": "Void"
         },
-        "0b18dc941a2a9c148470f3b6f3289561": {
+        "662387e8be37e32293e638a2fa2fe86a": {
             "class": "Pointer",
-            "size": 0,
+            "size": 8,
             "underlying_type": {
                 "type": "4fc7ba059a1711e8c26bd491510ea170"
             },
             "name": "func"
+        },
+        "d20be53e889d2cee0c86d0ef9b0fbbc8": {
+            "type": "double",
+            "size": 8,
+            "class": "Float"
         }
     }
 }

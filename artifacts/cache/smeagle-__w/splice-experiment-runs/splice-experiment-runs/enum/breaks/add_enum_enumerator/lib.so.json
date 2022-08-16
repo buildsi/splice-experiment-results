@@ -3,53 +3,12 @@
     "locations": [
         {
             "function": {
-                "name": "_Z3foo14ColorClassEnum",
+                "name": "_Z8sizefunc8SizeEnum",
                 "class": "Function",
                 "parameters": [
                     {
                         "name": "c",
-                        "type": "0cf43b197cf3ea9f2525df5f81833d3c",
-                        "location": "%rdi",
-                        "direction": "import"
-                    }
-                ],
-                "return": {
-                    "location": "none",
-                    "type": "void",
-                    "class": "Void",
-                    "direction": "export"
-                },
-                "direction": "export"
-            }
-        },
-        {
-            "function": {
-                "name": "_Z11print_color5Color",
-                "class": "Function",
-                "parameters": [
-                    {
-                        "name": "r",
-                        "type": "e8021cd005d45669368098b8e937b2ec",
-                        "location": "%rdi",
-                        "direction": "import"
-                    }
-                ],
-                "return": {
-                    "type": "e8021cd005d45669368098b8e937b2ec",
-                    "direction": "export",
-                    "location": "%rax"
-                },
-                "direction": "export"
-            }
-        },
-        {
-            "function": {
-                "name": "_Z8enumfunc8CharEnum",
-                "class": "Function",
-                "parameters": [
-                    {
-                        "name": "c",
-                        "type": "cac15ab977da00c5206209fcc5591d65",
+                        "type": "15e2741a97d17c7c11211cd33155a5fc",
                         "location": "%rdi",
                         "direction": "import"
                     }
@@ -86,12 +45,53 @@
         },
         {
             "function": {
-                "name": "_Z8sizefunc8SizeEnum",
+                "name": "_Z8enumfunc8CharEnum",
                 "class": "Function",
                 "parameters": [
                     {
                         "name": "c",
-                        "type": "15e2741a97d17c7c11211cd33155a5fc",
+                        "type": "cac15ab977da00c5206209fcc5591d65",
+                        "location": "%rdi",
+                        "direction": "import"
+                    }
+                ],
+                "return": {
+                    "location": "none",
+                    "type": "void",
+                    "class": "Void",
+                    "direction": "export"
+                },
+                "direction": "export"
+            }
+        },
+        {
+            "function": {
+                "name": "_Z11print_color5Color",
+                "class": "Function",
+                "parameters": [
+                    {
+                        "name": "r",
+                        "type": "e8021cd005d45669368098b8e937b2ec",
+                        "location": "%rdi",
+                        "direction": "import"
+                    }
+                ],
+                "return": {
+                    "type": "e8021cd005d45669368098b8e937b2ec",
+                    "direction": "export",
+                    "location": "%rax"
+                },
+                "direction": "export"
+            }
+        },
+        {
+            "function": {
+                "name": "_Z3foo14ColorClassEnum",
+                "class": "Function",
+                "parameters": [
+                    {
+                        "name": "c",
+                        "type": "0cf43b197cf3ea9f2525df5f81833d3c",
                         "location": "%rdi",
                         "direction": "import"
                     }
@@ -107,28 +107,74 @@
         }
     ],
     "types": {
-        "9c67aaa6ef89dd4db8543f00bd1f472f": {
-            "type": "int",
-            "size": 4,
+        "7a2f32ee5b8a01b41c1806555f194fe7": {
+            "type": "long unsigned int",
+            "size": 8,
             "class": "Integer"
         },
-        "0cf43b197cf3ea9f2525df5f81833d3c": {
-            "name": "ColorClassEnum",
-            "size": 4,
-            "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
+        "15e2741a97d17c7c11211cd33155a5fc": {
+            "name": "SizeEnum",
+            "size": 8,
+            "type": "7a2f32ee5b8a01b41c1806555f194fe7",
             "class": "Enum",
             "fields": [
                 {
-                    "name": "red",
-                    "value": -77
+                    "name": "a",
+                    "value": 1
                 },
                 {
-                    "name": "blue",
-                    "value": 14
+                    "name": "b",
+                    "value": 2
                 },
                 {
-                    "name": "green",
+                    "name": "c",
+                    "value": 3
+                }
+            ]
+        },
+        "20ef28a223bc4bb32b11358764322945": {
+            "type": "bool",
+            "size": 1,
+            "class": "Integer"
+        },
+        "d733aac69b7b6275ff814935599cede6": {
+            "name": "BoolEnum",
+            "size": 1,
+            "type": "20ef28a223bc4bb32b11358764322945",
+            "class": "Enum",
+            "fields": [
+                {
+                    "name": "a",
+                    "value": 1
+                },
+                {
+                    "name": "b",
                     "value": 0
+                }
+            ]
+        },
+        "dbef5bff425a8e631e2bc5fba7cc20e6": {
+            "type": "char",
+            "size": 1,
+            "class": "Integer"
+        },
+        "cac15ab977da00c5206209fcc5591d65": {
+            "name": "CharEnum",
+            "size": 1,
+            "type": "dbef5bff425a8e631e2bc5fba7cc20e6",
+            "class": "Enum",
+            "fields": [
+                {
+                    "name": "h",
+                    "value": 104
+                },
+                {
+                    "name": "i",
+                    "value": 105
+                },
+                {
+                    "name": "j",
+                    "value": 106
                 }
             ]
         },
@@ -161,74 +207,28 @@
                 }
             ]
         },
-        "dbef5bff425a8e631e2bc5fba7cc20e6": {
-            "type": "char",
-            "size": 1,
+        "9c67aaa6ef89dd4db8543f00bd1f472f": {
+            "type": "int",
+            "size": 4,
             "class": "Integer"
         },
-        "cac15ab977da00c5206209fcc5591d65": {
-            "name": "CharEnum",
-            "size": 1,
-            "type": "dbef5bff425a8e631e2bc5fba7cc20e6",
+        "0cf43b197cf3ea9f2525df5f81833d3c": {
+            "name": "ColorClassEnum",
+            "size": 4,
+            "type": "9c67aaa6ef89dd4db8543f00bd1f472f",
             "class": "Enum",
             "fields": [
                 {
-                    "name": "h",
-                    "value": 104
+                    "name": "red",
+                    "value": -77
                 },
                 {
-                    "name": "i",
-                    "value": 105
+                    "name": "blue",
+                    "value": 14
                 },
                 {
-                    "name": "j",
-                    "value": 106
-                }
-            ]
-        },
-        "20ef28a223bc4bb32b11358764322945": {
-            "type": "bool",
-            "size": 1,
-            "class": "Integer"
-        },
-        "d733aac69b7b6275ff814935599cede6": {
-            "name": "BoolEnum",
-            "size": 1,
-            "type": "20ef28a223bc4bb32b11358764322945",
-            "class": "Enum",
-            "fields": [
-                {
-                    "name": "a",
-                    "value": 1
-                },
-                {
-                    "name": "b",
+                    "name": "green",
                     "value": 0
-                }
-            ]
-        },
-        "7a2f32ee5b8a01b41c1806555f194fe7": {
-            "type": "long unsigned int",
-            "size": 8,
-            "class": "Integer"
-        },
-        "15e2741a97d17c7c11211cd33155a5fc": {
-            "name": "SizeEnum",
-            "size": 8,
-            "type": "7a2f32ee5b8a01b41c1806555f194fe7",
-            "class": "Enum",
-            "fields": [
-                {
-                    "name": "a",
-                    "value": 1
-                },
-                {
-                    "name": "b",
-                    "value": 2
-                },
-                {
-                    "name": "c",
-                    "value": 3
                 }
             ]
         }
