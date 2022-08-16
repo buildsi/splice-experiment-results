@@ -16,7 +16,11 @@ from matplotlib.patches import Patch
 here = os.getcwd()
 sys.path.insert(0, here)
 
+
 from helpers import create_results_table
+
+sns.set_theme(style="white")
+sns.set(font_scale=1.4)
 
 
 def get_parser():
@@ -130,7 +134,7 @@ def main():
 
     # Experiments have full metadata
     experiments = get_experiments(results_dir)
-    print("Found %s finished experimets." % len(experiments))
+    print("Found %s finished experiments." % len(experiments))
 
     # All breaks are False (meaning shouldn't work)
     df["truth"] = False
@@ -149,9 +153,7 @@ def main():
 
 
 def plot_heatmap(df, save_to=None):
-    sns.set_theme(style="white")
-
-    f, ax = plt.subplots(figsize=(30, 30))
+    f, ax = plt.subplots(figsize=(12, 12))
 
     # Generate a custom diverging colormap
     # cmap = sns.diverging_palette(230, 3, as_cmap=True)
