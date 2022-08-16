@@ -24,23 +24,24 @@ def read_json(filename):
     return content
 
 
-def create_results_table(experiments):
+def create_results_table(experiments, filename=False):
     """
     Given experiments data files, iterate through and create a results table that includes splice details
     """
-    df = pandas.DataFrame(
-        columns=[
-            "original",
-            "changed",
-            "analysis",
-            "compiler",
-            "seconds",
-            "predictor",
-            "prediction",
-        ]
-    )
+    columns = [
+        "original",
+        "changed",
+        "analysis",
+        "compiler",
+        "seconds",
+        "predictor",
+        "prediction",
+    ]
+    if filename:
+        columns.append("file")
+    df = pandas.DataFrame(columns=columns)
 
-    def add_prediction_row(original, changed, compiler, res, p, predictor):
+    def add_prediction_row(original, changed, compiler, res, p, predictor, e):
         """
         Given a result, add a row to the data frame.
         """
@@ -56,8 +57,7 @@ def create_results_table(experiments):
             analysis = "abidiff"
         elif predictor == "smeagle":
             analysis = "smeagle-stability-test"
-
-        df.loc[len(df.index), :] = [
+        row = [
             original,
             changed,
             analysis,
@@ -66,6 +66,9 @@ def create_results_table(experiments):
             predictor,
             prediction,
         ]
+        if filename:
+            row.append(e)
+        df.loc[len(df.index), :] = row
 
     # Of the splice successes, now look into results
     for e in experiments:
@@ -81,7 +84,9 @@ def create_results_table(experiments):
 
             for predictor, listing in res["predictions"].items():
                 for p in listing:
-                    add_prediction_row(original, changed, compiler, res, p, predictor)
+                    add_prediction_row(
+                        original, changed, compiler, res, p, predictor, e
+                    )
     return df
 
 
