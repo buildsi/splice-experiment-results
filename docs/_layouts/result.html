@@ -72,6 +72,32 @@ tr.group,
 tr.group:hover {
     background-color: #ddd !important;
 }
+
+ /* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+} 
 </style>
 
   <div class="container">
@@ -110,6 +136,11 @@ tr.group:hover {
         {% if page.svg %}<img src="{{ site.baseurl }}{{ page.url }}{{ page.svg }}" width="1200px"/>{% endif %}
         </div>
      </div>
+     <h2>Explore Results</h2>
+     <div id="explorer">
+     </div>
+     <br>
+     <hr>
 
     <div class="tag-list">
       {% for tag in page.tags %}
@@ -126,127 +157,42 @@ tr.group:hover {
 
 <script>
 {% if page.results %}$(document).ready(function() {
-
-  function open_log() {
-     var logname = $(this).attr('data-id')
-     var logtype = $(this).attr('data-type')
-     var logurl = $(this).attr('data-url').replace("{{ site.baseurl }}", "")
-     var url = "{{ site.url }}{{ site.baseurl }}/logviewer/?name=" + logname + "&type=" + logtype + "&url=" + logurl
-     console.log(url)
-     window.open(url, '_blank');     
-
-  }
   $.getJSON("{{ page.results }}", function(data) {
 
-     console.log(data)
-     var results = []
-
      // Flatten data
-     /*$.each(data, function(compiler, result){
-         new_result = {"compiler": compiler}
-         $.each(result['predictions'], function(i, r){
-             new_result[r['']]
-             result['tester'] = tester
-             result['prediction'] = result['prediction'] || null  
-             result['message'] = result['message'] || null  
-             result['return_code'] = result['return_code'] || null  
-             result['command'] = result['command'] || null  
-             if (result['binary']) {
-                 result['binary'] = result['binary'].split(/[\\/]/).pop();        
-             } else {
-                result['binary'] = null
-             }
-             if (result['lib']) {
-                 result['lib'] = result['lib'].split(/[\\/]/).pop();
-             } else {
-                 result['lib'] = null
-             }
-             results.push(result)
-         })
+     $.each(data, function(compiler, result){
+       entry = '<button class="accordion">' + compiler + '</button>\n<div class="panel">'
+       $.each(result['predictions'], function(predictor, listing){
+           $.each(listing, function(i, meta){
+               if ("message" in meta) {
+                 if ("command" in meta) {
+                    entry += '<h5>' + predictor + ' ' + meta['command'] + '</h5><p>'                            
+                 } else {
+                    entry += '<h5>' + predictor + '</h5><p>'             
+                 }
+                 entry += "<pre><code>" + meta['message'] + "</code></pre></p>"               
+              }
+           })
+       })
+       entry += '</div>'
+       $('#explorer').append(entry)
      })
-     console.log(results);
-     
-     var table = $('#results-table').DataTable({
-      data: results,
-        order: [[ 0, 'asc' ]],
-        columns: [{"className":      'dt-control',
-                     "orderable":      false,
-                     "data":           null,
-                     "defaultContent": '➕️'},
-                  { data: 'tester', title: "Tester" },
-                  { data: 'package', title: "Package" },
-                  { data: 'splice', title: "Splice" },
-                  { data: 'binary', title: "Binary" },
-                  { data: 'lib', title: "Library" },
-                  { data: 'prediction', title: "Prediction", "visible": false},
-                  { data: 'message', title: "Message", "visible": false},
-                  { data: 'return_code', title: "Return Code", "visible": false},
-                  { data: 'command', title: "Command", "visible": false},
-                  { data: 'result', title: "Outcome" },
-                ],
-      columnDefs: [
-          {"visible": false, "targets": [6,7,8,9]}
-        ],
 
-        "displayLength": 25,
+    var acc = document.getElementsByClassName("accordion");
+    var i;
 
-        // Color tests by status (pass or fail)
-        "rowCallback": function(row, data) {
-             if (data.prediction == true ) {
-                  $('td:eq(1)', row).css('background-color', 'darkgreen').css('color', 'white');
-             } else {             
-                  $('td:eq(1)', row).css('background-color', 'crimson').css('color', 'white');
-             }
-        },
-      });
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
 
-
-   table.on('click', 'td.dt-control', function () {
-        var tr = $(this).closest('tr');
-        var row = table.row( tr );
- 
-        if ( row.child.isShown() ) {
-            // This row is already open - close it
-            row.child.hide();
-            tr.removeClass('shown');
-        }
-        else {
-            // Open this row
-            row.child( format(row.data()) ).show();
-            tr.addClass('shown');
-        }
-     });*/
-
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+              panel.style.display = "none";
+          } else {
+              panel.style.display = "block";
+          }
+       });
+    } 
    });
-
-function format ( d ) {
-    // `d` is the original data object for the row
-    if (!d.return_code && !d.message && !d.command) {
-        return "<p>There is no additional data for this result.</p>"
-    }
-    cells = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
-    if (d.return_code != null && d.return_code != undefined && d.return_code != "") {
-
-        cells += '<tr>'+
-            '<td>Return Code</td>'+
-            '<td>'+d.return_code+'</td>'+
-        '</tr>'
-    }
-    if (d.message) {
-        cells += '<tr>'+
-            '<td>Message</td>'+
-            '<td><pre><code class="language-shell">'+ d.message+'</code></pre></td>'+
-        '</tr>'       
-    }
-    if (d.command) {
-        cells += '<tr>'+
-            '<td>Command</td>'+
-            '<td>'+ d.command +'</td>'+
-        '</tr>'    
-    }
-    cells += '</table>';
-    return cells
-}
-
 });{% endif %}
 </script>
