@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libemboleobj.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libemboleobj.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libemboleobj.so",
+                    "spliced_lib": "libemboleobj.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.4836273193359375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libemboleobj.so",
+                    "spliced_lib": "libemboleobj.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.71661376953125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.012419700622558594,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libemboleobj.so /__w/splice-experiment-runs/splice-experiment-runs/second/libemboleobj.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libemboleobj.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libemboleobj.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libemboleobj.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libemboleobj.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libemboleobj.so-abi-laboratory-libemboleobj-so-libemboleobj-so.html\nERROR: missed debug-info file libemboleobj.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libemboleobj.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.10103988647460938,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libemboleobj.so /__w/splice-experiment-runs/splice-experiment-runs/second/libemboleobj.so libemboleobj-so-libemboleobj-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libemboleobj.so-abi-laboratory-libemboleobj-so-libemboleobj-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libemboleobj.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libemboleobj.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libemboleobj.so": 262032,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libemboleobj.so": 262032
+            }
+        },
+        "experiment": "libemboleobj-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libemboleobj.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libemboleobj.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libqmltestplugin.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libqmltestplugin.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqmltestplugin.so",
+                    "spliced_lib": "libqmltestplugin.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.078315734863281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqmltestplugin.so",
+                    "spliced_lib": "libqmltestplugin.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.4373016357421875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009332895278930664,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libqmltestplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqmltestplugin.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqmltestplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqmltestplugin.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libqmltestplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libqmltestplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqmltestplugin.so-abi-laboratory-libqmltestplugin-so-libqmltestplugin-so.html\nERROR: missed debug-info file libqmltestplugin.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libqmltestplugin.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10894966125488281,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libqmltestplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqmltestplugin.so libqmltestplugin-so-libqmltestplugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqmltestplugin.so-abi-laboratory-libqmltestplugin-so-libqmltestplugin-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqmltestplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqmltestplugin.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libqmltestplugin.so": 76512,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libqmltestplugin.so": 76512
+            }
+        },
+        "experiment": "libqmltestplugin-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqmltestplugin.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqmltestplugin.so",
+        "different_libs": true
+    }
+]

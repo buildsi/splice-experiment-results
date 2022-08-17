@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libkdevdlgplugin.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libkdevdlgplugin.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdevdlgplugin.so",
+                    "spliced_lib": "libkdevdlgplugin.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.744529724121094e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdevdlgplugin.so",
+                    "spliced_lib": "libkdevdlgplugin.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.170967102050781e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008544921875,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libkdevdlgplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/libkdevdlgplugin.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libkdevdlgplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libkdevdlgplugin.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libkdevdlgplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libkdevdlgplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libkdevdlgplugin.so-abi-laboratory-libkdevdlgplugin-so-libkdevdlgplugin-so.html\nERROR: missed debug-info file libkdevdlgplugin.so-3.3.8b-90.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libkdevdlgplugin.so-3.3.8b-90.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.12419629096984863,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libkdevdlgplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/libkdevdlgplugin.so libkdevdlgplugin-so-libkdevdlgplugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libkdevdlgplugin.so-abi-laboratory-libkdevdlgplugin-so-libkdevdlgplugin-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libkdevdlgplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libkdevdlgplugin.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libkdevdlgplugin.so": 65664,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libkdevdlgplugin.so": 65664
+            }
+        },
+        "experiment": "libkdevdlgplugin-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libkdevdlgplugin.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libkdevdlgplugin.so",
+        "different_libs": true
+    }
+]

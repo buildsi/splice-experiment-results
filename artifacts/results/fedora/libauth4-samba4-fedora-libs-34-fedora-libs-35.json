@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libauth4-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libauth4-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libauth4-samba4.so",
+                    "spliced_lib": "libauth4-samba4.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.556510925292969e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libauth4-samba4.so",
+                    "spliced_lib": "libauth4-samba4.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.748603820800781e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009338855743408203,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libauth4-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/libauth4-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libauth4-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libauth4-samba4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libauth4-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libauth4-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libauth4-samba4.so-abi-laboratory-libauth4-samba4-so-libauth4-samba4-so.html\nERROR: missed debug-info file libauth4-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libauth4-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10027194023132324,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libauth4-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/libauth4-samba4.so libauth4-samba4-so-libauth4-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libauth4-samba4.so-abi-laboratory-libauth4-samba4-so-libauth4-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libauth4-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libauth4-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libauth4-samba4.so": 99264,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libauth4-samba4.so": 99264
+            }
+        },
+        "experiment": "libauth4-samba4-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libauth4-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libauth4-samba4.so",
+        "different_libs": true
+    }
+]

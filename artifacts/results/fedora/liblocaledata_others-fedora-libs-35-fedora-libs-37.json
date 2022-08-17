@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/liblocaledata_others.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/liblocaledata_others.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "liblocaledata_others.so",
+                    "spliced_lib": "liblocaledata_others.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0006668567657470703
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "liblocaledata_others.so",
+                    "spliced_lib": "liblocaledata_others.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.04359793663024902
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.022739648818969727,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/liblocaledata_others.so /__w/splice-experiment-runs/splice-experiment-runs/second/liblocaledata_others.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/liblocaledata_others.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/liblocaledata_others.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/liblocaledata_others.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/liblocaledata_others.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/liblocaledata_others.so-abi-laboratory-liblocaledata_others-so-liblocaledata_others-so.html\nERROR: missed debug-info file liblocaledata_others.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to liblocaledata_others.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.11892461776733398,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/liblocaledata_others.so /__w/splice-experiment-runs/splice-experiment-runs/second/liblocaledata_others.so liblocaledata_others-so-liblocaledata_others-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/liblocaledata_others.so-abi-laboratory-liblocaledata_others-so-liblocaledata_others-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/liblocaledata_others.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/liblocaledata_others.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/liblocaledata_others.so": 3599920,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/liblocaledata_others.so": 3599920
+            }
+        },
+        "experiment": "liblocaledata_others-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/liblocaledata_others.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/liblocaledata_others.so",
+        "different_libs": true
+    }
+]

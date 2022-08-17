@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstaudiotestsrc.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstaudiotestsrc.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstaudiotestsrc.so",
+                    "spliced_lib": "libgstaudiotestsrc.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.57763671875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstaudiotestsrc.so",
+                    "spliced_lib": "libgstaudiotestsrc.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.7220458984375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008701801300048828,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libgstaudiotestsrc.so /__w/splice-experiment-runs/splice-experiment-runs/second/libgstaudiotestsrc.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstaudiotestsrc.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstaudiotestsrc.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libgstaudiotestsrc.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libgstaudiotestsrc.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libgstaudiotestsrc.so-abi-laboratory-libgstaudiotestsrc-so-libgstaudiotestsrc-so.html\nERROR: missed debug-info file libgstaudiotestsrc.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libgstaudiotestsrc.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.09723615646362305,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libgstaudiotestsrc.so /__w/splice-experiment-runs/splice-experiment-runs/second/libgstaudiotestsrc.so libgstaudiotestsrc-so-libgstaudiotestsrc-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libgstaudiotestsrc.so-abi-laboratory-libgstaudiotestsrc-so-libgstaudiotestsrc-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstaudiotestsrc.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstaudiotestsrc.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstaudiotestsrc.so": 57872,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstaudiotestsrc.so": 57872
+            }
+        },
+        "experiment": "libgstaudiotestsrc-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstaudiotestsrc.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstaudiotestsrc.so",
+        "different_libs": true
+    }
+]

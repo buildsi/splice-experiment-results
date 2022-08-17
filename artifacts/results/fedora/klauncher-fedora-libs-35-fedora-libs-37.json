@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/klauncher.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/klauncher.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "klauncher.so",
+                    "spliced_lib": "klauncher.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.1682510375976562e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "klauncher.so",
+                    "spliced_lib": "klauncher.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.7220458984375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.00837850570678711,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/klauncher.so /__w/splice-experiment-runs/splice-experiment-runs/second/klauncher.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/klauncher.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/klauncher.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/klauncher.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/klauncher.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/klauncher.so-abi-laboratory-klauncher-so-klauncher-so.html\nERROR: missed debug-info file klauncher.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to klauncher.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.07882213592529297,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/klauncher.so /__w/splice-experiment-runs/splice-experiment-runs/second/klauncher.so klauncher-so-klauncher-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/klauncher.so-abi-laboratory-klauncher-so-klauncher-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/klauncher.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/klauncher.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/klauncher.so": 15616,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/klauncher.so": 15616
+            }
+        },
+        "experiment": "klauncher-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/klauncher.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/klauncher.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libgpg-error.so.0.32.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libgpg-error.so.0.32.2"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgpg-error.so.0.32.2",
+                    "spliced_lib": "libgpg-error.so.0.32.2",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.937980651855469e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgpg-error.so.0.32.2",
+                    "spliced_lib": "libgpg-error.so.0.32.2",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00023818016052246094
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.011126041412353516,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libgpg-error.so.0.32.2 /__w/splice-experiment-runs/splice-experiment-runs/second/libgpg-error.so.0.32.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgpg-error.so.0.32.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgpg-error.so.0.32.2",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libgpg-error.so.0.32.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libgpg-error.so.0.32.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libgpg-error.so.0.32.2-abi-laboratory-libgpg-error-so-0-32-2-libgpg-error-so-0-32-2.html\nERROR: missed debug-info file libgpg-error.so.0.32.2-1.44-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libgpg-error.so.0.32.2-1.44-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10193204879760742,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libgpg-error.so.0.32.2 /__w/splice-experiment-runs/splice-experiment-runs/second/libgpg-error.so.0.32.2 libgpg-error-so-0-32-2-libgpg-error-so-0-32-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libgpg-error.so.0.32.2-abi-laboratory-libgpg-error-so-0-32-2-libgpg-error-so-0-32-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgpg-error.so.0.32.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgpg-error.so.0.32.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libgpg-error.so.0.32.2": 153744,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libgpg-error.so.0.32.2": 153744
+            }
+        },
+        "experiment": "libgpg-error-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgpg-error.so.0.32.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgpg-error.so.0.32.2",
+        "different_libs": true
+    }
+]

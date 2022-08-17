@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libgpgmepp.so.6.12.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libgpgmepp.so.6.12.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgpgmepp.so.6.12.1",
+                    "spliced_lib": "libgpgmepp.so.6.12.1",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00027441978454589844
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgpgmepp.so.6.12.1",
+                    "spliced_lib": "libgpgmepp.so.6.12.1",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.006570339202880859
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.01604175567626953,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libgpgmepp.so.6.12.1 /__w/splice-experiment-runs/splice-experiment-runs/second/libgpgmepp.so.6.12.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgpgmepp.so.6.12.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgpgmepp.so.6.12.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libgpgmepp.so.6.12.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libgpgmepp.so.6.12.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libgpgmepp.so.6.12.1-abi-laboratory-libgpgmepp-so-6-12-1-libgpgmepp-so-6-12-1.html\nERROR: missed debug-info file libgpgmepp.so.6.12.1-1.15.1-6.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libgpgmepp.so.6.12.1-1.15.1-6.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibgpgme.so.11: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.11633849143981934,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libgpgmepp.so.6.12.1 /__w/splice-experiment-runs/splice-experiment-runs/second/libgpgmepp.so.6.12.1 libgpgmepp-so-6-12-1-libgpgmepp-so-6-12-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libgpgmepp.so.6.12.1-abi-laboratory-libgpgmepp-so-6-12-1-libgpgmepp-so-6-12-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgpgmepp.so.6.12.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgpgmepp.so.6.12.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libgpgmepp.so.6.12.1": 389056,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libgpgmepp.so.6.12.1": 389056
+            }
+        },
+        "experiment": "libgpgmepp-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgpgmepp.so.6.12.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgpgmepp.so.6.12.1",
+        "different_libs": true
+    }
+]

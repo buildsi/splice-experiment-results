@@ -139,6 +139,7 @@ def get_artifacts(repository, days=10, runid=None):
     """
     Retrieve artifacts for a repository.
     """
+    runid = "2874605103"
     # Check if the branch already has a pull request open
     results = []
     page = 1
@@ -239,6 +240,7 @@ def download_artifacts(artifacts, output, days):
 
         if "cache" in artifact["name"]:
             save_to = os.path.join(output, "cache")
+        # Fedora results will be prefixed with fedora
         else:
             save_to = os.path.join(output, "results")
 
@@ -246,7 +248,10 @@ def download_artifacts(artifacts, output, days):
         for filename in recursive_find(tmp):
             relpath = filename.replace(tmp, "").strip(os.sep)
             finalpath = os.path.join(save_to, relpath)
-
+ 
+            if "fedora" in artifact['name'] and "fedora" not in relpath:
+                continue 
+                          
             # If the file doesn't have size, don't add
             size = get_size(filename)
             if size == 0:

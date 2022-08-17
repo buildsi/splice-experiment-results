@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstplayback.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstplayback.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstplayback.so",
+                    "spliced_lib": "libgstplayback.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00013709068298339844
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstplayback.so",
+                    "spliced_lib": "libgstplayback.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.867813110351562e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.011403799057006836,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libgstplayback.so /__w/splice-experiment-runs/splice-experiment-runs/second/libgstplayback.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstplayback.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstplayback.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libgstplayback.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libgstplayback.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libgstplayback.so-abi-laboratory-libgstplayback-so-libgstplayback-so.html\nERROR: missed debug-info file libgstplayback.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libgstplayback.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10547041893005371,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libgstplayback.so /__w/splice-experiment-runs/splice-experiment-runs/second/libgstplayback.so libgstplayback-so-libgstplayback-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libgstplayback.so-abi-laboratory-libgstplayback-so-libgstplayback-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstplayback.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstplayback.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstplayback.so": 644600,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstplayback.so": 644600
+            }
+        },
+        "experiment": "libgstplayback-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstplayback.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstplayback.so",
+        "different_libs": true
+    }
+]

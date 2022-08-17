@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libembobj.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libembobj.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libembobj.so",
+                    "spliced_lib": "libembobj.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.103515625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libembobj.so",
+                    "spliced_lib": "libembobj.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5510787963867188e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.01103830337524414,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libembobj.so /__w/splice-experiment-runs/splice-experiment-runs/second/libembobj.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libembobj.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libembobj.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libembobj.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libembobj.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libembobj.so-abi-laboratory-libembobj-so-libembobj-so.html\nERROR: missed debug-info file libembobj.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libembobj.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.10223221778869629,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libembobj.so /__w/splice-experiment-runs/splice-experiment-runs/second/libembobj.so libembobj-so-libembobj-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libembobj.so-abi-laboratory-libembobj-so-libembobj-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libembobj.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libembobj.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libembobj.so": 427552,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libembobj.so": 427552
+            }
+        },
+        "experiment": "libembobj-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libembobj.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libembobj.so",
+        "different_libs": true
+    }
+]

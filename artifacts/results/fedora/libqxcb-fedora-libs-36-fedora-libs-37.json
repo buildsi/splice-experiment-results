@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libqxcb.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libqxcb.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqxcb.so",
+                    "spliced_lib": "libqxcb.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.574920654296875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqxcb.so",
+                    "spliced_lib": "libqxcb.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.67572021484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.00846242904663086,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libqxcb.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqxcb.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqxcb.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqxcb.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libqxcb.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libqxcb.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqxcb.so-abi-laboratory-libqxcb-so-libqxcb-so.html\nERROR: missed debug-info file libqxcb.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libqxcb.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.1035158634185791,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libqxcb.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqxcb.so libqxcb-so-libqxcb-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqxcb.so-abi-laboratory-libqxcb-so-libqxcb-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqxcb.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqxcb.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libqxcb.so": 20976,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libqxcb.so": 20976
+            }
+        },
+        "experiment": "libqxcb-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqxcb.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqxcb.so",
+        "different_libs": true
+    }
+]

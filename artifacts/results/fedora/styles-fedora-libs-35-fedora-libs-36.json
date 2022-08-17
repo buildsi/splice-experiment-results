@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/styles.sod"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/styles.sod"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "styles.sod",
+                    "spliced_lib": "styles.sod",
+                    "command": "missing-previously-found-symbols",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 6.198883056640625e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "styles.sod",
+                    "spliced_lib": "styles.sod",
+                    "command": "missing-previously-found-exports",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 1.1920928955078125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/styles.sod\n",
+                    "return_code": 1,
+                    "seconds": 0.007529497146606445,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/styles.sod /__w/splice-experiment-runs/splice-experiment-runs/second/styles.sod",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/styles.sod",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/styles.sod",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/styles.sod\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/styles.sod\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/styles.sod-abi-laboratory-styles-sod-styles-sod.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
+                    "return_code": 12,
+                    "seconds": 0.0955054759979248,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/styles.sod /__w/splice-experiment-runs/splice-experiment-runs/second/styles.sod styles-sod-styles-sod /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/styles.sod-abi-laboratory-styles-sod-styles-sod.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/styles.sod",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/styles.sod",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/styles.sod": 1708,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/styles.sod": 1708
+            }
+        },
+        "experiment": "styles-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/styles.sod",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/styles.sod",
+        "different_libs": true
+    }
+]

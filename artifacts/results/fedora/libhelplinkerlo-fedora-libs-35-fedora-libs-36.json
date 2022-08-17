@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libhelplinkerlo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libhelplinkerlo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libhelplinkerlo.so",
+                    "spliced_lib": "libhelplinkerlo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.555152893066406e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libhelplinkerlo.so",
+                    "spliced_lib": "libhelplinkerlo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.1444091796875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.013115644454956055,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libhelplinkerlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libhelplinkerlo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libhelplinkerlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libhelplinkerlo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libhelplinkerlo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libhelplinkerlo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libhelplinkerlo.so-abi-laboratory-libhelplinkerlo-so-libhelplinkerlo-so.html\nERROR: missed debug-info file libhelplinkerlo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libhelplinkerlo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibclucene-core.so.1: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.09709739685058594,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libhelplinkerlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libhelplinkerlo.so libhelplinkerlo-so-libhelplinkerlo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libhelplinkerlo.so-abi-laboratory-libhelplinkerlo-so-libhelplinkerlo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libhelplinkerlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libhelplinkerlo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libhelplinkerlo.so": 134440,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libhelplinkerlo.so": 134440
+            }
+        },
+        "experiment": "libhelplinkerlo-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libhelplinkerlo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libhelplinkerlo.so",
+        "different_libs": true
+    }
+]

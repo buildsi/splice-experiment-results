@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/kitemviews5widgets.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/kitemviews5widgets.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kitemviews5widgets.so",
+                    "spliced_lib": "kitemviews5widgets.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.9325485229492188e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kitemviews5widgets.so",
+                    "spliced_lib": "kitemviews5widgets.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.198883056640625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008271455764770508,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/kitemviews5widgets.so /__w/splice-experiment-runs/splice-experiment-runs/second/kitemviews5widgets.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kitemviews5widgets.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kitemviews5widgets.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/kitemviews5widgets.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/kitemviews5widgets.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kitemviews5widgets.so-abi-laboratory-kitemviews5widgets-so-kitemviews5widgets-so.html\nERROR: missed debug-info file kitemviews5widgets.so-5.96.0-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to kitemviews5widgets.so-5.96.0-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08293747901916504,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/kitemviews5widgets.so /__w/splice-experiment-runs/splice-experiment-runs/second/kitemviews5widgets.so kitemviews5widgets-so-kitemviews5widgets-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kitemviews5widgets.so-abi-laboratory-kitemviews5widgets-so-kitemviews5widgets-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kitemviews5widgets.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kitemviews5widgets.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/kitemviews5widgets.so": 46216,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/kitemviews5widgets.so": 46216
+            }
+        },
+        "experiment": "kitemviews5widgets-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/kitemviews5widgets.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/kitemviews5widgets.so",
+        "different_libs": true
+    }
+]

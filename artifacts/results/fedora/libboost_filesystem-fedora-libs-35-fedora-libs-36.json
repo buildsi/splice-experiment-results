@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libboost_filesystem.so.1.76.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libboost_filesystem.so.1.76.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libboost_filesystem.so.1.76.0",
+                    "spliced_lib": "libboost_filesystem.so.1.76.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.605552673339844e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libboost_filesystem.so.1.76.0",
+                    "spliced_lib": "libboost_filesystem.so.1.76.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001785755157470703
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.011260747909545898,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libboost_filesystem.so.1.76.0 /__w/splice-experiment-runs/splice-experiment-runs/second/libboost_filesystem.so.1.76.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libboost_filesystem.so.1.76.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libboost_filesystem.so.1.76.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libboost_filesystem.so.1.76.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libboost_filesystem.so.1.76.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libboost_filesystem.so.1.76.0-abi-laboratory-libboost_filesystem-so-1-76-0-libboost_filesystem-so-1-76-0.html\nERROR: missed debug-info file libboost_filesystem.so.1.76.0-1.76.0-12.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libboost_filesystem.so.1.76.0-1.76.0-12.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.1069340705871582,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libboost_filesystem.so.1.76.0 /__w/splice-experiment-runs/splice-experiment-runs/second/libboost_filesystem.so.1.76.0 libboost_filesystem-so-1-76-0-libboost_filesystem-so-1-76-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libboost_filesystem.so.1.76.0-abi-laboratory-libboost_filesystem-so-1-76-0-libboost_filesystem-so-1-76-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libboost_filesystem.so.1.76.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libboost_filesystem.so.1.76.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libboost_filesystem.so.1.76.0": 129672,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libboost_filesystem.so.1.76.0": 129672
+            }
+        },
+        "experiment": "libboost_filesystem-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libboost_filesystem.so.1.76.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libboost_filesystem.so.1.76.0",
+        "different_libs": true
+    }
+]

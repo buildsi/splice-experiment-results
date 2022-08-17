@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libdbus-1.so.3.32.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libdbus-1.so.3.32.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdbus-1.so.3.32.0",
+                    "spliced_lib": "libdbus-1.so.3.32.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00015926361083984375
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdbus-1.so.3.32.0",
+                    "spliced_lib": "libdbus-1.so.3.32.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0026624202728271484
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.013124465942382812,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libdbus-1.so.3.32.0 /__w/splice-experiment-runs/splice-experiment-runs/second/libdbus-1.so.3.32.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libdbus-1.so.3.32.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libdbus-1.so.3.32.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libdbus-1.so.3.32.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libdbus-1.so.3.32.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libdbus-1.so.3.32.0-abi-laboratory-libdbus-1-so-3-32-0-libdbus-1-so-3-32-0.html\nERROR: missed debug-info file libdbus-1.so.3.32.0-1.14.0-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libdbus-1.so.3.32.0-1.14.0-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10839724540710449,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libdbus-1.so.3.32.0 /__w/splice-experiment-runs/splice-experiment-runs/second/libdbus-1.so.3.32.0 libdbus-1-so-3-32-0-libdbus-1-so-3-32-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libdbus-1.so.3.32.0-abi-laboratory-libdbus-1-so-3-32-0-libdbus-1-so-3-32-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libdbus-1.so.3.32.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libdbus-1.so.3.32.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libdbus-1.so.3.32.0": 353344,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libdbus-1.so.3.32.0": 353344
+            }
+        },
+        "experiment": "libdbus-1-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libdbus-1.so.3.32.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libdbus-1.so.3.32.0",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/capi.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/capi.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "capi.so",
+                    "spliced_lib": "capi.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.775161743164062e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "capi.so",
+                    "spliced_lib": "capi.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.4836273193359375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0066678524017333984,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/capi.so /__w/splice-experiment-runs/splice-experiment-runs/second/capi.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/capi.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/capi.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/capi.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/capi.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/capi.so-abi-laboratory-capi-so-capi-so.html\nERROR: missed debug-info file capi.so-3.0.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to capi.so-3.0.2-4.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.07958817481994629,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/capi.so /__w/splice-experiment-runs/splice-experiment-runs/second/capi.so capi-so-capi-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/capi.so-abi-laboratory-capi-so-capi-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/capi.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/capi.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/capi.so": 15648,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/capi.so": 15648
+            }
+        },
+        "experiment": "capi-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/capi.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/capi.so",
+        "different_libs": true
+    }
+]

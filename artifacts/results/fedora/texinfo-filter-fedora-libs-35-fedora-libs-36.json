@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/texinfo-filter.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/texinfo-filter.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "texinfo-filter.so",
+                    "spliced_lib": "texinfo-filter.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.0040740966796875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "texinfo-filter.so",
+                    "spliced_lib": "texinfo-filter.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.298324584960938e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.011352777481079102,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/texinfo-filter.so /__w/splice-experiment-runs/splice-experiment-runs/second/texinfo-filter.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/texinfo-filter.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/texinfo-filter.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/texinfo-filter.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/texinfo-filter.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/texinfo-filter.so-abi-laboratory-texinfo-filter-so-texinfo-filter-so.html\nERROR: missed debug-info file texinfo-filter.so-0.60.8-9.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to texinfo-filter.so-0.60.8-9.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.10562491416931152,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/texinfo-filter.so /__w/splice-experiment-runs/splice-experiment-runs/second/texinfo-filter.so texinfo-filter-so-texinfo-filter-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/texinfo-filter.so-abi-laboratory-texinfo-filter-so-texinfo-filter-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/texinfo-filter.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/texinfo-filter.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/texinfo-filter.so": 23928,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/texinfo-filter.so": 23928
+            }
+        },
+        "experiment": "texinfo-filter-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/texinfo-filter.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/texinfo-filter.so",
+        "different_libs": true
+    }
+]

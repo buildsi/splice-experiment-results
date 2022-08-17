@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/material.soc"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/material.soc"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "material.soc",
+                    "spliced_lib": "material.soc",
+                    "command": "missing-previously-found-symbols",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 6.4373016357421875e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "material.soc",
+                    "spliced_lib": "material.soc",
+                    "command": "missing-previously-found-exports",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 1.1920928955078125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/material.soc\n",
+                    "return_code": 1,
+                    "seconds": 0.0066509246826171875,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/material.soc /__w/splice-experiment-runs/splice-experiment-runs/second/material.soc",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/material.soc",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/material.soc",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/material.soc\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/material.soc\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/material.soc-abi-laboratory-material-soc-material-soc.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
+                    "return_code": 12,
+                    "seconds": 0.09921145439147949,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/material.soc /__w/splice-experiment-runs/splice-experiment-runs/second/material.soc material-soc-material-soc /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/material.soc-abi-laboratory-material-soc-material-soc.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/material.soc",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/material.soc",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/material.soc": 15085,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/material.soc": 15085
+            }
+        },
+        "experiment": "material-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/material.soc",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/material.soc",
+        "different_libs": true
+    }
+]

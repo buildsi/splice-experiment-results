@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libsharedimageplugin.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libsharedimageplugin.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsharedimageplugin.so",
+                    "spliced_lib": "libsharedimageplugin.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.935264587402344e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsharedimageplugin.so",
+                    "spliced_lib": "libsharedimageplugin.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.9141387939453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.010230302810668945,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libsharedimageplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/libsharedimageplugin.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libsharedimageplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libsharedimageplugin.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libsharedimageplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libsharedimageplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libsharedimageplugin.so-abi-laboratory-libsharedimageplugin-so-libsharedimageplugin-so.html\nERROR: missed debug-info file libsharedimageplugin.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libsharedimageplugin.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.09258675575256348,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libsharedimageplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/libsharedimageplugin.so libsharedimageplugin-so-libsharedimageplugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libsharedimageplugin.so-abi-laboratory-libsharedimageplugin-so-libsharedimageplugin-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libsharedimageplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libsharedimageplugin.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libsharedimageplugin.so": 46768,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libsharedimageplugin.so": 46768
+            }
+        },
+        "experiment": "libsharedimageplugin-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libsharedimageplugin.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libsharedimageplugin.so",
+        "different_libs": true
+    }
+]

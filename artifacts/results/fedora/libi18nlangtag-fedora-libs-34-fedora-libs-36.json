@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libi18nlangtag.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libi18nlangtag.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libi18nlangtag.so",
+                    "spliced_lib": "libi18nlangtag.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.270408630371094e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libi18nlangtag.so",
+                    "spliced_lib": "libi18nlangtag.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00011277198791503906
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009273290634155273,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libi18nlangtag.so /__w/splice-experiment-runs/splice-experiment-runs/second/libi18nlangtag.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libi18nlangtag.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libi18nlangtag.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libi18nlangtag.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libi18nlangtag.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libi18nlangtag.so-abi-laboratory-libi18nlangtag-so-libi18nlangtag-so.html\nERROR: missed debug-info file libi18nlangtag.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libi18nlangtag.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibicuuc.so.69: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.08753013610839844,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libi18nlangtag.so /__w/splice-experiment-runs/splice-experiment-runs/second/libi18nlangtag.so libi18nlangtag-so-libi18nlangtag-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libi18nlangtag.so-abi-laboratory-libi18nlangtag-so-libi18nlangtag-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libi18nlangtag.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libi18nlangtag.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libi18nlangtag.so": 150992,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libi18nlangtag.so": 150992
+            }
+        },
+        "experiment": "libi18nlangtag-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libi18nlangtag.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libi18nlangtag.so",
+        "different_libs": true
+    }
+]

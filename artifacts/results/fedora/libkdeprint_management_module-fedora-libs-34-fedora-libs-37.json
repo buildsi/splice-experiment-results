@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libkdeprint_management_module.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libkdeprint_management_module.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdeprint_management_module.so",
+                    "spliced_lib": "libkdeprint_management_module.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5272369384765625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdeprint_management_module.so",
+                    "spliced_lib": "libkdeprint_management_module.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.9141387939453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0068933963775634766,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libkdeprint_management_module.so /__w/splice-experiment-runs/splice-experiment-runs/second/libkdeprint_management_module.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libkdeprint_management_module.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libkdeprint_management_module.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libkdeprint_management_module.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libkdeprint_management_module.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libkdeprint_management_module.so-abi-laboratory-libkdeprint_management_module-so-libkdeprint_management_module-so.html\nERROR: missed debug-info file libkdeprint_management_module.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libkdeprint_management_module.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkdeprint_management.so.4: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.08434581756591797,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libkdeprint_management_module.so /__w/splice-experiment-runs/splice-experiment-runs/second/libkdeprint_management_module.so libkdeprint_management_module-so-libkdeprint_management_module-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libkdeprint_management_module.so-abi-laboratory-libkdeprint_management_module-so-libkdeprint_management_module-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libkdeprint_management_module.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libkdeprint_management_module.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libkdeprint_management_module.so": 20160,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libkdeprint_management_module.so": 20160
+            }
+        },
+        "experiment": "libkdeprint_management_module-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libkdeprint_management_module.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libkdeprint_management_module.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libfsstoragelo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libfsstoragelo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libfsstoragelo.so",
+                    "spliced_lib": "libfsstoragelo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.1975250244140625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libfsstoragelo.so",
+                    "spliced_lib": "libfsstoragelo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.193450927734375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009588479995727539,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libfsstoragelo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libfsstoragelo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libfsstoragelo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libfsstoragelo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libfsstoragelo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libfsstoragelo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libfsstoragelo.so-abi-laboratory-libfsstoragelo-so-libfsstoragelo-so.html\nERROR: missed debug-info file libfsstoragelo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libfsstoragelo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.11159610748291016,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libfsstoragelo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libfsstoragelo.so libfsstoragelo-so-libfsstoragelo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libfsstoragelo.so-abi-laboratory-libfsstoragelo-so-libfsstoragelo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libfsstoragelo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libfsstoragelo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libfsstoragelo.so": 174000,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libfsstoragelo.so": 174000
+            }
+        },
+        "experiment": "libfsstoragelo-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libfsstoragelo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libfsstoragelo.so",
+        "different_libs": true
+    }
+]

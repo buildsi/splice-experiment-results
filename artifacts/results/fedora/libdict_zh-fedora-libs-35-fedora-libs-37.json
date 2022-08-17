@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libdict_zh.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libdict_zh.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdict_zh.so",
+                    "spliced_lib": "libdict_zh.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.8358230590820312e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdict_zh.so",
+                    "spliced_lib": "libdict_zh.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.62939453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008264303207397461,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libdict_zh.so /__w/splice-experiment-runs/splice-experiment-runs/second/libdict_zh.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libdict_zh.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libdict_zh.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libdict_zh.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libdict_zh.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libdict_zh.so-abi-laboratory-libdict_zh-so-libdict_zh-so.html\nERROR: missed debug-info file libdict_zh.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libdict_zh.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08503484725952148,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libdict_zh.so /__w/splice-experiment-runs/splice-experiment-runs/second/libdict_zh.so libdict_zh-so-libdict_zh-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libdict_zh.so-abi-laboratory-libdict_zh-so-libdict_zh-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libdict_zh.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libdict_zh.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libdict_zh.so": 2276944,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libdict_zh.so": 2276944
+            }
+        },
+        "experiment": "libdict_zh-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libdict_zh.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libdict_zh.so",
+        "different_libs": true
+    }
+]

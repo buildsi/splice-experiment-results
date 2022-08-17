@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kdeprintd.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/kded_kdeprintd.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kded_kdeprintd.so",
+                    "spliced_lib": "kded_kdeprintd.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00010251998901367188
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kded_kdeprintd.so",
+                    "spliced_lib": "kded_kdeprintd.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.9577484130859375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0076291561126708984,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/kded_kdeprintd.so /__w/splice-experiment-runs/splice-experiment-runs/second/kded_kdeprintd.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kded_kdeprintd.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kdeprintd.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/kded_kdeprintd.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/kded_kdeprintd.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kdeprintd.so-abi-laboratory-kded_kdeprintd-so-kded_kdeprintd-so.html\nERROR: missed debug-info file kded_kdeprintd.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to kded_kdeprintd.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.08658146858215332,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/kded_kdeprintd.so /__w/splice-experiment-runs/splice-experiment-runs/second/kded_kdeprintd.so kded_kdeprintd-so-kded_kdeprintd-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kdeprintd.so-abi-laboratory-kded_kdeprintd-so-kded_kdeprintd-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kded_kdeprintd.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kdeprintd.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kdeprintd.so": 77912,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/kded_kdeprintd.so": 77912
+            }
+        },
+        "experiment": "kded_kdeprintd-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/kded_kdeprintd.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kdeprintd.so",
+        "different_libs": true
+    }
+]

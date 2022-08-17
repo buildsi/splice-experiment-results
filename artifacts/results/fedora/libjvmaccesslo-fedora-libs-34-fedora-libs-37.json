@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libjvmaccesslo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libjvmaccesslo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjvmaccesslo.so",
+                    "spliced_lib": "libjvmaccesslo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.00543212890625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjvmaccesslo.so",
+                    "spliced_lib": "libjvmaccesslo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.9325485229492188e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.006905555725097656,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libjvmaccesslo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libjvmaccesslo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libjvmaccesslo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libjvmaccesslo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libjvmaccesslo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libjvmaccesslo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libjvmaccesslo.so-abi-laboratory-libjvmaccesslo-so-libjvmaccesslo-so.html\nERROR: missed debug-info file libjvmaccesslo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libjvmaccesslo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.08614730834960938,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libjvmaccesslo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libjvmaccesslo.so libjvmaccesslo-so-libjvmaccesslo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libjvmaccesslo.so-abi-laboratory-libjvmaccesslo-so-libjvmaccesslo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libjvmaccesslo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libjvmaccesslo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libjvmaccesslo.so": 37584,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libjvmaccesslo.so": 37584
+            }
+        },
+        "experiment": "libjvmaccesslo-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libjvmaccesslo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libjvmaccesslo.so",
+        "different_libs": true
+    }
+]

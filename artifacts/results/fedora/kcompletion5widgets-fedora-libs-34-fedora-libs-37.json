@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/kcompletion5widgets.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/kcompletion5widgets.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kcompletion5widgets.so",
+                    "spliced_lib": "kcompletion5widgets.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5033950805664062e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kcompletion5widgets.so",
+                    "spliced_lib": "kcompletion5widgets.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.4836273193359375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0068895816802978516,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/kcompletion5widgets.so /__w/splice-experiment-runs/splice-experiment-runs/second/kcompletion5widgets.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kcompletion5widgets.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kcompletion5widgets.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/kcompletion5widgets.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/kcompletion5widgets.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kcompletion5widgets.so-abi-laboratory-kcompletion5widgets-so-kcompletion5widgets-so.html\nERROR: missed debug-info file kcompletion5widgets.so-5.96.0-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to kcompletion5widgets.so-5.96.0-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08007001876831055,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/kcompletion5widgets.so /__w/splice-experiment-runs/splice-experiment-runs/second/kcompletion5widgets.so kcompletion5widgets-so-kcompletion5widgets-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kcompletion5widgets.so-abi-laboratory-kcompletion5widgets-so-kcompletion5widgets-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kcompletion5widgets.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kcompletion5widgets.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/kcompletion5widgets.so": 37648,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/kcompletion5widgets.so": 37648
+            }
+        },
+        "experiment": "kcompletion5widgets-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/kcompletion5widgets.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/kcompletion5widgets.so",
+        "different_libs": true
+    }
+]

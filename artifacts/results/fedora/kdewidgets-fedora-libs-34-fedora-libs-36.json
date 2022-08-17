@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/kdewidgets.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/kdewidgets.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kdewidgets.so",
+                    "spliced_lib": "kdewidgets.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.7697296142578125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kdewidgets.so",
+                    "spliced_lib": "kdewidgets.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.0013580322265625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008481979370117188,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/kdewidgets.so /__w/splice-experiment-runs/splice-experiment-runs/second/kdewidgets.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kdewidgets.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kdewidgets.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/kdewidgets.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/kdewidgets.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kdewidgets.so-abi-laboratory-kdewidgets-so-kdewidgets-so.html\nERROR: missed debug-info file kdewidgets.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to kdewidgets.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.08636808395385742,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/kdewidgets.so /__w/splice-experiment-runs/splice-experiment-runs/second/kdewidgets.so kdewidgets-so-kdewidgets-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kdewidgets.so-abi-laboratory-kdewidgets-so-kdewidgets-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kdewidgets.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kdewidgets.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/kdewidgets.so": 77864,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/kdewidgets.so": 77864
+            }
+        },
+        "experiment": "kdewidgets-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/kdewidgets.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/kdewidgets.so",
+        "different_libs": true
+    }
+]

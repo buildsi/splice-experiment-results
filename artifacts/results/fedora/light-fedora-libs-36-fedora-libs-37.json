@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/light.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/light.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "light.so",
+                    "spliced_lib": "light.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.890296936035156e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "light.so",
+                    "spliced_lib": "light.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.673004150390625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009707450866699219,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/light.so /__w/splice-experiment-runs/splice-experiment-runs/second/light.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/light.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/light.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/light.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/light.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/light.so-abi-laboratory-light-so-light-so.html\nERROR: missed debug-info file light.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to light.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkdefx.so.4: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.1107950210571289,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/light.so /__w/splice-experiment-runs/splice-experiment-runs/second/light.so light-so-light-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/light.so-abi-laboratory-light-so-light-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/light.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/light.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/light.so": 98856,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/light.so": 98856
+            }
+        },
+        "experiment": "light-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/light.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/light.so",
+        "different_libs": true
+    }
+]

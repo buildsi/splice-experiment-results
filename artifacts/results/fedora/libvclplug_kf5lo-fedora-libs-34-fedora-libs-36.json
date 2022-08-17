@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libvclplug_kf5lo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libvclplug_kf5lo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvclplug_kf5lo.so",
+                    "spliced_lib": "libvclplug_kf5lo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.72747802734375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvclplug_kf5lo.so",
+                    "spliced_lib": "libvclplug_kf5lo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.7220458984375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009222269058227539,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libvclplug_kf5lo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libvclplug_kf5lo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libvclplug_kf5lo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libvclplug_kf5lo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libvclplug_kf5lo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libvclplug_kf5lo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libvclplug_kf5lo.so-abi-laboratory-libvclplug_kf5lo-so-libvclplug_kf5lo-so.html\nERROR: missed debug-info file libvclplug_kf5lo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libvclplug_kf5lo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08222293853759766,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libvclplug_kf5lo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libvclplug_kf5lo.so libvclplug_kf5lo-so-libvclplug_kf5lo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libvclplug_kf5lo.so-abi-laboratory-libvclplug_kf5lo-so-libvclplug_kf5lo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libvclplug_kf5lo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libvclplug_kf5lo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libvclplug_kf5lo.so": 97112,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libvclplug_kf5lo.so": 97112
+            }
+        },
+        "experiment": "libvclplug_kf5lo-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libvclplug_kf5lo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libvclplug_kf5lo.so",
+        "different_libs": true
+    }
+]

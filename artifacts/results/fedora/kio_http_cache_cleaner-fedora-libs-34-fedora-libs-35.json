@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/kio_http_cache_cleaner.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/kio_http_cache_cleaner.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kio_http_cache_cleaner.so",
+                    "spliced_lib": "kio_http_cache_cleaner.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.5020370483398438e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kio_http_cache_cleaner.so",
+                    "spliced_lib": "kio_http_cache_cleaner.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.67572021484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008167028427124023,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/kio_http_cache_cleaner.so /__w/splice-experiment-runs/splice-experiment-runs/second/kio_http_cache_cleaner.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kio_http_cache_cleaner.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kio_http_cache_cleaner.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/kio_http_cache_cleaner.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/kio_http_cache_cleaner.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kio_http_cache_cleaner.so-abi-laboratory-kio_http_cache_cleaner-so-kio_http_cache_cleaner-so.html\nERROR: missed debug-info file kio_http_cache_cleaner.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to kio_http_cache_cleaner.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.09802603721618652,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/kio_http_cache_cleaner.so /__w/splice-experiment-runs/splice-experiment-runs/second/kio_http_cache_cleaner.so kio_http_cache_cleaner-so-kio_http_cache_cleaner-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kio_http_cache_cleaner.so-abi-laboratory-kio_http_cache_cleaner-so-kio_http_cache_cleaner-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kio_http_cache_cleaner.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kio_http_cache_cleaner.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/kio_http_cache_cleaner.so": 15632,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/kio_http_cache_cleaner.so": 15632
+            }
+        },
+        "experiment": "kio_http_cache_cleaner-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/kio_http_cache_cleaner.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/kio_http_cache_cleaner.so",
+        "different_libs": true
+    }
+]

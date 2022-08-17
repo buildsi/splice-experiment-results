@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libvtkIOTecplotTable.so.9.1.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libvtkIOTecplotTable.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkIOTecplotTable.so.9.1.0",
+                    "spliced_lib": "libvtkIOTecplotTable.so.9.1.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.389617919921875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkIOTecplotTable.so.9.1.0",
+                    "spliced_lib": "libvtkIOTecplotTable.so.9.1.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.1205673217773438e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009141921997070312,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libvtkIOTecplotTable.so.9.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/libvtkIOTecplotTable.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libvtkIOTecplotTable.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libvtkIOTecplotTable.so.9.1.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libvtkIOTecplotTable.so.9.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libvtkIOTecplotTable.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libvtkIOTecplotTable.so.9.1.0-abi-laboratory-libvtkIOTecplotTable-so-9-1-0-libvtkIOTecplotTable-so-9-1-0.html\nERROR: missed debug-info file libvtkIOTecplotTable.so.9.1.0-9.1.0-12.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libvtkIOTecplotTable.so.9.1.0-9.1.0-12.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibvtkIOCore.so.1: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.11186766624450684,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libvtkIOTecplotTable.so.9.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/libvtkIOTecplotTable.so.9.1.0 libvtkIOTecplotTable-so-9-1-0-libvtkIOTecplotTable-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libvtkIOTecplotTable.so.9.1.0-abi-laboratory-libvtkIOTecplotTable-so-9-1-0-libvtkIOTecplotTable-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libvtkIOTecplotTable.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libvtkIOTecplotTable.so.9.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libvtkIOTecplotTable.so.9.1.0": 67416,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libvtkIOTecplotTable.so.9.1.0": 67416
+            }
+        },
+        "experiment": "libvtkIOTecplotTable-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libvtkIOTecplotTable.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libvtkIOTecplotTable.so.9.1.0",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstcdparanoia.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstcdparanoia.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstcdparanoia.so",
+                    "spliced_lib": "libgstcdparanoia.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.1948089599609375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstcdparanoia.so",
+                    "spliced_lib": "libgstcdparanoia.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.67572021484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.010854244232177734,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libgstcdparanoia.so /__w/splice-experiment-runs/splice-experiment-runs/second/libgstcdparanoia.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstcdparanoia.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstcdparanoia.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libgstcdparanoia.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libgstcdparanoia.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libgstcdparanoia.so-abi-laboratory-libgstcdparanoia-so-libgstcdparanoia-so.html\nERROR: missed debug-info file libgstcdparanoia.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libgstcdparanoia.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.09599709510803223,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libgstcdparanoia.so /__w/splice-experiment-runs/splice-experiment-runs/second/libgstcdparanoia.so libgstcdparanoia-so-libgstcdparanoia-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libgstcdparanoia.so-abi-laboratory-libgstcdparanoia-so-libgstcdparanoia-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstcdparanoia.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstcdparanoia.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstcdparanoia.so": 32472,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstcdparanoia.so": 32472
+            }
+        },
+        "experiment": "libgstcdparanoia-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libgstcdparanoia.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libgstcdparanoia.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,98 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/liblua-5.4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/liblua-5.3.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "liblua-5.4.so",
+                    "spliced_lib": "liblua-5.3.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "luaL_addgsub",
+                        "fputc",
+                        "lua_setiuservalue",
+                        "lua_newuserdatauv",
+                        "lua_closeslot",
+                        "lua_getiuservalue",
+                        "lua_setwarnf",
+                        "lua_warning",
+                        "lua_toclose",
+                        "luaL_typeerror",
+                        "fputs",
+                        "snprintf",
+                        "lua_resetthread",
+                        "lua_setcstacklimit"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.985664367675781e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "liblua-5.4.so",
+                    "spliced_lib": "liblua-5.3.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "lua_closeslot",
+                        "lua_setiuservalue",
+                        "lua_toclose",
+                        "lua_warning",
+                        "lua_setwarnf",
+                        "luaL_typeerror",
+                        "lua_newuserdatauv",
+                        "luaL_addgsub",
+                        "lua_getiuservalue",
+                        "lua_setcstacklimit",
+                        "lua_resetthread"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00026917457580566406
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 11 Removed, 7 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 2 Added variable symbols not referenced by debug info\n\nSONAME changed from 'liblua-5.4.so' to 'liblua-5.3.so'\n\n11 Removed function symbols not referenced by debug info:\n\n  [D] luaL_addgsub\n  [D] luaL_typeerror\n  [D] lua_closeslot\n  [D] lua_getiuservalue\n  [D] lua_newuserdatauv\n  [D] lua_resetthread\n  [D] lua_setcstacklimit\n  [D] lua_setiuservalue\n  [D] lua_setwarnf\n  [D] lua_toclose\n  [D] lua_warning\n\n7 Added function symbols not referenced by debug info:\n\n  [A] luaL_openlib\n  [A] luaL_pushmodule\n  [A] luaU_dump\n  [A] lua_getuservalue\n  [A] lua_newuserdata\n  [A] lua_setuservalue\n  [A] luaopen_bit32\n\n2 Added variable symbols not referenced by debug info:\n\n  [A] luaP_opmodes\n  [A] luaP_opnames\n\n",
+                    "return_code": 12,
+                    "seconds": 0.013421773910522461,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/liblua-5.4.so /__w/splice-experiment-runs/splice-experiment-runs/second/liblua-5.3.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/liblua-5.3.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/liblua-5.4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/liblua-5.4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/liblua-5.3.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/liblua-5.4.so-abi-laboratory-liblua-5-3-so-liblua-5-4-so.html\nERROR: missed debug-info file liblua-5.4.so-5.4.4-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to liblua-5.4.so-5.4.4-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.09962034225463867,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/liblua-5.4.so /__w/splice-experiment-runs/splice-experiment-runs/second/liblua-5.3.so liblua-5-3-so-liblua-5-4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/liblua-5.4.so-abi-laboratory-liblua-5-3-so-liblua-5-4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/liblua-5.3.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/liblua-5.4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/liblua-5.4.so": 292560,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/liblua-5.3.so": 263312
+            }
+        },
+        "experiment": "liblua-5-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/liblua-5.3.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/liblua-5.4.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libdcerpc-samr.so.0.0.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libdcerpc-samr.so.0.0.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdcerpc-samr.so.0.0.1",
+                    "spliced_lib": "libdcerpc-samr.so.0.0.1",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.1205673217773438e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdcerpc-samr.so.0.0.1",
+                    "spliced_lib": "libdcerpc-samr.so.0.0.1",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.0067901611328125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "/usr/local/bin/abidiff: failed to read input file /__w/splice-experiment-runs/splice-experiment-runs/first/libdcerpc-samr.so.0.0.1\n/usr/local/bin/abidiff: could not find the debug info\n/usr/local/bin/abidiff: Maybe the root path to the debug information '' is wrong?\n/usr/local/bin/abidiff: Maybe you should consider using the --debug-info-dir2 option to tell me about the root directory of the debuginfo? (e.g, --debug-info-dir2 /usr/lib/debug)\n/usr/local/bin/abidiff: could not find the ELF symbols in the file '/__w/splice-experiment-runs/splice-experiment-runs/first/libdcerpc-samr.so.0.0.1'\n",
+                    "return_code": 1,
+                    "seconds": 0.007170677185058594,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libdcerpc-samr.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/libdcerpc-samr.so.0.0.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libdcerpc-samr.so.0.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libdcerpc-samr.so.0.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libdcerpc-samr.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libdcerpc-samr.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libdcerpc-samr.so.0.0.1-abi-laboratory-libdcerpc-samr-so-0-0-1-libdcerpc-samr-so-0-0-1.html\nERROR: missed debug-info file libdcerpc-samr.so.0.0.1-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find exported symbols in object(s), please add a shared object on command line\nFound link to libdcerpc-samr.so.0.0.1-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 12,
+                    "seconds": 0.07270073890686035,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libdcerpc-samr.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/libdcerpc-samr.so.0.0.1 libdcerpc-samr-so-0-0-1-libdcerpc-samr-so-0-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libdcerpc-samr.so.0.0.1-abi-laboratory-libdcerpc-samr-so-0-0-1-libdcerpc-samr-so-0-0-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libdcerpc-samr.so.0.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libdcerpc-samr.so.0.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libdcerpc-samr.so.0.0.1": 15232,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libdcerpc-samr.so.0.0.1": 15232
+            }
+        },
+        "experiment": "libdcerpc-samr-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libdcerpc-samr.so.0.0.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libdcerpc-samr.so.0.0.1",
+        "different_libs": true
+    }
+]

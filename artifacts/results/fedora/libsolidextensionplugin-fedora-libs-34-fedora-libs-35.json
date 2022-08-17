@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libsolidextensionplugin.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libsolidextensionplugin.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsolidextensionplugin.so",
+                    "spliced_lib": "libsolidextensionplugin.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.076957702636719e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsolidextensionplugin.so",
+                    "spliced_lib": "libsolidextensionplugin.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.67572021484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.011688947677612305,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libsolidextensionplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/libsolidextensionplugin.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libsolidextensionplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libsolidextensionplugin.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libsolidextensionplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libsolidextensionplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libsolidextensionplugin.so-abi-laboratory-libsolidextensionplugin-so-libsolidextensionplugin-so.html\nERROR: missed debug-info file libsolidextensionplugin.so-5.96.0-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libsolidextensionplugin.so-5.96.0-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.09575963020324707,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libsolidextensionplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/libsolidextensionplugin.so libsolidextensionplugin-so-libsolidextensionplugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libsolidextensionplugin.so-abi-laboratory-libsolidextensionplugin-so-libsolidextensionplugin-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libsolidextensionplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libsolidextensionplugin.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libsolidextensionplugin.so": 41824,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libsolidextensionplugin.so": 41824
+            }
+        },
+        "experiment": "libsolidextensionplugin-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libsolidextensionplugin.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libsolidextensionplugin.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libads-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libads-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libads-samba4.so",
+                    "spliced_lib": "libads-samba4.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.655952453613281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libads-samba4.so",
+                    "spliced_lib": "libads-samba4.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00010180473327636719
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009500265121459961,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libads-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/libads-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libads-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libads-samba4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libads-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libads-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libads-samba4.so-abi-laboratory-libads-samba4-so-libads-samba4-so.html\nERROR: missed debug-info file libads-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libads-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08455657958984375,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libads-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/libads-samba4.so libads-samba4-so-libads-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libads-samba4.so-abi-laboratory-libads-samba4-so-libads-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libads-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libads-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libads-samba4.so": 186696,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libads-samba4.so": 186696
+            }
+        },
+        "experiment": "libads-samba4-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libads-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libads-samba4.so",
+        "different_libs": true
+    }
+]

@@ -55,8 +55,10 @@ def create_results_table(experiments, filename=False):
             analysis = p["command"]
         elif predictor == "libabigail":
             analysis = "abidiff"
+
+        # Smeagle results not included in this paper
         elif predictor == "smeagle":
-            analysis = "smeagle-stability-test"
+            return
         row = [
             original,
             changed,
@@ -89,6 +91,74 @@ def create_results_table(experiments, filename=False):
                     )
     return df
 
+
+def create_fedora_results_table(experiments, filename=False):
+    """
+    Given experiments data files, iterate through and create a results table that includes splice details
+    """
+    columns = [
+        "a",
+        "b",
+        "original",
+        "changed",
+        "analysis",
+        "seconds",
+        "predictor",
+        "prediction",
+    ]
+    if filename:
+        columns.append("file")
+    df = pandas.DataFrame(columns=columns)
+
+    def add_prediction_row(before, after, original, changed, res, p, predictor, e):
+        """
+        Given a result, add a row to the data frame.
+        """
+        # Different predictors use different data
+        prediction = p.get("prediction", False)
+        seconds = p.get("seconds") or "unknown"
+
+        # symbols has two diff cases
+        analysis = "abi-compliance-tester"
+        if predictor == "symbols":
+            analysis = p["command"]
+        elif predictor == "libabigail":
+            analysis = "abidiff"
+
+        row = [
+            before,
+            after,
+            original,
+            changed,
+            analysis,
+            seconds,
+            predictor,
+            prediction,
+        ]
+        if filename:
+            row.append(e)
+        df.loc[len(df.index), :] = row
+
+    # Of the splice successes, now look into results
+    for e in experiments:
+        basename = os.path.basename(e)
+        libname, comparison = basename.split('-', 1)
+        comparison = comparison.replace('.json', '')        
+        comparison = [(f"fedora{x}").strip('-') for x in comparison.rsplit('fedora') if x]
+        before = comparison[-2]
+        after = comparison[-1]
+        data = read_json(e)
+        for res in data:
+            # Split on right repo name to get relative path
+            original = (
+                res["original"][0].rsplit("splice-experiment-runs")[-1].strip("/")
+            )
+            changed = res["spliced"][0].rsplit("splice-experiment-runs")[-1].strip("/")
+
+            for predictor, listing in res["predictions"].items():
+                for p in listing:
+                    add_prediction_row(before, after, original, changed, res, p, predictor, e)
+    return df
 
 def create_sizes_table(experiments):
     """
