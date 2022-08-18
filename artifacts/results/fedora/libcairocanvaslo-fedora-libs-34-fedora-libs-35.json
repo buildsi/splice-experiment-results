@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libcairocanvaslo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libcairocanvaslo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcairocanvaslo.so",
+                    "spliced_lib": "libcairocanvaslo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001220703125
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcairocanvaslo.so",
+                    "spliced_lib": "libcairocanvaslo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.1682510375976562e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.01051473617553711,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libcairocanvaslo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libcairocanvaslo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libcairocanvaslo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libcairocanvaslo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libcairocanvaslo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libcairocanvaslo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libcairocanvaslo.so-abi-laboratory-libcairocanvaslo-so-libcairocanvaslo-so.html\nERROR: missed debug-info file libcairocanvaslo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libcairocanvaslo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibcairo.so.2: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.10300183296203613,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libcairocanvaslo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libcairocanvaslo.so libcairocanvaslo-so-libcairocanvaslo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libcairocanvaslo.so-abi-laboratory-libcairocanvaslo-so-libcairocanvaslo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libcairocanvaslo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libcairocanvaslo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libcairocanvaslo.so": 555128,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libcairocanvaslo.so": 555128
+            }
+        },
+        "experiment": "libcairocanvaslo-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libcairocanvaslo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libcairocanvaslo.so",
+        "different_libs": true
+    }
+]

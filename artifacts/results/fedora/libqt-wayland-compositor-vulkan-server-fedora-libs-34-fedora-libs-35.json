@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-vulkan-server.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-vulkan-server.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqt-wayland-compositor-vulkan-server.so",
+                    "spliced_lib": "libqt-wayland-compositor-vulkan-server.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.5299530029296875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqt-wayland-compositor-vulkan-server.so",
+                    "spliced_lib": "libqt-wayland-compositor-vulkan-server.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.67572021484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.010318517684936523,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-vulkan-server.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-vulkan-server.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-vulkan-server.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-vulkan-server.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-vulkan-server.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-vulkan-server.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-vulkan-server.so-abi-laboratory-libqt-wayland-compositor-vulkan-server-so-libqt-wayland-compositor-vulkan-server-so.html\nERROR: missed debug-info file libqt-wayland-compositor-vulkan-server.so-5.15.5-3.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libqt-wayland-compositor-vulkan-server.so-5.15.5-3.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10045838356018066,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-vulkan-server.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-vulkan-server.so libqt-wayland-compositor-vulkan-server-so-libqt-wayland-compositor-vulkan-server-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-vulkan-server.so-abi-laboratory-libqt-wayland-compositor-vulkan-server-so-libqt-wayland-compositor-vulkan-server-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-vulkan-server.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-vulkan-server.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-vulkan-server.so": 63184,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-vulkan-server.so": 63184
+            }
+        },
+        "experiment": "libqt-wayland-compositor-vulkan-server-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-vulkan-server.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-vulkan-server.so",
+        "different_libs": true
+    }
+]

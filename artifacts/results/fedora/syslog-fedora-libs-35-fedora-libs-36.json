@@ -1,0 +1,76 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/syslog.cpython-310-x86_64-linux-gnu.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/syslog.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "syslog.cpython-310-x86_64-linux-gnu.so",
+                    "spliced_lib": "syslog.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "PyInit_syslog",
+                        "__stack_chk_fail"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.9073486328125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "syslog.cpython-310-x86_64-linux-gnu.so",
+                    "spliced_lib": "syslog.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "PyInit_syslog"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.67572021484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 1 Removed, 1 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\n1 Removed function symbol not referenced by debug info:\n\n  [D] PyInit_syslog\n\n1 Added function symbol not referenced by debug info:\n\n  [A] luaopen_posix_syslog\n\n",
+                    "return_code": 12,
+                    "seconds": 0.009947776794433594,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/syslog.cpython-310-x86_64-linux-gnu.so /__w/splice-experiment-runs/splice-experiment-runs/second/syslog.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/syslog.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/syslog.cpython-310-x86_64-linux-gnu.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/syslog.cpython-310-x86_64-linux-gnu.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/syslog.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/syslog.cpython-310-x86_64-linux-gnu.so-abi-laboratory-syslog-cpython-310-x86_64-linux-gnu-so-syslog-so.html\nERROR: missed debug-info file syslog.cpython-310-x86_64-linux-gnu.so-3.10.4-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to syslog.cpython-310-x86_64-linux-gnu.so-3.10.4-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10086941719055176,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/syslog.cpython-310-x86_64-linux-gnu.so /__w/splice-experiment-runs/splice-experiment-runs/second/syslog.so syslog-cpython-310-x86_64-linux-gnu-so-syslog-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/syslog.cpython-310-x86_64-linux-gnu.so-abi-laboratory-syslog-cpython-310-x86_64-linux-gnu-so-syslog-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/syslog.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/syslog.cpython-310-x86_64-linux-gnu.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/syslog.cpython-310-x86_64-linux-gnu.so": 16536,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/syslog.so": 15952
+            }
+        },
+        "experiment": "syslog-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/syslog.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/syslog.cpython-310-x86_64-linux-gnu.so",
+        "different_libs": true
+    }
+]

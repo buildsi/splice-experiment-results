@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/pipe_r300.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/pipe_r300.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pipe_r300.so",
+                    "spliced_lib": "pipe_r300.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.179115295410156e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pipe_r300.so",
+                    "spliced_lib": "pipe_r300.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.198883056640625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0078277587890625,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/pipe_r300.so /__w/splice-experiment-runs/splice-experiment-runs/second/pipe_r300.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/pipe_r300.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/pipe_r300.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/pipe_r300.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/pipe_r300.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/pipe_r300.so-abi-laboratory-pipe_r300-so-pipe_r300-so.html\nERROR: missed debug-info file pipe_r300.so-22.1.6-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to pipe_r300.so-22.1.6-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08142542839050293,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/pipe_r300.so /__w/splice-experiment-runs/splice-experiment-runs/second/pipe_r300.so pipe_r300-so-pipe_r300-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/pipe_r300.so-abi-laboratory-pipe_r300-so-pipe_r300-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/pipe_r300.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/pipe_r300.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/pipe_r300.so": 5051080,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/pipe_r300.so": 5051080
+            }
+        },
+        "experiment": "pipe_r300-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/pipe_r300.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/pipe_r300.so",
+        "different_libs": true
+    }
+]

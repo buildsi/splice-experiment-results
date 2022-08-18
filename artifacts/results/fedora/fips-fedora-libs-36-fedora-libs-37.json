@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/fips.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/fips.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "fips.so",
+                    "spliced_lib": "fips.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5272369384765625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "fips.so",
+                    "spliced_lib": "fips.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.245208740234375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009148359298706055,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/fips.so /__w/splice-experiment-runs/splice-experiment-runs/second/fips.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/fips.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/fips.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/fips.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/fips.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/fips.so-abi-laboratory-fips-so-fips-so.html\nERROR: missed debug-info file fips.so-3.0.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to fips.so-3.0.2-4.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10026407241821289,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/fips.so /__w/splice-experiment-runs/splice-experiment-runs/second/fips.so fips-so-fips-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/fips.so-abi-laboratory-fips-so-fips-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/fips.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/fips.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/fips.so": 1488680,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/fips.so": 1488680
+            }
+        },
+        "experiment": "fips-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/fips.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/fips.so",
+        "different_libs": true
+    }
+]

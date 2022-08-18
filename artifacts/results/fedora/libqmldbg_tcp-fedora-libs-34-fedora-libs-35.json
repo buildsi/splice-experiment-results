@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libqmldbg_tcp.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libqmldbg_tcp.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqmldbg_tcp.so",
+                    "spliced_lib": "libqmldbg_tcp.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.0994415283203125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqmldbg_tcp.so",
+                    "spliced_lib": "libqmldbg_tcp.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.9141387939453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008466005325317383,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libqmldbg_tcp.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqmldbg_tcp.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqmldbg_tcp.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqmldbg_tcp.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libqmldbg_tcp.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libqmldbg_tcp.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqmldbg_tcp.so-abi-laboratory-libqmldbg_tcp-so-libqmldbg_tcp-so.html\nERROR: missed debug-info file libqmldbg_tcp.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libqmldbg_tcp.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.09186768531799316,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libqmldbg_tcp.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqmldbg_tcp.so libqmldbg_tcp-so-libqmldbg_tcp-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqmldbg_tcp.so-abi-laboratory-libqmldbg_tcp-so-libqmldbg_tcp-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqmldbg_tcp.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqmldbg_tcp.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libqmldbg_tcp.so": 21344,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libqmldbg_tcp.so": 21344
+            }
+        },
+        "experiment": "libqmldbg_tcp-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqmldbg_tcp.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqmldbg_tcp.so",
+        "different_libs": true
+    }
+]

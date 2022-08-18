@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-shm-emulation-server.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-shm-emulation-server.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqt-wayland-compositor-shm-emulation-server.so",
+                    "spliced_lib": "libqt-wayland-compositor-shm-emulation-server.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.76837158203125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqt-wayland-compositor-shm-emulation-server.so",
+                    "spliced_lib": "libqt-wayland-compositor-shm-emulation-server.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.67572021484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.011337041854858398,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-shm-emulation-server.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-shm-emulation-server.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-shm-emulation-server.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-shm-emulation-server.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-shm-emulation-server.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-shm-emulation-server.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-shm-emulation-server.so-abi-laboratory-libqt-wayland-compositor-shm-emulation-server-so-libqt-wayland-compositor-shm-emulation-server-so.html\nERROR: missed debug-info file libqt-wayland-compositor-shm-emulation-server.so-5.15.5-3.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libqt-wayland-compositor-shm-emulation-server.so-5.15.5-3.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.09888267517089844,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-shm-emulation-server.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-shm-emulation-server.so libqt-wayland-compositor-shm-emulation-server-so-libqt-wayland-compositor-shm-emulation-server-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-shm-emulation-server.so-abi-laboratory-libqt-wayland-compositor-shm-emulation-server-so-libqt-wayland-compositor-shm-emulation-server-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-shm-emulation-server.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-shm-emulation-server.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-shm-emulation-server.so": 33480,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-shm-emulation-server.so": 33480
+            }
+        },
+        "experiment": "libqt-wayland-compositor-shm-emulation-server-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-wayland-compositor-shm-emulation-server.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-wayland-compositor-shm-emulation-server.so",
+        "different_libs": true
+    }
+]

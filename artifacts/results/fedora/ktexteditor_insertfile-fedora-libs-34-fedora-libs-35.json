@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/ktexteditor_insertfile.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/ktexteditor_insertfile.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "ktexteditor_insertfile.so",
+                    "spliced_lib": "ktexteditor_insertfile.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.151199340820312e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "ktexteditor_insertfile.so",
+                    "spliced_lib": "ktexteditor_insertfile.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.2901763916015625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.011038541793823242,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/ktexteditor_insertfile.so /__w/splice-experiment-runs/splice-experiment-runs/second/ktexteditor_insertfile.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/ktexteditor_insertfile.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/ktexteditor_insertfile.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/ktexteditor_insertfile.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/ktexteditor_insertfile.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/ktexteditor_insertfile.so-abi-laboratory-ktexteditor_insertfile-so-ktexteditor_insertfile-so.html\nERROR: missed debug-info file ktexteditor_insertfile.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to ktexteditor_insertfile.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibktexteditor.so.0: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.10442471504211426,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/ktexteditor_insertfile.so /__w/splice-experiment-runs/splice-experiment-runs/second/ktexteditor_insertfile.so ktexteditor_insertfile-so-ktexteditor_insertfile-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/ktexteditor_insertfile.so-abi-laboratory-ktexteditor_insertfile-so-ktexteditor_insertfile-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/ktexteditor_insertfile.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/ktexteditor_insertfile.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/ktexteditor_insertfile.so": 49096,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/ktexteditor_insertfile.so": 49096
+            }
+        },
+        "experiment": "ktexteditor_insertfile-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/ktexteditor_insertfile.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/ktexteditor_insertfile.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/pam_permit.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/pam_permit.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_permit.so",
+                    "spliced_lib": "pam_permit.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.5497207641601562e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_permit.so",
+                    "spliced_lib": "pam_permit.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.152557373046875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009819984436035156,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/pam_permit.so /__w/splice-experiment-runs/splice-experiment-runs/second/pam_permit.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/pam_permit.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/pam_permit.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/pam_permit.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/pam_permit.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/pam_permit.so-abi-laboratory-pam_permit-so-pam_permit-so.html\nERROR: missed debug-info file pam_permit.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to pam_permit.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.0932152271270752,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/pam_permit.so /__w/splice-experiment-runs/splice-experiment-runs/second/pam_permit.so pam_permit-so-pam_permit-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/pam_permit.so-abi-laboratory-pam_permit-so-pam_permit-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/pam_permit.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/pam_permit.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/pam_permit.so": 15936,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/pam_permit.so": 15936
+            }
+        },
+        "experiment": "pam_permit-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/pam_permit.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/pam_permit.so",
+        "different_libs": true
+    }
+]

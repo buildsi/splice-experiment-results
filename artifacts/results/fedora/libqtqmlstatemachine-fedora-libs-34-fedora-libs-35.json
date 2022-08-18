@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libqtqmlstatemachine.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libqtqmlstatemachine.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqtqmlstatemachine.so",
+                    "spliced_lib": "libqtqmlstatemachine.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.8650970458984375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqtqmlstatemachine.so",
+                    "spliced_lib": "libqtqmlstatemachine.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.152557373046875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009017229080200195,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libqtqmlstatemachine.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqtqmlstatemachine.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqtqmlstatemachine.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqtqmlstatemachine.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libqtqmlstatemachine.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libqtqmlstatemachine.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqtqmlstatemachine.so-abi-laboratory-libqtqmlstatemachine-so-libqtqmlstatemachine-so.html\nERROR: missed debug-info file libqtqmlstatemachine.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libqtqmlstatemachine.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibQt5Qml.so.5: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.10399007797241211,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libqtqmlstatemachine.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqtqmlstatemachine.so libqtqmlstatemachine-so-libqtqmlstatemachine-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqtqmlstatemachine.so-abi-laboratory-libqtqmlstatemachine-so-libqtqmlstatemachine-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqtqmlstatemachine.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqtqmlstatemachine.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libqtqmlstatemachine.so": 102208,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libqtqmlstatemachine.so": 102208
+            }
+        },
+        "experiment": "libqtqmlstatemachine-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqtqmlstatemachine.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqtqmlstatemachine.so",
+        "different_libs": true
+    }
+]

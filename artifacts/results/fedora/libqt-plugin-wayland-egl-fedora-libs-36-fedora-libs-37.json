@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-plugin-wayland-egl.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-plugin-wayland-egl.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqt-plugin-wayland-egl.so",
+                    "spliced_lib": "libqt-plugin-wayland-egl.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.271766662597656e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqt-plugin-wayland-egl.so",
+                    "spliced_lib": "libqt-plugin-wayland-egl.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.62939453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009855985641479492,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libqt-plugin-wayland-egl.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqt-plugin-wayland-egl.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-plugin-wayland-egl.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-plugin-wayland-egl.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libqt-plugin-wayland-egl.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libqt-plugin-wayland-egl.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-plugin-wayland-egl.so-abi-laboratory-libqt-plugin-wayland-egl-so-libqt-plugin-wayland-egl-so.html\nERROR: missed debug-info file libqt-plugin-wayland-egl.so-5.15.5-3.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libqt-plugin-wayland-egl.so-5.15.5-3.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10190701484680176,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libqt-plugin-wayland-egl.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqt-plugin-wayland-egl.so libqt-plugin-wayland-egl-so-libqt-plugin-wayland-egl-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-plugin-wayland-egl.so-abi-laboratory-libqt-plugin-wayland-egl-so-libqt-plugin-wayland-egl-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-plugin-wayland-egl.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-plugin-wayland-egl.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-plugin-wayland-egl.so": 75776,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-plugin-wayland-egl.so": 75776
+            }
+        },
+        "experiment": "libqt-plugin-wayland-egl-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqt-plugin-wayland-egl.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqt-plugin-wayland-egl.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libwithsctp.so.1.0.18"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libwithsctp.so.1.0.18"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libwithsctp.so.1.0.18",
+                    "spliced_lib": "libwithsctp.so.1.0.18",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.6689300537109375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libwithsctp.so.1.0.18",
+                    "spliced_lib": "libwithsctp.so.1.0.18",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.152557373046875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.006507158279418945,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libwithsctp.so.1.0.18 /__w/splice-experiment-runs/splice-experiment-runs/second/libwithsctp.so.1.0.18",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libwithsctp.so.1.0.18",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libwithsctp.so.1.0.18",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libwithsctp.so.1.0.18\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libwithsctp.so.1.0.18\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libwithsctp.so.1.0.18-abi-laboratory-libwithsctp-so-1-0-18-libwithsctp-so-1-0-18.html\nERROR: missed debug-info file libwithsctp.so.1.0.18-1.0.18-12.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libwithsctp.so.1.0.18-1.0.18-12.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08141088485717773,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libwithsctp.so.1.0.18 /__w/splice-experiment-runs/splice-experiment-runs/second/libwithsctp.so.1.0.18 libwithsctp-so-1-0-18-libwithsctp-so-1-0-18 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libwithsctp.so.1.0.18-abi-laboratory-libwithsctp-so-1-0-18-libwithsctp-so-1-0-18.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libwithsctp.so.1.0.18",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libwithsctp.so.1.0.18",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libwithsctp.so.1.0.18": 15944,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libwithsctp.so.1.0.18": 15944
+            }
+        },
+        "experiment": "libwithsctp-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libwithsctp.so.1.0.18",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libwithsctp.so.1.0.18",
+        "different_libs": true
+    }
+]

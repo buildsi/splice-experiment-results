@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libqwayland-generic.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libqwayland-generic.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqwayland-generic.so",
+                    "spliced_lib": "libqwayland-generic.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.8371810913085938e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqwayland-generic.so",
+                    "spliced_lib": "libqwayland-generic.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.4373016357421875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.00975656509399414,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libqwayland-generic.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqwayland-generic.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqwayland-generic.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqwayland-generic.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libqwayland-generic.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libqwayland-generic.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqwayland-generic.so-abi-laboratory-libqwayland-generic-so-libqwayland-generic-so.html\nERROR: missed debug-info file libqwayland-generic.so-5.15.5-3.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libqwayland-generic.so-5.15.5-3.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10191202163696289,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libqwayland-generic.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqwayland-generic.so libqwayland-generic-so-libqwayland-generic-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqwayland-generic.so-abi-laboratory-libqwayland-generic-so-libqwayland-generic-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqwayland-generic.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqwayland-generic.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libqwayland-generic.so": 20400,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libqwayland-generic.so": 20400
+            }
+        },
+        "experiment": "libqwayland-generic-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqwayland-generic.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqwayland-generic.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/kssld.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/kssld.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kssld.so",
+                    "spliced_lib": "kssld.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.888938903808594e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kssld.so",
+                    "spliced_lib": "kssld.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.67572021484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009109020233154297,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/kssld.so /__w/splice-experiment-runs/splice-experiment-runs/second/kssld.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kssld.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kssld.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/kssld.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/kssld.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kssld.so-abi-laboratory-kssld-so-kssld-so.html\nERROR: missed debug-info file kssld.so-5.96.0-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to kssld.so-5.96.0-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.09749913215637207,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/kssld.so /__w/splice-experiment-runs/splice-experiment-runs/second/kssld.so kssld-so-kssld-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kssld.so-abi-laboratory-kssld-so-kssld-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kssld.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kssld.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/kssld.so": 58504,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/kssld.so": 58504
+            }
+        },
+        "experiment": "kssld-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/kssld.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/kssld.so",
+        "different_libs": true
+    }
+]

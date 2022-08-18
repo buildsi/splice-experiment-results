@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libqeglfs-x11-integration.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libqeglfs-x11-integration.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqeglfs-x11-integration.so",
+                    "spliced_lib": "libqeglfs-x11-integration.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.528594970703125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqeglfs-x11-integration.so",
+                    "spliced_lib": "libqeglfs-x11-integration.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.7220458984375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.006982564926147461,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libqeglfs-x11-integration.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqeglfs-x11-integration.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqeglfs-x11-integration.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqeglfs-x11-integration.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libqeglfs-x11-integration.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libqeglfs-x11-integration.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqeglfs-x11-integration.so-abi-laboratory-libqeglfs-x11-integration-so-libqeglfs-x11-integration-so.html\nERROR: missed debug-info file libqeglfs-x11-integration.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libqeglfs-x11-integration.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.07937216758728027,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libqeglfs-x11-integration.so /__w/splice-experiment-runs/splice-experiment-runs/second/libqeglfs-x11-integration.so libqeglfs-x11-integration-so-libqeglfs-x11-integration-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libqeglfs-x11-integration.so-abi-laboratory-libqeglfs-x11-integration-so-libqeglfs-x11-integration-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqeglfs-x11-integration.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqeglfs-x11-integration.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libqeglfs-x11-integration.so": 29464,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libqeglfs-x11-integration.so": 29464
+            }
+        },
+        "experiment": "libqeglfs-x11-integration-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libqeglfs-x11-integration.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libqeglfs-x11-integration.so",
+        "different_libs": true
+    }
+]

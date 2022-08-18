@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/IO.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/IO.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "IO.so",
+                    "spliced_lib": "IO.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.4318695068359375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "IO.so",
+                    "spliced_lib": "IO.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.5299530029296875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007936477661132812,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/IO.so /__w/splice-experiment-runs/splice-experiment-runs/second/IO.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/IO.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/IO.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/IO.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/IO.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/IO.so-abi-laboratory-IO-so-IO-so.html\nERROR: missed debug-info file IO.so-5.34.1-486.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to IO.so-5.34.1-486.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.07499027252197266,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/IO.so /__w/splice-experiment-runs/splice-experiment-runs/second/IO.so IO-so-IO-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/IO.so-abi-laboratory-IO-so-IO-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/IO.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/IO.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/IO.so": 24112,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/IO.so": 24112
+            }
+        },
+        "experiment": "IO-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/IO.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/IO.so",
+        "different_libs": true
+    }
+]

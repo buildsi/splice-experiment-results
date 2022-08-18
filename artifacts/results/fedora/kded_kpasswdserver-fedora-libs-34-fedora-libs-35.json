@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kpasswdserver.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/kded_kpasswdserver.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kded_kpasswdserver.so",
+                    "spliced_lib": "kded_kpasswdserver.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.0067901611328125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kded_kpasswdserver.so",
+                    "spliced_lib": "kded_kpasswdserver.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.100799560546875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.01080179214477539,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/kded_kpasswdserver.so /__w/splice-experiment-runs/splice-experiment-runs/second/kded_kpasswdserver.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kded_kpasswdserver.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kpasswdserver.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/kded_kpasswdserver.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/kded_kpasswdserver.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kpasswdserver.so-abi-laboratory-kded_kpasswdserver-so-kded_kpasswdserver-so.html\nERROR: missed debug-info file kded_kpasswdserver.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to kded_kpasswdserver.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkwalletclient.so.1: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.11726164817810059,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/kded_kpasswdserver.so /__w/splice-experiment-runs/splice-experiment-runs/second/kded_kpasswdserver.so kded_kpasswdserver-so-kded_kpasswdserver-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kpasswdserver.so-abi-laboratory-kded_kpasswdserver-so-kded_kpasswdserver-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kded_kpasswdserver.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kpasswdserver.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kpasswdserver.so": 65784,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/kded_kpasswdserver.so": 65784
+            }
+        },
+        "experiment": "kded_kpasswdserver-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/kded_kpasswdserver.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/kded_kpasswdserver.so",
+        "different_libs": true
+    }
+]

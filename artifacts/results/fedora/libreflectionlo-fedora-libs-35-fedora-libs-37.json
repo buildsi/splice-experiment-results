@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libreflectionlo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libreflectionlo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libreflectionlo.so",
+                    "spliced_lib": "libreflectionlo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.221366882324219e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libreflectionlo.so",
+                    "spliced_lib": "libreflectionlo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.2874603271484375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007631540298461914,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libreflectionlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libreflectionlo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libreflectionlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libreflectionlo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libreflectionlo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libreflectionlo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libreflectionlo.so-abi-laboratory-libreflectionlo-so-libreflectionlo-so.html\nERROR: missed debug-info file libreflectionlo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libreflectionlo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.09106063842773438,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libreflectionlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libreflectionlo.so libreflectionlo-so-libreflectionlo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libreflectionlo.so-abi-laboratory-libreflectionlo-so-libreflectionlo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libreflectionlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libreflectionlo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libreflectionlo.so": 186544,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libreflectionlo.so": 186544
+            }
+        },
+        "experiment": "libreflectionlo-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libreflectionlo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libreflectionlo.so",
+        "different_libs": true
+    }
+]

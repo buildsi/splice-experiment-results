@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/filefuncs.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/filefuncs.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "filefuncs.so",
+                    "spliced_lib": "filefuncs.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.8848648071289062e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "filefuncs.so",
+                    "spliced_lib": "filefuncs.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.0013580322265625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.00867915153503418,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/filefuncs.so /__w/splice-experiment-runs/splice-experiment-runs/second/filefuncs.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/filefuncs.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/filefuncs.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/filefuncs.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/filefuncs.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/filefuncs.so-abi-laboratory-filefuncs-so-filefuncs-so.html\nERROR: missed debug-info file filefuncs.so-5.1.1-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to filefuncs.so-5.1.1-2.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.09864568710327148,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/filefuncs.so /__w/splice-experiment-runs/splice-experiment-runs/second/filefuncs.so filefuncs-so-filefuncs-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/filefuncs.so-abi-laboratory-filefuncs-so-filefuncs-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/filefuncs.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/filefuncs.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/filefuncs.so": 41064,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/filefuncs.so": 41064
+            }
+        },
+        "experiment": "filefuncs-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/filefuncs.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/filefuncs.so",
+        "different_libs": true
+    }
+]

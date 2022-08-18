@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libvcard.so.0.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libvcard.so.0.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvcard.so.0.0.0",
+                    "spliced_lib": "libvcard.so.0.0.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00015735626220703125
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvcard.so.0.0.0",
+                    "spliced_lib": "libvcard.so.0.0.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0031883716583251953
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.01154637336730957,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libvcard.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/libvcard.so.0.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libvcard.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libvcard.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libvcard.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libvcard.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libvcard.so.0.0.0-abi-laboratory-libvcard-so-0-0-0-libvcard-so-0-0-0.html\nERROR: missed debug-info file libvcard.so.0.0.0-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libvcard.so.0.0.0-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkdecore.so.4: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.09352731704711914,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libvcard.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/libvcard.so.0.0.0 libvcard-so-0-0-0-libvcard-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libvcard.so.0.0.0-abi-laboratory-libvcard-so-0-0-0-libvcard-so-0-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libvcard.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libvcard.so.0.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libvcard.so.0.0.0": 186360,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libvcard.so.0.0.0": 186360
+            }
+        },
+        "experiment": "libvcard-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libvcard.so.0.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libvcard.so.0.0.0",
+        "different_libs": true
+    }
+]

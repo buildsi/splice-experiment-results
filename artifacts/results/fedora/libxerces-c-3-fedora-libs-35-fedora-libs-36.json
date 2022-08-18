@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libxerces-c-3.2.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libxerces-c-3.2.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxerces-c-3.2.so",
+                    "spliced_lib": "libxerces-c-3.2.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.003209829330444336
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxerces-c-3.2.so",
+                    "spliced_lib": "libxerces-c-3.2.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.49170517921447754
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.06955933570861816,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libxerces-c-3.2.so /__w/splice-experiment-runs/splice-experiment-runs/second/libxerces-c-3.2.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libxerces-c-3.2.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libxerces-c-3.2.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libxerces-c-3.2.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libxerces-c-3.2.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libxerces-c-3.2.so-abi-laboratory-libxerces-c-3-2-so-libxerces-c-3-2-so.html\nERROR: missed debug-info file libxerces-c-3.2.so-3.2.3-6.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libxerces-c-3.2.so-3.2.3-6.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.7199997901916504,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libxerces-c-3.2.so /__w/splice-experiment-runs/splice-experiment-runs/second/libxerces-c-3.2.so libxerces-c-3-2-so-libxerces-c-3-2-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libxerces-c-3.2.so-abi-laboratory-libxerces-c-3-2-so-libxerces-c-3-2-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libxerces-c-3.2.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libxerces-c-3.2.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libxerces-c-3.2.so": 3719760,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libxerces-c-3.2.so": 3719760
+            }
+        },
+        "experiment": "libxerces-c-3-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libxerces-c-3.2.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libxerces-c-3.2.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libxstor.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libxstor.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxstor.so",
+                    "spliced_lib": "libxstor.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.982948303222656e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxstor.so",
+                    "spliced_lib": "libxstor.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.1696090698242188e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.00851893424987793,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libxstor.so /__w/splice-experiment-runs/splice-experiment-runs/second/libxstor.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libxstor.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libxstor.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libxstor.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libxstor.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libxstor.so-abi-laboratory-libxstor-so-libxstor-so.html\nERROR: missed debug-info file libxstor.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libxstor.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.08672833442687988,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libxstor.so /__w/splice-experiment-runs/splice-experiment-runs/second/libxstor.so libxstor-so-libxstor-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libxstor.so-abi-laboratory-libxstor-so-libxstor-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libxstor.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libxstor.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libxstor.so": 598344,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libxstor.so": 598344
+            }
+        },
+        "experiment": "libxstor-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libxstor.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libxstor.so",
+        "different_libs": true
+    }
+]

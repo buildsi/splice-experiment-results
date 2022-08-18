@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libmtfrendererlo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libmtfrendererlo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmtfrendererlo.so",
+                    "spliced_lib": "libmtfrendererlo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.7894973754882812e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmtfrendererlo.so",
+                    "spliced_lib": "libmtfrendererlo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.4373016357421875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007809638977050781,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libmtfrendererlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libmtfrendererlo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libmtfrendererlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libmtfrendererlo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libmtfrendererlo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libmtfrendererlo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libmtfrendererlo.so-abi-laboratory-libmtfrendererlo-so-libmtfrendererlo-so.html\nERROR: missed debug-info file libmtfrendererlo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libmtfrendererlo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.08630871772766113,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libmtfrendererlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libmtfrendererlo.so libmtfrendererlo-so-libmtfrendererlo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libmtfrendererlo.so-abi-laboratory-libmtfrendererlo-so-libmtfrendererlo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libmtfrendererlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libmtfrendererlo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libmtfrendererlo.so": 37600,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libmtfrendererlo.so": 37600
+            }
+        },
+        "experiment": "libmtfrendererlo-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libmtfrendererlo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libmtfrendererlo.so",
+        "different_libs": true
+    }
+]

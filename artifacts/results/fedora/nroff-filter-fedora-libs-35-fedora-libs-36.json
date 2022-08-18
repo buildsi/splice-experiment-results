@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/nroff-filter.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/nroff-filter.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "nroff-filter.so",
+                    "spliced_lib": "nroff-filter.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.9550323486328125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "nroff-filter.so",
+                    "spliced_lib": "nroff-filter.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.67572021484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009209871292114258,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/nroff-filter.so /__w/splice-experiment-runs/splice-experiment-runs/second/nroff-filter.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/nroff-filter.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/nroff-filter.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/nroff-filter.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/nroff-filter.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/nroff-filter.so-abi-laboratory-nroff-filter-so-nroff-filter-so.html\nERROR: missed debug-info file nroff-filter.so-0.60.8-9.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to nroff-filter.so-0.60.8-9.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.10642051696777344,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/nroff-filter.so /__w/splice-experiment-runs/splice-experiment-runs/second/nroff-filter.so nroff-filter-so-nroff-filter-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/nroff-filter.so-abi-laboratory-nroff-filter-so-nroff-filter-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/nroff-filter.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/nroff-filter.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/nroff-filter.so": 15648,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/nroff-filter.so": 15648
+            }
+        },
+        "experiment": "nroff-filter-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/nroff-filter.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/nroff-filter.so",
+        "different_libs": true
+    }
+]

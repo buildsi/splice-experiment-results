@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/zlib.cpython-310-x86_64-linux-gnu.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/zlib.cpython-310-x86_64-linux-gnu.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "zlib.cpython-310-x86_64-linux-gnu.so",
+                    "spliced_lib": "zlib.cpython-310-x86_64-linux-gnu.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.9311904907226562e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "zlib.cpython-310-x86_64-linux-gnu.so",
+                    "spliced_lib": "zlib.cpython-310-x86_64-linux-gnu.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.198883056640625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008380651473999023,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/zlib.cpython-310-x86_64-linux-gnu.so /__w/splice-experiment-runs/splice-experiment-runs/second/zlib.cpython-310-x86_64-linux-gnu.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/zlib.cpython-310-x86_64-linux-gnu.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/zlib.cpython-310-x86_64-linux-gnu.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/zlib.cpython-310-x86_64-linux-gnu.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/zlib.cpython-310-x86_64-linux-gnu.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/zlib.cpython-310-x86_64-linux-gnu.so-abi-laboratory-zlib-cpython-310-x86_64-linux-gnu-so-zlib-cpython-310-x86_64-linux-gnu-so.html\nERROR: missed debug-info file zlib.cpython-310-x86_64-linux-gnu.so-3.10.4-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to zlib.cpython-310-x86_64-linux-gnu.so-3.10.4-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08211803436279297,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/zlib.cpython-310-x86_64-linux-gnu.so /__w/splice-experiment-runs/splice-experiment-runs/second/zlib.cpython-310-x86_64-linux-gnu.so zlib-cpython-310-x86_64-linux-gnu-so-zlib-cpython-310-x86_64-linux-gnu-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/zlib.cpython-310-x86_64-linux-gnu.so-abi-laboratory-zlib-cpython-310-x86_64-linux-gnu-so-zlib-cpython-310-x86_64-linux-gnu-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/zlib.cpython-310-x86_64-linux-gnu.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/zlib.cpython-310-x86_64-linux-gnu.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/zlib.cpython-310-x86_64-linux-gnu.so": 47744,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/zlib.cpython-310-x86_64-linux-gnu.so": 47744
+            }
+        },
+        "experiment": "zlib-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/zlib.cpython-310-x86_64-linux-gnu.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/zlib.cpython-310-x86_64-linux-gnu.so",
+        "different_libs": true
+    }
+]

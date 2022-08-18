@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/kimg_dds.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/kimg_dds.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kimg_dds.so",
+                    "spliced_lib": "kimg_dds.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.9087066650390625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kimg_dds.so",
+                    "spliced_lib": "kimg_dds.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.3909759521484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.00996851921081543,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/kimg_dds.so /__w/splice-experiment-runs/splice-experiment-runs/second/kimg_dds.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kimg_dds.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kimg_dds.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/kimg_dds.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/kimg_dds.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kimg_dds.so-abi-laboratory-kimg_dds-so-kimg_dds-so.html\nERROR: missed debug-info file kimg_dds.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to kimg_dds.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.11177730560302734,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/kimg_dds.so /__w/splice-experiment-runs/splice-experiment-runs/second/kimg_dds.so kimg_dds-so-kimg_dds-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kimg_dds.so-abi-laboratory-kimg_dds-so-kimg_dds-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kimg_dds.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kimg_dds.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/kimg_dds.so": 28312,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/kimg_dds.so": 28312
+            }
+        },
+        "experiment": "kimg_dds-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/kimg_dds.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/kimg_dds.so",
+        "different_libs": true
+    }
+]

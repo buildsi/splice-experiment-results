@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/sched.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/sched.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "sched.so",
+                    "spliced_lib": "sched.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.3589859008789062e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "sched.so",
+                    "spliced_lib": "sched.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.0067901611328125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.006257772445678711,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/sched.so /__w/splice-experiment-runs/splice-experiment-runs/second/sched.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/sched.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/sched.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/sched.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/sched.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/sched.so-abi-laboratory-sched-so-sched-so.html\nERROR: missed debug-info file sched.so-35.1-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to sched.so-35.1-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.07910919189453125,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/sched.so /__w/splice-experiment-runs/splice-experiment-runs/second/sched.so sched-so-sched-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/sched.so-abi-laboratory-sched-so-sched-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/sched.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/sched.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/sched.so": 15952,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/sched.so": 15952
+            }
+        },
+        "experiment": "sched-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/sched.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/sched.so",
+        "different_libs": true
+    }
+]

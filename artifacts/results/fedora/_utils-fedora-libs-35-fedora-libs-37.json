@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/_utils.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/_utils.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "_utils.so",
+                    "spliced_lib": "_utils.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.935264587402344e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "_utils.so",
+                    "spliced_lib": "_utils.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.4781951904296875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008227825164794922,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/_utils.so /__w/splice-experiment-runs/splice-experiment-runs/second/_utils.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/_utils.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/_utils.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/_utils.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/_utils.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/_utils.so-abi-laboratory-_utils-so-_utils-so.html\nERROR: missed debug-info file _utils.so-0.66.0-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to _utils.so-0.66.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibrpm.so.9: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.09102749824523926,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/_utils.so /__w/splice-experiment-runs/splice-experiment-runs/second/_utils.so _utils-so-_utils-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/_utils.so-abi-laboratory-_utils-so-_utils-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/_utils.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/_utils.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/_utils.so": 103568,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/_utils.so": 103568
+            }
+        },
+        "experiment": "_utils-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/_utils.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/_utils.so",
+        "different_libs": true
+    }
+]

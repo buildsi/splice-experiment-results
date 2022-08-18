@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libxdg-shell.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libxdg-shell.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxdg-shell.so",
+                    "spliced_lib": "libxdg-shell.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.626678466796875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxdg-shell.so",
+                    "spliced_lib": "libxdg-shell.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.368492126464844e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007211923599243164,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libxdg-shell.so /__w/splice-experiment-runs/splice-experiment-runs/second/libxdg-shell.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libxdg-shell.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libxdg-shell.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libxdg-shell.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libxdg-shell.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libxdg-shell.so-abi-laboratory-libxdg-shell-so-libxdg-shell-so.html\nERROR: missed debug-info file libxdg-shell.so-5.15.5-3.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libxdg-shell.so-5.15.5-3.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.08630919456481934,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libxdg-shell.so /__w/splice-experiment-runs/splice-experiment-runs/second/libxdg-shell.so libxdg-shell-so-libxdg-shell-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libxdg-shell.so-abi-laboratory-libxdg-shell-so-libxdg-shell-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libxdg-shell.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libxdg-shell.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libxdg-shell.so": 70624,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libxdg-shell.so": 70624
+            }
+        },
+        "experiment": "libxdg-shell-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libxdg-shell.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libxdg-shell.so",
+        "different_libs": true
+    }
+]

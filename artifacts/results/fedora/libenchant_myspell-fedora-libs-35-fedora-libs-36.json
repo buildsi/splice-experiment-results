@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libenchant_myspell.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libenchant_myspell.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libenchant_myspell.so",
+                    "spliced_lib": "libenchant_myspell.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.361701965332031e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libenchant_myspell.so",
+                    "spliced_lib": "libenchant_myspell.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.3909759521484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.010594606399536133,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libenchant_myspell.so /__w/splice-experiment-runs/splice-experiment-runs/second/libenchant_myspell.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libenchant_myspell.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libenchant_myspell.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libenchant_myspell.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libenchant_myspell.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libenchant_myspell.so-abi-laboratory-libenchant_myspell-so-libenchant_myspell-so.html\nERROR: missed debug-info file libenchant_myspell.so-1.6.0-30.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libenchant_myspell.so-1.6.0-30.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibhunspell-1.7.so.0: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.10526609420776367,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libenchant_myspell.so /__w/splice-experiment-runs/splice-experiment-runs/second/libenchant_myspell.so libenchant_myspell-so-libenchant_myspell-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libenchant_myspell.so-abi-laboratory-libenchant_myspell-so-libenchant_myspell-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libenchant_myspell.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libenchant_myspell.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libenchant_myspell.so": 28472,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libenchant_myspell.so": 28472
+            }
+        },
+        "experiment": "libenchant_myspell-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libenchant_myspell.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libenchant_myspell.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libuuresolverlo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libuuresolverlo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libuuresolverlo.so",
+                    "spliced_lib": "libuuresolverlo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.552436828613281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libuuresolverlo.so",
+                    "spliced_lib": "libuuresolverlo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.106231689453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008390188217163086,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libuuresolverlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libuuresolverlo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libuuresolverlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libuuresolverlo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libuuresolverlo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libuuresolverlo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libuuresolverlo.so-abi-laboratory-libuuresolverlo-so-libuuresolverlo-so.html\nERROR: missed debug-info file libuuresolverlo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libuuresolverlo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.08863973617553711,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libuuresolverlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libuuresolverlo.so libuuresolverlo-so-libuuresolverlo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libuuresolverlo.so-abi-laboratory-libuuresolverlo-so-libuuresolverlo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libuuresolverlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libuuresolverlo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libuuresolverlo.so": 41992,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libuuresolverlo.so": 41992
+            }
+        },
+        "experiment": "libuuresolverlo-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libuuresolverlo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libuuresolverlo.so",
+        "different_libs": true
+    }
+]

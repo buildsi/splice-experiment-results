@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libucpftp1.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libucpftp1.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libucpftp1.so",
+                    "spliced_lib": "libucpftp1.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.890296936035156e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libucpftp1.so",
+                    "spliced_lib": "libucpftp1.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.4066696166992188e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008777856826782227,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libucpftp1.so /__w/splice-experiment-runs/splice-experiment-runs/second/libucpftp1.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libucpftp1.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libucpftp1.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libucpftp1.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libucpftp1.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libucpftp1.so-abi-laboratory-libucpftp1-so-libucpftp1-so.html\nERROR: missed debug-info file libucpftp1.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libucpftp1.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.08737826347351074,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libucpftp1.so /__w/splice-experiment-runs/splice-experiment-runs/second/libucpftp1.so libucpftp1-so-libucpftp1-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libucpftp1.so-abi-laboratory-libucpftp1-so-libucpftp1-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libucpftp1.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libucpftp1.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libucpftp1.so": 228800,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libucpftp1.so": 228800
+            }
+        },
+        "experiment": "libucpftp1-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libucpftp1.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libucpftp1.so",
+        "different_libs": true
+    }
+]

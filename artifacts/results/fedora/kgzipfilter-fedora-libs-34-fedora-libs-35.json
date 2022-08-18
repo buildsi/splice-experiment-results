@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/kgzipfilter.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/kgzipfilter.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kgzipfilter.so",
+                    "spliced_lib": "kgzipfilter.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.482269287109375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kgzipfilter.so",
+                    "spliced_lib": "kgzipfilter.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.6689300537109375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008977174758911133,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/kgzipfilter.so /__w/splice-experiment-runs/splice-experiment-runs/second/kgzipfilter.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kgzipfilter.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kgzipfilter.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/kgzipfilter.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/kgzipfilter.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kgzipfilter.so-abi-laboratory-kgzipfilter-so-kgzipfilter-so.html\nERROR: missed debug-info file kgzipfilter.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to kgzipfilter.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.10329365730285645,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/kgzipfilter.so /__w/splice-experiment-runs/splice-experiment-runs/second/kgzipfilter.so kgzipfilter-so-kgzipfilter-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/kgzipfilter.so-abi-laboratory-kgzipfilter-so-kgzipfilter-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/kgzipfilter.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/kgzipfilter.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/kgzipfilter.so": 28416,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/kgzipfilter.so": 28416
+            }
+        },
+        "experiment": "kgzipfilter-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/kgzipfilter.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/kgzipfilter.so",
+        "different_libs": true
+    }
+]

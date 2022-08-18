@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libtbb.so.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libtbb.so.2"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtbb.so.2",
+                    "spliced_lib": "libtbb.so.2",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00013589859008789062
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtbb.so.2",
+                    "spliced_lib": "libtbb.so.2",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0005786418914794922
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0103302001953125,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libtbb.so.2 /__w/splice-experiment-runs/splice-experiment-runs/second/libtbb.so.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libtbb.so.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libtbb.so.2",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libtbb.so.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libtbb.so.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libtbb.so.2-abi-laboratory-libtbb-so-2-libtbb-so-2.html\nERROR: missed debug-info file libtbb.so.2-2020.3-9.fc35.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libtbb.so.2-2020.3-9.fc35.x86_64.debug (gnu_debuglink)\nReading v-tables\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.11414289474487305,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libtbb.so.2 /__w/splice-experiment-runs/splice-experiment-runs/second/libtbb.so.2 libtbb-so-2-libtbb-so-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libtbb.so.2-abi-laboratory-libtbb-so-2-libtbb-so-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libtbb.so.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libtbb.so.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libtbb.so.2": 272008,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libtbb.so.2": 272008
+            }
+        },
+        "experiment": "libtbb-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libtbb.so.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libtbb.so.2",
+        "different_libs": true
+    }
+]

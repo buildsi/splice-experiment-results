@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libnpth.so.0.1.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libnpth.so.0.1.2"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libnpth.so.0.1.2",
+                    "spliced_lib": "libnpth.so.0.1.2",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.886222839355469e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libnpth.so.0.1.2",
+                    "spliced_lib": "libnpth.so.0.1.2",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.7404556274414062e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.006882429122924805,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libnpth.so.0.1.2 /__w/splice-experiment-runs/splice-experiment-runs/second/libnpth.so.0.1.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libnpth.so.0.1.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libnpth.so.0.1.2",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libnpth.so.0.1.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libnpth.so.0.1.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libnpth.so.0.1.2-abi-laboratory-libnpth-so-0-1-2-libnpth-so-0-1-2.html\nERROR: missed debug-info file libnpth.so.0.1.2-1.6-8.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libnpth.so.0.1.2-1.6-8.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.0813150405883789,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libnpth.so.0.1.2 /__w/splice-experiment-runs/splice-experiment-runs/second/libnpth.so.0.1.2 libnpth-so-0-1-2-libnpth-so-0-1-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libnpth.so.0.1.2-abi-laboratory-libnpth-so-0-1-2-libnpth-so-0-1-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libnpth.so.0.1.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libnpth.so.0.1.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libnpth.so.0.1.2": 24120,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libnpth.so.0.1.2": 24120
+            }
+        },
+        "experiment": "libnpth-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libnpth.so.0.1.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libnpth.so.0.1.2",
+        "different_libs": true
+    }
+]

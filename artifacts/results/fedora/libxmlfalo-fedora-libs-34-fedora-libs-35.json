@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libxmlfalo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libxmlfalo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxmlfalo.so",
+                    "spliced_lib": "libxmlfalo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.315376281738281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxmlfalo.so",
+                    "spliced_lib": "libxmlfalo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.106231689453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.010656356811523438,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libxmlfalo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libxmlfalo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libxmlfalo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libxmlfalo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libxmlfalo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libxmlfalo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libxmlfalo.so-abi-laboratory-libxmlfalo-so-libxmlfalo-so.html\nERROR: missed debug-info file libxmlfalo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libxmlfalo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.09856152534484863,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libxmlfalo.so /__w/splice-experiment-runs/splice-experiment-runs/second/libxmlfalo.so libxmlfalo-so-libxmlfalo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libxmlfalo.so-abi-laboratory-libxmlfalo-so-libxmlfalo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libxmlfalo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libxmlfalo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libxmlfalo.so": 71752,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libxmlfalo.so": 71752
+            }
+        },
+        "experiment": "libxmlfalo-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libxmlfalo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libxmlfalo.so",
+        "different_libs": true
+    }
+]

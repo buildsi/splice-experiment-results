@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/libtiffxx.so.5.8.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/libtiffxx.so.5.8.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtiffxx.so.5.8.0",
+                    "spliced_lib": "libtiffxx.so.5.8.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5510787963867188e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtiffxx.so.5.8.0",
+                    "spliced_lib": "libtiffxx.so.5.8.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.7220458984375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009464502334594727,
+                    "command": "/usr/local/bin/abidiff /__w/splice-experiment-runs/splice-experiment-runs/first/libtiffxx.so.5.8.0 /__w/splice-experiment-runs/splice-experiment-runs/second/libtiffxx.so.5.8.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libtiffxx.so.5.8.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libtiffxx.so.5.8.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/libtiffxx.so.5.8.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/libtiffxx.so.5.8.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libtiffxx.so.5.8.0-abi-laboratory-libtiffxx-so-5-8-0-libtiffxx-so-5-8-0.html\nERROR: missed debug-info file libtiffxx.so.5.8.0-4.4.0-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libtiffxx.so.5.8.0-4.4.0-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibjpeg.so.62: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.10276317596435547,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/libtiffxx.so.5.8.0 /__w/splice-experiment-runs/splice-experiment-runs/second/libtiffxx.so.5.8.0 libtiffxx-so-5-8-0-libtiffxx-so-5-8-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/libtiffxx.so.5.8.0-abi-laboratory-libtiffxx-so-5-8-0-libtiffxx-so-5-8-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/libtiffxx.so.5.8.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/libtiffxx.so.5.8.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/libtiffxx.so.5.8.0": 16184,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/libtiffxx.so.5.8.0": 16184
+            }
+        },
+        "experiment": "libtiffxx-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/libtiffxx.so.5.8.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/libtiffxx.so.5.8.0",
+        "different_libs": true
+    }
+]
