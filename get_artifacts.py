@@ -2,7 +2,6 @@
 
 import sys
 import os
-import json
 import fnmatch
 import hashlib
 import tempfile
@@ -12,9 +11,7 @@ import requests
 import pathlib
 
 from datetime import datetime, timedelta
-from io import BytesIO
 from zipfile import ZipFile
-from urllib.request import urlopen
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -198,6 +195,20 @@ def recursive_find(base, pattern="*"):
             yield os.path.join(root, filename)
 
 
+def stream_download(url, dest):
+    """
+    stream download to file
+    """
+    with requests.get(url, stream=True, headers=HEADERS) as r:
+        r.raise_for_status()
+        with open(dest, "wb") as f:
+            for chunk in r.iter_content(chunk_size=8192):
+                if chunk:
+                    f.write(chunk)
+    if os.path.exists(dest):
+        return dest
+
+
 def download_artifacts(artifacts, output, days):
     """
     Extract artifacts to an output directory
@@ -228,14 +239,27 @@ def download_artifacts(artifacts, output, days):
                 )
                 continue
 
-        response = requests.get(artifact["archive_download_url"], headers=HEADERS)
-        if response.status_code != 200:
-            abort_if_fail(response, "Unable to download artifact %s" % artifact["name"])
+        artifact_url = artifact["archive_download_url"]
+        print(f"Downloading {artifact_url}")
 
         # Create a temporary directory
         tmp = tempfile.mkdtemp()
-        zipfile = ZipFile(BytesIO(response.content))
-        res = zipfile.extractall(tmp)
+        archive_path = os.path.join(tmp, "archive.zip")
+        extract_dir = os.path.join(tmp, "extracted")
+
+        # Make the extraction directory
+        if not os.path.exists(extract_dir):
+            os.makedirs(extract_dir)
+
+        zip_file = stream_download(artifact_url, archive_path)
+        if not zip_file:
+            print("Unable to download artifact %s" % artifact["name"])
+            shutil.rmtree(tmp)
+            continue
+
+        # Read zipfile
+        zipfile = ZipFile(zip_file, mode="r")
+        zipfile.extractall(extract_dir)
 
         if "cache" in artifact["name"]:
             save_to = os.path.join(output, "cache")
@@ -244,7 +268,7 @@ def download_artifacts(artifacts, output, days):
             save_to = os.path.join(output, "results")
 
         # Loop through files, add those that aren't present
-        for filename in recursive_find(tmp):
+        for filename in recursive_find(extract_dir):
             relpath = filename.replace(tmp, "").strip(os.sep)
             finalpath = os.path.join(save_to, relpath)
 
