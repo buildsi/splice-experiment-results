@@ -240,7 +240,6 @@ def download_artifacts(artifacts, output, days):
                 continue
 
         artifact_url = artifact["archive_download_url"]
-        print(f"Downloading {artifact_url}")
 
         # Create a temporary directory
         tmp = tempfile.mkdtemp()
@@ -252,8 +251,9 @@ def download_artifacts(artifacts, output, days):
             os.makedirs(extract_dir)
 
         # Don't download chonker -vs- artifacts
-        if "-vs-" in artifact["name"]:
+        if "fedora" in artifact['name'] and "-vs-" not in artifact["name"]:
             continue
+        print(f"Downloading {artifact_url}")
 
         zip_file = stream_download(artifact_url, archive_path)
         if not zip_file:
