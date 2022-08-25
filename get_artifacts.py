@@ -139,7 +139,6 @@ def get_artifacts(repository, days=10, runid=None):
     """
     Retrieve artifacts for a repository.
     """
-    runid = "2874605103"
     # Check if the branch already has a pull request open
     results = []
     page = 1
@@ -163,7 +162,7 @@ def get_artifacts(repository, days=10, runid=None):
         # We must break if found results > days old, otherwise we will continue
         # and use up our API key!
         artifacts = response["artifacts"]
-        if any([older_than(x, days) for x in artifacts]):
+        if any([older_than(x, days) for x in artifacts]) and not runid:
             print("Results are older than %s days, stopping query." % days)
             # but still add the last set since we have them
             results += artifacts
@@ -248,10 +247,10 @@ def download_artifacts(artifacts, output, days):
         for filename in recursive_find(tmp):
             relpath = filename.replace(tmp, "").strip(os.sep)
             finalpath = os.path.join(save_to, relpath)
- 
-            if "fedora" in artifact['name'] and "fedora" not in relpath:
-                continue 
-                          
+
+            if "fedora" in artifact["name"] and "fedora" not in relpath:
+                continue
+
             # If the file doesn't have size, don't add
             size = get_size(filename)
             if size == 0:
@@ -313,4 +312,5 @@ if __name__ == "__main__":
     runid = None
     if len(sys.argv) > 1:
         runid = sys.argv[1]
+        print("Using runid %s" % runid)
     main(runid)
