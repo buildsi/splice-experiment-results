@@ -251,6 +251,10 @@ def download_artifacts(artifacts, output, days):
         if not os.path.exists(extract_dir):
             os.makedirs(extract_dir)
 
+        # Don't download chonker -vs- artifacts
+        if "-vs-" in artifact["name"]:
+            continue
+
         zip_file = stream_download(artifact_url, archive_path)
         if not zip_file:
             print("Unable to download artifact %s" % artifact["name"])
