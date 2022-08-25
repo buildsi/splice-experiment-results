@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-networkd.socket"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-networkd.socket"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "systemd-networkd.socket",
+                    "spliced_lib": "systemd-networkd.socket",
+                    "command": "missing-previously-found-symbols",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 5.7220458984375e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "systemd-networkd.socket",
+                    "spliced_lib": "systemd-networkd.socket",
+                    "command": "missing-previously-found-exports",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 3.814697265625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-networkd.socket\n",
+                    "return_code": 1,
+                    "seconds": 0.006730318069458008,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-networkd.socket /__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-networkd.socket",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-networkd.socket",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-networkd.socket",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-networkd.socket\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-networkd.socket\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-networkd.socket-abi-laboratory-systemd-networkd-socket-systemd-networkd-socket.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
+                    "return_code": 12,
+                    "seconds": 0.100341796875,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-networkd.socket /__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-networkd.socket systemd-networkd-socket-systemd-networkd-socket /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-networkd.socket-abi-laboratory-systemd-networkd-socket-systemd-networkd-socket.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-networkd.socket",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-networkd.socket",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-networkd.socket": 682,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-networkd.socket": 682
+            }
+        },
+        "experiment": "systemd-networkd-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-networkd.socket",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-networkd.socket",
+        "different_libs": true
+    }
+]

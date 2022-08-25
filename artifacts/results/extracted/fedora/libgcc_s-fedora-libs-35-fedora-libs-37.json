@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libgcc_s.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/32/libgcc_s.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgcc_s.so",
+                    "spliced_lib": "libgcc_s.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 4.5299530029296875e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgcc_s.so",
+                    "spliced_lib": "libgcc_s.so",
+                    "command": "missing-previously-found-exports",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 3.337860107421875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libgcc_s.so\n",
+                    "return_code": 1,
+                    "seconds": 0.005356550216674805,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libgcc_s.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/32/libgcc_s.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/32/libgcc_s.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libgcc_s.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libgcc_s.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/32/libgcc_s.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libgcc_s.so-abi-laboratory-libgcc_s-so-libgcc_s-so.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
+                    "return_code": 12,
+                    "seconds": 0.08983898162841797,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libgcc_s.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/32/libgcc_s.so libgcc_s-so-libgcc_s-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libgcc_s.so-abi-laboratory-libgcc_s-so-libgcc_s-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/32/libgcc_s.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libgcc_s.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libgcc_s.so": 195,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/32/libgcc_s.so": 191
+            }
+        },
+        "experiment": "libgcc_s-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/32/libgcc_s.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libgcc_s.so",
+        "different_libs": true
+    }
+]

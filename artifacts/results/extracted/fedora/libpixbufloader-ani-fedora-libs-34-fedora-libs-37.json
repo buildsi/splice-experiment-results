@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libpixbufloader-ani.so",
+                    "spliced_lib": "libpixbufloader-ani.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.4318695068359375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libpixbufloader-ani.so",
+                    "spliced_lib": "libpixbufloader-ani.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.3909759521484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.006886959075927734,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so-abi-laboratory-libpixbufloader-ani-so-libpixbufloader-ani-so.html\nERROR: missed debug-info file libpixbufloader-ani.so-2.42.9-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libpixbufloader-ani.so-2.42.9-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08367514610290527,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so libpixbufloader-ani-so-libpixbufloader-ani-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so-abi-laboratory-libpixbufloader-ani-so-libpixbufloader-ani-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so": 24576,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so": 24576
+            }
+        },
+        "experiment": "libpixbufloader-ani-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libQt5Core.so.5.15.5"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libQt5Core.so.5.15.5"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libQt5Core.so.5.15.5",
+                    "spliced_lib": "libQt5Core.so.5.15.5",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.002173185348510742
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libQt5Core.so.5.15.5",
+                    "spliced_lib": "libQt5Core.so.5.15.5",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.35185861587524414
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.057000160217285156,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libQt5Core.so.5.15.5 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libQt5Core.so.5.15.5",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libQt5Core.so.5.15.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libQt5Core.so.5.15.5",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libQt5Core.so.5.15.5\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libQt5Core.so.5.15.5\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libQt5Core.so.5.15.5-abi-laboratory-libQt5Core-so-5-15-5-libQt5Core-so-5-15-5.html\nERROR: missed debug-info file libQt5Core.so.5.15.5-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libQt5Core.so.5.15.5-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibicui18n.so.69: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.24324584007263184,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libQt5Core.so.5.15.5 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libQt5Core.so.5.15.5 libQt5Core-so-5-15-5-libQt5Core-so-5-15-5 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libQt5Core.so.5.15.5-abi-laboratory-libQt5Core-so-5-15-5-libQt5Core-so-5-15-5.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libQt5Core.so.5.15.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libQt5Core.so.5.15.5",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libQt5Core.so.5.15.5": 5879040,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libQt5Core.so.5.15.5": 5879040
+            }
+        },
+        "experiment": "libQt5Core-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libQt5Core.so.5.15.5",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libQt5Core.so.5.15.5",
+        "different_libs": true
+    }
+]

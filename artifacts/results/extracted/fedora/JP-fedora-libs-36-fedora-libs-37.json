@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "JP.so",
+                    "spliced_lib": "JP.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.2172927856445312e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "JP.so",
+                    "spliced_lib": "JP.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.198883056640625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008427858352661133,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so-abi-laboratory-JP-so-JP-so.html\nERROR: missed debug-info file JP.so-3.17-485.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to JP.so-3.17-485.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08677053451538086,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so JP-so-JP-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so-abi-laboratory-JP-so-JP-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so": 2751880,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so": 2751880
+            }
+        },
+        "experiment": "JP-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/vendor_perl/auto/Encode/JP/JP.so",
+        "different_libs": true
+    }
+]

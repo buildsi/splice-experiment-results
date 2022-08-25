@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kdeprint_lpr.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kdeprint_lpr.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kdeprint_lpr.so",
+                    "spliced_lib": "kdeprint_lpr.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00015616416931152344
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kdeprint_lpr.so",
+                    "spliced_lib": "kdeprint_lpr.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00035119056701660156
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009067773818969727,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kdeprint_lpr.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kdeprint_lpr.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kdeprint_lpr.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kdeprint_lpr.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kdeprint_lpr.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kdeprint_lpr.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kdeprint_lpr.so-abi-laboratory-kdeprint_lpr-so-kdeprint_lpr-so.html\nERROR: missed debug-info file kdeprint_lpr.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to kdeprint_lpr.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkdeprint_management.so.4: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.0940864086151123,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kdeprint_lpr.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kdeprint_lpr.so kdeprint_lpr-so-kdeprint_lpr-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kdeprint_lpr.so-abi-laboratory-kdeprint_lpr-so-kdeprint_lpr-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kdeprint_lpr.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kdeprint_lpr.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kdeprint_lpr.so": 235384,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kdeprint_lpr.so": 235384
+            }
+        },
+        "experiment": "kdeprint_lpr-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kdeprint_lpr.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kdeprint_lpr.so",
+        "different_libs": true
+    }
+]

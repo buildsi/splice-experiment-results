@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/kiod/kioexecd.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/kiod/kioexecd.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kioexecd.so",
+                    "spliced_lib": "kioexecd.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.7220458984375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kioexecd.so",
+                    "spliced_lib": "kioexecd.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.58306884765625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009436845779418945,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/kiod/kioexecd.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/kiod/kioexecd.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/kiod/kioexecd.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/kiod/kioexecd.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/kiod/kioexecd.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/kiod/kioexecd.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/kiod/kioexecd.so-abi-laboratory-kioexecd-so-kioexecd-so.html\nERROR: missed debug-info file kioexecd.so-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to kioexecd.so-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10703754425048828,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/kiod/kioexecd.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/kiod/kioexecd.so kioexecd-so-kioexecd-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/kiod/kioexecd.so-abi-laboratory-kioexecd-so-kioexecd-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/kiod/kioexecd.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/kiod/kioexecd.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/kiod/kioexecd.so": 49584,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/kiod/kioexecd.so": 49584
+            }
+        },
+        "experiment": "kioexecd-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/kiod/kioexecd.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/kiod/kioexecd.so",
+        "different_libs": true
+    }
+]

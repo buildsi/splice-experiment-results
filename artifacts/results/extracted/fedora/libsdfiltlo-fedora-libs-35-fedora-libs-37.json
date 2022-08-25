@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libsdfiltlo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libsdfiltlo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsdfiltlo.so",
+                    "spliced_lib": "libsdfiltlo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00016021728515625
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsdfiltlo.so",
+                    "spliced_lib": "libsdfiltlo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.6927719116210938e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.010155439376831055,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libsdfiltlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libsdfiltlo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libsdfiltlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libsdfiltlo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libsdfiltlo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libsdfiltlo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libsdfiltlo.so-abi-laboratory-libsdfiltlo-so-libsdfiltlo-so.html\nERROR: missed debug-info file libsdfiltlo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libsdfiltlo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.12023138999938965,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libsdfiltlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libsdfiltlo.so libsdfiltlo-so-libsdfiltlo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libsdfiltlo.so-abi-laboratory-libsdfiltlo-so-libsdfiltlo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libsdfiltlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libsdfiltlo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libsdfiltlo.so": 696888,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libsdfiltlo.so": 696888
+            }
+        },
+        "experiment": "libsdfiltlo-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libsdfiltlo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libsdfiltlo.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libthread_db.so.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libthread_db.so.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libthread_db.so.1",
+                    "spliced_lib": "libthread_db.so.1",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5272369384765625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libthread_db.so.1",
+                    "spliced_lib": "libthread_db.so.1",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.3126602172851562e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.006697177886962891,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libthread_db.so.1 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libthread_db.so.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libthread_db.so.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libthread_db.so.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libthread_db.so.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libthread_db.so.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libthread_db.so.1-abi-laboratory-libthread_db-so-1-libthread_db-so-1.html\nERROR: missed debug-info file libthread_db.so.1-2.35-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libthread_db.so.1-2.35-4.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08387422561645508,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libthread_db.so.1 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libthread_db.so.1 libthread_db-so-1-libthread_db-so-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libthread_db.so.1-abi-laboratory-libthread_db-so-1-libthread_db-so-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libthread_db.so.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libthread_db.so.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libthread_db.so.1": 42416,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libthread_db.so.1": 42416
+            }
+        },
+        "experiment": "libthread_db-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libthread_db.so.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libthread_db.so.1",
+        "different_libs": true
+    }
+]

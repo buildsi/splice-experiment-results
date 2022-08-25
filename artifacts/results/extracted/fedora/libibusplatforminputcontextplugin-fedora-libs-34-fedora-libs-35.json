@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libibusplatforminputcontextplugin.so",
+                    "spliced_lib": "libibusplatforminputcontextplugin.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00011372566223144531
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libibusplatforminputcontextplugin.so",
+                    "spliced_lib": "libibusplatforminputcontextplugin.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.0967254638671875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009709596633911133,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so-abi-laboratory-libibusplatforminputcontextplugin-so-libibusplatforminputcontextplugin-so.html\nERROR: missed debug-info file libibusplatforminputcontextplugin.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libibusplatforminputcontextplugin.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibQt5Gui.so.5: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.12224864959716797,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so libibusplatforminputcontextplugin-so-libibusplatforminputcontextplugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so-abi-laboratory-libibusplatforminputcontextplugin-so-libibusplatforminputcontextplugin-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so": 147584,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so": 147584
+            }
+        },
+        "experiment": "libibusplatforminputcontextplugin-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so",
+        "different_libs": true
+    }
+]

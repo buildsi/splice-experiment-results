@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libc.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libc.so.6"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libc.so",
+                    "spliced_lib": "libc.so.6",
+                    "command": "missing-previously-found-symbols",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 7.867813110351562e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libc.so",
+                    "spliced_lib": "libc.so.6",
+                    "command": "missing-previously-found-exports",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 3.5762786865234375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libc.so\n",
+                    "return_code": 1,
+                    "seconds": 0.005613088607788086,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libc.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libc.so.6",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libc.so.6",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libc.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libc.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libc.so.6\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libc.so-abi-laboratory-libc-so-libc-so-6.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
+                    "return_code": 12,
+                    "seconds": 0.09311795234680176,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libc.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libc.so.6 libc-so-libc-so-6 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libc.so-abi-laboratory-libc-so-libc-so-6.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libc.so.6",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libc.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libc.so": 253,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libc.so.6": 2373224
+            }
+        },
+        "experiment": "libc-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libc.so.6",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libc.so",
+        "different_libs": true
+    }
+]

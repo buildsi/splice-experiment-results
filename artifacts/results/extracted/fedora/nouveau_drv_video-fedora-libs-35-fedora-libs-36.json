@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/nouveau_drv_video.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/nouveau_drv_video.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "nouveau_drv_video.so",
+                    "spliced_lib": "nouveau_drv_video.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00014472007751464844
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "nouveau_drv_video.so",
+                    "spliced_lib": "nouveau_drv_video.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.0067901611328125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.011450767517089844,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/nouveau_drv_video.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/nouveau_drv_video.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/nouveau_drv_video.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/nouveau_drv_video.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/nouveau_drv_video.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/nouveau_drv_video.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/nouveau_drv_video.so-abi-laboratory-nouveau_drv_video-so-nouveau_drv_video-so.html\nERROR: missed debug-info file nouveau_drv_video.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to nouveau_drv_video.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibdrm.so.2: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.09299755096435547,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/nouveau_drv_video.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/nouveau_drv_video.so nouveau_drv_video-so-nouveau_drv_video-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/nouveau_drv_video.so-abi-laboratory-nouveau_drv_video-so-nouveau_drv_video-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/nouveau_drv_video.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/nouveau_drv_video.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/nouveau_drv_video.so": 11578728,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/nouveau_drv_video.so": 11578728
+            }
+        },
+        "experiment": "nouveau_drv_video-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/nouveau_drv_video.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/nouveau_drv_video.so",
+        "different_libs": true
+    }
+]

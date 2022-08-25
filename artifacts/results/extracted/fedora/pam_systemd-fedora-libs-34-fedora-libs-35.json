@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_systemd.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_systemd.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_systemd.so",
+                    "spliced_lib": "pam_systemd.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.7697296142578125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_systemd.so",
+                    "spliced_lib": "pam_systemd.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.3909759521484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008962154388427734,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_systemd.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_systemd.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_systemd.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_systemd.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_systemd.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_systemd.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_systemd.so-abi-laboratory-pam_systemd-so-pam_systemd-so.html\nERROR: missed debug-info file pam_systemd.so-250.3-8.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to pam_systemd.so-250.3-8.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10397195816040039,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_systemd.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_systemd.so pam_systemd-so-pam_systemd-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_systemd.so-abi-laboratory-pam_systemd-so-pam_systemd-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_systemd.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_systemd.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_systemd.so": 519624,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_systemd.so": 519624
+            }
+        },
+        "experiment": "pam_systemd-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_systemd.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_systemd.so",
+        "different_libs": true
+    }
+]

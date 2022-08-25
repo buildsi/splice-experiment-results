@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_succeed_if.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_succeed_if.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_succeed_if.so",
+                    "spliced_lib": "pam_succeed_if.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.0742416381835938e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_succeed_if.so",
+                    "spliced_lib": "pam_succeed_if.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.059906005859375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.00730586051940918,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_succeed_if.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_succeed_if.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_succeed_if.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_succeed_if.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_succeed_if.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_succeed_if.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_succeed_if.so-abi-laboratory-pam_succeed_if-so-pam_succeed_if-so.html\nERROR: missed debug-info file pam_succeed_if.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to pam_succeed_if.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08968257904052734,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_succeed_if.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_succeed_if.so pam_succeed_if-so-pam_succeed_if-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_succeed_if.so-abi-laboratory-pam_succeed_if-so-pam_succeed_if-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_succeed_if.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_succeed_if.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_succeed_if.so": 20120,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_succeed_if.so": 20120
+            }
+        },
+        "experiment": "pam_succeed_if-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_succeed_if.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_succeed_if.so",
+        "different_libs": true
+    }
+]

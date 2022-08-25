@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libcanvastoolslo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libcanvastoolslo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcanvastoolslo.so",
+                    "spliced_lib": "libcanvastoolslo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00012874603271484375
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcanvastoolslo.so",
+                    "spliced_lib": "libcanvastoolslo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0002129077911376953
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.010622024536132812,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libcanvastoolslo.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libcanvastoolslo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libcanvastoolslo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libcanvastoolslo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libcanvastoolslo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libcanvastoolslo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libcanvastoolslo.so-abi-laboratory-libcanvastoolslo-so-libcanvastoolslo-so.html\nERROR: missed debug-info file libcanvastoolslo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libcanvastoolslo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.11789178848266602,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libcanvastoolslo.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libcanvastoolslo.so libcanvastoolslo-so-libcanvastoolslo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libcanvastoolslo.so-abi-laboratory-libcanvastoolslo-so-libcanvastoolslo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libcanvastoolslo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libcanvastoolslo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libcanvastoolslo.so": 224520,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libcanvastoolslo.so": 224520
+            }
+        },
+        "experiment": "libcanvastoolslo-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libcanvastoolslo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libcanvastoolslo.so",
+        "different_libs": true
+    }
+]

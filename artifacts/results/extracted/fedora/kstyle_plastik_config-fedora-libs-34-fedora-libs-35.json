@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kstyle_plastik_config.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kstyle_plastik_config.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kstyle_plastik_config.so",
+                    "spliced_lib": "kstyle_plastik_config.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.91278076171875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kstyle_plastik_config.so",
+                    "spliced_lib": "kstyle_plastik_config.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.7404556274414062e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008575201034545898,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kstyle_plastik_config.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kstyle_plastik_config.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kstyle_plastik_config.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kstyle_plastik_config.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kstyle_plastik_config.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kstyle_plastik_config.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kstyle_plastik_config.so-abi-laboratory-kstyle_plastik_config-so-kstyle_plastik_config-so.html\nERROR: missed debug-info file kstyle_plastik_config.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to kstyle_plastik_config.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkdeui.so.4: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.11699461936950684,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kstyle_plastik_config.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kstyle_plastik_config.so kstyle_plastik_config-so-kstyle_plastik_config-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kstyle_plastik_config.so-abi-laboratory-kstyle_plastik_config-so-kstyle_plastik_config-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kstyle_plastik_config.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kstyle_plastik_config.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kstyle_plastik_config.so": 44720,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kstyle_plastik_config.so": 44720
+            }
+        },
+        "experiment": "kstyle_plastik_config-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kstyle_plastik_config.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kstyle_plastik_config.so",
+        "different_libs": true
+    }
+]

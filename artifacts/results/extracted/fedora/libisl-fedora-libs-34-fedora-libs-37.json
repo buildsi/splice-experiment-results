@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libisl.so.15"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/libisl.so.15"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libisl.so.15",
+                    "spliced_lib": "libisl.so.15",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0007975101470947266
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libisl.so.15",
+                    "spliced_lib": "libisl.so.15",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0879523754119873
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.023738861083984375,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libisl.so.15 /__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/libisl.so.15",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/libisl.so.15",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libisl.so.15",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libisl.so.15\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/libisl.so.15\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libisl.so.15-abi-laboratory-libisl-so-15-libisl-so-15.html\nERROR: missed debug-info file libisl.so.15-12.0.1-0.16.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libisl.so.15-12.0.1-0.16.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.12910079956054688,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libisl.so.15 /__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/libisl.so.15 libisl-so-15-libisl-so-15 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libisl.so.15-abi-laboratory-libisl-so-15-libisl-so-15.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/libisl.so.15",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libisl.so.15",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libisl.so.15": 1815712,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/libisl.so.15": 1815712
+            }
+        },
+        "experiment": "libisl-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/libisl.so.15",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/libisl.so.15",
+        "different_libs": true
+    }
+]

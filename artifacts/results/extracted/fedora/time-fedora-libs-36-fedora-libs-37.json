@@ -1,0 +1,85 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/time.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/time.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "time.so",
+                    "spliced_lib": "time.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "localtime_r",
+                        "mktime",
+                        "time",
+                        "strcmp",
+                        "strptime",
+                        "gmtime_r",
+                        "strerror",
+                        "luaopen_posix_time",
+                        "clock_getres",
+                        "clock_gettime",
+                        "strftime"
+                    ],
+                    "prediction": false,
+                    "seconds": 2.193450927734375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "time.so",
+                    "spliced_lib": "time.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "luaopen_posix_time"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.867813110351562e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 1 Removed, 1 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 1 Added variable symbol not referenced by debug info\n\nSONAME changed from '' to 'time.so'\n\n1 Removed function symbol not referenced by debug info:\n\n  [D] luaopen_posix_time\n\n1 Added function symbol not referenced by debug info:\n\n  [A] dl_load\n\n1 Added variable symbol not referenced by debug info:\n\n  [A] plugin_is_GPL_compatible\n\n",
+                    "return_code": 12,
+                    "seconds": 0.008548974990844727,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/time.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/time.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/time.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/time.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/time.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/time.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/time.so-abi-laboratory-time-so-time-so.html\nERROR: missed debug-info file time.so-35.1-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to time.so-35.1-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08643198013305664,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/time.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/time.so time-so-time-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/time.so-abi-laboratory-time-so-time-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/time.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/time.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/time.so": 24480,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/time.so": 16088
+            }
+        },
+        "experiment": "time-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/time.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/time.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkInfovisBoostGraphAlgorithms.so.9.1.0",
+                    "spliced_lib": "libvtkInfovisBoostGraphAlgorithms.so.9.1.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00015020370483398438
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkInfovisBoostGraphAlgorithms.so.9.1.0",
+                    "spliced_lib": "libvtkInfovisBoostGraphAlgorithms.so.9.1.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0003285408020019531
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.011235237121582031,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0-abi-laboratory-libvtkInfovisBoostGraphAlgorithms-so-9-1-0-libvtkInfovisBoostGraphAlgorithms-so-9-1-0.html\nERROR: missed debug-info file libvtkInfovisBoostGraphAlgorithms.so.9.1.0-9.1.0-12.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libvtkInfovisBoostGraphAlgorithms.so.9.1.0-9.1.0-12.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibvtkInfovisCore.so.1: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.0963602066040039,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0 libvtkInfovisBoostGraphAlgorithms-so-9-1-0-libvtkInfovisBoostGraphAlgorithms-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0-abi-laboratory-libvtkInfovisBoostGraphAlgorithms-so-9-1-0-libvtkInfovisBoostGraphAlgorithms-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0": 452520,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0": 452520
+            }
+        },
+        "experiment": "libvtkInfovisBoostGraphAlgorithms-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libvtkInfovisBoostGraphAlgorithms.so.9.1.0",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjsound.so",
+                    "spliced_lib": "libjsound.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.267692565917969e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjsound.so",
+                    "spliced_lib": "libjsound.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.9325485229492188e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.016565561294555664,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so-abi-laboratory-libjsound-so-libjsound-so.html\nERROR: missed debug-info file libjsound.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libjsound.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10402083396911621,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so libjsound-so-libjsound-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so-abi-laboratory-libjsound-so-libjsound-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so": 121096,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so": 121096
+            }
+        },
+        "experiment": "libjsound-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so",
+        "different_libs": true
+    }
+]

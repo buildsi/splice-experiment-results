@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/bearer/libqnmbearer.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/bearer/libqnmbearer.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqnmbearer.so",
+                    "spliced_lib": "libqnmbearer.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.793571472167969e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqnmbearer.so",
+                    "spliced_lib": "libqnmbearer.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.291534423828125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0076410770416259766,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/bearer/libqnmbearer.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/bearer/libqnmbearer.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/bearer/libqnmbearer.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/bearer/libqnmbearer.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/bearer/libqnmbearer.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/bearer/libqnmbearer.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/bearer/libqnmbearer.so-abi-laboratory-libqnmbearer-so-libqnmbearer-so.html\nERROR: missed debug-info file libqnmbearer.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libqnmbearer.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08469963073730469,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/bearer/libqnmbearer.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/bearer/libqnmbearer.so libqnmbearer-so-libqnmbearer-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/bearer/libqnmbearer.so-abi-laboratory-libqnmbearer-so-libqnmbearer-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/bearer/libqnmbearer.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/bearer/libqnmbearer.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/bearer/libqnmbearer.so": 283016,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/bearer/libqnmbearer.so": 283016
+            }
+        },
+        "experiment": "libqnmbearer-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/bearer/libqnmbearer.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/bearer/libqnmbearer.so",
+        "different_libs": true
+    }
+]

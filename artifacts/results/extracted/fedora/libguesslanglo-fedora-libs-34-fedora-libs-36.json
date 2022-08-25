@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libguesslanglo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libguesslanglo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libguesslanglo.so",
+                    "spliced_lib": "libguesslanglo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.315376281738281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libguesslanglo.so",
+                    "spliced_lib": "libguesslanglo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.7220458984375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0078125,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libguesslanglo.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libguesslanglo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libguesslanglo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libguesslanglo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libguesslanglo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libguesslanglo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libguesslanglo.so-abi-laboratory-libguesslanglo-so-libguesslanglo-so.html\nERROR: missed debug-info file libguesslanglo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libguesslanglo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibexttextcat-2.0.so.0: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.09035611152648926,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libguesslanglo.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libguesslanglo.so libguesslanglo-so-libguesslanglo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libguesslanglo.so-abi-laboratory-libguesslanglo-so-libguesslanglo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libguesslanglo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libguesslanglo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libguesslanglo.so": 50496,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libguesslanglo.so": 50496
+            }
+        },
+        "experiment": "libguesslanglo-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libguesslanglo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libguesslanglo.so",
+        "different_libs": true
+    }
+]

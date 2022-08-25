@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstsubparse.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstsubparse.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstsubparse.so",
+                    "spliced_lib": "libgstsubparse.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.555152893066406e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstsubparse.so",
+                    "spliced_lib": "libgstsubparse.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.0531158447265625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009168863296508789,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstsubparse.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstsubparse.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstsubparse.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstsubparse.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstsubparse.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstsubparse.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstsubparse.so-abi-laboratory-libgstsubparse-so-libgstsubparse-so.html\nERROR: missed debug-info file libgstsubparse.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libgstsubparse.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08688592910766602,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstsubparse.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstsubparse.so libgstsubparse-so-libgstsubparse-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstsubparse.so-abi-laboratory-libgstsubparse-so-libgstsubparse-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstsubparse.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstsubparse.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstsubparse.so": 99496,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstsubparse.so": 99496
+            }
+        },
+        "experiment": "libgstsubparse-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstsubparse.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstsubparse.so",
+        "different_libs": true
+    }
+]

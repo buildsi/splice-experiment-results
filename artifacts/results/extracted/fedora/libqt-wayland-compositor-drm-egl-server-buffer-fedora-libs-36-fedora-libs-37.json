@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqt-wayland-compositor-drm-egl-server-buffer.so",
+                    "spliced_lib": "libqt-wayland-compositor-drm-egl-server-buffer.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.1484832763671875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqt-wayland-compositor-drm-egl-server-buffer.so",
+                    "spliced_lib": "libqt-wayland-compositor-drm-egl-server-buffer.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.3909759521484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.00869297981262207,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so-abi-laboratory-libqt-wayland-compositor-drm-egl-server-buffer-so-libqt-wayland-compositor-drm-egl-server-buffer-so.html\nERROR: missed debug-info file libqt-wayland-compositor-drm-egl-server-buffer.so-5.15.5-3.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libqt-wayland-compositor-drm-egl-server-buffer.so-5.15.5-3.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.0868992805480957,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so libqt-wayland-compositor-drm-egl-server-buffer-so-libqt-wayland-compositor-drm-egl-server-buffer-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so-abi-laboratory-libqt-wayland-compositor-drm-egl-server-buffer-so-libqt-wayland-compositor-drm-egl-server-buffer-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so": 33496,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so": 33496
+            }
+        },
+        "experiment": "libqt-wayland-compositor-drm-egl-server-buffer-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so",
+        "different_libs": true
+    }
+]

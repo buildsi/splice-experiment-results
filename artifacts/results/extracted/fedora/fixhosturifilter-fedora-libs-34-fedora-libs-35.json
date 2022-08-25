@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "fixhosturifilter.so",
+                    "spliced_lib": "fixhosturifilter.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.24249267578125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "fixhosturifilter.so",
+                    "spliced_lib": "fixhosturifilter.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.9141387939453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009178638458251953,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so-abi-laboratory-fixhosturifilter-so-fixhosturifilter-so.html\nERROR: missed debug-info file fixhosturifilter.so-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to fixhosturifilter.so-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.13167643547058105,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so fixhosturifilter-so-fixhosturifilter-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so-abi-laboratory-fixhosturifilter-so-fixhosturifilter-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so": 20504,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so": 20504
+            }
+        },
+        "experiment": "fixhosturifilter-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/qt5/plugins/kf5/urifilters/fixhosturifilter.so",
+        "different_libs": true
+    }
+]

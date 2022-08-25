@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/modern.sog"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/modern.sog"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "modern.sog",
+                    "spliced_lib": "modern.sog",
+                    "command": "missing-previously-found-symbols",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 5.9604644775390625e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "modern.sog",
+                    "spliced_lib": "modern.sog",
+                    "command": "missing-previously-found-exports",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 3.5762786865234375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/modern.sog\n",
+                    "return_code": 1,
+                    "seconds": 0.0060465335845947266,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/modern.sog /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/modern.sog",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/modern.sog",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/modern.sog",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/modern.sog\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/modern.sog\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/modern.sog-abi-laboratory-modern-sog-modern-sog.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
+                    "return_code": 12,
+                    "seconds": 0.0806894302368164,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/modern.sog /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/modern.sog modern-sog-modern-sog /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/modern.sog-abi-laboratory-modern-sog-modern-sog.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/modern.sog",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/modern.sog",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/modern.sog": 6840,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/modern.sog": 6840
+            }
+        },
+        "experiment": "modern-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/modern.sog",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/modern.sog",
+        "different_libs": true
+    }
+]

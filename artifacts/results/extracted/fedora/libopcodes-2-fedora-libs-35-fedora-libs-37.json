@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libopcodes-2.37-27.fc36.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libopcodes-2.37-27.fc36.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libopcodes-2.37-27.fc36.so",
+                    "spliced_lib": "libopcodes-2.37-27.fc36.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.2928924560546875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libopcodes-2.37-27.fc36.so",
+                    "spliced_lib": "libopcodes-2.37-27.fc36.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00010514259338378906
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008233308792114258,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libopcodes-2.37-27.fc36.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libopcodes-2.37-27.fc36.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libopcodes-2.37-27.fc36.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libopcodes-2.37-27.fc36.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libopcodes-2.37-27.fc36.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libopcodes-2.37-27.fc36.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libopcodes-2.37-27.fc36.so-abi-laboratory-libopcodes-2-37-27-fc36-so-libopcodes-2-37-27-fc36-so.html\nERROR: missed debug-info file libopcodes-2.37-27.fc36.so-2.37-27.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libopcodes-2.37-27.fc36.so-2.37-27.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.1109001636505127,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libopcodes-2.37-27.fc36.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libopcodes-2.37-27.fc36.so libopcodes-2-37-27-fc36-so-libopcodes-2-37-27-fc36-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libopcodes-2.37-27.fc36.so-abi-laboratory-libopcodes-2-37-27-fc36-so-libopcodes-2-37-27-fc36-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libopcodes-2.37-27.fc36.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libopcodes-2.37-27.fc36.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libopcodes-2.37-27.fc36.so": 1356736,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libopcodes-2.37-27.fc36.so": 1356736
+            }
+        },
+        "experiment": "libopcodes-2-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libopcodes-2.37-27.fc36.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libopcodes-2.37-27.fc36.so",
+        "different_libs": true
+    }
+]

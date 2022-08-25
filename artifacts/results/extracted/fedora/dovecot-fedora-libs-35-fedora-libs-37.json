@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/dovecot.socket"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/dovecot.socket"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "dovecot.socket",
+                    "spliced_lib": "dovecot.socket",
+                    "command": "missing-previously-found-symbols",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 5.245208740234375e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "dovecot.socket",
+                    "spliced_lib": "dovecot.socket",
+                    "command": "missing-previously-found-exports",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 3.814697265625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/dovecot.socket\n",
+                    "return_code": 1,
+                    "seconds": 0.006400108337402344,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/dovecot.socket /__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/dovecot.socket",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/dovecot.socket",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/dovecot.socket",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/dovecot.socket\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/dovecot.socket\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/dovecot.socket-abi-laboratory-dovecot-socket-dovecot-socket.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
+                    "return_code": 12,
+                    "seconds": 0.09336161613464355,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/dovecot.socket /__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/dovecot.socket dovecot-socket-dovecot-socket /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/dovecot.socket-abi-laboratory-dovecot-socket-dovecot-socket.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/dovecot.socket",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/dovecot.socket",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/dovecot.socket": 294,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/dovecot.socket": 294
+            }
+        },
+        "experiment": "dovecot-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/dovecot.socket",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/dovecot.socket",
+        "different_libs": true
+    }
+]

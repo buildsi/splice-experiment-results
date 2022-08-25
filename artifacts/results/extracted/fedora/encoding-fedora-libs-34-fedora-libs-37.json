@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/encoding/encoding.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/PerlIO/encoding/encoding.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "encoding.so",
+                    "spliced_lib": "encoding.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.6716461181640625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "encoding.so",
+                    "spliced_lib": "encoding.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.67572021484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.00701594352722168,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/encoding/encoding.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/PerlIO/encoding/encoding.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/PerlIO/encoding/encoding.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/encoding/encoding.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/encoding/encoding.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/PerlIO/encoding/encoding.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/encoding/encoding.so-abi-laboratory-encoding-so-encoding-so.html\nERROR: missed debug-info file encoding.so-5.34.1-486.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to encoding.so-5.34.1-486.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08550620079040527,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/encoding/encoding.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/PerlIO/encoding/encoding.so encoding-so-encoding-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/encoding/encoding.so-abi-laboratory-encoding-so-encoding-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/PerlIO/encoding/encoding.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/encoding/encoding.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/encoding/encoding.so": 28088,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/PerlIO/encoding/encoding.so": 28088
+            }
+        },
+        "experiment": "encoding-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/PerlIO/encoding/encoding.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/encoding/encoding.so",
+        "different_libs": true
+    }
+]

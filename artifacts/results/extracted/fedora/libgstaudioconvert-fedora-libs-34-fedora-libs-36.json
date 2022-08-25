@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudioconvert.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudioconvert.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstaudioconvert.so",
+                    "spliced_lib": "libgstaudioconvert.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.4332275390625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstaudioconvert.so",
+                    "spliced_lib": "libgstaudioconvert.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.291534423828125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007940292358398438,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudioconvert.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudioconvert.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudioconvert.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudioconvert.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudioconvert.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudioconvert.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudioconvert.so-abi-laboratory-libgstaudioconvert-so-libgstaudioconvert-so.html\nERROR: missed debug-info file libgstaudioconvert.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libgstaudioconvert.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08533740043640137,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudioconvert.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudioconvert.so libgstaudioconvert-so-libgstaudioconvert-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudioconvert.so-abi-laboratory-libgstaudioconvert-so-libgstaudioconvert-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudioconvert.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudioconvert.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudioconvert.so": 36944,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudioconvert.so": 36944
+            }
+        },
+        "experiment": "libgstaudioconvert-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudioconvert.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudioconvert.so",
+        "different_libs": true
+    }
+]

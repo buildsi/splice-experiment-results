@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libutempter.so.1.2.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libutempter.so.1.2.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libutempter.so.1.2.1",
+                    "spliced_lib": "libutempter.so.1.2.1",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.1219253540039062e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libutempter.so.1.2.1",
+                    "spliced_lib": "libutempter.so.1.2.1",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.821487426757812e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.006235837936401367,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libutempter.so.1.2.1 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libutempter.so.1.2.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libutempter.so.1.2.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libutempter.so.1.2.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libutempter.so.1.2.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libutempter.so.1.2.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libutempter.so.1.2.1-abi-laboratory-libutempter-so-1-2-1-libutempter-so-1-2-1.html\nERROR: missed debug-info file libutempter.so.1.2.1-1.2.1-6.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libutempter.so.1.2.1-1.2.1-6.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08237814903259277,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libutempter.so.1.2.1 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libutempter.so.1.2.1 libutempter-so-1-2-1-libutempter-so-1-2-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libutempter.so.1.2.1-abi-laboratory-libutempter-so-1-2-1-libutempter-so-1-2-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libutempter.so.1.2.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libutempter.so.1.2.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libutempter.so.1.2.1": 16144,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libutempter.so.1.2.1": 16144
+            }
+        },
+        "experiment": "libutempter-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libutempter.so.1.2.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libutempter.so.1.2.1",
+        "different_libs": true
+    }
+]

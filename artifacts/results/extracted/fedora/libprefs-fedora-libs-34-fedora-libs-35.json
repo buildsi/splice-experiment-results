@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libprefs.so",
+                    "spliced_lib": "libprefs.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.6450881958007812e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libprefs.so",
+                    "spliced_lib": "libprefs.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.76837158203125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007452964782714844,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so-abi-laboratory-libprefs-so-libprefs-so.html\nERROR: missed debug-info file libprefs.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libprefs.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10714077949523926,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so libprefs-so-libprefs-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so-abi-laboratory-libprefs-so-libprefs-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so": 17960,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so": 17960
+            }
+        },
+        "experiment": "libprefs-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libprefs.so",
+        "different_libs": true
+    }
+]

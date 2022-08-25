@@ -1,0 +1,111 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/mmap/mmap.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "mmap.so",
+                    "spliced_lib": "mmap.cpython-310-x86_64-linux-gnu.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "PerlIOBuf_bufsiz",
+                        "PerlIOBase_setlinebuf",
+                        "Perl_PerlIO_fileno",
+                        "PerlIOBuf_read",
+                        "PerlIOBase_fileno",
+                        "Perl_PerlIO_seek",
+                        "PerlIOBuf_seek",
+                        "PerlIOBuf_get_base",
+                        "memcmp",
+                        "Perl_xs_handshake",
+                        "Perl_PerlIO_tell",
+                        "Perl_xs_boot_epilog",
+                        "PerlIOBase_binmode",
+                        "__errno_location",
+                        "PerlIOBuf_get_cnt",
+                        "PerlIOBuf_close",
+                        "PerlIOBase_error",
+                        "Perl_croak",
+                        "PerlIOBase_clearerr",
+                        "PerlIOBuf_tell",
+                        "PerlIOBuf_set_ptrcnt",
+                        "PerlIOBuf_unread",
+                        "PerlIOBuf_pushed",
+                        "PL_mmap_page_size",
+                        "PerlIO_define_layer",
+                        "boot_PerlIO__mmap",
+                        "PerlIOBuf_popped",
+                        "PerlIOBase_dup",
+                        "PerlIOBuf_fill",
+                        "PerlIOBuf_flush",
+                        "PerlIOBuf_write",
+                        "PerlIOBuf_get_ptr",
+                        "PerlIOBase_eof",
+                        "fstat64",
+                        "Perl_PerlIO_flush",
+                        "abort",
+                        "PerlIOBuf_open"
+                    ],
+                    "prediction": false,
+                    "seconds": 2.47955322265625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "mmap.so",
+                    "spliced_lib": "mmap.cpython-310-x86_64-linux-gnu.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "boot_PerlIO__mmap"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.152557373046875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 1 Removed, 1 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\n1 Removed function symbol not referenced by debug info:\n\n  [D] boot_PerlIO__mmap\n\n1 Added function symbol not referenced by debug info:\n\n  [A] PyInit_mmap\n\n",
+                    "return_code": 12,
+                    "seconds": 0.008198976516723633,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/mmap/mmap.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/mmap/mmap.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/mmap/mmap.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/mmap/mmap.so-abi-laboratory-mmap-cpython-310-x86_64-linux-gnu-so-mmap-so.html\nERROR: missed debug-info file mmap.so-5.34.1-486.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to mmap.so-5.34.1-486.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08473587036132812,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/mmap/mmap.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so mmap-cpython-310-x86_64-linux-gnu-so-mmap-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/mmap/mmap.so-abi-laboratory-mmap-cpython-310-x86_64-linux-gnu-so-mmap-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/mmap/mmap.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/mmap/mmap.so": 19904,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so": 34656
+            }
+        },
+        "experiment": "mmap-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/PerlIO/mmap/mmap.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/B/B.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/B/B.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "B.so",
+                    "spliced_lib": "B.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.029273986816406e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "B.so",
+                    "spliced_lib": "B.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.0531158447265625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.006960391998291016,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/B/B.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/B/B.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/B/B.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/B/B.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/B/B.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/B/B.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/B/B.so-abi-laboratory-B-so-B-so.html\nERROR: missed debug-info file B.so-5.34.1-486.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to B.so-5.34.1-486.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08472275733947754,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/B/B.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/B/B.so B-so-B-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/B/B.so-abi-laboratory-B-so-B-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/B/B.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/B/B.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/B/B.so": 98680,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/B/B.so": 98680
+            }
+        },
+        "experiment": "B-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/perl5/auto/B/B.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/perl5/auto/B/B.so",
+        "different_libs": true
+    }
+]

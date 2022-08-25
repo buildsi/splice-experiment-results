@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/iris_dri.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/iris_dri.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "iris_dri.so",
+                    "spliced_lib": "iris_dri.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001888275146484375
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "iris_dri.so",
+                    "spliced_lib": "iris_dri.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.5367431640625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.011273622512817383,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/iris_dri.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/iris_dri.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/iris_dri.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/iris_dri.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/iris_dri.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/iris_dri.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/iris_dri.so-abi-laboratory-iris_dri-so-iris_dri-so.html\nERROR: missed debug-info file crocus_dri.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to crocus_dri.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10051465034484863,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/iris_dri.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/iris_dri.so iris_dri-so-iris_dri-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/iris_dri.so-abi-laboratory-iris_dri-so-iris_dri-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/iris_dri.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/iris_dri.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/iris_dri.so": 24663104,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/iris_dri.so": 24663104
+            }
+        },
+        "experiment": "iris_dri-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/dri/iris_dri.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/dri/iris_dri.so",
+        "different_libs": true
+    }
+]

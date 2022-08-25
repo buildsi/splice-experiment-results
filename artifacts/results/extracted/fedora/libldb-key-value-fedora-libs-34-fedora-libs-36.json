@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ldb/libldb-key-value.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ldb/libldb-key-value.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldb-key-value.so",
+                    "spliced_lib": "libldb-key-value.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.863739013671875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldb-key-value.so",
+                    "spliced_lib": "libldb-key-value.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.0503997802734375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008150100708007812,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ldb/libldb-key-value.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ldb/libldb-key-value.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ldb/libldb-key-value.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ldb/libldb-key-value.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ldb/libldb-key-value.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ldb/libldb-key-value.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ldb/libldb-key-value.so-abi-laboratory-libldb-key-value-so-libldb-key-value-so.html\nERROR: missed debug-info file libldb-key-value.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libldb-key-value.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08466029167175293,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ldb/libldb-key-value.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ldb/libldb-key-value.so libldb-key-value-so-libldb-key-value-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ldb/libldb-key-value.so-abi-laboratory-libldb-key-value-so-libldb-key-value-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ldb/libldb-key-value.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ldb/libldb-key-value.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ldb/libldb-key-value.so": 99072,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ldb/libldb-key-value.so": 99072
+            }
+        },
+        "experiment": "libldb-key-value-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ldb/libldb-key-value.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ldb/libldb-key-value.so",
+        "different_libs": true
+    }
+]

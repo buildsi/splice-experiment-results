@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libbasegfxlo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libbasegfxlo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libbasegfxlo.so",
+                    "spliced_lib": "libbasegfxlo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00018143653869628906
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libbasegfxlo.so",
+                    "spliced_lib": "libbasegfxlo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.003534078598022461
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.01088261604309082,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libbasegfxlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libbasegfxlo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libbasegfxlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libbasegfxlo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libbasegfxlo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libbasegfxlo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libbasegfxlo.so-abi-laboratory-libbasegfxlo-so-libbasegfxlo-so.html\nERROR: missed debug-info file libbasegfxlo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libbasegfxlo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.10972881317138672,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libbasegfxlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libbasegfxlo.so libbasegfxlo-so-libbasegfxlo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libbasegfxlo.so-abi-laboratory-libbasegfxlo-so-libbasegfxlo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libbasegfxlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libbasegfxlo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libbasegfxlo.so": 629232,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libbasegfxlo.so": 629232
+            }
+        },
+        "experiment": "libbasegfxlo-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libbasegfxlo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libbasegfxlo.so",
+        "different_libs": true
+    }
+]

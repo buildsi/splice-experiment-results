@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kio_http_cache_cleaner.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kio_http_cache_cleaner.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdeinit_kio_http_cache_cleaner.so",
+                    "spliced_lib": "libkdeinit_kio_http_cache_cleaner.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.054473876953125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdeinit_kio_http_cache_cleaner.so",
+                    "spliced_lib": "libkdeinit_kio_http_cache_cleaner.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.4345855712890625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008812189102172852,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kio_http_cache_cleaner.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kio_http_cache_cleaner.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kio_http_cache_cleaner.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kio_http_cache_cleaner.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kio_http_cache_cleaner.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kio_http_cache_cleaner.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kio_http_cache_cleaner.so-abi-laboratory-libkdeinit_kio_http_cache_cleaner-so-libkdeinit_kio_http_cache_cleaner-so.html\nERROR: missed debug-info file libkdeinit_kio_http_cache_cleaner.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libkdeinit_kio_http_cache_cleaner.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.09703779220581055,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kio_http_cache_cleaner.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kio_http_cache_cleaner.so libkdeinit_kio_http_cache_cleaner-so-libkdeinit_kio_http_cache_cleaner-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kio_http_cache_cleaner.so-abi-laboratory-libkdeinit_kio_http_cache_cleaner-so-libkdeinit_kio_http_cache_cleaner-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kio_http_cache_cleaner.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kio_http_cache_cleaner.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kio_http_cache_cleaner.so": 36608,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kio_http_cache_cleaner.so": 36608
+            }
+        },
+        "experiment": "libkdeinit_kio_http_cache_cleaner-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kio_http_cache_cleaner.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kio_http_cache_cleaner.so",
+        "different_libs": true
+    }
+]

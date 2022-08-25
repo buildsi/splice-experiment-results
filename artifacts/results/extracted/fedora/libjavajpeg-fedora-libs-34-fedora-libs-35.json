@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjavajpeg.so",
+                    "spliced_lib": "libjavajpeg.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.0517578125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjavajpeg.so",
+                    "spliced_lib": "libjavajpeg.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.3113021850585938e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008771896362304688,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so-abi-laboratory-libjavajpeg-so-libjavajpeg-so.html\nERROR: missed debug-info file libjavajpeg.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libjavajpeg.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.11746716499328613,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so libjavajpeg-so-libjavajpeg-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so-abi-laboratory-libjavajpeg-so-libjavajpeg-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so": 64552,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so": 64552
+            }
+        },
+        "experiment": "libjavajpeg-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjavajpeg.so",
+        "different_libs": true
+    }
+]

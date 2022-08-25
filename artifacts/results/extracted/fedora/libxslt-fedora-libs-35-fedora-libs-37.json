@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libxslt.so.1.1.35"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libxslt.so.1.1.35"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxslt.so.1.1.35",
+                    "spliced_lib": "libxslt.so.1.1.35",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001323223114013672
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxslt.so.1.1.35",
+                    "spliced_lib": "libxslt.so.1.1.35",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0004630088806152344
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009291648864746094,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libxslt.so.1.1.35 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libxslt.so.1.1.35",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libxslt.so.1.1.35",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libxslt.so.1.1.35",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libxslt.so.1.1.35\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libxslt.so.1.1.35\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libxslt.so.1.1.35-abi-laboratory-libxslt-so-1-1-35-libxslt-so-1-1-35.html\nERROR: missed debug-info file libxslt.so.1.1.35-1.1.35-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libxslt.so.1.1.35-1.1.35-2.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.11068487167358398,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libxslt.so.1.1.35 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libxslt.so.1.1.35 libxslt-so-1-1-35-libxslt-so-1-1-35 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libxslt.so.1.1.35-abi-laboratory-libxslt-so-1-1-35-libxslt-so-1-1-35.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libxslt.so.1.1.35",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libxslt.so.1.1.35",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libxslt.so.1.1.35": 278864,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libxslt.so.1.1.35": 278864
+            }
+        },
+        "experiment": "libxslt-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libxslt.so.1.1.35",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libxslt.so.1.1.35",
+        "different_libs": true
+    }
+]

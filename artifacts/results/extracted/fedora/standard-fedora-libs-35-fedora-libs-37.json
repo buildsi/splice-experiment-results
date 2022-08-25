@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/standard.sog"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/standard.sob"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "standard.sog",
+                    "spliced_lib": "standard.sob",
+                    "command": "missing-previously-found-symbols",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 5.4836273193359375e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "standard.sog",
+                    "spliced_lib": "standard.sob",
+                    "command": "missing-previously-found-exports",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 4.0531158447265625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/standard.sog\n",
+                    "return_code": 1,
+                    "seconds": 0.006499052047729492,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/standard.sog /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/standard.sob",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/standard.sob",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/standard.sog",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/standard.sog\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/standard.sob\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/standard.sog-abi-laboratory-standard-sob-standard-sog.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
+                    "return_code": 12,
+                    "seconds": 0.08504509925842285,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/standard.sog /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/standard.sob standard-sob-standard-sog /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/standard.sog-abi-laboratory-standard-sob-standard-sog.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/standard.sob",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/standard.sog",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/standard.sog": 3848,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/standard.sob": 1076407
+            }
+        },
+        "experiment": "standard-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/share/palette/standard.sob",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/share/palette/standard.sog",
+        "different_libs": true
+    }
+]

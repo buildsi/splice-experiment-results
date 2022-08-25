@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kded_kssld.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kded_kssld.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kded_kssld.so",
+                    "spliced_lib": "kded_kssld.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.747245788574219e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kded_kssld.so",
+                    "spliced_lib": "kded_kssld.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.2928924560546875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008881568908691406,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kded_kssld.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kded_kssld.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kded_kssld.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kded_kssld.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kded_kssld.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kded_kssld.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kded_kssld.so-abi-laboratory-kded_kssld-so-kded_kssld-so.html\nERROR: missed debug-info file kded_kssld.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to kded_kssld.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.09153318405151367,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kded_kssld.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kded_kssld.so kded_kssld-so-kded_kssld-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kded_kssld.so-abi-laboratory-kded_kssld-so-kded_kssld-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kded_kssld.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kded_kssld.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kded_kssld.so": 98560,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kded_kssld.so": 98560
+            }
+        },
+        "experiment": "kded_kssld-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kded_kssld.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kded_kssld.so",
+        "different_libs": true
+    }
+]

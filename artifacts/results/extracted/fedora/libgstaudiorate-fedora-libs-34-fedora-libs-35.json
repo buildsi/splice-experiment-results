@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudiorate.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudiorate.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstaudiorate.so",
+                    "spliced_lib": "libgstaudiorate.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.147125244140625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstaudiorate.so",
+                    "spliced_lib": "libgstaudiorate.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.62939453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008308887481689453,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudiorate.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudiorate.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudiorate.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudiorate.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudiorate.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudiorate.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudiorate.so-abi-laboratory-libgstaudiorate-so-libgstaudiorate-so.html\nERROR: missed debug-info file libgstaudiorate.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libgstaudiorate.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.11272382736206055,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudiorate.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudiorate.so libgstaudiorate-so-libgstaudiorate-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudiorate.so-abi-laboratory-libgstaudiorate-so-libgstaudiorate-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudiorate.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudiorate.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudiorate.so": 32712,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudiorate.so": 32712
+            }
+        },
+        "experiment": "libgstaudiorate-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstaudiorate.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstaudiorate.so",
+        "different_libs": true
+    }
+]

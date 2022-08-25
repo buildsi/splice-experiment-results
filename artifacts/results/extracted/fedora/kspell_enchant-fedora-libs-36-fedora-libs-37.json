@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kspell_enchant.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kspell_enchant.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kspell_enchant.so",
+                    "spliced_lib": "kspell_enchant.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.340576171875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kspell_enchant.so",
+                    "spliced_lib": "kspell_enchant.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.7418136596679688e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008913755416870117,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kspell_enchant.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kspell_enchant.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kspell_enchant.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kspell_enchant.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kspell_enchant.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kspell_enchant.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kspell_enchant.so-abi-laboratory-kspell_enchant-so-kspell_enchant-so.html\nERROR: missed debug-info file kspell_enchant.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to kspell_enchant.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkspell2.so.1: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.09271407127380371,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kspell_enchant.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kspell_enchant.so kspell_enchant-so-kspell_enchant-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kspell_enchant.so-abi-laboratory-kspell_enchant-so-kspell_enchant-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kspell_enchant.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kspell_enchant.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kspell_enchant.so": 41032,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kspell_enchant.so": 41032
+            }
+        },
+        "experiment": "kspell_enchant-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kspell_enchant.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kspell_enchant.so",
+        "different_libs": true
+    }
+]

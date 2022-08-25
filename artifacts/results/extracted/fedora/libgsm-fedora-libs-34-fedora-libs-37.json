@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libgsm.so.1.0.19"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libgsm.so.1.0.19"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgsm.so.1.0.19",
+                    "spliced_lib": "libgsm.so.1.0.19",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5272369384765625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgsm.so.1.0.19",
+                    "spliced_lib": "libgsm.so.1.0.19",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.574920654296875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0063934326171875,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libgsm.so.1.0.19 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libgsm.so.1.0.19",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libgsm.so.1.0.19",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libgsm.so.1.0.19",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libgsm.so.1.0.19\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libgsm.so.1.0.19\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libgsm.so.1.0.19-abi-laboratory-libgsm-so-1-0-19-libgsm-so-1-0-19.html\nERROR: missed debug-info file libgsm.so.1.0.19-1.0.19-7.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libgsm.so.1.0.19-1.0.19-7.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08246636390686035,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libgsm.so.1.0.19 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libgsm.so.1.0.19 libgsm-so-1-0-19-libgsm-so-1-0-19 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libgsm.so.1.0.19-abi-laboratory-libgsm-so-1-0-19-libgsm-so-1-0-19.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libgsm.so.1.0.19",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libgsm.so.1.0.19",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libgsm.so.1.0.19": 61648,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libgsm.so.1.0.19": 61648
+            }
+        },
+        "experiment": "libgsm-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libgsm.so.1.0.19",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libgsm.so.1.0.19",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-journald.socket"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-journald.socket"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "systemd-journald.socket",
+                    "spliced_lib": "systemd-journald.socket",
+                    "command": "missing-previously-found-symbols",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 5.245208740234375e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "systemd-journald.socket",
+                    "spliced_lib": "systemd-journald.socket",
+                    "command": "missing-previously-found-exports",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 3.814697265625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-journald.socket\n",
+                    "return_code": 1,
+                    "seconds": 0.0057353973388671875,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-journald.socket /__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-journald.socket",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-journald.socket",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-journald.socket",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-journald.socket\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-journald.socket\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-journald.socket-abi-laboratory-systemd-journald-socket-systemd-journald-socket.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
+                    "return_code": 12,
+                    "seconds": 0.09071540832519531,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-journald.socket /__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-journald.socket systemd-journald-socket-systemd-journald-socket /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-journald.socket-abi-laboratory-systemd-journald-socket-systemd-journald-socket.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-journald.socket",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-journald.socket",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-journald.socket": 906,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-journald.socket": 906
+            }
+        },
+        "experiment": "systemd-journald-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/systemd/system/systemd-journald.socket",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/systemd/system/systemd-journald.socket",
+        "different_libs": true
+    }
+]

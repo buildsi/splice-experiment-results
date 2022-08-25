@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libbfd-2.37-27.fc36.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libbfd-2.37-27.fc36.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libbfd-2.37-27.fc36.so",
+                    "spliced_lib": "libbfd-2.37-27.fc36.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00019550323486328125
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libbfd-2.37-27.fc36.so",
+                    "spliced_lib": "libbfd-2.37-27.fc36.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.004781246185302734
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.012196779251098633,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libbfd-2.37-27.fc36.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libbfd-2.37-27.fc36.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libbfd-2.37-27.fc36.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libbfd-2.37-27.fc36.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libbfd-2.37-27.fc36.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libbfd-2.37-27.fc36.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libbfd-2.37-27.fc36.so-abi-laboratory-libbfd-2-37-27-fc36-so-libbfd-2-37-27-fc36-so.html\nERROR: missed debug-info file libbfd-2.37-27.fc36.so-2.37-27.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libbfd-2.37-27.fc36.so-2.37-27.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.09225106239318848,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libbfd-2.37-27.fc36.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libbfd-2.37-27.fc36.so libbfd-2-37-27-fc36-so-libbfd-2-37-27-fc36-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libbfd-2.37-27.fc36.so-abi-laboratory-libbfd-2-37-27-fc36-so-libbfd-2-37-27-fc36-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libbfd-2.37-27.fc36.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libbfd-2.37-27.fc36.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libbfd-2.37-27.fc36.so": 1359248,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libbfd-2.37-27.fc36.so": 1359248
+            }
+        },
+        "experiment": "libbfd-2-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libbfd-2.37-27.fc36.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libbfd-2.37-27.fc36.so",
+        "different_libs": true
+    }
+]

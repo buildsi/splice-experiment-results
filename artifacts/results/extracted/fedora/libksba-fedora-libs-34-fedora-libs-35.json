@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libksba.so.8.14.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libksba.so.8.14.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libksba.so.8.14.0",
+                    "spliced_lib": "libksba.so.8.14.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.43865966796875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libksba.so.8.14.0",
+                    "spliced_lib": "libksba.so.8.14.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00023031234741210938
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009499073028564453,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libksba.so.8.14.0 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libksba.so.8.14.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libksba.so.8.14.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libksba.so.8.14.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libksba.so.8.14.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libksba.so.8.14.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libksba.so.8.14.0-abi-laboratory-libksba-so-8-14-0-libksba-so-8-14-0.html\nERROR: missed debug-info file libksba.so.8.14.0-1.6.0-3.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libksba.so.8.14.0-1.6.0-3.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.11244535446166992,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libksba.so.8.14.0 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libksba.so.8.14.0 libksba-so-8-14-0-libksba-so-8-14-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libksba.so.8.14.0-abi-laboratory-libksba-so-8-14-0-libksba-so-8-14-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libksba.so.8.14.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libksba.so.8.14.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libksba.so.8.14.0": 268976,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libksba.so.8.14.0": 268976
+            }
+        },
+        "experiment": "libksba-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libksba.so.8.14.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libksba.so.8.14.0",
+        "different_libs": true
+    }
+]

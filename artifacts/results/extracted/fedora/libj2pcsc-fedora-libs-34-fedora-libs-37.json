@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libj2pcsc.so",
+                    "spliced_lib": "libj2pcsc.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.2411346435546875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libj2pcsc.so",
+                    "spliced_lib": "libj2pcsc.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.059906005859375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.005805015563964844,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so-abi-laboratory-libj2pcsc-so-libj2pcsc-so.html\nERROR: missed debug-info file libj2pcsc.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libj2pcsc.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08351993560791016,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so libj2pcsc-so-libj2pcsc-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so-abi-laboratory-libj2pcsc-so-libj2pcsc-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so": 26888,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so": 26888
+            }
+        },
+        "experiment": "libj2pcsc-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libj2pcsc.so",
+        "different_libs": true
+    }
+]

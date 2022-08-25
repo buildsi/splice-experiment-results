@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ao/plugins-4/libalsa.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ao/plugins-4/libalsa.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libalsa.so",
+                    "spliced_lib": "libalsa.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.47955322265625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libalsa.so",
+                    "spliced_lib": "libalsa.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.5299530029296875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008144617080688477,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ao/plugins-4/libalsa.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ao/plugins-4/libalsa.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ao/plugins-4/libalsa.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ao/plugins-4/libalsa.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ao/plugins-4/libalsa.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ao/plugins-4/libalsa.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ao/plugins-4/libalsa.so-abi-laboratory-libalsa-so-libalsa-so.html\nERROR: missed debug-info file libalsa.so-1.2.0-22.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libalsa.so-1.2.0-22.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08396339416503906,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ao/plugins-4/libalsa.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ao/plugins-4/libalsa.so libalsa-so-libalsa-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ao/plugins-4/libalsa.so-abi-laboratory-libalsa-so-libalsa-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ao/plugins-4/libalsa.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ao/plugins-4/libalsa.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ao/plugins-4/libalsa.so": 32120,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ao/plugins-4/libalsa.so": 32120
+            }
+        },
+        "experiment": "libalsa-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/ao/plugins-4/libalsa.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/ao/plugins-4/libalsa.so",
+        "different_libs": true
+    }
+]

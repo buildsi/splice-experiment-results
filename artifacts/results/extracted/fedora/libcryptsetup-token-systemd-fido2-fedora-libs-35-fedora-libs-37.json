@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcryptsetup-token-systemd-fido2.so",
+                    "spliced_lib": "libcryptsetup-token-systemd-fido2.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.8133392333984375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcryptsetup-token-systemd-fido2.so",
+                    "spliced_lib": "libcryptsetup-token-systemd-fido2.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.867813110351562e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007479429244995117,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so-abi-laboratory-libcryptsetup-token-systemd-fido2-so-libcryptsetup-token-systemd-fido2-so.html\nERROR: missed debug-info file libcryptsetup-token-systemd-fido2.so-250.3-8.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libcryptsetup-token-systemd-fido2.so-250.3-8.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.09657144546508789,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so libcryptsetup-token-systemd-fido2-so-libcryptsetup-token-systemd-fido2-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so-abi-laboratory-libcryptsetup-token-systemd-fido2-so-libcryptsetup-token-systemd-fido2-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so": 20488,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so": 20488
+            }
+        },
+        "experiment": "libcryptsetup-token-systemd-fido2-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/cryptsetup/libcryptsetup-token-systemd-fido2.so",
+        "different_libs": true
+    }
+]

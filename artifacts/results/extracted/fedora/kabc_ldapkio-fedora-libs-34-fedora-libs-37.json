@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kabc_ldapkio.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kabc_ldapkio.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kabc_ldapkio.so",
+                    "spliced_lib": "kabc_ldapkio.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.6226043701171875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kabc_ldapkio.so",
+                    "spliced_lib": "kabc_ldapkio.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.344650268554688e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0067517757415771484,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kabc_ldapkio.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kabc_ldapkio.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kabc_ldapkio.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kabc_ldapkio.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kabc_ldapkio.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kabc_ldapkio.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kabc_ldapkio.so-abi-laboratory-kabc_ldapkio-so-kabc_ldapkio-so.html\nERROR: missed debug-info file kabc_ldapkio.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to kabc_ldapkio.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkabc_ldapkio.so.1: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.08868837356567383,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kabc_ldapkio.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kabc_ldapkio.so kabc_ldapkio-so-kabc_ldapkio-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kabc_ldapkio.so-abi-laboratory-kabc_ldapkio-so-kabc_ldapkio-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kabc_ldapkio.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kabc_ldapkio.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kabc_ldapkio.so": 20200,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kabc_ldapkio.so": 20200
+            }
+        },
+        "experiment": "kabc_ldapkio-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/kabc_ldapkio.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/kabc_ldapkio.so",
+        "different_libs": true
+    }
+]

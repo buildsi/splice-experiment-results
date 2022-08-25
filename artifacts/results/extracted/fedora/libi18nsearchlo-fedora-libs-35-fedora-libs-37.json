@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libi18nsearchlo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libi18nsearchlo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libi18nsearchlo.so",
+                    "spliced_lib": "libi18nsearchlo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.933906555175781e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libi18nsearchlo.so",
+                    "spliced_lib": "libi18nsearchlo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.867813110351562e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007365703582763672,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libi18nsearchlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libi18nsearchlo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libi18nsearchlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libi18nsearchlo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libi18nsearchlo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libi18nsearchlo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libi18nsearchlo.so-abi-laboratory-libi18nsearchlo-so-libi18nsearchlo-so.html\nERROR: missed debug-info file libi18nsearchlo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libi18nsearchlo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibicui18n.so.69: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.09793925285339355,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libi18nsearchlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libi18nsearchlo.so libi18nsearchlo-so-libi18nsearchlo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libi18nsearchlo.so-abi-laboratory-libi18nsearchlo-so-libi18nsearchlo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libi18nsearchlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libi18nsearchlo.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libi18nsearchlo.so": 83800,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libi18nsearchlo.so": 83800
+            }
+        },
+        "experiment": "libi18nsearchlo-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libi18nsearchlo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libi18nsearchlo.so",
+        "different_libs": true
+    }
+]

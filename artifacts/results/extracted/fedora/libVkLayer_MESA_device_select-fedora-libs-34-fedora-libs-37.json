@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libVkLayer_MESA_device_select.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libVkLayer_MESA_device_select.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libVkLayer_MESA_device_select.so",
+                    "spliced_lib": "libVkLayer_MESA_device_select.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.8848648071289062e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libVkLayer_MESA_device_select.so",
+                    "spliced_lib": "libVkLayer_MESA_device_select.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.62939453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.006493091583251953,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libVkLayer_MESA_device_select.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libVkLayer_MESA_device_select.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libVkLayer_MESA_device_select.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libVkLayer_MESA_device_select.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libVkLayer_MESA_device_select.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libVkLayer_MESA_device_select.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libVkLayer_MESA_device_select.so-abi-laboratory-libVkLayer_MESA_device_select-so-libVkLayer_MESA_device_select-so.html\nERROR: missed debug-info file libVkLayer_MESA_device_select.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libVkLayer_MESA_device_select.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.0834805965423584,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libVkLayer_MESA_device_select.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libVkLayer_MESA_device_select.so libVkLayer_MESA_device_select-so-libVkLayer_MESA_device_select-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libVkLayer_MESA_device_select.so-abi-laboratory-libVkLayer_MESA_device_select-so-libVkLayer_MESA_device_select-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libVkLayer_MESA_device_select.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libVkLayer_MESA_device_select.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libVkLayer_MESA_device_select.so": 50880,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libVkLayer_MESA_device_select.so": 50880
+            }
+        },
+        "experiment": "libVkLayer_MESA_device_select-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libVkLayer_MESA_device_select.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libVkLayer_MESA_device_select.so",
+        "different_libs": true
+    }
+]

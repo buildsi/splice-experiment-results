@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libcrypt.so.2.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/fipscheck/libcrypt.so.2.0.0.hmac"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcrypt.so.2.0.0",
+                    "spliced_lib": "libcrypt.so.2.0.0.hmac",
+                    "command": "missing-previously-found-symbols",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 7.152557373046875e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcrypt.so.2.0.0",
+                    "spliced_lib": "libcrypt.so.2.0.0.hmac",
+                    "command": "missing-previously-found-exports",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 3.337860107421875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/fipscheck/libcrypt.so.2.0.0.hmac\n",
+                    "return_code": 1,
+                    "seconds": 0.006522417068481445,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libcrypt.so.2.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/fipscheck/libcrypt.so.2.0.0.hmac",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/fipscheck/libcrypt.so.2.0.0.hmac",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libcrypt.so.2.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libcrypt.so.2.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/fipscheck/libcrypt.so.2.0.0.hmac\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libcrypt.so.2.0.0-abi-laboratory-libcrypt-so-2-0-0-libcrypt-so-2-0-0-hmac.html\nERROR: missed debug-info file libcrypt.so.2.0.0-4.4.28-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libcrypt.so.2.0.0-4.4.28-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08365440368652344,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libcrypt.so.2.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/fipscheck/libcrypt.so.2.0.0.hmac libcrypt-so-2-0-0-libcrypt-so-2-0-0-hmac /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libcrypt.so.2.0.0-abi-laboratory-libcrypt-so-2-0-0-libcrypt-so-2-0-0-hmac.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/fipscheck/libcrypt.so.2.0.0.hmac",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libcrypt.so.2.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libcrypt.so.2.0.0": 201888,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/fipscheck/libcrypt.so.2.0.0.hmac": 65
+            }
+        },
+        "experiment": "libcrypt-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/fipscheck/libcrypt.so.2.0.0.hmac",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libcrypt.so.2.0.0",
+        "different_libs": true
+    }
+]

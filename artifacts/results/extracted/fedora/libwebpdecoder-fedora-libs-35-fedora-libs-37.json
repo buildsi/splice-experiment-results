@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libwebpdecoder.so.3.1.5"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libwebpdecoder.so.3.1.5"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libwebpdecoder.so.3.1.5",
+                    "spliced_lib": "libwebpdecoder.so.3.1.5",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.765655517578125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libwebpdecoder.so.3.1.5",
+                    "spliced_lib": "libwebpdecoder.so.3.1.5",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.6226043701171875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007340192794799805,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libwebpdecoder.so.3.1.5 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libwebpdecoder.so.3.1.5",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libwebpdecoder.so.3.1.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libwebpdecoder.so.3.1.5",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libwebpdecoder.so.3.1.5\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libwebpdecoder.so.3.1.5\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libwebpdecoder.so.3.1.5-abi-laboratory-libwebpdecoder-so-3-1-5-libwebpdecoder-so-3-1-5.html\nERROR: missed debug-info file libwebpdecoder.so.3.1.5-1.2.4-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libwebpdecoder.so.3.1.5-1.2.4-1.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.10259127616882324,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libwebpdecoder.so.3.1.5 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libwebpdecoder.so.3.1.5 libwebpdecoder-so-3-1-5-libwebpdecoder-so-3-1-5 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libwebpdecoder.so.3.1.5-abi-laboratory-libwebpdecoder-so-3-1-5-libwebpdecoder-so-3-1-5.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libwebpdecoder.so.3.1.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libwebpdecoder.so.3.1.5",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libwebpdecoder.so.3.1.5": 229720,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libwebpdecoder.so.3.1.5": 229720
+            }
+        },
+        "experiment": "libwebpdecoder-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libwebpdecoder.so.3.1.5",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libwebpdecoder.so.3.1.5",
+        "different_libs": true
+    }
+]

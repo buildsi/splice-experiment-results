@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/klauncher.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/klauncher.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "klauncher.so",
+                    "spliced_lib": "klauncher.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.4066696166992188e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "klauncher.so",
+                    "spliced_lib": "klauncher.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.9141387939453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.00764918327331543,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/klauncher.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/klauncher.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/klauncher.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/klauncher.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/klauncher.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/klauncher.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/klauncher.so-abi-laboratory-klauncher-so-klauncher-so.html\nERROR: missed debug-info file klauncher.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to klauncher.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08329153060913086,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/klauncher.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/klauncher.so klauncher-so-klauncher-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/klauncher.so-abi-laboratory-klauncher-so-klauncher-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/klauncher.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/klauncher.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/klauncher.so": 15616,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/klauncher.so": 15616
+            }
+        },
+        "experiment": "klauncher-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/kde3/klauncher.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/kde3/klauncher.so",
+        "different_libs": true
+    }
+]

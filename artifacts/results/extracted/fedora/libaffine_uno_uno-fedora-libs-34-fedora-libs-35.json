@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libaffine_uno_uno.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libaffine_uno_uno.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libaffine_uno_uno.so",
+                    "spliced_lib": "libaffine_uno_uno.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5272369384765625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libaffine_uno_uno.so",
+                    "spliced_lib": "libaffine_uno_uno.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.867813110351562e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.010116338729858398,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libaffine_uno_uno.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libaffine_uno_uno.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libaffine_uno_uno.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libaffine_uno_uno.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libaffine_uno_uno.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libaffine_uno_uno.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libaffine_uno_uno.so-abi-laboratory-libaffine_uno_uno-so-libaffine_uno_uno-so.html\nERROR: missed debug-info file libaffine_uno_uno.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libaffine_uno_uno.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.11329483985900879,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libaffine_uno_uno.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libaffine_uno_uno.so libaffine_uno_uno-so-libaffine_uno_uno-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libaffine_uno_uno.so-abi-laboratory-libaffine_uno_uno-so-libaffine_uno_uno-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libaffine_uno_uno.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libaffine_uno_uno.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libaffine_uno_uno.so": 20720,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libaffine_uno_uno.so": 20720
+            }
+        },
+        "experiment": "libaffine_uno_uno-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libreoffice/program/libaffine_uno_uno.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libreoffice/program/libaffine_uno_uno.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_warn.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_warn.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_warn.so",
+                    "spliced_lib": "pam_warn.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.4543533325195312e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_warn.so",
+                    "spliced_lib": "pam_warn.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.152557373046875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007468461990356445,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_warn.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_warn.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_warn.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_warn.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_warn.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_warn.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_warn.so-abi-laboratory-pam_warn-so-pam_warn-so.html\nERROR: missed debug-info file pam_warn.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to pam_warn.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\n",
+                    "return_code": 10,
+                    "seconds": 0.08460831642150879,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_warn.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_warn.so pam_warn-so-pam_warn-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_warn.so-abi-laboratory-pam_warn-so-pam_warn-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_warn.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_warn.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_warn.so": 15952,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_warn.so": 15952
+            }
+        },
+        "experiment": "pam_warn-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/security/pam_warn.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/security/pam_warn.so",
+        "different_libs": true
+    }
+]
