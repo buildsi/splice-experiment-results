@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libformw.so.6.2"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libformw.so.6.2"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.2"
         ],
         "paths": {},
         "predictions": {
@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.9114227294921875e-05
+                    "seconds": 4.792213439941406e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,45 +27,45 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.655952453613281e-05
+                    "seconds": 0.00010991096496582031
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.008390188217163086,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libformw.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libformw.so.6.2",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libformw.so.6.2",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libformw.so.6.2",
+                    "seconds": 0.046272993087768555,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libformw.so.6.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libformw.so.6.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libformw.so.6.2-abi-laboratory-libformw-so-6-2-libformw-so-6-2.html\nERROR: missed debug-info file libformw.so.6.2-6.2-9.20210508.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libformw.so.6.2-6.2-9.20210508.fc36.x86_64.debug (gnu_debuglink)\n",
-                    "return_code": 10,
-                    "seconds": 0.10063862800598145,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libformw.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libformw.so.6.2 libformw-so-6-2-libformw-so-6-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libformw.so.6.2-abi-laboratory-libformw-so-6-2-libformw-so-6-2.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libformw.so.6.2",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libformw.so.6.2",
-                    "prediction": false,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2-abi-laboratory-libformw-so-6-2-libformw-so-6-2.html\nFound link to libformw.so.6.2-6.2-9.20210508.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libformw.so.6.2-6.2-9.20210508.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/ncurses-6.2-9.20210508.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 15180\nERROR: incomplete info for symbol 15212\nERROR: incomplete info for symbol 15244\nERROR: incomplete info for symbol 15276\nERROR: incomplete info for symbol 15302\nERROR: incomplete info for symbol 15480\nERROR: incomplete info for symbol 15658\nERROR: incomplete info for symbol 15812\nERROR: incomplete info for symbol 15955\nERROR: incomplete info for symbol 15998\nERROR: incomplete info for symbol 16208\nERROR: incomplete info for symbol 16620\nERROR: incomplete info for symbol 16908\nERROR: incomplete info for symbol 16994\nERROR: incomplete info for symbol 17095\nERROR: incomplete info for symbol 17212\nERROR: incomplete info for symbol 17311\nERROR: incomplete info for symbol 17343\nERROR: incomplete info for symbol 17505\nERROR: incomplete info for symbol 17587\nERROR: incomplete info for symbol 17673\nERROR: incomplete info for symbol 17774\nERROR: incomplete info for symbol 17850\nERROR: incomplete info for symbol 17882\nERROR: incomplete info for symbol 17914\nERROR: incomplete info for symbol 17992\nERROR: incomplete info for symbol 18024\nERROR: incomplete info for symbol 18080\nERROR: incomplete info for symbol 18112\nERROR: incomplete info for symbol 18279\nERROR: incomplete info for symbol 18311\nERROR: incomplete info for symbol 18367\nERROR: incomplete info for symbol 18399\nERROR: incomplete info for symbol 18505\nERROR: incomplete info for symbol 19129\nERROR: incomplete info for symbol 19280\nERROR: incomplete info for symbol 19312\nERROR: incomplete info for symbol 19344\nERROR: incomplete info for symbol 26963\nERROR: incomplete info for symbol 27089\nERROR: incomplete info for symbol 27166\nERROR: incomplete info for symbol 27758\nERROR: incomplete info for symbol 28156\nERROR: incomplete info for symbol 28236\nERROR: incomplete info for symbol 28316\nERROR: incomplete info for symbol 28396\nERROR: incomplete info for symbol 28496\nERROR: incomplete info for symbol 28699\nERROR: incomplete info for symbol 28779\nERROR: incomplete info for symbol 28859\nERROR: incomplete info for symbol 28939\nERROR: incomplete info for symbol 29161\nERROR: incomplete info for symbol 29282\nERROR: incomplete info for symbol 31377\nERROR: incomplete info for symbol 33324\nERROR: incomplete info for symbol 33516\nERROR: incomplete info for symbol 33781\nERROR: incomplete info for symbol 34347\nERROR: incomplete info for symbol 35767\nERROR: incomplete info for symbol 36063\nERROR: incomplete info for symbol 36114\nERROR: incomplete info for symbol 36440\nERROR: incomplete info for symbol 37917\nERROR: incomplete info for symbol 38417\nERROR: incomplete info for symbol 39964\nERROR: incomplete info for symbol 42343\nERROR: incomplete info for symbol 42399\nERROR: incomplete info for symbol 42431\nERROR: incomplete info for symbol 42487\nERROR: incomplete info for symbol 42519\nERROR: incomplete info for symbol 42575\nERROR: incomplete info for symbol 42607\nERROR: incomplete info for symbol 42663\nERROR: incomplete info for symbol 42695\nERROR: incomplete info for symbol 42751\nERROR: incomplete info for symbol 42783\nERROR: incomplete info for symbol 42839\nERROR: incomplete info for symbol 42895\nERROR: incomplete info for symbol 43139\nERROR: incomplete info for symbol 43171\nERROR: incomplete info for symbol 43385\nERROR: incomplete info for symbol 43520\nERROR: incomplete info for symbol 43591\nERROR: incomplete info for symbol 43830\nERROR: incomplete info for symbol 43899\nERROR: incomplete info for symbol 44054\nERROR: incomplete info for symbol 44099\nERROR: incomplete info for symbol 44155\nERROR: incomplete info for symbol 44187\nERROR: incomplete info for symbol 44337\nERROR: incomplete info for symbol 44443\nERROR: incomplete info for symbol 44585\nERROR: incomplete info for symbol 44741\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-A3v8Q.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libformw.so.6.2-6.2-9.20210508.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libformw.so.6.2-6.2-9.20210508.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/ncurses-6.2-9.20210508.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 15180\nERROR: incomplete info for symbol 15212\nERROR: incomplete info for symbol 15244\nERROR: incomplete info for symbol 15276\nERROR: incomplete info for symbol 15302\nERROR: incomplete info for symbol 15480\nERROR: incomplete info for symbol 15658\nERROR: incomplete info for symbol 15812\nERROR: incomplete info for symbol 15955\nERROR: incomplete info for symbol 15998\nERROR: incomplete info for symbol 16208\nERROR: incomplete info for symbol 16620\nERROR: incomplete info for symbol 16908\nERROR: incomplete info for symbol 16994\nERROR: incomplete info for symbol 17095\nERROR: incomplete info for symbol 17212\nERROR: incomplete info for symbol 17311\nERROR: incomplete info for symbol 17343\nERROR: incomplete info for symbol 17505\nERROR: incomplete info for symbol 17587\nERROR: incomplete info for symbol 17673\nERROR: incomplete info for symbol 17774\nERROR: incomplete info for symbol 17850\nERROR: incomplete info for symbol 17882\nERROR: incomplete info for symbol 17914\nERROR: incomplete info for symbol 17992\nERROR: incomplete info for symbol 18024\nERROR: incomplete info for symbol 18080\nERROR: incomplete info for symbol 18112\nERROR: incomplete info for symbol 18279\nERROR: incomplete info for symbol 18311\nERROR: incomplete info for symbol 18367\nERROR: incomplete info for symbol 18399\nERROR: incomplete info for symbol 18505\nERROR: incomplete info for symbol 19129\nERROR: incomplete info for symbol 19280\nERROR: incomplete info for symbol 19312\nERROR: incomplete info for symbol 19344\nERROR: incomplete info for symbol 26963\nERROR: incomplete info for symbol 27089\nERROR: incomplete info for symbol 27166\nERROR: incomplete info for symbol 27758\nERROR: incomplete info for symbol 28156\nERROR: incomplete info for symbol 28236\nERROR: incomplete info for symbol 28316\nERROR: incomplete info for symbol 28396\nERROR: incomplete info for symbol 28496\nERROR: incomplete info for symbol 28699\nERROR: incomplete info for symbol 28779\nERROR: incomplete info for symbol 28859\nERROR: incomplete info for symbol 28939\nERROR: incomplete info for symbol 29161\nERROR: incomplete info for symbol 29282\nERROR: incomplete info for symbol 31377\nERROR: incomplete info for symbol 33324\nERROR: incomplete info for symbol 33516\nERROR: incomplete info for symbol 33781\nERROR: incomplete info for symbol 34347\nERROR: incomplete info for symbol 35767\nERROR: incomplete info for symbol 36063\nERROR: incomplete info for symbol 36114\nERROR: incomplete info for symbol 36440\nERROR: incomplete info for symbol 37917\nERROR: incomplete info for symbol 38417\nERROR: incomplete info for symbol 39964\nERROR: incomplete info for symbol 42343\nERROR: incomplete info for symbol 42399\nERROR: incomplete info for symbol 42431\nERROR: incomplete info for symbol 42487\nERROR: incomplete info for symbol 42519\nERROR: incomplete info for symbol 42575\nERROR: incomplete info for symbol 42607\nERROR: incomplete info for symbol 42663\nERROR: incomplete info for symbol 42695\nERROR: incomplete info for symbol 42751\nERROR: incomplete info for symbol 42783\nERROR: incomplete info for symbol 42839\nERROR: incomplete info for symbol 42895\nERROR: incomplete info for symbol 43139\nERROR: incomplete info for symbol 43171\nERROR: incomplete info for symbol 43385\nERROR: incomplete info for symbol 43520\nERROR: incomplete info for symbol 43591\nERROR: incomplete info for symbol 43830\nERROR: incomplete info for symbol 43899\nERROR: incomplete info for symbol 44054\nERROR: incomplete info for symbol 44099\nERROR: incomplete info for symbol 44155\nERROR: incomplete info for symbol 44187\nERROR: incomplete info for symbol 44337\nERROR: incomplete info for symbol 44443\nERROR: incomplete info for symbol 44585\nERROR: incomplete info for symbol 44741\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-KdB16.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2-abi-laboratory-libformw-so-6-2-libformw-so-6-2.html\n",
+                    "return_code": 0,
+                    "seconds": 1.4405286312103271,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.2 libformw-so-6-2-libformw-so-6-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2-abi-laboratory-libformw-so-6-2-libformw-so-6-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libformw.so.6.2": 84720,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libformw.so.6.2": 84720
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2": 84720,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.2": 84720
             }
         },
         "experiment": "libformw-fedora-libs-35-fedora-libs-37",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libformw.so.6.2",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libformw.so.6.2",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2",
         "different_libs": true
     }
 ]

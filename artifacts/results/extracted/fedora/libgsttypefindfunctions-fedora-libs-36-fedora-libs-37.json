@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgsttypefindfunctions.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgsttypefindfunctions.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so"
         ],
         "paths": {},
         "predictions": {
@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.24249267578125e-05
+                    "seconds": 2.1219253540039062e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,45 +27,45 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.344650268554688e-06
+                    "seconds": 6.198883056640625e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.008854150772094727,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgsttypefindfunctions.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
+                    "seconds": 0.07212185859680176,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgsttypefindfunctions.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgsttypefindfunctions.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgsttypefindfunctions.so-abi-laboratory-libgsttypefindfunctions-so-libgsttypefindfunctions-so.html\nERROR: missed debug-info file libgsttypefindfunctions.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libgsttypefindfunctions.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\n",
-                    "return_code": 10,
-                    "seconds": 0.08772563934326172,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgsttypefindfunctions.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgsttypefindfunctions.so libgsttypefindfunctions-so-libgsttypefindfunctions-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgsttypefindfunctions.so-abi-laboratory-libgsttypefindfunctions-so-libgsttypefindfunctions-so.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
-                    "prediction": false,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so-abi-laboratory-libgsttypefindfunctions-so-libgsttypefindfunctions-so.html\nFound link to libgsttypefindfunctions.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgsttypefindfunctions.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gstreamer-1.0/../../../.dwz/gstreamer1-plugins-base-1.20.3-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-6fk2T.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgsttypefindfunctions.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgsttypefindfunctions.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gstreamer-1.0/../../../.dwz/gstreamer1-plugins-base-1.20.3-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-gUbkM.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so-abi-laboratory-libgsttypefindfunctions-so-libgsttypefindfunctions-so.html\n",
+                    "return_code": 0,
+                    "seconds": 2.01914644241333,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so libgsttypefindfunctions-so-libgsttypefindfunctions-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so-abi-laboratory-libgsttypefindfunctions-so-libgsttypefindfunctions-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgsttypefindfunctions.so": 114040,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgsttypefindfunctions.so": 114040
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so": 114040,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so": 114040
             }
         },
         "experiment": "libgsttypefindfunctions-fedora-libs-36-fedora-libs-37",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgsttypefindfunctions.so",
         "different_libs": true
     }
 ]

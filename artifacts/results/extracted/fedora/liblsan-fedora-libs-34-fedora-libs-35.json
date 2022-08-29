@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/liblsan.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/liblsan.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so"
         ],
         "paths": {},
         "predictions": {
@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": "Cannot derive decision, symbols not found.",
                     "prediction": "Unknown",
-                    "seconds": 5.4836273193359375e-06
+                    "seconds": 6.67572021484375e-06
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,29 +27,29 @@
                     "command": "missing-previously-found-exports",
                     "message": "Cannot derive decision, symbols not found.",
                     "prediction": "Unknown",
-                    "seconds": 3.5762786865234375e-06
+                    "seconds": 2.384185791015625e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/liblsan.so\n",
+                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so\n",
                     "return_code": 1,
-                    "seconds": 0.006306648254394531,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/liblsan.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
+                    "seconds": 0.005541801452636719,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
                     "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/liblsan.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/liblsan.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/liblsan.so-abi-laboratory-liblsan-so-liblsan-so.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so-abi-laboratory-liblsan-so-liblsan-so.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
                     "return_code": 12,
-                    "seconds": 0.10421943664550781,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/liblsan.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/liblsan.so liblsan-so-liblsan-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/liblsan.so-abi-laboratory-liblsan-so-liblsan-so.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
+                    "seconds": 0.08385467529296875,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so liblsan-so-liblsan-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so-abi-laboratory-liblsan-so-liblsan-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
                     "prediction": false,
                     "splice_type": "different_lib"
                 }
@@ -57,15 +57,15 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/liblsan.so": 38,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/liblsan.so": 38
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so": 38,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so": 38
             }
         },
         "experiment": "liblsan-fedora-libs-34-fedora-libs-35",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/liblsan.so",
         "different_libs": true
     }
 ]

@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/krb5/plugins/preauth/spake.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/krb5/plugins/preauth/spake.so"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/krb5/plugins/preauth/spake.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/krb5/plugins/preauth/spake.so"
         ],
         "paths": {},
         "predictions": {
@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.4332275390625e-05
+                    "seconds": 3.910064697265625e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,45 +27,45 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.5299530029296875e-06
+                    "seconds": 8.58306884765625e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.008175134658813477,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/krb5/plugins/preauth/spake.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/krb5/plugins/preauth/spake.so",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/krb5/plugins/preauth/spake.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/krb5/plugins/preauth/spake.so",
+                    "seconds": 0.03294801712036133,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/krb5/plugins/preauth/spake.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/krb5/plugins/preauth/spake.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/krb5/plugins/preauth/spake.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/krb5/plugins/preauth/spake.so",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/krb5/plugins/preauth/spake.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/krb5/plugins/preauth/spake.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/krb5/plugins/preauth/spake.so-abi-laboratory-spake-so-spake-so.html\nERROR: missed debug-info file spake.so-1.19.2-6.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to spake.so-1.19.2-6.fc36.x86_64.debug (gnu_debuglink)\n",
-                    "return_code": 10,
-                    "seconds": 0.08411431312561035,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/krb5/plugins/preauth/spake.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/krb5/plugins/preauth/spake.so spake-so-spake-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/krb5/plugins/preauth/spake.so-abi-laboratory-spake-so-spake-so.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/krb5/plugins/preauth/spake.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/krb5/plugins/preauth/spake.so",
-                    "prediction": false,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/krb5/plugins/preauth/spake.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/krb5/plugins/preauth/spake.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/krb5/plugins/preauth/spake.so-abi-laboratory-spake-so-spake-so.html\nFound link to spake.so-1.19.2-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file spake.so-1.19.2-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/krb5/plugins/preauth/../../../../../.dwz/krb5-1.19.2-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 78217\nERROR: incomplete info for symbol 78367\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-VHNCR.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to spake.so-1.19.2-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file spake.so-1.19.2-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/krb5/plugins/preauth/../../../../../.dwz/krb5-1.19.2-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 78217\nERROR: incomplete info for symbol 78367\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-BDkaY.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/krb5/plugins/preauth/spake.so-abi-laboratory-spake-so-spake-so.html\n",
+                    "return_code": 0,
+                    "seconds": 1.7039222717285156,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/krb5/plugins/preauth/spake.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/krb5/plugins/preauth/spake.so spake-so-spake-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/krb5/plugins/preauth/spake.so-abi-laboratory-spake-so-spake-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/krb5/plugins/preauth/spake.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/krb5/plugins/preauth/spake.so",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/krb5/plugins/preauth/spake.so": 91192,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/krb5/plugins/preauth/spake.so": 91192
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/krb5/plugins/preauth/spake.so": 91192,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/krb5/plugins/preauth/spake.so": 91192
             }
         },
         "experiment": "spake-fedora-libs-34-fedora-libs-36",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/krb5/plugins/preauth/spake.so",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/krb5/plugins/preauth/spake.so",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/krb5/plugins/preauth/spake.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/krb5/plugins/preauth/spake.so",
         "different_libs": true
     }
 ]

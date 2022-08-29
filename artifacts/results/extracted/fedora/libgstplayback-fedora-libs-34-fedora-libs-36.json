@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstplayback.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstplayback.so"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstplayback.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstplayback.so"
         ],
         "paths": {},
         "predictions": {
@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00011587142944335938
+                    "seconds": 0.00012135505676269531
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,45 +27,45 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.9141387939453125e-06
+                    "seconds": 5.9604644775390625e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.0102996826171875,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstplayback.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstplayback.so",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstplayback.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstplayback.so",
+                    "seconds": 0.09993815422058105,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstplayback.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstplayback.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstplayback.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstplayback.so",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstplayback.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstplayback.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstplayback.so-abi-laboratory-libgstplayback-so-libgstplayback-so.html\nERROR: missed debug-info file libgstplayback.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libgstplayback.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\n",
-                    "return_code": 10,
-                    "seconds": 0.0867772102355957,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstplayback.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstplayback.so libgstplayback-so-libgstplayback-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstplayback.so-abi-laboratory-libgstplayback-so-libgstplayback-so.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstplayback.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstplayback.so",
-                    "prediction": false,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstplayback.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstplayback.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstplayback.so-abi-laboratory-libgstplayback-so-libgstplayback-so.html\nFound link to libgstplayback.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgstplayback.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gstreamer-1.0/../../../.dwz/gstreamer1-plugins-base-1.20.3-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-oegiC.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgstplayback.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgstplayback.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gstreamer-1.0/../../../.dwz/gstreamer1-plugins-base-1.20.3-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-QTkBz.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstplayback.so-abi-laboratory-libgstplayback-so-libgstplayback-so.html\n",
+                    "return_code": 0,
+                    "seconds": 3.564998149871826,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstplayback.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstplayback.so libgstplayback-so-libgstplayback-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstplayback.so-abi-laboratory-libgstplayback-so-libgstplayback-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstplayback.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstplayback.so",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstplayback.so": 644600,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstplayback.so": 644600
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstplayback.so": 644600,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstplayback.so": 644600
             }
         },
         "experiment": "libgstplayback-fedora-libs-34-fedora-libs-36",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gstreamer-1.0/libgstplayback.so",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/gstreamer-1.0/libgstplayback.so",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstplayback.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstplayback.so",
         "different_libs": true
     }
 ]

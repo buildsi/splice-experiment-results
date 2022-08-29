@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libjson-c.so.5.1.0"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjson-c.so.5.1.0"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libjson-c.so.5.1.0"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjson-c.so.5.1.0"
         ],
         "paths": {},
         "predictions": {
@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.364418029785156e-05
+                    "seconds": 5.745887756347656e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,45 +27,45 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00015807151794433594
+                    "seconds": 0.00015926361083984375
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.009140253067016602,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libjson-c.so.5.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libjson-c.so.5.1.0",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libjson-c.so.5.1.0",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libjson-c.so.5.1.0",
+                    "seconds": 0.05250144004821777,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjson-c.so.5.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjson-c.so.5.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjson-c.so.5.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjson-c.so.5.1.0",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libjson-c.so.5.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libjson-c.so.5.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libjson-c.so.5.1.0-abi-laboratory-libjson-c-so-5-1-0-libjson-c-so-5-1-0.html\nERROR: missed debug-info file libjson-c.so.5.1.0-0.15-3.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libjson-c.so.5.1.0-0.15-3.fc36.x86_64.debug (gnu_debuglink)\n",
-                    "return_code": 10,
-                    "seconds": 0.08899188041687012,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libjson-c.so.5.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libjson-c.so.5.1.0 libjson-c-so-5-1-0-libjson-c-so-5-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libjson-c.so.5.1.0-abi-laboratory-libjson-c-so-5-1-0-libjson-c-so-5-1-0.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libjson-c.so.5.1.0",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libjson-c.so.5.1.0",
-                    "prediction": false,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjson-c.so.5.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjson-c.so.5.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjson-c.so.5.1.0-abi-laboratory-libjson-c-so-5-1-0-libjson-c-so-5-1-0.html\nFound link to libjson-c.so.5.1.0-0.15-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjson-c.so.5.1.0-0.15-3.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4447\nERROR: incomplete info for symbol 4480\nERROR: incomplete info for symbol 5557\nERROR: incomplete info for symbol 7449\nERROR: incomplete info for symbol 7491\nERROR: incomplete info for symbol 7517\nERROR: incomplete info for symbol 7761\nERROR: incomplete info for symbol 8003\nERROR: incomplete info for symbol 8277\nERROR: incomplete info for symbol 8418\nERROR: incomplete info for symbol 8451\nERROR: incomplete info for symbol 8477\nERROR: incomplete info for symbol 8503\nERROR: incomplete info for symbol 8698\nERROR: incomplete info for symbol 8862\nERROR: incomplete info for symbol 8904\nERROR: incomplete info for symbol 9138\nERROR: incomplete info for symbol 9171\nERROR: incomplete info for symbol 9316\nERROR: incomplete info for symbol 9373\nERROR: incomplete info for symbol 9518\nERROR: incomplete info for symbol 9551\nERROR: incomplete info for symbol 9628\nERROR: incomplete info for symbol 9800\nERROR: incomplete info for symbol 9949\nERROR: incomplete info for symbol 10372\nERROR: incomplete info for symbol 10494\nERROR: incomplete info for symbol 10565\nERROR: incomplete info for symbol 10642\nERROR: incomplete info for symbol 10681\nERROR: incomplete info for symbol 10772\nERROR: incomplete info for symbol 10869\nERROR: incomplete info for symbol 11104\nERROR: incomplete info for symbol 11130\nERROR: incomplete info for symbol 11330\nERROR: incomplete info for symbol 11571\nERROR: incomplete info for symbol 11965\nERROR: incomplete info for symbol 12165\nERROR: incomplete info for symbol 12390\nERROR: incomplete info for symbol 12615\nERROR: incomplete info for symbol 13866\nERROR: incomplete info for symbol 13943\nERROR: incomplete info for symbol 13982\nERROR: incomplete info for symbol 14008\nERROR: incomplete info for symbol 14034\nERROR: incomplete info for symbol 14060\nERROR: incomplete info for symbol 14125\nERROR: incomplete info for symbol 14170\nERROR: incomplete info for symbol 14196\nERROR: incomplete info for symbol 14229\nERROR: incomplete info for symbol 14381\nERROR: incomplete info for symbol 14471\nERROR: incomplete info for symbol 14596\nERROR: incomplete info for symbol 14990\nERROR: incomplete info for symbol 15306\nERROR: incomplete info for symbol 15436\nERROR: incomplete info for symbol 15568\nERROR: incomplete info for symbol 15594\nERROR: incomplete info for symbol 15843\nERROR: incomplete info for symbol 15927\nERROR: incomplete info for symbol 16024\nERROR: incomplete info for symbol 16117\nERROR: incomplete info for symbol 16256\nERROR: incomplete info for symbol 16515\nERROR: incomplete info for symbol 16679\nERROR: incomplete info for symbol 16780\nERROR: incomplete info for symbol 16919\nERROR: incomplete info for symbol 17016\nERROR: incomplete info for symbol 17168\nERROR: incomplete info for symbol 17711\nERROR: incomplete info for symbol 18530\nERROR: incomplete info for symbol 18606\nERROR: incomplete info for symbol 18710\nERROR: incomplete info for symbol 18910\nERROR: incomplete info for symbol 18936\nERROR: incomplete info for symbol 19202\nERROR: incomplete info for symbol 19940\nERROR: incomplete info for symbol 21020\nERROR: incomplete info for symbol 22079\nERROR: incomplete info for symbol 24308\nERROR: incomplete info for symbol 24704\nERROR: incomplete info for symbol 24730\nERROR: incomplete info for symbol 24865\nERROR: incomplete info for symbol 24941\nERROR: incomplete info for symbol 24997\nERROR: incomplete info for symbol 25432\nERROR: incomplete info for symbol 25777\nERROR: incomplete info for symbol 25853\nERROR: incomplete info for symbol 25976\nERROR: incomplete info for symbol 26074\nERROR: incomplete info for symbol 26318\nERROR: incomplete info for symbol 26896\nERROR: incomplete info for symbol 27283\nERROR: incomplete info for symbol 28347\nERROR: incomplete info for symbol 28480\nERROR: incomplete info for symbol 28581\nERROR: incomplete info for symbol 29323\nERROR: incomplete info for symbol 34870\nERROR: incomplete info for symbol 34963\nERROR: incomplete info for symbol 35115\nERROR: incomplete info for symbol 35206\nERROR: incomplete info for symbol 35814\nERROR: incomplete info for symbol 35871\nERROR: incomplete info for symbol 37605\nERROR: incomplete info for symbol 37784\nERROR: incomplete info for symbol 38049\nERROR: incomplete info for symbol 38348\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-GPwmt.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libjson-c.so.5.1.0-0.15-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjson-c.so.5.1.0-0.15-3.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4447\nERROR: incomplete info for symbol 4480\nERROR: incomplete info for symbol 5557\nERROR: incomplete info for symbol 7449\nERROR: incomplete info for symbol 7491\nERROR: incomplete info for symbol 7517\nERROR: incomplete info for symbol 7761\nERROR: incomplete info for symbol 8003\nERROR: incomplete info for symbol 8277\nERROR: incomplete info for symbol 8418\nERROR: incomplete info for symbol 8451\nERROR: incomplete info for symbol 8477\nERROR: incomplete info for symbol 8503\nERROR: incomplete info for symbol 8698\nERROR: incomplete info for symbol 8862\nERROR: incomplete info for symbol 8904\nERROR: incomplete info for symbol 9138\nERROR: incomplete info for symbol 9171\nERROR: incomplete info for symbol 9316\nERROR: incomplete info for symbol 9373\nERROR: incomplete info for symbol 9518\nERROR: incomplete info for symbol 9551\nERROR: incomplete info for symbol 9628\nERROR: incomplete info for symbol 9800\nERROR: incomplete info for symbol 9949\nERROR: incomplete info for symbol 10372\nERROR: incomplete info for symbol 10494\nERROR: incomplete info for symbol 10565\nERROR: incomplete info for symbol 10642\nERROR: incomplete info for symbol 10681\nERROR: incomplete info for symbol 10772\nERROR: incomplete info for symbol 10869\nERROR: incomplete info for symbol 11104\nERROR: incomplete info for symbol 11130\nERROR: incomplete info for symbol 11330\nERROR: incomplete info for symbol 11571\nERROR: incomplete info for symbol 11965\nERROR: incomplete info for symbol 12165\nERROR: incomplete info for symbol 12390\nERROR: incomplete info for symbol 12615\nERROR: incomplete info for symbol 13866\nERROR: incomplete info for symbol 13943\nERROR: incomplete info for symbol 13982\nERROR: incomplete info for symbol 14008\nERROR: incomplete info for symbol 14034\nERROR: incomplete info for symbol 14060\nERROR: incomplete info for symbol 14125\nERROR: incomplete info for symbol 14170\nERROR: incomplete info for symbol 14196\nERROR: incomplete info for symbol 14229\nERROR: incomplete info for symbol 14381\nERROR: incomplete info for symbol 14471\nERROR: incomplete info for symbol 14596\nERROR: incomplete info for symbol 14990\nERROR: incomplete info for symbol 15306\nERROR: incomplete info for symbol 15436\nERROR: incomplete info for symbol 15568\nERROR: incomplete info for symbol 15594\nERROR: incomplete info for symbol 15843\nERROR: incomplete info for symbol 15927\nERROR: incomplete info for symbol 16024\nERROR: incomplete info for symbol 16117\nERROR: incomplete info for symbol 16256\nERROR: incomplete info for symbol 16515\nERROR: incomplete info for symbol 16679\nERROR: incomplete info for symbol 16780\nERROR: incomplete info for symbol 16919\nERROR: incomplete info for symbol 17016\nERROR: incomplete info for symbol 17168\nERROR: incomplete info for symbol 17711\nERROR: incomplete info for symbol 18530\nERROR: incomplete info for symbol 18606\nERROR: incomplete info for symbol 18710\nERROR: incomplete info for symbol 18910\nERROR: incomplete info for symbol 18936\nERROR: incomplete info for symbol 19202\nERROR: incomplete info for symbol 19940\nERROR: incomplete info for symbol 21020\nERROR: incomplete info for symbol 22079\nERROR: incomplete info for symbol 24308\nERROR: incomplete info for symbol 24704\nERROR: incomplete info for symbol 24730\nERROR: incomplete info for symbol 24865\nERROR: incomplete info for symbol 24941\nERROR: incomplete info for symbol 24997\nERROR: incomplete info for symbol 25432\nERROR: incomplete info for symbol 25777\nERROR: incomplete info for symbol 25853\nERROR: incomplete info for symbol 25976\nERROR: incomplete info for symbol 26074\nERROR: incomplete info for symbol 26318\nERROR: incomplete info for symbol 26896\nERROR: incomplete info for symbol 27283\nERROR: incomplete info for symbol 28347\nERROR: incomplete info for symbol 28480\nERROR: incomplete info for symbol 28581\nERROR: incomplete info for symbol 29323\nERROR: incomplete info for symbol 34870\nERROR: incomplete info for symbol 34963\nERROR: incomplete info for symbol 35115\nERROR: incomplete info for symbol 35206\nERROR: incomplete info for symbol 35814\nERROR: incomplete info for symbol 35871\nERROR: incomplete info for symbol 37605\nERROR: incomplete info for symbol 37784\nERROR: incomplete info for symbol 38049\nERROR: incomplete info for symbol 38348\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-l5T5N.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjson-c.so.5.1.0-abi-laboratory-libjson-c-so-5-1-0-libjson-c-so-5-1-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.9603064060211182,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjson-c.so.5.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjson-c.so.5.1.0 libjson-c-so-5-1-0-libjson-c-so-5-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjson-c.so.5.1.0-abi-laboratory-libjson-c-so-5-1-0-libjson-c-so-5-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjson-c.so.5.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjson-c.so.5.1.0",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libjson-c.so.5.1.0": 76032,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libjson-c.so.5.1.0": 76032
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjson-c.so.5.1.0": 76032,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjson-c.so.5.1.0": 76032
             }
         },
         "experiment": "libjson-c-fedora-libs-36-fedora-libs-37",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libjson-c.so.5.1.0",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libjson-c.so.5.1.0",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjson-c.so.5.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjson-c.so.5.1.0",
         "different_libs": true
     }
 ]

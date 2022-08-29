@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kded.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kded.so"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kded.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kded.so"
         ],
         "paths": {},
         "predictions": {
@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00010728836059570312
+                    "seconds": 9.608268737792969e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,45 +27,45 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0001125335693359375
+                    "seconds": 0.0001285076141357422
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.007812738418579102,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kded.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kded.so",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kded.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kded.so",
+                    "seconds": 0.6251084804534912,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kded.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kded.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kded.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kded.so",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kded.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kded.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kded.so-abi-laboratory-libkdeinit_kded-so-libkdeinit_kded-so.html\nERROR: missed debug-info file libkdeinit_kded.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to libkdeinit_kded.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
-                    "return_code": 10,
-                    "seconds": 0.09557414054870605,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kded.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kded.so libkdeinit_kded-so-libkdeinit_kded-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kded.so-abi-laboratory-libkdeinit_kded-so-libkdeinit_kded-so.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kded.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kded.so",
-                    "prediction": false,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kded.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kded.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kded.so-abi-laboratory-libkdeinit_kded-so-libkdeinit_kded-so.html\nFound link to libkdeinit_kded.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdeinit_kded.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1136\nERROR: incomplete info for symbol 54065\nERROR: incomplete info for symbol 54306\nERROR: incomplete info for symbol 54346\nERROR: incomplete info for symbol 54458\nERROR: incomplete info for symbol 57704\nERROR: incomplete info for symbol 58678\nERROR: incomplete info for symbol 59353\nERROR: incomplete info for symbol 61521\nERROR: incomplete info for symbol 61614\nERROR: incomplete info for symbol 62013\nERROR: incomplete info for symbol 64415\nERROR: incomplete info for symbol 68364\nERROR: incomplete info for symbol 80105\nERROR: incomplete info for symbol 80295\nERROR: incomplete info for symbol 97784\nERROR: incomplete info for symbol 98887\nERROR: incomplete info for symbol 99385\nERROR: incomplete info for symbol 99945\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Gh5Vc.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkdeinit_kded.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdeinit_kded.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1136\nERROR: incomplete info for symbol 54065\nERROR: incomplete info for symbol 54306\nERROR: incomplete info for symbol 54346\nERROR: incomplete info for symbol 54458\nERROR: incomplete info for symbol 57704\nERROR: incomplete info for symbol 58678\nERROR: incomplete info for symbol 59353\nERROR: incomplete info for symbol 61521\nERROR: incomplete info for symbol 61614\nERROR: incomplete info for symbol 62013\nERROR: incomplete info for symbol 64415\nERROR: incomplete info for symbol 68364\nERROR: incomplete info for symbol 80105\nERROR: incomplete info for symbol 80295\nERROR: incomplete info for symbol 97784\nERROR: incomplete info for symbol 98887\nERROR: incomplete info for symbol 99385\nERROR: incomplete info for symbol 99945\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-nfSnz.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kded.so-abi-laboratory-libkdeinit_kded-so-libkdeinit_kded-so.html\n",
+                    "return_code": 0,
+                    "seconds": 16.91590666770935,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kded.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kded.so libkdeinit_kded-so-libkdeinit_kded-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kded.so-abi-laboratory-libkdeinit_kded-so-libkdeinit_kded-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kded.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kded.so",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kded.so": 111560,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kded.so": 111560
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kded.so": 111560,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kded.so": 111560
             }
         },
         "experiment": "libkdeinit_kded-fedora-libs-35-fedora-libs-37",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libkdeinit_kded.so",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libkdeinit_kded.so",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kded.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kded.so",
         "different_libs": true
     }
 ]

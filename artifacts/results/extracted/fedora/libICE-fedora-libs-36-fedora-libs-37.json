@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libICE.so.6.3.0"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libICE.so.6.3.0"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libICE.so.6.3.0"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libICE.so.6.3.0"
         ],
         "paths": {},
         "predictions": {
@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.626678466796875e-05
+                    "seconds": 5.888938903808594e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,45 +27,45 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00013828277587890625
+                    "seconds": 0.00015282630920410156
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.008539915084838867,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libICE.so.6.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libICE.so.6.3.0",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libICE.so.6.3.0",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libICE.so.6.3.0",
+                    "seconds": 0.061281681060791016,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libICE.so.6.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libICE.so.6.3.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libICE.so.6.3.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libICE.so.6.3.0",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libICE.so.6.3.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libICE.so.6.3.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libICE.so.6.3.0-abi-laboratory-libICE-so-6-3-0-libICE-so-6-3-0.html\nERROR: missed debug-info file libICE.so.6.3.0-1.0.10-8.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libICE.so.6.3.0-1.0.10-8.fc36.x86_64.debug (gnu_debuglink)\n",
-                    "return_code": 10,
-                    "seconds": 0.08684635162353516,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libICE.so.6.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libICE.so.6.3.0 libICE-so-6-3-0-libICE-so-6-3-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libICE.so.6.3.0-abi-laboratory-libICE-so-6-3-0-libICE-so-6-3-0.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libICE.so.6.3.0",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libICE.so.6.3.0",
-                    "prediction": false,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libICE.so.6.3.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libICE.so.6.3.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libICE.so.6.3.0-abi-laboratory-libICE-so-6-3-0-libICE-so-6-3-0.html\nFound link to libICE.so.6.3.0-1.0.10-8.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libICE.so.6.3.0-1.0.10-8.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 20122\nERROR: incomplete info for symbol 20776\nERROR: incomplete info for symbol 20857\nERROR: incomplete info for symbol 21155\nERROR: incomplete info for symbol 21298\nERROR: incomplete info for symbol 21725\nERROR: incomplete info for symbol 22025\nERROR: incomplete info for symbol 22051\nERROR: incomplete info for symbol 22096\nERROR: incomplete info for symbol 22141\nERROR: incomplete info for symbol 22381\nERROR: incomplete info for symbol 22817\nERROR: incomplete info for symbol 23091\nERROR: incomplete info for symbol 23580\nERROR: incomplete info for symbol 24012\nERROR: incomplete info for symbol 24309\nERROR: incomplete info for symbol 24678\nERROR: incomplete info for symbol 25371\nERROR: incomplete info for symbol 25550\nERROR: incomplete info for symbol 25639\nERROR: incomplete info for symbol 25914\nERROR: incomplete info for symbol 26147\nERROR: incomplete info for symbol 26380\nERROR: incomplete info for symbol 26623\nERROR: incomplete info for symbol 26672\nERROR: incomplete info for symbol 26784\nERROR: incomplete info for symbol 26853\nERROR: incomplete info for symbol 26942\nERROR: incomplete info for symbol 27031\nERROR: incomplete info for symbol 27120\nERROR: incomplete info for symbol 27209\nERROR: incomplete info for symbol 27258\nERROR: incomplete info for symbol 27371\nERROR: incomplete info for symbol 27484\nERROR: incomplete info for symbol 27510\nERROR: incomplete info for symbol 27731\nERROR: incomplete info for symbol 27757\nERROR: incomplete info for symbol 32159\nERROR: incomplete info for symbol 32253\nERROR: incomplete info for symbol 32347\nERROR: incomplete info for symbol 33175\nERROR: incomplete info for symbol 33555\nERROR: incomplete info for symbol 34306\nERROR: incomplete info for symbol 35048\nERROR: incomplete info for symbol 35834\nERROR: incomplete info for symbol 35877\nERROR: incomplete info for symbol 35920\nERROR: incomplete info for symbol 36369\nERROR: incomplete info for symbol 36479\nERROR: incomplete info for symbol 36512\nERROR: incomplete info for symbol 37310\nERROR: incomplete info for symbol 37336\nERROR: incomplete info for symbol 37362\nERROR: incomplete info for symbol 37436\nERROR: incomplete info for symbol 37462\nERROR: incomplete info for symbol 37488\nERROR: incomplete info for symbol 37514\nERROR: incomplete info for symbol 37557\nERROR: incomplete info for symbol 37600\nERROR: incomplete info for symbol 37626\nERROR: incomplete info for symbol 37652\nERROR: incomplete info for symbol 37695\nERROR: incomplete info for symbol 37738\nERROR: incomplete info for symbol 37764\nERROR: incomplete info for symbol 37790\nERROR: incomplete info for symbol 37816\nERROR: incomplete info for symbol 38127\nERROR: incomplete info for symbol 38177\nERROR: incomplete info for symbol 38303\nERROR: incomplete info for symbol 38429\nERROR: incomplete info for symbol 38555\nERROR: incomplete info for symbol 39228\nERROR: incomplete info for symbol 39334\nERROR: incomplete info for symbol 39440\nERROR: incomplete info for symbol 39911\nERROR: incomplete info for symbol 40398\nERROR: incomplete info for symbol 40885\nERROR: incomplete info for symbol 41340\nERROR: incomplete info for symbol 41582\nERROR: incomplete info for symbol 42037\nERROR: incomplete info for symbol 43800\nERROR: incomplete info for symbol 44844\nERROR: incomplete info for symbol 44887\nERROR: incomplete info for symbol 44938\nERROR: incomplete info for symbol 45103\nERROR: incomplete info for symbol 45547\nERROR: incomplete info for symbol 46015\nERROR: incomplete info for symbol 46136\nERROR: incomplete info for symbol 46182\nERROR: incomplete info for symbol 46228\nERROR: incomplete info for symbol 46336\nERROR: incomplete info for symbol 46611\nERROR: incomplete info for symbol 46681\nERROR: incomplete info for symbol 46714\nERROR: incomplete info for symbol 46740\nERROR: incomplete info for symbol 46954\nERROR: incomplete info for symbol 47116\nERROR: incomplete info for symbol 47287\nERROR: incomplete info for symbol 47860\nERROR: incomplete info for symbol 47989\nERROR: incomplete info for symbol 48239\nERROR: incomplete info for symbol 61586\nERROR: incomplete info for symbol 66207\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-BD4nS.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libICE.so.6.3.0-1.0.10-8.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libICE.so.6.3.0-1.0.10-8.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 20122\nERROR: incomplete info for symbol 20776\nERROR: incomplete info for symbol 20857\nERROR: incomplete info for symbol 21155\nERROR: incomplete info for symbol 21298\nERROR: incomplete info for symbol 21725\nERROR: incomplete info for symbol 22025\nERROR: incomplete info for symbol 22051\nERROR: incomplete info for symbol 22096\nERROR: incomplete info for symbol 22141\nERROR: incomplete info for symbol 22381\nERROR: incomplete info for symbol 22817\nERROR: incomplete info for symbol 23091\nERROR: incomplete info for symbol 23580\nERROR: incomplete info for symbol 24012\nERROR: incomplete info for symbol 24309\nERROR: incomplete info for symbol 24678\nERROR: incomplete info for symbol 25371\nERROR: incomplete info for symbol 25550\nERROR: incomplete info for symbol 25639\nERROR: incomplete info for symbol 25914\nERROR: incomplete info for symbol 26147\nERROR: incomplete info for symbol 26380\nERROR: incomplete info for symbol 26623\nERROR: incomplete info for symbol 26672\nERROR: incomplete info for symbol 26784\nERROR: incomplete info for symbol 26853\nERROR: incomplete info for symbol 26942\nERROR: incomplete info for symbol 27031\nERROR: incomplete info for symbol 27120\nERROR: incomplete info for symbol 27209\nERROR: incomplete info for symbol 27258\nERROR: incomplete info for symbol 27371\nERROR: incomplete info for symbol 27484\nERROR: incomplete info for symbol 27510\nERROR: incomplete info for symbol 27731\nERROR: incomplete info for symbol 27757\nERROR: incomplete info for symbol 32159\nERROR: incomplete info for symbol 32253\nERROR: incomplete info for symbol 32347\nERROR: incomplete info for symbol 33175\nERROR: incomplete info for symbol 33555\nERROR: incomplete info for symbol 34306\nERROR: incomplete info for symbol 35048\nERROR: incomplete info for symbol 35834\nERROR: incomplete info for symbol 35877\nERROR: incomplete info for symbol 35920\nERROR: incomplete info for symbol 36369\nERROR: incomplete info for symbol 36479\nERROR: incomplete info for symbol 36512\nERROR: incomplete info for symbol 37310\nERROR: incomplete info for symbol 37336\nERROR: incomplete info for symbol 37362\nERROR: incomplete info for symbol 37436\nERROR: incomplete info for symbol 37462\nERROR: incomplete info for symbol 37488\nERROR: incomplete info for symbol 37514\nERROR: incomplete info for symbol 37557\nERROR: incomplete info for symbol 37600\nERROR: incomplete info for symbol 37626\nERROR: incomplete info for symbol 37652\nERROR: incomplete info for symbol 37695\nERROR: incomplete info for symbol 37738\nERROR: incomplete info for symbol 37764\nERROR: incomplete info for symbol 37790\nERROR: incomplete info for symbol 37816\nERROR: incomplete info for symbol 38127\nERROR: incomplete info for symbol 38177\nERROR: incomplete info for symbol 38303\nERROR: incomplete info for symbol 38429\nERROR: incomplete info for symbol 38555\nERROR: incomplete info for symbol 39228\nERROR: incomplete info for symbol 39334\nERROR: incomplete info for symbol 39440\nERROR: incomplete info for symbol 39911\nERROR: incomplete info for symbol 40398\nERROR: incomplete info for symbol 40885\nERROR: incomplete info for symbol 41340\nERROR: incomplete info for symbol 41582\nERROR: incomplete info for symbol 42037\nERROR: incomplete info for symbol 43800\nERROR: incomplete info for symbol 44844\nERROR: incomplete info for symbol 44887\nERROR: incomplete info for symbol 44938\nERROR: incomplete info for symbol 45103\nERROR: incomplete info for symbol 45547\nERROR: incomplete info for symbol 46015\nERROR: incomplete info for symbol 46136\nERROR: incomplete info for symbol 46182\nERROR: incomplete info for symbol 46228\nERROR: incomplete info for symbol 46336\nERROR: incomplete info for symbol 46611\nERROR: incomplete info for symbol 46681\nERROR: incomplete info for symbol 46714\nERROR: incomplete info for symbol 46740\nERROR: incomplete info for symbol 46954\nERROR: incomplete info for symbol 47116\nERROR: incomplete info for symbol 47287\nERROR: incomplete info for symbol 47860\nERROR: incomplete info for symbol 47989\nERROR: incomplete info for symbol 48239\nERROR: incomplete info for symbol 61586\nERROR: incomplete info for symbol 66207\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-R8lWf.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libICE.so.6.3.0-abi-laboratory-libICE-so-6-3-0-libICE-so-6-3-0.html\n",
+                    "return_code": 0,
+                    "seconds": 1.1377224922180176,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libICE.so.6.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libICE.so.6.3.0 libICE-so-6-3-0-libICE-so-6-3-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libICE.so.6.3.0-abi-laboratory-libICE-so-6-3-0-libICE-so-6-3-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libICE.so.6.3.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libICE.so.6.3.0",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libICE.so.6.3.0": 108312,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libICE.so.6.3.0": 108312
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libICE.so.6.3.0": 108312,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libICE.so.6.3.0": 108312
             }
         },
         "experiment": "libICE-fedora-libs-36-fedora-libs-37",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libICE.so.6.3.0",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libICE.so.6.3.0",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libICE.so.6.3.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libICE.so.6.3.0",
         "different_libs": true
     }
 ]

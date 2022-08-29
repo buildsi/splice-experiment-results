@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libmenuw.so.6.2"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenuw.so.6.2"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libmenuw.so.6.2"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenuw.so.6.2"
         ],
         "paths": {},
         "predictions": {
@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.220008850097656e-05
+                    "seconds": 4.6253204345703125e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,45 +27,45 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.222724914550781e-05
+                    "seconds": 6.389617919921875e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.00818181037902832,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libmenuw.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libmenuw.so.6.2",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libmenuw.so.6.2",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libmenuw.so.6.2",
+                    "seconds": 0.04499697685241699,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenuw.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenuw.so.6.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenuw.so.6.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenuw.so.6.2",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libmenuw.so.6.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libmenuw.so.6.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libmenuw.so.6.2-abi-laboratory-libmenuw-so-6-2-libmenuw-so-6-2.html\nERROR: missed debug-info file libmenuw.so.6.2-6.2-9.20210508.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libmenuw.so.6.2-6.2-9.20210508.fc36.x86_64.debug (gnu_debuglink)\n",
-                    "return_code": 10,
-                    "seconds": 0.08568739891052246,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libmenuw.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libmenuw.so.6.2 libmenuw-so-6-2-libmenuw-so-6-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libmenuw.so.6.2-abi-laboratory-libmenuw-so-6-2-libmenuw-so-6-2.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libmenuw.so.6.2",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libmenuw.so.6.2",
-                    "prediction": false,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenuw.so.6.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenuw.so.6.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenuw.so.6.2-abi-laboratory-libmenuw-so-6-2-libmenuw-so-6-2.html\nFound link to libmenuw.so.6.2-6.2-9.20210508.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libmenuw.so.6.2-6.2-9.20210508.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/ncurses-6.2-9.20210508.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6548\nERROR: incomplete info for symbol 6620\nERROR: incomplete info for symbol 6974\nERROR: incomplete info for symbol 7216\nERROR: incomplete info for symbol 7262\nERROR: incomplete info for symbol 7346\nERROR: incomplete info for symbol 7723\nERROR: incomplete info for symbol 8032\nERROR: incomplete info for symbol 8194\nERROR: incomplete info for symbol 8510\nERROR: incomplete info for symbol 8718\nERROR: incomplete info for symbol 8919\nERROR: incomplete info for symbol 8975\nERROR: incomplete info for symbol 9007\nERROR: incomplete info for symbol 9063\nERROR: incomplete info for symbol 9095\nERROR: incomplete info for symbol 9151\nERROR: incomplete info for symbol 9183\nERROR: incomplete info for symbol 9239\nERROR: incomplete info for symbol 9271\nERROR: incomplete info for symbol 9297\nERROR: incomplete info for symbol 9323\nERROR: incomplete info for symbol 9349\nERROR: incomplete info for symbol 9375\nERROR: incomplete info for symbol 9564\nERROR: incomplete info for symbol 9685\nERROR: incomplete info for symbol 9717\nERROR: incomplete info for symbol 9749\nERROR: incomplete info for symbol 9775\nERROR: incomplete info for symbol 9831\nERROR: incomplete info for symbol 9863\nERROR: incomplete info for symbol 9895\nERROR: incomplete info for symbol 9934\nERROR: incomplete info for symbol 10090\nERROR: incomplete info for symbol 10116\nERROR: incomplete info for symbol 10142\nERROR: incomplete info for symbol 10296\nERROR: incomplete info for symbol 10347\nERROR: incomplete info for symbol 10464\nERROR: incomplete info for symbol 10594\nERROR: incomplete info for symbol 10684\nERROR: incomplete info for symbol 10774\nERROR: incomplete info for symbol 10806\nERROR: incomplete info for symbol 10838\nERROR: incomplete info for symbol 10879\nERROR: incomplete info for symbol 11825\nERROR: incomplete info for symbol 12113\nERROR: incomplete info for symbol 13043\nERROR: incomplete info for symbol 13159\nERROR: incomplete info for symbol 13313\nERROR: incomplete info for symbol 13571\nERROR: incomplete info for symbol 13708\nERROR: incomplete info for symbol 13839\nERROR: incomplete info for symbol 13929\nERROR: incomplete info for symbol 14079\nERROR: incomplete info for symbol 14810\nERROR: incomplete info for symbol 15103\nERROR: incomplete info for symbol 15235\nERROR: incomplete info for symbol 15588\nERROR: incomplete info for symbol 15781\nERROR: incomplete info for symbol 15852\nERROR: incomplete info for symbol 16091\nERROR: incomplete info for symbol 16160\nERROR: incomplete info for symbol 16289\nERROR: incomplete info for symbol 16384\nERROR: incomplete info for symbol 16559\nERROR: incomplete info for symbol 16604\nERROR: incomplete info for symbol 16660\nERROR: incomplete info for symbol 16692\nERROR: incomplete info for symbol 16862\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-G1RNl.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libmenuw.so.6.2-6.2-9.20210508.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libmenuw.so.6.2-6.2-9.20210508.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/ncurses-6.2-9.20210508.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6548\nERROR: incomplete info for symbol 6620\nERROR: incomplete info for symbol 6974\nERROR: incomplete info for symbol 7216\nERROR: incomplete info for symbol 7262\nERROR: incomplete info for symbol 7346\nERROR: incomplete info for symbol 7723\nERROR: incomplete info for symbol 8032\nERROR: incomplete info for symbol 8194\nERROR: incomplete info for symbol 8510\nERROR: incomplete info for symbol 8718\nERROR: incomplete info for symbol 8919\nERROR: incomplete info for symbol 8975\nERROR: incomplete info for symbol 9007\nERROR: incomplete info for symbol 9063\nERROR: incomplete info for symbol 9095\nERROR: incomplete info for symbol 9151\nERROR: incomplete info for symbol 9183\nERROR: incomplete info for symbol 9239\nERROR: incomplete info for symbol 9271\nERROR: incomplete info for symbol 9297\nERROR: incomplete info for symbol 9323\nERROR: incomplete info for symbol 9349\nERROR: incomplete info for symbol 9375\nERROR: incomplete info for symbol 9564\nERROR: incomplete info for symbol 9685\nERROR: incomplete info for symbol 9717\nERROR: incomplete info for symbol 9749\nERROR: incomplete info for symbol 9775\nERROR: incomplete info for symbol 9831\nERROR: incomplete info for symbol 9863\nERROR: incomplete info for symbol 9895\nERROR: incomplete info for symbol 9934\nERROR: incomplete info for symbol 10090\nERROR: incomplete info for symbol 10116\nERROR: incomplete info for symbol 10142\nERROR: incomplete info for symbol 10296\nERROR: incomplete info for symbol 10347\nERROR: incomplete info for symbol 10464\nERROR: incomplete info for symbol 10594\nERROR: incomplete info for symbol 10684\nERROR: incomplete info for symbol 10774\nERROR: incomplete info for symbol 10806\nERROR: incomplete info for symbol 10838\nERROR: incomplete info for symbol 10879\nERROR: incomplete info for symbol 11825\nERROR: incomplete info for symbol 12113\nERROR: incomplete info for symbol 13043\nERROR: incomplete info for symbol 13159\nERROR: incomplete info for symbol 13313\nERROR: incomplete info for symbol 13571\nERROR: incomplete info for symbol 13708\nERROR: incomplete info for symbol 13839\nERROR: incomplete info for symbol 13929\nERROR: incomplete info for symbol 14079\nERROR: incomplete info for symbol 14810\nERROR: incomplete info for symbol 15103\nERROR: incomplete info for symbol 15235\nERROR: incomplete info for symbol 15588\nERROR: incomplete info for symbol 15781\nERROR: incomplete info for symbol 15852\nERROR: incomplete info for symbol 16091\nERROR: incomplete info for symbol 16160\nERROR: incomplete info for symbol 16289\nERROR: incomplete info for symbol 16384\nERROR: incomplete info for symbol 16559\nERROR: incomplete info for symbol 16604\nERROR: incomplete info for symbol 16660\nERROR: incomplete info for symbol 16692\nERROR: incomplete info for symbol 16862\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-LKshT.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenuw.so.6.2-abi-laboratory-libmenuw-so-6-2-libmenuw-so-6-2.html\n",
+                    "return_code": 0,
+                    "seconds": 1.5491368770599365,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenuw.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenuw.so.6.2 libmenuw-so-6-2-libmenuw-so-6-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenuw.so.6.2-abi-laboratory-libmenuw-so-6-2-libmenuw-so-6-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenuw.so.6.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenuw.so.6.2",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libmenuw.so.6.2": 41584,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libmenuw.so.6.2": 41584
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenuw.so.6.2": 41584,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenuw.so.6.2": 41584
             }
         },
         "experiment": "libmenuw-fedora-libs-35-fedora-libs-36",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/libmenuw.so.6.2",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/libmenuw.so.6.2",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenuw.so.6.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenuw.so.6.2",
         "different_libs": true
     }
 ]

@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/fnmatch.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/fnmatch.so"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/fnmatch.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/fnmatch.so"
         ],
         "paths": {},
         "predictions": {
@@ -16,60 +16,56 @@
                     "original_lib": "fnmatch.so",
                     "spliced_lib": "fnmatch.so",
                     "command": "missing-previously-found-symbols",
-                    "message": [
-                        "luaopen_posix_fnmatch"
-                    ],
-                    "prediction": false,
-                    "seconds": 1.5974044799804688e-05
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.7881393432617188e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "fnmatch.so",
                     "spliced_lib": "fnmatch.so",
                     "command": "missing-previously-found-exports",
-                    "message": [
-                        "luaopen_posix_fnmatch"
-                    ],
-                    "prediction": false,
-                    "seconds": 6.4373016357421875e-06
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.106231689453125e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 1 Removed, 1 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 1 Added variable symbol not referenced by debug info\n\nSONAME changed from '' to 'fnmatch.so'\n\n1 Removed function symbol not referenced by debug info:\n\n  [D] luaopen_posix_fnmatch\n\n1 Added function symbol not referenced by debug info:\n\n  [A] dl_load\n\n1 Added variable symbol not referenced by debug info:\n\n  [A] plugin_is_GPL_compatible\n\n",
-                    "return_code": 12,
-                    "seconds": 0.007042407989501953,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/fnmatch.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/fnmatch.so",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/fnmatch.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/fnmatch.so",
-                    "prediction": false,
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.029842138290405273,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/fnmatch.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/fnmatch.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/fnmatch.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/fnmatch.so",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/fnmatch.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/fnmatch.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/fnmatch.so-abi-laboratory-fnmatch-so-fnmatch-so.html\nERROR: missed debug-info file fnmatch.so-35.1-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to fnmatch.so-35.1-1.fc36.x86_64.debug (gnu_debuglink)\n",
-                    "return_code": 10,
-                    "seconds": 0.0833432674407959,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/fnmatch.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/fnmatch.so fnmatch-so-fnmatch-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/fnmatch.so-abi-laboratory-fnmatch-so-fnmatch-so.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/fnmatch.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/fnmatch.so",
-                    "prediction": false,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/fnmatch.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/fnmatch.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/fnmatch.so-abi-laboratory-fnmatch-so-fnmatch-so.html\nFound link to fnmatch.so-5.1.1-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file fnmatch.so-5.1.1-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gawk/../../../.dwz/gawk-5.1.1-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-hyyjj.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to fnmatch.so-5.1.1-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file fnmatch.so-5.1.1-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gawk/../../../.dwz/gawk-5.1.1-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-tR3WE.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/fnmatch.so-abi-laboratory-fnmatch-so-fnmatch-so.html\n",
+                    "return_code": 0,
+                    "seconds": 0.7225303649902344,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/fnmatch.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/fnmatch.so fnmatch-so-fnmatch-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/fnmatch.so-abi-laboratory-fnmatch-so-fnmatch-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/fnmatch.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/fnmatch.so",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/fnmatch.so": 15864,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/fnmatch.so": 16040
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/fnmatch.so": 16040,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/fnmatch.so": 16040
             }
         },
         "experiment": "fnmatch-fedora-libs-34-fedora-libs-37",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/gawk/fnmatch.so",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/lua/5.4/posix/fnmatch.so",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/fnmatch.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/fnmatch.so",
         "different_libs": true
     }
 ]

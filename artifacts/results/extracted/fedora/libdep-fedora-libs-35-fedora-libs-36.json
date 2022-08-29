@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/bfd-plugins/libdep.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/bfd-plugins/libdep.so"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/bfd-plugins/libdep.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/bfd-plugins/libdep.so"
         ],
         "paths": {},
         "predictions": {
@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.811981201171875e-05
+                    "seconds": 2.002716064453125e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,45 +27,45 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.9141387939453125e-06
+                    "seconds": 1.1444091796875e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.007873296737670898,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/bfd-plugins/libdep.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/bfd-plugins/libdep.so",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/bfd-plugins/libdep.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/bfd-plugins/libdep.so",
+                    "seconds": 0.09750652313232422,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/bfd-plugins/libdep.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/bfd-plugins/libdep.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/bfd-plugins/libdep.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/bfd-plugins/libdep.so",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/bfd-plugins/libdep.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/bfd-plugins/libdep.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/bfd-plugins/libdep.so-abi-laboratory-libdep-so-libdep-so.html\nERROR: missed debug-info file libdep.so-2.37-27.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to libdep.so-2.37-27.fc36.x86_64.debug (gnu_debuglink)\n",
-                    "return_code": 10,
-                    "seconds": 0.08519434928894043,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/bfd-plugins/libdep.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/bfd-plugins/libdep.so libdep-so-libdep-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/bfd-plugins/libdep.so-abi-laboratory-libdep-so-libdep-so.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/bfd-plugins/libdep.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/bfd-plugins/libdep.so",
-                    "prediction": false,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/bfd-plugins/libdep.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/bfd-plugins/libdep.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/bfd-plugins/libdep.so-abi-laboratory-libdep-so-libdep-so.html\nFound link to libdep.so-2.37-27.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdep.so-2.37-27.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/bfd-plugins/../../../.dwz/binutils-2.37-27.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-iBD5r.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdep.so-2.37-27.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdep.so-2.37-27.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/bfd-plugins/../../../.dwz/binutils-2.37-27.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-6D7bq.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/bfd-plugins/libdep.so-abi-laboratory-libdep-so-libdep-so.html\n",
+                    "return_code": 0,
+                    "seconds": 181.51698327064514,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/bfd-plugins/libdep.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/bfd-plugins/libdep.so libdep-so-libdep-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/bfd-plugins/libdep.so-abi-laboratory-libdep-so-libdep-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/bfd-plugins/libdep.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/bfd-plugins/libdep.so",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/bfd-plugins/libdep.so": 15312,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/bfd-plugins/libdep.so": 15312
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/bfd-plugins/libdep.so": 15312,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/bfd-plugins/libdep.so": 15312
             }
         },
         "experiment": "libdep-fedora-libs-35-fedora-libs-36",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/bfd-plugins/libdep.so",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/bfd-plugins/libdep.so",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/bfd-plugins/libdep.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/bfd-plugins/libdep.so",
         "different_libs": true
     }
 ]

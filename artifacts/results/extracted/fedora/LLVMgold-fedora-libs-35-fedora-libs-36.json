@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/LLVMgold.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/LLVMgold.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so"
         ],
         "paths": {},
         "predictions": {
@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.1975250244140625e-05
+                    "seconds": 5.888938903808594e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,45 +27,45 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.4373016357421875e-06
+                    "seconds": 2.1457672119140625e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.008861064910888672,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/LLVMgold.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/LLVMgold.so",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/LLVMgold.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/LLVMgold.so",
+                    "seconds": 2.21476674079895,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/LLVMgold.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/LLVMgold.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/LLVMgold.so-abi-laboratory-LLVMgold-so-LLVMgold-so.html\nERROR: missed debug-info file LLVMgold.so-14.0.5-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\nFound link to LLVMgold.so-14.0.5-1.fc36.x86_64.debug (gnu_debuglink)\n",
-                    "return_code": 10,
-                    "seconds": 0.08592438697814941,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/LLVMgold.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/LLVMgold.so LLVMgold-so-LLVMgold-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/LLVMgold.so-abi-laboratory-LLVMgold-so-LLVMgold-so.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/LLVMgold.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/LLVMgold.so",
-                    "prediction": false,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so-abi-laboratory-LLVMgold-so-LLVMgold-so.html\nFound link to LLVMgold.so-14.0.5-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file LLVMgold.so-14.0.5-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/llvm-14.0.5-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nWARNING: a \"Struct\" type with no attributes detected in the DWARF dump (-4201619)\nWARNING: a \"Union\" type with no attributes detected in the DWARF dump (-42531)\nReading v-tables\nlibedit.so.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-HsBcd.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to LLVMgold.so-14.0.5-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file LLVMgold.so-14.0.5-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/llvm-14.0.5-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nWARNING: a \"Struct\" type with no attributes detected in the DWARF dump (-4201619)\nWARNING: a \"Union\" type with no attributes detected in the DWARF dump (-42531)\nReading v-tables\nlibedit.so.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-8vNMx.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so-abi-laboratory-LLVMgold-so-LLVMgold-so.html\n",
+                    "return_code": 0,
+                    "seconds": 58.144524812698364,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so LLVMgold-so-LLVMgold-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so-abi-laboratory-LLVMgold-so-LLVMgold-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/LLVMgold.so": 99256,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/LLVMgold.so": 99256
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so": 99256,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so": 99256
             }
         },
         "experiment": "LLVMgold-fedora-libs-35-fedora-libs-36",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/LLVMgold.so",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/LLVMgold.so",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so",
         "different_libs": true
     }
 ]

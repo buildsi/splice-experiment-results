@@ -3,10 +3,10 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/aspell-0.60/sgml-filter.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/sgml-filter.so"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/aspell-0.60/sgml-filter.so"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/sgml-filter.so"
         ],
         "paths": {},
         "predictions": {
@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.7418136596679688e-05
+                    "seconds": 2.7179718017578125e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,45 +27,45 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.0013580322265625e-05
+                    "seconds": 1.4543533325195312e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.0070285797119140625,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 first/debug --debug-info-dir2 second/debug /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/aspell-0.60/sgml-filter.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/aspell-0.60/sgml-filter.so",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/aspell-0.60/sgml-filter.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/aspell-0.60/sgml-filter.so",
+                    "seconds": 0.12804913520812988,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/sgml-filter.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/sgml-filter.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/sgml-filter.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/sgml-filter.so",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/aspell-0.60/sgml-filter.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/aspell-0.60/sgml-filter.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/aspell-0.60/sgml-filter.so-abi-laboratory-sgml-filter-so-sgml-filter-so.html\nERROR: missed debug-info file sgml-filter.so-0.60.8-9.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nFound link to sgml-filter.so-0.60.8-9.fc36.x86_64.debug (gnu_debuglink)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nERROR: can't find debug info in object(s)\n",
-                    "return_code": 10,
-                    "seconds": 0.08884572982788086,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/lib64/aspell-0.60/sgml-filter.so /__w/splice-experiment-runs/splice-experiment-runs/second/lib64/aspell-0.60/sgml-filter.so sgml-filter-so-sgml-filter-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/aspell-0.60/sgml-filter.so-abi-laboratory-sgml-filter-so-sgml-filter-so.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/aspell-0.60/sgml-filter.so",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/aspell-0.60/sgml-filter.so",
-                    "prediction": false,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/sgml-filter.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/sgml-filter.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/sgml-filter.so-abi-laboratory-sgml-filter-so-sgml-filter-so.html\nFound link to sgml-filter.so-0.60.8-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file sgml-filter.so-0.60.8-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/aspell-0.60/../../../.dwz/aspell-0.60.8-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-69310.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to sgml-filter.so-0.60.8-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file sgml-filter.so-0.60.8-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/aspell-0.60/../../../.dwz/aspell-0.60.8-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-iufUi.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/sgml-filter.so-abi-laboratory-sgml-filter-so-sgml-filter-so.html\n",
+                    "return_code": 0,
+                    "seconds": 1.394460916519165,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/sgml-filter.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/sgml-filter.so sgml-filter-so-sgml-filter-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/sgml-filter.so-abi-laboratory-sgml-filter-so-sgml-filter-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/sgml-filter.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/sgml-filter.so",
+                    "prediction": true,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/aspell-0.60/sgml-filter.so": 28088,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/aspell-0.60/sgml-filter.so": 28088
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/sgml-filter.so": 28088,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/sgml-filter.so": 28088
             }
         },
         "experiment": "sgml-filter-fedora-libs-34-fedora-libs-37",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/lib64/aspell-0.60/sgml-filter.so",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/lib64/aspell-0.60/sgml-filter.so",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/sgml-filter.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/sgml-filter.so",
         "different_libs": true
     }
 ]
