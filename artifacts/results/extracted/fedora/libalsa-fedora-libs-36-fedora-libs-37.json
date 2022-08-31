@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.5272369384765625e-05
+                    "seconds": 0.0004665851593017578
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.1444091796875e-05
+                    "seconds": 0.00030732154846191406
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.021780014038085938,
+                    "seconds": 0.0198824405670166,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/libalsa.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ao/plugins-4/libalsa.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ao/plugins-4/libalsa.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/libalsa.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/libalsa.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ao/plugins-4/libalsa.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/libalsa.so-abi-laboratory-libalsa-so-libalsa-so.html\nFound link to libalsa.so-1.2.0-22.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libalsa.so-1.2.0-22.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ao/plugins-4/../../../../.dwz/libao-1.2.0-22.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ICTJL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libalsa.so-1.2.0-22.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libalsa.so-1.2.0-22.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ao/plugins-4/../../../../.dwz/libao-1.2.0-22.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-3ncUO.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/libalsa.so-abi-laboratory-libalsa-so-libalsa-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/libalsa.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ao/plugins-4/libalsa.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/libalsa.so-abi-laboratory-libalsa-so-libalsa-so.html\nFound link to libalsa.so-1.2.0-22.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libalsa.so-1.2.0-22.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ao/plugins-4/../../../../.dwz/libao-1.2.0-22.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-p2WKp.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libalsa.so-1.2.0-22.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libalsa.so-1.2.0-22.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ao/plugins-4/../../../../.dwz/libao-1.2.0-22.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-OZusH.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/libalsa.so-abi-laboratory-libalsa-so-libalsa-so.html\n",
                     "return_code": 0,
-                    "seconds": 0.5483667850494385,
+                    "seconds": 0.4857168197631836,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/libalsa.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ao/plugins-4/libalsa.so libalsa-so-libalsa-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/libalsa.so-abi-laboratory-libalsa-so-libalsa-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ao/plugins-4/libalsa.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/libalsa.so",

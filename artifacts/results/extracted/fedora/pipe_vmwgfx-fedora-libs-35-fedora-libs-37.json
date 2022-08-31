@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00010085105895996094
+                    "seconds": 0.0056383609771728516
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.291534423828125e-06
+                    "seconds": 0.004132509231567383
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 5.85826301574707,
+                    "seconds": 7.900453805923462,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_vmwgfx.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_vmwgfx.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_vmwgfx.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_vmwgfx.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_vmwgfx.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_vmwgfx.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_vmwgfx.so-abi-laboratory-pipe_vmwgfx-so-pipe_vmwgfx-so.html\nFound link to pipe_vmwgfx.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pipe_vmwgfx.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gallium-pipe/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-jp0dy.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pipe_vmwgfx.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pipe_vmwgfx.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gallium-pipe/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-jkVQp.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_vmwgfx.so-abi-laboratory-pipe_vmwgfx-so-pipe_vmwgfx-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_vmwgfx.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_vmwgfx.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_vmwgfx.so-abi-laboratory-pipe_vmwgfx-so-pipe_vmwgfx-so.html\nFound link to pipe_vmwgfx.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pipe_vmwgfx.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gallium-pipe/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-9M7z3.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pipe_vmwgfx.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pipe_vmwgfx.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gallium-pipe/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-mmxpF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_vmwgfx.so-abi-laboratory-pipe_vmwgfx-so-pipe_vmwgfx-so.html\n",
                     "return_code": 0,
-                    "seconds": 137.74717926979065,
+                    "seconds": 177.67687249183655,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_vmwgfx.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_vmwgfx.so pipe_vmwgfx-so-pipe_vmwgfx-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_vmwgfx.so-abi-laboratory-pipe_vmwgfx-so-pipe_vmwgfx-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_vmwgfx.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_vmwgfx.so",

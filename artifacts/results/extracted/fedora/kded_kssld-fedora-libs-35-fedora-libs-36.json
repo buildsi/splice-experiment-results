@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.724761962890625e-05
+                    "seconds": 0.002050161361694336
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.270408630371094e-05
+                    "seconds": 0.006417989730834961
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.6448423862457275,
+                    "seconds": 0.6340932846069336,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kded_kssld.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kded_kssld.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kded_kssld.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kded_kssld.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kded_kssld.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kded_kssld.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kded_kssld.so-abi-laboratory-kded_kssld-so-kded_kssld-so.html\nFound link to kded_kssld.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kded_kssld.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 83597\nERROR: incomplete info for symbol 117097\nERROR: incomplete info for symbol 118066\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-xqQEv.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to kded_kssld.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kded_kssld.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 83597\nERROR: incomplete info for symbol 117097\nERROR: incomplete info for symbol 118066\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-6mS5C.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kded_kssld.so-abi-laboratory-kded_kssld-so-kded_kssld-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kded_kssld.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kded_kssld.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kded_kssld.so-abi-laboratory-kded_kssld-so-kded_kssld-so.html\nFound link to kded_kssld.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kded_kssld.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 83597\nERROR: incomplete info for symbol 117097\nERROR: incomplete info for symbol 118066\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-FkkjW.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to kded_kssld.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kded_kssld.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 83597\nERROR: incomplete info for symbol 117097\nERROR: incomplete info for symbol 118066\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-TZTDE.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kded_kssld.so-abi-laboratory-kded_kssld-so-kded_kssld-so.html\n",
                     "return_code": 0,
-                    "seconds": 19.845540761947632,
+                    "seconds": 19.660476684570312,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kded_kssld.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kded_kssld.so kded_kssld-so-kded_kssld-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kded_kssld.so-abi-laboratory-kded_kssld-so-kded_kssld-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kded_kssld.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kded_kssld.so",

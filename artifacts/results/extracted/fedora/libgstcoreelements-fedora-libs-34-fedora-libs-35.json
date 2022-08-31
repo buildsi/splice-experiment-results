@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00011467933654785156
+                    "seconds": 0.005003452301025391
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.0067901611328125e-06
+                    "seconds": 0.004196643829345703
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.10105037689208984,
+                    "seconds": 0.0973367691040039,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstcoreelements.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstcoreelements.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstcoreelements.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstcoreelements.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstcoreelements.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstcoreelements.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstcoreelements.so-abi-laboratory-libgstcoreelements-so-libgstcoreelements-so.html\nFound link to libgstcoreelements.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgstcoreelements.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gstreamer-1.0/../../../.dwz/gstreamer1-1.20.3-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Mkfqp.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgstcoreelements.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgstcoreelements.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gstreamer-1.0/../../../.dwz/gstreamer1-1.20.3-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-O5NkF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstcoreelements.so-abi-laboratory-libgstcoreelements-so-libgstcoreelements-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstcoreelements.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstcoreelements.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstcoreelements.so-abi-laboratory-libgstcoreelements-so-libgstcoreelements-so.html\nFound link to libgstcoreelements.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgstcoreelements.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gstreamer-1.0/../../../.dwz/gstreamer1-1.20.3-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-vkjtr.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgstcoreelements.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgstcoreelements.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gstreamer-1.0/../../../.dwz/gstreamer1-1.20.3-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-YcmlH.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstcoreelements.so-abi-laboratory-libgstcoreelements-so-libgstcoreelements-so.html\n",
                     "return_code": 0,
-                    "seconds": 2.5590157508850098,
+                    "seconds": 2.329848527908325,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstcoreelements.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstcoreelements.so libgstcoreelements-so-libgstcoreelements-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstcoreelements.so-abi-laboratory-libgstcoreelements-so-libgstcoreelements-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstcoreelements.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstcoreelements.so",

@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.459785461425781e-05
+                    "seconds": 0.0012137889862060547
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.24249267578125e-05
+                    "seconds": 0.001268148422241211
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.06439208984375,
+                    "seconds": 0.08774662017822266,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so-abi-laboratory-libjsound-so-libjsound-so.html\nFound link to libjsound.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjsound.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/../../../../../.dwz/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-G1VlG.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libjsound.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjsound.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/../../../../../.dwz/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Osyvm.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so-abi-laboratory-libjsound-so-libjsound-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so-abi-laboratory-libjsound-so-libjsound-so.html\nFound link to libjsound.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjsound.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/../../../../../.dwz/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-e1Aw6.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libjsound.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjsound.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/../../../../../.dwz/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-wxOcL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so-abi-laboratory-libjsound-so-libjsound-so.html\n",
                     "return_code": 0,
-                    "seconds": 5.319280385971069,
+                    "seconds": 6.996884822845459,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so libjsound-so-libjsound-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so-abi-laboratory-libjsound-so-libjsound-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsound.so",

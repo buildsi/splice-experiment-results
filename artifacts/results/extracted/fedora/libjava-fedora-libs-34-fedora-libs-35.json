@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0001366138458251953
+                    "seconds": 0.002619028091430664
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00045680999755859375
+                    "seconds": 0.002533435821533203
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.11557888984680176,
+                    "seconds": 0.11302065849304199,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so-abi-laboratory-libjava-so-libjava-so.html\nFound link to libjava.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjava.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/../../../../../.dwz/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-DRDgw.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libjava.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjava.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/../../../../../.dwz/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-71Vcq.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so-abi-laboratory-libjava-so-libjava-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so-abi-laboratory-libjava-so-libjava-so.html\nFound link to libjava.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjava.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/../../../../../.dwz/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-mPdYF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libjava.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjava.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/../../../../../.dwz/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-BM8jZ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so-abi-laboratory-libjava-so-libjava-so.html\n",
                     "return_code": 0,
-                    "seconds": 6.405293703079224,
+                    "seconds": 6.184587478637695,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so libjava-so-libjava-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so-abi-laboratory-libjava-so-libjava-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjava.so",

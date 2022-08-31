@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0001552104949951172
+                    "seconds": 0.009558916091918945
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.821487426757812e-06
+                    "seconds": 0.009197473526000977
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 28.938292026519775,
+                    "seconds": 40.36183714866638,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/nouveau_drv_video.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/nouveau_drv_video.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/nouveau_drv_video.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/nouveau_drv_video.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/nouveau_drv_video.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/nouveau_drv_video.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/nouveau_drv_video.so-abi-laboratory-nouveau_drv_video-so-nouveau_drv_video-so.html\nFound link to nouveau_drv_video.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file nouveau_drv_video.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dri/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibdrm.so.2: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-HjcgU.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to nouveau_drv_video.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file nouveau_drv_video.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dri/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibdrm.so.2: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-5dhTY.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/nouveau_drv_video.so-abi-laboratory-nouveau_drv_video-so-nouveau_drv_video-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/nouveau_drv_video.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/nouveau_drv_video.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/nouveau_drv_video.so-abi-laboratory-nouveau_drv_video-so-nouveau_drv_video-so.html\nFound link to nouveau_drv_video.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file nouveau_drv_video.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dri/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibdrm.so.2: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-yxiI6.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to nouveau_drv_video.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file nouveau_drv_video.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dri/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibdrm.so.2: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-ggEln.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/nouveau_drv_video.so-abi-laboratory-nouveau_drv_video-so-nouveau_drv_video-so.html\n",
                     "return_code": 0,
-                    "seconds": 240.72143507003784,
+                    "seconds": 307.3128490447998,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/nouveau_drv_video.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/nouveau_drv_video.so nouveau_drv_video-so-nouveau_drv_video-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/nouveau_drv_video.so-abi-laboratory-nouveau_drv_video-so-nouveau_drv_video-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/nouveau_drv_video.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/nouveau_drv_video.so",

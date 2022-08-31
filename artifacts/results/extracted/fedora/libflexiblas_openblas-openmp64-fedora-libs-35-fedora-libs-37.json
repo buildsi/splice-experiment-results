@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.246566772460938e-05
+                    "seconds": 0.002196788787841797
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.9141387939453125e-06
+                    "seconds": 0.002441883087158203
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.0171663761138916,
+                    "seconds": 0.02454686164855957,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so-abi-laboratory-libflexiblas_openblas-openmp64-so-libflexiblas_openblas-openmp64-so.html\nFound link to libflexiblas_openblas-openmp64.so-3.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libflexiblas_openblas-openmp64.so-3.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/flexiblas64/../../../.dwz/flexiblas-3.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-0ETCf.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libflexiblas_openblas-openmp64.so-3.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libflexiblas_openblas-openmp64.so-3.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/flexiblas64/../../../.dwz/flexiblas-3.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-NnRJt.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so-abi-laboratory-libflexiblas_openblas-openmp64-so-libflexiblas_openblas-openmp64-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so-abi-laboratory-libflexiblas_openblas-openmp64-so-libflexiblas_openblas-openmp64-so.html\nFound link to libflexiblas_openblas-openmp64.so-3.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libflexiblas_openblas-openmp64.so-3.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/flexiblas64/../../../.dwz/flexiblas-3.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-XIW1y.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libflexiblas_openblas-openmp64.so-3.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libflexiblas_openblas-openmp64.so-3.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/flexiblas64/../../../.dwz/flexiblas-3.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-ZiR7Q.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so-abi-laboratory-libflexiblas_openblas-openmp64-so-libflexiblas_openblas-openmp64-so.html\n",
                     "return_code": 0,
-                    "seconds": 5.348664045333862,
+                    "seconds": 6.781309604644775,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so libflexiblas_openblas-openmp64-so-libflexiblas_openblas-openmp64-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so-abi-laboratory-libflexiblas_openblas-openmp64-so-libflexiblas_openblas-openmp64-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas64/libflexiblas_openblas-openmp64.so",

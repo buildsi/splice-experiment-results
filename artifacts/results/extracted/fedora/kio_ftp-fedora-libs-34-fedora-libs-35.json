@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00011181831359863281
+                    "seconds": 0.0021681785583496094
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.696846008300781e-05
+                    "seconds": 0.0018134117126464844
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.46428775787353516,
+                    "seconds": 0.4189267158508301,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ftp.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ftp.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ftp.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ftp.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ftp.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ftp.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ftp.so-abi-laboratory-kio_ftp-so-kio_ftp-so.html\nFound link to kio_ftp.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kio_ftp.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-3C739.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to kio_ftp.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kio_ftp.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-TQdEu.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ftp.so-abi-laboratory-kio_ftp-so-kio_ftp-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ftp.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ftp.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ftp.so-abi-laboratory-kio_ftp-so-kio_ftp-so.html\nFound link to kio_ftp.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kio_ftp.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-vnwJN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to kio_ftp.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kio_ftp.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Kr37T.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ftp.so-abi-laboratory-kio_ftp-so-kio_ftp-so.html\n",
                     "return_code": 0,
-                    "seconds": 16.01972532272339,
+                    "seconds": 14.588702201843262,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ftp.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ftp.so kio_ftp-so-kio_ftp-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ftp.so-abi-laboratory-kio_ftp-so-kio_ftp-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ftp.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ftp.so",

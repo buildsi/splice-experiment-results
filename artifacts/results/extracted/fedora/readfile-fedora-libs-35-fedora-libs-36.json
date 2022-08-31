@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.9073486328125e-05
+                    "seconds": 0.00022125244140625
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.198883056640625e-06
+                    "seconds": 0.0001251697540283203
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.026133298873901367,
+                    "seconds": 0.029640674591064453,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/readfile.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/readfile.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/readfile.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/readfile.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/readfile.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/readfile.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/readfile.so-abi-laboratory-readfile-so-readfile-so.html\nFound link to readfile.so-5.1.1-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file readfile.so-5.1.1-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gawk/../../../.dwz/gawk-5.1.1-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ar8CN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to readfile.so-5.1.1-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file readfile.so-5.1.1-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gawk/../../../.dwz/gawk-5.1.1-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-794kR.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/readfile.so-abi-laboratory-readfile-so-readfile-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/readfile.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/readfile.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/readfile.so-abi-laboratory-readfile-so-readfile-so.html\nFound link to readfile.so-5.1.1-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file readfile.so-5.1.1-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gawk/../../../.dwz/gawk-5.1.1-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-XSOMI.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to readfile.so-5.1.1-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file readfile.so-5.1.1-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gawk/../../../.dwz/gawk-5.1.1-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Xmi62.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/readfile.so-abi-laboratory-readfile-so-readfile-so.html\n",
                     "return_code": 0,
-                    "seconds": 0.6159896850585938,
+                    "seconds": 0.6295952796936035,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/readfile.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/readfile.so readfile-so-readfile-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/readfile.so-abi-laboratory-readfile-so-readfile-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gawk/readfile.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gawk/readfile.so",

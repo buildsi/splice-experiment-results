@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.24249267578125e-05
+                    "seconds": 0.0004286766052246094
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.3828277587890625e-05
+                    "seconds": 0.0018274784088134766
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.07716679573059082,
+                    "seconds": 0.04400515556335449,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so-abi-laboratory-liblcms-so-liblcms-so.html\nFound link to liblcms.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file liblcms.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/../../../../../.dwz/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-rluOS.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to liblcms.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file liblcms.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/../../../../../.dwz/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-8dad1.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so-abi-laboratory-liblcms-so-liblcms-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so-abi-laboratory-liblcms-so-liblcms-so.html\nFound link to liblcms.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file liblcms.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/../../../../../.dwz/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-gAiHd.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to liblcms.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file liblcms.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/../../../../../.dwz/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-5cKmR.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so-abi-laboratory-liblcms-so-liblcms-so.html\n",
                     "return_code": 0,
-                    "seconds": 6.984900236129761,
+                    "seconds": 4.676732778549194,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so liblcms-so-liblcms-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so-abi-laboratory-liblcms-so-liblcms-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/liblcms.so",
