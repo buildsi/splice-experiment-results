@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdb5.so.10.0",
+                    "spliced_lib": "libkdb5.so.10.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.1021575927734375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdb5.so.10.0",
+                    "spliced_lib": "libkdb5.so.10.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.322166442871094e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.08140897750854492,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0-abi-laboratory-libkdb5-so-10-0-libkdb5-so-10-0.html\nFound link to libkdb5.so.10.0-1.19.2-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdb5.so.10.0-1.19.2-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/krb5-1.19.2-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 10743\nERROR: incomplete info for symbol 11684\nERROR: incomplete info for symbol 12531\nERROR: incomplete info for symbol 13887\nERROR: incomplete info for symbol 14304\nERROR: incomplete info for symbol 18763\nERROR: incomplete info for symbol 45437\nERROR: incomplete info for symbol 46301\nERROR: incomplete info for symbol 48802\nERROR: incomplete info for symbol 48964\nERROR: incomplete info for symbol 49113\nERROR: incomplete info for symbol 49277\nERROR: incomplete info for symbol 49717\nERROR: incomplete info for symbol 50011\nERROR: incomplete info for symbol 50187\nERROR: incomplete info for symbol 50608\nERROR: incomplete info for symbol 53289\nERROR: incomplete info for symbol 54509\nERROR: incomplete info for symbol 56697\nERROR: incomplete info for symbol 57342\nERROR: incomplete info for symbol 57508\nERROR: incomplete info for symbol 57747\nERROR: incomplete info for symbol 58067\nERROR: incomplete info for symbol 58438\nERROR: incomplete info for symbol 58558\nERROR: incomplete info for symbol 59550\nERROR: incomplete info for symbol 59634\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-4INcp.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkdb5.so.10.0-1.19.2-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdb5.so.10.0-1.19.2-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/krb5-1.19.2-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 10743\nERROR: incomplete info for symbol 11684\nERROR: incomplete info for symbol 12531\nERROR: incomplete info for symbol 13887\nERROR: incomplete info for symbol 14304\nERROR: incomplete info for symbol 18763\nERROR: incomplete info for symbol 45437\nERROR: incomplete info for symbol 46301\nERROR: incomplete info for symbol 48802\nERROR: incomplete info for symbol 48964\nERROR: incomplete info for symbol 49113\nERROR: incomplete info for symbol 49277\nERROR: incomplete info for symbol 49717\nERROR: incomplete info for symbol 50011\nERROR: incomplete info for symbol 50187\nERROR: incomplete info for symbol 50608\nERROR: incomplete info for symbol 53289\nERROR: incomplete info for symbol 54509\nERROR: incomplete info for symbol 56697\nERROR: incomplete info for symbol 57342\nERROR: incomplete info for symbol 57508\nERROR: incomplete info for symbol 57747\nERROR: incomplete info for symbol 58067\nERROR: incomplete info for symbol 58438\nERROR: incomplete info for symbol 58558\nERROR: incomplete info for symbol 59550\nERROR: incomplete info for symbol 59634\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-fbVUK.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0-abi-laboratory-libkdb5-so-10-0-libkdb5-so-10-0.html\n",
+                    "return_code": 0,
+                    "seconds": 2.124907970428467,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0 libkdb5-so-10-0-libkdb5-so-10-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0-abi-laboratory-libkdb5-so-10-0-libkdb5-so-10-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0": 91632,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0": 91632
+            }
+        },
+        "experiment": "libkdb5-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0",
+        "different_libs": true
+    }
+]

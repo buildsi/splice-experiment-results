@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kio_http_cache_cleaner.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kio_http_cache_cleaner.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdeinit_kio_http_cache_cleaner.so",
+                    "spliced_lib": "libkdeinit_kio_http_cache_cleaner.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.698204040527344e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdeinit_kio_http_cache_cleaner.so",
+                    "spliced_lib": "libkdeinit_kio_http_cache_cleaner.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.936622619628906e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.4936206340789795,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kio_http_cache_cleaner.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kio_http_cache_cleaner.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kio_http_cache_cleaner.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kio_http_cache_cleaner.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kio_http_cache_cleaner.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kio_http_cache_cleaner.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kio_http_cache_cleaner.so-abi-laboratory-libkdeinit_kio_http_cache_cleaner-so-libkdeinit_kio_http_cache_cleaner-so.html\nFound link to libkdeinit_kio_http_cache_cleaner.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdeinit_kio_http_cache_cleaner.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-yxToR.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkdeinit_kio_http_cache_cleaner.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdeinit_kio_http_cache_cleaner.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-CnHe2.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kio_http_cache_cleaner.so-abi-laboratory-libkdeinit_kio_http_cache_cleaner-so-libkdeinit_kio_http_cache_cleaner-so.html\n",
+                    "return_code": 0,
+                    "seconds": 17.758578777313232,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kio_http_cache_cleaner.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kio_http_cache_cleaner.so libkdeinit_kio_http_cache_cleaner-so-libkdeinit_kio_http_cache_cleaner-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kio_http_cache_cleaner.so-abi-laboratory-libkdeinit_kio_http_cache_cleaner-so-libkdeinit_kio_http_cache_cleaner-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kio_http_cache_cleaner.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kio_http_cache_cleaner.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kio_http_cache_cleaner.so": 36608,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kio_http_cache_cleaner.so": 36608
+            }
+        },
+        "experiment": "libkdeinit_kio_http_cache_cleaner-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kio_http_cache_cleaner.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kio_http_cache_cleaner.so",
+        "different_libs": true
+    }
+]

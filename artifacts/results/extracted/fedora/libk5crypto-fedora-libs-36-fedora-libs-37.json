@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libk5crypto.so.3.1",
+                    "spliced_lib": "libk5crypto.so.3.1",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.653236389160156e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libk5crypto.so.3.1",
+                    "spliced_lib": "libk5crypto.so.3.1",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00010704994201660156
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.07325553894042969,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1-abi-laboratory-libk5crypto-so-3-1-libk5crypto-so-3-1.html\nFound link to libk5crypto.so.3.1-1.19.2-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libk5crypto.so.3.1-1.19.2-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/krb5-1.19.2-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 14207\nERROR: incomplete info for symbol 15439\nERROR: incomplete info for symbol 21707\nERROR: incomplete info for symbol 29713\nERROR: incomplete info for symbol 29855\nERROR: incomplete info for symbol 29997\nERROR: incomplete info for symbol 30167\nERROR: incomplete info for symbol 32201\nERROR: incomplete info for symbol 32489\nERROR: incomplete info for symbol 32655\nERROR: incomplete info for symbol 32969\nERROR: incomplete info for symbol 34040\nERROR: incomplete info for symbol 34957\nERROR: incomplete info for symbol 36619\nERROR: incomplete info for symbol 37151\nERROR: incomplete info for symbol 37361\nERROR: incomplete info for symbol 37637\nERROR: incomplete info for symbol 37723\nERROR: incomplete info for symbol 37840\nERROR: incomplete info for symbol 37957\nERROR: incomplete info for symbol 38184\nERROR: incomplete info for symbol 38367\nERROR: incomplete info for symbol 38532\nERROR: incomplete info for symbol 38851\nERROR: incomplete info for symbol 38980\nERROR: incomplete info for symbol 39039\nERROR: incomplete info for symbol 39098\nERROR: incomplete info for symbol 39341\nERROR: incomplete info for symbol 39547\nERROR: incomplete info for symbol 39852\nERROR: incomplete info for symbol 39962\nERROR: incomplete info for symbol 40146\nERROR: incomplete info for symbol 40335\nERROR: incomplete info for symbol 40573\nERROR: incomplete info for symbol 40811\nERROR: incomplete info for symbol 41049\nERROR: incomplete info for symbol 41287\nERROR: incomplete info for symbol 41462\nERROR: incomplete info for symbol 43416\nERROR: incomplete info for symbol 44000\nERROR: incomplete info for symbol 44116\nERROR: incomplete info for symbol 44538\nERROR: incomplete info for symbol 44619\nERROR: incomplete info for symbol 44757\nERROR: incomplete info for symbol 44899\nERROR: incomplete info for symbol 45655\nERROR: incomplete info for symbol 45893\nERROR: incomplete info for symbol 46821\nERROR: incomplete info for symbol 47059\nERROR: incomplete info for symbol 47359\nERROR: incomplete info for symbol 47640\nERROR: incomplete info for symbol 47877\nERROR: incomplete info for symbol 47949\nERROR: incomplete info for symbol 48008\nERROR: incomplete info for symbol 48080\nERROR: incomplete info for symbol 48139\nERROR: incomplete info for symbol 48211\nERROR: incomplete info for symbol 48319\nERROR: incomplete info for symbol 48422\nERROR: incomplete info for symbol 48853\nERROR: incomplete info for symbol 49226\nERROR: incomplete info for symbol 49295\nERROR: incomplete info for symbol 49364\nERROR: incomplete info for symbol 49433\nERROR: incomplete info for symbol 49681\nERROR: incomplete info for symbol 50011\nERROR: incomplete info for symbol 50208\nERROR: incomplete info for symbol 51283\nERROR: incomplete info for symbol 51926\nERROR: incomplete info for symbol 53096\nERROR: incomplete info for symbol 53168\nERROR: incomplete info for symbol 53262\nERROR: incomplete info for symbol 53384\nERROR: incomplete info for symbol 55187\nERROR: incomplete info for symbol 56246\nERROR: incomplete info for symbol 56428\nERROR: incomplete info for symbol 56500\nERROR: incomplete info for symbol 57351\nERROR: incomplete info for symbol 67058\nERROR: incomplete info for symbol 67242\nERROR: incomplete info for symbol 67384\nERROR: incomplete info for symbol 67562\nERROR: incomplete info for symbol 67983\nERROR: incomplete info for symbol 68137\nERROR: incomplete info for symbol 68279\nERROR: incomplete info for symbol 68370\nERROR: incomplete info for symbol 68439\nERROR: incomplete info for symbol 68951\nERROR: incomplete info for symbol 69189\nERROR: incomplete info for symbol 69437\nERROR: incomplete info for symbol 70365\nERROR: incomplete info for symbol 70611\nERROR: incomplete info for symbol 75473\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-CuCh1.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libk5crypto.so.3.1-1.19.2-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libk5crypto.so.3.1-1.19.2-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/krb5-1.19.2-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 14207\nERROR: incomplete info for symbol 15439\nERROR: incomplete info for symbol 21707\nERROR: incomplete info for symbol 29713\nERROR: incomplete info for symbol 29855\nERROR: incomplete info for symbol 29997\nERROR: incomplete info for symbol 30167\nERROR: incomplete info for symbol 32201\nERROR: incomplete info for symbol 32489\nERROR: incomplete info for symbol 32655\nERROR: incomplete info for symbol 32969\nERROR: incomplete info for symbol 34040\nERROR: incomplete info for symbol 34957\nERROR: incomplete info for symbol 36619\nERROR: incomplete info for symbol 37151\nERROR: incomplete info for symbol 37361\nERROR: incomplete info for symbol 37637\nERROR: incomplete info for symbol 37723\nERROR: incomplete info for symbol 37840\nERROR: incomplete info for symbol 37957\nERROR: incomplete info for symbol 38184\nERROR: incomplete info for symbol 38367\nERROR: incomplete info for symbol 38532\nERROR: incomplete info for symbol 38851\nERROR: incomplete info for symbol 38980\nERROR: incomplete info for symbol 39039\nERROR: incomplete info for symbol 39098\nERROR: incomplete info for symbol 39341\nERROR: incomplete info for symbol 39547\nERROR: incomplete info for symbol 39852\nERROR: incomplete info for symbol 39962\nERROR: incomplete info for symbol 40146\nERROR: incomplete info for symbol 40335\nERROR: incomplete info for symbol 40573\nERROR: incomplete info for symbol 40811\nERROR: incomplete info for symbol 41049\nERROR: incomplete info for symbol 41287\nERROR: incomplete info for symbol 41462\nERROR: incomplete info for symbol 43416\nERROR: incomplete info for symbol 44000\nERROR: incomplete info for symbol 44116\nERROR: incomplete info for symbol 44538\nERROR: incomplete info for symbol 44619\nERROR: incomplete info for symbol 44757\nERROR: incomplete info for symbol 44899\nERROR: incomplete info for symbol 45655\nERROR: incomplete info for symbol 45893\nERROR: incomplete info for symbol 46821\nERROR: incomplete info for symbol 47059\nERROR: incomplete info for symbol 47359\nERROR: incomplete info for symbol 47640\nERROR: incomplete info for symbol 47877\nERROR: incomplete info for symbol 47949\nERROR: incomplete info for symbol 48008\nERROR: incomplete info for symbol 48080\nERROR: incomplete info for symbol 48139\nERROR: incomplete info for symbol 48211\nERROR: incomplete info for symbol 48319\nERROR: incomplete info for symbol 48422\nERROR: incomplete info for symbol 48853\nERROR: incomplete info for symbol 49226\nERROR: incomplete info for symbol 49295\nERROR: incomplete info for symbol 49364\nERROR: incomplete info for symbol 49433\nERROR: incomplete info for symbol 49681\nERROR: incomplete info for symbol 50011\nERROR: incomplete info for symbol 50208\nERROR: incomplete info for symbol 51283\nERROR: incomplete info for symbol 51926\nERROR: incomplete info for symbol 53096\nERROR: incomplete info for symbol 53168\nERROR: incomplete info for symbol 53262\nERROR: incomplete info for symbol 53384\nERROR: incomplete info for symbol 55187\nERROR: incomplete info for symbol 56246\nERROR: incomplete info for symbol 56428\nERROR: incomplete info for symbol 56500\nERROR: incomplete info for symbol 57351\nERROR: incomplete info for symbol 67058\nERROR: incomplete info for symbol 67242\nERROR: incomplete info for symbol 67384\nERROR: incomplete info for symbol 67562\nERROR: incomplete info for symbol 67983\nERROR: incomplete info for symbol 68137\nERROR: incomplete info for symbol 68279\nERROR: incomplete info for symbol 68370\nERROR: incomplete info for symbol 68439\nERROR: incomplete info for symbol 68951\nERROR: incomplete info for symbol 69189\nERROR: incomplete info for symbol 69437\nERROR: incomplete info for symbol 70365\nERROR: incomplete info for symbol 70611\nERROR: incomplete info for symbol 75473\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-HU9xT.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1-abi-laboratory-libk5crypto-so-3-1-libk5crypto-so-3-1.html\n",
+                    "return_code": 0,
+                    "seconds": 2.2589218616485596,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1 libk5crypto-so-3-1-libk5crypto-so-3-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1-abi-laboratory-libk5crypto-so-3-1-libk5crypto-so-3-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1": 99872,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1": 99872
+            }
+        },
+        "experiment": "libk5crypto-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1",
+        "different_libs": true
+    }
+]

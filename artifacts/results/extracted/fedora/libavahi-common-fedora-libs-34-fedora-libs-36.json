@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libavahi-common.so.3.5.4"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libavahi-common.so.3.5.4"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libavahi-common.so.3.5.4",
+                    "spliced_lib": "libavahi-common.so.3.5.4",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.078315734863281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libavahi-common.so.3.5.4",
+                    "spliced_lib": "libavahi-common.so.3.5.4",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.298324584960938e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.03341174125671387,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libavahi-common.so.3.5.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libavahi-common.so.3.5.4",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libavahi-common.so.3.5.4",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libavahi-common.so.3.5.4",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libavahi-common.so.3.5.4\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libavahi-common.so.3.5.4\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libavahi-common.so.3.5.4-abi-laboratory-libavahi-common-so-3-5-4-libavahi-common-so-3-5-4.html\nFound link to libavahi-common.so.3.5.4-0.8-15.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libavahi-common.so.3.5.4-0.8-15.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/avahi-0.8-15.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5527\nERROR: incomplete info for symbol 5822\nERROR: incomplete info for symbol 6376\nERROR: incomplete info for symbol 6511\nERROR: incomplete info for symbol 6810\nERROR: incomplete info for symbol 7115\nERROR: incomplete info for symbol 7250\nERROR: incomplete info for symbol 7385\nERROR: incomplete info for symbol 7461\nERROR: incomplete info for symbol 7771\nERROR: incomplete info for symbol 7975\nERROR: incomplete info for symbol 8031\nERROR: incomplete info for symbol 8423\nERROR: incomplete info for symbol 8481\nERROR: incomplete info for symbol 8729\nERROR: incomplete info for symbol 9010\nERROR: incomplete info for symbol 9080\nERROR: incomplete info for symbol 9143\nERROR: incomplete info for symbol 9220\nERROR: incomplete info for symbol 9336\nERROR: incomplete info for symbol 9392\nERROR: incomplete info for symbol 9504\nERROR: incomplete info for symbol 9709\nERROR: incomplete info for symbol 9754\nERROR: incomplete info for symbol 10182\nERROR: incomplete info for symbol 10354\nERROR: incomplete info for symbol 10576\nERROR: incomplete info for symbol 10808\nERROR: incomplete info for symbol 11217\nERROR: incomplete info for symbol 11525\nERROR: incomplete info for symbol 11662\nERROR: incomplete info for symbol 11799\nERROR: incomplete info for symbol 11936\nERROR: incomplete info for symbol 12140\nERROR: incomplete info for symbol 12527\nERROR: incomplete info for symbol 12687\nERROR: incomplete info for symbol 13104\nERROR: incomplete info for symbol 13309\nERROR: incomplete info for symbol 13481\nERROR: incomplete info for symbol 13701\nERROR: incomplete info for symbol 14131\nERROR: incomplete info for symbol 16169\nERROR: incomplete info for symbol 16715\nERROR: incomplete info for symbol 17681\nERROR: incomplete info for symbol 17903\nERROR: incomplete info for symbol 18290\nERROR: incomplete info for symbol 18474\nERROR: incomplete info for symbol 18632\nERROR: incomplete info for symbol 18769\nERROR: incomplete info for symbol 19182\nERROR: incomplete info for symbol 19752\nERROR: incomplete info for symbol 19898\nERROR: incomplete info for symbol 20145\nERROR: incomplete info for symbol 20402\nERROR: incomplete info for symbol 20656\nERROR: incomplete info for symbol 20875\nERROR: incomplete info for symbol 21106\nERROR: incomplete info for symbol 21337\nERROR: incomplete info for symbol 21503\nERROR: incomplete info for symbol 21683\nERROR: incomplete info for symbol 21919\nERROR: incomplete info for symbol 22213\nERROR: incomplete info for symbol 23006\nERROR: incomplete info for symbol 23339\nERROR: incomplete info for symbol 23729\nERROR: incomplete info for symbol 23949\nERROR: incomplete info for symbol 24391\nERROR: incomplete info for symbol 24602\nERROR: incomplete info for symbol 24902\nERROR: incomplete info for symbol 25332\nERROR: incomplete info for symbol 25493\nERROR: incomplete info for symbol 25699\nERROR: incomplete info for symbol 26297\nERROR: incomplete info for symbol 26481\nERROR: incomplete info for symbol 27225\nERROR: incomplete info for symbol 27477\nERROR: incomplete info for symbol 28386\nERROR: incomplete info for symbol 28845\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-wmrjy.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libavahi-common.so.3.5.4-0.8-15.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libavahi-common.so.3.5.4-0.8-15.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/avahi-0.8-15.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5527\nERROR: incomplete info for symbol 5822\nERROR: incomplete info for symbol 6376\nERROR: incomplete info for symbol 6511\nERROR: incomplete info for symbol 6810\nERROR: incomplete info for symbol 7115\nERROR: incomplete info for symbol 7250\nERROR: incomplete info for symbol 7385\nERROR: incomplete info for symbol 7461\nERROR: incomplete info for symbol 7771\nERROR: incomplete info for symbol 7975\nERROR: incomplete info for symbol 8031\nERROR: incomplete info for symbol 8423\nERROR: incomplete info for symbol 8481\nERROR: incomplete info for symbol 8729\nERROR: incomplete info for symbol 9010\nERROR: incomplete info for symbol 9080\nERROR: incomplete info for symbol 9143\nERROR: incomplete info for symbol 9220\nERROR: incomplete info for symbol 9336\nERROR: incomplete info for symbol 9392\nERROR: incomplete info for symbol 9504\nERROR: incomplete info for symbol 9709\nERROR: incomplete info for symbol 9754\nERROR: incomplete info for symbol 10182\nERROR: incomplete info for symbol 10354\nERROR: incomplete info for symbol 10576\nERROR: incomplete info for symbol 10808\nERROR: incomplete info for symbol 11217\nERROR: incomplete info for symbol 11525\nERROR: incomplete info for symbol 11662\nERROR: incomplete info for symbol 11799\nERROR: incomplete info for symbol 11936\nERROR: incomplete info for symbol 12140\nERROR: incomplete info for symbol 12527\nERROR: incomplete info for symbol 12687\nERROR: incomplete info for symbol 13104\nERROR: incomplete info for symbol 13309\nERROR: incomplete info for symbol 13481\nERROR: incomplete info for symbol 13701\nERROR: incomplete info for symbol 14131\nERROR: incomplete info for symbol 16169\nERROR: incomplete info for symbol 16715\nERROR: incomplete info for symbol 17681\nERROR: incomplete info for symbol 17903\nERROR: incomplete info for symbol 18290\nERROR: incomplete info for symbol 18474\nERROR: incomplete info for symbol 18632\nERROR: incomplete info for symbol 18769\nERROR: incomplete info for symbol 19182\nERROR: incomplete info for symbol 19752\nERROR: incomplete info for symbol 19898\nERROR: incomplete info for symbol 20145\nERROR: incomplete info for symbol 20402\nERROR: incomplete info for symbol 20656\nERROR: incomplete info for symbol 20875\nERROR: incomplete info for symbol 21106\nERROR: incomplete info for symbol 21337\nERROR: incomplete info for symbol 21503\nERROR: incomplete info for symbol 21683\nERROR: incomplete info for symbol 21919\nERROR: incomplete info for symbol 22213\nERROR: incomplete info for symbol 23006\nERROR: incomplete info for symbol 23339\nERROR: incomplete info for symbol 23729\nERROR: incomplete info for symbol 23949\nERROR: incomplete info for symbol 24391\nERROR: incomplete info for symbol 24602\nERROR: incomplete info for symbol 24902\nERROR: incomplete info for symbol 25332\nERROR: incomplete info for symbol 25493\nERROR: incomplete info for symbol 25699\nERROR: incomplete info for symbol 26297\nERROR: incomplete info for symbol 26481\nERROR: incomplete info for symbol 27225\nERROR: incomplete info for symbol 27477\nERROR: incomplete info for symbol 28386\nERROR: incomplete info for symbol 28845\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-2yr13.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libavahi-common.so.3.5.4-abi-laboratory-libavahi-common-so-3-5-4-libavahi-common-so-3-5-4.html\n",
+                    "return_code": 0,
+                    "seconds": 0.9731779098510742,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libavahi-common.so.3.5.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libavahi-common.so.3.5.4 libavahi-common-so-3-5-4-libavahi-common-so-3-5-4 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libavahi-common.so.3.5.4-abi-laboratory-libavahi-common-so-3-5-4-libavahi-common-so-3-5-4.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libavahi-common.so.3.5.4",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libavahi-common.so.3.5.4",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libavahi-common.so.3.5.4": 53848,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libavahi-common.so.3.5.4": 53848
+            }
+        },
+        "experiment": "libavahi-common-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libavahi-common.so.3.5.4",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libavahi-common.so.3.5.4",
+        "different_libs": true
+    }
+]
