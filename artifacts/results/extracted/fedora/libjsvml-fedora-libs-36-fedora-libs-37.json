@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0007915496826171875
+                    "seconds": 0.0001246929168701172
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0012753009796142578
+                    "seconds": 0.001352548599243164
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.010008811950683594,
+                    "seconds": 0.013457059860229492,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so-abi-laboratory-libjsvml-so-libjsvml-so.html\nFound link to libjsvml.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjsvml.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-dqpR9.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libjsvml.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjsvml.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-y77a2.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nERROR: no symbols info in the ABI dump\nPreparing, please wait ...\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so-abi-laboratory-libjsvml-so-libjsvml-so.html\nFound link to libjsvml.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjsvml.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-MGhPb.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libjsvml.so-17.0.4.0.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjsvml.so-17.0.4.0.8-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-7qkzJ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nERROR: no symbols info in the ABI dump\nPreparing, please wait ...\n",
                     "return_code": 7,
-                    "seconds": 0.5000789165496826,
+                    "seconds": 0.5904326438903809,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so libjsvml-so-libjsvml-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so-abi-laboratory-libjsvml-so-libjsvml-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/jvm/java-17-openjdk-17.0.4.0.8-1.fc36.x86_64/lib/libjsvml.so",

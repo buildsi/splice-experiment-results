@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00024175643920898438
+                    "seconds": 2.6702880859375e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0001480579376220703
+                    "seconds": 1.430511474609375e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.017099618911743164,
+                    "seconds": 0.014525413513183594,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/liboss.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ao/plugins-4/liboss.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ao/plugins-4/liboss.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/liboss.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/liboss.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ao/plugins-4/liboss.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/liboss.so-abi-laboratory-liboss-so-liboss-so.html\nFound link to liboss.so-1.2.0-22.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file liboss.so-1.2.0-22.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ao/plugins-4/../../../../.dwz/libao-1.2.0-22.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-HM4VG.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to liboss.so-1.2.0-22.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file liboss.so-1.2.0-22.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ao/plugins-4/../../../../.dwz/libao-1.2.0-22.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-36aTu.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/liboss.so-abi-laboratory-liboss-so-liboss-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/liboss.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ao/plugins-4/liboss.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/liboss.so-abi-laboratory-liboss-so-liboss-so.html\nFound link to liboss.so-1.2.0-22.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file liboss.so-1.2.0-22.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ao/plugins-4/../../../../.dwz/libao-1.2.0-22.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Q2iBS.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to liboss.so-1.2.0-22.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file liboss.so-1.2.0-22.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ao/plugins-4/../../../../.dwz/libao-1.2.0-22.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Ny0W9.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/liboss.so-abi-laboratory-liboss-so-liboss-so.html\n",
                     "return_code": 0,
-                    "seconds": 0.4167149066925049,
+                    "seconds": 0.4295177459716797,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/liboss.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ao/plugins-4/liboss.so liboss-so-liboss-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/liboss.so-abi-laboratory-liboss-so-liboss-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ao/plugins-4/liboss.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ao/plugins-4/liboss.so",

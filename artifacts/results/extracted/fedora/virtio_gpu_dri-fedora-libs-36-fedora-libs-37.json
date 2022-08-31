@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.009247541427612305
+                    "seconds": 0.0002048015594482422
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.007369041442871094
+                    "seconds": 1.2159347534179688e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 64.60497117042542,
+                    "seconds": 73.1457154750824,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/virtio_gpu_dri.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/virtio_gpu_dri.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/virtio_gpu_dri.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/virtio_gpu_dri.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/virtio_gpu_dri.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/virtio_gpu_dri.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/virtio_gpu_dri.so-abi-laboratory-virtio_gpu_dri-so-virtio_gpu_dri-so.html\nFound link to crocus_dri.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file crocus_dri.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dri/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nWARNING: input object is compressed and large, may require a lot of RAM memory to process\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Ke8lj.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to crocus_dri.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file crocus_dri.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dri/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nWARNING: input object is compressed and large, may require a lot of RAM memory to process\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-WI1a8.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/virtio_gpu_dri.so-abi-laboratory-virtio_gpu_dri-so-virtio_gpu_dri-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/virtio_gpu_dri.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/virtio_gpu_dri.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/virtio_gpu_dri.so-abi-laboratory-virtio_gpu_dri-so-virtio_gpu_dri-so.html\nFound link to crocus_dri.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file crocus_dri.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dri/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nWARNING: input object is compressed and large, may require a lot of RAM memory to process\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-uxyba.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to crocus_dri.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file crocus_dri.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dri/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nWARNING: input object is compressed and large, may require a lot of RAM memory to process\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-7q44j.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/virtio_gpu_dri.so-abi-laboratory-virtio_gpu_dri-so-virtio_gpu_dri-so.html\n",
                     "return_code": 0,
-                    "seconds": 367.98912024497986,
+                    "seconds": 415.3324782848358,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/virtio_gpu_dri.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/virtio_gpu_dri.so virtio_gpu_dri-so-virtio_gpu_dri-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/virtio_gpu_dri.so-abi-laboratory-virtio_gpu_dri-so-virtio_gpu_dri-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/virtio_gpu_dri.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/virtio_gpu_dri.so",

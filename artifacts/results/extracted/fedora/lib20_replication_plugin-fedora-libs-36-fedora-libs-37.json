@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0001747608184814453
+                    "seconds": 5.435943603515625e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.940696716308594e-05
+                    "seconds": 1.6689300537109375e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.08005380630493164,
+                    "seconds": 0.09938788414001465,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib20_replication_plugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib20_replication_plugin.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib20_replication_plugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib20_replication_plugin.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib20_replication_plugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib20_replication_plugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib20_replication_plugin.so-abi-laboratory-lib20_replication_plugin-so-lib20_replication_plugin-so.html\nFound link to lib20_replication_plugin.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file lib20_replication_plugin.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Fv6Yr.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to lib20_replication_plugin.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file lib20_replication_plugin.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-oJe3d.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib20_replication_plugin.so-abi-laboratory-lib20_replication_plugin-so-lib20_replication_plugin-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib20_replication_plugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib20_replication_plugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib20_replication_plugin.so-abi-laboratory-lib20_replication_plugin-so-lib20_replication_plugin-so.html\nFound link to lib20_replication_plugin.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file lib20_replication_plugin.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-hRDB0.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to lib20_replication_plugin.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file lib20_replication_plugin.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-nth8T.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib20_replication_plugin.so-abi-laboratory-lib20_replication_plugin-so-lib20_replication_plugin-so.html\n",
                     "return_code": 0,
-                    "seconds": 6.082115411758423,
+                    "seconds": 7.055185317993164,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib20_replication_plugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib20_replication_plugin.so lib20_replication_plugin-so-lib20_replication_plugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib20_replication_plugin.so-abi-laboratory-lib20_replication_plugin-so-lib20_replication_plugin-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib20_replication_plugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib20_replication_plugin.so",

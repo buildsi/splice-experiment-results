@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0004885196685791016
+                    "seconds": 3.886222839355469e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0003654956817626953
+                    "seconds": 1.049041748046875e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.12770819664001465,
+                    "seconds": 0.14434075355529785,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/enchant/libenchant_myspell.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/enchant/libenchant_myspell.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/enchant/libenchant_myspell.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/enchant/libenchant_myspell.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/enchant/libenchant_myspell.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/enchant/libenchant_myspell.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/enchant/libenchant_myspell.so-abi-laboratory-libenchant_myspell-so-libenchant_myspell-so.html\nFound link to libenchant_myspell.so-1.6.0-30.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libenchant_myspell.so-1.6.0-30.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibhunspell-1.7.so.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-hq7Ly.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libenchant_myspell.so-1.6.0-30.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libenchant_myspell.so-1.6.0-30.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibhunspell-1.7.so.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-xYNEE.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/enchant/libenchant_myspell.so-abi-laboratory-libenchant_myspell-so-libenchant_myspell-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/enchant/libenchant_myspell.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/enchant/libenchant_myspell.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/enchant/libenchant_myspell.so-abi-laboratory-libenchant_myspell-so-libenchant_myspell-so.html\nFound link to libenchant_myspell.so-1.6.0-30.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libenchant_myspell.so-1.6.0-30.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibhunspell-1.7.so.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-JpgTA.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libenchant_myspell.so-1.6.0-30.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libenchant_myspell.so-1.6.0-30.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibhunspell-1.7.so.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-snxyI.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/enchant/libenchant_myspell.so-abi-laboratory-libenchant_myspell-so-libenchant_myspell-so.html\n",
                     "return_code": 0,
-                    "seconds": 0.8052845001220703,
+                    "seconds": 0.9762136936187744,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/enchant/libenchant_myspell.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/enchant/libenchant_myspell.so libenchant_myspell-so-libenchant_myspell-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/enchant/libenchant_myspell.so-abi-laboratory-libenchant_myspell-so-libenchant_myspell-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/enchant/libenchant_myspell.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/enchant/libenchant_myspell.so",

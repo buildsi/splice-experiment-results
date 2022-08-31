@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.005368471145629883
+                    "seconds": 0.00011730194091796875
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.003844022750854492
+                    "seconds": 6.67572021484375e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 13.147467613220215,
+                    "seconds": 15.584559679031372,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_nouveau.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_nouveau.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_nouveau.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_nouveau.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_nouveau.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_nouveau.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_nouveau.so-abi-laboratory-pipe_nouveau-so-pipe_nouveau-so.html\nFound link to pipe_nouveau.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pipe_nouveau.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gallium-pipe/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-OI0hw.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pipe_nouveau.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pipe_nouveau.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gallium-pipe/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-3rzi0.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_nouveau.so-abi-laboratory-pipe_nouveau-so-pipe_nouveau-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_nouveau.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_nouveau.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_nouveau.so-abi-laboratory-pipe_nouveau-so-pipe_nouveau-so.html\nFound link to pipe_nouveau.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pipe_nouveau.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gallium-pipe/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ZEMoA.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pipe_nouveau.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pipe_nouveau.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gallium-pipe/../../../.dwz/mesa-22.1.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-uQs8t.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_nouveau.so-abi-laboratory-pipe_nouveau-so-pipe_nouveau-so.html\n",
                     "return_code": 0,
-                    "seconds": 168.8389537334442,
+                    "seconds": 204.1069939136505,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_nouveau.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_nouveau.so pipe_nouveau-so-pipe_nouveau-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_nouveau.so-abi-laboratory-pipe_nouveau-so-pipe_nouveau-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_nouveau.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_nouveau.so",
