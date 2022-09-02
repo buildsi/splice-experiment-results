@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstrawparse.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstrawparse.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstrawparse.so",
+                    "spliced_lib": "libgstrawparse.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.078315734863281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstrawparse.so",
+                    "spliced_lib": "libgstrawparse.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.4836273193359375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.05069780349731445,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstrawparse.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstrawparse.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstrawparse.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstrawparse.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstrawparse.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstrawparse.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstrawparse.so-abi-laboratory-libgstrawparse-so-libgstrawparse-so.html\nFound link to libgstrawparse.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgstrawparse.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gstreamer-1.0/../../../.dwz/gstreamer1-plugins-base-1.20.3-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-VaKrc.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgstrawparse.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgstrawparse.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gstreamer-1.0/../../../.dwz/gstreamer1-plugins-base-1.20.3-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Aa4h5.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstrawparse.so-abi-laboratory-libgstrawparse-so-libgstrawparse-so.html\n",
+                    "return_code": 0,
+                    "seconds": 1.475895643234253,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstrawparse.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstrawparse.so libgstrawparse-so-libgstrawparse-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstrawparse.so-abi-laboratory-libgstrawparse-so-libgstrawparse-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstrawparse.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstrawparse.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstrawparse.so": 70488,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstrawparse.so": 70488
+            }
+        },
+        "experiment": "usr/lib64/gstreamer-1.0/libgstrawparse-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstrawparse.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstrawparse.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstvideoconvert.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstvideoconvert.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstvideoconvert.so",
+                    "spliced_lib": "libgstvideoconvert.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.482269287109375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgstvideoconvert.so",
+                    "spliced_lib": "libgstvideoconvert.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.2636184692382812e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.02876901626586914,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstvideoconvert.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstvideoconvert.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstvideoconvert.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstvideoconvert.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstvideoconvert.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstvideoconvert.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstvideoconvert.so-abi-laboratory-libgstvideoconvert-so-libgstvideoconvert-so.html\nFound link to libgstvideoconvert.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgstvideoconvert.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gstreamer-1.0/../../../.dwz/gstreamer1-plugins-base-1.20.3-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-6qDGt.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgstvideoconvert.so-1.20.3-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgstvideoconvert.so-1.20.3-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gstreamer-1.0/../../../.dwz/gstreamer1-plugins-base-1.20.3-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-q8T2g.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstvideoconvert.so-abi-laboratory-libgstvideoconvert-so-libgstvideoconvert-so.html\n",
+                    "return_code": 0,
+                    "seconds": 1.2993948459625244,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstvideoconvert.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstvideoconvert.so libgstvideoconvert-so-libgstvideoconvert-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstvideoconvert.so-abi-laboratory-libgstvideoconvert-so-libgstvideoconvert-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstvideoconvert.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstvideoconvert.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstvideoconvert.so": 36848,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstvideoconvert.so": 36848
+            }
+        },
+        "experiment": "usr/lib64/gstreamer-1.0/libgstvideoconvert-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gstreamer-1.0/libgstvideoconvert.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gstreamer-1.0/libgstvideoconvert.so",
+        "different_libs": true
+    }
+]
