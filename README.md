@@ -32,6 +32,7 @@ You can also ask for a specific run:
 $ rm -rf artifacts/*
 $ python get_artifacts.py 2864059558  # main results
 $ python get_artifacts.py 2974827036  # fedora results 0-300
+$ python get_artifacts.py 2980356396  # fedora results 400-500
 ```
 
  - [artifacts/cache](artifacts/cache) has cached results (Smeagle and ABI laboratory report)
