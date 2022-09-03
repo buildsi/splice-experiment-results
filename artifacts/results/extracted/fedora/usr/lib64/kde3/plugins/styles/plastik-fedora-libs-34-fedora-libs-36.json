@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/plastik.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/plastik.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "plastik.so",
+                    "spliced_lib": "plastik.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001251697540283203
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "plastik.so",
+                    "spliced_lib": "plastik.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.458427429199219e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.7934370040893555,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/plastik.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/plastik.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/plastik.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/plastik.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/plastik.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/plastik.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/plastik.so-abi-laboratory-plastik-so-plastik-so.html\nFound link to plastik.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file plastik.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/plugins/styles/../../../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 620\nERROR: incomplete info for symbol 645\nERROR: incomplete info for symbol 3544\nERROR: incomplete info for symbol 3827\nERROR: incomplete info for symbol 4017\nERROR: incomplete info for symbol 8652\nERROR: incomplete info for symbol 9669\nERROR: incomplete info for symbol 9762\nERROR: incomplete info for symbol 9855\nERROR: incomplete info for symbol 11394\nERROR: incomplete info for symbol 14421\nERROR: incomplete info for symbol 14581\nERROR: incomplete info for symbol 15079\nERROR: incomplete info for symbol 15175\nERROR: incomplete info for symbol 15291\nERROR: incomplete info for symbol 16226\nERROR: incomplete info for symbol 16297\nERROR: incomplete info for symbol 19841\nERROR: incomplete info for symbol 21075\nERROR: incomplete info for symbol 26236\nERROR: incomplete info for symbol 32133\nERROR: incomplete info for symbol 34465\nERROR: incomplete info for symbol 35477\nERROR: incomplete info for symbol 60941\nERROR: incomplete info for symbol 65267\nERROR: incomplete info for symbol 76529\nERROR: incomplete info for symbol 131770\nERROR: incomplete info for symbol 132248\nERROR: incomplete info for symbol 137094\nERROR: incomplete info for symbol 142349\nERROR: incomplete info for symbol 143542\nERROR: incomplete info for symbol 159754\nERROR: incomplete info for symbol 160669\nERROR: incomplete info for symbol 160907\nERROR: incomplete info for symbol 163886\nERROR: incomplete info for symbol 164019\nReading v-tables\nlibkdefx.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-0dqFy.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to plastik.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file plastik.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/plugins/styles/../../../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 620\nERROR: incomplete info for symbol 645\nERROR: incomplete info for symbol 3544\nERROR: incomplete info for symbol 3827\nERROR: incomplete info for symbol 4017\nERROR: incomplete info for symbol 8652\nERROR: incomplete info for symbol 9669\nERROR: incomplete info for symbol 9762\nERROR: incomplete info for symbol 9855\nERROR: incomplete info for symbol 11394\nERROR: incomplete info for symbol 14421\nERROR: incomplete info for symbol 14581\nERROR: incomplete info for symbol 15079\nERROR: incomplete info for symbol 15175\nERROR: incomplete info for symbol 15291\nERROR: incomplete info for symbol 16226\nERROR: incomplete info for symbol 16297\nERROR: incomplete info for symbol 19841\nERROR: incomplete info for symbol 21075\nERROR: incomplete info for symbol 26236\nERROR: incomplete info for symbol 32133\nERROR: incomplete info for symbol 34465\nERROR: incomplete info for symbol 35477\nERROR: incomplete info for symbol 60941\nERROR: incomplete info for symbol 65267\nERROR: incomplete info for symbol 76529\nERROR: incomplete info for symbol 131770\nERROR: incomplete info for symbol 132248\nERROR: incomplete info for symbol 137094\nERROR: incomplete info for symbol 142349\nERROR: incomplete info for symbol 143542\nERROR: incomplete info for symbol 159754\nERROR: incomplete info for symbol 160669\nERROR: incomplete info for symbol 160907\nERROR: incomplete info for symbol 163886\nERROR: incomplete info for symbol 164019\nReading v-tables\nlibkdefx.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-EeBOG.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/plastik.so-abi-laboratory-plastik-so-plastik-so.html\n",
+                    "return_code": 0,
+                    "seconds": 22.60488533973694,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/plastik.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/plastik.so plastik-so-plastik-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/plastik.so-abi-laboratory-plastik-so-plastik-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/plastik.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/plastik.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/plastik.so": 132000,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/plastik.so": 132000
+            }
+        },
+        "experiment": "usr/lib64/kde3/plugins/styles/plastik-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/plastik.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/plastik.so",
+        "different_libs": true
+    }
+]

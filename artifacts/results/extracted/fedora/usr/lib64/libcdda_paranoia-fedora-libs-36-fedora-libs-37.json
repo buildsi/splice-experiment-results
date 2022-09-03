@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcdda_paranoia.so.0.10.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcdda_paranoia.so.0.10.2"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcdda_paranoia.so.0.10.2",
+                    "spliced_lib": "libcdda_paranoia.so.0.10.2",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.0531158447265625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcdda_paranoia.so.0.10.2",
+                    "spliced_lib": "libcdda_paranoia.so.0.10.2",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.719329833984375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.023177146911621094,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcdda_paranoia.so.0.10.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcdda_paranoia.so.0.10.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcdda_paranoia.so.0.10.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcdda_paranoia.so.0.10.2",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcdda_paranoia.so.0.10.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcdda_paranoia.so.0.10.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcdda_paranoia.so.0.10.2-abi-laboratory-libcdda_paranoia-so-0-10-2-libcdda_paranoia-so-0-10-2.html\nFound link to libcdda_paranoia.so.0.10.2-10.2-39.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcdda_paranoia.so.0.10.2-10.2-39.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/cdparanoia-10.2-39.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3135\nERROR: incomplete info for symbol 3464\nERROR: incomplete info for symbol 3545\nERROR: incomplete info for symbol 3626\nERROR: incomplete info for symbol 3690\nERROR: incomplete info for symbol 3767\nERROR: incomplete info for symbol 3851\nERROR: incomplete info for symbol 3877\nERROR: incomplete info for symbol 3964\nERROR: incomplete info for symbol 4033\nERROR: incomplete info for symbol 4154\nERROR: incomplete info for symbol 4203\nERROR: incomplete info for symbol 4229\nERROR: incomplete info for symbol 4255\nERROR: incomplete info for symbol 4281\nERROR: incomplete info for symbol 4307\nERROR: incomplete info for symbol 4333\nERROR: incomplete info for symbol 4359\nERROR: incomplete info for symbol 4385\nERROR: incomplete info for symbol 4526\nERROR: incomplete info for symbol 4552\nERROR: incomplete info for symbol 4628\nERROR: incomplete info for symbol 4654\nERROR: incomplete info for symbol 4748\nERROR: incomplete info for symbol 4781\nERROR: incomplete info for symbol 5089\nERROR: incomplete info for symbol 5225\nERROR: incomplete info for symbol 5391\nERROR: incomplete info for symbol 5578\nERROR: incomplete info for symbol 5652\nERROR: incomplete info for symbol 6093\nERROR: incomplete info for symbol 6139\nERROR: incomplete info for symbol 6536\nERROR: incomplete info for symbol 7960\nERROR: incomplete info for symbol 8264\nERROR: incomplete info for symbol 8528\nERROR: incomplete info for symbol 8626\nERROR: incomplete info for symbol 8705\nERROR: incomplete info for symbol 8798\nERROR: incomplete info for symbol 9004\nERROR: incomplete info for symbol 9492\nERROR: incomplete info for symbol 9909\nERROR: incomplete info for symbol 10033\nERROR: incomplete info for symbol 10173\nERROR: incomplete info for symbol 10385\nERROR: incomplete info for symbol 10527\nERROR: incomplete info for symbol 10731\nERROR: incomplete info for symbol 10847\nERROR: incomplete info for symbol 11049\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-3pJal.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcdda_paranoia.so.0.10.2-10.2-39.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcdda_paranoia.so.0.10.2-10.2-39.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/cdparanoia-10.2-39.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3135\nERROR: incomplete info for symbol 3464\nERROR: incomplete info for symbol 3545\nERROR: incomplete info for symbol 3626\nERROR: incomplete info for symbol 3690\nERROR: incomplete info for symbol 3767\nERROR: incomplete info for symbol 3851\nERROR: incomplete info for symbol 3877\nERROR: incomplete info for symbol 3964\nERROR: incomplete info for symbol 4033\nERROR: incomplete info for symbol 4154\nERROR: incomplete info for symbol 4203\nERROR: incomplete info for symbol 4229\nERROR: incomplete info for symbol 4255\nERROR: incomplete info for symbol 4281\nERROR: incomplete info for symbol 4307\nERROR: incomplete info for symbol 4333\nERROR: incomplete info for symbol 4359\nERROR: incomplete info for symbol 4385\nERROR: incomplete info for symbol 4526\nERROR: incomplete info for symbol 4552\nERROR: incomplete info for symbol 4628\nERROR: incomplete info for symbol 4654\nERROR: incomplete info for symbol 4748\nERROR: incomplete info for symbol 4781\nERROR: incomplete info for symbol 5089\nERROR: incomplete info for symbol 5225\nERROR: incomplete info for symbol 5391\nERROR: incomplete info for symbol 5578\nERROR: incomplete info for symbol 5652\nERROR: incomplete info for symbol 6093\nERROR: incomplete info for symbol 6139\nERROR: incomplete info for symbol 6536\nERROR: incomplete info for symbol 7960\nERROR: incomplete info for symbol 8264\nERROR: incomplete info for symbol 8528\nERROR: incomplete info for symbol 8626\nERROR: incomplete info for symbol 8705\nERROR: incomplete info for symbol 8798\nERROR: incomplete info for symbol 9004\nERROR: incomplete info for symbol 9492\nERROR: incomplete info for symbol 9909\nERROR: incomplete info for symbol 10033\nERROR: incomplete info for symbol 10173\nERROR: incomplete info for symbol 10385\nERROR: incomplete info for symbol 10527\nERROR: incomplete info for symbol 10731\nERROR: incomplete info for symbol 10847\nERROR: incomplete info for symbol 11049\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Ayh3O.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcdda_paranoia.so.0.10.2-abi-laboratory-libcdda_paranoia-so-0-10-2-libcdda_paranoia-so-0-10-2.html\n",
+                    "return_code": 0,
+                    "seconds": 0.566253662109375,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcdda_paranoia.so.0.10.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcdda_paranoia.so.0.10.2 libcdda_paranoia-so-0-10-2-libcdda_paranoia-so-0-10-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcdda_paranoia.so.0.10.2-abi-laboratory-libcdda_paranoia-so-0-10-2-libcdda_paranoia-so-0-10-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcdda_paranoia.so.0.10.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcdda_paranoia.so.0.10.2",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcdda_paranoia.so.0.10.2": 41112,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcdda_paranoia.so.0.10.2": 41112
+            }
+        },
+        "experiment": "usr/lib64/libcdda_paranoia-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcdda_paranoia.so.0.10.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcdda_paranoia.so.0.10.2",
+        "different_libs": true
+    }
+]

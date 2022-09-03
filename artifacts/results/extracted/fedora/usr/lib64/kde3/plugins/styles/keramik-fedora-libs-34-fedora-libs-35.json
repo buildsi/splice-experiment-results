@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/keramik.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/keramik.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "keramik.so",
+                    "spliced_lib": "keramik.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00010395050048828125
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "keramik.so",
+                    "spliced_lib": "keramik.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.131431579589844e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.5790305137634277,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/keramik.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/keramik.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/keramik.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/keramik.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/keramik.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/keramik.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/keramik.so-abi-laboratory-keramik-so-keramik-so.html\nFound link to keramik.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file keramik.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/plugins/styles/../../../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3497\nERROR: incomplete info for symbol 3809\nERROR: incomplete info for symbol 3835\nERROR: incomplete info for symbol 5604\nERROR: incomplete info for symbol 7438\nERROR: incomplete info for symbol 8326\nERROR: incomplete info for symbol 13004\nERROR: incomplete info for symbol 13328\nERROR: incomplete info for symbol 13811\nERROR: incomplete info for symbol 15783\nERROR: incomplete info for symbol 15973\nERROR: incomplete info for symbol 16955\nERROR: incomplete info for symbol 17993\nERROR: incomplete info for symbol 18082\nERROR: incomplete info for symbol 18948\nERROR: incomplete info for symbol 19234\nERROR: incomplete info for symbol 19717\nERROR: incomplete info for symbol 19861\nERROR: incomplete info for symbol 20022\nERROR: incomplete info for symbol 20218\nERROR: incomplete info for symbol 20316\nERROR: incomplete info for symbol 20434\nERROR: incomplete info for symbol 22007\nERROR: incomplete info for symbol 22964\nERROR: incomplete info for symbol 25189\nERROR: incomplete info for symbol 29007\nERROR: incomplete info for symbol 30357\nERROR: incomplete info for symbol 38004\nERROR: incomplete info for symbol 41417\nERROR: incomplete info for symbol 42330\nERROR: incomplete info for symbol 42974\nERROR: incomplete info for symbol 43047\nERROR: incomplete info for symbol 67239\nERROR: incomplete info for symbol 71526\nERROR: incomplete info for symbol 89033\nERROR: incomplete info for symbol 94692\nERROR: incomplete info for symbol 118948\nERROR: incomplete info for symbol 118987\nERROR: incomplete info for symbol 119158\nERROR: incomplete info for symbol 119217\nERROR: incomplete info for symbol 119257\nERROR: incomplete info for symbol 119407\nERROR: incomplete info for symbol 119624\nERROR: incomplete info for symbol 119780\nERROR: incomplete info for symbol 119971\nERROR: incomplete info for symbol 119997\nERROR: incomplete info for symbol 120172\nERROR: incomplete info for symbol 120760\nERROR: incomplete info for symbol 124645\nERROR: incomplete info for symbol 126420\nERROR: incomplete info for symbol 126576\nERROR: incomplete info for symbol 126804\nReading v-tables\nlibkdefx.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-W4xnx.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to keramik.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file keramik.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/plugins/styles/../../../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3497\nERROR: incomplete info for symbol 3809\nERROR: incomplete info for symbol 3835\nERROR: incomplete info for symbol 5604\nERROR: incomplete info for symbol 7438\nERROR: incomplete info for symbol 8326\nERROR: incomplete info for symbol 13004\nERROR: incomplete info for symbol 13328\nERROR: incomplete info for symbol 13811\nERROR: incomplete info for symbol 15783\nERROR: incomplete info for symbol 15973\nERROR: incomplete info for symbol 16955\nERROR: incomplete info for symbol 17993\nERROR: incomplete info for symbol 18082\nERROR: incomplete info for symbol 18948\nERROR: incomplete info for symbol 19234\nERROR: incomplete info for symbol 19717\nERROR: incomplete info for symbol 19861\nERROR: incomplete info for symbol 20022\nERROR: incomplete info for symbol 20218\nERROR: incomplete info for symbol 20316\nERROR: incomplete info for symbol 20434\nERROR: incomplete info for symbol 22007\nERROR: incomplete info for symbol 22964\nERROR: incomplete info for symbol 25189\nERROR: incomplete info for symbol 29007\nERROR: incomplete info for symbol 30357\nERROR: incomplete info for symbol 38004\nERROR: incomplete info for symbol 41417\nERROR: incomplete info for symbol 42330\nERROR: incomplete info for symbol 42974\nERROR: incomplete info for symbol 43047\nERROR: incomplete info for symbol 67239\nERROR: incomplete info for symbol 71526\nERROR: incomplete info for symbol 89033\nERROR: incomplete info for symbol 94692\nERROR: incomplete info for symbol 118948\nERROR: incomplete info for symbol 118987\nERROR: incomplete info for symbol 119158\nERROR: incomplete info for symbol 119217\nERROR: incomplete info for symbol 119257\nERROR: incomplete info for symbol 119407\nERROR: incomplete info for symbol 119624\nERROR: incomplete info for symbol 119780\nERROR: incomplete info for symbol 119971\nERROR: incomplete info for symbol 119997\nERROR: incomplete info for symbol 120172\nERROR: incomplete info for symbol 120760\nERROR: incomplete info for symbol 124645\nERROR: incomplete info for symbol 126420\nERROR: incomplete info for symbol 126576\nERROR: incomplete info for symbol 126804\nReading v-tables\nlibkdefx.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-fzI4p.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/keramik.so-abi-laboratory-keramik-so-keramik-so.html\n",
+                    "return_code": 0,
+                    "seconds": 17.26528286933899,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/keramik.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/keramik.so keramik-so-keramik-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/keramik.so-abi-laboratory-keramik-so-keramik-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/keramik.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/keramik.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/keramik.so": 222384,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/keramik.so": 222384
+            }
+        },
+        "experiment": "usr/lib64/kde3/plugins/styles/keramik-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/keramik.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/keramik.so",
+        "different_libs": true
+    }
+]

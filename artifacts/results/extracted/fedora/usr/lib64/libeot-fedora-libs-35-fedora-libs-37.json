@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libeot.so.0.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libeot.so.0.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libeot.so.0.0.0",
+                    "spliced_lib": "libeot.so.0.0.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.270408630371094e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libeot.so.0.0.0",
+                    "spliced_lib": "libeot.so.0.0.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001354217529296875
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0430600643157959,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libeot.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libeot.so.0.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libeot.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libeot.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libeot.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libeot.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libeot.so.0.0.0-abi-laboratory-libeot-so-0-0-0-libeot-so-0-0-0.html\nFound link to libeot.so.0.0.0-0.01-18.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libeot.so.0.0.0-0.01-18.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libeot-0.01-18.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5670\nERROR: incomplete info for symbol 5696\nERROR: incomplete info for symbol 5722\nERROR: incomplete info for symbol 5818\nERROR: incomplete info for symbol 5989\nERROR: incomplete info for symbol 6137\nERROR: incomplete info for symbol 6288\nERROR: incomplete info for symbol 7142\nERROR: incomplete info for symbol 7499\nERROR: incomplete info for symbol 7525\nERROR: incomplete info for symbol 7558\nERROR: incomplete info for symbol 7591\nERROR: incomplete info for symbol 7624\nERROR: incomplete info for symbol 7707\nERROR: incomplete info for symbol 7790\nERROR: incomplete info for symbol 7846\nERROR: incomplete info for symbol 7948\nERROR: incomplete info for symbol 8037\nERROR: incomplete info for symbol 8086\nERROR: incomplete info for symbol 8129\nERROR: incomplete info for symbol 8227\nERROR: incomplete info for symbol 8272\nERROR: incomplete info for symbol 8317\nERROR: incomplete info for symbol 8343\nERROR: incomplete info for symbol 8454\nERROR: incomplete info for symbol 8589\nERROR: incomplete info for symbol 8642\nERROR: incomplete info for symbol 8739\nERROR: incomplete info for symbol 8772\nERROR: incomplete info for symbol 8843\nERROR: incomplete info for symbol 8876\nERROR: incomplete info for symbol 9066\nERROR: incomplete info for symbol 9111\nERROR: incomplete info for symbol 9156\nERROR: incomplete info for symbol 9414\nERROR: incomplete info for symbol 9565\nERROR: incomplete info for symbol 9636\nERROR: incomplete info for symbol 9707\nERROR: incomplete info for symbol 9905\nERROR: incomplete info for symbol 10134\nERROR: incomplete info for symbol 10205\nERROR: incomplete info for symbol 10276\nERROR: incomplete info for symbol 10359\nERROR: incomplete info for symbol 10411\nERROR: incomplete info for symbol 10898\nERROR: incomplete info for symbol 10950\nERROR: incomplete info for symbol 10983\nERROR: incomplete info for symbol 11119\nERROR: incomplete info for symbol 11152\nERROR: incomplete info for symbol 11234\nERROR: incomplete info for symbol 11267\nERROR: incomplete info for symbol 11306\nERROR: incomplete info for symbol 11401\nERROR: incomplete info for symbol 11447\nERROR: incomplete info for symbol 11624\nERROR: incomplete info for symbol 11842\nERROR: incomplete info for symbol 12129\nERROR: incomplete info for symbol 12204\nERROR: incomplete info for symbol 12467\nERROR: incomplete info for symbol 12717\nERROR: incomplete info for symbol 12877\nERROR: incomplete info for symbol 13718\nERROR: incomplete info for symbol 13925\nERROR: incomplete info for symbol 14596\nERROR: incomplete info for symbol 14772\nERROR: incomplete info for symbol 14898\nERROR: incomplete info for symbol 16782\nERROR: incomplete info for symbol 17179\nERROR: incomplete info for symbol 17933\nERROR: incomplete info for symbol 19027\nERROR: incomplete info for symbol 19293\nERROR: incomplete info for symbol 19900\nERROR: incomplete info for symbol 20013\nERROR: incomplete info for symbol 20234\nERROR: incomplete info for symbol 20290\nERROR: incomplete info for symbol 20727\nERROR: incomplete info for symbol 20816\nERROR: incomplete info for symbol 20842\nERROR: incomplete info for symbol 20978\nERROR: incomplete info for symbol 21114\nERROR: incomplete info for symbol 21140\nERROR: incomplete info for symbol 21202\nERROR: incomplete info for symbol 21802\nERROR: incomplete info for symbol 21910\nERROR: incomplete info for symbol 21986\nERROR: incomplete info for symbol 22082\nERROR: incomplete info for symbol 22150\nERROR: incomplete info for symbol 22232\nERROR: incomplete info for symbol 22330\nERROR: incomplete info for symbol 22680\nERROR: incomplete info for symbol 22784\nERROR: incomplete info for symbol 22940\nERROR: incomplete info for symbol 23402\nERROR: incomplete info for symbol 23464\nERROR: incomplete info for symbol 23537\nERROR: incomplete info for symbol 23708\nERROR: incomplete info for symbol 23770\nERROR: incomplete info for symbol 23821\nERROR: incomplete info for symbol 26366\nERROR: incomplete info for symbol 26456\nERROR: incomplete info for symbol 26963\nERROR: incomplete info for symbol 27712\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-GeSrU.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libeot.so.0.0.0-0.01-18.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libeot.so.0.0.0-0.01-18.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libeot-0.01-18.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5670\nERROR: incomplete info for symbol 5696\nERROR: incomplete info for symbol 5722\nERROR: incomplete info for symbol 5818\nERROR: incomplete info for symbol 5989\nERROR: incomplete info for symbol 6137\nERROR: incomplete info for symbol 6288\nERROR: incomplete info for symbol 7142\nERROR: incomplete info for symbol 7499\nERROR: incomplete info for symbol 7525\nERROR: incomplete info for symbol 7558\nERROR: incomplete info for symbol 7591\nERROR: incomplete info for symbol 7624\nERROR: incomplete info for symbol 7707\nERROR: incomplete info for symbol 7790\nERROR: incomplete info for symbol 7846\nERROR: incomplete info for symbol 7948\nERROR: incomplete info for symbol 8037\nERROR: incomplete info for symbol 8086\nERROR: incomplete info for symbol 8129\nERROR: incomplete info for symbol 8227\nERROR: incomplete info for symbol 8272\nERROR: incomplete info for symbol 8317\nERROR: incomplete info for symbol 8343\nERROR: incomplete info for symbol 8454\nERROR: incomplete info for symbol 8589\nERROR: incomplete info for symbol 8642\nERROR: incomplete info for symbol 8739\nERROR: incomplete info for symbol 8772\nERROR: incomplete info for symbol 8843\nERROR: incomplete info for symbol 8876\nERROR: incomplete info for symbol 9066\nERROR: incomplete info for symbol 9111\nERROR: incomplete info for symbol 9156\nERROR: incomplete info for symbol 9414\nERROR: incomplete info for symbol 9565\nERROR: incomplete info for symbol 9636\nERROR: incomplete info for symbol 9707\nERROR: incomplete info for symbol 9905\nERROR: incomplete info for symbol 10134\nERROR: incomplete info for symbol 10205\nERROR: incomplete info for symbol 10276\nERROR: incomplete info for symbol 10359\nERROR: incomplete info for symbol 10411\nERROR: incomplete info for symbol 10898\nERROR: incomplete info for symbol 10950\nERROR: incomplete info for symbol 10983\nERROR: incomplete info for symbol 11119\nERROR: incomplete info for symbol 11152\nERROR: incomplete info for symbol 11234\nERROR: incomplete info for symbol 11267\nERROR: incomplete info for symbol 11306\nERROR: incomplete info for symbol 11401\nERROR: incomplete info for symbol 11447\nERROR: incomplete info for symbol 11624\nERROR: incomplete info for symbol 11842\nERROR: incomplete info for symbol 12129\nERROR: incomplete info for symbol 12204\nERROR: incomplete info for symbol 12467\nERROR: incomplete info for symbol 12717\nERROR: incomplete info for symbol 12877\nERROR: incomplete info for symbol 13718\nERROR: incomplete info for symbol 13925\nERROR: incomplete info for symbol 14596\nERROR: incomplete info for symbol 14772\nERROR: incomplete info for symbol 14898\nERROR: incomplete info for symbol 16782\nERROR: incomplete info for symbol 17179\nERROR: incomplete info for symbol 17933\nERROR: incomplete info for symbol 19027\nERROR: incomplete info for symbol 19293\nERROR: incomplete info for symbol 19900\nERROR: incomplete info for symbol 20013\nERROR: incomplete info for symbol 20234\nERROR: incomplete info for symbol 20290\nERROR: incomplete info for symbol 20727\nERROR: incomplete info for symbol 20816\nERROR: incomplete info for symbol 20842\nERROR: incomplete info for symbol 20978\nERROR: incomplete info for symbol 21114\nERROR: incomplete info for symbol 21140\nERROR: incomplete info for symbol 21202\nERROR: incomplete info for symbol 21802\nERROR: incomplete info for symbol 21910\nERROR: incomplete info for symbol 21986\nERROR: incomplete info for symbol 22082\nERROR: incomplete info for symbol 22150\nERROR: incomplete info for symbol 22232\nERROR: incomplete info for symbol 22330\nERROR: incomplete info for symbol 22680\nERROR: incomplete info for symbol 22784\nERROR: incomplete info for symbol 22940\nERROR: incomplete info for symbol 23402\nERROR: incomplete info for symbol 23464\nERROR: incomplete info for symbol 23537\nERROR: incomplete info for symbol 23708\nERROR: incomplete info for symbol 23770\nERROR: incomplete info for symbol 23821\nERROR: incomplete info for symbol 26366\nERROR: incomplete info for symbol 26456\nERROR: incomplete info for symbol 26963\nERROR: incomplete info for symbol 27712\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-tzcx4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libeot.so.0.0.0-abi-laboratory-libeot-so-0-0-0-libeot-so-0-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.9624454975128174,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libeot.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libeot.so.0.0.0 libeot-so-0-0-0-libeot-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libeot.so.0.0.0-abi-laboratory-libeot-so-0-0-0-libeot-so-0-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libeot.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libeot.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libeot.so.0.0.0": 61080,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libeot.so.0.0.0": 61080
+            }
+        },
+        "experiment": "usr/lib64/libeot-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libeot.so.0.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libeot.so.0.0.0",
+        "different_libs": true
+    }
+]

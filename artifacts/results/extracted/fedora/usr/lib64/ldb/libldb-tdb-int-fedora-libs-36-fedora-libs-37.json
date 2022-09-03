@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-int.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-int.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldb-tdb-int.so",
+                    "spliced_lib": "libldb-tdb-int.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.6941299438476562e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldb-tdb-int.so",
+                    "spliced_lib": "libldb-tdb-int.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.245208740234375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.02334284782409668,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-int.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-int.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-int.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-int.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-int.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-int.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-int.so-abi-laboratory-libldb-tdb-int-so-libldb-tdb-int-so.html\nFound link to libldb-tdb-int.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libldb-tdb-int.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3351\nERROR: incomplete info for symbol 3944\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-nwmrf.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libldb-tdb-int.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libldb-tdb-int.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3351\nERROR: incomplete info for symbol 3944\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-p4mIM.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-int.so-abi-laboratory-libldb-tdb-int-so-libldb-tdb-int-so.html\n",
+                    "return_code": 0,
+                    "seconds": 0.5858700275421143,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-int.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-int.so libldb-tdb-int-so-libldb-tdb-int-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-int.so-abi-laboratory-libldb-tdb-int-so-libldb-tdb-int-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-int.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-int.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-int.so": 24496,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-int.so": 24496
+            }
+        },
+        "experiment": "usr/lib64/ldb/libldb-tdb-int-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-int.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-int.so",
+        "different_libs": true
+    }
+]

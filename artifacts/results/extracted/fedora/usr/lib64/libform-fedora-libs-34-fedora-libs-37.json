@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libform.so.6.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libform.so.6.2"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libform.so.6.2",
+                    "spliced_lib": "libform.so.6.2",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.677078247070312e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libform.so.6.2",
+                    "spliced_lib": "libform.so.6.2",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00011014938354492188
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.05220818519592285,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libform.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libform.so.6.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libform.so.6.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libform.so.6.2",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libform.so.6.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libform.so.6.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libform.so.6.2-abi-laboratory-libform-so-6-2-libform-so-6-2.html\nFound link to libform.so.6.2-6.2-9.20210508.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libform.so.6.2-6.2-9.20210508.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/ncurses-6.2-9.20210508.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 13704\nERROR: incomplete info for symbol 13736\nERROR: incomplete info for symbol 13768\nERROR: incomplete info for symbol 13800\nERROR: incomplete info for symbol 13826\nERROR: incomplete info for symbol 14004\nERROR: incomplete info for symbol 14182\nERROR: incomplete info for symbol 14336\nERROR: incomplete info for symbol 14479\nERROR: incomplete info for symbol 14522\nERROR: incomplete info for symbol 14669\nERROR: incomplete info for symbol 15031\nERROR: incomplete info for symbol 15333\nERROR: incomplete info for symbol 15419\nERROR: incomplete info for symbol 15520\nERROR: incomplete info for symbol 15637\nERROR: incomplete info for symbol 15736\nERROR: incomplete info for symbol 15768\nERROR: incomplete info for symbol 15930\nERROR: incomplete info for symbol 16012\nERROR: incomplete info for symbol 16098\nERROR: incomplete info for symbol 16199\nERROR: incomplete info for symbol 16275\nERROR: incomplete info for symbol 16307\nERROR: incomplete info for symbol 16339\nERROR: incomplete info for symbol 16417\nERROR: incomplete info for symbol 16449\nERROR: incomplete info for symbol 16505\nERROR: incomplete info for symbol 16537\nERROR: incomplete info for symbol 16704\nERROR: incomplete info for symbol 16736\nERROR: incomplete info for symbol 16792\nERROR: incomplete info for symbol 16824\nERROR: incomplete info for symbol 16930\nERROR: incomplete info for symbol 17535\nERROR: incomplete info for symbol 17686\nERROR: incomplete info for symbol 17718\nERROR: incomplete info for symbol 17750\nERROR: incomplete info for symbol 24959\nERROR: incomplete info for symbol 25085\nERROR: incomplete info for symbol 25162\nERROR: incomplete info for symbol 25754\nERROR: incomplete info for symbol 26152\nERROR: incomplete info for symbol 26232\nERROR: incomplete info for symbol 26312\nERROR: incomplete info for symbol 26392\nERROR: incomplete info for symbol 26492\nERROR: incomplete info for symbol 26695\nERROR: incomplete info for symbol 26775\nERROR: incomplete info for symbol 26855\nERROR: incomplete info for symbol 26935\nERROR: incomplete info for symbol 27157\nERROR: incomplete info for symbol 27278\nERROR: incomplete info for symbol 29373\nERROR: incomplete info for symbol 31242\nERROR: incomplete info for symbol 31434\nERROR: incomplete info for symbol 31699\nERROR: incomplete info for symbol 32265\nERROR: incomplete info for symbol 33666\nERROR: incomplete info for symbol 33962\nERROR: incomplete info for symbol 34013\nERROR: incomplete info for symbol 34339\nERROR: incomplete info for symbol 34621\nERROR: incomplete info for symbol 37196\nERROR: incomplete info for symbol 37252\nERROR: incomplete info for symbol 37284\nERROR: incomplete info for symbol 37340\nERROR: incomplete info for symbol 37372\nERROR: incomplete info for symbol 37428\nERROR: incomplete info for symbol 37460\nERROR: incomplete info for symbol 37516\nERROR: incomplete info for symbol 37548\nERROR: incomplete info for symbol 37604\nERROR: incomplete info for symbol 37636\nERROR: incomplete info for symbol 37692\nERROR: incomplete info for symbol 37748\nERROR: incomplete info for symbol 37992\nERROR: incomplete info for symbol 38024\nERROR: incomplete info for symbol 38238\nERROR: incomplete info for symbol 38373\nERROR: incomplete info for symbol 38444\nERROR: incomplete info for symbol 38683\nERROR: incomplete info for symbol 38752\nERROR: incomplete info for symbol 38907\nERROR: incomplete info for symbol 38952\nERROR: incomplete info for symbol 39008\nERROR: incomplete info for symbol 39040\nERROR: incomplete info for symbol 39190\nERROR: incomplete info for symbol 39296\nERROR: incomplete info for symbol 39438\nERROR: incomplete info for symbol 39594\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-9fWhE.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libform.so.6.2-6.2-9.20210508.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libform.so.6.2-6.2-9.20210508.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/ncurses-6.2-9.20210508.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 13704\nERROR: incomplete info for symbol 13736\nERROR: incomplete info for symbol 13768\nERROR: incomplete info for symbol 13800\nERROR: incomplete info for symbol 13826\nERROR: incomplete info for symbol 14004\nERROR: incomplete info for symbol 14182\nERROR: incomplete info for symbol 14336\nERROR: incomplete info for symbol 14479\nERROR: incomplete info for symbol 14522\nERROR: incomplete info for symbol 14669\nERROR: incomplete info for symbol 15031\nERROR: incomplete info for symbol 15333\nERROR: incomplete info for symbol 15419\nERROR: incomplete info for symbol 15520\nERROR: incomplete info for symbol 15637\nERROR: incomplete info for symbol 15736\nERROR: incomplete info for symbol 15768\nERROR: incomplete info for symbol 15930\nERROR: incomplete info for symbol 16012\nERROR: incomplete info for symbol 16098\nERROR: incomplete info for symbol 16199\nERROR: incomplete info for symbol 16275\nERROR: incomplete info for symbol 16307\nERROR: incomplete info for symbol 16339\nERROR: incomplete info for symbol 16417\nERROR: incomplete info for symbol 16449\nERROR: incomplete info for symbol 16505\nERROR: incomplete info for symbol 16537\nERROR: incomplete info for symbol 16704\nERROR: incomplete info for symbol 16736\nERROR: incomplete info for symbol 16792\nERROR: incomplete info for symbol 16824\nERROR: incomplete info for symbol 16930\nERROR: incomplete info for symbol 17535\nERROR: incomplete info for symbol 17686\nERROR: incomplete info for symbol 17718\nERROR: incomplete info for symbol 17750\nERROR: incomplete info for symbol 24959\nERROR: incomplete info for symbol 25085\nERROR: incomplete info for symbol 25162\nERROR: incomplete info for symbol 25754\nERROR: incomplete info for symbol 26152\nERROR: incomplete info for symbol 26232\nERROR: incomplete info for symbol 26312\nERROR: incomplete info for symbol 26392\nERROR: incomplete info for symbol 26492\nERROR: incomplete info for symbol 26695\nERROR: incomplete info for symbol 26775\nERROR: incomplete info for symbol 26855\nERROR: incomplete info for symbol 26935\nERROR: incomplete info for symbol 27157\nERROR: incomplete info for symbol 27278\nERROR: incomplete info for symbol 29373\nERROR: incomplete info for symbol 31242\nERROR: incomplete info for symbol 31434\nERROR: incomplete info for symbol 31699\nERROR: incomplete info for symbol 32265\nERROR: incomplete info for symbol 33666\nERROR: incomplete info for symbol 33962\nERROR: incomplete info for symbol 34013\nERROR: incomplete info for symbol 34339\nERROR: incomplete info for symbol 34621\nERROR: incomplete info for symbol 37196\nERROR: incomplete info for symbol 37252\nERROR: incomplete info for symbol 37284\nERROR: incomplete info for symbol 37340\nERROR: incomplete info for symbol 37372\nERROR: incomplete info for symbol 37428\nERROR: incomplete info for symbol 37460\nERROR: incomplete info for symbol 37516\nERROR: incomplete info for symbol 37548\nERROR: incomplete info for symbol 37604\nERROR: incomplete info for symbol 37636\nERROR: incomplete info for symbol 37692\nERROR: incomplete info for symbol 37748\nERROR: incomplete info for symbol 37992\nERROR: incomplete info for symbol 38024\nERROR: incomplete info for symbol 38238\nERROR: incomplete info for symbol 38373\nERROR: incomplete info for symbol 38444\nERROR: incomplete info for symbol 38683\nERROR: incomplete info for symbol 38752\nERROR: incomplete info for symbol 38907\nERROR: incomplete info for symbol 38952\nERROR: incomplete info for symbol 39008\nERROR: incomplete info for symbol 39040\nERROR: incomplete info for symbol 39190\nERROR: incomplete info for symbol 39296\nERROR: incomplete info for symbol 39438\nERROR: incomplete info for symbol 39594\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-t9AiN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libform.so.6.2-abi-laboratory-libform-so-6-2-libform-so-6-2.html\n",
+                    "return_code": 0,
+                    "seconds": 1.5072720050811768,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libform.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libform.so.6.2 libform-so-6-2-libform-so-6-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libform.so.6.2-abi-laboratory-libform-so-6-2-libform-so-6-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libform.so.6.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libform.so.6.2",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libform.so.6.2": 76368,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libform.so.6.2": 76368
+            }
+        },
+        "experiment": "usr/lib64/libform-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libform.so.6.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libform.so.6.2",
+        "different_libs": true
+    }
+]

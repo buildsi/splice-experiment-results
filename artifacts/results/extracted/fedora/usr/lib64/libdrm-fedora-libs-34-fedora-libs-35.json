@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdrm.so.2.4.0",
+                    "spliced_lib": "libdrm.so.2.4.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.749961853027344e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdrm.so.2.4.0",
+                    "spliced_lib": "libdrm.so.2.4.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00037670135498046875
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.06699514389038086,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0-abi-laboratory-libdrm-so-2-4-0-libdrm-so-2-4-0.html\nFound link to libdrm.so.2.4.0-2.4.110-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdrm.so.2.4.0-2.4.110-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libdrm-2.4.110-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 38902\nERROR: incomplete info for symbol 39059\nERROR: incomplete info for symbol 39119\nERROR: incomplete info for symbol 39223\nERROR: incomplete info for symbol 39286\nERROR: incomplete info for symbol 39337\nERROR: incomplete info for symbol 39659\nERROR: incomplete info for symbol 39852\nERROR: incomplete info for symbol 40387\nERROR: incomplete info for symbol 41179\nERROR: incomplete info for symbol 41407\nERROR: incomplete info for symbol 41508\nERROR: incomplete info for symbol 42060\nERROR: incomplete info for symbol 42356\nERROR: incomplete info for symbol 42540\nERROR: incomplete info for symbol 42795\nERROR: incomplete info for symbol 42939\nERROR: incomplete info for symbol 43043\nERROR: incomplete info for symbol 43619\nERROR: incomplete info for symbol 43670\nERROR: incomplete info for symbol 43801\nERROR: incomplete info for symbol 43852\nERROR: incomplete info for symbol 43903\nERROR: incomplete info for symbol 44034\nERROR: incomplete info for symbol 44085\nERROR: incomplete info for symbol 44177\nERROR: incomplete info for symbol 45345\nERROR: incomplete info for symbol 45703\nERROR: incomplete info for symbol 46175\nERROR: incomplete info for symbol 46350\nERROR: incomplete info for symbol 46572\nERROR: incomplete info for symbol 46772\nERROR: incomplete info for symbol 47074\nERROR: incomplete info for symbol 47342\nERROR: incomplete info for symbol 47780\nERROR: incomplete info for symbol 48095\nERROR: incomplete info for symbol 48432\nERROR: incomplete info for symbol 48734\nERROR: incomplete info for symbol 48933\nERROR: incomplete info for symbol 49009\nERROR: incomplete info for symbol 49085\nERROR: incomplete info for symbol 49376\nERROR: incomplete info for symbol 49667\nERROR: incomplete info for symbol 50811\nERROR: incomplete info for symbol 50932\nERROR: incomplete info for symbol 51419\nERROR: incomplete info for symbol 51675\nERROR: incomplete info for symbol 51774\nERROR: incomplete info for symbol 52045\nERROR: incomplete info for symbol 52649\nERROR: incomplete info for symbol 52946\nERROR: incomplete info for symbol 53243\nERROR: incomplete info for symbol 53557\nERROR: incomplete info for symbol 53872\nERROR: incomplete info for symbol 54169\nERROR: incomplete info for symbol 54525\nERROR: incomplete info for symbol 55049\nERROR: incomplete info for symbol 55148\nERROR: incomplete info for symbol 55658\nERROR: incomplete info for symbol 55757\nERROR: incomplete info for symbol 56513\nERROR: incomplete info for symbol 56623\nERROR: incomplete info for symbol 56987\nERROR: incomplete info for symbol 57157\nERROR: incomplete info for symbol 57344\nERROR: incomplete info for symbol 57370\nERROR: incomplete info for symbol 57403\nERROR: incomplete info for symbol 57553\nERROR: incomplete info for symbol 57615\nERROR: incomplete info for symbol 58533\nERROR: incomplete info for symbol 58883\nERROR: incomplete info for symbol 59128\nERROR: incomplete info for symbol 59534\nERROR: incomplete info for symbol 60080\nERROR: incomplete info for symbol 60626\nERROR: incomplete info for symbol 60946\nERROR: incomplete info for symbol 61450\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-OWH7u.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdrm.so.2.4.0-2.4.110-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdrm.so.2.4.0-2.4.110-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libdrm-2.4.110-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 38902\nERROR: incomplete info for symbol 39059\nERROR: incomplete info for symbol 39119\nERROR: incomplete info for symbol 39223\nERROR: incomplete info for symbol 39286\nERROR: incomplete info for symbol 39337\nERROR: incomplete info for symbol 39659\nERROR: incomplete info for symbol 39852\nERROR: incomplete info for symbol 40387\nERROR: incomplete info for symbol 41179\nERROR: incomplete info for symbol 41407\nERROR: incomplete info for symbol 41508\nERROR: incomplete info for symbol 42060\nERROR: incomplete info for symbol 42356\nERROR: incomplete info for symbol 42540\nERROR: incomplete info for symbol 42795\nERROR: incomplete info for symbol 42939\nERROR: incomplete info for symbol 43043\nERROR: incomplete info for symbol 43619\nERROR: incomplete info for symbol 43670\nERROR: incomplete info for symbol 43801\nERROR: incomplete info for symbol 43852\nERROR: incomplete info for symbol 43903\nERROR: incomplete info for symbol 44034\nERROR: incomplete info for symbol 44085\nERROR: incomplete info for symbol 44177\nERROR: incomplete info for symbol 45345\nERROR: incomplete info for symbol 45703\nERROR: incomplete info for symbol 46175\nERROR: incomplete info for symbol 46350\nERROR: incomplete info for symbol 46572\nERROR: incomplete info for symbol 46772\nERROR: incomplete info for symbol 47074\nERROR: incomplete info for symbol 47342\nERROR: incomplete info for symbol 47780\nERROR: incomplete info for symbol 48095\nERROR: incomplete info for symbol 48432\nERROR: incomplete info for symbol 48734\nERROR: incomplete info for symbol 48933\nERROR: incomplete info for symbol 49009\nERROR: incomplete info for symbol 49085\nERROR: incomplete info for symbol 49376\nERROR: incomplete info for symbol 49667\nERROR: incomplete info for symbol 50811\nERROR: incomplete info for symbol 50932\nERROR: incomplete info for symbol 51419\nERROR: incomplete info for symbol 51675\nERROR: incomplete info for symbol 51774\nERROR: incomplete info for symbol 52045\nERROR: incomplete info for symbol 52649\nERROR: incomplete info for symbol 52946\nERROR: incomplete info for symbol 53243\nERROR: incomplete info for symbol 53557\nERROR: incomplete info for symbol 53872\nERROR: incomplete info for symbol 54169\nERROR: incomplete info for symbol 54525\nERROR: incomplete info for symbol 55049\nERROR: incomplete info for symbol 55148\nERROR: incomplete info for symbol 55658\nERROR: incomplete info for symbol 55757\nERROR: incomplete info for symbol 56513\nERROR: incomplete info for symbol 56623\nERROR: incomplete info for symbol 56987\nERROR: incomplete info for symbol 57157\nERROR: incomplete info for symbol 57344\nERROR: incomplete info for symbol 57370\nERROR: incomplete info for symbol 57403\nERROR: incomplete info for symbol 57553\nERROR: incomplete info for symbol 57615\nERROR: incomplete info for symbol 58533\nERROR: incomplete info for symbol 58883\nERROR: incomplete info for symbol 59128\nERROR: incomplete info for symbol 59534\nERROR: incomplete info for symbol 60080\nERROR: incomplete info for symbol 60626\nERROR: incomplete info for symbol 60946\nERROR: incomplete info for symbol 61450\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-slJFh.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0-abi-laboratory-libdrm-so-2-4-0-libdrm-so-2-4-0.html\n",
+                    "return_code": 0,
+                    "seconds": 1.290539026260376,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0 libdrm-so-2-4-0-libdrm-so-2-4-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0-abi-laboratory-libdrm-so-2-4-0-libdrm-so-2-4-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0": 91528,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0": 91528
+            }
+        },
+        "experiment": "usr/lib64/libdrm-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0",
+        "different_libs": true
+    }
+]
