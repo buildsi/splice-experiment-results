@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.86102294921875e-05
+                    "seconds": 2.4557113647460938e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.049041748046875e-05
+                    "seconds": 9.298324584960938e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.01625657081604004,
+                    "seconds": 0.04397320747375488,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreexl.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreexl.so.1.1.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreexl.so.1.1.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreexl.so.1.1.0",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreexl.so.1.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreexl.so.1.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreexl.so.1.1.0-abi-laboratory-libfreexl-so-1-1-0-libfreexl-so-1-1-0.html\nFound link to libfreexl.so.1.1.0-1.0.6-16.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libfreexl.so.1.1.0-1.0.6-16.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-vRB1I.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libfreexl.so.1.1.0-1.0.6-16.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libfreexl.so.1.1.0-1.0.6-16.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-9Wxp0.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreexl.so.1.1.0-abi-laboratory-libfreexl-so-1-1-0-libfreexl-so-1-1-0.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreexl.so.1.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreexl.so.1.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreexl.so.1.1.0-abi-laboratory-libfreexl-so-1-1-0-libfreexl-so-1-1-0.html\nFound link to libfreexl.so.1.1.0-1.0.6-16.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libfreexl.so.1.1.0-1.0.6-16.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-A9bBw.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libfreexl.so.1.1.0-1.0.6-16.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libfreexl.so.1.1.0-1.0.6-16.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-RlRkO.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreexl.so.1.1.0-abi-laboratory-libfreexl-so-1-1-0-libfreexl-so-1-1-0.html\n",
                     "return_code": 0,
-                    "seconds": 0.5079984664916992,
+                    "seconds": 0.5900850296020508,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreexl.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreexl.so.1.1.0 libfreexl-so-1-1-0-libfreexl-so-1-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreexl.so.1.1.0-abi-laboratory-libfreexl-so-1-1-0-libfreexl-so-1-1-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreexl.so.1.1.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreexl.so.1.1.0",

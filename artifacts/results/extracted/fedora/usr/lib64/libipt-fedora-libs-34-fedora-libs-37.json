@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libipt.so.2.0.5"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libipt.so.2.0.5"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libipt.so.2.0.5",
+                    "spliced_lib": "libipt.so.2.0.5",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.814697265625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libipt.so.2.0.5",
+                    "spliced_lib": "libipt.so.2.0.5",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.078315734863281e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.06732439994812012,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libipt.so.2.0.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libipt.so.2.0.5",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libipt.so.2.0.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libipt.so.2.0.5",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libipt.so.2.0.5\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libipt.so.2.0.5\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libipt.so.2.0.5-abi-laboratory-libipt-so-2-0-5-libipt-so-2-0-5.html\nFound link to libipt.so.2.0.5-2.0.5-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libipt.so.2.0.5-2.0.5-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 50646\nERROR: incomplete info for symbol 50674\nERROR: incomplete info for symbol 50870\nERROR: incomplete info for symbol 50924\nERROR: incomplete info for symbol 51050\nERROR: incomplete info for symbol 51158\nERROR: incomplete info for symbol 51237\nERROR: incomplete info for symbol 51297\nERROR: incomplete info for symbol 51357\nERROR: incomplete info for symbol 51384\nERROR: incomplete info for symbol 52428\nERROR: incomplete info for symbol 52559\nERROR: incomplete info for symbol 52613\nERROR: incomplete info for symbol 52782\nERROR: incomplete info for symbol 52944\nERROR: incomplete info for symbol 53275\nERROR: incomplete info for symbol 57366\nERROR: incomplete info for symbol 57426\nERROR: incomplete info for symbol 57453\nERROR: incomplete info for symbol 57879\nERROR: incomplete info for symbol 58351\nERROR: incomplete info for symbol 58766\nERROR: incomplete info for symbol 58895\nERROR: incomplete info for symbol 58979\nERROR: incomplete info for symbol 59176\nERROR: incomplete info for symbol 59230\nERROR: incomplete info for symbol 59309\nERROR: incomplete info for symbol 59369\nERROR: incomplete info for symbol 59396\nERROR: incomplete info for symbol 63986\nERROR: incomplete info for symbol 64352\nERROR: incomplete info for symbol 64428\nERROR: incomplete info for symbol 64455\nERROR: incomplete info for symbol 64885\nERROR: incomplete info for symbol 65005\nERROR: incomplete info for symbol 65777\nERROR: incomplete info for symbol 66388\nERROR: incomplete info for symbol 68211\nERROR: incomplete info for symbol 69967\nERROR: incomplete info for symbol 70378\nERROR: incomplete info for symbol 71283\nERROR: incomplete info for symbol 71917\nERROR: incomplete info for symbol 71944\nERROR: incomplete info for symbol 75303\nERROR: incomplete info for symbol 75842\nERROR: incomplete info for symbol 75973\nERROR: incomplete info for symbol 77235\nERROR: incomplete info for symbol 77308\nERROR: incomplete info for symbol 77381\nERROR: incomplete info for symbol 77408\nERROR: incomplete info for symbol 77448\nERROR: incomplete info for symbol 77501\nERROR: incomplete info for symbol 77614\nERROR: incomplete info for symbol 77687\nERROR: incomplete info for symbol 77882\nERROR: incomplete info for symbol 81568\nERROR: incomplete info for symbol 81895\nERROR: incomplete info for symbol 82202\nERROR: incomplete info for symbol 83638\nERROR: incomplete info for symbol 85474\nERROR: incomplete info for symbol 85605\nERROR: incomplete info for symbol 85977\nERROR: incomplete info for symbol 86399\nERROR: incomplete info for symbol 86816\nERROR: incomplete info for symbol 87253\nERROR: incomplete info for symbol 87326\nERROR: incomplete info for symbol 87399\nERROR: incomplete info for symbol 87426\nERROR: incomplete info for symbol 87466\nERROR: incomplete info for symbol 87519\nERROR: incomplete info for symbol 91696\nERROR: incomplete info for symbol 100296\nERROR: incomplete info for symbol 110136\nERROR: incomplete info for symbol 113607\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Tn20d.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libipt.so.2.0.5-2.0.5-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libipt.so.2.0.5-2.0.5-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 50646\nERROR: incomplete info for symbol 50674\nERROR: incomplete info for symbol 50870\nERROR: incomplete info for symbol 50924\nERROR: incomplete info for symbol 51050\nERROR: incomplete info for symbol 51158\nERROR: incomplete info for symbol 51237\nERROR: incomplete info for symbol 51297\nERROR: incomplete info for symbol 51357\nERROR: incomplete info for symbol 51384\nERROR: incomplete info for symbol 52428\nERROR: incomplete info for symbol 52559\nERROR: incomplete info for symbol 52613\nERROR: incomplete info for symbol 52782\nERROR: incomplete info for symbol 52944\nERROR: incomplete info for symbol 53275\nERROR: incomplete info for symbol 57366\nERROR: incomplete info for symbol 57426\nERROR: incomplete info for symbol 57453\nERROR: incomplete info for symbol 57879\nERROR: incomplete info for symbol 58351\nERROR: incomplete info for symbol 58766\nERROR: incomplete info for symbol 58895\nERROR: incomplete info for symbol 58979\nERROR: incomplete info for symbol 59176\nERROR: incomplete info for symbol 59230\nERROR: incomplete info for symbol 59309\nERROR: incomplete info for symbol 59369\nERROR: incomplete info for symbol 59396\nERROR: incomplete info for symbol 63986\nERROR: incomplete info for symbol 64352\nERROR: incomplete info for symbol 64428\nERROR: incomplete info for symbol 64455\nERROR: incomplete info for symbol 64885\nERROR: incomplete info for symbol 65005\nERROR: incomplete info for symbol 65777\nERROR: incomplete info for symbol 66388\nERROR: incomplete info for symbol 68211\nERROR: incomplete info for symbol 69967\nERROR: incomplete info for symbol 70378\nERROR: incomplete info for symbol 71283\nERROR: incomplete info for symbol 71917\nERROR: incomplete info for symbol 71944\nERROR: incomplete info for symbol 75303\nERROR: incomplete info for symbol 75842\nERROR: incomplete info for symbol 75973\nERROR: incomplete info for symbol 77235\nERROR: incomplete info for symbol 77308\nERROR: incomplete info for symbol 77381\nERROR: incomplete info for symbol 77408\nERROR: incomplete info for symbol 77448\nERROR: incomplete info for symbol 77501\nERROR: incomplete info for symbol 77614\nERROR: incomplete info for symbol 77687\nERROR: incomplete info for symbol 77882\nERROR: incomplete info for symbol 81568\nERROR: incomplete info for symbol 81895\nERROR: incomplete info for symbol 82202\nERROR: incomplete info for symbol 83638\nERROR: incomplete info for symbol 85474\nERROR: incomplete info for symbol 85605\nERROR: incomplete info for symbol 85977\nERROR: incomplete info for symbol 86399\nERROR: incomplete info for symbol 86816\nERROR: incomplete info for symbol 87253\nERROR: incomplete info for symbol 87326\nERROR: incomplete info for symbol 87399\nERROR: incomplete info for symbol 87426\nERROR: incomplete info for symbol 87466\nERROR: incomplete info for symbol 87519\nERROR: incomplete info for symbol 91696\nERROR: incomplete info for symbol 100296\nERROR: incomplete info for symbol 110136\nERROR: incomplete info for symbol 113607\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-dHtBd.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libipt.so.2.0.5-abi-laboratory-libipt-so-2-0-5-libipt-so-2-0-5.html\n",
+                    "return_code": 0,
+                    "seconds": 1.1692821979522705,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libipt.so.2.0.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libipt.so.2.0.5 libipt-so-2-0-5-libipt-so-2-0-5 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libipt.so.2.0.5-abi-laboratory-libipt-so-2-0-5-libipt-so-2-0-5.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libipt.so.2.0.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libipt.so.2.0.5",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libipt.so.2.0.5": 114488,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libipt.so.2.0.5": 114488
+            }
+        },
+        "experiment": "usr/lib64/libipt-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libipt.so.2.0.5",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libipt.so.2.0.5",
+        "different_libs": true
+    }
+]

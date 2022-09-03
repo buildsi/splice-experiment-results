@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfribidi.so.0.4.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfribidi.so.0.4.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libfribidi.so.0.4.0",
+                    "spliced_lib": "libfribidi.so.0.4.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.1948089599609375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libfribidi.so.0.4.0",
+                    "spliced_lib": "libfribidi.so.0.4.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.1696090698242188e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.02200937271118164,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfribidi.so.0.4.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfribidi.so.0.4.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfribidi.so.0.4.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfribidi.so.0.4.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfribidi.so.0.4.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfribidi.so.0.4.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfribidi.so.0.4.0-abi-laboratory-libfribidi-so-0-4-0-libfribidi-so-0-4-0.html\nFound link to libfribidi.so.0.4.0-1.0.11-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libfribidi.so.0.4.0-1.0.11-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/fribidi-1.0.11-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3781\nERROR: incomplete info for symbol 4067\nERROR: incomplete info for symbol 4139\nERROR: incomplete info for symbol 8651\nERROR: incomplete info for symbol 9310\nERROR: incomplete info for symbol 9639\nERROR: incomplete info for symbol 9704\nERROR: incomplete info for symbol 10162\nERROR: incomplete info for symbol 10399\nERROR: incomplete info for symbol 10609\nERROR: incomplete info for symbol 10819\nERROR: incomplete info for symbol 10845\nERROR: incomplete info for symbol 10888\nERROR: incomplete info for symbol 10954\nERROR: incomplete info for symbol 10996\nERROR: incomplete info for symbol 11038\nERROR: incomplete info for symbol 11154\nERROR: incomplete info for symbol 11205\nERROR: incomplete info for symbol 11256\nERROR: incomplete info for symbol 11372\nERROR: incomplete info for symbol 11673\nERROR: incomplete info for symbol 11746\nERROR: incomplete info for symbol 11817\nERROR: incomplete info for symbol 11850\nERROR: incomplete info for symbol 12576\nERROR: incomplete info for symbol 12727\nERROR: incomplete info for symbol 12798\nERROR: incomplete info for symbol 12893\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-huQ3E.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libfribidi.so.0.4.0-1.0.11-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libfribidi.so.0.4.0-1.0.11-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/fribidi-1.0.11-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3781\nERROR: incomplete info for symbol 4067\nERROR: incomplete info for symbol 4139\nERROR: incomplete info for symbol 8651\nERROR: incomplete info for symbol 9310\nERROR: incomplete info for symbol 9639\nERROR: incomplete info for symbol 9704\nERROR: incomplete info for symbol 10162\nERROR: incomplete info for symbol 10399\nERROR: incomplete info for symbol 10609\nERROR: incomplete info for symbol 10819\nERROR: incomplete info for symbol 10845\nERROR: incomplete info for symbol 10888\nERROR: incomplete info for symbol 10954\nERROR: incomplete info for symbol 10996\nERROR: incomplete info for symbol 11038\nERROR: incomplete info for symbol 11154\nERROR: incomplete info for symbol 11205\nERROR: incomplete info for symbol 11256\nERROR: incomplete info for symbol 11372\nERROR: incomplete info for symbol 11673\nERROR: incomplete info for symbol 11746\nERROR: incomplete info for symbol 11817\nERROR: incomplete info for symbol 11850\nERROR: incomplete info for symbol 12576\nERROR: incomplete info for symbol 12727\nERROR: incomplete info for symbol 12798\nERROR: incomplete info for symbol 12893\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-tpVu9.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfribidi.so.0.4.0-abi-laboratory-libfribidi-so-0-4-0-libfribidi-so-0-4-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.5258724689483643,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfribidi.so.0.4.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfribidi.so.0.4.0 libfribidi-so-0-4-0-libfribidi-so-0-4-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfribidi.so.0.4.0-abi-laboratory-libfribidi-so-0-4-0-libfribidi-so-0-4-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfribidi.so.0.4.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfribidi.so.0.4.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfribidi.so.0.4.0": 127064,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfribidi.so.0.4.0": 127064
+            }
+        },
+        "experiment": "usr/lib64/libfribidi-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfribidi.so.0.4.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfribidi.so.0.4.0",
+        "different_libs": true
+    }
+]
