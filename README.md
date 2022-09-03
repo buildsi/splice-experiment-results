@@ -33,8 +33,10 @@ $ rm -rf artifacts/*
 $ python get_artifacts.py 2864059558  # main results
 $ python get_artifacts.py 2974827036  # fedora results 0-300
 $ python get_artifacts.py 2982073376  # fedora results 300-350
+# Note that 350-400 always killed the runner, likely a result/memory need too large?
 $ python get_artifacts.py 2980356396  # fedora results 400-500
 $ python get_artifacts.py 2981362335  # fedora results 500-600
+$ python get_artifacts.py 2982656162  # fedora results 700-800
 ```
 
  - [artifacts/cache](artifacts/cache) has cached results (Smeagle and ABI laboratory report)

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.2"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libltdl.so.7.3.2",
+                    "spliced_lib": "libltdl.so.7.3.2",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.078315734863281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libltdl.so.7.3.2",
+                    "spliced_lib": "libltdl.so.7.3.2",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.8650970458984375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.03356361389160156,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.2",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.2-abi-laboratory-libltdl-so-7-3-2-libltdl-so-7-3-2.html\nFound link to libltdl.so.7.3.2-2.4.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libltdl.so.7.3.2-2.4.7-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2824\nERROR: incomplete info for symbol 3395\nERROR: incomplete info for symbol 3881\nERROR: incomplete info for symbol 4003\nERROR: incomplete info for symbol 4169\nERROR: incomplete info for symbol 4643\nERROR: incomplete info for symbol 4682\nERROR: incomplete info for symbol 4708\nERROR: incomplete info for symbol 4921\nERROR: incomplete info for symbol 5135\nERROR: incomplete info for symbol 5616\nERROR: incomplete info for symbol 10003\nERROR: incomplete info for symbol 11311\nERROR: incomplete info for symbol 11373\nERROR: incomplete info for symbol 11458\nERROR: incomplete info for symbol 11594\nERROR: incomplete info for symbol 11730\nERROR: incomplete info for symbol 11866\nERROR: incomplete info for symbol 12002\nERROR: incomplete info for symbol 12138\nERROR: incomplete info for symbol 12492\nERROR: incomplete info for symbol 12874\nERROR: incomplete info for symbol 13940\nERROR: incomplete info for symbol 14042\nERROR: incomplete info for symbol 14180\nERROR: incomplete info for symbol 14291\nERROR: incomplete info for symbol 14404\nERROR: incomplete info for symbol 14493\nERROR: incomplete info for symbol 14608\nERROR: incomplete info for symbol 14683\nERROR: incomplete info for symbol 14841\nERROR: incomplete info for symbol 14928\nERROR: incomplete info for symbol 15017\nERROR: incomplete info for symbol 15230\nERROR: incomplete info for symbol 15489\nERROR: incomplete info for symbol 15719\nERROR: incomplete info for symbol 15911\nERROR: incomplete info for symbol 16131\nERROR: incomplete info for symbol 16348\nERROR: incomplete info for symbol 16425\nERROR: incomplete info for symbol 16471\nERROR: incomplete info for symbol 16623\nERROR: incomplete info for symbol 16649\nERROR: incomplete info for symbol 16694\nERROR: incomplete info for symbol 16739\nERROR: incomplete info for symbol 16797\nERROR: incomplete info for symbol 17044\nERROR: incomplete info for symbol 17328\nERROR: incomplete info for symbol 17390\nERROR: incomplete info for symbol 17890\nERROR: incomplete info for symbol 17954\nERROR: incomplete info for symbol 18733\nERROR: incomplete info for symbol 19043\nERROR: incomplete info for symbol 23963\nERROR: incomplete info for symbol 24563\nERROR: incomplete info for symbol 25059\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-q55sa.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libltdl.so.7.3.2-2.4.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libltdl.so.7.3.2-2.4.7-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2824\nERROR: incomplete info for symbol 3395\nERROR: incomplete info for symbol 3881\nERROR: incomplete info for symbol 4003\nERROR: incomplete info for symbol 4169\nERROR: incomplete info for symbol 4643\nERROR: incomplete info for symbol 4682\nERROR: incomplete info for symbol 4708\nERROR: incomplete info for symbol 4921\nERROR: incomplete info for symbol 5135\nERROR: incomplete info for symbol 5616\nERROR: incomplete info for symbol 10003\nERROR: incomplete info for symbol 11311\nERROR: incomplete info for symbol 11373\nERROR: incomplete info for symbol 11458\nERROR: incomplete info for symbol 11594\nERROR: incomplete info for symbol 11730\nERROR: incomplete info for symbol 11866\nERROR: incomplete info for symbol 12002\nERROR: incomplete info for symbol 12138\nERROR: incomplete info for symbol 12492\nERROR: incomplete info for symbol 12874\nERROR: incomplete info for symbol 13940\nERROR: incomplete info for symbol 14042\nERROR: incomplete info for symbol 14180\nERROR: incomplete info for symbol 14291\nERROR: incomplete info for symbol 14404\nERROR: incomplete info for symbol 14493\nERROR: incomplete info for symbol 14608\nERROR: incomplete info for symbol 14683\nERROR: incomplete info for symbol 14841\nERROR: incomplete info for symbol 14928\nERROR: incomplete info for symbol 15017\nERROR: incomplete info for symbol 15230\nERROR: incomplete info for symbol 15489\nERROR: incomplete info for symbol 15719\nERROR: incomplete info for symbol 15911\nERROR: incomplete info for symbol 16131\nERROR: incomplete info for symbol 16348\nERROR: incomplete info for symbol 16425\nERROR: incomplete info for symbol 16471\nERROR: incomplete info for symbol 16623\nERROR: incomplete info for symbol 16649\nERROR: incomplete info for symbol 16694\nERROR: incomplete info for symbol 16739\nERROR: incomplete info for symbol 16797\nERROR: incomplete info for symbol 17044\nERROR: incomplete info for symbol 17328\nERROR: incomplete info for symbol 17390\nERROR: incomplete info for symbol 17890\nERROR: incomplete info for symbol 17954\nERROR: incomplete info for symbol 18733\nERROR: incomplete info for symbol 19043\nERROR: incomplete info for symbol 23963\nERROR: incomplete info for symbol 24563\nERROR: incomplete info for symbol 25059\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-yYTrg.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.2-abi-laboratory-libltdl-so-7-3-2-libltdl-so-7-3-2.html\n",
+                    "return_code": 0,
+                    "seconds": 0.6630997657775879,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.2 libltdl-so-7-3-2-libltdl-so-7-3-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.2-abi-laboratory-libltdl-so-7-3-2-libltdl-so-7-3-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.2",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.2": 45632,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.2": 45632
+            }
+        },
+        "experiment": "usr/lib64/libltdl-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.2",
+        "different_libs": true
+    }
+]
