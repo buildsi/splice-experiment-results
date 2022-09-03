@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/liblnglo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/liblnglo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "liblnglo.so",
+                    "spliced_lib": "liblnglo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001380443572998047
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "liblnglo.so",
+                    "spliced_lib": "liblnglo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00014257431030273438
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 9.86110520362854,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/liblnglo.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/liblnglo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/liblnglo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/liblnglo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/liblnglo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/liblnglo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/liblnglo.so-abi-laboratory-liblnglo-so-liblnglo-so.html\nFound link to liblnglo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file liblnglo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 157677\nERROR: incomplete info for symbol 489888\nERROR: incomplete info for symbol 581414\nERROR: incomplete info for symbol 581440\nERROR: incomplete info for symbol 581777\nERROR: incomplete info for symbol 581877\nERROR: incomplete info for symbol 584024\nERROR: incomplete info for symbol 585191\nERROR: incomplete info for symbol 585691\nERROR: incomplete info for symbol 588265\nERROR: incomplete info for symbol 588316\nERROR: incomplete info for symbol 588423\nERROR: incomplete info for symbol 588550\nERROR: incomplete info for symbol 588658\nERROR: incomplete info for symbol 588785\nERROR: incomplete info for symbol 588893\nERROR: incomplete info for symbol 589005\nERROR: incomplete info for symbol 589117\nERROR: incomplete info for symbol 589229\nERROR: incomplete info for symbol 589341\nERROR: incomplete info for symbol 589468\nERROR: incomplete info for symbol 589576\nERROR: incomplete info for symbol 589688\nERROR: incomplete info for symbol 589800\nERROR: incomplete info for symbol 589917\nERROR: incomplete info for symbol 591024\nERROR: incomplete info for symbol 595032\nERROR: incomplete info for symbol 595119\nERROR: incomplete info for symbol 595206\nERROR: incomplete info for symbol 595987\nERROR: incomplete info for symbol 596074\nERROR: incomplete info for symbol 596161\nERROR: incomplete info for symbol 604438\nERROR: incomplete info for symbol 604549\nERROR: incomplete info for symbol 605169\nERROR: incomplete info for symbol 605280\nERROR: incomplete info for symbol 948341\nERROR: incomplete info for symbol 948484\nERROR: incomplete info for symbol 948902\nERROR: incomplete info for symbol 949319\nERROR: incomplete info for symbol 964726\nERROR: incomplete info for symbol 965325\nERROR: incomplete info for symbol 965535\nERROR: incomplete info for symbol 965789\nERROR: incomplete info for symbol 971065\nERROR: incomplete info for symbol 972108\nERROR: incomplete info for symbol 972458\nERROR: incomplete info for symbol 972717\nReading v-tables\nlibicuuc.so.69: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-F6Rws.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to liblnglo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file liblnglo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 157677\nERROR: incomplete info for symbol 489888\nERROR: incomplete info for symbol 581414\nERROR: incomplete info for symbol 581440\nERROR: incomplete info for symbol 581777\nERROR: incomplete info for symbol 581877\nERROR: incomplete info for symbol 584024\nERROR: incomplete info for symbol 585191\nERROR: incomplete info for symbol 585691\nERROR: incomplete info for symbol 588265\nERROR: incomplete info for symbol 588316\nERROR: incomplete info for symbol 588423\nERROR: incomplete info for symbol 588550\nERROR: incomplete info for symbol 588658\nERROR: incomplete info for symbol 588785\nERROR: incomplete info for symbol 588893\nERROR: incomplete info for symbol 589005\nERROR: incomplete info for symbol 589117\nERROR: incomplete info for symbol 589229\nERROR: incomplete info for symbol 589341\nERROR: incomplete info for symbol 589468\nERROR: incomplete info for symbol 589576\nERROR: incomplete info for symbol 589688\nERROR: incomplete info for symbol 589800\nERROR: incomplete info for symbol 589917\nERROR: incomplete info for symbol 591024\nERROR: incomplete info for symbol 595032\nERROR: incomplete info for symbol 595119\nERROR: incomplete info for symbol 595206\nERROR: incomplete info for symbol 595987\nERROR: incomplete info for symbol 596074\nERROR: incomplete info for symbol 596161\nERROR: incomplete info for symbol 604438\nERROR: incomplete info for symbol 604549\nERROR: incomplete info for symbol 605169\nERROR: incomplete info for symbol 605280\nERROR: incomplete info for symbol 948341\nERROR: incomplete info for symbol 948484\nERROR: incomplete info for symbol 948902\nERROR: incomplete info for symbol 949319\nERROR: incomplete info for symbol 964726\nERROR: incomplete info for symbol 965325\nERROR: incomplete info for symbol 965535\nERROR: incomplete info for symbol 965789\nERROR: incomplete info for symbol 971065\nERROR: incomplete info for symbol 972108\nERROR: incomplete info for symbol 972458\nERROR: incomplete info for symbol 972717\nReading v-tables\nlibicuuc.so.69: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-BuSC9.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/liblnglo.so-abi-laboratory-liblnglo-so-liblnglo-so.html\n",
+                    "return_code": 0,
+                    "seconds": 156.47515201568604,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/liblnglo.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/liblnglo.so liblnglo-so-liblnglo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/liblnglo.so-abi-laboratory-liblnglo-so-liblnglo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/liblnglo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/liblnglo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/liblnglo.so": 682232,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/liblnglo.so": 682232
+            }
+        },
+        "experiment": "usr/lib64/libreoffice/program/liblnglo-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/liblnglo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/liblnglo.so",
+        "different_libs": true
+    }
+]

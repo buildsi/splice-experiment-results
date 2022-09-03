@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libjdbclo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libjdbclo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjdbclo.so",
+                    "spliced_lib": "libjdbclo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.678436279296875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjdbclo.so",
+                    "spliced_lib": "libjdbclo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.5497207641601562e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 6.2917091846466064,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libjdbclo.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libjdbclo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libjdbclo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libjdbclo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libjdbclo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libjdbclo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libjdbclo.so-abi-laboratory-libjdbclo-so-libjdbclo-so.html\nFound link to libjdbclo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjdbclo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibboost_locale.so.1.76.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ieqap.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libjdbclo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjdbclo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibboost_locale.so.1.76.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-h23oP.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libjdbclo.so-abi-laboratory-libjdbclo-so-libjdbclo-so.html\n",
+                    "return_code": 0,
+                    "seconds": 149.67638874053955,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libjdbclo.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libjdbclo.so libjdbclo-so-libjdbclo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libjdbclo.so-abi-laboratory-libjdbclo-so-libjdbclo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libjdbclo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libjdbclo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libjdbclo.so": 525616,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libjdbclo.so": 525616
+            }
+        },
+        "experiment": "usr/lib64/libreoffice/program/libjdbclo-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libjdbclo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libjdbclo.so",
+        "different_libs": true
+    }
+]

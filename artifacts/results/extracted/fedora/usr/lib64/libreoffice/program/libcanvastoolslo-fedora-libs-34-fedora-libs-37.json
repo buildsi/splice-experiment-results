@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libcanvastoolslo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libcanvastoolslo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcanvastoolslo.so",
+                    "spliced_lib": "libcanvastoolslo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00010132789611816406
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcanvastoolslo.so",
+                    "spliced_lib": "libcanvastoolslo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00020503997802734375
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 5.118870258331299,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libcanvastoolslo.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libcanvastoolslo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libcanvastoolslo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libcanvastoolslo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libcanvastoolslo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libcanvastoolslo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libcanvastoolslo.so-abi-laboratory-libcanvastoolslo-so-libcanvastoolslo-so.html\nFound link to libcanvastoolslo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcanvastoolslo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 70093\nERROR: incomplete info for symbol 70166\nERROR: incomplete info for symbol 70238\nERROR: incomplete info for symbol 70311\nERROR: incomplete info for symbol 71402\nERROR: incomplete info for symbol 71429\nERROR: incomplete info for symbol 72946\nERROR: incomplete info for symbol 73070\nERROR: incomplete info for symbol 80171\nERROR: incomplete info for symbol 84695\nERROR: incomplete info for symbol 88350\nERROR: incomplete info for symbol 116790\nERROR: incomplete info for symbol 117250\nERROR: incomplete info for symbol 118270\nERROR: incomplete info for symbol 119569\nERROR: incomplete info for symbol 120171\nERROR: incomplete info for symbol 123430\nERROR: incomplete info for symbol 123532\nERROR: incomplete info for symbol 130862\nERROR: incomplete info for symbol 132750\nERROR: incomplete info for symbol 133472\nERROR: incomplete info for symbol 133946\nERROR: incomplete info for symbol 134163\nERROR: incomplete info for symbol 134470\nERROR: incomplete info for symbol 134777\nERROR: incomplete info for symbol 181239\nERROR: incomplete info for symbol 182885\nERROR: incomplete info for symbol 182925\nERROR: incomplete info for symbol 183018\nERROR: incomplete info for symbol 183174\nERROR: incomplete info for symbol 183226\nERROR: incomplete info for symbol 183278\nERROR: incomplete info for symbol 183330\nERROR: incomplete info for symbol 183395\nERROR: incomplete info for symbol 183447\nERROR: incomplete info for symbol 186160\nERROR: incomplete info for symbol 193452\nERROR: incomplete info for symbol 193627\nERROR: incomplete info for symbol 194093\nERROR: incomplete info for symbol 196278\nERROR: incomplete info for symbol 254244\nERROR: incomplete info for symbol 255866\nERROR: incomplete info for symbol 259253\nERROR: incomplete info for symbol 259840\nERROR: incomplete info for symbol 272116\nERROR: incomplete info for symbol 276359\nERROR: incomplete info for symbol 276831\nERROR: incomplete info for symbol 276965\nERROR: incomplete info for symbol 278258\nERROR: incomplete info for symbol 278986\nERROR: incomplete info for symbol 279500\nERROR: incomplete info for symbol 281194\nERROR: incomplete info for symbol 281569\nERROR: incomplete info for symbol 281962\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-KCQkM.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcanvastoolslo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcanvastoolslo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 70093\nERROR: incomplete info for symbol 70166\nERROR: incomplete info for symbol 70238\nERROR: incomplete info for symbol 70311\nERROR: incomplete info for symbol 71402\nERROR: incomplete info for symbol 71429\nERROR: incomplete info for symbol 72946\nERROR: incomplete info for symbol 73070\nERROR: incomplete info for symbol 80171\nERROR: incomplete info for symbol 84695\nERROR: incomplete info for symbol 88350\nERROR: incomplete info for symbol 116790\nERROR: incomplete info for symbol 117250\nERROR: incomplete info for symbol 118270\nERROR: incomplete info for symbol 119569\nERROR: incomplete info for symbol 120171\nERROR: incomplete info for symbol 123430\nERROR: incomplete info for symbol 123532\nERROR: incomplete info for symbol 130862\nERROR: incomplete info for symbol 132750\nERROR: incomplete info for symbol 133472\nERROR: incomplete info for symbol 133946\nERROR: incomplete info for symbol 134163\nERROR: incomplete info for symbol 134470\nERROR: incomplete info for symbol 134777\nERROR: incomplete info for symbol 181239\nERROR: incomplete info for symbol 182885\nERROR: incomplete info for symbol 182925\nERROR: incomplete info for symbol 183018\nERROR: incomplete info for symbol 183174\nERROR: incomplete info for symbol 183226\nERROR: incomplete info for symbol 183278\nERROR: incomplete info for symbol 183330\nERROR: incomplete info for symbol 183395\nERROR: incomplete info for symbol 183447\nERROR: incomplete info for symbol 186160\nERROR: incomplete info for symbol 193452\nERROR: incomplete info for symbol 193627\nERROR: incomplete info for symbol 194093\nERROR: incomplete info for symbol 196278\nERROR: incomplete info for symbol 254244\nERROR: incomplete info for symbol 255866\nERROR: incomplete info for symbol 259253\nERROR: incomplete info for symbol 259840\nERROR: incomplete info for symbol 272116\nERROR: incomplete info for symbol 276359\nERROR: incomplete info for symbol 276831\nERROR: incomplete info for symbol 276965\nERROR: incomplete info for symbol 278258\nERROR: incomplete info for symbol 278986\nERROR: incomplete info for symbol 279500\nERROR: incomplete info for symbol 281194\nERROR: incomplete info for symbol 281569\nERROR: incomplete info for symbol 281962\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-9xAo9.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libcanvastoolslo.so-abi-laboratory-libcanvastoolslo-so-libcanvastoolslo-so.html\n",
+                    "return_code": 0,
+                    "seconds": 158.45487189292908,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libcanvastoolslo.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libcanvastoolslo.so libcanvastoolslo-so-libcanvastoolslo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libcanvastoolslo.so-abi-laboratory-libcanvastoolslo-so-libcanvastoolslo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libcanvastoolslo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libcanvastoolslo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libcanvastoolslo.so": 224520,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libcanvastoolslo.so": 224520
+            }
+        },
+        "experiment": "usr/lib64/libreoffice/program/libcanvastoolslo-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libcanvastoolslo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libcanvastoolslo.so",
+        "different_libs": true
+    }
+]
