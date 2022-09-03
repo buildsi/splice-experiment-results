@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libodbcinst.so.2.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libodbcinst.so.2.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libodbcinst.so.2.0.0",
+                    "spliced_lib": "libodbcinst.so.2.0.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.6253204345703125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libodbcinst.so.2.0.0",
+                    "spliced_lib": "libodbcinst.so.2.0.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.0067901611328125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.05375170707702637,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libodbcinst.so.2.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libodbcinst.so.2.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libodbcinst.so.2.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libodbcinst.so.2.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libodbcinst.so.2.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libodbcinst.so.2.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libodbcinst.so.2.0.0-abi-laboratory-libodbcinst-so-2-0-0-libodbcinst-so-2-0-0.html\nFound link to libodbcinst.so.2.0.0-2.3.9-5.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libodbcinst.so.2.0.0-2.3.9-5.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/unixODBC-2.3.9-5.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 15798\nERROR: incomplete info for symbol 16064\nERROR: incomplete info for symbol 16104\nERROR: incomplete info for symbol 16144\nERROR: incomplete info for symbol 16198\nERROR: incomplete info for symbol 16322\nERROR: incomplete info for symbol 16446\nERROR: incomplete info for symbol 16562\nERROR: incomplete info for symbol 16678\nERROR: incomplete info for symbol 17665\nERROR: incomplete info for symbol 18026\nERROR: incomplete info for symbol 18082\nERROR: incomplete info for symbol 18138\nERROR: incomplete info for symbol 18216\nERROR: incomplete info for symbol 18684\nERROR: incomplete info for symbol 18811\nERROR: incomplete info for symbol 18858\nERROR: incomplete info for symbol 18912\nERROR: incomplete info for symbol 19036\nERROR: incomplete info for symbol 19090\nERROR: incomplete info for symbol 19137\nERROR: incomplete info for symbol 20514\nERROR: incomplete info for symbol 20697\nERROR: incomplete info for symbol 21290\nERROR: incomplete info for symbol 21397\nERROR: incomplete info for symbol 21546\nERROR: incomplete info for symbol 28324\nERROR: incomplete info for symbol 28638\nERROR: incomplete info for symbol 30687\nERROR: incomplete info for symbol 31258\nERROR: incomplete info for symbol 31771\nERROR: incomplete info for symbol 32881\nERROR: incomplete info for symbol 32989\nERROR: incomplete info for symbol 33219\nERROR: incomplete info for symbol 33327\nERROR: incomplete info for symbol 36425\nERROR: incomplete info for symbol 37375\nERROR: incomplete info for symbol 37548\nERROR: incomplete info for symbol 37778\nERROR: incomplete info for symbol 39212\nERROR: incomplete info for symbol 40034\nERROR: incomplete info for symbol 45253\nERROR: incomplete info for symbol 46296\nERROR: incomplete info for symbol 47380\nERROR: incomplete info for symbol 48463\nERROR: incomplete info for symbol 49888\nERROR: incomplete info for symbol 53021\nERROR: incomplete info for symbol 53657\nERROR: incomplete info for symbol 54983\nERROR: incomplete info for symbol 55445\nERROR: incomplete info for symbol 56257\nERROR: incomplete info for symbol 56384\nERROR: incomplete info for symbol 57593\nERROR: incomplete info for symbol 57782\nERROR: incomplete info for symbol 60244\nERROR: incomplete info for symbol 60577\nERROR: incomplete info for symbol 61300\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-46Qay.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libodbcinst.so.2.0.0-2.3.9-5.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libodbcinst.so.2.0.0-2.3.9-5.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/unixODBC-2.3.9-5.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 15798\nERROR: incomplete info for symbol 16064\nERROR: incomplete info for symbol 16104\nERROR: incomplete info for symbol 16144\nERROR: incomplete info for symbol 16198\nERROR: incomplete info for symbol 16322\nERROR: incomplete info for symbol 16446\nERROR: incomplete info for symbol 16562\nERROR: incomplete info for symbol 16678\nERROR: incomplete info for symbol 17665\nERROR: incomplete info for symbol 18026\nERROR: incomplete info for symbol 18082\nERROR: incomplete info for symbol 18138\nERROR: incomplete info for symbol 18216\nERROR: incomplete info for symbol 18684\nERROR: incomplete info for symbol 18811\nERROR: incomplete info for symbol 18858\nERROR: incomplete info for symbol 18912\nERROR: incomplete info for symbol 19036\nERROR: incomplete info for symbol 19090\nERROR: incomplete info for symbol 19137\nERROR: incomplete info for symbol 20514\nERROR: incomplete info for symbol 20697\nERROR: incomplete info for symbol 21290\nERROR: incomplete info for symbol 21397\nERROR: incomplete info for symbol 21546\nERROR: incomplete info for symbol 28324\nERROR: incomplete info for symbol 28638\nERROR: incomplete info for symbol 30687\nERROR: incomplete info for symbol 31258\nERROR: incomplete info for symbol 31771\nERROR: incomplete info for symbol 32881\nERROR: incomplete info for symbol 32989\nERROR: incomplete info for symbol 33219\nERROR: incomplete info for symbol 33327\nERROR: incomplete info for symbol 36425\nERROR: incomplete info for symbol 37375\nERROR: incomplete info for symbol 37548\nERROR: incomplete info for symbol 37778\nERROR: incomplete info for symbol 39212\nERROR: incomplete info for symbol 40034\nERROR: incomplete info for symbol 45253\nERROR: incomplete info for symbol 46296\nERROR: incomplete info for symbol 47380\nERROR: incomplete info for symbol 48463\nERROR: incomplete info for symbol 49888\nERROR: incomplete info for symbol 53021\nERROR: incomplete info for symbol 53657\nERROR: incomplete info for symbol 54983\nERROR: incomplete info for symbol 55445\nERROR: incomplete info for symbol 56257\nERROR: incomplete info for symbol 56384\nERROR: incomplete info for symbol 57593\nERROR: incomplete info for symbol 57782\nERROR: incomplete info for symbol 60244\nERROR: incomplete info for symbol 60577\nERROR: incomplete info for symbol 61300\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-AMHUo.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libodbcinst.so.2.0.0-abi-laboratory-libodbcinst-so-2-0-0-libodbcinst-so-2-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 1.1682147979736328,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libodbcinst.so.2.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libodbcinst.so.2.0.0 libodbcinst-so-2-0-0-libodbcinst-so-2-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libodbcinst.so.2.0.0-abi-laboratory-libodbcinst-so-2-0-0-libodbcinst-so-2-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libodbcinst.so.2.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libodbcinst.so.2.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libodbcinst.so.2.0.0": 70032,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libodbcinst.so.2.0.0": 70032
+            }
+        },
+        "experiment": "usr/lib64/libodbcinst-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libodbcinst.so.2.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libodbcinst.so.2.0.0",
+        "different_libs": true
+    }
+]
