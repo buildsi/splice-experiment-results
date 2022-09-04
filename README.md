@@ -33,7 +33,6 @@ $ rm -rf artifacts/*
 $ python get_artifacts.py 2864059558  # main results
 $ python get_artifacts.py 2974827036  # fedora results 0-300
 $ python get_artifacts.py 2982073376  # fedora results 300-350
-# Note that 350-400 always killed the runner, likely a result/memory need too large?
 $ python get_artifacts.py 2980356396  # fedora results 400-500
 $ python get_artifacts.py 2981362335  # fedora results 500-600
 $ python get_artifacts.py 2982425794  # fedora results 600-700
@@ -41,8 +40,11 @@ $ python get_artifacts.py 2982656162  # fedora results 700-800
 $ python get_artifacts.py 2984776434  # fedora results 800-850
 $ python get_artifacts.py 2983082759  # fedora results 900-1000
 $ python get_artifacts.py 2985397046  # fedora results 1000-1050
+
+$ python get_artifacts.py 2986143383  # fedora results 1100-1200
 ```
 
+- [350-400 always killed runner](https://github.com/buildsi/splice-experiment-runs/actions/runs/2982075984)
 - [850-900 had a binary too big](https://github.com/buildsi/splice-experiment-runs/actions/runs/2984982990/workflow)
 
 And then to open (and run/update the notebook)
