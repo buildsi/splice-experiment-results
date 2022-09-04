@@ -39,11 +39,11 @@ $ python get_artifacts.py 2981362335  # fedora results 500-600
 $ python get_artifacts.py 2982425794  # fedora results 600-700
 $ python get_artifacts.py 2982656162  # fedora results 700-800
 $ python get_artifacts.py 2984776434  # fedora results 800-850
-$ python get_artifacts.py 2983082759 # fedora results 900-1000
+$ python get_artifacts.py 2983082759  # fedora results 900-1000
+$ python get_artifacts.py 2985397046  # fedora results 1000-1050
 ```
 
- - [artifacts/cache](artifacts/cache) has cached results (Smeagle and ABI laboratory report)
- - [artifacts/results](artifacts/results) has the experiment.json results.
+- [850-900 had a binary too big](https://github.com/buildsi/splice-experiment-runs/actions/runs/2984982990/workflow)
 
 And then to open (and run/update the notebook)
 

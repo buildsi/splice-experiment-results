@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libsaxlo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libsaxlo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsaxlo.so",
+                    "spliced_lib": "libsaxlo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.747245788574219e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsaxlo.so",
+                    "spliced_lib": "libsaxlo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001327991485595703
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 4.0714240074157715,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libsaxlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libsaxlo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libsaxlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libsaxlo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libsaxlo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libsaxlo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libsaxlo.so-abi-laboratory-libsaxlo-so-libsaxlo-so.html\nFound link to libsaxlo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsaxlo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12353\nERROR: incomplete info for symbol 16149\nERROR: incomplete info for symbol 19975\nERROR: incomplete info for symbol 22395\nERROR: incomplete info for symbol 23178\nERROR: incomplete info for symbol 23767\nERROR: incomplete info for symbol 24027\nERROR: incomplete info for symbol 24121\nERROR: incomplete info for symbol 24215\nERROR: incomplete info for symbol 24759\nERROR: incomplete info for symbol 24853\nERROR: incomplete info for symbol 24947\nERROR: incomplete info for symbol 25710\nERROR: incomplete info for symbol 26141\nERROR: incomplete info for symbol 26572\nERROR: incomplete info for symbol 27878\nERROR: incomplete info for symbol 28447\nERROR: incomplete info for symbol 28603\nERROR: incomplete info for symbol 29172\nERROR: incomplete info for symbol 29328\nERROR: incomplete info for symbol 29622\nERROR: incomplete info for symbol 29818\nERROR: incomplete info for symbol 30014\nERROR: incomplete info for symbol 30614\nERROR: incomplete info for symbol 32121\nERROR: incomplete info for symbol 36023\nERROR: incomplete info for symbol 36128\nERROR: incomplete info for symbol 36253\nERROR: incomplete info for symbol 36359\nERROR: incomplete info for symbol 36644\nERROR: incomplete info for symbol 38387\nERROR: incomplete info for symbol 39277\nERROR: incomplete info for symbol 40182\nERROR: incomplete info for symbol 41199\nERROR: incomplete info for symbol 45619\nERROR: incomplete info for symbol 45725\nERROR: incomplete info for symbol 45851\nERROR: incomplete info for symbol 67462\nERROR: incomplete info for symbol 72858\nERROR: incomplete info for symbol 73083\nERROR: incomplete info for symbol 77798\nERROR: incomplete info for symbol 78062\nERROR: incomplete info for symbol 80306\nERROR: incomplete info for symbol 89365\nERROR: incomplete info for symbol 89629\nERROR: incomplete info for symbol 97479\nERROR: incomplete info for symbol 102279\nERROR: incomplete info for symbol 102391\nERROR: incomplete info for symbol 102560\nERROR: incomplete info for symbol 102685\nERROR: incomplete info for symbol 105731\nERROR: incomplete info for symbol 108716\nERROR: incomplete info for symbol 109522\nERROR: incomplete info for symbol 109686\nERROR: incomplete info for symbol 110202\nERROR: incomplete info for symbol 110628\nERROR: incomplete info for symbol 111120\nERROR: incomplete info for symbol 111452\nERROR: incomplete info for symbol 112207\nERROR: incomplete info for symbol 112307\nERROR: incomplete info for symbol 114274\nERROR: incomplete info for symbol 162366\nERROR: incomplete info for symbol 164493\nERROR: incomplete info for symbol 164564\nERROR: incomplete info for symbol 164691\nERROR: incomplete info for symbol 164865\nERROR: incomplete info for symbol 164936\nERROR: incomplete info for symbol 165830\nERROR: incomplete info for symbol 165953\nERROR: incomplete info for symbol 166076\nERROR: incomplete info for symbol 166153\nERROR: incomplete info for symbol 166305\nERROR: incomplete info for symbol 167599\nERROR: incomplete info for symbol 167778\nERROR: incomplete info for symbol 167855\nERROR: incomplete info for symbol 167963\nERROR: incomplete info for symbol 168029\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-jY9bN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsaxlo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsaxlo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12353\nERROR: incomplete info for symbol 16149\nERROR: incomplete info for symbol 19975\nERROR: incomplete info for symbol 22395\nERROR: incomplete info for symbol 23178\nERROR: incomplete info for symbol 23767\nERROR: incomplete info for symbol 24027\nERROR: incomplete info for symbol 24121\nERROR: incomplete info for symbol 24215\nERROR: incomplete info for symbol 24759\nERROR: incomplete info for symbol 24853\nERROR: incomplete info for symbol 24947\nERROR: incomplete info for symbol 25710\nERROR: incomplete info for symbol 26141\nERROR: incomplete info for symbol 26572\nERROR: incomplete info for symbol 27878\nERROR: incomplete info for symbol 28447\nERROR: incomplete info for symbol 28603\nERROR: incomplete info for symbol 29172\nERROR: incomplete info for symbol 29328\nERROR: incomplete info for symbol 29622\nERROR: incomplete info for symbol 29818\nERROR: incomplete info for symbol 30014\nERROR: incomplete info for symbol 30614\nERROR: incomplete info for symbol 32121\nERROR: incomplete info for symbol 36023\nERROR: incomplete info for symbol 36128\nERROR: incomplete info for symbol 36253\nERROR: incomplete info for symbol 36359\nERROR: incomplete info for symbol 36644\nERROR: incomplete info for symbol 38387\nERROR: incomplete info for symbol 39277\nERROR: incomplete info for symbol 40182\nERROR: incomplete info for symbol 41199\nERROR: incomplete info for symbol 45619\nERROR: incomplete info for symbol 45725\nERROR: incomplete info for symbol 45851\nERROR: incomplete info for symbol 67462\nERROR: incomplete info for symbol 72858\nERROR: incomplete info for symbol 73083\nERROR: incomplete info for symbol 77798\nERROR: incomplete info for symbol 78062\nERROR: incomplete info for symbol 80306\nERROR: incomplete info for symbol 89365\nERROR: incomplete info for symbol 89629\nERROR: incomplete info for symbol 97479\nERROR: incomplete info for symbol 102279\nERROR: incomplete info for symbol 102391\nERROR: incomplete info for symbol 102560\nERROR: incomplete info for symbol 102685\nERROR: incomplete info for symbol 105731\nERROR: incomplete info for symbol 108716\nERROR: incomplete info for symbol 109522\nERROR: incomplete info for symbol 109686\nERROR: incomplete info for symbol 110202\nERROR: incomplete info for symbol 110628\nERROR: incomplete info for symbol 111120\nERROR: incomplete info for symbol 111452\nERROR: incomplete info for symbol 112207\nERROR: incomplete info for symbol 112307\nERROR: incomplete info for symbol 114274\nERROR: incomplete info for symbol 162366\nERROR: incomplete info for symbol 164493\nERROR: incomplete info for symbol 164564\nERROR: incomplete info for symbol 164691\nERROR: incomplete info for symbol 164865\nERROR: incomplete info for symbol 164936\nERROR: incomplete info for symbol 165830\nERROR: incomplete info for symbol 165953\nERROR: incomplete info for symbol 166076\nERROR: incomplete info for symbol 166153\nERROR: incomplete info for symbol 166305\nERROR: incomplete info for symbol 167599\nERROR: incomplete info for symbol 167778\nERROR: incomplete info for symbol 167855\nERROR: incomplete info for symbol 167963\nERROR: incomplete info for symbol 168029\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-ymCAa.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libsaxlo.so-abi-laboratory-libsaxlo-so-libsaxlo-so.html\n",
+                    "return_code": 0,
+                    "seconds": 160.4161295890808,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libsaxlo.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libsaxlo.so libsaxlo-so-libsaxlo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libsaxlo.so-abi-laboratory-libsaxlo-so-libsaxlo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libsaxlo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libsaxlo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libsaxlo.so": 143072,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libsaxlo.so": 143072
+            }
+        },
+        "experiment": "usr/lib64/libreoffice/program/libsaxlo-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libsaxlo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libsaxlo.so",
+        "different_libs": true
+    }
+]
