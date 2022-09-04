@@ -42,6 +42,7 @@ $ python get_artifacts.py 2983082759  # fedora results 900-1000
 $ python get_artifacts.py 2985397046  # fedora results 1000-1050
 
 $ python get_artifacts.py 2986143383  # fedora results 1100-1200
+$ python get_artifacts.py 2988986209  # fedora results 1350-1400
 ```
 
 - [350-400 always killed runner](https://github.com/buildsi/splice-experiment-runs/actions/runs/2982075984)

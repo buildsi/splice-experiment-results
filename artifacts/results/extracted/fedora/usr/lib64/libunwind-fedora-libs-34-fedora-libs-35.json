@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunwind.so.8.0.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunwind.so.8.0.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libunwind.so.8.0.1",
+                    "spliced_lib": "libunwind.so.8.0.1",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.9087066650390625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libunwind.so.8.0.1",
+                    "spliced_lib": "libunwind.so.8.0.1",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.811981201171875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.04775691032409668,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunwind.so.8.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunwind.so.8.0.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunwind.so.8.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunwind.so.8.0.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunwind.so.8.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunwind.so.8.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunwind.so.8.0.1-abi-laboratory-libunwind-so-8-0-1-libunwind-so-8-0-1.html\nFound link to libunwind.so.8.0.1-1.6.2-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libunwind.so.8.0.1-1.6.2-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libunwind-1.6.2-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 26115\nERROR: incomplete info for symbol 38523\nERROR: incomplete info for symbol 38582\nERROR: incomplete info for symbol 38926\nERROR: incomplete info for symbol 38958\nERROR: incomplete info for symbol 38997\nERROR: incomplete info for symbol 39166\nERROR: incomplete info for symbol 39278\nERROR: incomplete info for symbol 39362\nERROR: incomplete info for symbol 39388\nERROR: incomplete info for symbol 46982\nERROR: incomplete info for symbol 47090\nERROR: incomplete info for symbol 47143\nERROR: incomplete info for symbol 47197\nERROR: incomplete info for symbol 47324\nERROR: incomplete info for symbol 47565\nERROR: incomplete info for symbol 47703\nERROR: incomplete info for symbol 47736\nERROR: incomplete info for symbol 47871\nERROR: incomplete info for symbol 47947\nERROR: incomplete info for symbol 48128\nERROR: incomplete info for symbol 48168\nERROR: incomplete info for symbol 48598\nERROR: incomplete info for symbol 49902\nERROR: incomplete info for symbol 50180\nERROR: incomplete info for symbol 51151\nERROR: incomplete info for symbol 51700\nERROR: incomplete info for symbol 54865\nERROR: incomplete info for symbol 58333\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-XBVtG.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libunwind.so.8.0.1-1.6.2-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libunwind.so.8.0.1-1.6.2-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libunwind-1.6.2-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 26115\nERROR: incomplete info for symbol 38523\nERROR: incomplete info for symbol 38582\nERROR: incomplete info for symbol 38926\nERROR: incomplete info for symbol 38958\nERROR: incomplete info for symbol 38997\nERROR: incomplete info for symbol 39166\nERROR: incomplete info for symbol 39278\nERROR: incomplete info for symbol 39362\nERROR: incomplete info for symbol 39388\nERROR: incomplete info for symbol 46982\nERROR: incomplete info for symbol 47090\nERROR: incomplete info for symbol 47143\nERROR: incomplete info for symbol 47197\nERROR: incomplete info for symbol 47324\nERROR: incomplete info for symbol 47565\nERROR: incomplete info for symbol 47703\nERROR: incomplete info for symbol 47736\nERROR: incomplete info for symbol 47871\nERROR: incomplete info for symbol 47947\nERROR: incomplete info for symbol 48128\nERROR: incomplete info for symbol 48168\nERROR: incomplete info for symbol 48598\nERROR: incomplete info for symbol 49902\nERROR: incomplete info for symbol 50180\nERROR: incomplete info for symbol 51151\nERROR: incomplete info for symbol 51700\nERROR: incomplete info for symbol 54865\nERROR: incomplete info for symbol 58333\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-OmcNO.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunwind.so.8.0.1-abi-laboratory-libunwind-so-8-0-1-libunwind-so-8-0-1.html\n",
+                    "return_code": 0,
+                    "seconds": 1.0385041236877441,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunwind.so.8.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunwind.so.8.0.1 libunwind-so-8-0-1-libunwind-so-8-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunwind.so.8.0.1-abi-laboratory-libunwind-so-8-0-1-libunwind-so-8-0-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunwind.so.8.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunwind.so.8.0.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunwind.so.8.0.1": 57992,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunwind.so.8.0.1": 57992
+            }
+        },
+        "experiment": "usr/lib64/libunwind-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunwind.so.8.0.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunwind.so.8.0.1",
+        "different_libs": true
+    }
+]

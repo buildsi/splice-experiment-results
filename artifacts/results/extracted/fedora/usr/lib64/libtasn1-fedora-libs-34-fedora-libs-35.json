@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtasn1.so.6.6.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtasn1.so.6.6.2"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtasn1.so.6.6.2",
+                    "spliced_lib": "libtasn1.so.6.6.2",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.482269287109375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtasn1.so.6.6.2",
+                    "spliced_lib": "libtasn1.so.6.6.2",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.6464462280273438e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.03168511390686035,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtasn1.so.6.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtasn1.so.6.6.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtasn1.so.6.6.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtasn1.so.6.6.2",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtasn1.so.6.6.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtasn1.so.6.6.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtasn1.so.6.6.2-abi-laboratory-libtasn1-so-6-6-2-libtasn1-so-6-6-2.html\nFound link to libtasn1.so.6.6.2-4.18.0-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libtasn1.so.6.6.2-4.18.0-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 25624\nERROR: incomplete info for symbol 26446\nERROR: incomplete info for symbol 27295\nERROR: incomplete info for symbol 27753\nERROR: incomplete info for symbol 27965\nERROR: incomplete info for symbol 28228\nERROR: incomplete info for symbol 28339\nERROR: incomplete info for symbol 28932\nERROR: incomplete info for symbol 30887\nERROR: incomplete info for symbol 31120\nERROR: incomplete info for symbol 31736\nERROR: incomplete info for symbol 31982\nERROR: incomplete info for symbol 32118\nERROR: incomplete info for symbol 32269\nERROR: incomplete info for symbol 32344\nERROR: incomplete info for symbol 32383\nERROR: incomplete info for symbol 32531\nERROR: incomplete info for symbol 33729\nERROR: incomplete info for symbol 35117\nERROR: incomplete info for symbol 35233\nERROR: incomplete info for symbol 42629\nERROR: incomplete info for symbol 43978\nERROR: incomplete info for symbol 51556\nERROR: incomplete info for symbol 51671\nERROR: incomplete info for symbol 51795\nERROR: incomplete info for symbol 52022\nERROR: incomplete info for symbol 54614\nERROR: incomplete info for symbol 54690\nERROR: incomplete info for symbol 55044\nERROR: incomplete info for symbol 57001\nERROR: incomplete info for symbol 58284\nERROR: incomplete info for symbol 59467\nERROR: incomplete info for symbol 65370\nERROR: incomplete info for symbol 65480\nERROR: incomplete info for symbol 65831\nERROR: incomplete info for symbol 66154\nERROR: incomplete info for symbol 66307\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-2Iv64.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libtasn1.so.6.6.2-4.18.0-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libtasn1.so.6.6.2-4.18.0-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 25624\nERROR: incomplete info for symbol 26446\nERROR: incomplete info for symbol 27295\nERROR: incomplete info for symbol 27753\nERROR: incomplete info for symbol 27965\nERROR: incomplete info for symbol 28228\nERROR: incomplete info for symbol 28339\nERROR: incomplete info for symbol 28932\nERROR: incomplete info for symbol 30887\nERROR: incomplete info for symbol 31120\nERROR: incomplete info for symbol 31736\nERROR: incomplete info for symbol 31982\nERROR: incomplete info for symbol 32118\nERROR: incomplete info for symbol 32269\nERROR: incomplete info for symbol 32344\nERROR: incomplete info for symbol 32383\nERROR: incomplete info for symbol 32531\nERROR: incomplete info for symbol 33729\nERROR: incomplete info for symbol 35117\nERROR: incomplete info for symbol 35233\nERROR: incomplete info for symbol 42629\nERROR: incomplete info for symbol 43978\nERROR: incomplete info for symbol 51556\nERROR: incomplete info for symbol 51671\nERROR: incomplete info for symbol 51795\nERROR: incomplete info for symbol 52022\nERROR: incomplete info for symbol 54614\nERROR: incomplete info for symbol 54690\nERROR: incomplete info for symbol 55044\nERROR: incomplete info for symbol 57001\nERROR: incomplete info for symbol 58284\nERROR: incomplete info for symbol 59467\nERROR: incomplete info for symbol 65370\nERROR: incomplete info for symbol 65480\nERROR: incomplete info for symbol 65831\nERROR: incomplete info for symbol 66154\nERROR: incomplete info for symbol 66307\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-OGk02.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtasn1.so.6.6.2-abi-laboratory-libtasn1-so-6-6-2-libtasn1-so-6-6-2.html\n",
+                    "return_code": 0,
+                    "seconds": 0.7736380100250244,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtasn1.so.6.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtasn1.so.6.6.2 libtasn1-so-6-6-2-libtasn1-so-6-6-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtasn1.so.6.6.2-abi-laboratory-libtasn1-so-6-6-2-libtasn1-so-6-6-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtasn1.so.6.6.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtasn1.so.6.6.2",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtasn1.so.6.6.2": 94792,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtasn1.so.6.6.2": 94792
+            }
+        },
+        "experiment": "usr/lib64/libtasn1-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtasn1.so.6.6.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtasn1.so.6.6.2",
+        "different_libs": true
+    }
+]

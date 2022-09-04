@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigc-2.0.so.0.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigc-2.0.so.0.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsigc-2.0.so.0.0.0",
+                    "spliced_lib": "libsigc-2.0.so.0.0.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.863739013671875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsigc-2.0.so.0.0.0",
+                    "spliced_lib": "libsigc-2.0.so.0.0.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.131431579589844e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.15527963638305664,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigc-2.0.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigc-2.0.so.0.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigc-2.0.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigc-2.0.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigc-2.0.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigc-2.0.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigc-2.0.so.0.0.0-abi-laboratory-libsigc-2-0-so-0-0-0-libsigc-2-0-so-0-0-0.html\nFound link to libsigc-2.0.so.0.0.0-2.10.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsigc-2.0.so.0.0.0-2.10.8-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7021\nERROR: incomplete info for symbol 7308\nERROR: incomplete info for symbol 7456\nERROR: incomplete info for symbol 7797\nERROR: incomplete info for symbol 8559\nERROR: incomplete info for symbol 9514\nERROR: incomplete info for symbol 10192\nERROR: incomplete info for symbol 11046\nERROR: incomplete info for symbol 11106\nERROR: incomplete info for symbol 11351\nERROR: incomplete info for symbol 14239\nERROR: incomplete info for symbol 17843\nERROR: incomplete info for symbol 19205\nERROR: incomplete info for symbol 19368\nERROR: incomplete info for symbol 23965\nERROR: incomplete info for symbol 24008\nERROR: incomplete info for symbol 24192\nERROR: incomplete info for symbol 24218\nERROR: incomplete info for symbol 24268\nERROR: incomplete info for symbol 24393\nERROR: incomplete info for symbol 24426\nERROR: incomplete info for symbol 24774\nERROR: incomplete info for symbol 24842\nERROR: incomplete info for symbol 24906\nERROR: incomplete info for symbol 25059\nERROR: incomplete info for symbol 25122\nERROR: incomplete info for symbol 25205\nERROR: incomplete info for symbol 25256\nERROR: incomplete info for symbol 25361\nERROR: incomplete info for symbol 25446\nERROR: incomplete info for symbol 25472\nERROR: incomplete info for symbol 25505\nERROR: incomplete info for symbol 25603\nERROR: incomplete info for symbol 25764\nERROR: incomplete info for symbol 25790\nERROR: incomplete info for symbol 26081\nERROR: incomplete info for symbol 26428\nERROR: incomplete info for symbol 26986\nERROR: incomplete info for symbol 27261\nERROR: incomplete info for symbol 27346\nERROR: incomplete info for symbol 27444\nERROR: incomplete info for symbol 27529\nERROR: incomplete info for symbol 27627\nERROR: incomplete info for symbol 27872\nERROR: incomplete info for symbol 28202\nERROR: incomplete info for symbol 28315\nERROR: incomplete info for symbol 28382\nERROR: incomplete info for symbol 28431\nERROR: incomplete info for symbol 28530\nERROR: incomplete info for symbol 28616\nERROR: incomplete info for symbol 29526\nERROR: incomplete info for symbol 29569\nERROR: incomplete info for symbol 30529\nERROR: incomplete info for symbol 31433\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-TDt2f.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsigc-2.0.so.0.0.0-2.10.8-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsigc-2.0.so.0.0.0-2.10.8-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7021\nERROR: incomplete info for symbol 7308\nERROR: incomplete info for symbol 7456\nERROR: incomplete info for symbol 7797\nERROR: incomplete info for symbol 8559\nERROR: incomplete info for symbol 9514\nERROR: incomplete info for symbol 10192\nERROR: incomplete info for symbol 11046\nERROR: incomplete info for symbol 11106\nERROR: incomplete info for symbol 11351\nERROR: incomplete info for symbol 14239\nERROR: incomplete info for symbol 17843\nERROR: incomplete info for symbol 19205\nERROR: incomplete info for symbol 19368\nERROR: incomplete info for symbol 23965\nERROR: incomplete info for symbol 24008\nERROR: incomplete info for symbol 24192\nERROR: incomplete info for symbol 24218\nERROR: incomplete info for symbol 24268\nERROR: incomplete info for symbol 24393\nERROR: incomplete info for symbol 24426\nERROR: incomplete info for symbol 24774\nERROR: incomplete info for symbol 24842\nERROR: incomplete info for symbol 24906\nERROR: incomplete info for symbol 25059\nERROR: incomplete info for symbol 25122\nERROR: incomplete info for symbol 25205\nERROR: incomplete info for symbol 25256\nERROR: incomplete info for symbol 25361\nERROR: incomplete info for symbol 25446\nERROR: incomplete info for symbol 25472\nERROR: incomplete info for symbol 25505\nERROR: incomplete info for symbol 25603\nERROR: incomplete info for symbol 25764\nERROR: incomplete info for symbol 25790\nERROR: incomplete info for symbol 26081\nERROR: incomplete info for symbol 26428\nERROR: incomplete info for symbol 26986\nERROR: incomplete info for symbol 27261\nERROR: incomplete info for symbol 27346\nERROR: incomplete info for symbol 27444\nERROR: incomplete info for symbol 27529\nERROR: incomplete info for symbol 27627\nERROR: incomplete info for symbol 27872\nERROR: incomplete info for symbol 28202\nERROR: incomplete info for symbol 28315\nERROR: incomplete info for symbol 28382\nERROR: incomplete info for symbol 28431\nERROR: incomplete info for symbol 28530\nERROR: incomplete info for symbol 28616\nERROR: incomplete info for symbol 29526\nERROR: incomplete info for symbol 29569\nERROR: incomplete info for symbol 30529\nERROR: incomplete info for symbol 31433\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-DudAL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigc-2.0.so.0.0.0-abi-laboratory-libsigc-2-0-so-0-0-0-libsigc-2-0-so-0-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 1.028876781463623,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigc-2.0.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigc-2.0.so.0.0.0 libsigc-2-0-so-0-0-0-libsigc-2-0-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigc-2.0.so.0.0.0-abi-laboratory-libsigc-2-0-so-0-0-0-libsigc-2-0-so-0-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigc-2.0.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigc-2.0.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigc-2.0.so.0.0.0": 32704,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigc-2.0.so.0.0.0": 32704
+            }
+        },
+        "experiment": "usr/lib64/libsigc-2-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigc-2.0.so.0.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigc-2.0.so.0.0.0",
+        "different_libs": true
+    }
+]

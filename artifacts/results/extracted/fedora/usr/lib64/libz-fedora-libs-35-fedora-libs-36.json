@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libz.so.1.2.11"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libz.so.1.2.11"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libz.so.1.2.11",
+                    "spliced_lib": "libz.so.1.2.11",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.5789947509765625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libz.so.1.2.11",
+                    "spliced_lib": "libz.so.1.2.11",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.843971252441406e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.03869009017944336,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libz.so.1.2.11 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libz.so.1.2.11",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libz.so.1.2.11",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libz.so.1.2.11",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libz.so.1.2.11\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libz.so.1.2.11\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libz.so.1.2.11-abi-laboratory-libz-so-1-2-11-libz-so-1-2-11.html\nFound link to libz.so.1.2.11-1.2.11-31.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libz.so.1.2.11-1.2.11-31.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 11661\nERROR: incomplete info for symbol 13667\nERROR: incomplete info for symbol 13758\nERROR: incomplete info for symbol 13849\nERROR: incomplete info for symbol 14152\nERROR: incomplete info for symbol 14379\nERROR: incomplete info for symbol 14596\nERROR: incomplete info for symbol 14779\nERROR: incomplete info for symbol 14877\nERROR: incomplete info for symbol 14985\nERROR: incomplete info for symbol 15201\nERROR: incomplete info for symbol 15339\nERROR: incomplete info for symbol 15472\nERROR: incomplete info for symbol 17302\nERROR: incomplete info for symbol 17574\nERROR: incomplete info for symbol 17638\nERROR: incomplete info for symbol 17946\nERROR: incomplete info for symbol 19192\nERROR: incomplete info for symbol 19846\nERROR: incomplete info for symbol 19966\nERROR: incomplete info for symbol 21101\nERROR: incomplete info for symbol 21133\nERROR: incomplete info for symbol 21275\nERROR: incomplete info for symbol 21435\nERROR: incomplete info for symbol 21546\nERROR: incomplete info for symbol 22133\nERROR: incomplete info for symbol 22229\nERROR: incomplete info for symbol 22404\nERROR: incomplete info for symbol 24223\nERROR: incomplete info for symbol 24286\nERROR: incomplete info for symbol 24621\nERROR: incomplete info for symbol 24833\nERROR: incomplete info for symbol 24982\nERROR: incomplete info for symbol 25286\nERROR: incomplete info for symbol 25428\nERROR: incomplete info for symbol 25809\nERROR: incomplete info for symbol 25964\nERROR: incomplete info for symbol 26113\nERROR: incomplete info for symbol 26256\nERROR: incomplete info for symbol 26446\nERROR: incomplete info for symbol 26472\nERROR: incomplete info for symbol 26707\nERROR: incomplete info for symbol 26824\nERROR: incomplete info for symbol 26856\nERROR: incomplete info for symbol 27125\nERROR: incomplete info for symbol 27235\nERROR: incomplete info for symbol 27312\nERROR: incomplete info for symbol 27389\nERROR: incomplete info for symbol 27651\nERROR: incomplete info for symbol 27703\nERROR: incomplete info for symbol 27878\nERROR: incomplete info for symbol 28081\nERROR: incomplete info for symbol 28177\nERROR: incomplete info for symbol 28216\nERROR: incomplete info for symbol 28272\nERROR: incomplete info for symbol 28352\nERROR: incomplete info for symbol 28408\nERROR: incomplete info for symbol 28447\nERROR: incomplete info for symbol 28493\nERROR: incomplete info for symbol 28660\nERROR: incomplete info for symbol 28801\nERROR: incomplete info for symbol 28974\nERROR: incomplete info for symbol 29077\nERROR: incomplete info for symbol 29128\nERROR: incomplete info for symbol 29282\nERROR: incomplete info for symbol 29595\nERROR: incomplete info for symbol 29659\nERROR: incomplete info for symbol 29897\nERROR: incomplete info for symbol 30040\nERROR: incomplete info for symbol 30213\nERROR: incomplete info for symbol 30363\nERROR: incomplete info for symbol 30497\nERROR: incomplete info for symbol 30883\nERROR: incomplete info for symbol 30984\nERROR: incomplete info for symbol 31086\nERROR: incomplete info for symbol 31247\nERROR: incomplete info for symbol 31512\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ZjYC8.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libz.so.1.2.11-1.2.11-31.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libz.so.1.2.11-1.2.11-31.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 11661\nERROR: incomplete info for symbol 13667\nERROR: incomplete info for symbol 13758\nERROR: incomplete info for symbol 13849\nERROR: incomplete info for symbol 14152\nERROR: incomplete info for symbol 14379\nERROR: incomplete info for symbol 14596\nERROR: incomplete info for symbol 14779\nERROR: incomplete info for symbol 14877\nERROR: incomplete info for symbol 14985\nERROR: incomplete info for symbol 15201\nERROR: incomplete info for symbol 15339\nERROR: incomplete info for symbol 15472\nERROR: incomplete info for symbol 17302\nERROR: incomplete info for symbol 17574\nERROR: incomplete info for symbol 17638\nERROR: incomplete info for symbol 17946\nERROR: incomplete info for symbol 19192\nERROR: incomplete info for symbol 19846\nERROR: incomplete info for symbol 19966\nERROR: incomplete info for symbol 21101\nERROR: incomplete info for symbol 21133\nERROR: incomplete info for symbol 21275\nERROR: incomplete info for symbol 21435\nERROR: incomplete info for symbol 21546\nERROR: incomplete info for symbol 22133\nERROR: incomplete info for symbol 22229\nERROR: incomplete info for symbol 22404\nERROR: incomplete info for symbol 24223\nERROR: incomplete info for symbol 24286\nERROR: incomplete info for symbol 24621\nERROR: incomplete info for symbol 24833\nERROR: incomplete info for symbol 24982\nERROR: incomplete info for symbol 25286\nERROR: incomplete info for symbol 25428\nERROR: incomplete info for symbol 25809\nERROR: incomplete info for symbol 25964\nERROR: incomplete info for symbol 26113\nERROR: incomplete info for symbol 26256\nERROR: incomplete info for symbol 26446\nERROR: incomplete info for symbol 26472\nERROR: incomplete info for symbol 26707\nERROR: incomplete info for symbol 26824\nERROR: incomplete info for symbol 26856\nERROR: incomplete info for symbol 27125\nERROR: incomplete info for symbol 27235\nERROR: incomplete info for symbol 27312\nERROR: incomplete info for symbol 27389\nERROR: incomplete info for symbol 27651\nERROR: incomplete info for symbol 27703\nERROR: incomplete info for symbol 27878\nERROR: incomplete info for symbol 28081\nERROR: incomplete info for symbol 28177\nERROR: incomplete info for symbol 28216\nERROR: incomplete info for symbol 28272\nERROR: incomplete info for symbol 28352\nERROR: incomplete info for symbol 28408\nERROR: incomplete info for symbol 28447\nERROR: incomplete info for symbol 28493\nERROR: incomplete info for symbol 28660\nERROR: incomplete info for symbol 28801\nERROR: incomplete info for symbol 28974\nERROR: incomplete info for symbol 29077\nERROR: incomplete info for symbol 29128\nERROR: incomplete info for symbol 29282\nERROR: incomplete info for symbol 29595\nERROR: incomplete info for symbol 29659\nERROR: incomplete info for symbol 29897\nERROR: incomplete info for symbol 30040\nERROR: incomplete info for symbol 30213\nERROR: incomplete info for symbol 30363\nERROR: incomplete info for symbol 30497\nERROR: incomplete info for symbol 30883\nERROR: incomplete info for symbol 30984\nERROR: incomplete info for symbol 31086\nERROR: incomplete info for symbol 31247\nERROR: incomplete info for symbol 31512\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-AuvNY.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libz.so.1.2.11-abi-laboratory-libz-so-1-2-11-libz-so-1-2-11.html\n",
+                    "return_code": 0,
+                    "seconds": 0.8052897453308105,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libz.so.1.2.11 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libz.so.1.2.11 libz-so-1-2-11-libz-so-1-2-11 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libz.so.1.2.11-abi-laboratory-libz-so-1-2-11-libz-so-1-2-11.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libz.so.1.2.11",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libz.so.1.2.11",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libz.so.1.2.11": 103280,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libz.so.1.2.11": 103280
+            }
+        },
+        "experiment": "usr/lib64/libz-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libz.so.1.2.11",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libz.so.1.2.11",
+        "different_libs": true
+    }
+]

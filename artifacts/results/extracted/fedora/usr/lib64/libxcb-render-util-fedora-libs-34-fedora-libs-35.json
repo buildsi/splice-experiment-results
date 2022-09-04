@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-render-util.so.0.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-render-util.so.0.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxcb-render-util.so.0.0.0",
+                    "spliced_lib": "libxcb-render-util.so.0.0.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.170967102050781e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxcb-render-util.so.0.0.0",
+                    "spliced_lib": "libxcb-render-util.so.0.0.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.430511474609375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.02022242546081543,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-render-util.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-render-util.so.0.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-render-util.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-render-util.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-render-util.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-render-util.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-render-util.so.0.0.0-abi-laboratory-libxcb-render-util-so-0-0-0-libxcb-render-util-so-0-0-0.html\nFound link to libxcb-render-util.so.0.0.0-0.3.9-20.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxcb-render-util.so.0.0.0-0.3.9-20.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1944\nERROR: incomplete info for symbol 2161\nERROR: incomplete info for symbol 2326\nERROR: incomplete info for symbol 2467\nERROR: incomplete info for symbol 2589\nERROR: incomplete info for symbol 2848\nERROR: incomplete info for symbol 3107\nERROR: incomplete info for symbol 3366\nERROR: incomplete info for symbol 3565\nERROR: incomplete info for symbol 3745\nERROR: incomplete info for symbol 3925\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-IHl68.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libxcb-render-util.so.0.0.0-0.3.9-20.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxcb-render-util.so.0.0.0-0.3.9-20.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1944\nERROR: incomplete info for symbol 2161\nERROR: incomplete info for symbol 2326\nERROR: incomplete info for symbol 2467\nERROR: incomplete info for symbol 2589\nERROR: incomplete info for symbol 2848\nERROR: incomplete info for symbol 3107\nERROR: incomplete info for symbol 3366\nERROR: incomplete info for symbol 3565\nERROR: incomplete info for symbol 3745\nERROR: incomplete info for symbol 3925\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-w4onv.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-render-util.so.0.0.0-abi-laboratory-libxcb-render-util-so-0-0-0-libxcb-render-util-so-0-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.4344902038574219,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-render-util.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-render-util.so.0.0.0 libxcb-render-util-so-0-0-0-libxcb-render-util-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-render-util.so.0.0.0-abi-laboratory-libxcb-render-util-so-0-0-0-libxcb-render-util-so-0-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-render-util.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-render-util.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-render-util.so.0.0.0": 23736,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-render-util.so.0.0.0": 23736
+            }
+        },
+        "experiment": "usr/lib64/libxcb-render-util-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-render-util.so.0.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-render-util.so.0.0.0",
+        "different_libs": true
+    }
+]
