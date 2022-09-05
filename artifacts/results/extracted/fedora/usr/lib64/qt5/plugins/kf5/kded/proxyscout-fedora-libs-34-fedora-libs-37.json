@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "proxyscout.so",
+                    "spliced_lib": "proxyscout.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.151199340820312e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "proxyscout.so",
+                    "spliced_lib": "proxyscout.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.4836273193359375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 1.4676263332366943,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so-abi-laboratory-proxyscout-so-proxyscout-so.html\nFound link to proxyscout.so-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file proxyscout.so-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/kf5/kded/../../../../../../.dwz/kf5-kio-5.97.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Qml.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-5SZfY.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to proxyscout.so-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file proxyscout.so-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/kf5/kded/../../../../../../.dwz/kf5-kio-5.97.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Qml.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-ZtHEr.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so-abi-laboratory-proxyscout-so-proxyscout-so.html\n",
+                    "return_code": 0,
+                    "seconds": 28.33630394935608,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so proxyscout-so-proxyscout-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so-abi-laboratory-proxyscout-so-proxyscout-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so": 129736,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so": 129736
+            }
+        },
+        "experiment": "usr/lib64/qt5/plugins/kf5/kded/proxyscout-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/kf5/kded/proxyscout.so",
+        "different_libs": true
+    }
+]

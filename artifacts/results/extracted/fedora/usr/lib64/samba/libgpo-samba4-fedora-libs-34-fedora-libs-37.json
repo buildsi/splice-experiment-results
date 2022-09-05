@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpo-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpo-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgpo-samba4.so",
+                    "spliced_lib": "libgpo-samba4.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.7220458984375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgpo-samba4.so",
+                    "spliced_lib": "libgpo-samba4.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.00543212890625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.06483912467956543,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpo-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpo-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpo-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpo-samba4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpo-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpo-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpo-samba4.so-abi-laboratory-libgpo-samba4-so-libgpo-samba4-so.html\nFound link to libgpo-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgpo-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 11698\nERROR: incomplete info for symbol 11792\nERROR: incomplete info for symbol 11942\nERROR: incomplete info for symbol 12182\nERROR: incomplete info for symbol 12609\nERROR: incomplete info for symbol 13038\nERROR: incomplete info for symbol 13621\nERROR: incomplete info for symbol 13739\nERROR: incomplete info for symbol 13857\nERROR: incomplete info for symbol 14857\nERROR: incomplete info for symbol 15415\nERROR: incomplete info for symbol 17488\nERROR: incomplete info for symbol 17570\nERROR: incomplete info for symbol 18670\nERROR: incomplete info for symbol 19056\nERROR: incomplete info for symbol 19395\nERROR: incomplete info for symbol 19702\nERROR: incomplete info for symbol 20191\nERROR: incomplete info for symbol 20447\nERROR: incomplete info for symbol 21019\nERROR: incomplete info for symbol 21394\nERROR: incomplete info for symbol 21548\nERROR: incomplete info for symbol 21925\nERROR: incomplete info for symbol 24461\nERROR: incomplete info for symbol 24616\nERROR: incomplete info for symbol 28297\nERROR: incomplete info for symbol 28627\nERROR: incomplete info for symbol 29102\nERROR: incomplete info for symbol 29206\nERROR: incomplete info for symbol 29367\nERROR: incomplete info for symbol 29599\nERROR: incomplete info for symbol 30569\nERROR: incomplete info for symbol 30746\nERROR: incomplete info for symbol 31959\nERROR: incomplete info for symbol 32166\nERROR: incomplete info for symbol 34148\nERROR: incomplete info for symbol 35435\nERROR: incomplete info for symbol 35576\nERROR: incomplete info for symbol 35735\nERROR: incomplete info for symbol 35844\nERROR: incomplete info for symbol 37250\nERROR: incomplete info for symbol 37533\nERROR: incomplete info for symbol 38314\nERROR: incomplete info for symbol 38881\nERROR: incomplete info for symbol 41069\nERROR: incomplete info for symbol 41819\nERROR: incomplete info for symbol 42514\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-8oRdD.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgpo-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgpo-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 11698\nERROR: incomplete info for symbol 11792\nERROR: incomplete info for symbol 11942\nERROR: incomplete info for symbol 12182\nERROR: incomplete info for symbol 12609\nERROR: incomplete info for symbol 13038\nERROR: incomplete info for symbol 13621\nERROR: incomplete info for symbol 13739\nERROR: incomplete info for symbol 13857\nERROR: incomplete info for symbol 14857\nERROR: incomplete info for symbol 15415\nERROR: incomplete info for symbol 17488\nERROR: incomplete info for symbol 17570\nERROR: incomplete info for symbol 18670\nERROR: incomplete info for symbol 19056\nERROR: incomplete info for symbol 19395\nERROR: incomplete info for symbol 19702\nERROR: incomplete info for symbol 20191\nERROR: incomplete info for symbol 20447\nERROR: incomplete info for symbol 21019\nERROR: incomplete info for symbol 21394\nERROR: incomplete info for symbol 21548\nERROR: incomplete info for symbol 21925\nERROR: incomplete info for symbol 24461\nERROR: incomplete info for symbol 24616\nERROR: incomplete info for symbol 28297\nERROR: incomplete info for symbol 28627\nERROR: incomplete info for symbol 29102\nERROR: incomplete info for symbol 29206\nERROR: incomplete info for symbol 29367\nERROR: incomplete info for symbol 29599\nERROR: incomplete info for symbol 30569\nERROR: incomplete info for symbol 30746\nERROR: incomplete info for symbol 31959\nERROR: incomplete info for symbol 32166\nERROR: incomplete info for symbol 34148\nERROR: incomplete info for symbol 35435\nERROR: incomplete info for symbol 35576\nERROR: incomplete info for symbol 35735\nERROR: incomplete info for symbol 35844\nERROR: incomplete info for symbol 37250\nERROR: incomplete info for symbol 37533\nERROR: incomplete info for symbol 38314\nERROR: incomplete info for symbol 38881\nERROR: incomplete info for symbol 41069\nERROR: incomplete info for symbol 41819\nERROR: incomplete info for symbol 42514\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-WVqJw.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpo-samba4.so-abi-laboratory-libgpo-samba4-so-libgpo-samba4-so.html\n",
+                    "return_code": 0,
+                    "seconds": 13.613653182983398,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpo-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpo-samba4.so libgpo-samba4-so-libgpo-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpo-samba4.so-abi-laboratory-libgpo-samba4-so-libgpo-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpo-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpo-samba4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpo-samba4.so": 83472,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpo-samba4.so": 83472
+            }
+        },
+        "experiment": "usr/lib64/samba/libgpo-samba4-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpo-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpo-samba4.so",
+        "different_libs": true
+    }
+]

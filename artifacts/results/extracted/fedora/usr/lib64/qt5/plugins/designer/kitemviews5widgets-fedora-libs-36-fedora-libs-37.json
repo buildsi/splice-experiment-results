@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kitemviews5widgets.so",
+                    "spliced_lib": "kitemviews5widgets.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.076957702636719e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kitemviews5widgets.so",
+                    "spliced_lib": "kitemviews5widgets.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.5299530029296875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.6406643390655518,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so-abi-laboratory-kitemviews5widgets-so-kitemviews5widgets-so.html\nFound link to kitemviews5widgets.so-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kitemviews5widgets.so-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/designer/../../../../../.dwz/kf5-kitemviews-5.97.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibKF5ItemViews.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-AcnLK.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to kitemviews5widgets.so-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kitemviews5widgets.so-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/designer/../../../../../.dwz/kf5-kitemviews-5.97.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibKF5ItemViews.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-ctaBC.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so-abi-laboratory-kitemviews5widgets-so-kitemviews5widgets-so.html\n",
+                    "return_code": 0,
+                    "seconds": 2.65548038482666,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so kitemviews5widgets-so-kitemviews5widgets-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so-abi-laboratory-kitemviews5widgets-so-kitemviews5widgets-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so": 46216,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so": 46216
+            }
+        },
+        "experiment": "usr/lib64/qt5/plugins/designer/kitemviews5widgets-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/designer/kitemviews5widgets.so",
+        "different_libs": true
+    }
+]

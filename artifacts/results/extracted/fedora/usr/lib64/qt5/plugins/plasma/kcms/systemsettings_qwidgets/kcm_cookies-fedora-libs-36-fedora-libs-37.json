@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kcm_cookies.so",
+                    "spliced_lib": "kcm_cookies.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.202957153320312e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kcm_cookies.so",
+                    "spliced_lib": "kcm_cookies.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.106231689453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 1.7599446773529053,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so-abi-laboratory-kcm_cookies-so-kcm_cookies-so.html\nFound link to kcm_cookies.so-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kcm_cookies.so-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/../../../../../../../.dwz/kf5-kio-5.97.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibKF5ItemViews.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-rZQWa.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to kcm_cookies.so-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kcm_cookies.so-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/../../../../../../../.dwz/kf5-kio-5.97.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibKF5ItemViews.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-kbL5f.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so-abi-laboratory-kcm_cookies-so-kcm_cookies-so.html\n",
+                    "return_code": 0,
+                    "seconds": 29.280662298202515,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so kcm_cookies-so-kcm_cookies-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so-abi-laboratory-kcm_cookies-so-kcm_cookies-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so": 154136,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so": 154136
+            }
+        },
+        "experiment": "usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_cookies.so",
+        "different_libs": true
+    }
+]

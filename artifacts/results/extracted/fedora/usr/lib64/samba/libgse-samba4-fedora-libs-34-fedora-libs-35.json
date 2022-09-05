@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgse-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgse-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgse-samba4.so",
+                    "spliced_lib": "libgse-samba4.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.845329284667969e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgse-samba4.so",
+                    "spliced_lib": "libgse-samba4.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.412101745605469e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0866842269897461,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgse-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgse-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgse-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgse-samba4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgse-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgse-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgse-samba4.so-abi-laboratory-libgse-samba4-so-libgse-samba4-so.html\nFound link to libgse-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgse-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 19074\nERROR: incomplete info for symbol 19562\nERROR: incomplete info for symbol 20355\nERROR: incomplete info for symbol 20613\nERROR: incomplete info for symbol 22692\nERROR: incomplete info for symbol 24245\nERROR: incomplete info for symbol 25550\nERROR: incomplete info for symbol 26056\nERROR: incomplete info for symbol 26818\nERROR: incomplete info for symbol 27662\nERROR: incomplete info for symbol 28541\nERROR: incomplete info for symbol 29611\nERROR: incomplete info for symbol 31384\nERROR: incomplete info for symbol 32293\nERROR: incomplete info for symbol 32510\nERROR: incomplete info for symbol 32550\nERROR: incomplete info for symbol 33881\nERROR: incomplete info for symbol 34379\nERROR: incomplete info for symbol 38132\nERROR: incomplete info for symbol 38467\nERROR: incomplete info for symbol 38574\nERROR: incomplete info for symbol 40224\nERROR: incomplete info for symbol 41066\nERROR: incomplete info for symbol 41181\nERROR: incomplete info for symbol 42051\nERROR: incomplete info for symbol 43132\nERROR: incomplete info for symbol 43313\nERROR: incomplete info for symbol 43769\nERROR: incomplete info for symbol 44274\nERROR: incomplete info for symbol 44388\nERROR: incomplete info for symbol 46176\nERROR: incomplete info for symbol 47110\nERROR: incomplete info for symbol 47387\nERROR: incomplete info for symbol 47901\nERROR: incomplete info for symbol 48698\nERROR: incomplete info for symbol 49490\nERROR: incomplete info for symbol 50446\nERROR: incomplete info for symbol 51589\nERROR: incomplete info for symbol 52476\nERROR: incomplete info for symbol 53131\nERROR: incomplete info for symbol 53523\nERROR: incomplete info for symbol 55265\nERROR: incomplete info for symbol 55682\nERROR: incomplete info for symbol 57217\nERROR: incomplete info for symbol 58628\nERROR: incomplete info for symbol 59164\nERROR: incomplete info for symbol 60651\nERROR: incomplete info for symbol 60882\nERROR: incomplete info for symbol 61251\nERROR: incomplete info for symbol 63404\nERROR: incomplete info for symbol 63650\nERROR: incomplete info for symbol 63997\nERROR: incomplete info for symbol 69253\nERROR: incomplete info for symbol 69778\nERROR: incomplete info for symbol 70311\nERROR: incomplete info for symbol 71059\nERROR: incomplete info for symbol 71911\nERROR: incomplete info for symbol 72298\nERROR: incomplete info for symbol 73010\nERROR: incomplete info for symbol 76798\nERROR: incomplete info for symbol 77445\nERROR: incomplete info for symbol 77666\nERROR: incomplete info for symbol 98202\nERROR: incomplete info for symbol 98815\nERROR: incomplete info for symbol 99116\nERROR: incomplete info for symbol 100752\nERROR: incomplete info for symbol 101367\nERROR: incomplete info for symbol 101754\nERROR: incomplete info for symbol 101875\nERROR: incomplete info for symbol 102112\nERROR: incomplete info for symbol 102331\nERROR: incomplete info for symbol 102997\nERROR: incomplete info for symbol 103222\nERROR: incomplete info for symbol 103317\nERROR: incomplete info for symbol 104441\nERROR: incomplete info for symbol 104655\nERROR: incomplete info for symbol 105064\nERROR: incomplete info for symbol 105914\nERROR: incomplete info for symbol 106189\nERROR: incomplete info for symbol 108168\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-lTm0c.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgse-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgse-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 19074\nERROR: incomplete info for symbol 19562\nERROR: incomplete info for symbol 20355\nERROR: incomplete info for symbol 20613\nERROR: incomplete info for symbol 22692\nERROR: incomplete info for symbol 24245\nERROR: incomplete info for symbol 25550\nERROR: incomplete info for symbol 26056\nERROR: incomplete info for symbol 26818\nERROR: incomplete info for symbol 27662\nERROR: incomplete info for symbol 28541\nERROR: incomplete info for symbol 29611\nERROR: incomplete info for symbol 31384\nERROR: incomplete info for symbol 32293\nERROR: incomplete info for symbol 32510\nERROR: incomplete info for symbol 32550\nERROR: incomplete info for symbol 33881\nERROR: incomplete info for symbol 34379\nERROR: incomplete info for symbol 38132\nERROR: incomplete info for symbol 38467\nERROR: incomplete info for symbol 38574\nERROR: incomplete info for symbol 40224\nERROR: incomplete info for symbol 41066\nERROR: incomplete info for symbol 41181\nERROR: incomplete info for symbol 42051\nERROR: incomplete info for symbol 43132\nERROR: incomplete info for symbol 43313\nERROR: incomplete info for symbol 43769\nERROR: incomplete info for symbol 44274\nERROR: incomplete info for symbol 44388\nERROR: incomplete info for symbol 46176\nERROR: incomplete info for symbol 47110\nERROR: incomplete info for symbol 47387\nERROR: incomplete info for symbol 47901\nERROR: incomplete info for symbol 48698\nERROR: incomplete info for symbol 49490\nERROR: incomplete info for symbol 50446\nERROR: incomplete info for symbol 51589\nERROR: incomplete info for symbol 52476\nERROR: incomplete info for symbol 53131\nERROR: incomplete info for symbol 53523\nERROR: incomplete info for symbol 55265\nERROR: incomplete info for symbol 55682\nERROR: incomplete info for symbol 57217\nERROR: incomplete info for symbol 58628\nERROR: incomplete info for symbol 59164\nERROR: incomplete info for symbol 60651\nERROR: incomplete info for symbol 60882\nERROR: incomplete info for symbol 61251\nERROR: incomplete info for symbol 63404\nERROR: incomplete info for symbol 63650\nERROR: incomplete info for symbol 63997\nERROR: incomplete info for symbol 69253\nERROR: incomplete info for symbol 69778\nERROR: incomplete info for symbol 70311\nERROR: incomplete info for symbol 71059\nERROR: incomplete info for symbol 71911\nERROR: incomplete info for symbol 72298\nERROR: incomplete info for symbol 73010\nERROR: incomplete info for symbol 76798\nERROR: incomplete info for symbol 77445\nERROR: incomplete info for symbol 77666\nERROR: incomplete info for symbol 98202\nERROR: incomplete info for symbol 98815\nERROR: incomplete info for symbol 99116\nERROR: incomplete info for symbol 100752\nERROR: incomplete info for symbol 101367\nERROR: incomplete info for symbol 101754\nERROR: incomplete info for symbol 101875\nERROR: incomplete info for symbol 102112\nERROR: incomplete info for symbol 102331\nERROR: incomplete info for symbol 102997\nERROR: incomplete info for symbol 103222\nERROR: incomplete info for symbol 103317\nERROR: incomplete info for symbol 104441\nERROR: incomplete info for symbol 104655\nERROR: incomplete info for symbol 105064\nERROR: incomplete info for symbol 105914\nERROR: incomplete info for symbol 106189\nERROR: incomplete info for symbol 108168\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-3JCsW.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgse-samba4.so-abi-laboratory-libgse-samba4-so-libgse-samba4-so.html\n",
+                    "return_code": 0,
+                    "seconds": 12.363856792449951,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgse-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgse-samba4.so libgse-samba4-so-libgse-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgse-samba4.so-abi-laboratory-libgse-samba4-so-libgse-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgse-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgse-samba4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgse-samba4.so": 198944,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgse-samba4.so": 198944
+            }
+        },
+        "experiment": "usr/lib64/samba/libgse-samba4-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgse-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgse-samba4.so",
+        "different_libs": true
+    }
+]

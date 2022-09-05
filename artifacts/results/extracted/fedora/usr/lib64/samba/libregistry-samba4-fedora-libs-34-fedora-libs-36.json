@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libregistry-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libregistry-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libregistry-samba4.so",
+                    "spliced_lib": "libregistry-samba4.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.151199340820312e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libregistry-samba4.so",
+                    "spliced_lib": "libregistry-samba4.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.465217590332031e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.07704043388366699,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libregistry-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libregistry-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libregistry-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libregistry-samba4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libregistry-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libregistry-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libregistry-samba4.so-abi-laboratory-libregistry-samba4-so-libregistry-samba4-so.html\nFound link to libregistry-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libregistry-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12341\nERROR: incomplete info for symbol 12488\nERROR: incomplete info for symbol 12575\nERROR: incomplete info for symbol 12621\nERROR: incomplete info for symbol 12707\nERROR: incomplete info for symbol 12802\nERROR: incomplete info for symbol 12860\nERROR: incomplete info for symbol 12951\nERROR: incomplete info for symbol 13037\nERROR: incomplete info for symbol 13108\nERROR: incomplete info for symbol 13203\nERROR: incomplete info for symbol 13262\nERROR: incomplete info for symbol 13357\nERROR: incomplete info for symbol 13594\nERROR: incomplete info for symbol 13929\nERROR: incomplete info for symbol 14063\nERROR: incomplete info for symbol 14116\nERROR: incomplete info for symbol 14203\nERROR: incomplete info for symbol 14291\nERROR: incomplete info for symbol 14399\nERROR: incomplete info for symbol 14470\nERROR: incomplete info for symbol 14611\nERROR: incomplete info for symbol 14772\nERROR: incomplete info for symbol 14893\nERROR: incomplete info for symbol 15012\nERROR: incomplete info for symbol 15177\nERROR: incomplete info for symbol 15282\nERROR: incomplete info for symbol 16040\nERROR: incomplete info for symbol 20855\nERROR: incomplete info for symbol 23937\nERROR: incomplete info for symbol 24376\nERROR: incomplete info for symbol 24415\nERROR: incomplete info for symbol 24504\nERROR: incomplete info for symbol 24798\nERROR: incomplete info for symbol 25135\nERROR: incomplete info for symbol 25284\nERROR: incomplete info for symbol 25472\nERROR: incomplete info for symbol 25621\nERROR: incomplete info for symbol 25750\nERROR: incomplete info for symbol 25839\nERROR: incomplete info for symbol 26168\nERROR: incomplete info for symbol 26440\nERROR: incomplete info for symbol 26529\nERROR: incomplete info for symbol 26618\nERROR: incomplete info for symbol 26667\nERROR: incomplete info for symbol 26736\nERROR: incomplete info for symbol 27316\nERROR: incomplete info for symbol 27498\nERROR: incomplete info for symbol 28718\nERROR: incomplete info for symbol 30776\nERROR: incomplete info for symbol 31223\nERROR: incomplete info for symbol 32321\nERROR: incomplete info for symbol 32734\nERROR: incomplete info for symbol 35899\nERROR: incomplete info for symbol 36387\nERROR: incomplete info for symbol 39853\nERROR: incomplete info for symbol 43642\nERROR: incomplete info for symbol 44312\nERROR: incomplete info for symbol 44947\nERROR: incomplete info for symbol 45050\nERROR: incomplete info for symbol 46300\nERROR: incomplete info for symbol 62833\nERROR: incomplete info for symbol 81570\nERROR: incomplete info for symbol 81972\nERROR: incomplete info for symbol 82387\nERROR: incomplete info for symbol 82643\nERROR: incomplete info for symbol 82752\nERROR: incomplete info for symbol 83058\nERROR: incomplete info for symbol 83270\nERROR: incomplete info for symbol 83632\nERROR: incomplete info for symbol 83938\nERROR: incomplete info for symbol 84124\nERROR: incomplete info for symbol 84270\nERROR: incomplete info for symbol 84526\nERROR: incomplete info for symbol 84631\nERROR: incomplete info for symbol 85660\nERROR: incomplete info for symbol 86685\nERROR: incomplete info for symbol 86782\nERROR: incomplete info for symbol 87047\nERROR: incomplete info for symbol 87869\nERROR: incomplete info for symbol 88933\nERROR: incomplete info for symbol 89764\nERROR: incomplete info for symbol 90770\nERROR: incomplete info for symbol 91655\nERROR: incomplete info for symbol 92210\nERROR: incomplete info for symbol 92675\nERROR: incomplete info for symbol 93203\nERROR: incomplete info for symbol 93630\nERROR: incomplete info for symbol 93930\nERROR: incomplete info for symbol 94230\nERROR: incomplete info for symbol 94779\nERROR: incomplete info for symbol 95216\nERROR: incomplete info for symbol 96432\nERROR: incomplete info for symbol 96876\nERROR: incomplete info for symbol 97212\nERROR: incomplete info for symbol 97434\nERROR: incomplete info for symbol 97656\nERROR: incomplete info for symbol 98154\nERROR: incomplete info for symbol 98505\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-IYv1p.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libregistry-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libregistry-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12341\nERROR: incomplete info for symbol 12488\nERROR: incomplete info for symbol 12575\nERROR: incomplete info for symbol 12621\nERROR: incomplete info for symbol 12707\nERROR: incomplete info for symbol 12802\nERROR: incomplete info for symbol 12860\nERROR: incomplete info for symbol 12951\nERROR: incomplete info for symbol 13037\nERROR: incomplete info for symbol 13108\nERROR: incomplete info for symbol 13203\nERROR: incomplete info for symbol 13262\nERROR: incomplete info for symbol 13357\nERROR: incomplete info for symbol 13594\nERROR: incomplete info for symbol 13929\nERROR: incomplete info for symbol 14063\nERROR: incomplete info for symbol 14116\nERROR: incomplete info for symbol 14203\nERROR: incomplete info for symbol 14291\nERROR: incomplete info for symbol 14399\nERROR: incomplete info for symbol 14470\nERROR: incomplete info for symbol 14611\nERROR: incomplete info for symbol 14772\nERROR: incomplete info for symbol 14893\nERROR: incomplete info for symbol 15012\nERROR: incomplete info for symbol 15177\nERROR: incomplete info for symbol 15282\nERROR: incomplete info for symbol 16040\nERROR: incomplete info for symbol 20855\nERROR: incomplete info for symbol 23937\nERROR: incomplete info for symbol 24376\nERROR: incomplete info for symbol 24415\nERROR: incomplete info for symbol 24504\nERROR: incomplete info for symbol 24798\nERROR: incomplete info for symbol 25135\nERROR: incomplete info for symbol 25284\nERROR: incomplete info for symbol 25472\nERROR: incomplete info for symbol 25621\nERROR: incomplete info for symbol 25750\nERROR: incomplete info for symbol 25839\nERROR: incomplete info for symbol 26168\nERROR: incomplete info for symbol 26440\nERROR: incomplete info for symbol 26529\nERROR: incomplete info for symbol 26618\nERROR: incomplete info for symbol 26667\nERROR: incomplete info for symbol 26736\nERROR: incomplete info for symbol 27316\nERROR: incomplete info for symbol 27498\nERROR: incomplete info for symbol 28718\nERROR: incomplete info for symbol 30776\nERROR: incomplete info for symbol 31223\nERROR: incomplete info for symbol 32321\nERROR: incomplete info for symbol 32734\nERROR: incomplete info for symbol 35899\nERROR: incomplete info for symbol 36387\nERROR: incomplete info for symbol 39853\nERROR: incomplete info for symbol 43642\nERROR: incomplete info for symbol 44312\nERROR: incomplete info for symbol 44947\nERROR: incomplete info for symbol 45050\nERROR: incomplete info for symbol 46300\nERROR: incomplete info for symbol 62833\nERROR: incomplete info for symbol 81570\nERROR: incomplete info for symbol 81972\nERROR: incomplete info for symbol 82387\nERROR: incomplete info for symbol 82643\nERROR: incomplete info for symbol 82752\nERROR: incomplete info for symbol 83058\nERROR: incomplete info for symbol 83270\nERROR: incomplete info for symbol 83632\nERROR: incomplete info for symbol 83938\nERROR: incomplete info for symbol 84124\nERROR: incomplete info for symbol 84270\nERROR: incomplete info for symbol 84526\nERROR: incomplete info for symbol 84631\nERROR: incomplete info for symbol 85660\nERROR: incomplete info for symbol 86685\nERROR: incomplete info for symbol 86782\nERROR: incomplete info for symbol 87047\nERROR: incomplete info for symbol 87869\nERROR: incomplete info for symbol 88933\nERROR: incomplete info for symbol 89764\nERROR: incomplete info for symbol 90770\nERROR: incomplete info for symbol 91655\nERROR: incomplete info for symbol 92210\nERROR: incomplete info for symbol 92675\nERROR: incomplete info for symbol 93203\nERROR: incomplete info for symbol 93630\nERROR: incomplete info for symbol 93930\nERROR: incomplete info for symbol 94230\nERROR: incomplete info for symbol 94779\nERROR: incomplete info for symbol 95216\nERROR: incomplete info for symbol 96432\nERROR: incomplete info for symbol 96876\nERROR: incomplete info for symbol 97212\nERROR: incomplete info for symbol 97434\nERROR: incomplete info for symbol 97656\nERROR: incomplete info for symbol 98154\nERROR: incomplete info for symbol 98505\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-iYFNW.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libregistry-samba4.so-abi-laboratory-libregistry-samba4-so-libregistry-samba4-so.html\n",
+                    "return_code": 0,
+                    "seconds": 13.788474798202515,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libregistry-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libregistry-samba4.so libregistry-samba4-so-libregistry-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libregistry-samba4.so-abi-laboratory-libregistry-samba4-so-libregistry-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libregistry-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libregistry-samba4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libregistry-samba4.so": 150008,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libregistry-samba4.so": 150008
+            }
+        },
+        "experiment": "usr/lib64/samba/libregistry-samba4-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libregistry-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libregistry-samba4.so",
+        "different_libs": true
+    }
+]
