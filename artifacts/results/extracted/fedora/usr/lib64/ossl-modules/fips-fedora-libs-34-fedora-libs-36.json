@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/fips.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/fips.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "fips.so",
+                    "spliced_lib": "fips.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.9802322387695312e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "fips.so",
+                    "spliced_lib": "fips.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.002716064453125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.4658184051513672,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/fips.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/fips.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/fips.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/fips.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/fips.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/fips.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/fips.so-abi-laboratory-fips-so-fips-so.html\nFound link to fips.so-3.0.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file fips.so-3.0.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ossl-modules/../../../.dwz/openssl-3.0.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 131887\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-VGx2j.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to fips.so-3.0.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file fips.so-3.0.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ossl-modules/../../../.dwz/openssl-3.0.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 131887\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-milom.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/fips.so-abi-laboratory-fips-so-fips-so.html\n",
+                    "return_code": 0,
+                    "seconds": 11.746214151382446,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/fips.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/fips.so fips-so-fips-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/fips.so-abi-laboratory-fips-so-fips-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/fips.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/fips.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/fips.so": 1488680,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/fips.so": 1488680
+            }
+        },
+        "experiment": "usr/lib64/ossl-modules/fips-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/fips.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/fips.so",
+        "different_libs": true
+    }
+]

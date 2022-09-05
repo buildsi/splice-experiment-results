@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/auto/POSIX/POSIX.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/auto/POSIX/POSIX.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "POSIX.so",
+                    "spliced_lib": "POSIX.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.222724914550781e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "POSIX.so",
+                    "spliced_lib": "POSIX.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.775161743164062e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.10660696029663086,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/auto/POSIX/POSIX.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/auto/POSIX/POSIX.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/auto/POSIX/POSIX.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/auto/POSIX/POSIX.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/auto/POSIX/POSIX.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/auto/POSIX/POSIX.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/auto/POSIX/POSIX.so-abi-laboratory-POSIX-so-POSIX-so.html\nFound link to POSIX.so-5.34.1-486.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file POSIX.so-5.34.1-486.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/perl5/auto/POSIX/../../../../../.dwz/perl-5.34.1-486.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-EJFVI.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to POSIX.so-5.34.1-486.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file POSIX.so-5.34.1-486.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/perl5/auto/POSIX/../../../../../.dwz/perl-5.34.1-486.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-mzYa3.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/auto/POSIX/POSIX.so-abi-laboratory-POSIX-so-POSIX-so.html\n",
+                    "return_code": 0,
+                    "seconds": 2.172032356262207,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/auto/POSIX/POSIX.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/auto/POSIX/POSIX.so POSIX-so-POSIX-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/auto/POSIX/POSIX.so-abi-laboratory-POSIX-so-POSIX-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/auto/POSIX/POSIX.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/auto/POSIX/POSIX.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/auto/POSIX/POSIX.so": 110896,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/auto/POSIX/POSIX.so": 110896
+            }
+        },
+        "experiment": "usr/lib64/perl5/auto/POSIX/POSIX-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/auto/POSIX/POSIX.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/auto/POSIX/POSIX.so",
+        "different_libs": true
+    }
+]
