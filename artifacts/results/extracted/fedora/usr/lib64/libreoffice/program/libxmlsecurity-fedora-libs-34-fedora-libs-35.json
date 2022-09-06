@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libxmlsecurity.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libxmlsecurity.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxmlsecurity.so",
+                    "spliced_lib": "libxmlsecurity.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00010347366333007812
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxmlsecurity.so",
+                    "spliced_lib": "libxmlsecurity.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.224082946777344e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 13.715339660644531,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libxmlsecurity.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libxmlsecurity.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libxmlsecurity.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libxmlsecurity.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libxmlsecurity.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libxmlsecurity.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libxmlsecurity.so-abi-laboratory-libxmlsecurity-so-libxmlsecurity-so.html\nFound link to libxmlsecurity.so-7.3.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxmlsecurity.so-7.3.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 703586\nERROR: incomplete info for symbol 703736\nERROR: incomplete info for symbol 703886\nERROR: incomplete info for symbol 703913\nERROR: incomplete info for symbol 703940\nERROR: incomplete info for symbol 799435\nERROR: incomplete info for symbol 799800\nERROR: incomplete info for symbol 799827\nERROR: incomplete info for symbol 799896\nERROR: incomplete info for symbol 800077\nERROR: incomplete info for symbol 1357748\nERROR: incomplete info for symbol 1359221\nERROR: incomplete info for symbol 1361051\nERROR: incomplete info for symbol 1361176\nERROR: incomplete info for symbol 1361388\nERROR: incomplete info for symbol 1362346\nERROR: incomplete info for symbol 1362521\nERROR: incomplete info for symbol 1363149\nERROR: incomplete info for symbol 1363284\nERROR: incomplete info for symbol 1363419\nERROR: incomplete info for symbol 1363554\nERROR: incomplete info for symbol 1363689\nERROR: incomplete info for symbol 1366092\nERROR: incomplete info for symbol 1371982\nERROR: incomplete info for symbol 1387772\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-PWDLX.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libxmlsecurity.so-7.3.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxmlsecurity.so-7.3.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 703586\nERROR: incomplete info for symbol 703736\nERROR: incomplete info for symbol 703886\nERROR: incomplete info for symbol 703913\nERROR: incomplete info for symbol 703940\nERROR: incomplete info for symbol 799435\nERROR: incomplete info for symbol 799800\nERROR: incomplete info for symbol 799827\nERROR: incomplete info for symbol 799896\nERROR: incomplete info for symbol 800077\nERROR: incomplete info for symbol 1357748\nERROR: incomplete info for symbol 1359221\nERROR: incomplete info for symbol 1361051\nERROR: incomplete info for symbol 1361176\nERROR: incomplete info for symbol 1361388\nERROR: incomplete info for symbol 1362346\nERROR: incomplete info for symbol 1362521\nERROR: incomplete info for symbol 1363149\nERROR: incomplete info for symbol 1363284\nERROR: incomplete info for symbol 1363419\nERROR: incomplete info for symbol 1363554\nERROR: incomplete info for symbol 1363689\nERROR: incomplete info for symbol 1366092\nERROR: incomplete info for symbol 1371982\nERROR: incomplete info for symbol 1387772\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-zXq0n.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libxmlsecurity.so-abi-laboratory-libxmlsecurity-so-libxmlsecurity-so.html\n",
+                    "return_code": 0,
+                    "seconds": 175.85850024223328,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libxmlsecurity.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libxmlsecurity.so libxmlsecurity-so-libxmlsecurity-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libxmlsecurity.so-abi-laboratory-libxmlsecurity-so-libxmlsecurity-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libxmlsecurity.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libxmlsecurity.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libxmlsecurity.so": 686960,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libxmlsecurity.so": 686960
+            }
+        },
+        "experiment": "usr/lib64/libreoffice/program/libxmlsecurity-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libxmlsecurity.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libxmlsecurity.so",
+        "different_libs": true
+    }
+]
