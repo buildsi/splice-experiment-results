@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/lua/5.4/posix/dirent.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/lua/5.4/posix/dirent.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "dirent.so",
+                    "spliced_lib": "dirent.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.193450927734375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "dirent.so",
+                    "spliced_lib": "dirent.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.3909759521484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.009969234466552734,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/lua/5.4/posix/dirent.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/lua/5.4/posix/dirent.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/lua/5.4/posix/dirent.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/lua/5.4/posix/dirent.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/lua/5.4/posix/dirent.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/lua/5.4/posix/dirent.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/lua/5.4/posix/dirent.so-abi-laboratory-dirent-so-dirent-so.html\nFound link to dirent.so-35.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file dirent.so-35.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/lua/5.4/posix/../../../../../.dwz/lua-posix-35.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-5eIHN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to dirent.so-35.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file dirent.so-35.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/lua/5.4/posix/../../../../../.dwz/lua-posix-35.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-nLmYd.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/lua/5.4/posix/dirent.so-abi-laboratory-dirent-so-dirent-so.html\n",
+                    "return_code": 0,
+                    "seconds": 0.4121088981628418,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/lua/5.4/posix/dirent.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/lua/5.4/posix/dirent.so dirent-so-dirent-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/lua/5.4/posix/dirent.so-abi-laboratory-dirent-so-dirent-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/lua/5.4/posix/dirent.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/lua/5.4/posix/dirent.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/lua/5.4/posix/dirent.so": 15944,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/lua/5.4/posix/dirent.so": 15944
+            }
+        },
+        "experiment": "usr/lib64/lua/5.4/posix/dirent-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/lua/5.4/posix/dirent.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/lua/5.4/posix/dirent.so",
+        "different_libs": true
+    }
+]

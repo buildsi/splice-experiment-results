@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libnamingservicelo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libnamingservicelo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libnamingservicelo.so",
+                    "spliced_lib": "libnamingservicelo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.4809112548828125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libnamingservicelo.so",
+                    "spliced_lib": "libnamingservicelo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.152557373046875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 2.9742207527160645,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libnamingservicelo.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libnamingservicelo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libnamingservicelo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libnamingservicelo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libnamingservicelo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libnamingservicelo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libnamingservicelo.so-abi-laboratory-libnamingservicelo-so-libnamingservicelo-so.html\nFound link to libnamingservicelo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnamingservicelo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ZEaDG.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libnamingservicelo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnamingservicelo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-JpuCR.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libnamingservicelo.so-abi-laboratory-libnamingservicelo-so-libnamingservicelo-so.html\n",
+                    "return_code": 0,
+                    "seconds": 114.06723380088806,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libnamingservicelo.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libnamingservicelo.so libnamingservicelo-so-libnamingservicelo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libnamingservicelo.so-abi-laboratory-libnamingservicelo-so-libnamingservicelo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libnamingservicelo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libnamingservicelo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libnamingservicelo.so": 37456,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libnamingservicelo.so": 37456
+            }
+        },
+        "experiment": "usr/lib64/libreoffice/program/libnamingservicelo-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libnamingservicelo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libnamingservicelo.so",
+        "different_libs": true
+    }
+]

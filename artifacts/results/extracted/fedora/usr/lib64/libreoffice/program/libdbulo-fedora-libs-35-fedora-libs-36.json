@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libdbulo.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libdbulo.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdbulo.so",
+                    "spliced_lib": "libdbulo.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0008311271667480469
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdbulo.so",
+                    "spliced_lib": "libdbulo.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0013680458068847656
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 56.23624110221863,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libdbulo.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libdbulo.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libdbulo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libdbulo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libdbulo.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libdbulo.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libdbulo.so-abi-laboratory-libdbulo-so-libdbulo-so.html\nFound link to libdbulo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdbulo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1296564\nERROR: incomplete info for symbol 1296590\nERROR: incomplete info for symbol 1296623\nERROR: incomplete info for symbol 1298983\nERROR: incomplete info for symbol 1299249\nERROR: incomplete info for symbol 1300249\nERROR: incomplete info for symbol 1315807\nERROR: incomplete info for symbol 1337172\nERROR: incomplete info for symbol 1337254\nERROR: incomplete info for symbol 1614466\nERROR: incomplete info for symbol 1614492\nERROR: incomplete info for symbol 1614614\nERROR: incomplete info for symbol 1614701\nERROR: incomplete info for symbol 1614881\nERROR: incomplete info for symbol 1614968\nERROR: incomplete info for symbol 1615148\nERROR: incomplete info for symbol 1622134\nERROR: incomplete info for symbol 1719130\nERROR: incomplete info for symbol 1723977\nERROR: incomplete info for symbol 1731786\nERROR: incomplete info for symbol 1731881\nERROR: incomplete info for symbol 1753077\nERROR: incomplete info for symbol 1761312\nERROR: incomplete info for symbol 1769171\nERROR: incomplete info for symbol 1769203\nERROR: incomplete info for symbol 1769236\nERROR: incomplete info for symbol 1769304\nERROR: incomplete info for symbol 1769337\nERROR: incomplete info for symbol 1769430\nERROR: incomplete info for symbol 1769547\nERROR: incomplete info for symbol 1769573\nERROR: incomplete info for symbol 1769718\nERROR: incomplete info for symbol 1771181\nERROR: incomplete info for symbol 1771253\nERROR: incomplete info for symbol 1772556\nERROR: incomplete info for symbol 1772851\nERROR: incomplete info for symbol 1773593\nERROR: incomplete info for symbol 1773868\nERROR: incomplete info for symbol 1773942\nERROR: incomplete info for symbol 1774234\nERROR: incomplete info for symbol 1774427\nERROR: incomplete info for symbol 1774719\nERROR: incomplete info for symbol 1774912\nERROR: incomplete info for symbol 1798837\nERROR: incomplete info for symbol 1806175\nERROR: incomplete info for symbol 1806208\nERROR: incomplete info for symbol 1808227\nERROR: incomplete info for symbol 1808570\nERROR: incomplete info for symbol 1811984\nERROR: incomplete info for symbol 1822701\nERROR: incomplete info for symbol 1823412\nERROR: incomplete info for symbol 1823462\nERROR: incomplete info for symbol 1855257\nERROR: incomplete info for symbol 1855749\nERROR: incomplete info for symbol 4454292\nERROR: incomplete info for symbol 4455674\nERROR: incomplete info for symbol 4457618\nERROR: incomplete info for symbol 4497819\nERROR: incomplete info for symbol 4497971\nERROR: incomplete info for symbol 4499009\nERROR: incomplete info for symbol 4499734\nERROR: incomplete info for symbol 4499932\nERROR: incomplete info for symbol 4501077\nERROR: incomplete info for symbol 4501275\nERROR: incomplete info for symbol 4501428\nERROR: incomplete info for symbol 4501581\nERROR: incomplete info for symbol 4501741\nERROR: incomplete info for symbol 4501894\nERROR: incomplete info for symbol 4502133\nERROR: incomplete info for symbol 4504273\nERROR: incomplete info for symbol 4504471\nERROR: incomplete info for symbol 4504710\nERROR: incomplete info for symbol 4505251\nERROR: incomplete info for symbol 4506789\nERROR: incomplete info for symbol 4506942\nERROR: incomplete info for symbol 4509680\nERROR: incomplete info for symbol 4516250\nERROR: incomplete info for symbol 4516616\nERROR: incomplete info for symbol 4516695\nERROR: incomplete info for symbol 4518411\nERROR: incomplete info for symbol 4520824\nERROR: incomplete info for symbol 4536674\nERROR: incomplete info for symbol 4537263\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-5a1Bj.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdbulo.so-7.3.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdbulo.so-7.3.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/libreoffice/program/../../../../.dwz/libreoffice-7.3.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1296564\nERROR: incomplete info for symbol 1296590\nERROR: incomplete info for symbol 1296623\nERROR: incomplete info for symbol 1298983\nERROR: incomplete info for symbol 1299249\nERROR: incomplete info for symbol 1300249\nERROR: incomplete info for symbol 1315807\nERROR: incomplete info for symbol 1337172\nERROR: incomplete info for symbol 1337254\nERROR: incomplete info for symbol 1614466\nERROR: incomplete info for symbol 1614492\nERROR: incomplete info for symbol 1614614\nERROR: incomplete info for symbol 1614701\nERROR: incomplete info for symbol 1614881\nERROR: incomplete info for symbol 1614968\nERROR: incomplete info for symbol 1615148\nERROR: incomplete info for symbol 1622134\nERROR: incomplete info for symbol 1719130\nERROR: incomplete info for symbol 1723977\nERROR: incomplete info for symbol 1731786\nERROR: incomplete info for symbol 1731881\nERROR: incomplete info for symbol 1753077\nERROR: incomplete info for symbol 1761312\nERROR: incomplete info for symbol 1769171\nERROR: incomplete info for symbol 1769203\nERROR: incomplete info for symbol 1769236\nERROR: incomplete info for symbol 1769304\nERROR: incomplete info for symbol 1769337\nERROR: incomplete info for symbol 1769430\nERROR: incomplete info for symbol 1769547\nERROR: incomplete info for symbol 1769573\nERROR: incomplete info for symbol 1769718\nERROR: incomplete info for symbol 1771181\nERROR: incomplete info for symbol 1771253\nERROR: incomplete info for symbol 1772556\nERROR: incomplete info for symbol 1772851\nERROR: incomplete info for symbol 1773593\nERROR: incomplete info for symbol 1773868\nERROR: incomplete info for symbol 1773942\nERROR: incomplete info for symbol 1774234\nERROR: incomplete info for symbol 1774427\nERROR: incomplete info for symbol 1774719\nERROR: incomplete info for symbol 1774912\nERROR: incomplete info for symbol 1798837\nERROR: incomplete info for symbol 1806175\nERROR: incomplete info for symbol 1806208\nERROR: incomplete info for symbol 1808227\nERROR: incomplete info for symbol 1808570\nERROR: incomplete info for symbol 1811984\nERROR: incomplete info for symbol 1822701\nERROR: incomplete info for symbol 1823412\nERROR: incomplete info for symbol 1823462\nERROR: incomplete info for symbol 1855257\nERROR: incomplete info for symbol 1855749\nERROR: incomplete info for symbol 4454292\nERROR: incomplete info for symbol 4455674\nERROR: incomplete info for symbol 4457618\nERROR: incomplete info for symbol 4497819\nERROR: incomplete info for symbol 4497971\nERROR: incomplete info for symbol 4499009\nERROR: incomplete info for symbol 4499734\nERROR: incomplete info for symbol 4499932\nERROR: incomplete info for symbol 4501077\nERROR: incomplete info for symbol 4501275\nERROR: incomplete info for symbol 4501428\nERROR: incomplete info for symbol 4501581\nERROR: incomplete info for symbol 4501741\nERROR: incomplete info for symbol 4501894\nERROR: incomplete info for symbol 4502133\nERROR: incomplete info for symbol 4504273\nERROR: incomplete info for symbol 4504471\nERROR: incomplete info for symbol 4504710\nERROR: incomplete info for symbol 4505251\nERROR: incomplete info for symbol 4506789\nERROR: incomplete info for symbol 4506942\nERROR: incomplete info for symbol 4509680\nERROR: incomplete info for symbol 4516250\nERROR: incomplete info for symbol 4516616\nERROR: incomplete info for symbol 4516695\nERROR: incomplete info for symbol 4518411\nERROR: incomplete info for symbol 4520824\nERROR: incomplete info for symbol 4536674\nERROR: incomplete info for symbol 4537263\nReading v-tables\nlibgpgmepp.so.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-oSszi.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libdbulo.so-abi-laboratory-libdbulo-so-libdbulo-so.html\n",
+                    "return_code": 0,
+                    "seconds": 489.4502031803131,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libdbulo.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libdbulo.so libdbulo-so-libdbulo-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libdbulo.so-abi-laboratory-libdbulo-so-libdbulo-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libdbulo.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libdbulo.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libdbulo.so": 4306576,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libdbulo.so": 4306576
+            }
+        },
+        "experiment": "usr/lib64/libreoffice/program/libdbulo-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libreoffice/program/libdbulo.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libreoffice/program/libdbulo.so",
+        "different_libs": true
+    }
+]

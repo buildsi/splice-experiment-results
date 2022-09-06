@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libm.so",
+                    "spliced_lib": "libm.so.6",
+                    "command": "missing-previously-found-symbols",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 7.3909759521484375e-06
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libm.so",
+                    "spliced_lib": "libm.so.6",
+                    "command": "missing-previously-found-exports",
+                    "message": "Cannot derive decision, symbols not found.",
+                    "prediction": "Unknown",
+                    "seconds": 1.1920928955078125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so\n",
+                    "return_code": 1,
+                    "seconds": 0.008015155792236328,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so-abi-laboratory-libm-so-libm-so-6.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
+                    "return_code": 12,
+                    "seconds": 0.09839582443237305,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6 libm-so-libm-so-6 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so-abi-laboratory-libm-so-libm-so-6.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so": 110,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6": 919640
+            }
+        },
+        "experiment": "usr/lib64/libm-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so",
+        "different_libs": true
+    }
+]

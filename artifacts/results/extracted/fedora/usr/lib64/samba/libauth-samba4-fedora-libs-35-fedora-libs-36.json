@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libauth-samba4.so",
+                    "spliced_lib": "libauth-samba4.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00011563301086425781
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libauth-samba4.so",
+                    "spliced_lib": "libauth-samba4.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0002460479736328125
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.13605332374572754,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-samba4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-samba4.so-abi-laboratory-libauth-samba4-so-libauth-samba4-so.html\nFound link to libauth-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libauth-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 16572\nERROR: incomplete info for symbol 25497\nERROR: incomplete info for symbol 26155\nERROR: incomplete info for symbol 26657\nERROR: incomplete info for symbol 26773\nERROR: incomplete info for symbol 26904\nERROR: incomplete info for symbol 27304\nERROR: incomplete info for symbol 29509\nERROR: incomplete info for symbol 29756\nERROR: incomplete info for symbol 29998\nERROR: incomplete info for symbol 30346\nERROR: incomplete info for symbol 32855\nERROR: incomplete info for symbol 34434\nERROR: incomplete info for symbol 35159\nERROR: incomplete info for symbol 35237\nERROR: incomplete info for symbol 35592\nERROR: incomplete info for symbol 36172\nERROR: incomplete info for symbol 36488\nERROR: incomplete info for symbol 39119\nERROR: incomplete info for symbol 41591\nERROR: incomplete info for symbol 43150\nERROR: incomplete info for symbol 44014\nERROR: incomplete info for symbol 47697\nERROR: incomplete info for symbol 51227\nERROR: incomplete info for symbol 53290\nERROR: incomplete info for symbol 54081\nERROR: incomplete info for symbol 54505\nERROR: incomplete info for symbol 54875\nERROR: incomplete info for symbol 54951\nERROR: incomplete info for symbol 55119\nERROR: incomplete info for symbol 55973\nERROR: incomplete info for symbol 56451\nERROR: incomplete info for symbol 59514\nERROR: incomplete info for symbol 59720\nERROR: incomplete info for symbol 60211\nERROR: incomplete info for symbol 60332\nERROR: incomplete info for symbol 61313\nERROR: incomplete info for symbol 61609\nERROR: incomplete info for symbol 61675\nERROR: incomplete info for symbol 61741\nERROR: incomplete info for symbol 62582\nERROR: incomplete info for symbol 62648\nERROR: incomplete info for symbol 63210\nERROR: incomplete info for symbol 64130\nERROR: incomplete info for symbol 65468\nERROR: incomplete info for symbol 65797\nERROR: incomplete info for symbol 67627\nERROR: incomplete info for symbol 68035\nERROR: incomplete info for symbol 68478\nERROR: incomplete info for symbol 70021\nERROR: incomplete info for symbol 70331\nERROR: incomplete info for symbol 72928\nERROR: incomplete info for symbol 73402\nERROR: incomplete info for symbol 73798\nERROR: incomplete info for symbol 74595\nERROR: incomplete info for symbol 75315\nERROR: incomplete info for symbol 75703\nERROR: incomplete info for symbol 75872\nERROR: incomplete info for symbol 76193\nERROR: incomplete info for symbol 77347\nERROR: incomplete info for symbol 77413\nERROR: incomplete info for symbol 78526\nERROR: incomplete info for symbol 78921\nERROR: incomplete info for symbol 80380\nERROR: incomplete info for symbol 80680\nERROR: incomplete info for symbol 83139\nERROR: incomplete info for symbol 90351\nERROR: incomplete info for symbol 90593\nERROR: incomplete info for symbol 90829\nERROR: incomplete info for symbol 91065\nERROR: incomplete info for symbol 91526\nERROR: incomplete info for symbol 91703\nERROR: incomplete info for symbol 92103\nERROR: incomplete info for symbol 93939\nERROR: incomplete info for symbol 95168\nERROR: incomplete info for symbol 96227\nERROR: incomplete info for symbol 98692\nERROR: incomplete info for symbol 99139\nERROR: incomplete info for symbol 100001\nERROR: incomplete info for symbol 101278\nERROR: incomplete info for symbol 101634\nERROR: incomplete info for symbol 103209\nERROR: incomplete info for symbol 108563\nERROR: incomplete info for symbol 110756\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-QpsXL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libauth-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libauth-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 16572\nERROR: incomplete info for symbol 25497\nERROR: incomplete info for symbol 26155\nERROR: incomplete info for symbol 26657\nERROR: incomplete info for symbol 26773\nERROR: incomplete info for symbol 26904\nERROR: incomplete info for symbol 27304\nERROR: incomplete info for symbol 29509\nERROR: incomplete info for symbol 29756\nERROR: incomplete info for symbol 29998\nERROR: incomplete info for symbol 30346\nERROR: incomplete info for symbol 32855\nERROR: incomplete info for symbol 34434\nERROR: incomplete info for symbol 35159\nERROR: incomplete info for symbol 35237\nERROR: incomplete info for symbol 35592\nERROR: incomplete info for symbol 36172\nERROR: incomplete info for symbol 36488\nERROR: incomplete info for symbol 39119\nERROR: incomplete info for symbol 41591\nERROR: incomplete info for symbol 43150\nERROR: incomplete info for symbol 44014\nERROR: incomplete info for symbol 47697\nERROR: incomplete info for symbol 51227\nERROR: incomplete info for symbol 53290\nERROR: incomplete info for symbol 54081\nERROR: incomplete info for symbol 54505\nERROR: incomplete info for symbol 54875\nERROR: incomplete info for symbol 54951\nERROR: incomplete info for symbol 55119\nERROR: incomplete info for symbol 55973\nERROR: incomplete info for symbol 56451\nERROR: incomplete info for symbol 59514\nERROR: incomplete info for symbol 59720\nERROR: incomplete info for symbol 60211\nERROR: incomplete info for symbol 60332\nERROR: incomplete info for symbol 61313\nERROR: incomplete info for symbol 61609\nERROR: incomplete info for symbol 61675\nERROR: incomplete info for symbol 61741\nERROR: incomplete info for symbol 62582\nERROR: incomplete info for symbol 62648\nERROR: incomplete info for symbol 63210\nERROR: incomplete info for symbol 64130\nERROR: incomplete info for symbol 65468\nERROR: incomplete info for symbol 65797\nERROR: incomplete info for symbol 67627\nERROR: incomplete info for symbol 68035\nERROR: incomplete info for symbol 68478\nERROR: incomplete info for symbol 70021\nERROR: incomplete info for symbol 70331\nERROR: incomplete info for symbol 72928\nERROR: incomplete info for symbol 73402\nERROR: incomplete info for symbol 73798\nERROR: incomplete info for symbol 74595\nERROR: incomplete info for symbol 75315\nERROR: incomplete info for symbol 75703\nERROR: incomplete info for symbol 75872\nERROR: incomplete info for symbol 76193\nERROR: incomplete info for symbol 77347\nERROR: incomplete info for symbol 77413\nERROR: incomplete info for symbol 78526\nERROR: incomplete info for symbol 78921\nERROR: incomplete info for symbol 80380\nERROR: incomplete info for symbol 80680\nERROR: incomplete info for symbol 83139\nERROR: incomplete info for symbol 90351\nERROR: incomplete info for symbol 90593\nERROR: incomplete info for symbol 90829\nERROR: incomplete info for symbol 91065\nERROR: incomplete info for symbol 91526\nERROR: incomplete info for symbol 91703\nERROR: incomplete info for symbol 92103\nERROR: incomplete info for symbol 93939\nERROR: incomplete info for symbol 95168\nERROR: incomplete info for symbol 96227\nERROR: incomplete info for symbol 98692\nERROR: incomplete info for symbol 99139\nERROR: incomplete info for symbol 100001\nERROR: incomplete info for symbol 101278\nERROR: incomplete info for symbol 101634\nERROR: incomplete info for symbol 103209\nERROR: incomplete info for symbol 108563\nERROR: incomplete info for symbol 110756\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-rErfP.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-samba4.so-abi-laboratory-libauth-samba4-so-libauth-samba4-so.html\n",
+                    "return_code": 0,
+                    "seconds": 17.006505966186523,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-samba4.so libauth-samba4-so-libauth-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-samba4.so-abi-laboratory-libauth-samba4-so-libauth-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-samba4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-samba4.so": 182032,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-samba4.so": 182032
+            }
+        },
+        "experiment": "usr/lib64/samba/libauth-samba4-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-samba4.so",
+        "different_libs": true
+    }
+]

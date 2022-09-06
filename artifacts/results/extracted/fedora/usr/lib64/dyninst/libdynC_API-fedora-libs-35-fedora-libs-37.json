@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdynC_API.so.12.0.1",
+                    "spliced_lib": "libdynC_API.so.12.0.1",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.295608520507812e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdynC_API.so.12.0.1",
+                    "spliced_lib": "libdynC_API.so.12.0.1",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5987625122070312e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 1.4303572177886963,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1-abi-laboratory-libdynC_API-so-12-0-1-libdynC_API-so-12-0-1.html\nFound link to libdynC_API.so.12.0.1-12.0.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdynC_API.so.12.0.1-12.0.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-12.0.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 105515\nERROR: incomplete info for symbol 121010\nReading v-tables\nlibdyninstAPI.so.12.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-3EmNk.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdynC_API.so.12.0.1-12.0.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdynC_API.so.12.0.1-12.0.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-12.0.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 105515\nERROR: incomplete info for symbol 121010\nReading v-tables\nlibdyninstAPI.so.12.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-GO2d7.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1-abi-laboratory-libdynC_API-so-12-0-1-libdynC_API-so-12-0-1.html\n",
+                    "return_code": 0,
+                    "seconds": 20.970922231674194,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1 libdynC_API-so-12-0-1-libdynC_API-so-12-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1-abi-laboratory-libdynC_API-so-12-0-1-libdynC_API-so-12-0-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1": 153728,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1": 153728
+            }
+        },
+        "experiment": "usr/lib64/dyninst/libdynC_API-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1",
+        "different_libs": true
+    }
+]

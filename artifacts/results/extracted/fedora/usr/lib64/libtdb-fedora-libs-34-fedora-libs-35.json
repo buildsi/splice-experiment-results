@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtdb.so.1.4.7"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtdb.so.1.4.7"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtdb.so.1.4.7",
+                    "spliced_lib": "libtdb.so.1.4.7",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.887580871582031e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtdb.so.1.4.7",
+                    "spliced_lib": "libtdb.so.1.4.7",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.413459777832031e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.05158257484436035,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtdb.so.1.4.7 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtdb.so.1.4.7",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtdb.so.1.4.7",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtdb.so.1.4.7",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtdb.so.1.4.7\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtdb.so.1.4.7\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtdb.so.1.4.7-abi-laboratory-libtdb-so-1-4-7-libtdb-so-1-4-7.html\nFound link to libtdb.so.1.4.7-1.4.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libtdb.so.1.4.7-1.4.7-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7240\nERROR: incomplete info for symbol 22074\nERROR: incomplete info for symbol 22100\nERROR: incomplete info for symbol 22139\nERROR: incomplete info for symbol 22519\nERROR: incomplete info for symbol 22545\nERROR: incomplete info for symbol 22571\nERROR: incomplete info for symbol 22597\nERROR: incomplete info for symbol 22795\nERROR: incomplete info for symbol 22821\nERROR: incomplete info for symbol 22847\nERROR: incomplete info for symbol 22873\nERROR: incomplete info for symbol 23000\nERROR: incomplete info for symbol 23118\nERROR: incomplete info for symbol 23144\nERROR: incomplete info for symbol 28928\nERROR: incomplete info for symbol 29024\nERROR: incomplete info for symbol 29703\nERROR: incomplete info for symbol 29772\nERROR: incomplete info for symbol 30003\nERROR: incomplete info for symbol 31358\nERROR: incomplete info for symbol 31488\nERROR: incomplete info for symbol 31819\nERROR: incomplete info for symbol 32090\nERROR: incomplete info for symbol 32849\nERROR: incomplete info for symbol 33675\nERROR: incomplete info for symbol 33833\nERROR: incomplete info for symbol 33899\nERROR: incomplete info for symbol 33965\nERROR: incomplete info for symbol 34026\nERROR: incomplete info for symbol 34097\nERROR: incomplete info for symbol 34158\nERROR: incomplete info for symbol 34224\nERROR: incomplete info for symbol 34295\nERROR: incomplete info for symbol 34356\nERROR: incomplete info for symbol 36605\nERROR: incomplete info for symbol 36704\nERROR: incomplete info for symbol 36803\nERROR: incomplete info for symbol 36946\nERROR: incomplete info for symbol 37076\nERROR: incomplete info for symbol 37162\nERROR: incomplete info for symbol 37261\nERROR: incomplete info for symbol 37347\nERROR: incomplete info for symbol 37446\nERROR: incomplete info for symbol 37566\nERROR: incomplete info for symbol 37632\nERROR: incomplete info for symbol 37796\nERROR: incomplete info for symbol 38512\nERROR: incomplete info for symbol 41999\nERROR: incomplete info for symbol 42348\nERROR: incomplete info for symbol 50608\nERROR: incomplete info for symbol 51002\nERROR: incomplete info for symbol 51217\nERROR: incomplete info for symbol 51459\nERROR: incomplete info for symbol 51492\nERROR: incomplete info for symbol 51525\nERROR: incomplete info for symbol 51551\nERROR: incomplete info for symbol 51577\nERROR: incomplete info for symbol 51633\nERROR: incomplete info for symbol 51689\nERROR: incomplete info for symbol 51831\nERROR: incomplete info for symbol 52321\nERROR: incomplete info for symbol 52385\nERROR: incomplete info for symbol 52471\nERROR: incomplete info for symbol 52522\nERROR: incomplete info for symbol 54339\nERROR: incomplete info for symbol 58401\nERROR: incomplete info for symbol 61679\nERROR: incomplete info for symbol 61815\nERROR: incomplete info for symbol 62279\nERROR: incomplete info for symbol 63053\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-aGCAB.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libtdb.so.1.4.7-1.4.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libtdb.so.1.4.7-1.4.7-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7240\nERROR: incomplete info for symbol 22074\nERROR: incomplete info for symbol 22100\nERROR: incomplete info for symbol 22139\nERROR: incomplete info for symbol 22519\nERROR: incomplete info for symbol 22545\nERROR: incomplete info for symbol 22571\nERROR: incomplete info for symbol 22597\nERROR: incomplete info for symbol 22795\nERROR: incomplete info for symbol 22821\nERROR: incomplete info for symbol 22847\nERROR: incomplete info for symbol 22873\nERROR: incomplete info for symbol 23000\nERROR: incomplete info for symbol 23118\nERROR: incomplete info for symbol 23144\nERROR: incomplete info for symbol 28928\nERROR: incomplete info for symbol 29024\nERROR: incomplete info for symbol 29703\nERROR: incomplete info for symbol 29772\nERROR: incomplete info for symbol 30003\nERROR: incomplete info for symbol 31358\nERROR: incomplete info for symbol 31488\nERROR: incomplete info for symbol 31819\nERROR: incomplete info for symbol 32090\nERROR: incomplete info for symbol 32849\nERROR: incomplete info for symbol 33675\nERROR: incomplete info for symbol 33833\nERROR: incomplete info for symbol 33899\nERROR: incomplete info for symbol 33965\nERROR: incomplete info for symbol 34026\nERROR: incomplete info for symbol 34097\nERROR: incomplete info for symbol 34158\nERROR: incomplete info for symbol 34224\nERROR: incomplete info for symbol 34295\nERROR: incomplete info for symbol 34356\nERROR: incomplete info for symbol 36605\nERROR: incomplete info for symbol 36704\nERROR: incomplete info for symbol 36803\nERROR: incomplete info for symbol 36946\nERROR: incomplete info for symbol 37076\nERROR: incomplete info for symbol 37162\nERROR: incomplete info for symbol 37261\nERROR: incomplete info for symbol 37347\nERROR: incomplete info for symbol 37446\nERROR: incomplete info for symbol 37566\nERROR: incomplete info for symbol 37632\nERROR: incomplete info for symbol 37796\nERROR: incomplete info for symbol 38512\nERROR: incomplete info for symbol 41999\nERROR: incomplete info for symbol 42348\nERROR: incomplete info for symbol 50608\nERROR: incomplete info for symbol 51002\nERROR: incomplete info for symbol 51217\nERROR: incomplete info for symbol 51459\nERROR: incomplete info for symbol 51492\nERROR: incomplete info for symbol 51525\nERROR: incomplete info for symbol 51551\nERROR: incomplete info for symbol 51577\nERROR: incomplete info for symbol 51633\nERROR: incomplete info for symbol 51689\nERROR: incomplete info for symbol 51831\nERROR: incomplete info for symbol 52321\nERROR: incomplete info for symbol 52385\nERROR: incomplete info for symbol 52471\nERROR: incomplete info for symbol 52522\nERROR: incomplete info for symbol 54339\nERROR: incomplete info for symbol 58401\nERROR: incomplete info for symbol 61679\nERROR: incomplete info for symbol 61815\nERROR: incomplete info for symbol 62279\nERROR: incomplete info for symbol 63053\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-MKqHv.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtdb.so.1.4.7-abi-laboratory-libtdb-so-1-4-7-libtdb-so-1-4-7.html\n",
+                    "return_code": 0,
+                    "seconds": 0.8848748207092285,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtdb.so.1.4.7 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtdb.so.1.4.7 libtdb-so-1-4-7-libtdb-so-1-4-7 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtdb.so.1.4.7-abi-laboratory-libtdb-so-1-4-7-libtdb-so-1-4-7.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtdb.so.1.4.7",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtdb.so.1.4.7",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtdb.so.1.4.7": 99728,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtdb.so.1.4.7": 99728
+            }
+        },
+        "experiment": "usr/lib64/libtdb-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtdb.so.1.4.7",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtdb.so.1.4.7",
+        "different_libs": true
+    }
+]

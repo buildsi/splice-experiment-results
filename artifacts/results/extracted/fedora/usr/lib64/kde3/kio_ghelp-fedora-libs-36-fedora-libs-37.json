@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ghelp.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ghelp.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kio_ghelp.so",
+                    "spliced_lib": "kio_ghelp.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.62939453125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kio_ghelp.so",
+                    "spliced_lib": "kio_ghelp.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.9087066650390625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.4626917839050293,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ghelp.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ghelp.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ghelp.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ghelp.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ghelp.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ghelp.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ghelp.so-abi-laboratory-kio_ghelp-so-kio_ghelp-so.html\nFound link to kio_ghelp.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kio_ghelp.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 867\nERROR: incomplete info for symbol 966\nERROR: incomplete info for symbol 1150\nERROR: incomplete info for symbol 1294\nERROR: incomplete info for symbol 1334\nERROR: incomplete info for symbol 4197\nERROR: incomplete info for symbol 4266\nERROR: incomplete info for symbol 4337\nERROR: incomplete info for symbol 6384\nERROR: incomplete info for symbol 8453\nERROR: incomplete info for symbol 8668\nERROR: incomplete info for symbol 23794\nERROR: incomplete info for symbol 55015\nERROR: incomplete info for symbol 55182\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-a9U5a.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to kio_ghelp.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kio_ghelp.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 867\nERROR: incomplete info for symbol 966\nERROR: incomplete info for symbol 1150\nERROR: incomplete info for symbol 1294\nERROR: incomplete info for symbol 1334\nERROR: incomplete info for symbol 4197\nERROR: incomplete info for symbol 4266\nERROR: incomplete info for symbol 4337\nERROR: incomplete info for symbol 6384\nERROR: incomplete info for symbol 8453\nERROR: incomplete info for symbol 8668\nERROR: incomplete info for symbol 23794\nERROR: incomplete info for symbol 55015\nERROR: incomplete info for symbol 55182\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-JvMww.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ghelp.so-abi-laboratory-kio_ghelp-so-kio_ghelp-so.html\n",
+                    "return_code": 0,
+                    "seconds": 16.114409923553467,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ghelp.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ghelp.so kio_ghelp-so-kio_ghelp-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ghelp.so-abi-laboratory-kio_ghelp-so-kio_ghelp-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ghelp.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ghelp.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ghelp.so": 65536,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ghelp.so": 65536
+            }
+        },
+        "experiment": "usr/lib64/kde3/kio_ghelp-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_ghelp.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_ghelp.so",
+        "different_libs": true
+    }
+]

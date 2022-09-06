@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5ConfigGui.so.5.97.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5ConfigGui.so.5.97.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libKF5ConfigGui.so.5.97.0",
+                    "spliced_lib": "libKF5ConfigGui.so.5.97.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.000110626220703125
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libKF5ConfigGui.so.5.97.0",
+                    "spliced_lib": "libKF5ConfigGui.so.5.97.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00015473365783691406
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 1.7138378620147705,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5ConfigGui.so.5.97.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5ConfigGui.so.5.97.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5ConfigGui.so.5.97.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5ConfigGui.so.5.97.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5ConfigGui.so.5.97.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5ConfigGui.so.5.97.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5ConfigGui.so.5.97.0-abi-laboratory-libKF5ConfigGui-so-5-97-0-libKF5ConfigGui-so-5-97-0.html\nFound link to libKF5ConfigGui.so.5.97.0-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libKF5ConfigGui.so.5.97.0-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/kf5-kconfig-5.97.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 32558\nERROR: incomplete info for symbol 34884\nERROR: incomplete info for symbol 34983\nERROR: incomplete info for symbol 35069\nERROR: incomplete info for symbol 35175\nERROR: incomplete info for symbol 35300\nERROR: incomplete info for symbol 37970\nERROR: incomplete info for symbol 38575\nERROR: incomplete info for symbol 38653\nERROR: incomplete info for symbol 38879\nERROR: incomplete info for symbol 39031\nERROR: incomplete info for symbol 39152\nERROR: incomplete info for symbol 39272\nERROR: incomplete info for symbol 40034\nERROR: incomplete info for symbol 40683\nERROR: incomplete info for symbol 40765\nERROR: incomplete info for symbol 45819\nERROR: incomplete info for symbol 48012\nERROR: incomplete info for symbol 49072\nERROR: incomplete info for symbol 52267\nERROR: incomplete info for symbol 52365\nERROR: incomplete info for symbol 86039\nERROR: incomplete info for symbol 86112\nERROR: incomplete info for symbol 86606\nERROR: incomplete info for symbol 102777\nERROR: incomplete info for symbol 111186\nERROR: incomplete info for symbol 112749\nERROR: incomplete info for symbol 113606\nERROR: incomplete info for symbol 114325\nERROR: incomplete info for symbol 126445\nERROR: incomplete info for symbol 127336\nERROR: incomplete info for symbol 130425\nERROR: incomplete info for symbol 130498\nERROR: incomplete info for symbol 130705\nERROR: incomplete info for symbol 130831\nERROR: incomplete info for symbol 131874\nERROR: incomplete info for symbol 131971\nERROR: incomplete info for symbol 132316\nERROR: incomplete info for symbol 133804\nERROR: incomplete info for symbol 134791\nERROR: incomplete info for symbol 135086\nERROR: incomplete info for symbol 193276\nERROR: incomplete info for symbol 194557\nERROR: incomplete info for symbol 199612\nERROR: incomplete info for symbol 199725\nERROR: incomplete info for symbol 199843\nERROR: incomplete info for symbol 205995\nERROR: incomplete info for symbol 208116\nERROR: incomplete info for symbol 209682\nERROR: incomplete info for symbol 218232\nERROR: incomplete info for symbol 225108\nERROR: incomplete info for symbol 237940\nERROR: incomplete info for symbol 243032\nERROR: incomplete info for symbol 252994\nERROR: incomplete info for symbol 255344\nERROR: incomplete info for symbol 255652\nERROR: incomplete info for symbol 255949\nERROR: incomplete info for symbol 260039\nERROR: incomplete info for symbol 261197\nERROR: incomplete info for symbol 262347\nERROR: incomplete info for symbol 262598\nERROR: incomplete info for symbol 262674\nERROR: incomplete info for symbol 264301\nReading v-tables\nlibQt5Gui.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-3unVL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libKF5ConfigGui.so.5.97.0-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libKF5ConfigGui.so.5.97.0-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/kf5-kconfig-5.97.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 32558\nERROR: incomplete info for symbol 34884\nERROR: incomplete info for symbol 34983\nERROR: incomplete info for symbol 35069\nERROR: incomplete info for symbol 35175\nERROR: incomplete info for symbol 35300\nERROR: incomplete info for symbol 37970\nERROR: incomplete info for symbol 38575\nERROR: incomplete info for symbol 38653\nERROR: incomplete info for symbol 38879\nERROR: incomplete info for symbol 39031\nERROR: incomplete info for symbol 39152\nERROR: incomplete info for symbol 39272\nERROR: incomplete info for symbol 40034\nERROR: incomplete info for symbol 40683\nERROR: incomplete info for symbol 40765\nERROR: incomplete info for symbol 45819\nERROR: incomplete info for symbol 48012\nERROR: incomplete info for symbol 49072\nERROR: incomplete info for symbol 52267\nERROR: incomplete info for symbol 52365\nERROR: incomplete info for symbol 86039\nERROR: incomplete info for symbol 86112\nERROR: incomplete info for symbol 86606\nERROR: incomplete info for symbol 102777\nERROR: incomplete info for symbol 111186\nERROR: incomplete info for symbol 112749\nERROR: incomplete info for symbol 113606\nERROR: incomplete info for symbol 114325\nERROR: incomplete info for symbol 126445\nERROR: incomplete info for symbol 127336\nERROR: incomplete info for symbol 130425\nERROR: incomplete info for symbol 130498\nERROR: incomplete info for symbol 130705\nERROR: incomplete info for symbol 130831\nERROR: incomplete info for symbol 131874\nERROR: incomplete info for symbol 131971\nERROR: incomplete info for symbol 132316\nERROR: incomplete info for symbol 133804\nERROR: incomplete info for symbol 134791\nERROR: incomplete info for symbol 135086\nERROR: incomplete info for symbol 193276\nERROR: incomplete info for symbol 194557\nERROR: incomplete info for symbol 199612\nERROR: incomplete info for symbol 199725\nERROR: incomplete info for symbol 199843\nERROR: incomplete info for symbol 205995\nERROR: incomplete info for symbol 208116\nERROR: incomplete info for symbol 209682\nERROR: incomplete info for symbol 218232\nERROR: incomplete info for symbol 225108\nERROR: incomplete info for symbol 237940\nERROR: incomplete info for symbol 243032\nERROR: incomplete info for symbol 252994\nERROR: incomplete info for symbol 255344\nERROR: incomplete info for symbol 255652\nERROR: incomplete info for symbol 255949\nERROR: incomplete info for symbol 260039\nERROR: incomplete info for symbol 261197\nERROR: incomplete info for symbol 262347\nERROR: incomplete info for symbol 262598\nERROR: incomplete info for symbol 262674\nERROR: incomplete info for symbol 264301\nReading v-tables\nlibQt5Gui.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-89XoV.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5ConfigGui.so.5.97.0-abi-laboratory-libKF5ConfigGui-so-5-97-0-libKF5ConfigGui-so-5-97-0.html\n",
+                    "return_code": 0,
+                    "seconds": 14.295693635940552,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5ConfigGui.so.5.97.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5ConfigGui.so.5.97.0 libKF5ConfigGui-so-5-97-0-libKF5ConfigGui-so-5-97-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5ConfigGui.so.5.97.0-abi-laboratory-libKF5ConfigGui-so-5-97-0-libKF5ConfigGui-so-5-97-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5ConfigGui.so.5.97.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5ConfigGui.so.5.97.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5ConfigGui.so.5.97.0": 149632,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5ConfigGui.so.5.97.0": 149632
+            }
+        },
+        "experiment": "usr/lib64/libKF5ConfigGui-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5ConfigGui.so.5.97.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5ConfigGui.so.5.97.0",
+        "different_libs": true
+    }
+]

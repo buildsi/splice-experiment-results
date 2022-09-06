@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.1.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgif.so.7.1.0",
+                    "spliced_lib": "libgif.so.7.1.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.790855407714844e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgif.so.7.1.0",
+                    "spliced_lib": "libgif.so.7.1.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.124641418457031e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.024402379989624023,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.1.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.1.0-abi-laboratory-libgif-so-7-1-0-libgif-so-7-1-0.html\nFound link to libgif.so.7.1.0-5.2.1-14.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgif.so.7.1.0-5.2.1-14.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/giflib-5.2.1-14.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5158\nERROR: incomplete info for symbol 5272\nERROR: incomplete info for symbol 5318\nERROR: incomplete info for symbol 5604\nERROR: incomplete info for symbol 6070\nERROR: incomplete info for symbol 6493\nERROR: incomplete info for symbol 7155\nERROR: incomplete info for symbol 7394\nERROR: incomplete info for symbol 7427\nERROR: incomplete info for symbol 7779\nERROR: incomplete info for symbol 7869\nERROR: incomplete info for symbol 10066\nERROR: incomplete info for symbol 10822\nERROR: incomplete info for symbol 12423\nERROR: incomplete info for symbol 12462\nERROR: incomplete info for symbol 12726\nERROR: incomplete info for symbol 13792\nERROR: incomplete info for symbol 15896\nERROR: incomplete info for symbol 16249\nERROR: incomplete info for symbol 16308\nERROR: incomplete info for symbol 16388\nERROR: incomplete info for symbol 16466\nERROR: incomplete info for symbol 16802\nERROR: incomplete info for symbol 16848\nERROR: incomplete info for symbol 16995\nERROR: incomplete info for symbol 17095\nERROR: incomplete info for symbol 17306\nERROR: incomplete info for symbol 17934\nERROR: incomplete info for symbol 18051\nERROR: incomplete info for symbol 19807\nERROR: incomplete info for symbol 20045\nERROR: incomplete info for symbol 20338\nERROR: incomplete info for symbol 20543\nERROR: incomplete info for symbol 20663\nERROR: incomplete info for symbol 21134\nERROR: incomplete info for symbol 21242\nERROR: incomplete info for symbol 21579\nERROR: incomplete info for symbol 21660\nERROR: incomplete info for symbol 21971\nERROR: incomplete info for symbol 22249\nERROR: incomplete info for symbol 22932\nERROR: incomplete info for symbol 23137\nERROR: incomplete info for symbol 23619\nERROR: incomplete info for symbol 23855\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-F4g8i.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgif.so.7.1.0-5.2.1-14.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgif.so.7.1.0-5.2.1-14.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/giflib-5.2.1-14.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5158\nERROR: incomplete info for symbol 5272\nERROR: incomplete info for symbol 5318\nERROR: incomplete info for symbol 5604\nERROR: incomplete info for symbol 6070\nERROR: incomplete info for symbol 6493\nERROR: incomplete info for symbol 7155\nERROR: incomplete info for symbol 7394\nERROR: incomplete info for symbol 7427\nERROR: incomplete info for symbol 7779\nERROR: incomplete info for symbol 7869\nERROR: incomplete info for symbol 10066\nERROR: incomplete info for symbol 10822\nERROR: incomplete info for symbol 12423\nERROR: incomplete info for symbol 12462\nERROR: incomplete info for symbol 12726\nERROR: incomplete info for symbol 13792\nERROR: incomplete info for symbol 15896\nERROR: incomplete info for symbol 16249\nERROR: incomplete info for symbol 16308\nERROR: incomplete info for symbol 16388\nERROR: incomplete info for symbol 16466\nERROR: incomplete info for symbol 16802\nERROR: incomplete info for symbol 16848\nERROR: incomplete info for symbol 16995\nERROR: incomplete info for symbol 17095\nERROR: incomplete info for symbol 17306\nERROR: incomplete info for symbol 17934\nERROR: incomplete info for symbol 18051\nERROR: incomplete info for symbol 19807\nERROR: incomplete info for symbol 20045\nERROR: incomplete info for symbol 20338\nERROR: incomplete info for symbol 20543\nERROR: incomplete info for symbol 20663\nERROR: incomplete info for symbol 21134\nERROR: incomplete info for symbol 21242\nERROR: incomplete info for symbol 21579\nERROR: incomplete info for symbol 21660\nERROR: incomplete info for symbol 21971\nERROR: incomplete info for symbol 22249\nERROR: incomplete info for symbol 22932\nERROR: incomplete info for symbol 23137\nERROR: incomplete info for symbol 23619\nERROR: incomplete info for symbol 23855\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-nxJD1.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.1.0-abi-laboratory-libgif-so-7-1-0-libgif-so-7-1-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.5749001502990723,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0 libgif-so-7-1-0-libgif-so-7-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.1.0-abi-laboratory-libgif-so-7-1-0-libgif-so-7-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.1.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.1.0": 53592,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0": 53592
+            }
+        },
+        "experiment": "usr/lib64/libgif-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.1.0",
+        "different_libs": true
+    }
+]

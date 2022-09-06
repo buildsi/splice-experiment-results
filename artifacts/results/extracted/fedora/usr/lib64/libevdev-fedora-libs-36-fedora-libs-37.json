@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libevdev.so.2.3.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libevdev.so.2.3.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libevdev.so.2.3.0",
+                    "spliced_lib": "libevdev.so.2.3.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.506111145019531e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libevdev.so.2.3.0",
+                    "spliced_lib": "libevdev.so.2.3.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.462501525878906e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.030789613723754883,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libevdev.so.2.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libevdev.so.2.3.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libevdev.so.2.3.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libevdev.so.2.3.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libevdev.so.2.3.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libevdev.so.2.3.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libevdev.so.2.3.0-abi-laboratory-libevdev-so-2-3-0-libevdev-so-2-3-0.html\nFound link to libevdev.so.2.3.0-1.13.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libevdev.so.2.3.0-1.13.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libevdev-1.13.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4108\nERROR: incomplete info for symbol 4141\nERROR: incomplete info for symbol 4511\nERROR: incomplete info for symbol 4761\nERROR: incomplete info for symbol 4978\nERROR: incomplete info for symbol 5004\nERROR: incomplete info for symbol 5357\nERROR: incomplete info for symbol 5383\nERROR: incomplete info for symbol 5409\nERROR: incomplete info for symbol 5435\nERROR: incomplete info for symbol 5563\nERROR: incomplete info for symbol 5686\nERROR: incomplete info for symbol 5809\nERROR: incomplete info for symbol 5835\nERROR: incomplete info for symbol 5861\nERROR: incomplete info for symbol 5887\nERROR: incomplete info for symbol 5913\nERROR: incomplete info for symbol 5946\nERROR: incomplete info for symbol 5979\nERROR: incomplete info for symbol 6012\nERROR: incomplete info for symbol 6045\nERROR: incomplete info for symbol 6071\nERROR: incomplete info for symbol 6350\nERROR: incomplete info for symbol 6437\nERROR: incomplete info for symbol 6524\nERROR: incomplete info for symbol 7303\nERROR: incomplete info for symbol 7329\nERROR: incomplete info for symbol 7355\nERROR: incomplete info for symbol 7738\nERROR: incomplete info for symbol 7771\nERROR: incomplete info for symbol 7797\nERROR: incomplete info for symbol 7837\nERROR: incomplete info for symbol 7863\nERROR: incomplete info for symbol 7889\nERROR: incomplete info for symbol 9270\nERROR: incomplete info for symbol 9565\nERROR: incomplete info for symbol 10049\nERROR: incomplete info for symbol 10206\nERROR: incomplete info for symbol 10615\nERROR: incomplete info for symbol 10699\nERROR: incomplete info for symbol 10783\nERROR: incomplete info for symbol 10867\nERROR: incomplete info for symbol 10951\nERROR: incomplete info for symbol 11035\nERROR: incomplete info for symbol 11122\nERROR: incomplete info for symbol 11209\nERROR: incomplete info for symbol 11296\nERROR: incomplete info for symbol 11383\nERROR: incomplete info for symbol 11470\nERROR: incomplete info for symbol 16483\nERROR: incomplete info for symbol 16616\nERROR: incomplete info for symbol 17146\nERROR: incomplete info for symbol 17689\nERROR: incomplete info for symbol 17846\nERROR: incomplete info for symbol 20027\nERROR: incomplete info for symbol 20153\nERROR: incomplete info for symbol 20451\nERROR: incomplete info for symbol 20884\nERROR: incomplete info for symbol 21413\nERROR: incomplete info for symbol 28215\nERROR: incomplete info for symbol 28965\nERROR: incomplete info for symbol 29041\nERROR: incomplete info for symbol 29122\nERROR: incomplete info for symbol 29491\nERROR: incomplete info for symbol 29650\nERROR: incomplete info for symbol 30123\nERROR: incomplete info for symbol 30220\nERROR: incomplete info for symbol 30436\nERROR: incomplete info for symbol 30551\nERROR: incomplete info for symbol 30622\nERROR: incomplete info for symbol 30792\nERROR: incomplete info for symbol 30883\nERROR: incomplete info for symbol 31024\nERROR: incomplete info for symbol 31135\nERROR: incomplete info for symbol 31250\nERROR: incomplete info for symbol 31321\nERROR: incomplete info for symbol 31438\nERROR: incomplete info for symbol 31509\nERROR: incomplete info for symbol 31655\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-jx4C1.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libevdev.so.2.3.0-1.13.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libevdev.so.2.3.0-1.13.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libevdev-1.13.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4108\nERROR: incomplete info for symbol 4141\nERROR: incomplete info for symbol 4511\nERROR: incomplete info for symbol 4761\nERROR: incomplete info for symbol 4978\nERROR: incomplete info for symbol 5004\nERROR: incomplete info for symbol 5357\nERROR: incomplete info for symbol 5383\nERROR: incomplete info for symbol 5409\nERROR: incomplete info for symbol 5435\nERROR: incomplete info for symbol 5563\nERROR: incomplete info for symbol 5686\nERROR: incomplete info for symbol 5809\nERROR: incomplete info for symbol 5835\nERROR: incomplete info for symbol 5861\nERROR: incomplete info for symbol 5887\nERROR: incomplete info for symbol 5913\nERROR: incomplete info for symbol 5946\nERROR: incomplete info for symbol 5979\nERROR: incomplete info for symbol 6012\nERROR: incomplete info for symbol 6045\nERROR: incomplete info for symbol 6071\nERROR: incomplete info for symbol 6350\nERROR: incomplete info for symbol 6437\nERROR: incomplete info for symbol 6524\nERROR: incomplete info for symbol 7303\nERROR: incomplete info for symbol 7329\nERROR: incomplete info for symbol 7355\nERROR: incomplete info for symbol 7738\nERROR: incomplete info for symbol 7771\nERROR: incomplete info for symbol 7797\nERROR: incomplete info for symbol 7837\nERROR: incomplete info for symbol 7863\nERROR: incomplete info for symbol 7889\nERROR: incomplete info for symbol 9270\nERROR: incomplete info for symbol 9565\nERROR: incomplete info for symbol 10049\nERROR: incomplete info for symbol 10206\nERROR: incomplete info for symbol 10615\nERROR: incomplete info for symbol 10699\nERROR: incomplete info for symbol 10783\nERROR: incomplete info for symbol 10867\nERROR: incomplete info for symbol 10951\nERROR: incomplete info for symbol 11035\nERROR: incomplete info for symbol 11122\nERROR: incomplete info for symbol 11209\nERROR: incomplete info for symbol 11296\nERROR: incomplete info for symbol 11383\nERROR: incomplete info for symbol 11470\nERROR: incomplete info for symbol 16483\nERROR: incomplete info for symbol 16616\nERROR: incomplete info for symbol 17146\nERROR: incomplete info for symbol 17689\nERROR: incomplete info for symbol 17846\nERROR: incomplete info for symbol 20027\nERROR: incomplete info for symbol 20153\nERROR: incomplete info for symbol 20451\nERROR: incomplete info for symbol 20884\nERROR: incomplete info for symbol 21413\nERROR: incomplete info for symbol 28215\nERROR: incomplete info for symbol 28965\nERROR: incomplete info for symbol 29041\nERROR: incomplete info for symbol 29122\nERROR: incomplete info for symbol 29491\nERROR: incomplete info for symbol 29650\nERROR: incomplete info for symbol 30123\nERROR: incomplete info for symbol 30220\nERROR: incomplete info for symbol 30436\nERROR: incomplete info for symbol 30551\nERROR: incomplete info for symbol 30622\nERROR: incomplete info for symbol 30792\nERROR: incomplete info for symbol 30883\nERROR: incomplete info for symbol 31024\nERROR: incomplete info for symbol 31135\nERROR: incomplete info for symbol 31250\nERROR: incomplete info for symbol 31321\nERROR: incomplete info for symbol 31438\nERROR: incomplete info for symbol 31509\nERROR: incomplete info for symbol 31655\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-qptMm.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libevdev.so.2.3.0-abi-laboratory-libevdev-so-2-3-0-libevdev-so-2-3-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.6651811599731445,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libevdev.so.2.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libevdev.so.2.3.0 libevdev-so-2-3-0-libevdev-so-2-3-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libevdev.so.2.3.0-abi-laboratory-libevdev-so-2-3-0-libevdev-so-2-3-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libevdev.so.2.3.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libevdev.so.2.3.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libevdev.so.2.3.0": 119752,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libevdev.so.2.3.0": 119752
+            }
+        },
+        "experiment": "usr/lib64/libevdev-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libevdev.so.2.3.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libevdev.so.2.3.0",
+        "different_libs": true
+    }
+]

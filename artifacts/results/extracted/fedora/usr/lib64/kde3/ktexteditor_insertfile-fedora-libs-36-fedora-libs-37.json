@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/ktexteditor_insertfile.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/ktexteditor_insertfile.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "ktexteditor_insertfile.so",
+                    "spliced_lib": "ktexteditor_insertfile.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.0067901611328125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "ktexteditor_insertfile.so",
+                    "spliced_lib": "ktexteditor_insertfile.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.4318695068359375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.43996500968933105,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/ktexteditor_insertfile.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/ktexteditor_insertfile.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/ktexteditor_insertfile.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/ktexteditor_insertfile.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/ktexteditor_insertfile.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/ktexteditor_insertfile.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/ktexteditor_insertfile.so-abi-laboratory-ktexteditor_insertfile-so-ktexteditor_insertfile-so.html\nFound link to ktexteditor_insertfile.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file ktexteditor_insertfile.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibktexteditor.so.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-iEGDi.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to ktexteditor_insertfile.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file ktexteditor_insertfile.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibktexteditor.so.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-rn4KV.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/ktexteditor_insertfile.so-abi-laboratory-ktexteditor_insertfile-so-ktexteditor_insertfile-so.html\n",
+                    "return_code": 0,
+                    "seconds": 14.087432861328125,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/ktexteditor_insertfile.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/ktexteditor_insertfile.so ktexteditor_insertfile-so-ktexteditor_insertfile-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/ktexteditor_insertfile.so-abi-laboratory-ktexteditor_insertfile-so-ktexteditor_insertfile-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/ktexteditor_insertfile.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/ktexteditor_insertfile.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/ktexteditor_insertfile.so": 49096,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/ktexteditor_insertfile.so": 49096
+            }
+        },
+        "experiment": "usr/lib64/kde3/ktexteditor_insertfile-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/ktexteditor_insertfile.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/ktexteditor_insertfile.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5AuthCore.so.5.97.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5AuthCore.so.5.97.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libKF5AuthCore.so.5.97.0",
+                    "spliced_lib": "libKF5AuthCore.so.5.97.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.772445678710938e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libKF5AuthCore.so.5.97.0",
+                    "spliced_lib": "libKF5AuthCore.so.5.97.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00010609626770019531
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 2.006654977798462,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5AuthCore.so.5.97.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5AuthCore.so.5.97.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5AuthCore.so.5.97.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5AuthCore.so.5.97.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5AuthCore.so.5.97.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5AuthCore.so.5.97.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5AuthCore.so.5.97.0-abi-laboratory-libKF5AuthCore-so-5-97-0-libKF5AuthCore-so-5-97-0.html\nFound link to libKF5AuthCore.so.5.97.0-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libKF5AuthCore.so.5.97.0-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/kf5-kauth-5.97.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 36660\nERROR: incomplete info for symbol 36771\nERROR: incomplete info for symbol 37254\nERROR: incomplete info for symbol 38881\nERROR: incomplete info for symbol 41483\nERROR: incomplete info for symbol 43920\nERROR: incomplete info for symbol 44698\nERROR: incomplete info for symbol 44889\nERROR: incomplete info for symbol 48164\nERROR: incomplete info for symbol 51006\nERROR: incomplete info for symbol 51084\nERROR: incomplete info for symbol 55220\nERROR: incomplete info for symbol 55366\nERROR: incomplete info for symbol 55561\nERROR: incomplete info for symbol 55993\nERROR: incomplete info for symbol 56317\nERROR: incomplete info for symbol 56385\nERROR: incomplete info for symbol 56674\nERROR: incomplete info for symbol 57188\nERROR: incomplete info for symbol 59897\nERROR: incomplete info for symbol 60515\nERROR: incomplete info for symbol 62031\nERROR: incomplete info for symbol 65637\nERROR: incomplete info for symbol 67101\nERROR: incomplete info for symbol 67719\nERROR: incomplete info for symbol 68151\nERROR: incomplete info for symbol 68475\nERROR: incomplete info for symbol 68764\nERROR: incomplete info for symbol 68832\nERROR: incomplete info for symbol 68944\nERROR: incomplete info for symbol 69136\nERROR: incomplete info for symbol 70339\nERROR: incomplete info for symbol 71519\nERROR: incomplete info for symbol 73299\nERROR: incomplete info for symbol 76905\nERROR: incomplete info for symbol 78369\nERROR: incomplete info for symbol 78987\nERROR: incomplete info for symbol 79055\nERROR: incomplete info for symbol 79344\nERROR: incomplete info for symbol 79412\nERROR: incomplete info for symbol 79465\nERROR: incomplete info for symbol 79533\nERROR: incomplete info for symbol 80325\nERROR: incomplete info for symbol 80393\nERROR: incomplete info for symbol 80764\nERROR: incomplete info for symbol 80859\nERROR: incomplete info for symbol 87822\nERROR: incomplete info for symbol 88146\nERROR: incomplete info for symbol 90162\nERROR: incomplete info for symbol 105750\nERROR: incomplete info for symbol 109005\nERROR: incomplete info for symbol 109120\nERROR: incomplete info for symbol 109235\nERROR: incomplete info for symbol 109412\nERROR: incomplete info for symbol 110104\nERROR: incomplete info for symbol 110131\nERROR: incomplete info for symbol 110239\nERROR: incomplete info for symbol 122606\nERROR: incomplete info for symbol 123694\nERROR: incomplete info for symbol 124823\nERROR: incomplete info for symbol 126700\nERROR: incomplete info for symbol 129530\nERROR: incomplete info for symbol 134128\nERROR: incomplete info for symbol 138014\nERROR: incomplete info for symbol 140681\nERROR: incomplete info for symbol 140782\nERROR: incomplete info for symbol 154863\nERROR: incomplete info for symbol 156183\nERROR: incomplete info for symbol 156245\nERROR: incomplete info for symbol 156371\nReading v-tables\nlibKF5CoreAddons.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-isVLN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libKF5AuthCore.so.5.97.0-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libKF5AuthCore.so.5.97.0-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/kf5-kauth-5.97.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 36660\nERROR: incomplete info for symbol 36771\nERROR: incomplete info for symbol 37254\nERROR: incomplete info for symbol 38881\nERROR: incomplete info for symbol 41483\nERROR: incomplete info for symbol 43920\nERROR: incomplete info for symbol 44698\nERROR: incomplete info for symbol 44889\nERROR: incomplete info for symbol 48164\nERROR: incomplete info for symbol 51006\nERROR: incomplete info for symbol 51084\nERROR: incomplete info for symbol 55220\nERROR: incomplete info for symbol 55366\nERROR: incomplete info for symbol 55561\nERROR: incomplete info for symbol 55993\nERROR: incomplete info for symbol 56317\nERROR: incomplete info for symbol 56385\nERROR: incomplete info for symbol 56674\nERROR: incomplete info for symbol 57188\nERROR: incomplete info for symbol 59897\nERROR: incomplete info for symbol 60515\nERROR: incomplete info for symbol 62031\nERROR: incomplete info for symbol 65637\nERROR: incomplete info for symbol 67101\nERROR: incomplete info for symbol 67719\nERROR: incomplete info for symbol 68151\nERROR: incomplete info for symbol 68475\nERROR: incomplete info for symbol 68764\nERROR: incomplete info for symbol 68832\nERROR: incomplete info for symbol 68944\nERROR: incomplete info for symbol 69136\nERROR: incomplete info for symbol 70339\nERROR: incomplete info for symbol 71519\nERROR: incomplete info for symbol 73299\nERROR: incomplete info for symbol 76905\nERROR: incomplete info for symbol 78369\nERROR: incomplete info for symbol 78987\nERROR: incomplete info for symbol 79055\nERROR: incomplete info for symbol 79344\nERROR: incomplete info for symbol 79412\nERROR: incomplete info for symbol 79465\nERROR: incomplete info for symbol 79533\nERROR: incomplete info for symbol 80325\nERROR: incomplete info for symbol 80393\nERROR: incomplete info for symbol 80764\nERROR: incomplete info for symbol 80859\nERROR: incomplete info for symbol 87822\nERROR: incomplete info for symbol 88146\nERROR: incomplete info for symbol 90162\nERROR: incomplete info for symbol 105750\nERROR: incomplete info for symbol 109005\nERROR: incomplete info for symbol 109120\nERROR: incomplete info for symbol 109235\nERROR: incomplete info for symbol 109412\nERROR: incomplete info for symbol 110104\nERROR: incomplete info for symbol 110131\nERROR: incomplete info for symbol 110239\nERROR: incomplete info for symbol 122606\nERROR: incomplete info for symbol 123694\nERROR: incomplete info for symbol 124823\nERROR: incomplete info for symbol 126700\nERROR: incomplete info for symbol 129530\nERROR: incomplete info for symbol 134128\nERROR: incomplete info for symbol 138014\nERROR: incomplete info for symbol 140681\nERROR: incomplete info for symbol 140782\nERROR: incomplete info for symbol 154863\nERROR: incomplete info for symbol 156183\nERROR: incomplete info for symbol 156245\nERROR: incomplete info for symbol 156371\nReading v-tables\nlibKF5CoreAddons.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-x2xep.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5AuthCore.so.5.97.0-abi-laboratory-libKF5AuthCore-so-5-97-0-libKF5AuthCore-so-5-97-0.html\n",
+                    "return_code": 0,
+                    "seconds": 17.692188262939453,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5AuthCore.so.5.97.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5AuthCore.so.5.97.0 libKF5AuthCore-so-5-97-0-libKF5AuthCore-so-5-97-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5AuthCore.so.5.97.0-abi-laboratory-libKF5AuthCore-so-5-97-0-libKF5AuthCore-so-5-97-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5AuthCore.so.5.97.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5AuthCore.so.5.97.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5AuthCore.so.5.97.0": 95384,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5AuthCore.so.5.97.0": 95384
+            }
+        },
+        "experiment": "usr/lib64/libKF5AuthCore-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5AuthCore.so.5.97.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5AuthCore.so.5.97.0",
+        "different_libs": true
+    }
+]

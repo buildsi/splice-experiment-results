@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcp1plugin.so.0.0.0",
+                    "spliced_lib": "libcp1plugin.so.0.0.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.504753112792969e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcp1plugin.so.0.0.0",
+                    "spliced_lib": "libcp1plugin.so.0.0.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.6702880859375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 5.331134080886841,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0-abi-laboratory-libcp1plugin-so-0-0-0-libcp1plugin-so-0-0-0.html\nFound link to libcp1plugin.so.0.0.0-12.0.1-0.16.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcp1plugin.so.0.0.0-12.0.1-0.16.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib/gcc/x86_64-redhat-linux/12/plugin/../../../../../../.dwz/gcc-12.0.1-0.16.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 605454\nERROR: incomplete info for symbol 605637\nERROR: incomplete info for symbol 605878\nERROR: incomplete info for symbol 606002\nERROR: incomplete info for symbol 606809\nERROR: incomplete info for symbol 607560\nERROR: incomplete info for symbol 608551\nERROR: incomplete info for symbol 608577\nERROR: incomplete info for symbol 608603\nERROR: incomplete info for symbol 608848\nERROR: incomplete info for symbol 608917\nERROR: incomplete info for symbol 609028\nERROR: incomplete info for symbol 609205\nERROR: incomplete info for symbol 609604\nERROR: incomplete info for symbol 609693\nERROR: incomplete info for symbol 609801\nERROR: incomplete info for symbol 609890\nERROR: incomplete info for symbol 609946\nERROR: incomplete info for symbol 610075\nERROR: incomplete info for symbol 610199\nERROR: incomplete info for symbol 610225\nERROR: incomplete info for symbol 610301\nERROR: incomplete info for symbol 610425\nERROR: incomplete info for symbol 610479\nERROR: incomplete info for symbol 610534\nReading v-tables\n/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0: undefined symbol: ovl_op_mapping\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-WYVxL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcp1plugin.so.0.0.0-12.0.1-0.16.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcp1plugin.so.0.0.0-12.0.1-0.16.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib/gcc/x86_64-redhat-linux/12/plugin/../../../../../../.dwz/gcc-12.0.1-0.16.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 605454\nERROR: incomplete info for symbol 605637\nERROR: incomplete info for symbol 605878\nERROR: incomplete info for symbol 606002\nERROR: incomplete info for symbol 606809\nERROR: incomplete info for symbol 607560\nERROR: incomplete info for symbol 608551\nERROR: incomplete info for symbol 608577\nERROR: incomplete info for symbol 608603\nERROR: incomplete info for symbol 608848\nERROR: incomplete info for symbol 608917\nERROR: incomplete info for symbol 609028\nERROR: incomplete info for symbol 609205\nERROR: incomplete info for symbol 609604\nERROR: incomplete info for symbol 609693\nERROR: incomplete info for symbol 609801\nERROR: incomplete info for symbol 609890\nERROR: incomplete info for symbol 609946\nERROR: incomplete info for symbol 610075\nERROR: incomplete info for symbol 610199\nERROR: incomplete info for symbol 610225\nERROR: incomplete info for symbol 610301\nERROR: incomplete info for symbol 610425\nERROR: incomplete info for symbol 610479\nERROR: incomplete info for symbol 610534\nReading v-tables\n/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0: undefined symbol: ovl_op_mapping\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-hPZxi.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0-abi-laboratory-libcp1plugin-so-0-0-0-libcp1plugin-so-0-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 234.66136288642883,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0 libcp1plugin-so-0-0-0-libcp1plugin-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0-abi-laboratory-libcp1plugin-so-0-0-0-libcp1plugin-so-0-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0": 125976,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0": 125976
+            }
+        },
+        "experiment": "usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/gcc/x86_64-redhat-linux/12/plugin/libcp1plugin.so.0.0.0",
+        "different_libs": true
+    }
+]

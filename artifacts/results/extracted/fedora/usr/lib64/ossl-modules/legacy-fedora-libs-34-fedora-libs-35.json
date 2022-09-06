@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/legacy.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/legacy.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "legacy.so",
+                    "spliced_lib": "legacy.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.91278076171875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "legacy.so",
+                    "spliced_lib": "legacy.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.0251998901367188e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.07794642448425293,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/legacy.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/legacy.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/legacy.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/legacy.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/legacy.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/legacy.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/legacy.so-abi-laboratory-legacy-so-legacy-so.html\nFound link to legacy.so-3.0.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file legacy.so-3.0.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ossl-modules/../../../.dwz/openssl-3.0.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-sPR59.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to legacy.so-3.0.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file legacy.so-3.0.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ossl-modules/../../../.dwz/openssl-3.0.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-LZ81P.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/legacy.so-abi-laboratory-legacy-so-legacy-so.html\n",
+                    "return_code": 0,
+                    "seconds": 3.675422191619873,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/legacy.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/legacy.so legacy-so-legacy-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/legacy.so-abi-laboratory-legacy-so-legacy-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/legacy.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/legacy.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/legacy.so": 120376,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/legacy.so": 120376
+            }
+        },
+        "experiment": "usr/lib64/ossl-modules/legacy-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ossl-modules/legacy.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ossl-modules/legacy.so",
+        "different_libs": true
+    }
+]

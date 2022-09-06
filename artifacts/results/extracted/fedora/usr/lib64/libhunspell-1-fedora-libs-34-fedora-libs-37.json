@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhunspell-1.7.so.0.0.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhunspell-1.7.so.0.0.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libhunspell-1.7.so.0.0.1",
+                    "spliced_lib": "libhunspell-1.7.so.0.0.1",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.650520324707031e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libhunspell-1.7.so.0.0.1",
+                    "spliced_lib": "libhunspell-1.7.so.0.0.1",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.987022399902344e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 1.1360266208648682,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhunspell-1.7.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhunspell-1.7.so.0.0.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhunspell-1.7.so.0.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhunspell-1.7.so.0.0.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhunspell-1.7.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhunspell-1.7.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhunspell-1.7.so.0.0.1-abi-laboratory-libhunspell-1-7-so-0-0-1-libhunspell-1-7-so-0-0-1.html\nFound link to libhunspell-1.7.so.0.0.1-1.7.0-19.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libhunspell-1.7.so.0.0.1-1.7.0-19.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/hunspell-1.7.0-19.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 187960\nERROR: incomplete info for symbol 188375\nERROR: incomplete info for symbol 194926\nERROR: incomplete info for symbol 195130\nERROR: incomplete info for symbol 211603\nERROR: incomplete info for symbol 213080\nERROR: incomplete info for symbol 215942\nERROR: incomplete info for symbol 216756\nERROR: incomplete info for symbol 222357\nERROR: incomplete info for symbol 222737\nERROR: incomplete info for symbol 223117\nERROR: incomplete info for symbol 223348\nERROR: incomplete info for symbol 223579\nERROR: incomplete info for symbol 223681\nERROR: incomplete info for symbol 223713\nERROR: incomplete info for symbol 226753\nERROR: incomplete info for symbol 227285\nERROR: incomplete info for symbol 227331\nERROR: incomplete info for symbol 227415\nERROR: incomplete info for symbol 227798\nERROR: incomplete info for symbol 228310\nERROR: incomplete info for symbol 228356\nERROR: incomplete info for symbol 228440\nERROR: incomplete info for symbol 228823\nERROR: incomplete info for symbol 229335\nERROR: incomplete info for symbol 229368\nERROR: incomplete info for symbol 229939\nERROR: incomplete info for symbol 244553\nERROR: incomplete info for symbol 246958\nERROR: incomplete info for symbol 250361\nERROR: incomplete info for symbol 697575\nERROR: incomplete info for symbol 697645\nERROR: incomplete info for symbol 697756\nERROR: incomplete info for symbol 697849\nERROR: incomplete info for symbol 697918\nERROR: incomplete info for symbol 699235\nERROR: incomplete info for symbol 699341\nERROR: incomplete info for symbol 699447\nERROR: incomplete info for symbol 699888\nERROR: incomplete info for symbol 700279\nERROR: incomplete info for symbol 700385\nERROR: incomplete info for symbol 700454\nERROR: incomplete info for symbol 700542\nERROR: incomplete info for symbol 700655\nERROR: incomplete info for symbol 700768\nERROR: incomplete info for symbol 700837\nERROR: incomplete info for symbol 701229\nERROR: incomplete info for symbol 701298\nERROR: incomplete info for symbol 701481\nERROR: incomplete info for symbol 701982\nERROR: incomplete info for symbol 702098\nERROR: incomplete info for symbol 704497\nERROR: incomplete info for symbol 705593\nERROR: incomplete info for symbol 717355\nERROR: incomplete info for symbol 718922\nERROR: incomplete info for symbol 719860\nERROR: incomplete info for symbol 720586\nERROR: incomplete info for symbol 721228\nERROR: incomplete info for symbol 735977\nERROR: incomplete info for symbol 747353\nERROR: incomplete info for symbol 750154\nERROR: incomplete info for symbol 750240\nERROR: incomplete info for symbol 752486\nERROR: incomplete info for symbol 752572\nERROR: incomplete info for symbol 755928\nERROR: incomplete info for symbol 756014\nERROR: incomplete info for symbol 759610\nERROR: incomplete info for symbol 759716\nERROR: incomplete info for symbol 762906\nERROR: incomplete info for symbol 763012\nERROR: incomplete info for symbol 767606\nERROR: incomplete info for symbol 767732\nERROR: incomplete info for symbol 772522\nERROR: incomplete info for symbol 772628\nERROR: incomplete info for symbol 772711\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-MS0FD.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libhunspell-1.7.so.0.0.1-1.7.0-19.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libhunspell-1.7.so.0.0.1-1.7.0-19.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/hunspell-1.7.0-19.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 187960\nERROR: incomplete info for symbol 188375\nERROR: incomplete info for symbol 194926\nERROR: incomplete info for symbol 195130\nERROR: incomplete info for symbol 211603\nERROR: incomplete info for symbol 213080\nERROR: incomplete info for symbol 215942\nERROR: incomplete info for symbol 216756\nERROR: incomplete info for symbol 222357\nERROR: incomplete info for symbol 222737\nERROR: incomplete info for symbol 223117\nERROR: incomplete info for symbol 223348\nERROR: incomplete info for symbol 223579\nERROR: incomplete info for symbol 223681\nERROR: incomplete info for symbol 223713\nERROR: incomplete info for symbol 226753\nERROR: incomplete info for symbol 227285\nERROR: incomplete info for symbol 227331\nERROR: incomplete info for symbol 227415\nERROR: incomplete info for symbol 227798\nERROR: incomplete info for symbol 228310\nERROR: incomplete info for symbol 228356\nERROR: incomplete info for symbol 228440\nERROR: incomplete info for symbol 228823\nERROR: incomplete info for symbol 229335\nERROR: incomplete info for symbol 229368\nERROR: incomplete info for symbol 229939\nERROR: incomplete info for symbol 244553\nERROR: incomplete info for symbol 246958\nERROR: incomplete info for symbol 250361\nERROR: incomplete info for symbol 697575\nERROR: incomplete info for symbol 697645\nERROR: incomplete info for symbol 697756\nERROR: incomplete info for symbol 697849\nERROR: incomplete info for symbol 697918\nERROR: incomplete info for symbol 699235\nERROR: incomplete info for symbol 699341\nERROR: incomplete info for symbol 699447\nERROR: incomplete info for symbol 699888\nERROR: incomplete info for symbol 700279\nERROR: incomplete info for symbol 700385\nERROR: incomplete info for symbol 700454\nERROR: incomplete info for symbol 700542\nERROR: incomplete info for symbol 700655\nERROR: incomplete info for symbol 700768\nERROR: incomplete info for symbol 700837\nERROR: incomplete info for symbol 701229\nERROR: incomplete info for symbol 701298\nERROR: incomplete info for symbol 701481\nERROR: incomplete info for symbol 701982\nERROR: incomplete info for symbol 702098\nERROR: incomplete info for symbol 704497\nERROR: incomplete info for symbol 705593\nERROR: incomplete info for symbol 717355\nERROR: incomplete info for symbol 718922\nERROR: incomplete info for symbol 719860\nERROR: incomplete info for symbol 720586\nERROR: incomplete info for symbol 721228\nERROR: incomplete info for symbol 735977\nERROR: incomplete info for symbol 747353\nERROR: incomplete info for symbol 750154\nERROR: incomplete info for symbol 750240\nERROR: incomplete info for symbol 752486\nERROR: incomplete info for symbol 752572\nERROR: incomplete info for symbol 755928\nERROR: incomplete info for symbol 756014\nERROR: incomplete info for symbol 759610\nERROR: incomplete info for symbol 759716\nERROR: incomplete info for symbol 762906\nERROR: incomplete info for symbol 763012\nERROR: incomplete info for symbol 767606\nERROR: incomplete info for symbol 767732\nERROR: incomplete info for symbol 772522\nERROR: incomplete info for symbol 772628\nERROR: incomplete info for symbol 772711\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-MdV28.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhunspell-1.7.so.0.0.1-abi-laboratory-libhunspell-1-7-so-0-0-1-libhunspell-1-7-so-0-0-1.html\n",
+                    "return_code": 0,
+                    "seconds": 7.596577882766724,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhunspell-1.7.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhunspell-1.7.so.0.0.1 libhunspell-1-7-so-0-0-1-libhunspell-1-7-so-0-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhunspell-1.7.so.0.0.1-abi-laboratory-libhunspell-1-7-so-0-0-1-libhunspell-1-7-so-0-0-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhunspell-1.7.so.0.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhunspell-1.7.so.0.0.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhunspell-1.7.so.0.0.1": 563928,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhunspell-1.7.so.0.0.1": 563928
+            }
+        },
+        "experiment": "usr/lib64/libhunspell-1-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhunspell-1.7.so.0.0.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhunspell-1.7.so.0.0.1",
+        "different_libs": true
+    }
+]

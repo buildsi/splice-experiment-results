@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5Codecs.so.5.97.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5Codecs.so.5.97.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libKF5Codecs.so.5.97.0",
+                    "spliced_lib": "libKF5Codecs.so.5.97.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.723403930664062e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libKF5Codecs.so.5.97.0",
+                    "spliced_lib": "libKF5Codecs.so.5.97.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.965896606445312e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 1.4440133571624756,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5Codecs.so.5.97.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5Codecs.so.5.97.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5Codecs.so.5.97.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5Codecs.so.5.97.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5Codecs.so.5.97.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5Codecs.so.5.97.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5Codecs.so.5.97.0-abi-laboratory-libKF5Codecs-so-5-97-0-libKF5Codecs-so-5-97-0.html\nFound link to libKF5Codecs.so.5.97.0-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libKF5Codecs.so.5.97.0-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 402840\nERROR: incomplete info for symbol 405824\nERROR: incomplete info for symbol 407338\nERROR: incomplete info for symbol 409884\nERROR: incomplete info for symbol 412430\nERROR: incomplete info for symbol 413892\nERROR: incomplete info for symbol 424220\nERROR: incomplete info for symbol 425557\nERROR: incomplete info for symbol 426466\nERROR: incomplete info for symbol 426544\nERROR: incomplete info for symbol 427750\nERROR: incomplete info for symbol 429209\nERROR: incomplete info for symbol 432427\nERROR: incomplete info for symbol 433767\nERROR: incomplete info for symbol 434427\nERROR: incomplete info for symbol 434505\nERROR: incomplete info for symbol 440882\nERROR: incomplete info for symbol 441469\nERROR: incomplete info for symbol 441604\nERROR: incomplete info for symbol 442358\nERROR: incomplete info for symbol 442476\nERROR: incomplete info for symbol 443207\nERROR: incomplete info for symbol 443325\nERROR: incomplete info for symbol 443413\nERROR: incomplete info for symbol 444157\nERROR: incomplete info for symbol 444275\nERROR: incomplete info for symbol 445006\nERROR: incomplete info for symbol 445124\nERROR: incomplete info for symbol 445855\nERROR: incomplete info for symbol 445973\nERROR: incomplete info for symbol 450216\nERROR: incomplete info for symbol 457790\nERROR: incomplete info for symbol 468596\nERROR: incomplete info for symbol 470328\nERROR: incomplete info for symbol 479195\nERROR: incomplete info for symbol 481593\nERROR: incomplete info for symbol 482904\nERROR: incomplete info for symbol 483027\nERROR: incomplete info for symbol 485658\nERROR: incomplete info for symbol 488933\nERROR: incomplete info for symbol 495371\nERROR: incomplete info for symbol 496187\nERROR: incomplete info for symbol 499396\nERROR: incomplete info for symbol 506293\nERROR: incomplete info for symbol 519307\nERROR: incomplete info for symbol 520418\nERROR: incomplete info for symbol 521967\nERROR: incomplete info for symbol 528610\nERROR: incomplete info for symbol 530522\nERROR: incomplete info for symbol 530640\nERROR: incomplete info for symbol 535011\nERROR: incomplete info for symbol 536235\nERROR: incomplete info for symbol 545258\nERROR: incomplete info for symbol 546960\nERROR: incomplete info for symbol 553317\nERROR: incomplete info for symbol 557013\nERROR: incomplete info for symbol 557606\nERROR: incomplete info for symbol 559263\nERROR: incomplete info for symbol 559856\nERROR: incomplete info for symbol 563390\nERROR: incomplete info for symbol 563983\nERROR: incomplete info for symbol 565640\nERROR: incomplete info for symbol 566233\nERROR: incomplete info for symbol 573922\nERROR: incomplete info for symbol 576378\nERROR: incomplete info for symbol 579029\nERROR: incomplete info for symbol 615445\nERROR: incomplete info for symbol 618915\nERROR: incomplete info for symbol 623544\nERROR: incomplete info for symbol 628641\nERROR: incomplete info for symbol 632734\nERROR: incomplete info for symbol 635341\nERROR: incomplete info for symbol 636198\nERROR: incomplete info for symbol 636522\nERROR: incomplete info for symbol 636673\nERROR: incomplete info for symbol 637473\nERROR: incomplete info for symbol 637691\nERROR: incomplete info for symbol 637842\nERROR: incomplete info for symbol 638068\nERROR: incomplete info for symbol 638225\nERROR: incomplete info for symbol 638376\nERROR: incomplete info for symbol 641026\nERROR: incomplete info for symbol 641575\nERROR: incomplete info for symbol 644298\nReading v-tables\nlibQt5Core.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-VFly6.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libKF5Codecs.so.5.97.0-5.97.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libKF5Codecs.so.5.97.0-5.97.0-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 402840\nERROR: incomplete info for symbol 405824\nERROR: incomplete info for symbol 407338\nERROR: incomplete info for symbol 409884\nERROR: incomplete info for symbol 412430\nERROR: incomplete info for symbol 413892\nERROR: incomplete info for symbol 424220\nERROR: incomplete info for symbol 425557\nERROR: incomplete info for symbol 426466\nERROR: incomplete info for symbol 426544\nERROR: incomplete info for symbol 427750\nERROR: incomplete info for symbol 429209\nERROR: incomplete info for symbol 432427\nERROR: incomplete info for symbol 433767\nERROR: incomplete info for symbol 434427\nERROR: incomplete info for symbol 434505\nERROR: incomplete info for symbol 440882\nERROR: incomplete info for symbol 441469\nERROR: incomplete info for symbol 441604\nERROR: incomplete info for symbol 442358\nERROR: incomplete info for symbol 442476\nERROR: incomplete info for symbol 443207\nERROR: incomplete info for symbol 443325\nERROR: incomplete info for symbol 443413\nERROR: incomplete info for symbol 444157\nERROR: incomplete info for symbol 444275\nERROR: incomplete info for symbol 445006\nERROR: incomplete info for symbol 445124\nERROR: incomplete info for symbol 445855\nERROR: incomplete info for symbol 445973\nERROR: incomplete info for symbol 450216\nERROR: incomplete info for symbol 457790\nERROR: incomplete info for symbol 468596\nERROR: incomplete info for symbol 470328\nERROR: incomplete info for symbol 479195\nERROR: incomplete info for symbol 481593\nERROR: incomplete info for symbol 482904\nERROR: incomplete info for symbol 483027\nERROR: incomplete info for symbol 485658\nERROR: incomplete info for symbol 488933\nERROR: incomplete info for symbol 495371\nERROR: incomplete info for symbol 496187\nERROR: incomplete info for symbol 499396\nERROR: incomplete info for symbol 506293\nERROR: incomplete info for symbol 519307\nERROR: incomplete info for symbol 520418\nERROR: incomplete info for symbol 521967\nERROR: incomplete info for symbol 528610\nERROR: incomplete info for symbol 530522\nERROR: incomplete info for symbol 530640\nERROR: incomplete info for symbol 535011\nERROR: incomplete info for symbol 536235\nERROR: incomplete info for symbol 545258\nERROR: incomplete info for symbol 546960\nERROR: incomplete info for symbol 553317\nERROR: incomplete info for symbol 557013\nERROR: incomplete info for symbol 557606\nERROR: incomplete info for symbol 559263\nERROR: incomplete info for symbol 559856\nERROR: incomplete info for symbol 563390\nERROR: incomplete info for symbol 563983\nERROR: incomplete info for symbol 565640\nERROR: incomplete info for symbol 566233\nERROR: incomplete info for symbol 573922\nERROR: incomplete info for symbol 576378\nERROR: incomplete info for symbol 579029\nERROR: incomplete info for symbol 615445\nERROR: incomplete info for symbol 618915\nERROR: incomplete info for symbol 623544\nERROR: incomplete info for symbol 628641\nERROR: incomplete info for symbol 632734\nERROR: incomplete info for symbol 635341\nERROR: incomplete info for symbol 636198\nERROR: incomplete info for symbol 636522\nERROR: incomplete info for symbol 636673\nERROR: incomplete info for symbol 637473\nERROR: incomplete info for symbol 637691\nERROR: incomplete info for symbol 637842\nERROR: incomplete info for symbol 638068\nERROR: incomplete info for symbol 638225\nERROR: incomplete info for symbol 638376\nERROR: incomplete info for symbol 641026\nERROR: incomplete info for symbol 641575\nERROR: incomplete info for symbol 644298\nReading v-tables\nlibQt5Core.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-8miUe.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5Codecs.so.5.97.0-abi-laboratory-libKF5Codecs-so-5-97-0-libKF5Codecs-so-5-97-0.html\n",
+                    "return_code": 0,
+                    "seconds": 15.323790073394775,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5Codecs.so.5.97.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5Codecs.so.5.97.0 libKF5Codecs-so-5-97-0-libKF5Codecs-so-5-97-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5Codecs.so.5.97.0-abi-laboratory-libKF5Codecs-so-5-97-0-libKF5Codecs-so-5-97-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5Codecs.so.5.97.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5Codecs.so.5.97.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5Codecs.so.5.97.0": 240912,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5Codecs.so.5.97.0": 240912
+            }
+        },
+        "experiment": "usr/lib64/libKF5Codecs-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libKF5Codecs.so.5.97.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libKF5Codecs.so.5.97.0",
+        "different_libs": true
+    }
+]

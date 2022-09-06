@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdbusmenu-qt5.so.2.6.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdbusmenu-qt5.so.2.6.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdbusmenu-qt5.so.2.6.0",
+                    "spliced_lib": "libdbusmenu-qt5.so.2.6.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00011467933654785156
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdbusmenu-qt5.so.2.6.0",
+                    "spliced_lib": "libdbusmenu-qt5.so.2.6.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.695487976074219e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 1.9472644329071045,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdbusmenu-qt5.so.2.6.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdbusmenu-qt5.so.2.6.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdbusmenu-qt5.so.2.6.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdbusmenu-qt5.so.2.6.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdbusmenu-qt5.so.2.6.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdbusmenu-qt5.so.2.6.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdbusmenu-qt5.so.2.6.0-abi-laboratory-libdbusmenu-qt5-so-2-6-0-libdbusmenu-qt5-so-2-6-0.html\nFound link to libdbusmenu-qt5.so.2.6.0-0.9.3-0.28.20160218.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdbusmenu-qt5.so.2.6.0-0.9.3-0.28.20160218.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/dbusmenu-qt-0.9.3-0.28.20160218.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 101060\nERROR: incomplete info for symbol 101350\nERROR: incomplete info for symbol 110678\nERROR: incomplete info for symbol 111847\nERROR: incomplete info for symbol 116314\nERROR: incomplete info for symbol 124929\nERROR: incomplete info for symbol 189957\nERROR: incomplete info for symbol 225699\nERROR: incomplete info for symbol 236480\nERROR: incomplete info for symbol 237359\nERROR: incomplete info for symbol 261164\nERROR: incomplete info for symbol 261223\nERROR: incomplete info for symbol 261299\nERROR: incomplete info for symbol 261375\nERROR: incomplete info for symbol 261866\nERROR: incomplete info for symbol 262043\nERROR: incomplete info for symbol 287667\nERROR: incomplete info for symbol 289171\nERROR: incomplete info for symbol 293076\nERROR: incomplete info for symbol 325126\nERROR: incomplete info for symbol 338946\nReading v-tables\nlibQt5DBus.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-CfTMB.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdbusmenu-qt5.so.2.6.0-0.9.3-0.28.20160218.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdbusmenu-qt5.so.2.6.0-0.9.3-0.28.20160218.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/dbusmenu-qt-0.9.3-0.28.20160218.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 101060\nERROR: incomplete info for symbol 101350\nERROR: incomplete info for symbol 110678\nERROR: incomplete info for symbol 111847\nERROR: incomplete info for symbol 116314\nERROR: incomplete info for symbol 124929\nERROR: incomplete info for symbol 189957\nERROR: incomplete info for symbol 225699\nERROR: incomplete info for symbol 236480\nERROR: incomplete info for symbol 237359\nERROR: incomplete info for symbol 261164\nERROR: incomplete info for symbol 261223\nERROR: incomplete info for symbol 261299\nERROR: incomplete info for symbol 261375\nERROR: incomplete info for symbol 261866\nERROR: incomplete info for symbol 262043\nERROR: incomplete info for symbol 287667\nERROR: incomplete info for symbol 289171\nERROR: incomplete info for symbol 293076\nERROR: incomplete info for symbol 325126\nERROR: incomplete info for symbol 338946\nReading v-tables\nlibQt5DBus.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-wSiWx.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdbusmenu-qt5.so.2.6.0-abi-laboratory-libdbusmenu-qt5-so-2-6-0-libdbusmenu-qt5-so-2-6-0.html\n",
+                    "return_code": 0,
+                    "seconds": 14.966645240783691,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdbusmenu-qt5.so.2.6.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdbusmenu-qt5.so.2.6.0 libdbusmenu-qt5-so-2-6-0-libdbusmenu-qt5-so-2-6-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdbusmenu-qt5.so.2.6.0-abi-laboratory-libdbusmenu-qt5-so-2-6-0-libdbusmenu-qt5-so-2-6-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdbusmenu-qt5.so.2.6.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdbusmenu-qt5.so.2.6.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdbusmenu-qt5.so.2.6.0": 172576,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdbusmenu-qt5.so.2.6.0": 172576
+            }
+        },
+        "experiment": "usr/lib64/libdbusmenu-qt5-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdbusmenu-qt5.so.2.6.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdbusmenu-qt5.so.2.6.0",
+        "different_libs": true
+    }
+]

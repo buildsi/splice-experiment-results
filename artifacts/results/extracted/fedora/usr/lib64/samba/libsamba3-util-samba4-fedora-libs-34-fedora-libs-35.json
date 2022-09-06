@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba3-util-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba3-util-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsamba3-util-samba4.so",
+                    "spliced_lib": "libsamba3-util-samba4.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.6743621826171875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsamba3-util-samba4.so",
+                    "spliced_lib": "libsamba3-util-samba4.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.29425048828125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.04179668426513672,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba3-util-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba3-util-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba3-util-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba3-util-samba4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba3-util-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba3-util-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba3-util-samba4.so-abi-laboratory-libsamba3-util-samba4-so-libsamba3-util-samba4-so.html\nFound link to libsamba3-util-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsamba3-util-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4627\nERROR: incomplete info for symbol 4784\nERROR: incomplete info for symbol 4849\nERROR: incomplete info for symbol 5042\nERROR: incomplete info for symbol 5423\nERROR: incomplete info for symbol 5673\nERROR: incomplete info for symbol 6040\nERROR: incomplete info for symbol 6103\nERROR: incomplete info for symbol 6526\nERROR: incomplete info for symbol 6958\nERROR: incomplete info for symbol 7325\nERROR: incomplete info for symbol 7402\nERROR: incomplete info for symbol 7604\nERROR: incomplete info for symbol 7755\nERROR: incomplete info for symbol 8011\nERROR: incomplete info for symbol 8172\nERROR: incomplete info for symbol 8328\nERROR: incomplete info for symbol 8422\nERROR: incomplete info for symbol 8937\nERROR: incomplete info for symbol 9392\nERROR: incomplete info for symbol 9549\nERROR: incomplete info for symbol 11263\nERROR: incomplete info for symbol 11561\nERROR: incomplete info for symbol 12652\nERROR: incomplete info for symbol 13033\nERROR: incomplete info for symbol 13137\nERROR: incomplete info for symbol 13170\nERROR: incomplete info for symbol 13328\nERROR: incomplete info for symbol 13374\nERROR: incomplete info for symbol 13420\nERROR: incomplete info for symbol 13503\nERROR: incomplete info for symbol 13620\nERROR: incomplete info for symbol 13684\nERROR: incomplete info for symbol 13847\nERROR: incomplete info for symbol 14070\nERROR: incomplete info for symbol 14159\nERROR: incomplete info for symbol 14479\nERROR: incomplete info for symbol 14618\nERROR: incomplete info for symbol 14674\nERROR: incomplete info for symbol 14960\nERROR: incomplete info for symbol 15160\nERROR: incomplete info for symbol 15359\nERROR: incomplete info for symbol 15492\nERROR: incomplete info for symbol 15643\nERROR: incomplete info for symbol 15698\nERROR: incomplete info for symbol 15863\nERROR: incomplete info for symbol 16044\nERROR: incomplete info for symbol 16568\nERROR: incomplete info for symbol 16722\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-bcnic.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsamba3-util-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsamba3-util-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4627\nERROR: incomplete info for symbol 4784\nERROR: incomplete info for symbol 4849\nERROR: incomplete info for symbol 5042\nERROR: incomplete info for symbol 5423\nERROR: incomplete info for symbol 5673\nERROR: incomplete info for symbol 6040\nERROR: incomplete info for symbol 6103\nERROR: incomplete info for symbol 6526\nERROR: incomplete info for symbol 6958\nERROR: incomplete info for symbol 7325\nERROR: incomplete info for symbol 7402\nERROR: incomplete info for symbol 7604\nERROR: incomplete info for symbol 7755\nERROR: incomplete info for symbol 8011\nERROR: incomplete info for symbol 8172\nERROR: incomplete info for symbol 8328\nERROR: incomplete info for symbol 8422\nERROR: incomplete info for symbol 8937\nERROR: incomplete info for symbol 9392\nERROR: incomplete info for symbol 9549\nERROR: incomplete info for symbol 11263\nERROR: incomplete info for symbol 11561\nERROR: incomplete info for symbol 12652\nERROR: incomplete info for symbol 13033\nERROR: incomplete info for symbol 13137\nERROR: incomplete info for symbol 13170\nERROR: incomplete info for symbol 13328\nERROR: incomplete info for symbol 13374\nERROR: incomplete info for symbol 13420\nERROR: incomplete info for symbol 13503\nERROR: incomplete info for symbol 13620\nERROR: incomplete info for symbol 13684\nERROR: incomplete info for symbol 13847\nERROR: incomplete info for symbol 14070\nERROR: incomplete info for symbol 14159\nERROR: incomplete info for symbol 14479\nERROR: incomplete info for symbol 14618\nERROR: incomplete info for symbol 14674\nERROR: incomplete info for symbol 14960\nERROR: incomplete info for symbol 15160\nERROR: incomplete info for symbol 15359\nERROR: incomplete info for symbol 15492\nERROR: incomplete info for symbol 15643\nERROR: incomplete info for symbol 15698\nERROR: incomplete info for symbol 15863\nERROR: incomplete info for symbol 16044\nERROR: incomplete info for symbol 16568\nERROR: incomplete info for symbol 16722\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-QTwh4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba3-util-samba4.so-abi-laboratory-libsamba3-util-samba4-so-libsamba3-util-samba4-so.html\n",
+                    "return_code": 0,
+                    "seconds": 13.859807014465332,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba3-util-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba3-util-samba4.so libsamba3-util-samba4-so-libsamba3-util-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba3-util-samba4.so-abi-laboratory-libsamba3-util-samba4-so-libsamba3-util-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba3-util-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba3-util-samba4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba3-util-samba4.so": 49792,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba3-util-samba4.so": 49792
+            }
+        },
+        "experiment": "usr/lib64/samba/libsamba3-util-samba4-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba3-util-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba3-util-samba4.so",
+        "different_libs": true
+    }
+]

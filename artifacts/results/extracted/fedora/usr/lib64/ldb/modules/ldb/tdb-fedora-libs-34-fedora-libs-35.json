@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/tdb.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/tdb.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "tdb.so",
+                    "spliced_lib": "tdb.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.1219253540039062e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "tdb.so",
+                    "spliced_lib": "tdb.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.3909759521484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.01659393310546875,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/tdb.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/tdb.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/tdb.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/tdb.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/tdb.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/tdb.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/tdb.so-abi-laboratory-tdb-so-tdb-so.html\nFound link to tdb.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file tdb.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-fDOln.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to tdb.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file tdb.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-WbW4R.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/tdb.so-abi-laboratory-tdb-so-tdb-so.html\n",
+                    "return_code": 0,
+                    "seconds": 0.5018017292022705,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/tdb.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/tdb.so tdb-so-tdb-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/tdb.so-abi-laboratory-tdb-so-tdb-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/tdb.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/tdb.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/tdb.so": 15912,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/tdb.so": 15912
+            }
+        },
+        "experiment": "usr/lib64/ldb/modules/ldb/tdb-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/tdb.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/tdb.so",
+        "different_libs": true
+    }
+]

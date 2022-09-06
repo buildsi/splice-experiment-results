@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/liblmdb.so.0.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/liblmdb.so.0.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "liblmdb.so.0.0.0",
+                    "spliced_lib": "liblmdb.so.0.0.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.744529724121094e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "liblmdb.so.0.0.0",
+                    "spliced_lib": "liblmdb.so.0.0.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.1975250244140625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.04013514518737793,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/liblmdb.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/liblmdb.so.0.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/liblmdb.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/liblmdb.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/liblmdb.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/liblmdb.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/liblmdb.so.0.0.0-abi-laboratory-liblmdb-so-0-0-0-liblmdb-so-0-0-0.html\nFound link to liblmdb.so.0.0.0-0.9.29-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file liblmdb.so.0.0.0-0.9.29-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/lmdb-0.9.29-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7210\nERROR: incomplete info for symbol 7250\nERROR: incomplete info for symbol 7357\nERROR: incomplete info for symbol 7452\nERROR: incomplete info for symbol 8032\nERROR: incomplete info for symbol 8382\nERROR: incomplete info for symbol 8408\nERROR: incomplete info for symbol 8434\nERROR: incomplete info for symbol 8537\nERROR: incomplete info for symbol 8758\nERROR: incomplete info for symbol 8797\nERROR: incomplete info for symbol 8830\nERROR: incomplete info for symbol 12905\nERROR: incomplete info for symbol 12958\nERROR: incomplete info for symbol 13074\nERROR: incomplete info for symbol 13100\nERROR: incomplete info for symbol 13126\nERROR: incomplete info for symbol 13172\nERROR: incomplete info for symbol 13205\nERROR: incomplete info for symbol 13238\nERROR: incomplete info for symbol 13264\nERROR: incomplete info for symbol 13297\nERROR: incomplete info for symbol 13330\nERROR: incomplete info for symbol 13363\nERROR: incomplete info for symbol 13528\nERROR: incomplete info for symbol 19435\nERROR: incomplete info for symbol 19988\nERROR: incomplete info for symbol 20185\nERROR: incomplete info for symbol 20320\nERROR: incomplete info for symbol 20391\nERROR: incomplete info for symbol 24613\nERROR: incomplete info for symbol 25689\nERROR: incomplete info for symbol 27118\nERROR: incomplete info for symbol 27166\nERROR: incomplete info for symbol 27871\nERROR: incomplete info for symbol 27968\nERROR: incomplete info for symbol 29103\nERROR: incomplete info for symbol 29848\nERROR: incomplete info for symbol 29924\nERROR: incomplete info for symbol 30403\nERROR: incomplete info for symbol 31016\nERROR: incomplete info for symbol 34101\nERROR: incomplete info for symbol 34310\nERROR: incomplete info for symbol 35069\nERROR: incomplete info for symbol 36157\nERROR: incomplete info for symbol 39238\nERROR: incomplete info for symbol 39493\nERROR: incomplete info for symbol 39525\nERROR: incomplete info for symbol 39654\nERROR: incomplete info for symbol 39700\nERROR: incomplete info for symbol 39746\nERROR: incomplete info for symbol 39792\nERROR: incomplete info for symbol 39838\nERROR: incomplete info for symbol 39884\nERROR: incomplete info for symbol 39910\nERROR: incomplete info for symbol 41064\nERROR: incomplete info for symbol 41140\nERROR: incomplete info for symbol 41248\nERROR: incomplete info for symbol 41321\nERROR: incomplete info for symbol 41416\nERROR: incomplete info for symbol 41487\nERROR: incomplete info for symbol 41571\nERROR: incomplete info for symbol 41706\nERROR: incomplete info for symbol 41932\nERROR: incomplete info for symbol 42094\nERROR: incomplete info for symbol 42205\nERROR: incomplete info for symbol 42364\nERROR: incomplete info for symbol 42472\nERROR: incomplete info for symbol 44374\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-dnyuo.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to liblmdb.so.0.0.0-0.9.29-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file liblmdb.so.0.0.0-0.9.29-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/lmdb-0.9.29-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7210\nERROR: incomplete info for symbol 7250\nERROR: incomplete info for symbol 7357\nERROR: incomplete info for symbol 7452\nERROR: incomplete info for symbol 8032\nERROR: incomplete info for symbol 8382\nERROR: incomplete info for symbol 8408\nERROR: incomplete info for symbol 8434\nERROR: incomplete info for symbol 8537\nERROR: incomplete info for symbol 8758\nERROR: incomplete info for symbol 8797\nERROR: incomplete info for symbol 8830\nERROR: incomplete info for symbol 12905\nERROR: incomplete info for symbol 12958\nERROR: incomplete info for symbol 13074\nERROR: incomplete info for symbol 13100\nERROR: incomplete info for symbol 13126\nERROR: incomplete info for symbol 13172\nERROR: incomplete info for symbol 13205\nERROR: incomplete info for symbol 13238\nERROR: incomplete info for symbol 13264\nERROR: incomplete info for symbol 13297\nERROR: incomplete info for symbol 13330\nERROR: incomplete info for symbol 13363\nERROR: incomplete info for symbol 13528\nERROR: incomplete info for symbol 19435\nERROR: incomplete info for symbol 19988\nERROR: incomplete info for symbol 20185\nERROR: incomplete info for symbol 20320\nERROR: incomplete info for symbol 20391\nERROR: incomplete info for symbol 24613\nERROR: incomplete info for symbol 25689\nERROR: incomplete info for symbol 27118\nERROR: incomplete info for symbol 27166\nERROR: incomplete info for symbol 27871\nERROR: incomplete info for symbol 27968\nERROR: incomplete info for symbol 29103\nERROR: incomplete info for symbol 29848\nERROR: incomplete info for symbol 29924\nERROR: incomplete info for symbol 30403\nERROR: incomplete info for symbol 31016\nERROR: incomplete info for symbol 34101\nERROR: incomplete info for symbol 34310\nERROR: incomplete info for symbol 35069\nERROR: incomplete info for symbol 36157\nERROR: incomplete info for symbol 39238\nERROR: incomplete info for symbol 39493\nERROR: incomplete info for symbol 39525\nERROR: incomplete info for symbol 39654\nERROR: incomplete info for symbol 39700\nERROR: incomplete info for symbol 39746\nERROR: incomplete info for symbol 39792\nERROR: incomplete info for symbol 39838\nERROR: incomplete info for symbol 39884\nERROR: incomplete info for symbol 39910\nERROR: incomplete info for symbol 41064\nERROR: incomplete info for symbol 41140\nERROR: incomplete info for symbol 41248\nERROR: incomplete info for symbol 41321\nERROR: incomplete info for symbol 41416\nERROR: incomplete info for symbol 41487\nERROR: incomplete info for symbol 41571\nERROR: incomplete info for symbol 41706\nERROR: incomplete info for symbol 41932\nERROR: incomplete info for symbol 42094\nERROR: incomplete info for symbol 42205\nERROR: incomplete info for symbol 42364\nERROR: incomplete info for symbol 42472\nERROR: incomplete info for symbol 44374\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-p7Er2.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/liblmdb.so.0.0.0-abi-laboratory-liblmdb-so-0-0-0-liblmdb-so-0-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.8054766654968262,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/liblmdb.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/liblmdb.so.0.0.0 liblmdb-so-0-0-0-liblmdb-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/liblmdb.so.0.0.0-abi-laboratory-liblmdb-so-0-0-0-liblmdb-so-0-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/liblmdb.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/liblmdb.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/liblmdb.so.0.0.0": 96264,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/liblmdb.so.0.0.0": 96264
+            }
+        },
+        "experiment": "usr/lib64/liblmdb-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/liblmdb.so.0.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/liblmdb.so.0.0.0",
+        "different_libs": true
+    }
+]

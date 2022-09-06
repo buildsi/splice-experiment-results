@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsctp.so.1.0.18"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsctp.so.1.0.18"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsctp.so.1.0.18",
+                    "spliced_lib": "libsctp.so.1.0.18",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.8371810913085938e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsctp.so.1.0.18",
+                    "spliced_lib": "libsctp.so.1.0.18",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.1444091796875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0164487361907959,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsctp.so.1.0.18 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsctp.so.1.0.18",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsctp.so.1.0.18",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsctp.so.1.0.18",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsctp.so.1.0.18\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsctp.so.1.0.18\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsctp.so.1.0.18-abi-laboratory-libsctp-so-1-0-18-libsctp-so-1-0-18.html\nFound link to libsctp.so.1.0.18-1.0.18-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsctp.so.1.0.18-1.0.18-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/lksctp-tools-1.0.18-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1362\nERROR: incomplete info for symbol 1585\nERROR: incomplete info for symbol 1799\nERROR: incomplete info for symbol 2181\nERROR: incomplete info for symbol 2311\nERROR: incomplete info for symbol 2534\nERROR: incomplete info for symbol 2631\nERROR: incomplete info for symbol 2682\nERROR: incomplete info for symbol 2779\nERROR: incomplete info for symbol 2830\nERROR: incomplete info for symbol 2856\nERROR: incomplete info for symbol 3152\nERROR: incomplete info for symbol 3387\nERROR: incomplete info for symbol 4963\nERROR: incomplete info for symbol 5343\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-X3aro.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsctp.so.1.0.18-1.0.18-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsctp.so.1.0.18-1.0.18-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/lksctp-tools-1.0.18-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1362\nERROR: incomplete info for symbol 1585\nERROR: incomplete info for symbol 1799\nERROR: incomplete info for symbol 2181\nERROR: incomplete info for symbol 2311\nERROR: incomplete info for symbol 2534\nERROR: incomplete info for symbol 2631\nERROR: incomplete info for symbol 2682\nERROR: incomplete info for symbol 2779\nERROR: incomplete info for symbol 2830\nERROR: incomplete info for symbol 2856\nERROR: incomplete info for symbol 3152\nERROR: incomplete info for symbol 3387\nERROR: incomplete info for symbol 4963\nERROR: incomplete info for symbol 5343\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-sTs4o.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsctp.so.1.0.18-abi-laboratory-libsctp-so-1-0-18-libsctp-so-1-0-18.html\n",
+                    "return_code": 0,
+                    "seconds": 0.4811694622039795,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsctp.so.1.0.18 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsctp.so.1.0.18 libsctp-so-1-0-18-libsctp-so-1-0-18 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsctp.so.1.0.18-abi-laboratory-libsctp-so-1-0-18-libsctp-so-1-0-18.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsctp.so.1.0.18",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsctp.so.1.0.18",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsctp.so.1.0.18": 20288,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsctp.so.1.0.18": 20288
+            }
+        },
+        "experiment": "usr/lib64/libsctp-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsctp.so.1.0.18",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsctp.so.1.0.18",
+        "different_libs": true
+    }
+]

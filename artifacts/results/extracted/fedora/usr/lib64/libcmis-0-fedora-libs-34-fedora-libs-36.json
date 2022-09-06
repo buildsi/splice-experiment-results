@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcmis-0.5.so.5.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcmis-0.5.so.5.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcmis-0.5.so.5.0.0",
+                    "spliced_lib": "libcmis-0.5.so.5.0.0",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00012540817260742188
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcmis-0.5.so.5.0.0",
+                    "spliced_lib": "libcmis-0.5.so.5.0.0",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0005993843078613281
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 10.118489742279053,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcmis-0.5.so.5.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcmis-0.5.so.5.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcmis-0.5.so.5.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcmis-0.5.so.5.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcmis-0.5.so.5.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcmis-0.5.so.5.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcmis-0.5.so.5.0.0-abi-laboratory-libcmis-0-5-so-5-0-0-libcmis-0-5-so-5-0-0.html\nFound link to libcmis-0.5.so.5.0.0-0.5.2-13.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcmis-0.5.so.5.0.0-0.5.2-13.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libcmis-0.5.2-13.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 424806\nERROR: incomplete info for symbol 425312\nERROR: incomplete info for symbol 425602\nERROR: incomplete info for symbol 425939\nERROR: incomplete info for symbol 428069\nERROR: incomplete info for symbol 428895\nERROR: incomplete info for symbol 895507\nERROR: incomplete info for symbol 914026\nERROR: incomplete info for symbol 1607358\nERROR: incomplete info for symbol 1607384\nERROR: incomplete info for symbol 1607410\nERROR: incomplete info for symbol 1619945\nERROR: incomplete info for symbol 1621522\nERROR: incomplete info for symbol 1626956\nERROR: incomplete info for symbol 1629872\nERROR: incomplete info for symbol 1630764\nERROR: incomplete info for symbol 1631304\nERROR: incomplete info for symbol 1640588\nERROR: incomplete info for symbol 1642111\nERROR: incomplete info for symbol 1643634\nERROR: incomplete info for symbol 1645157\nERROR: incomplete info for symbol 1646680\nERROR: incomplete info for symbol 1648203\nERROR: incomplete info for symbol 1649726\nERROR: incomplete info for symbol 1651249\nERROR: incomplete info for symbol 1652772\nERROR: incomplete info for symbol 1652799\nERROR: incomplete info for symbol 1652826\nERROR: incomplete info for symbol 1652853\nERROR: incomplete info for symbol 1652880\nERROR: incomplete info for symbol 1652907\nERROR: incomplete info for symbol 1652934\nERROR: incomplete info for symbol 1652961\nERROR: incomplete info for symbol 1652988\nERROR: incomplete info for symbol 1653015\nERROR: incomplete info for symbol 1653042\nERROR: incomplete info for symbol 1668681\nERROR: incomplete info for symbol 1669645\nERROR: incomplete info for symbol 1670609\nERROR: incomplete info for symbol 1671573\nERROR: incomplete info for symbol 1742133\nERROR: incomplete info for symbol 1747371\nERROR: incomplete info for symbol 1752609\nERROR: incomplete info for symbol 1860970\nERROR: incomplete info for symbol 2050436\nERROR: incomplete info for symbol 2051318\nERROR: incomplete info for symbol 2051763\nERROR: incomplete info for symbol 2065429\nERROR: incomplete info for symbol 2067028\nERROR: incomplete info for symbol 2070044\nERROR: incomplete info for symbol 2074565\nERROR: incomplete info for symbol 2077481\nERROR: incomplete info for symbol 2077601\nERROR: incomplete info for symbol 2077628\nERROR: incomplete info for symbol 2077655\nERROR: incomplete info for symbol 2077682\nERROR: incomplete info for symbol 2077709\nERROR: incomplete info for symbol 2077736\nERROR: incomplete info for symbol 2077763\nERROR: incomplete info for symbol 2077790\nERROR: incomplete info for symbol 2077817\nERROR: incomplete info for symbol 2082632\nERROR: incomplete info for symbol 2087867\nERROR: incomplete info for symbol 2089390\nERROR: incomplete info for symbol 2090913\nERROR: incomplete info for symbol 2092436\nERROR: incomplete info for symbol 2093959\nERROR: incomplete info for symbol 2095482\nERROR: incomplete info for symbol 2097005\nERROR: incomplete info for symbol 2098528\nERROR: incomplete info for symbol 2100051\nERROR: incomplete info for symbol 2100265\nERROR: incomplete info for symbol 2100479\nERROR: incomplete info for symbol 2138417\nERROR: incomplete info for symbol 3063538\nERROR: incomplete info for symbol 3064151\nERROR: incomplete info for symbol 3064749\nERROR: incomplete info for symbol 3065362\nERROR: incomplete info for symbol 3066304\nERROR: incomplete info for symbol 3066505\nERROR: incomplete info for symbol 3066736\nERROR: incomplete info for symbol 3067047\nERROR: incomplete info for symbol 3067335\nERROR: incomplete info for symbol 3067523\nERROR: incomplete info for symbol 3067691\nERROR: incomplete info for symbol 3070739\nERROR: incomplete info for symbol 3071144\nERROR: incomplete info for symbol 3071501\nERROR: incomplete info for symbol 3073432\nERROR: incomplete info for symbol 3266827\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-grIlz.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcmis-0.5.so.5.0.0-0.5.2-13.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcmis-0.5.so.5.0.0-0.5.2-13.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libcmis-0.5.2-13.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 424806\nERROR: incomplete info for symbol 425312\nERROR: incomplete info for symbol 425602\nERROR: incomplete info for symbol 425939\nERROR: incomplete info for symbol 428069\nERROR: incomplete info for symbol 428895\nERROR: incomplete info for symbol 895507\nERROR: incomplete info for symbol 914026\nERROR: incomplete info for symbol 1607358\nERROR: incomplete info for symbol 1607384\nERROR: incomplete info for symbol 1607410\nERROR: incomplete info for symbol 1619945\nERROR: incomplete info for symbol 1621522\nERROR: incomplete info for symbol 1626956\nERROR: incomplete info for symbol 1629872\nERROR: incomplete info for symbol 1630764\nERROR: incomplete info for symbol 1631304\nERROR: incomplete info for symbol 1640588\nERROR: incomplete info for symbol 1642111\nERROR: incomplete info for symbol 1643634\nERROR: incomplete info for symbol 1645157\nERROR: incomplete info for symbol 1646680\nERROR: incomplete info for symbol 1648203\nERROR: incomplete info for symbol 1649726\nERROR: incomplete info for symbol 1651249\nERROR: incomplete info for symbol 1652772\nERROR: incomplete info for symbol 1652799\nERROR: incomplete info for symbol 1652826\nERROR: incomplete info for symbol 1652853\nERROR: incomplete info for symbol 1652880\nERROR: incomplete info for symbol 1652907\nERROR: incomplete info for symbol 1652934\nERROR: incomplete info for symbol 1652961\nERROR: incomplete info for symbol 1652988\nERROR: incomplete info for symbol 1653015\nERROR: incomplete info for symbol 1653042\nERROR: incomplete info for symbol 1668681\nERROR: incomplete info for symbol 1669645\nERROR: incomplete info for symbol 1670609\nERROR: incomplete info for symbol 1671573\nERROR: incomplete info for symbol 1742133\nERROR: incomplete info for symbol 1747371\nERROR: incomplete info for symbol 1752609\nERROR: incomplete info for symbol 1860970\nERROR: incomplete info for symbol 2050436\nERROR: incomplete info for symbol 2051318\nERROR: incomplete info for symbol 2051763\nERROR: incomplete info for symbol 2065429\nERROR: incomplete info for symbol 2067028\nERROR: incomplete info for symbol 2070044\nERROR: incomplete info for symbol 2074565\nERROR: incomplete info for symbol 2077481\nERROR: incomplete info for symbol 2077601\nERROR: incomplete info for symbol 2077628\nERROR: incomplete info for symbol 2077655\nERROR: incomplete info for symbol 2077682\nERROR: incomplete info for symbol 2077709\nERROR: incomplete info for symbol 2077736\nERROR: incomplete info for symbol 2077763\nERROR: incomplete info for symbol 2077790\nERROR: incomplete info for symbol 2077817\nERROR: incomplete info for symbol 2082632\nERROR: incomplete info for symbol 2087867\nERROR: incomplete info for symbol 2089390\nERROR: incomplete info for symbol 2090913\nERROR: incomplete info for symbol 2092436\nERROR: incomplete info for symbol 2093959\nERROR: incomplete info for symbol 2095482\nERROR: incomplete info for symbol 2097005\nERROR: incomplete info for symbol 2098528\nERROR: incomplete info for symbol 2100051\nERROR: incomplete info for symbol 2100265\nERROR: incomplete info for symbol 2100479\nERROR: incomplete info for symbol 2138417\nERROR: incomplete info for symbol 3063538\nERROR: incomplete info for symbol 3064151\nERROR: incomplete info for symbol 3064749\nERROR: incomplete info for symbol 3065362\nERROR: incomplete info for symbol 3066304\nERROR: incomplete info for symbol 3066505\nERROR: incomplete info for symbol 3066736\nERROR: incomplete info for symbol 3067047\nERROR: incomplete info for symbol 3067335\nERROR: incomplete info for symbol 3067523\nERROR: incomplete info for symbol 3067691\nERROR: incomplete info for symbol 3070739\nERROR: incomplete info for symbol 3071144\nERROR: incomplete info for symbol 3071501\nERROR: incomplete info for symbol 3073432\nERROR: incomplete info for symbol 3266827\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-y9T2T.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcmis-0.5.so.5.0.0-abi-laboratory-libcmis-0-5-so-5-0-0-libcmis-0-5-so-5-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 55.665531396865845,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcmis-0.5.so.5.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcmis-0.5.so.5.0.0 libcmis-0-5-so-5-0-0-libcmis-0-5-so-5-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcmis-0.5.so.5.0.0-abi-laboratory-libcmis-0-5-so-5-0-0-libcmis-0-5-so-5-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcmis-0.5.so.5.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcmis-0.5.so.5.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcmis-0.5.so.5.0.0": 927552,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcmis-0.5.so.5.0.0": 927552
+            }
+        },
+        "experiment": "usr/lib64/libcmis-0-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcmis-0.5.so.5.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcmis-0.5.so.5.0.0",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsndfile.so.1.0.31"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsndfile.so.1.0.31"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsndfile.so.1.0.31",
+                    "spliced_lib": "libsndfile.so.1.0.31",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.626678466796875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsndfile.so.1.0.31",
+                    "spliced_lib": "libsndfile.so.1.0.31",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.288818359375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.11533880233764648,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsndfile.so.1.0.31 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsndfile.so.1.0.31",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsndfile.so.1.0.31",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsndfile.so.1.0.31",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsndfile.so.1.0.31\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsndfile.so.1.0.31\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsndfile.so.1.0.31-abi-laboratory-libsndfile-so-1-0-31-libsndfile-so-1-0-31.html\nFound link to libsndfile.so.1.0.31-1.0.31-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsndfile.so.1.0.31-1.0.31-7.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 29525\nERROR: incomplete info for symbol 29636\nERROR: incomplete info for symbol 29768\nERROR: incomplete info for symbol 29940\nERROR: incomplete info for symbol 30009\nERROR: incomplete info for symbol 30048\nERROR: incomplete info for symbol 30205\nERROR: incomplete info for symbol 30405\nERROR: incomplete info for symbol 44723\nERROR: incomplete info for symbol 45387\nERROR: incomplete info for symbol 45818\nERROR: incomplete info for symbol 46358\nERROR: incomplete info for symbol 46586\nERROR: incomplete info for symbol 51353\nERROR: incomplete info for symbol 51442\nERROR: incomplete info for symbol 51686\nERROR: incomplete info for symbol 51799\nERROR: incomplete info for symbol 52298\nERROR: incomplete info for symbol 52780\nERROR: incomplete info for symbol 53248\nERROR: incomplete info for symbol 53730\nERROR: incomplete info for symbol 54198\nERROR: incomplete info for symbol 54680\nERROR: incomplete info for symbol 55148\nERROR: incomplete info for symbol 55630\nERROR: incomplete info for symbol 56098\nERROR: incomplete info for symbol 56412\nERROR: incomplete info for symbol 56599\nERROR: incomplete info for symbol 56768\nERROR: incomplete info for symbol 56955\nERROR: incomplete info for symbol 57124\nERROR: incomplete info for symbol 57311\nERROR: incomplete info for symbol 57480\nERROR: incomplete info for symbol 57667\nERROR: incomplete info for symbol 57836\nERROR: incomplete info for symbol 57980\nERROR: incomplete info for symbol 58232\nERROR: incomplete info for symbol 58290\nERROR: incomplete info for symbol 58386\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-BAtK9.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsndfile.so.1.0.31-1.0.31-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsndfile.so.1.0.31-1.0.31-7.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 29525\nERROR: incomplete info for symbol 29636\nERROR: incomplete info for symbol 29768\nERROR: incomplete info for symbol 29940\nERROR: incomplete info for symbol 30009\nERROR: incomplete info for symbol 30048\nERROR: incomplete info for symbol 30205\nERROR: incomplete info for symbol 30405\nERROR: incomplete info for symbol 44723\nERROR: incomplete info for symbol 45387\nERROR: incomplete info for symbol 45818\nERROR: incomplete info for symbol 46358\nERROR: incomplete info for symbol 46586\nERROR: incomplete info for symbol 51353\nERROR: incomplete info for symbol 51442\nERROR: incomplete info for symbol 51686\nERROR: incomplete info for symbol 51799\nERROR: incomplete info for symbol 52298\nERROR: incomplete info for symbol 52780\nERROR: incomplete info for symbol 53248\nERROR: incomplete info for symbol 53730\nERROR: incomplete info for symbol 54198\nERROR: incomplete info for symbol 54680\nERROR: incomplete info for symbol 55148\nERROR: incomplete info for symbol 55630\nERROR: incomplete info for symbol 56098\nERROR: incomplete info for symbol 56412\nERROR: incomplete info for symbol 56599\nERROR: incomplete info for symbol 56768\nERROR: incomplete info for symbol 56955\nERROR: incomplete info for symbol 57124\nERROR: incomplete info for symbol 57311\nERROR: incomplete info for symbol 57480\nERROR: incomplete info for symbol 57667\nERROR: incomplete info for symbol 57836\nERROR: incomplete info for symbol 57980\nERROR: incomplete info for symbol 58232\nERROR: incomplete info for symbol 58290\nERROR: incomplete info for symbol 58386\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-z4pSq.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsndfile.so.1.0.31-abi-laboratory-libsndfile-so-1-0-31-libsndfile-so-1-0-31.html\n",
+                    "return_code": 0,
+                    "seconds": 2.364760398864746,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsndfile.so.1.0.31 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsndfile.so.1.0.31 libsndfile-so-1-0-31-libsndfile-so-1-0-31 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsndfile.so.1.0.31-abi-laboratory-libsndfile-so-1-0-31-libsndfile-so-1-0-31.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsndfile.so.1.0.31",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsndfile.so.1.0.31",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsndfile.so.1.0.31": 486664,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsndfile.so.1.0.31": 486664
+            }
+        },
+        "experiment": "usr/lib64/libsndfile-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsndfile.so.1.0.31",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsndfile.so.1.0.31",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "Byte.so",
+                    "spliced_lib": "Byte.so",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.535385131835938e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "Byte.so",
+                    "spliced_lib": "Byte.so",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.368492126464844e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.07808327674865723,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so-abi-laboratory-Byte-so-Byte-so.html\nFound link to Byte.so-3.17-485.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file Byte.so-3.17-485.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/../../../../../../../.dwz/perl-Encode-3.17-485.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-LPdJT.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to Byte.so-3.17-485.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file Byte.so-3.17-485.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/../../../../../../../.dwz/perl-Encode-3.17-485.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-CyDxb.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so-abi-laboratory-Byte-so-Byte-so.html\n",
+                    "return_code": 0,
+                    "seconds": 1.3371570110321045,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so Byte-so-Byte-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so-abi-laboratory-Byte-so-Byte-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so": 372080,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so": 372080
+            }
+        },
+        "experiment": "usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/perl5/vendor_perl/auto/Encode/Byte/Byte.so",
+        "different_libs": true
+    }
+]

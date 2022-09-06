@@ -1,0 +1,71 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcanberra.so.0.2.5"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcanberra.so.0.2.5"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcanberra.so.0.2.5",
+                    "spliced_lib": "libcanberra.so.0.2.5",
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.792213439941406e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcanberra.so.0.2.5",
+                    "spliced_lib": "libcanberra.so.0.2.5",
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.0067901611328125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0383758544921875,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcanberra.so.0.2.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcanberra.so.0.2.5",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcanberra.so.0.2.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcanberra.so.0.2.5",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcanberra.so.0.2.5\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcanberra.so.0.2.5\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcanberra.so.0.2.5-abi-laboratory-libcanberra-so-0-2-5-libcanberra-so-0-2-5.html\nFound link to libcanberra.so.0.2.5-0.30-28.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcanberra.so.0.2.5-0.30-28.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libcanberra-0.30-28.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3116\nERROR: incomplete info for symbol 3391\nERROR: incomplete info for symbol 3646\nERROR: incomplete info for symbol 3917\nERROR: incomplete info for symbol 4172\nERROR: incomplete info for symbol 4373\nERROR: incomplete info for symbol 4574\nERROR: incomplete info for symbol 4775\nERROR: incomplete info for symbol 5039\nERROR: incomplete info for symbol 5291\nERROR: incomplete info for symbol 5576\nERROR: incomplete info for symbol 5856\nERROR: incomplete info for symbol 5907\nERROR: incomplete info for symbol 6150\nERROR: incomplete info for symbol 6411\nERROR: incomplete info for symbol 6615\nERROR: incomplete info for symbol 6819\nERROR: incomplete info for symbol 7041\nERROR: incomplete info for symbol 7264\nERROR: incomplete info for symbol 7530\nERROR: incomplete info for symbol 8493\nERROR: incomplete info for symbol 9128\nERROR: incomplete info for symbol 9882\nERROR: incomplete info for symbol 10531\nERROR: incomplete info for symbol 10879\nERROR: incomplete info for symbol 11182\nERROR: incomplete info for symbol 11470\nERROR: incomplete info for symbol 12076\nERROR: incomplete info for symbol 12474\nERROR: incomplete info for symbol 12753\nERROR: incomplete info for symbol 12997\nERROR: incomplete info for symbol 13408\nERROR: incomplete info for symbol 13895\nERROR: incomplete info for symbol 14522\nERROR: incomplete info for symbol 14950\nERROR: incomplete info for symbol 15901\nERROR: incomplete info for symbol 16440\nERROR: incomplete info for symbol 17140\nERROR: incomplete info for symbol 17688\nERROR: incomplete info for symbol 18377\nERROR: incomplete info for symbol 18914\nERROR: incomplete info for symbol 19516\nERROR: incomplete info for symbol 19723\nERROR: incomplete info for symbol 19950\nERROR: incomplete info for symbol 23923\nERROR: incomplete info for symbol 24279\nERROR: incomplete info for symbol 41453\nERROR: incomplete info for symbol 43727\nERROR: incomplete info for symbol 44884\nERROR: incomplete info for symbol 46443\nERROR: incomplete info for symbol 46587\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ZzAvM.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcanberra.so.0.2.5-0.30-28.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcanberra.so.0.2.5-0.30-28.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libcanberra-0.30-28.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3116\nERROR: incomplete info for symbol 3391\nERROR: incomplete info for symbol 3646\nERROR: incomplete info for symbol 3917\nERROR: incomplete info for symbol 4172\nERROR: incomplete info for symbol 4373\nERROR: incomplete info for symbol 4574\nERROR: incomplete info for symbol 4775\nERROR: incomplete info for symbol 5039\nERROR: incomplete info for symbol 5291\nERROR: incomplete info for symbol 5576\nERROR: incomplete info for symbol 5856\nERROR: incomplete info for symbol 5907\nERROR: incomplete info for symbol 6150\nERROR: incomplete info for symbol 6411\nERROR: incomplete info for symbol 6615\nERROR: incomplete info for symbol 6819\nERROR: incomplete info for symbol 7041\nERROR: incomplete info for symbol 7264\nERROR: incomplete info for symbol 7530\nERROR: incomplete info for symbol 8493\nERROR: incomplete info for symbol 9128\nERROR: incomplete info for symbol 9882\nERROR: incomplete info for symbol 10531\nERROR: incomplete info for symbol 10879\nERROR: incomplete info for symbol 11182\nERROR: incomplete info for symbol 11470\nERROR: incomplete info for symbol 12076\nERROR: incomplete info for symbol 12474\nERROR: incomplete info for symbol 12753\nERROR: incomplete info for symbol 12997\nERROR: incomplete info for symbol 13408\nERROR: incomplete info for symbol 13895\nERROR: incomplete info for symbol 14522\nERROR: incomplete info for symbol 14950\nERROR: incomplete info for symbol 15901\nERROR: incomplete info for symbol 16440\nERROR: incomplete info for symbol 17140\nERROR: incomplete info for symbol 17688\nERROR: incomplete info for symbol 18377\nERROR: incomplete info for symbol 18914\nERROR: incomplete info for symbol 19516\nERROR: incomplete info for symbol 19723\nERROR: incomplete info for symbol 19950\nERROR: incomplete info for symbol 23923\nERROR: incomplete info for symbol 24279\nERROR: incomplete info for symbol 41453\nERROR: incomplete info for symbol 43727\nERROR: incomplete info for symbol 44884\nERROR: incomplete info for symbol 46443\nERROR: incomplete info for symbol 46587\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Dowtj.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcanberra.so.0.2.5-abi-laboratory-libcanberra-so-0-2-5-libcanberra-so-0-2-5.html\n",
+                    "return_code": 0,
+                    "seconds": 0.8709661960601807,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcanberra.so.0.2.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcanberra.so.0.2.5 libcanberra-so-0-2-5-libcanberra-so-0-2-5 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcanberra.so.0.2.5-abi-laboratory-libcanberra-so-0-2-5-libcanberra-so-0-2-5.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcanberra.so.0.2.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcanberra.so.0.2.5",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcanberra.so.0.2.5": 77776,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcanberra.so.0.2.5": 77776
+            }
+        },
+        "experiment": "usr/lib64/libcanberra-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcanberra.so.0.2.5",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcanberra.so.0.2.5",
+        "different_libs": true
+    }
+]
