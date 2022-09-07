@@ -57,6 +57,14 @@ $ python get_artifacts.py 2991440597  # fedora results 1800-1900
 - [375-400 out of disk space](https://github.com/buildsi/splice-experiment-runs/actions/runs/2997500322/workflow)
 - [850-875 always killed runner](https://github.com/buildsi/splice-experiment-runs/actions/runs/2997496147/workflow)
 
+And for the symbols results:
+
+```bash
+$ python get_artifacts.py 3009698122
+```
+
+Those are under `symbols_usr`.
+
 And then to open (and run/update the notebook)
 
 ```bash
