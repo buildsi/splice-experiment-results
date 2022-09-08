@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libsymLite.so.11.0.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libsymLite.so.12.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsymLite.so.11.0.1",
+                    "spliced_lib": "libsymLite.so.12.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.078315734863281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsymLite.so.11.0.1",
+                    "spliced_lib": "libsymLite.so.12.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.0994415283203125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 1 Changed (30 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\nSONAME changed from 'libsymLite.so.11.0' to 'libsymLite.so.12.1'\n\n1 function with some indirect sub-type change:\n\n  [C] 'method virtual Dyninst::Offset Dyninst::SymElf::dataOffset()' at SymLite-elf.C:613:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'Dyninst::SymElf*' has sub-type changes:\n      in pointed to type 'class Dyninst::SymElf' at SymLite-elf.h:45:1:\n        type size hasn't changed\n        no base class change (1 filtered);\n        1 member function changes (26 filtered):\n          'method virtual Dyninst::Architecture Dyninst::SymElf::getArchitecture() const' has some sub-type changes:\n            return type changed:\n              underlying type 'enum Dyninst::Architecture' at dyn_regs.h:52:1 changed:\n                type size hasn't changed\n                1 enumerator deletion:\n                  'Dyninst::Architecture::Arch_amdgpu_rdna' value '2348810240'\n                1 enumerator insertion:\n                  'Dyninst::Architecture::Arch_amdgpu_cdna2' value '2483027968'\n        no data member changes (4 filtered);\n\n",
+                    "return_code": 12,
+                    "seconds": 0.5627439022064209,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libsymLite.so.11.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libsymLite.so.12.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libsymLite.so.12.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libsymLite.so.11.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libsymLite.so.11.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libsymLite.so.12.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libsymLite.so.11.0.1-abi-laboratory-libsymLite-so-11-0-1-libsymLite-so-12-1-0.html\nFound link to libsymLite.so.11.0.1-11.0.1-3.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libsymLite.so.11.0.1-11.0.1-3.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-11.0.1-3.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibcommon.so.11.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-lfHAw.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsymLite.so.12.1.0-12.1.0-4.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libsymLite.so.12.1.0-12.1.0-4.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-12.1.0-4.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibcommon.so.12.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-b3jr5.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 97.6%\nTotal binary compatibility problems: 0, warnings: 1\nTotal source compatibility problems: 1, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libsymLite.so.11.0.1-abi-laboratory-libsymLite-so-11-0-1-libsymLite-so-12-1-0.html\n",
+                    "return_code": 1,
+                    "seconds": 16.000547409057617,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libsymLite.so.11.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libsymLite.so.12.1.0 libsymLite-so-11-0-1-libsymLite-so-12-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libsymLite.so.11.0.1-abi-laboratory-libsymLite-so-11-0-1-libsymLite-so-12-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libsymLite.so.12.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libsymLite.so.11.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libsymLite.so.11.0.1": 45016,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libsymLite.so.12.1.0": 45640
+            }
+        },
+        "experiment": "usr/lib64/dyninst/libsymLite-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libsymLite.so.12.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libsymLite.so.11.0.1",
+        "different_libs": true
+    }
+]

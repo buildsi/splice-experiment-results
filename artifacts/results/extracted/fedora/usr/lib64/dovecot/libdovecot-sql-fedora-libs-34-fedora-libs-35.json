@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdovecot-sql.so.0.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdovecot-sql.so.0.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdovecot-sql.so.0.0.0",
+                    "spliced_lib": "libdovecot-sql.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.0558319091796875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdovecot-sql.so.0.0.0",
+                    "spliced_lib": "libdovecot-sql.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.030632019042969e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (1 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function event_passthrough* sql_query_finished_event(sql_db*, event*, const char*, bool, int*)' at sql-api.c:783:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'struct event_passthrough' at lib-event.h:57:1:\n        type size changed from 896 to 1088 (in bits)\n        3 data member insertions:\n          'event_passthrough* (const char*, typedef intmax_t)* add_int_nonzero', at offset 640 (in bits) at lib-event.h:85:1\n          'event_passthrough* (const char*, const char*)* strlist_append', at offset 832 (in bits) at lib-event.h:93:1\n          'event_passthrough* (const char*, const char* const*, unsigned int)* strlist_replace', at offset 896 (in bits) at lib-event.h:95:1\n        4 data member changes (10 filtered):\n          'event_passthrough* (const char*, const timeval*)* add_timeval' offset changed from 640 to 704 (in bits) (by +64 bits)\n          'event_passthrough* (const char*, typedef intmax_t)* inc_int' offset changed from 704 to 768 (in bits) (by +64 bits)\n          'event_passthrough* (const char*)* clear_field' offset changed from 768 to 960 (in bits) (by +192 bits)\n          'event* ()* event' offset changed from 832 to 1024 (in bits) (by +192 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.05413341522216797,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdovecot-sql.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdovecot-sql.so.0.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdovecot-sql.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdovecot-sql.so.0.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdovecot-sql.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdovecot-sql.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdovecot-sql.so.0.0.0-abi-laboratory-libdovecot-sql-so-0-0-0-libdovecot-sql-so-0-0-0.html\nFound link to libdovecot-sql.so.0.0.0-2.3.17.1-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libdovecot-sql.so.0.0.0-2.3.17.1-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.17.1-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 24080\nERROR: incomplete info for symbol 24215\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-aEJcy.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdovecot-sql.so.0.0.0-2.3.19.1-3.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libdovecot-sql.so.0.0.0-2.3.19.1-3.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 24127\nERROR: incomplete info for symbol 24262\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-hbsti.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 70.8%\nSource compatibility: 70.8%\nTotal binary compatibility problems: 8, warnings: 9\nTotal source compatibility problems: 2, warnings: 8\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdovecot-sql.so.0.0.0-abi-laboratory-libdovecot-sql-so-0-0-0-libdovecot-sql-so-0-0-0.html\n",
+                    "return_code": 1,
+                    "seconds": 7.675796747207642,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdovecot-sql.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdovecot-sql.so.0.0.0 libdovecot-sql-so-0-0-0-libdovecot-sql-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdovecot-sql.so.0.0.0-abi-laboratory-libdovecot-sql-so-0-0-0-libdovecot-sql-so-0-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdovecot-sql.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdovecot-sql.so.0.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdovecot-sql.so.0.0.0": 50528,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdovecot-sql.so.0.0.0": 49696
+            }
+        },
+        "experiment": "usr/lib64/dovecot/libdovecot-sql-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdovecot-sql.so.0.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdovecot-sql.so.0.0.0",
+        "different_libs": true
+    }
+]

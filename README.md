@@ -33,9 +33,9 @@ $ rm -rf artifacts/*
 $ python get_artifacts.py 2864059558  # main results
 
 $ python get_artifacts.py 3017137349  # fedora results 0-50
-$ python get_artifacts.py   # fedora results 50-100
+$ python get_artifacts.py 3017172931  # fedora results 50-100
+$ python get_artifacts.py 3017684511  # fedora results 100-150
 
-$ python get_artifacts.py   # fedora results 100-200
 $ python get_artifacts.py   # fedora results 200-300
 $ python get_artifacts.py   # fedora results 300-350
 $ python get_artifacts.py   # fedora results 350-400

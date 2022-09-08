@@ -1,0 +1,139 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/i915_dri.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/i915_dri.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "i915_dri.so",
+                    "spliced_lib": "i915_dri.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "radeon_cs_emit",
+                        "exp",
+                        "radeon_gem_name_bo",
+                        "radeon_cs_erase",
+                        "radeon_cs_space_check_with_bo",
+                        "radeon_bo_manager_gem_dtor",
+                        "radeon_cs_end",
+                        "__driDriverGetExtensions_i965",
+                        "radeon_cs_space_set_flush",
+                        "radeon_gem_get_kernel_name",
+                        "drm_intel_bufmgr_gem_get_devid",
+                        "drm_intel_bo_madvise",
+                        "radeon_bo_unref",
+                        "radeon_cs_destroy",
+                        "drm_intel_bo_map",
+                        "drm_intel_bo_get_subdata",
+                        "drm_intel_gem_bo_map_unsynchronized",
+                        "__tls_get_addr",
+                        "drm_intel_decode_context_alloc",
+                        "drm_intel_bufmgr_gem_set_aub_dump",
+                        "radeon_bo_wait",
+                        "drm_intel_decode",
+                        "radeon_cs_need_flush",
+                        "__driDriverGetExtensions_i830",
+                        "radeon_bo_open",
+                        "drm_intel_bo_references",
+                        "radeon_cs_set_limit",
+                        "radeon_bo_get_tiling",
+                        "radeon_bo_ref",
+                        "nouveau_pushbuf_refd",
+                        "radeon_cs_create",
+                        "drm_intel_bo_unmap",
+                        "radeon_cs_space_add_persistent_bo",
+                        "radeon_bo_is_busy",
+                        "radeon_cs_space_reset_bos",
+                        "radeon_cs_manager_gem_ctor",
+                        "radeon_bo_is_referenced_by_cs",
+                        "radeon_cs_write_reloc",
+                        "drm_intel_bo_mrb_exec",
+                        "drm_intel_gem_bo_wait",
+                        "__driDriverExtensions",
+                        "__assert_fail",
+                        "__driDriverGetExtensions_radeon",
+                        "radeon_bo_unmap",
+                        "drm_intel_decode_context_free",
+                        "drmCommandNone",
+                        "drm_intel_decode_set_batch_pointer",
+                        "radeon_cs_begin",
+                        "drm_intel_gem_bo_aub_dump_bmp",
+                        "__driDriverGetExtensions_nouveau_vieux",
+                        "radeon_bo_map",
+                        "__driDriverGetExtensions_r200",
+                        "radeon_cs_manager_gem_dtor",
+                        "radeon_bo_manager_gem_ctor",
+                        "printf",
+                        "drm_intel_bufmgr_set_debug"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00015664100646972656
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "i915_dri.so",
+                    "spliced_lib": "i915_dri.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "__driDriverGetExtensions_nouveau_vieux",
+                        "__driDriverGetExtensions_i965",
+                        "__driDriverGetExtensions_r200",
+                        "__driDriverGetExtensions_radeon",
+                        "__driDriverGetExtensions_i830",
+                        "__driDriverExtensions"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.621246337890625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 5 Removed, 0 Changed, 7 Added functions\nVariables changes summary: 1 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 8 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\nSONAME changed from 'libmesa_dri_drivers.so' to 'libgallium_dri.so'\n\n5 Removed functions:\n\n  [D] 'function const __DRIextension** __driDriverGetExtensions_i830()'    {__driDriverGetExtensions_i830}\n  [D] 'function const __DRIextension** __driDriverGetExtensions_i965()'    {__driDriverGetExtensions_i965}\n  [D] 'function const __DRIextension** __driDriverGetExtensions_nouveau_vieux()'    {__driDriverGetExtensions_nouveau_vieux}\n  [D] 'function const __DRIextension** __driDriverGetExtensions_r200()'    {__driDriverGetExtensions_r200}\n  [D] 'function const __DRIextension** __driDriverGetExtensions_radeon()'    {__driDriverGetExtensions_radeon}\n\n7 Added functions:\n\n  [A] 'function const __DRIextension** __driDriverGetExtensions_kms_swrast()'    {__driDriverGetExtensions_kms_swrast}\n  [A] 'function const __DRIextension** __driDriverGetExtensions_swrast()'    {__driDriverGetExtensions_swrast}\n  [A] 'function const __DRIextension** __driDriverGetExtensions_zink()'    {__driDriverGetExtensions_zink}\n  [A] 'function void ac_init_shared_llvm_once()'    {ac_init_shared_llvm_once}\n  [A] 'function radeon_winsys* amdgpu_winsys_create(int, const pipe_screen_config*, radeon_screen_create_t)'    {amdgpu_winsys_create}\n  [A] 'function pipe_screen* nouveau_drm_screen_create(int)'    {nouveau_drm_screen_create}\n  [A] 'function radeon_winsys* radeon_drm_winsys_create(int, const pipe_screen_config*, radeon_screen_create_t)'    {radeon_drm_winsys_create}\n\n1 Removed variable:\n\n  [D] 'const __DRIextension* __driDriverExtensions[10]'    {__driDriverExtensions}\n\n8 Added function symbols not referenced by debug info:\n\n  [A] __driDriverGetExtensions_crocus\n  [A] __driDriverGetExtensions_iris\n  [A] __driDriverGetExtensions_nouveau\n  [A] __driDriverGetExtensions_r300\n  [A] __driDriverGetExtensions_r600\n  [A] __driDriverGetExtensions_radeonsi\n  [A] __driDriverGetExtensions_virtio_gpu\n  [A] __driDriverGetExtensions_vmwgfx\n\n",
+                    "return_code": 12,
+                    "seconds": 144.98041892051697,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/i915_dri.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/i915_dri.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/i915_dri.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/i915_dri.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/i915_dri.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/i915_dri.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/i915_dri.so-abi-laboratory-i915_dri-so-i915_dri-so.html\nFound link to i830_dri.so-21.3.9-1.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file i830_dri.so-21.3.9-1.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dri/../../../.dwz/mesa-21.3.9-1.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-bp4Pa.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to crocus_dri.so-22.2.0~rc3-1.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file crocus_dri.so-22.2.0~rc3-1.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dri/../../../.dwz/mesa-22.2.0~rc3-1.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nWARNING: input object is compressed and large, may require a lot of RAM memory to process\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-EkQPW.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 14.3%\nSource compatibility: 14.3%\nTotal binary compatibility problems: 6, warnings: 0\nTotal source compatibility problems: 6, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/i915_dri.so-abi-laboratory-i915_dri-so-i915_dri-so.html\n",
+                    "return_code": 1,
+                    "seconds": 390.3058805465698,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/i915_dri.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/i915_dri.so i915_dri-so-i915_dri-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/i915_dri.so-abi-laboratory-i915_dri-so-i915_dri-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/i915_dri.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/i915_dri.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/i915_dri.so": 15754704,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/i915_dri.so": 25076312
+            }
+        },
+        "experiment": "usr/lib64/dri/i915_dri-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dri/i915_dri.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dri/i915_dri.so",
+        "different_libs": true
+    }
+]
