@@ -121,7 +121,7 @@ def create_fedora_results_table(experiments, filename=False):
         # symbols has two diff cases
         analysis = "abi-compliance-tester"
         if predictor == "symbols":
-            analysis = "symbols-changed"
+            analysis = p['command']
         elif predictor == "libabigail":
             analysis = "abidiff"
 
@@ -157,6 +157,8 @@ def create_fedora_results_table(experiments, filename=False):
 
             # If we don't have predictions, it's a full (non symbols) result
             if "predictions" not in res:
+                
+                continue
                 original = res['original_lib'].rsplit("splice-experiment-runs")[-1].strip("/")
                 changed = res['spliced_lib'].rsplit("splice-experiment-runs")[-1].strip("/")
                 add_prediction_row(before, after, original, changed, res, "symbols", e)            
@@ -168,8 +170,8 @@ def create_fedora_results_table(experiments, filename=False):
                 changed = res["spliced"][0].rsplit("splice-experiment-runs")[-1].strip("/")
                 for predictor, listing in res["predictions"].items():
                     # We aren't including symbols from these runs
-                    if predictor == "symbols":
-                        continue
+                    #if predictor == "symbols":
+                    #    continue
                     for p in listing:
                         add_prediction_row(before, after, original, changed, p, predictor, e)
     return df

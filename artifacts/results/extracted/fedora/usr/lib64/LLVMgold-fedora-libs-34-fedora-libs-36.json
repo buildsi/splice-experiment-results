@@ -15,49 +15,66 @@
                     "splice_type": "different_lib",
                     "original_lib": "LLVMgold.so",
                     "spliced_lib": "LLVMgold.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 6.008148193359375e-05
+                    "message": [
+                        "_ZN4llvm3lto3LTOC1ENS0_6ConfigESt8functionIFSt10unique_ptrINS0_15ThinBackendProcESt14default_deleteIS5_EERKS2_RNS_18ModuleSummaryIndexERNS_9StringMapINS_8DenseMapImPNS_18GlobalValueSummaryENS_12DenseMapInfoImEENS_6detail12DenseMapPairImSG_EEEENS_15MallocAllocatorEEES3_IFS4_INS0_18NativeObjectStreamES6_ISQ_EEjEES3_IFSU_jNS_9StringRefEEEEEj",
+                        "_ZSt19__throw_logic_errorPKc",
+                        "_ZdlPvm",
+                        "printf",
+                        "__snprintf_chk",
+                        "memcmp",
+                        "_ZN4llvm16WriteIndexToFileERKNS_18ModuleSummaryIndexERNS_11raw_ostreamEPKSt3mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8DenseMapImPNS_18GlobalValueSummaryENS_12DenseMapInfoImEENS_6detail12DenseMapPairImSE_EEEESt4lessISB_ESaISt4pairIKSB_SK_EEE",
+                        "_ZN4llvm3lto3LTO3runESt8functionIFSt10unique_ptrINS0_18NativeObjectStreamESt14default_deleteIS4_EEjEES2_IFS9_jNS_9StringRefEEE",
+                        "_ZN4llvm11raw_ostream14flush_nonemptyEv",
+                        "_ZN4llvm3lto10localCacheENS_9StringRefESt8functionIFvjSt10unique_ptrINS_12MemoryBufferESt14default_deleteIS4_EEEE",
+                        "_ZN4llvm3sys2fs19createTemporaryFileERKNS_5TwineENS_9StringRefERiRNS_15SmallVectorImplIcEE",
+                        "_ZN4llvm18raw_string_ostreamD1Ev"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.842613220214844e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "LLVMgold.so",
                     "spliced_lib": "LLVMgold.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.9141387939453125e-06
+                    "seconds": 6.4373016357421875e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 1.8243608474731445,
+                    "message": "Functions changes summary: 1 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function ld_plugin_status onload(ld_plugin_tv*)'    {onload@@LLVM_12}\n\n",
+                    "return_code": 12,
+                    "seconds": 6.795485019683838,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so-abi-laboratory-LLVMgold-so-LLVMgold-so.html\nFound link to LLVMgold.so-14.0.5-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file LLVMgold.so-14.0.5-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/llvm-14.0.5-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nWARNING: a \"Struct\" type with no attributes detected in the DWARF dump (-4201619)\nWARNING: a \"Union\" type with no attributes detected in the DWARF dump (-42531)\nReading v-tables\nlibedit.so.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Yq6CO.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to LLVMgold.so-14.0.5-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file LLVMgold.so-14.0.5-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/llvm-14.0.5-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nWARNING: a \"Struct\" type with no attributes detected in the DWARF dump (-4201619)\nWARNING: a \"Union\" type with no attributes detected in the DWARF dump (-42531)\nReading v-tables\nlibedit.so.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-a9k6k.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so-abi-laboratory-LLVMgold-so-LLVMgold-so.html\n",
-                    "return_code": 0,
-                    "seconds": 48.165581941604614,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so-abi-laboratory-LLVMgold-so-LLVMgold-so.html\nFound link to LLVMgold.so-12.0.1-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file LLVMgold.so-12.0.1-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/llvm-12.0.1-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibffi.so.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-AAswr.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to LLVMgold.so-14.0.5-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file LLVMgold.so-14.0.5-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/llvm-14.0.5-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nWARNING: a \"Struct\" type with no attributes detected in the DWARF dump (-4201619)\nWARNING: a \"Union\" type with no attributes detected in the DWARF dump (-42531)\nReading v-tables\nlibedit.so.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Vyj0U.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 1, warnings: 0\nTotal source compatibility problems: 0, warnings: 5\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so-abi-laboratory-LLVMgold-so-LLVMgold-so.html\n",
+                    "return_code": 1,
+                    "seconds": 247.9883415699005,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so LLVMgold-so-LLVMgold-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so-abi-laboratory-LLVMgold-so-LLVMgold-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so": 99256,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/LLVMgold.so": 108416,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/LLVMgold.so": 99256
             }
         },
