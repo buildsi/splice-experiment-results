@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_rlpr.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_rlpr.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kdeprint_rlpr.so",
+                    "spliced_lib": "kdeprint_rlpr.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00012755393981933594
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kdeprint_rlpr.so",
+                    "spliced_lib": "kdeprint_rlpr.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.271766662597656e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.7678444385528564,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_rlpr.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_rlpr.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_rlpr.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_rlpr.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_rlpr.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_rlpr.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_rlpr.so-abi-laboratory-kdeprint_rlpr-so-kdeprint_rlpr-so.html\nFound link to kdeprint_rlpr.so-3.5.10-110.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file kdeprint_rlpr.so-3.5.10-110.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-110.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2002\nERROR: incomplete info for symbol 4628\nERROR: incomplete info for symbol 4684\nERROR: incomplete info for symbol 4751\nERROR: incomplete info for symbol 7124\nERROR: incomplete info for symbol 7180\nERROR: incomplete info for symbol 7247\nERROR: incomplete info for symbol 11604\nERROR: incomplete info for symbol 11660\nERROR: incomplete info for symbol 11995\nERROR: incomplete info for symbol 12648\nERROR: incomplete info for symbol 14212\nERROR: incomplete info for symbol 14268\nERROR: incomplete info for symbol 14335\nERROR: incomplete info for symbol 15425\nERROR: incomplete info for symbol 18221\nERROR: incomplete info for symbol 23041\nERROR: incomplete info for symbol 23362\nERROR: incomplete info for symbol 23605\nERROR: incomplete info for symbol 23707\nERROR: incomplete info for symbol 23809\nERROR: incomplete info for symbol 24270\nERROR: incomplete info for symbol 24446\nERROR: incomplete info for symbol 25209\nERROR: incomplete info for symbol 25273\nERROR: incomplete info for symbol 25922\nERROR: incomplete info for symbol 30749\nERROR: incomplete info for symbol 38892\nERROR: incomplete info for symbol 42033\nERROR: incomplete info for symbol 42228\nERROR: incomplete info for symbol 43554\nERROR: incomplete info for symbol 44043\nERROR: incomplete info for symbol 57005\nERROR: incomplete info for symbol 58761\nERROR: incomplete info for symbol 58925\nERROR: incomplete info for symbol 59083\nERROR: incomplete info for symbol 59253\nERROR: incomplete info for symbol 59349\nERROR: incomplete info for symbol 59465\nERROR: incomplete info for symbol 61060\nERROR: incomplete info for symbol 61189\nERROR: incomplete info for symbol 62800\nERROR: incomplete info for symbol 63719\nReading v-tables\nlibkdeprint_management.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-1SGQb.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to kdeprint_rlpr.so-3.5.10-111.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file kdeprint_rlpr.so-3.5.10-111.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-111.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1992\nERROR: incomplete info for symbol 4618\nERROR: incomplete info for symbol 4674\nERROR: incomplete info for symbol 4741\nERROR: incomplete info for symbol 7114\nERROR: incomplete info for symbol 7170\nERROR: incomplete info for symbol 7237\nERROR: incomplete info for symbol 11594\nERROR: incomplete info for symbol 11650\nERROR: incomplete info for symbol 11985\nERROR: incomplete info for symbol 12638\nERROR: incomplete info for symbol 14202\nERROR: incomplete info for symbol 14258\nERROR: incomplete info for symbol 14325\nERROR: incomplete info for symbol 15415\nERROR: incomplete info for symbol 18211\nERROR: incomplete info for symbol 23031\nERROR: incomplete info for symbol 23352\nERROR: incomplete info for symbol 23595\nERROR: incomplete info for symbol 23697\nERROR: incomplete info for symbol 23799\nERROR: incomplete info for symbol 24260\nERROR: incomplete info for symbol 24429\nERROR: incomplete info for symbol 25192\nERROR: incomplete info for symbol 25256\nERROR: incomplete info for symbol 25905\nERROR: incomplete info for symbol 30732\nERROR: incomplete info for symbol 38875\nERROR: incomplete info for symbol 42016\nERROR: incomplete info for symbol 42211\nERROR: incomplete info for symbol 43537\nERROR: incomplete info for symbol 44026\nERROR: incomplete info for symbol 56988\nERROR: incomplete info for symbol 58744\nERROR: incomplete info for symbol 58908\nERROR: incomplete info for symbol 59066\nERROR: incomplete info for symbol 59236\nERROR: incomplete info for symbol 59332\nERROR: incomplete info for symbol 59448\nERROR: incomplete info for symbol 61043\nERROR: incomplete info for symbol 61172\nERROR: incomplete info for symbol 62783\nERROR: incomplete info for symbol 63702\nReading v-tables\nlibkdeprint_management.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Ykh9z.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_rlpr.so-abi-laboratory-kdeprint_rlpr-so-kdeprint_rlpr-so.html\n",
+                    "return_code": 0,
+                    "seconds": 18.55776357650757,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_rlpr.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_rlpr.so kdeprint_rlpr-so-kdeprint_rlpr-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_rlpr.so-abi-laboratory-kdeprint_rlpr-so-kdeprint_rlpr-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_rlpr.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_rlpr.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_rlpr.so": 106824,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_rlpr.so": 106704
+            }
+        },
+        "experiment": "usr/lib64/kde3/kdeprint_rlpr-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_rlpr.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_rlpr.so",
+        "different_libs": true
+    }
+]

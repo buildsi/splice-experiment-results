@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_ext.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_ext.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kdeprint_ext.so",
+                    "spliced_lib": "kdeprint_ext.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.891654968261719e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kdeprint_ext.so",
+                    "spliced_lib": "kdeprint_ext.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.2649765014648438e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.5625052452087402,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_ext.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_ext.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_ext.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_ext.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_ext.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_ext.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_ext.so-abi-laboratory-kdeprint_ext-so-kdeprint_ext-so.html\nFound link to kdeprint_ext.so-3.5.10-110.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file kdeprint_ext.so-3.5.10-110.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-110.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 753\nERROR: incomplete info for symbol 3349\nERROR: incomplete info for symbol 3405\nERROR: incomplete info for symbol 3472\nERROR: incomplete info for symbol 4483\nERROR: incomplete info for symbol 4539\nERROR: incomplete info for symbol 4606\nERROR: incomplete info for symbol 4979\nERROR: incomplete info for symbol 5591\nERROR: incomplete info for symbol 5647\nERROR: incomplete info for symbol 5714\nERROR: incomplete info for symbol 6048\nERROR: incomplete info for symbol 6200\nERROR: incomplete info for symbol 6302\nReading v-tables\nlibkdeprint.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ZXrtr.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to kdeprint_ext.so-3.5.10-117.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file kdeprint_ext.so-3.5.10-117.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-117.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 763\nERROR: incomplete info for symbol 3327\nERROR: incomplete info for symbol 3383\nERROR: incomplete info for symbol 3450\nERROR: incomplete info for symbol 4461\nERROR: incomplete info for symbol 4517\nERROR: incomplete info for symbol 4584\nERROR: incomplete info for symbol 4957\nERROR: incomplete info for symbol 5567\nERROR: incomplete info for symbol 5623\nERROR: incomplete info for symbol 5690\nERROR: incomplete info for symbol 6024\nERROR: incomplete info for symbol 6176\nERROR: incomplete info for symbol 6278\nReading v-tables\nlibkdeprint.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-k2Ahr.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_ext.so-abi-laboratory-kdeprint_ext-so-kdeprint_ext-so.html\n",
+                    "return_code": 0,
+                    "seconds": 16.226490259170532,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_ext.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_ext.so kdeprint_ext-so-kdeprint_ext-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_ext.so-abi-laboratory-kdeprint_ext-so-kdeprint_ext-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_ext.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_ext.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_ext.so": 40776,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_ext.so": 40848
+            }
+        },
+        "experiment": "usr/lib64/kde3/kdeprint_ext-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kdeprint_ext.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kdeprint_ext.so",
+        "different_libs": true
+    }
+]
