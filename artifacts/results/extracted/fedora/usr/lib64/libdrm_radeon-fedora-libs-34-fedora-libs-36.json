@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_radeon.so.1.0.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_radeon.so.1.0.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdrm_radeon.so.1.0.1",
+                    "spliced_lib": "libdrm_radeon.so.1.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "fwrite"
+                    ],
+                    "prediction": false,
+                    "seconds": 4.220008850097656e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdrm_radeon.so.1.0.1",
+                    "spliced_lib": "libdrm_radeon.so.1.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.029273986816406e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.029595136642456055,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_radeon.so.1.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_radeon.so.1.0.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_radeon.so.1.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_radeon.so.1.0.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_radeon.so.1.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_radeon.so.1.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_radeon.so.1.0.1-abi-laboratory-libdrm_radeon-so-1-0-1-libdrm_radeon-so-1-0-1.html\nFound link to libdrm_radeon.so.1.0.1-2.4.109-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libdrm_radeon.so.1.0.1-2.4.109-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libdrm-2.4.109-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 14154\nERROR: incomplete info for symbol 14344\nERROR: incomplete info for symbol 14395\nERROR: incomplete info for symbol 14546\nERROR: incomplete info for symbol 14700\nERROR: incomplete info for symbol 16262\nERROR: incomplete info for symbol 16467\nERROR: incomplete info for symbol 16803\nERROR: incomplete info for symbol 16872\nERROR: incomplete info for symbol 16954\nERROR: incomplete info for symbol 17016\nERROR: incomplete info for symbol 17078\nERROR: incomplete info for symbol 17160\nERROR: incomplete info for symbol 17262\nERROR: incomplete info for symbol 17364\nERROR: incomplete info for symbol 18302\nERROR: incomplete info for symbol 18444\nERROR: incomplete info for symbol 18513\nERROR: incomplete info for symbol 18559\nERROR: incomplete info for symbol 18585\nERROR: incomplete info for symbol 18637\nERROR: incomplete info for symbol 18711\nERROR: incomplete info for symbol 18853\nERROR: incomplete info for symbol 18995\nERROR: incomplete info for symbol 19117\nERROR: incomplete info for symbol 19179\nERROR: incomplete info for symbol 19241\nERROR: incomplete info for symbol 19303\nERROR: incomplete info for symbol 19365\nERROR: incomplete info for symbol 19447\nERROR: incomplete info for symbol 19500\nERROR: incomplete info for symbol 19553\nERROR: incomplete info for symbol 19592\nERROR: incomplete info for symbol 21140\nERROR: incomplete info for symbol 21191\nERROR: incomplete info for symbol 21396\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-7PVYN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdrm_radeon.so.1.0.1-2.4.110-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdrm_radeon.so.1.0.1-2.4.110-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libdrm-2.4.110-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 13869\nERROR: incomplete info for symbol 14059\nERROR: incomplete info for symbol 14110\nERROR: incomplete info for symbol 14261\nERROR: incomplete info for symbol 14415\nERROR: incomplete info for symbol 16101\nERROR: incomplete info for symbol 16306\nERROR: incomplete info for symbol 16683\nERROR: incomplete info for symbol 16752\nERROR: incomplete info for symbol 16834\nERROR: incomplete info for symbol 16896\nERROR: incomplete info for symbol 16958\nERROR: incomplete info for symbol 17040\nERROR: incomplete info for symbol 17142\nERROR: incomplete info for symbol 17244\nERROR: incomplete info for symbol 18182\nERROR: incomplete info for symbol 18324\nERROR: incomplete info for symbol 18393\nERROR: incomplete info for symbol 18439\nERROR: incomplete info for symbol 18465\nERROR: incomplete info for symbol 18517\nERROR: incomplete info for symbol 18591\nERROR: incomplete info for symbol 18733\nERROR: incomplete info for symbol 18875\nERROR: incomplete info for symbol 18997\nERROR: incomplete info for symbol 19059\nERROR: incomplete info for symbol 19121\nERROR: incomplete info for symbol 19183\nERROR: incomplete info for symbol 19245\nERROR: incomplete info for symbol 19327\nERROR: incomplete info for symbol 19380\nERROR: incomplete info for symbol 19433\nERROR: incomplete info for symbol 19472\nERROR: incomplete info for symbol 21033\nERROR: incomplete info for symbol 21084\nERROR: incomplete info for symbol 21289\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-NTJXv.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_radeon.so.1.0.1-abi-laboratory-libdrm_radeon-so-1-0-1-libdrm_radeon-so-1-0-1.html\n",
+                    "return_code": 0,
+                    "seconds": 0.9020049571990967,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_radeon.so.1.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_radeon.so.1.0.1 libdrm_radeon-so-1-0-1-libdrm_radeon-so-1-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_radeon.so.1.0.1-abi-laboratory-libdrm_radeon-so-1-0-1-libdrm_radeon-so-1-0-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_radeon.so.1.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_radeon.so.1.0.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_radeon.so.1.0.1": 57488,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_radeon.so.1.0.1": 53464
+            }
+        },
+        "experiment": "usr/lib64/libdrm_radeon-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_radeon.so.1.0.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_radeon.so.1.0.1",
+        "different_libs": true
+    }
+]

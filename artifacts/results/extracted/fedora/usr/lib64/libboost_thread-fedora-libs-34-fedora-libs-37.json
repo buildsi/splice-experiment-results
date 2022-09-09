@@ -1,0 +1,98 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_thread.so.1.75.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_thread.so.1.78.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libboost_thread.so.1.75.0",
+                    "spliced_lib": "libboost_thread.so.1.78.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance",
+                        "__pthread_key_create",
+                        "_ZSt20__throw_system_errori",
+                        "printf",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_",
+                        "_ZTVN5boost6system12system_errorE",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance",
+                        "_ZNSt13runtime_errorC2EPKc",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance",
+                        "abort",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE7map_mx_"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.462501525878906e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libboost_thread.so.1.75.0",
+                    "spliced_lib": "libboost_thread.so.1.78.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance",
+                        "_ZTVN5boost6system12system_errorE",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE7map_mx_"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.915496826171875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 1 Changed (5 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 0 Added function symbol not referenced by debug info\nVariable symbols changes summary: 8 Removed, 4 Added variable symbols not referenced by debug info\n\nSONAME changed from 'libboost_thread.so.1.75.0' to 'libboost_thread.so.1.78.0'\n\n1 function with some indirect sub-type change:\n\n  [C] 'function const boost::system::error_category& boost::future_category()' at future.cpp:57:1 has some indirect sub-type changes:\n    return type changed:\n      in referenced type 'const boost::system::error_category':\n        in unqualified underlying type 'class boost::system::error_category' at error_category.hpp:51:1:\n          type size changed from 128 to 192 (in bits)\n          1 member function changes (6 filtered):\n            'method virtual bool boost::system::error_category::equivalent(const boost::system::error_code&, int) const' has some sub-type changes:\n              parameter 1 of type 'const boost::system::error_code&' has sub-type changes:\n                in referenced type 'const boost::system::error_code':\n                  in unqualified underlying type 'class boost::system::error_code' at error_code.hpp:57:1:\n                    type size changed from 128 to 192 (in bits)\n                    2 data member deletions:\n                      'bool failed_', at offset 32 (in bits) at error_code.hpp:43:1\n                      'const boost::system::error_category* cat_', at offset 64 (in bits) at error_code.hpp:44:1\n                    1 data member insertion:\n                      'uintptr_t lc_flags_', at offset 128 (in bits) at error_code.hpp:84:1\n                    1 data member change:\n                      data member int val_ at offset 0 (in bits) became anonymous data member 'union {boost::system::error_code::data d1_; unsigned char d2_[16];}'\n                      and size changed from 32 to 128 (in bits) (by +96 bits)\n          1 data member insertion:\n            'std::atomic<boost::system::detail::std_category*> ps_', at offset 128 (in bits) at error_category.hpp:81:1\n\n8 Removed variable symbols not referenced by debug info:\n\n  [D] _ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance\n  [D] _ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance\n  [D] _ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_\n  [D] _ZTVN5boost6system12system_errorE\n  [D] _ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance\n  [D] _ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance\n  [D] _ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_\n  [D] _ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE7map_mx_\n\n4 Added variable symbols not referenced by debug info:\n\n  [A] _ZN5boost6system6detail17system_cat_holderIvE8instanceE\n  [A] _ZTIN5boost6system6detail22interop_error_categoryE\n  [A] _ZTSN5boost6system6detail22interop_error_categoryE\n  [A] _ZTVN5boost6system6detail22interop_error_categoryE\n\n",
+                    "return_code": 12,
+                    "seconds": 1.534656286239624,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_thread.so.1.75.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_thread.so.1.78.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_thread.so.1.78.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_thread.so.1.75.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_thread.so.1.75.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_thread.so.1.78.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_thread.so.1.75.0-abi-laboratory-libboost_thread-so-1-75-0-libboost_thread-so-1-78-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.18655109405517578,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_thread.so.1.75.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_thread.so.1.78.0 libboost_thread-so-1-75-0-libboost_thread-so-1-78-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_thread.so.1.75.0-abi-laboratory-libboost_thread-so-1-75-0-libboost_thread-so-1-78-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_thread.so.1.78.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_thread.so.1.75.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_thread.so.1.75.0": 121752,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_thread.so.1.78.0": 126944
+            }
+        },
+        "experiment": "usr/lib64/libboost_thread-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_thread.so.1.78.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_thread.so.1.75.0",
+        "different_libs": true
+    }
+]

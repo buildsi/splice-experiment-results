@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libguile-2.2.so.1.4.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libguile-2.2.so.1.4.2"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libguile-2.2.so.1.4.2",
+                    "spliced_lib": "libguile-2.2.so.1.4.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__memcpy_chk",
+                        "__poll_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0006067752838134766
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libguile-2.2.so.1.4.2",
+                    "spliced_lib": "libguile-2.2.so.1.4.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.031055927276611328
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (3 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
+                    "return_code": 0,
+                    "seconds": 2.009836196899414,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libguile-2.2.so.1.4.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libguile-2.2.so.1.4.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libguile-2.2.so.1.4.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libguile-2.2.so.1.4.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libguile-2.2.so.1.4.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libguile-2.2.so.1.4.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libguile-2.2.so.1.4.2-abi-laboratory-libguile-2-2-so-1-4-2-libguile-2-2-so-1-4-2.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22647428512573242,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libguile-2.2.so.1.4.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libguile-2.2.so.1.4.2 libguile-2-2-so-1-4-2-libguile-2-2-so-1-4-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libguile-2.2.so.1.4.2-abi-laboratory-libguile-2-2-so-1-4-2-libguile-2-2-so-1-4-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libguile-2.2.so.1.4.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libguile-2.2.so.1.4.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libguile-2.2.so.1.4.2": 1268208,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libguile-2.2.so.1.4.2": 1264160
+            }
+        },
+        "experiment": "usr/lib64/libguile-2-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libguile-2.2.so.1.4.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libguile-2.2.so.1.4.2",
+        "different_libs": true
+    }
+]

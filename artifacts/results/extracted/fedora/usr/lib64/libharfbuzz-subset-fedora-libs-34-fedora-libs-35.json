@@ -1,0 +1,79 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.20901.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libharfbuzz-subset.so.0.20704.0",
+                    "spliced_lib": "libharfbuzz-subset.so.0.20901.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "hb_set_set",
+                        "hb_set_reference",
+                        "hb_blob_get_length"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.695487976074219e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libharfbuzz-subset.so.0.20704.0",
+                    "spliced_lib": "libharfbuzz-subset.so.0.20901.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.430511474609375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 3 Changed (14 filtered out), 14 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n14 Added functions:\n\n  [A] 'function hb_subset_flags_t hb_subset_input_get_flags(hb_subset_input_t*)'    {hb_subset_input_get_flags}\n  [A] 'function hb_bool_t hb_subset_input_get_no_prune_unicode_ranges(hb_subset_input_t*)'    {hb_subset_input_get_no_prune_unicode_ranges}\n  [A] 'function hb_bool_t hb_subset_input_get_notdef_outline(hb_subset_input_t*)'    {hb_subset_input_get_notdef_outline}\n  [A] 'function hb_bool_t hb_subset_input_get_overlaps_flag(hb_subset_input_t*)'    {hb_subset_input_get_overlaps_flag}\n  [A] 'function void* hb_subset_input_get_user_data(const hb_subset_input_t*, hb_user_data_key_t*)'    {hb_subset_input_get_user_data}\n  [A] 'function hb_set_t* hb_subset_input_layout_features_set(hb_subset_input_t*)'    {hb_subset_input_layout_features_set}\n  [A] 'function hb_set_t* hb_subset_input_no_subset_tables_set(hb_subset_input_t*)'    {hb_subset_input_no_subset_tables_set}\n  [A] 'function hb_set_t* hb_subset_input_set(hb_subset_input_t*, hb_subset_sets_t)'    {hb_subset_input_set}\n  [A] 'function void hb_subset_input_set_flags(hb_subset_input_t*, unsigned int)'    {hb_subset_input_set_flags}\n  [A] 'function void hb_subset_input_set_no_prune_unicode_ranges(hb_subset_input_t*, hb_bool_t)'    {hb_subset_input_set_no_prune_unicode_ranges}\n  [A] 'function void hb_subset_input_set_notdef_outline(hb_subset_input_t*, hb_bool_t)'    {hb_subset_input_set_notdef_outline}\n  [A] 'function void hb_subset_input_set_overlaps_flag(hb_subset_input_t*, hb_bool_t)'    {hb_subset_input_set_overlaps_flag}\n  [A] 'function hb_bool_t hb_subset_input_set_user_data(hb_subset_input_t*, hb_user_data_key_t*, void*, hb_destroy_func_t, hb_bool_t)'    {hb_subset_input_set_user_data}\n  [A] 'function hb_face_t* hb_subset_or_fail(hb_face_t*, const hb_subset_input_t*)'    {hb_subset_or_fail}\n\n3 functions with some indirect sub-type change:\n\n  [C] 'function hb_face_t* hb_subset(hb_face_t*, hb_subset_input_t*)' at hb-subset.cc:334:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'typedef hb_face_t' at hb-face.hh:47:1:\n        entity changed from 'typedef hb_face_t' to compatible type 'struct hb_face_t' at hb-face.hh:47:1\n    parameter 1 of type 'hb_face_t*' has sub-type changes:\n      in pointed to type 'typedef hb_face_t' at hb-face.hh:47:1:\n        entity changed from 'typedef hb_face_t' to compatible type 'struct hb_face_t' at hb-face.hh:47:1\n    parameter 2 of type 'hb_subset_input_t*' has sub-type changes:\n      in pointed to type 'typedef hb_subset_input_t' at hb-subset-input.hh:41:1:\n        entity changed from 'typedef hb_subset_input_t' to compatible type 'struct hb_subset_input_t' at hb-subset-input.hh:41:1\n          type size changed from 512 to 640 (in bits)\n          8 data member deletions:\n            'hb_set_t* glyphs', at offset 192 (in bits) at hb-subset-input.hh:42:1\n            'hb_set_t* name_ids', at offset 256 (in bits) at hb-subset-input.hh:43:1\n            'hb_set_t* name_languages', at offset 320 (in bits) at hb-subset-input.hh:44:1\n            'hb_set_t* drop_tables', at offset 384 (in bits) at hb-subset-input.hh:45:1\n            'bool drop_hints', at offset 448 (in bits) at hb-subset-input.hh:47:1\n            'bool desubroutinize', at offset 456 (in bits) at hb-subset-input.hh:48:1\n            'bool retain_gids', at offset 464 (in bits) at hb-subset-input.hh:49:1\n            'bool name_legacy', at offset 472 (in bits) at hb-subset-input.hh:50:1\n          1 data member insertion:\n            'unsigned int flags', at offset 576 (in bits) at hb-subset-input.hh:58:1\n          1 data member change:\n            data member hb_set_t* unicodes at offset 128 (in bits) became anonymous data member 'union {struct {hb_set_t* glyphs; hb_set_t* unicodes; hb_set_t* no_subset_tables; hb_set_t* drop_tables; hb_set_t* name_ids; hb_set_t* name_languages; hb_set_t* layout_features;} sets; hb_set_t* set_ptrs[7];}'\n            and size changed from 64 to 448 (in bits) (by +384 bits)\n\n  [C] 'function void hb_subset_input_destroy(hb_subset_input_t*)' at hb-subset-input.cc:227:1 has some indirect sub-type changes:\n    parameter 1 of type 'hb_subset_input_t*' has sub-type changes:\n      in pointed to type 'typedef hb_subset_input_t' at hb-subset-input.hh:41:1:\n        entity changed from 'typedef hb_subset_input_t' to compatible type 'struct hb_subset_input_t' at hb-subset-input.hh:41:1\n\n  [C] 'function hb_set_t* hb_subset_input_drop_tables_set(hb_subset_input_t*)' at hb-subset-input.cc:336:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'struct hb_set_t' at hb-set.h:57:1:\n        entity changed from 'struct hb_set_t' to compatible type 'typedef hb_set_t' at hb-set.h:57:1\n          type size changed from 448 to 576 (in bits)\n          1 base class insertion:\n            struct hb_sparseset_t<hb_bit_set_invertible_t> at hb-set.hh:36:1\n          5 data member deletions:\n            'hb_object_header_t header', at offset 0 (in bits) at hb-set.hh:213:1\n            'bool successful', at offset 128 (in bits) at hb-set.hh:214:1\n            'unsigned int population', at offset 160 (in bits) at hb-set.hh:215:1\n            'hb_sorted_vector_t<hb_set_t::page_map_t> page_map', at offset 192 (in bits) at hb-set.hh:216:1\n            'hb_vector_t<hb_set_t::page_t> pages', at offset 320 (in bits) at hb-set.hh:217:1\n\n",
+                    "return_code": 4,
+                    "seconds": 7.499466180801392,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.20901.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.20901.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.20901.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0-abi-laboratory-libharfbuzz-subset-so-0-20704-0-libharfbuzz-subset-so-0-20901-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19205212593078613,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.20901.0 libharfbuzz-subset-so-0-20704-0-libharfbuzz-subset-so-0-20901-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0-abi-laboratory-libharfbuzz-subset-so-0-20704-0-libharfbuzz-subset-so-0-20901-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.20901.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0": 538264,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.20901.0": 644880
+            }
+        },
+        "experiment": "usr/lib64/libharfbuzz-subset-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.20901.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0",
+        "different_libs": true
+    }
+]

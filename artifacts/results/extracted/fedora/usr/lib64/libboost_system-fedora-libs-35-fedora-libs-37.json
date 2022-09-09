@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_system.so.1.76.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_system.so.1.78.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libboost_system.so.1.76.0",
+                    "spliced_lib": "libboost_system.so.1.78.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.4543533325195312e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libboost_system.so.1.76.0",
+                    "spliced_lib": "libboost_system.so.1.78.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.198883056640625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\nSONAME changed from 'libboost_system.so.1.76.0' to 'libboost_system.so.1.78.0'\n\n",
+                    "return_code": 12,
+                    "seconds": 0.19699740409851074,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_system.so.1.76.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_system.so.1.78.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_system.so.1.78.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_system.so.1.76.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_system.so.1.76.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_system.so.1.78.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_system.so.1.76.0-abi-laboratory-libboost_system-so-1-76-0-libboost_system-so-1-78-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.18965744972229004,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_system.so.1.76.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_system.so.1.78.0 libboost_system-so-1-76-0-libboost_system-so-1-78-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_system.so.1.76.0-abi-laboratory-libboost_system-so-1-76-0-libboost_system-so-1-78-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_system.so.1.78.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_system.so.1.76.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_system.so.1.76.0": 15352,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_system.so.1.78.0": 15544
+            }
+        },
+        "experiment": "usr/lib64/libboost_system-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libboost_system.so.1.78.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libboost_system.so.1.76.0",
+        "different_libs": true
+    }
+]

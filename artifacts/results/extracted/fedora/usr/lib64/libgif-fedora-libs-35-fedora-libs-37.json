@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.2.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgif.so.7.2.0",
+                    "spliced_lib": "libgif.so.7.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.221366882324219e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgif.so.7.2.0",
+                    "spliced_lib": "libgif.so.7.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.435943603515625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 5 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 1 Added variable\n\n5 Added functions:\n\n  [A] 'function bool GAGetArgs(int, char**, char*, ...)'    {GAGetArgs}\n  [A] 'function void GAPrintErrMsg(int)'    {GAPrintErrMsg}\n  [A] 'function void GAPrintHowTo(char*)'    {GAPrintHowTo}\n  [A] 'function void GifQprintf(char*, ...)'    {GifQprintf}\n  [A] 'function void PrintGifError(int)'    {PrintGifError}\n\n1 Added variable:\n\n  [A] 'bool GifNoisyPrint'    {GifNoisyPrint}\n\n",
+                    "return_code": 4,
+                    "seconds": 0.030968904495239258,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.2.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.2.0-abi-laboratory-libgif-so-7-1-0-libgif-so-7-2-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22502374649047852,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0 libgif-so-7-1-0-libgif-so-7-2-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.2.0-abi-laboratory-libgif-so-7-1-0-libgif-so-7-2-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.2.0": 45160,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0": 53592
+            }
+        },
+        "experiment": "usr/lib64/libgif-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgif.so.7.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgif.so.7.2.0",
+        "different_libs": true
+    }
+]

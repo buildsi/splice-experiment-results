@@ -1,0 +1,106 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.50100.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libharfbuzz-subset.so.0.20704.0",
+                    "spliced_lib": "libharfbuzz-subset.so.0.50100.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "hb_subset_input_drop_tables_set",
+                        "hb_set_reference",
+                        "strncmp",
+                        "hb_subset",
+                        "hb_subset_input_namelangid_set",
+                        "hb_subset_input_set_drop_hints",
+                        "hb_subset_input_set_retain_gids",
+                        "hb_subset_input_get_drop_hints",
+                        "hb_subset_input_nameid_set",
+                        "hb_set_clear",
+                        "hb_subset_input_get_name_legacy",
+                        "hb_subset_input_get_retain_gids",
+                        "hb_subset_input_set_name_legacy",
+                        "hb_subset_input_get_desubroutinize",
+                        "hb_blob_get_length",
+                        "hb_subset_input_set_desubroutinize",
+                        "hb_map_get"
+                    ],
+                    "prediction": false,
+                    "seconds": 4.553794860839844e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libharfbuzz-subset.so.0.20704.0",
+                    "spliced_lib": "libharfbuzz-subset.so.0.50100.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "hb_subset_input_set_drop_hints",
+                        "hb_subset",
+                        "hb_subset_input_get_drop_hints",
+                        "hb_subset_input_get_desubroutinize",
+                        "hb_subset_input_set_name_legacy",
+                        "hb_subset_input_drop_tables_set",
+                        "hb_subset_input_nameid_set",
+                        "hb_subset_input_set_retain_gids",
+                        "hb_subset_input_namelangid_set",
+                        "hb_subset_input_get_retain_gids",
+                        "hb_subset_input_get_name_legacy",
+                        "hb_subset_input_set_desubroutinize"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.5735626220703125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 12 Removed, 3 Changed (2 filtered out), 15 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n12 Removed functions:\n\n  [D] 'function hb_face_t* hb_subset(hb_face_t*, hb_subset_input_t*)'    {hb_subset}\n  [D] 'function hb_set_t* hb_subset_input_drop_tables_set(hb_subset_input_t*)'    {hb_subset_input_drop_tables_set}\n  [D] 'function hb_bool_t hb_subset_input_get_desubroutinize(hb_subset_input_t*)'    {hb_subset_input_get_desubroutinize}\n  [D] 'function hb_bool_t hb_subset_input_get_drop_hints(hb_subset_input_t*)'    {hb_subset_input_get_drop_hints}\n  [D] 'function hb_bool_t hb_subset_input_get_name_legacy(hb_subset_input_t*)'    {hb_subset_input_get_name_legacy}\n  [D] 'function hb_bool_t hb_subset_input_get_retain_gids(hb_subset_input_t*)'    {hb_subset_input_get_retain_gids}\n  [D] 'function hb_set_t* hb_subset_input_nameid_set(hb_subset_input_t*)'    {hb_subset_input_nameid_set}\n  [D] 'function hb_set_t* hb_subset_input_namelangid_set(hb_subset_input_t*)'    {hb_subset_input_namelangid_set}\n  [D] 'function void hb_subset_input_set_desubroutinize(hb_subset_input_t*, hb_bool_t)'    {hb_subset_input_set_desubroutinize}\n  [D] 'function void hb_subset_input_set_drop_hints(hb_subset_input_t*, hb_bool_t)'    {hb_subset_input_set_drop_hints}\n  [D] 'function void hb_subset_input_set_name_legacy(hb_subset_input_t*, hb_bool_t)'    {hb_subset_input_set_name_legacy}\n  [D] 'function void hb_subset_input_set_retain_gids(hb_subset_input_t*, hb_bool_t)'    {hb_subset_input_set_retain_gids}\n\n15 Added functions:\n\n  [A] 'function hb_subset_flags_t hb_subset_input_get_flags(hb_subset_input_t*)'    {hb_subset_input_get_flags}\n  [A] 'function void* hb_subset_input_get_user_data(const hb_subset_input_t*, hb_user_data_key_t*)'    {hb_subset_input_get_user_data}\n  [A] 'function hb_set_t* hb_subset_input_set(hb_subset_input_t*, hb_subset_sets_t)'    {hb_subset_input_set}\n  [A] 'function void hb_subset_input_set_flags(hb_subset_input_t*, unsigned int)'    {hb_subset_input_set_flags}\n  [A] 'function hb_bool_t hb_subset_input_set_user_data(hb_subset_input_t*, hb_user_data_key_t*, void*, hb_destroy_func_t, hb_bool_t)'    {hb_subset_input_set_user_data}\n  [A] 'function hb_face_t* hb_subset_or_fail(hb_face_t*, const hb_subset_input_t*)'    {hb_subset_or_fail}\n  [A] 'function hb_subset_plan_t* hb_subset_plan_create_or_fail(hb_face_t*, const hb_subset_input_t*)'    {hb_subset_plan_create_or_fail}\n  [A] 'function void hb_subset_plan_destroy(hb_subset_plan_t*)'    {hb_subset_plan_destroy}\n  [A] 'function hb_face_t* hb_subset_plan_execute_or_fail(hb_subset_plan_t*)'    {hb_subset_plan_execute_or_fail}\n  [A] 'function void* hb_subset_plan_get_user_data(const hb_subset_plan_t*, hb_user_data_key_t*)'    {hb_subset_plan_get_user_data}\n  [A] 'function const hb_map_t* hb_subset_plan_new_to_old_glyph_mapping(const hb_subset_plan_t*)'    {hb_subset_plan_new_to_old_glyph_mapping}\n  [A] 'function const hb_map_t* hb_subset_plan_old_to_new_glyph_mapping(const hb_subset_plan_t*)'    {hb_subset_plan_old_to_new_glyph_mapping}\n  [A] 'function hb_subset_plan_t* hb_subset_plan_reference(hb_subset_plan_t*)'    {hb_subset_plan_reference}\n  [A] 'function hb_bool_t hb_subset_plan_set_user_data(hb_subset_plan_t*, hb_user_data_key_t*, void*, hb_destroy_func_t, hb_bool_t)'    {hb_subset_plan_set_user_data}\n  [A] 'function const hb_map_t* hb_subset_plan_unicode_to_old_glyph_mapping(const hb_subset_plan_t*)'    {hb_subset_plan_unicode_to_old_glyph_mapping}\n\n3 functions with some indirect sub-type change:\n\n  [C] 'function hb_subset_input_t* hb_subset_input_create_or_fail()' at hb-subset-input.cc:41:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'typedef hb_subset_input_t' at hb-subset-input.hh:41:1:\n        entity changed from 'typedef hb_subset_input_t' to compatible type 'struct hb_subset_input_t' at hb-subset-input.hh:41:1\n          type size changed from 512 to 768 (in bits)\n          8 data member deletions:\n            'hb_set_t* glyphs', at offset 192 (in bits) at hb-subset-input.hh:42:1\n            'hb_set_t* name_ids', at offset 256 (in bits) at hb-subset-input.hh:43:1\n            'hb_set_t* name_languages', at offset 320 (in bits) at hb-subset-input.hh:44:1\n            'hb_set_t* drop_tables', at offset 384 (in bits) at hb-subset-input.hh:45:1\n            'bool drop_hints', at offset 448 (in bits) at hb-subset-input.hh:47:1\n            'bool desubroutinize', at offset 456 (in bits) at hb-subset-input.hh:48:1\n            'bool retain_gids', at offset 464 (in bits) at hb-subset-input.hh:49:1\n            'bool name_legacy', at offset 472 (in bits) at hb-subset-input.hh:50:1\n          2 data member insertions:\n            'unsigned int flags', at offset 640 (in bits) at hb-subset-input.hh:61:1\n            'hb_hashmap_t<unsigned int, float, false>* axes_location', at offset 704 (in bits) at hb-subset-input.hh:62:1\n          2 data member changes:\n            data member hb_set_t* unicodes at offset 128 (in bits) became anonymous data member 'union {hb_subset_input_t::sets_t sets; hb_set_t* set_ptrs[8];}'\n            and size changed from 64 to 512 (in bits) (by +448 bits)\n            type of 'hb_object_header_t header' changed:\n              type size hasn't changed\n              1 data member change:\n                type of 'hb_atomic_ptr_t<hb_user_data_array_t> user_data' changed:\n                  type size hasn't changed\n                  1 data member change:\n                    type of 'hb_atomic_ptr_t<hb_user_data_array_t>::T* v' changed:\n                      in pointed to type 'typedef hb_atomic_ptr_t<hb_user_data_array_t>::T' at hb-atomic.hh:175:1:\n                        underlying type 'typedef hb_remove_pointer' at hb-meta.hh:118:1 changed:\n                          underlying type 'typedef hb_type_identity_t<hb_user_data_array_t>::type' at hb-meta.hh:78:1 changed:\n                            underlying type 'struct hb_user_data_array_t' at hb-object.hh:164:1 changed:\n                              type size hasn't changed\n                              2 data member changes:\n                                type of 'hb_mutex_t lock' changed:\n                                  type size hasn't changed\n                                  1 data member change:\n                                    type of 'hb_mutex_impl_t m' changed:\n                                      entity changed from 'typedef hb_mutex_impl_t' to 'char[40]'\n                                type of 'hb_lockable_set_t<hb_user_data_array_t::hb_user_data_item_t, hb_mutex_t> items' changed:\n                                  type size hasn't changed\n                                  1 data member change:\n                                    type of 'hb_vector_t<hb_user_data_array_t::hb_user_data_item_t> items' changed:\n                                      type name changed from 'hb_vector_t<hb_user_data_array_t::hb_user_data_item_t>' to 'hb_vector_t<hb_user_data_array_t::hb_user_data_item_t, false>'\n                                      type size hasn't changed\n                                      1 base class insertion:\n                                        struct hb_empty_t at hb-meta.hh:42:1\n                                      no data member changes (3 filtered);\n\n  [C] 'function void hb_subset_input_destroy(hb_subset_input_t*)' at hb-subset-input.cc:243:1 has some indirect sub-type changes:\n    parameter 1 of type 'hb_subset_input_t*' has sub-type changes:\n      in pointed to type 'typedef hb_subset_input_t' at hb-subset-input.hh:41:1:\n        entity changed from 'typedef hb_subset_input_t' to compatible type 'struct hb_subset_input_t' at hb-subset-input.hh:41:1\n\n  [C] 'function hb_set_t* hb_subset_input_glyph_set(hb_subset_input_t*)' at hb-subset-input.cc:285:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'struct hb_set_t' at hb-set.hh:161:1:\n        type size changed from 448 to 704 (in bits)\n        1 base class insertion:\n          struct hb_sparseset_t<hb_bit_set_invertible_t> at hb-set.hh:36:1\n        5 data member deletions:\n          'hb_object_header_t header', at offset 0 (in bits) at hb-set.hh:213:1\n          'bool successful', at offset 128 (in bits) at hb-set.hh:214:1\n          'unsigned int population', at offset 160 (in bits) at hb-set.hh:215:1\n          'hb_sorted_vector_t<hb_set_t::page_map_t> page_map', at offset 192 (in bits) at hb-set.hh:216:1\n          'hb_vector_t<hb_set_t::page_t> pages', at offset 320 (in bits) at hb-set.hh:217:1\n\n",
+                    "return_code": 12,
+                    "seconds": 9.711621284484863,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.50100.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.50100.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.50100.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0-abi-laboratory-libharfbuzz-subset-so-0-20704-0-libharfbuzz-subset-so-0-50100-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.19515299797058105,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.50100.0 libharfbuzz-subset-so-0-20704-0-libharfbuzz-subset-so-0-50100-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0-abi-laboratory-libharfbuzz-subset-so-0-20704-0-libharfbuzz-subset-so-0-50100-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.50100.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0": 538264,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.50100.0": 883568
+            }
+        },
+        "experiment": "usr/lib64/libharfbuzz-subset-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libharfbuzz-subset.so.0.50100.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libharfbuzz-subset.so.0.20704.0",
+        "different_libs": true
+    }
+]

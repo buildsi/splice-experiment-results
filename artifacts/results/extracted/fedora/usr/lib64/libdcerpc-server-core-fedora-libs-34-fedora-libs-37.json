@@ -1,0 +1,85 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdcerpc-server-core.so.0.0.1",
+                    "spliced_lib": "libdcerpc-server-core.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "dcesrv_reinit_context",
+                        "dom_sid_dup",
+                        "_talloc_move",
+                        "GUID_string",
+                        "uid_wrapper_enabled",
+                        "find_interface_by_uuid"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.793571472167969e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdcerpc-server-core.so.0.0.1",
+                    "spliced_lib": "libdcerpc-server-core.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "dcesrv_reinit_context",
+                        "find_interface_by_uuid"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.2901763916015625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 2 Removed, 2 Changed (46 filtered out), 4 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 Removed functions:\n\n  [D] 'function NTSTATUS dcesrv_reinit_context(dcesrv_context*)'    {dcesrv_reinit_context@@DCERPC_SERVER_CORE_0.0.1}\n  [D] 'function const dcesrv_interface* find_interface_by_uuid(const dcesrv_endpoint*, const GUID*, uint32_t)'    {find_interface_by_uuid@@DCERPC_SERVER_CORE_0.0.1}\n\n4 Added functions:\n\n  [A] 'function void dcesrv_context_set_callbacks(dcesrv_context*, dcesrv_context_callbacks*)'    {dcesrv_context_set_callbacks@@DCERPC_SERVER_CORE_0.0.1}\n  [A] 'function NTSTATUS dcesrv_interface_register_b(dcesrv_context*, dcerpc_binding*, dcerpc_binding*, const dcesrv_interface*, const security_descriptor*)'    {dcesrv_interface_register_b@@DCERPC_SERVER_CORE_0.0.1}\n  [A] 'function void dcesrv_loop_next_packet(dcesrv_connection*, ncacn_packet*, DATA_BLOB)'    {dcesrv_loop_next_packet@@DCERPC_SERVER_CORE_0.0.1}\n  [A] 'function const dcesrv_interface* find_interface_by_syntax_id(const dcesrv_endpoint*, const ndr_syntax_id*)'    {find_interface_by_syntax_id@@DCERPC_SERVER_CORE_0.0.1}\n\n2 functions with some indirect sub-type change:\n\n  [C] 'function void* _dcesrv_iface_state_find_assoc(dcesrv_call_state*, uint64_t)' at dcesrv_handles.c:300:1 has some indirect sub-type changes:\n    parameter 1 of type 'dcesrv_call_state*' has sub-type changes:\n      in pointed to type 'struct dcesrv_call_state' at dcesrv_core.h:96:1:\n        type size hasn't changed\n        2 data member changes (3 filtered):\n          type of 'dcesrv_auth* auth_state' changed:\n            in pointed to type 'struct dcesrv_auth' at dcesrv_core.h:202:1:\n              type size hasn't changed\n              1 data member changes (3 filtered):\n                type of 'auth_session_info* session_info' changed:\n                  in pointed to type 'struct auth_session_info' at auth.h:90:1:\n                    type size changed from 640 to 704 (in bits)\n                    1 data member insertion:\n                      'ticket_type ticket_type', at offset 640 (in bits) at auth.h:99:1\n          type of 'dcesrv_connection* conn' changed:\n            in pointed to type 'struct dcesrv_connection' at dcesrv_core.h:238:1:\n              type size hasn't changed\n              1 data member changes (12 filtered):\n                type of 'dcesrv_assoc_group* assoc_group' changed:\n                  in pointed to type 'struct dcesrv_assoc_group' at dcesrv_core.h:360:1:\n                    type size hasn't changed\n                    2 data member changes (1 filtered):\n                      type of 'dcesrv_handle* handles' changed:\n                        in pointed to type 'struct dcesrv_handle' at dcesrv_core.h:191:1:\n                          type size changed from 640 to 1088 (in bits)\n                          4 data member changes (3 filtered):\n                            type of 'dom_sid* sid' changed:\n                              entity changed from 'dom_sid*' to 'struct dom_sid' at security.h:256:1\n                              type size changed from 64 to 544 (in bits)\n                            and offset changed from 384 to 352 (in bits) (by -32 bits)\n                            'dcerpc_AuthLevel min_auth_level' offset changed from 448 to 896 (in bits) (by +448 bits)\n                            'const dcesrv_interface* iface' offset changed from 512 to 960 (in bits) (by +448 bits)\n                            'void* data' offset changed from 576 to 1024 (in bits) (by +448 bits)\n                      type of 'dcesrv_context* dce_ctx' changed:\n                        in pointed to type 'struct dcesrv_context' at dcesrv_core.h:406:1:\n                          type size changed from 512 to 384 (in bits)\n                          1 data member changes (2 filtered):\n                            type of 'dcesrv_context_callbacks callbacks' changed:\n                              entity changed from 'struct dcesrv_context_callbacks' to 'dcesrv_context_callbacks*'\n                              type size changed from 192 to 64 (in bits)\n\n  [C] 'function NTSTATUS dcesrv_init_context(TALLOC_CTX*, loadparm_context*, dcesrv_context_callbacks*, dcesrv_context**)' at dcesrv_core.c:2413:1 has some indirect sub-type changes:\n    parameter 3 of type 'dcesrv_context_callbacks*' has sub-type changes:\n      in pointed to type 'struct dcesrv_context_callbacks' at dcesrv_core.h:382:1:\n        type size changed from 192 to 512 (in bits)\n        3 data member changes:\n          type of 'struct {void (dcesrv_call_state*)* successful_authz;} log' changed:\n            type size changed from 64 to 128 (in bits)\n            1 data member insertion:\n              'void* private_data', at offset 64 (in bits) at dcesrv_core.h:386:1\n            1 data member change:\n              type of 'void (dcesrv_call_state*)* successful_authz' changed:\n                in pointed to type 'function type void (dcesrv_call_state*)':\n                  parameter 2 of type 'void*' was added\n          type of 'struct {typedef NTSTATUS (TALLOC_CTX*, dcesrv_call_state*, gensec_security**)* gensec_prepare;} auth' changed:\n            type size changed from 64 to 256 (in bits)\n            3 data member insertions:\n              'void* private_data', at offset 64 (in bits) at dcesrv_core.h:394:1\n              'void ()* become_root', at offset 128 (in bits) at dcesrv_core.h:395:1\n              'void ()* unbecome_root', at offset 192 (in bits) at dcesrv_core.h:396:1\n            1 data member change:\n              type of 'typedef NTSTATUS (TALLOC_CTX*, dcesrv_call_state*, gensec_security**)* gensec_prepare' changed:\n                in pointed to type 'function type typedef NTSTATUS (TALLOC_CTX*, dcesrv_call_state*, gensec_security**)':\n                  parameter 4 of type 'void*' was added\n          and offset changed from 64 to 128 (in bits) (by +64 bits)\n          type of 'struct {typedef NTSTATUS (dcesrv_call_state*)* find;} assoc_group' changed:\n            type size changed from 64 to 128 (in bits)\n            1 data member insertion:\n              'void* private_data', at offset 64 (in bits) at dcesrv_core.h:401:1\n            1 data member change:\n              type of 'typedef NTSTATUS (dcesrv_call_state*)* find' changed:\n                in pointed to type 'function type typedef NTSTATUS (dcesrv_call_state*)':\n                  parameter 2 of type 'void*' was added\n          and offset changed from 128 to 384 (in bits) (by +256 bits)\n\n",
+                    "return_code": 12,
+                    "seconds": 0.12440729141235352,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1-abi-laboratory-libdcerpc-server-core-so-0-0-1-libdcerpc-server-core-so-0-0-1.html\n/usr/bin/perl: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_ABI_DT_RELR' not found (required by /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6)\n",
+                    "return_code": 1,
+                    "seconds": 0.009017705917358398,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1 libdcerpc-server-core-so-0-0-1-libdcerpc-server-core-so-0-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1-abi-laboratory-libdcerpc-server-core-so-0-0-1-libdcerpc-server-core-so-0-0-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1": 78328,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1": 82816
+            }
+        },
+        "experiment": "usr/lib64/libdcerpc-server-core-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1",
+        "different_libs": true
+    }
+]

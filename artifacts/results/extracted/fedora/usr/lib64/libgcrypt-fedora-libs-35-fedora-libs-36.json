@@ -1,0 +1,82 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgcrypt.so.20.3.4"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgcrypt.so.20.4.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgcrypt.so.20.3.4",
+                    "spliced_lib": "libgcrypt.so.20.4.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "strncpy",
+                        "dlsym",
+                        "dlopen",
+                        "syscall",
+                        "dlclose",
+                        "strrchr"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.224082946777344e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgcrypt.so.20.3.4",
+                    "spliced_lib": "libgcrypt.so.20.4.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0002970695495605469
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (21 filtered out), 7 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n7 Added functions:\n\n  [A] 'function void gcry_kdf_close(gcry_kdf_hd_t)'    {gcry_kdf_close@@GCRYPT_1.6}\n  [A] 'function gcry_error_t gcry_kdf_compute(gcry_kdf_hd_t, const gcry_kdf_thread_ops*)'    {gcry_kdf_compute@@GCRYPT_1.6}\n  [A] 'function gcry_error_t gcry_kdf_final(gcry_kdf_hd_t, size_t, void*)'    {gcry_kdf_final@@GCRYPT_1.6}\n  [A] 'function gpg_error_t gcry_kdf_open(gcry_kdf_hd_t*, int, int, const unsigned long int*, unsigned int, void*, size_t, void*, size_t, void*, size_t, void*, size_t)'    {gcry_kdf_open@@GCRYPT_1.6}\n  [A] 'function gcry_error_t gcry_pk_hash_sign(gcry_sexp_t*, const char*, gcry_sexp_t, gcry_md_hd_t, gcry_ctx_t)'    {gcry_pk_hash_sign@@GCRYPT_1.6}\n  [A] 'function gcry_error_t gcry_pk_hash_verify(gcry_sexp_t, const char*, gcry_sexp_t, gcry_md_hd_t, gcry_ctx_t)'    {gcry_pk_hash_verify@@GCRYPT_1.6}\n  [A] 'function gcry_error_t gcry_pk_random_override_new(gcry_ctx_t*, const unsigned char*, size_t)'    {gcry_pk_random_override_new@@GCRYPT_1.6}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function gcry_error_t gcry_cipher_authenticate(gcry_cipher_hd_t, void*, size_t)' at visibility.c:777:1 has some indirect sub-type changes:\n    parameter 1 of type 'typedef gcry_cipher_hd_t' has sub-type changes:\n      underlying type 'gcry_cipher_handle*' changed:\n        in pointed to type 'struct gcry_cipher_handle' at cipher-internal.h:210:1:\n          type size changed from 7168 to 7296 (in bits)\n          6 data member changes (4 filtered):\n            type of 'cipher_bulk_ops_t bulk' changed:\n              underlying type 'struct cipher_bulk_ops' at cipher-internal.h:146:1 changed:\n                type size changed from 640 to 704 (in bits)\n                1 data member insertion:\n                  'void (void*, unsigned char*, void*, void*, typedef size_t)* ctr32le_enc', at offset 384 (in bits) at cipher-internal.h:160:1\n                4 data member changes:\n                  'typedef size_t (typedef gcry_cipher_hd_t, void*, void*, typedef size_t, int)* ocb_crypt' offset changed from 384 to 448 (in bits) (by +64 bits)\n                  'typedef size_t (typedef gcry_cipher_hd_t, void*, typedef size_t)* ocb_auth' offset changed from 448 to 512 (in bits) (by +64 bits)\n                  'void (void*, unsigned char*, void*, void*, typedef size_t, int)* xts_crypt' offset changed from 512 to 576 (in bits) (by +64 bits)\n                  'typedef size_t (typedef gcry_cipher_hd_t, void*, void*, typedef size_t, int)* gcm_crypt' offset changed from 576 to 640 (in bits) (by +64 bits)\n            'int mode' offset changed from 1344 to 1408 (in bits) (by +64 bits)\n            'unsigned int flags' offset changed from 1376 to 1440 (in bits) (by +64 bits)\n            'struct {unsigned int key; unsigned int iv; unsigned int tag; unsigned int finalize; unsigned int allow_weak_key;} marks' offset changed from 1408 to 1472 (in bits) (by +64 bits)\n            type of 'union {struct {u64 encryptlen; u64 aadlen; unsigned int authlen; unsigned char macbuf[16]; int mac_unused; unsigned char s0[16]; unsigned int nonce; unsigned int lengths;} ccm; struct {u32 aadcount[2]; u32 datacount[2]; unsigned int aad_finalized; unsigned int bytecount_over_limits; poly1305_context_t ctx;} poly1305; gcry_cmac_context_t cmac; struct {gcry_cmac_context_t cmac_header; gcry_cmac_context_t cmac_ciphertext;} eax; struct {union {cipher_context_alignment_t iv_align; unsigned char tag[16];} u_tag; unsigned char macbuf[16]; int mac_unused; u32 aadlen[2]; u32 datalen[2]; unsigned char tagiv[16]; unsigned int ghash_data_finalized; unsigned int ghash_aad_finalized; unsigned int datalen_over_limits; unsigned int disallow_encryption_because_of_setiv_in_fips_mode; union {cipher_context_alignment_t iv_align; unsigned char key[16];} u_ghash_key; u64 gcm_table[64]; ghash_fn_t ghash_fn;} gcm; struct {unsigned char L_star[16]; unsigned char L_dollar[16]; unsigned char L0L1[16]; unsigned char L[16][16]; unsigned char tag[16]; unsigned char aad_offset[16]; unsigned char aad_sum[16]; unsigned char aad_leftover[16]; u64 data_nblocks; u64 aad_nblocks; unsigned char aad_nleftover; unsigned char taglen; unsigned int data_finalized; unsigned int aad_finalized;} ocb; struct {char* tweak_context;} xts;} u_mode' changed:\n              type size changed from 4992 to 5120 (in bits)\n              2 data member insertions:\n                'struct {unsigned char dec_tag[16]; unsigned char s2v_d[16]; unsigned int aad_count; unsigned int dec_tag_set; gcry_cmac_context_t s2v_cmac; unsigned char s2v_zero_block[16]; char* ctr_context;} siv' at cipher-internal.h:433:1\n                'struct {unsigned char plen[4];} wrap' at cipher-internal.h:438:1\n              1 data member changes (4 filtered):\n                type of 'struct {union {cipher_context_alignment_t iv_align; unsigned char tag[16];} u_tag; unsigned char macbuf[16]; int mac_unused; u32 aadlen[2]; u32 datalen[2]; unsigned char tagiv[16]; unsigned int ghash_data_finalized; unsigned int ghash_aad_finalized; unsigned int datalen_over_limits; unsigned int disallow_encryption_because_of_setiv_in_fips_mode; union {cipher_context_alignment_t iv_align; unsigned char key[16];} u_ghash_key; u64 gcm_table[64]; ghash_fn_t ghash_fn;} gcm' changed:\n                  type size changed from 4992 to 5120 (in bits)\n                  2 data member insertions:\n                    'ghash_fn_t polyval_fn', at offset 4928 (in bits) at cipher-internal.h:354:1\n                    'unsigned int siv_keylen', at offset 4992 (in bits) at cipher-internal.h:357:1\n                  no data member changes (4 filtered);\n            'cipher_context_alignment_t context' offset changed from 7040 to 7168 (in bits) (by +128 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.6021730899810791,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgcrypt.so.20.3.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgcrypt.so.20.4.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgcrypt.so.20.4.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgcrypt.so.20.3.4",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgcrypt.so.20.3.4\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgcrypt.so.20.4.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgcrypt.so.20.3.4-abi-laboratory-libgcrypt-so-20-3-4-libgcrypt-so-20-4-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22249841690063477,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgcrypt.so.20.3.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgcrypt.so.20.4.1 libgcrypt-so-20-3-4-libgcrypt-so-20-4-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgcrypt.so.20.3.4-abi-laboratory-libgcrypt-so-20-3-4-libgcrypt-so-20-4-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgcrypt.so.20.4.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgcrypt.so.20.3.4",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgcrypt.so.20.3.4": 1301712,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgcrypt.so.20.4.1": 1305592
+            }
+        },
+        "experiment": "usr/lib64/libgcrypt-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgcrypt.so.20.4.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgcrypt.so.20.3.4",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm_compat.so.4.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm_compat.so.4.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgdbm_compat.so.4.0.0",
+                    "spliced_lib": "libgdbm_compat.so.4.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.123283386230469e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgdbm_compat.so.4.0.0",
+                    "spliced_lib": "libgdbm_compat.so.4.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.1444091796875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (11 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function void dbm_clearerr(DBM*)' at dbmerr.c:29:1 has some indirect sub-type changes:\n    parameter 1 of type 'DBM*' has sub-type changes:\n      in pointed to type 'typedef DBM' at ndbm.h:42:1:\n        underlying type 'struct DBM' at ndbm.h:35:1 changed:\n          type size hasn't changed\n          1 data member change:\n            type of 'GDBM_FILE file' changed:\n              underlying type 'gdbm_file_info*' changed:\n                in pointed to type 'struct gdbm_file_info' at gdbmdefs.h:215:1:\n                  type size changed from 1344 to 2048 (in bits)\n                  1 data member deletion:\n                    'size_t last_read', at offset 704 (in bits) at gdbmdefs.h:230:1\n                  13 data member insertions:\n                    'avail_block* avail', at offset 512 (in bits) at gdbmdefs.h:267:1\n                    'gdbm_ext_header* xheader', at offset 640 (in bits) at gdbmdefs.h:271:1\n                    'size_t cache_num', at offset 832 (in bits) at gdbmdefs.h:279:1\n                    'cache_tree* cache_tree', at offset 896 (in bits) at gdbmdefs.h:281:1\n                    'cache_elem* cache_mru', at offset 960 (in bits) at gdbmdefs.h:283:1\n                    'cache_elem* cache_lru', at offset 1024 (in bits) at gdbmdefs.h:284:1\n                    'cache_elem* cache_avail', at offset 1088 (in bits) at gdbmdefs.h:285:1\n                    'size_t cache_access_count', at offset 1344 (in bits) at gdbmdefs.h:297:1\n                    'size_t cache_hits', at offset 1408 (in bits) at gdbmdefs.h:298:1\n                    'off_t file_size', at offset 1536 (in bits) at gdbmdefs.h:307:1\n                    'int mmap_preread', at offset 1920 (in bits) at gdbmdefs.h:317:1\n                    'int eo', at offset 1952 (in bits) at gdbmdefs.h:321:1\n                    'int snapfd[2]', at offset 1984 (in bits) at gdbmdefs.h:323:1\n                  16 data member changes:\n                    type of 'cache_elem* bucket_cache' changed:\n                      entity changed from 'cache_elem*' to 'typedef size_t' at stddef.h:214:1\n                      type size hasn't changed\n                    and name of 'gdbm_file_info::bucket_cache' changed to 'gdbm_file_info::avail_size' at gdbmdefs.h:268:1\n                    type of 'gdbm_file_header* header' changed:\n                      in pointed to type 'typedef gdbm_file_header' at gdbmdefs.h:98:1:\n                        underlying type 'struct gdbm_file_header' at gdbmdefs.h:84:1 changed:\n                          type size changed from 576 to 320 (in bits)\n                          1 data member deletion:\n                            'avail_block avail', at offset 320 (in bits) at gdbmdefs.h:94:1\n                    'off_t* dir' offset changed from 512 to 704 (in bits) (by +192 bits)\n                    'size_t cache_size' offset changed from 640 to 768 (in bits) (by +128 bits)\n                    'hash_bucket* bucket' offset changed from 768 to 1216 (in bits) (by +448 bits)\n                    'int bucket_dir' offset changed from 832 to 1280 (in bits) (by +448 bits)\n                    type of 'cache_elem* cache_entry' changed:\n                      in pointed to type 'typedef cache_elem' at gdbmdefs.h:181:1:\n                        underlying type 'struct cache_elem' at gdbmdefs.h:160:1 changed:\n                          type size changed from 512 to 1792 (in bits)\n                          4 data member insertions:\n                            'cache_elem* ca_prev', at offset 448 (in bits) at gdbmdefs.h:197:1\n                            'cache_elem* ca_next', at offset 512 (in bits) at gdbmdefs.h:198:1\n                            'size_t ca_hits', at offset 576 (in bits) at gdbmdefs.h:202:1\n                            'cache_node* ca_node', at offset 640 (in bits) at gdbmdefs.h:203:1\n                          4 data member changes:\n                            type of 'hash_bucket* ca_bucket' changed:\n                              entity changed from 'hash_bucket*' to 'hash_bucket[1]'\n                              type size changed from 64 to 1088 (in bits)\n                            and offset changed from 0 to 704 (in bits) (by +704 bits)\n                            'off_t ca_adr' offset changed from 64 to 0 (in bits) (by -64 bits)\n                            'char ca_changed' offset changed from 128 to 64 (in bits) (by -64 bits)\n                            'data_cache_elem ca_data' offset changed from 192 to 128 (in bits) (by -64 bits)\n                    and offset changed from 896 to 1152 (in bits) (by +256 bits)\n                    'unsigned int header_changed' offset changed from 960 to 1472 (in bits) (by +512 bits)\n                    'unsigned int directory_changed' offset changed from 961 to 1473 (in bits) (by +512 bits)\n                    'unsigned int bucket_changed' offset changed from 962 to 1474 (in bits) (by +512 bits)\n                    'unsigned int second_changed' offset changed from 963 to 1475 (in bits) (by +512 bits)\n                    'size_t mapped_size_max' offset changed from 1024 to 1600 (in bits) (by +576 bits)\n                    'void* mapped_region' offset changed from 1088 to 1664 (in bits) (by +576 bits)\n                    'size_t mapped_size' offset changed from 1152 to 1728 (in bits) (by +576 bits)\n                    'off_t mapped_pos' offset changed from 1216 to 1792 (in bits) (by +576 bits)\n                    'off_t mapped_off' offset changed from 1280 to 1856 (in bits) (by +576 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.0336918830871582,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm_compat.so.4.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm_compat.so.4.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm_compat.so.4.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm_compat.so.4.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm_compat.so.4.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm_compat.so.4.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm_compat.so.4.0.0-abi-laboratory-libgdbm_compat-so-4-0-0-libgdbm_compat-so-4-0-0.html\nFound link to libgdbm_compat.so.4.0.0-1.19-2.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libgdbm_compat.so.4.0.0-1.19-2.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/gdbm-1.19-2.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2548\nERROR: incomplete info for symbol 3433\nERROR: incomplete info for symbol 3597\nERROR: incomplete info for symbol 3640\nERROR: incomplete info for symbol 3666\nERROR: incomplete info for symbol 3692\nERROR: incomplete info for symbol 3863\nERROR: incomplete info for symbol 3906\nERROR: incomplete info for symbol 4101\nERROR: incomplete info for symbol 4163\nERROR: incomplete info for symbol 4351\nERROR: incomplete info for symbol 4502\nERROR: incomplete info for symbol 4545\nERROR: incomplete info for symbol 4836\nERROR: incomplete info for symbol 4862\nERROR: incomplete info for symbol 4888\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-8293o.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgdbm_compat.so.4.0.0-1.22-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgdbm_compat.so.4.0.0-1.22-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/gdbm-1.22-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3882\nERROR: incomplete info for symbol 4755\nERROR: incomplete info for symbol 4919\nERROR: incomplete info for symbol 4962\nERROR: incomplete info for symbol 4988\nERROR: incomplete info for symbol 5014\nERROR: incomplete info for symbol 5185\nERROR: incomplete info for symbol 5228\nERROR: incomplete info for symbol 5423\nERROR: incomplete info for symbol 5485\nERROR: incomplete info for symbol 5673\nERROR: incomplete info for symbol 5824\nERROR: incomplete info for symbol 5867\nERROR: incomplete info for symbol 6158\nERROR: incomplete info for symbol 6184\nERROR: incomplete info for symbol 6210\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-OBifH.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 35%\nSource compatibility: 35%\nTotal binary compatibility problems: 25, warnings: 7\nTotal source compatibility problems: 4, warnings: 17\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm_compat.so.4.0.0-abi-laboratory-libgdbm_compat-so-4-0-0-libgdbm_compat-so-4-0-0.html\n",
+                    "return_code": 1,
+                    "seconds": 0.6349565982818604,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm_compat.so.4.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm_compat.so.4.0.0 libgdbm_compat-so-4-0-0-libgdbm_compat-so-4-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm_compat.so.4.0.0-abi-laboratory-libgdbm_compat-so-4-0-0-libgdbm_compat-so-4-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm_compat.so.4.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm_compat.so.4.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm_compat.so.4.0.0": 15384,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm_compat.so.4.0.0": 15568
+            }
+        },
+        "experiment": "usr/lib64/libgdbm_compat-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm_compat.so.4.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm_compat.so.4.0.0",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.3"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libformw.so.6.2",
+                    "spliced_lib": "libformw.so.6.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__memcpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.532669067382812e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libformw.so.6.2",
+                    "spliced_lib": "libformw.so.6.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00011038780212402344
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function FORM* new_form_sp(SCREEN*, FIELD**)' at frm_def.c:301:1 has some indirect sub-type changes:\n    parameter 1 of type 'SCREEN*' has sub-type changes:\n      in pointed to type 'typedef SCREEN' at curses.priv.h:1191:1:\n        underlying type 'struct screen' at curses.priv.h:1110:1 changed:\n          type size hasn't changed\n          2 data member changes (8 filtered):\n            type of 'TERMINAL* _term' changed:\n              in pointed to type 'typedef TERMINAL' at term.priv.h:123:1:\n                underlying type 'struct term' at term.h:709:1 changed:\n                  type size changed from 2240 to 6080 (in bits)\n                  1 data member insertion:\n                    'TPARM_STATE tparm_state', at offset 1664 (in bits) at term.priv.h:118:1\n                  1 data member change:\n                    'TERMTYPE2 type2' offset changed from 1664 to 5504 (in bits) (by +3840 bits)\n            type of 'bool (SCREEN*)* _mouse_event' changed:\n              in pointed to type 'function type bool (SCREEN*)':\n                parameter 1 of type 'SCREEN*' has sub-type changes:\n                  in pointed to type 'typedef SCREEN' at curses.priv.h:906:1:\n                    entity changed from 'typedef SCREEN' to compatible type 'struct screen' at curses.priv.h:906:1\n\n",
+                    "return_code": 4,
+                    "seconds": 0.05648040771484375,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.3",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.3\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2-abi-laboratory-libformw-so-6-2-libformw-so-6-3.html\n",
+                    "return_code": 139,
+                    "seconds": 0.19745874404907227,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.3 libformw-so-6-2-libformw-so-6-3 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2-abi-laboratory-libformw-so-6-2-libformw-so-6-3.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2": 84688,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.3": 84744
+            }
+        },
+        "experiment": "usr/lib64/libformw-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libformw.so.6.3",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libformw.so.6.2",
+        "different_libs": true
+    }
+]

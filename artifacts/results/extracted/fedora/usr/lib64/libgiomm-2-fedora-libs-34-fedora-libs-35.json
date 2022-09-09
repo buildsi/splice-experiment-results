@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgiomm-2.4.so.1.3.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgiomm-2.4.so.1.3.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgiomm-2.4.so.1.3.0",
+                    "spliced_lib": "libgiomm-2.4.so.1.3.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0026628971099853516
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgiomm-2.4.so.1.3.0",
+                    "spliced_lib": "libgiomm-2.4.so.1.3.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.2335054874420166
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 6.4112138748168945,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgiomm-2.4.so.1.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgiomm-2.4.so.1.3.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgiomm-2.4.so.1.3.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgiomm-2.4.so.1.3.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgiomm-2.4.so.1.3.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgiomm-2.4.so.1.3.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgiomm-2.4.so.1.3.0-abi-laboratory-libgiomm-2-4-so-1-3-0-libgiomm-2-4-so-1-3-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19037747383117676,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgiomm-2.4.so.1.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgiomm-2.4.so.1.3.0 libgiomm-2-4-so-1-3-0-libgiomm-2-4-so-1-3-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgiomm-2.4.so.1.3.0-abi-laboratory-libgiomm-2-4-so-1-3-0-libgiomm-2-4-so-1-3-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgiomm-2.4.so.1.3.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgiomm-2.4.so.1.3.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgiomm-2.4.so.1.3.0": 1992872,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgiomm-2.4.so.1.3.0": 2005120
+            }
+        },
+        "experiment": "usr/lib64/libgiomm-2-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgiomm-2.4.so.1.3.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgiomm-2.4.so.1.3.0",
+        "different_libs": true
+    }
+]

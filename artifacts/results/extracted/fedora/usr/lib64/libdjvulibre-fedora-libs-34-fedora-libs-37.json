@@ -1,0 +1,81 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdjvulibre.so.21.6.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdjvulibre.so.21.7.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdjvulibre.so.21.6.0",
+                    "spliced_lib": "libdjvulibre.so.21.7.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "_ZNK4DJVU7DjVmDir13title_to_fileERKNS_11GUTF8StringE",
+                        "_ZN4DJVU10ByteStream6Memory6readatEPvmi"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0006148815155029297
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdjvulibre.so.21.6.0",
+                    "spliced_lib": "libdjvulibre.so.21.7.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZNK4DJVU7DjVmDir13title_to_fileERKNS_11GUTF8StringE",
+                        "_ZN4DJVU10ByteStream6Memory6readatEPvmi"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.044415950775146484
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 1 Removed, 4 Changed (139 filtered out), 6 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 1 Removed, 1 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\n1 Removed function:\n\n  [D] 'method virtual size_t DJVU::ByteStream::Memory::readat(void*, size_t, int)'    {_ZN4DJVU10ByteStream6Memory6readatEPvmi}\n    note that this removes an entry from the vtable of class DJVU::ByteStream::Memory\n\n6 Added functions:\n\n  [A] 'method virtual size_t DJVU::ByteStream::Memory::readat(void*, size_t, long int)'    {_ZN4DJVU10ByteStream6Memory6readatEPvml}\n    note that this adds a new entry to the vtable of class DJVU::ByteStream::Memory\n  [A] 'function int miniexp_doublep(miniexp_t)'    {miniexp_doublep}\n  [A] 'function miniexp_t miniexp_lstring(size_t, const char*)'    {miniexp_lstring}\n  [A] 'function size_t miniexp_to_lstr(miniexp_t, const char**)'    {miniexp_to_lstr}\n  [A] 'method virtual bool miniobj_t::doublep(double&) const'    {_ZNK9miniobj_t7doublepERd}\n    note that this adds a new entry to the vtable of class miniobj_t\n  [A] 'method virtual bool miniobj_t::stringp(const char*&, size_t&) const'    {_ZNK9miniobj_t7stringpERPKcRm}\n    note that this adds a new entry to the vtable of class miniobj_t\n\n4 functions with some indirect sub-type change:\n\n  [C] 'method virtual size_t DJVU::ByteStream::Memory::read(void*, size_t)' at ByteStream.cpp:951:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'DJVU::ByteStream::Memory*' has sub-type changes:\n      in pointed to type 'class DJVU::ByteStream::Memory' at ByteStream.cpp:190:1:\n        type size changed from 448 to 512 (in bits)\n        1 member function deletion:\n          'method virtual size_t DJVU::ByteStream::Memory::readat(void*, size_t, int)' at ByteStream.cpp:879:1, virtual at voffset 8/8    {_ZN4DJVU10ByteStream6Memory6readatEPvmi}\n        1 member function insertion:\n          'method virtual size_t DJVU::ByteStream::Memory::readat(void*, size_t, long int)' at ByteStream.cpp:930:1, virtual at voffset 8/8    {_ZN4DJVU10ByteStream6Memory6readatEPvml}\n        1 member function changes (7 filtered):\n          'method virtual int DJVU::ByteStream::Memory::size() const' has some sub-type changes:\n            return type changed:\n              type name changed from 'int' to 'long int'\n              type size changed from 32 to 64 (in bits)\n        5 data member changes:\n          type of 'int where' changed:\n            type name changed from 'int' to 'long int'\n            type size changed from 32 to 64 (in bits)\n          type of 'int bsize' changed:\n            type name changed from 'int' to 'long int'\n            type size changed from 32 to 64 (in bits)\n          and offset changed from 160 to 192 (in bits) (by +32 bits)\n          'int nblocks' offset changed from 192 to 256 (in bits) (by +64 bits)\n          'char** blocks' offset changed from 256 to 320 (in bits) (by +64 bits)\n          'DJVU::GPBuffer<char*> gblocks' offset changed from 320 to 384 (in bits) (by +64 bits)\n\n  [C] 'method virtual size_t DJVU::ByteStream::Static::read(void*, size_t)' at ByteStream.cpp:1006:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'DJVU::ByteStream::Static*' has sub-type changes:\n      in pointed to type 'class DJVU::ByteStream::Static' at ByteStream.cpp:270:1:\n        type size changed from 256 to 320 (in bits)\n        1 member function changes (6 filtered):\n          'method virtual int DJVU::ByteStream::Static::size() const' has some sub-type changes:\n            return type changed:\n              type name changed from 'int' to 'long int'\n              type size changed from 32 to 64 (in bits)\n        2 data member changes:\n          type of 'int bsize' changed:\n            type name changed from 'int' to 'long int'\n            type size changed from 32 to 64 (in bits)\n          type of 'int where' changed:\n            type name changed from 'int' to 'long int'\n            type size changed from 32 to 64 (in bits)\n          and offset changed from 224 to 256 (in bits) (by +32 bits)\n\n  [C] 'method virtual DJVU::MemoryMapByteStream::~MemoryMapByteStream(int)' at ByteStream.cpp:1263:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'DJVU::MemoryMapByteStream*' has sub-type changes:\n      in pointed to type 'class DJVU::MemoryMapByteStream' at ByteStream.cpp:306:1:\n        type size changed from 256 to 320 (in bits)\n        1 base class change:\n          'class DJVU::ByteStream::Static' at ByteStream.cpp:260:1 changed:\n            details were reported earlier\n        no member function changes (3 filtered);\n\n  [C] 'function miniexp_t miniexp_object(miniobj_t*)' at miniexp.cpp:925:1 has some indirect sub-type changes:\n    parameter 1 of type 'miniobj_t*' has sub-type changes:\n      in pointed to type 'class miniobj_t' at miniexp.h:710:1:\n        type size hasn't changed\n        4 member function insertions:\n          'method virtual bool miniobj_t::doublep(double&) const' at miniexp.cpp:919:1, virtual at voffset 6/8    {_ZNK9miniobj_t7doublepERd}\n          'method virtual bool miniobj_t::stringp(const char*&, size_t&) const' at miniexp.cpp:913:1, virtual at voffset 5/8    {_ZNK9miniobj_t7stringpERPKcRm}\n          'method virtual miniobj_t::~miniobj_t(int)' at miniexp.cpp:880:1    {_ZN9miniobj_tD0Ev}\n          'method virtual miniobj_t::~miniobj_t(int)' at miniexp.cpp:880:1    {_ZN9miniobj_tD2Ev}\n        2 member function changes (6 filtered):\n          'method virtual void miniobj_t::mark(minilisp_mark_t*)' has some sub-type changes:\n            the vtable offset of method virtual void miniobj_t::mark(minilisp_mark_t*) changed from 5 to 7\n              note that this is an ABI incompatible change to the vtable of class miniobj_t\n          'method virtual void miniobj_t::destroy()' has some sub-type changes:\n            the vtable offset of method virtual void miniobj_t::destroy() changed from 6 to 8\n              note that this is an ABI incompatible change to the vtable of class miniobj_t\n\n1 Removed function symbol not referenced by debug info:\n\n  [D] _ZNK4DJVU7DjVmDir13title_to_fileERKNS_11GUTF8StringE\n\n1 Added function symbol not referenced by debug info:\n\n  [A] _ZNK4DJVU7DjVmDir13title_to_fileERKNS_11GUTF8StringENS_9GPositionE\n\n",
+                    "return_code": 12,
+                    "seconds": 3.1105356216430664,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdjvulibre.so.21.6.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdjvulibre.so.21.7.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdjvulibre.so.21.7.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdjvulibre.so.21.6.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdjvulibre.so.21.6.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdjvulibre.so.21.7.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdjvulibre.so.21.6.0-abi-laboratory-libdjvulibre-so-21-6-0-libdjvulibre-so-21-7-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.21491789817810059,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdjvulibre.so.21.6.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdjvulibre.so.21.7.0 libdjvulibre-so-21-6-0-libdjvulibre-so-21-7-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdjvulibre.so.21.6.0-abi-laboratory-libdjvulibre-so-21-6-0-libdjvulibre-so-21-7-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdjvulibre.so.21.7.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdjvulibre.so.21.6.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdjvulibre.so.21.6.0": 1791384,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdjvulibre.so.21.7.0": 1788624
+            }
+        },
+        "experiment": "usr/lib64/libdjvulibre-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdjvulibre.so.21.7.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdjvulibre.so.21.6.0",
+        "different_libs": true
+    }
+]

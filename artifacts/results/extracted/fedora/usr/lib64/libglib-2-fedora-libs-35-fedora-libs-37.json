@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglib-2.0.so.0.7000.4"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglib-2.0.so.0.7200.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libglib-2.0.so.0.7000.4",
+                    "spliced_lib": "libglib-2.0.so.0.7200.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__strncpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0005400180816650391
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libglib-2.0.so.0.7000.4",
+                    "spliced_lib": "libglib-2.0.so.0.7200.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0268094539642334
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 8 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\n8 Added function symbols not referenced by debug info:\n\n  [A] g_aligned_alloc\n  [A] g_aligned_alloc0\n  [A] g_aligned_free\n  [A] g_get_user_state_dir\n  [A] g_hash_table_new_similar\n  [A] g_log_get_debug_enabled\n  [A] g_log_set_debug_enabled\n  [A] g_main_context_new_with_flags\n\n",
+                    "return_code": 4,
+                    "seconds": 0.02275872230529785,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglib-2.0.so.0.7000.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglib-2.0.so.0.7200.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglib-2.0.so.0.7200.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglib-2.0.so.0.7000.4",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglib-2.0.so.0.7000.4\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglib-2.0.so.0.7200.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglib-2.0.so.0.7000.4-abi-laboratory-libglib-2-0-so-0-7000-4-libglib-2-0-so-0-7200-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2249584197998047,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglib-2.0.so.0.7000.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglib-2.0.so.0.7200.1 libglib-2-0-so-0-7000-4-libglib-2-0-so-0-7200-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglib-2.0.so.0.7000.4-abi-laboratory-libglib-2-0-so-0-7000-4-libglib-2-0-so-0-7200-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglib-2.0.so.0.7200.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglib-2.0.so.0.7000.4",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglib-2.0.so.0.7000.4": 1304584,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglib-2.0.so.0.7200.1": 1309536
+            }
+        },
+        "experiment": "usr/lib64/libglib-2-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglib-2.0.so.0.7200.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglib-2.0.so.0.7000.4",
+        "different_libs": true
+    }
+]

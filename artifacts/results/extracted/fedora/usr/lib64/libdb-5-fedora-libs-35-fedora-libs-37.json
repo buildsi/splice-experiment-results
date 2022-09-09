@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdb-5.3.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdb-5.3.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdb-5.3.so",
+                    "spliced_lib": "libdb-5.3.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00047707557678222656
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdb-5.3.so",
+                    "spliced_lib": "libdb-5.3.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.018672466278076172
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.6884090900421143,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdb-5.3.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdb-5.3.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdb-5.3.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdb-5.3.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdb-5.3.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdb-5.3.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdb-5.3.so-abi-laboratory-libdb-5-3-so-libdb-5-3-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.21657013893127441,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdb-5.3.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdb-5.3.so libdb-5-3-so-libdb-5-3-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdb-5.3.so-abi-laboratory-libdb-5-3-so-libdb-5-3-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdb-5.3.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdb-5.3.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdb-5.3.so": 1888656,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdb-5.3.so": 1909376
+            }
+        },
+        "experiment": "usr/lib64/libdb-5-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdb-5.3.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdb-5.3.so",
+        "different_libs": true
+    }
+]

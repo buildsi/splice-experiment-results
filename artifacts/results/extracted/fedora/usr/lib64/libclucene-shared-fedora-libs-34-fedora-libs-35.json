@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libclucene-shared.so.2.3.3.4"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libclucene-shared.so.2.3.3.4"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libclucene-shared.so.2.3.3.4",
+                    "spliced_lib": "libclucene-shared.so.2.3.3.4",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.107589721679688e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libclucene-shared.so.2.3.3.4",
+                    "spliced_lib": "libclucene-shared.so.2.3.3.4",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001609325408935547
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.2430124282836914,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libclucene-shared.so.2.3.3.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libclucene-shared.so.2.3.3.4",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libclucene-shared.so.2.3.3.4",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libclucene-shared.so.2.3.3.4",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libclucene-shared.so.2.3.3.4\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libclucene-shared.so.2.3.3.4\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libclucene-shared.so.2.3.3.4-abi-laboratory-libclucene-shared-so-2-3-3-4-libclucene-shared-so-2-3-3-4.html\nFound link to libclucene-shared.so.2.3.3.4-2.3.3.4-40.20130812.e8e3d20git.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libclucene-shared.so.2.3.3.4-2.3.3.4-40.20130812.e8e3d20git.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/clucene-2.3.3.4-40.20130812.e8e3d20git.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 13815\nERROR: incomplete info for symbol 13964\nERROR: incomplete info for symbol 14050\nERROR: incomplete info for symbol 14204\nERROR: incomplete info for symbol 14290\nERROR: incomplete info for symbol 14316\nERROR: incomplete info for symbol 14342\nERROR: incomplete info for symbol 14452\nERROR: incomplete info for symbol 14509\nERROR: incomplete info for symbol 14553\nERROR: incomplete info for symbol 14597\nERROR: incomplete info for symbol 14711\nERROR: incomplete info for symbol 14817\nERROR: incomplete info for symbol 14879\nERROR: incomplete info for symbol 14928\nERROR: incomplete info for symbol 14961\nERROR: incomplete info for symbol 15025\nERROR: incomplete info for symbol 15068\nERROR: incomplete info for symbol 15121\nERROR: incomplete info for symbol 15177\nERROR: incomplete info for symbol 15249\nERROR: incomplete info for symbol 15484\nERROR: incomplete info for symbol 15552\nERROR: incomplete info for symbol 15578\nERROR: incomplete info for symbol 15742\nERROR: incomplete info for symbol 15989\nERROR: incomplete info for symbol 16255\nERROR: incomplete info for symbol 16317\nERROR: incomplete info for symbol 16481\nERROR: incomplete info for symbol 16573\nERROR: incomplete info for symbol 16715\nERROR: incomplete info for symbol 17328\nERROR: incomplete info for symbol 17481\nERROR: incomplete info for symbol 17580\nERROR: incomplete info for symbol 17745\nERROR: incomplete info for symbol 17839\nERROR: incomplete info for symbol 17889\nERROR: incomplete info for symbol 17954\nERROR: incomplete info for symbol 17995\nERROR: incomplete info for symbol 18029\nERROR: incomplete info for symbol 18189\nERROR: incomplete info for symbol 18478\nERROR: incomplete info for symbol 18599\nERROR: incomplete info for symbol 18801\nERROR: incomplete info for symbol 18846\nERROR: incomplete info for symbol 19021\nERROR: incomplete info for symbol 19067\nERROR: incomplete info for symbol 19141\nERROR: incomplete info for symbol 19225\nERROR: incomplete info for symbol 19282\nERROR: incomplete info for symbol 19328\nERROR: incomplete info for symbol 19404\nERROR: incomplete info for symbol 23020\nERROR: incomplete info for symbol 23159\nERROR: incomplete info for symbol 23281\nERROR: incomplete info for symbol 23487\nERROR: incomplete info for symbol 24148\nERROR: incomplete info for symbol 24296\nERROR: incomplete info for symbol 24380\nERROR: incomplete info for symbol 24561\nERROR: incomplete info for symbol 25335\nERROR: incomplete info for symbol 26074\nERROR: incomplete info for symbol 35532\nERROR: incomplete info for symbol 35864\nERROR: incomplete info for symbol 35965\nERROR: incomplete info for symbol 36186\nERROR: incomplete info for symbol 36407\nERROR: incomplete info for symbol 36626\nERROR: incomplete info for symbol 50841\nERROR: incomplete info for symbol 51712\nERROR: incomplete info for symbol 52194\nERROR: incomplete info for symbol 53175\nERROR: incomplete info for symbol 53651\nERROR: incomplete info for symbol 54169\nERROR: incomplete info for symbol 54960\nERROR: incomplete info for symbol 55551\nERROR: incomplete info for symbol 61967\nERROR: incomplete info for symbol 62013\nERROR: incomplete info for symbol 62060\nERROR: incomplete info for symbol 62106\nERROR: incomplete info for symbol 62199\nERROR: incomplete info for symbol 62421\nERROR: incomplete info for symbol 62514\nERROR: incomplete info for symbol 62626\nERROR: incomplete info for symbol 62812\nERROR: incomplete info for symbol 62870\nERROR: incomplete info for symbol 63021\nERROR: incomplete info for symbol 63361\nERROR: incomplete info for symbol 63432\nERROR: incomplete info for symbol 63528\nERROR: incomplete info for symbol 63632\nERROR: incomplete info for symbol 63775\nERROR: incomplete info for symbol 65713\nERROR: incomplete info for symbol 67422\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ew6Un.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libclucene-shared.so.2.3.3.4-2.3.3.4-41.20130812.e8e3d20git.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libclucene-shared.so.2.3.3.4-2.3.3.4-41.20130812.e8e3d20git.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/clucene-2.3.3.4-41.20130812.e8e3d20git.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 13499\nERROR: incomplete info for symbol 13646\nERROR: incomplete info for symbol 13730\nERROR: incomplete info for symbol 13879\nERROR: incomplete info for symbol 13963\nERROR: incomplete info for symbol 13989\nERROR: incomplete info for symbol 14015\nERROR: incomplete info for symbol 14123\nERROR: incomplete info for symbol 14179\nERROR: incomplete info for symbol 14222\nERROR: incomplete info for symbol 14265\nERROR: incomplete info for symbol 14377\nERROR: incomplete info for symbol 14482\nERROR: incomplete info for symbol 14543\nERROR: incomplete info for symbol 14591\nERROR: incomplete info for symbol 14624\nERROR: incomplete info for symbol 14688\nERROR: incomplete info for symbol 14731\nERROR: incomplete info for symbol 14784\nERROR: incomplete info for symbol 14839\nERROR: incomplete info for symbol 14910\nERROR: incomplete info for symbol 15142\nERROR: incomplete info for symbol 15208\nERROR: incomplete info for symbol 15234\nERROR: incomplete info for symbol 15396\nERROR: incomplete info for symbol 15640\nERROR: incomplete info for symbol 15903\nERROR: incomplete info for symbol 15965\nERROR: incomplete info for symbol 16128\nERROR: incomplete info for symbol 16219\nERROR: incomplete info for symbol 16359\nERROR: incomplete info for symbol 16963\nERROR: incomplete info for symbol 17116\nERROR: incomplete info for symbol 17215\nERROR: incomplete info for symbol 17377\nERROR: incomplete info for symbol 17468\nERROR: incomplete info for symbol 17517\nERROR: incomplete info for symbol 17580\nERROR: incomplete info for symbol 17620\nERROR: incomplete info for symbol 17653\nERROR: incomplete info for symbol 17810\nERROR: incomplete info for symbol 18092\nERROR: incomplete info for symbol 18211\nERROR: incomplete info for symbol 18411\nERROR: incomplete info for symbol 18454\nERROR: incomplete info for symbol 18626\nERROR: incomplete info for symbol 18671\nERROR: incomplete info for symbol 18744\nERROR: incomplete info for symbol 18824\nERROR: incomplete info for symbol 18879\nERROR: incomplete info for symbol 18924\nERROR: incomplete info for symbol 18999\nERROR: incomplete info for symbol 22389\nERROR: incomplete info for symbol 22522\nERROR: incomplete info for symbol 22641\nERROR: incomplete info for symbol 22837\nERROR: incomplete info for symbol 23478\nERROR: incomplete info for symbol 23622\nERROR: incomplete info for symbol 23702\nERROR: incomplete info for symbol 23877\nERROR: incomplete info for symbol 24625\nERROR: incomplete info for symbol 25338\nERROR: incomplete info for symbol 34509\nERROR: incomplete info for symbol 34838\nERROR: incomplete info for symbol 34938\nERROR: incomplete info for symbol 35152\nERROR: incomplete info for symbol 35366\nERROR: incomplete info for symbol 35581\nERROR: incomplete info for symbol 49458\nERROR: incomplete info for symbol 50234\nERROR: incomplete info for symbol 50616\nERROR: incomplete info for symbol 51574\nERROR: incomplete info for symbol 51950\nERROR: incomplete info for symbol 52370\nERROR: incomplete info for symbol 53151\nERROR: incomplete info for symbol 53718\nERROR: incomplete info for symbol 60041\nERROR: incomplete info for symbol 60086\nERROR: incomplete info for symbol 60132\nERROR: incomplete info for symbol 60177\nERROR: incomplete info for symbol 60269\nERROR: incomplete info for symbol 60487\nERROR: incomplete info for symbol 60579\nERROR: incomplete info for symbol 60690\nERROR: incomplete info for symbol 60871\nERROR: incomplete info for symbol 60927\nERROR: incomplete info for symbol 61075\nERROR: incomplete info for symbol 61405\nERROR: incomplete info for symbol 61474\nERROR: incomplete info for symbol 61567\nERROR: incomplete info for symbol 61669\nERROR: incomplete info for symbol 61810\nERROR: incomplete info for symbol 63723\nERROR: incomplete info for symbol 65380\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-DsEOc.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libclucene-shared.so.2.3.3.4-abi-laboratory-libclucene-shared-so-2-3-3-4-libclucene-shared-so-2-3-3-4.html\n",
+                    "return_code": 0,
+                    "seconds": 1.8564691543579102,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libclucene-shared.so.2.3.3.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libclucene-shared.so.2.3.3.4 libclucene-shared-so-2-3-3-4-libclucene-shared-so-2-3-3-4 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libclucene-shared.so.2.3.3.4-abi-laboratory-libclucene-shared-so-2-3-3-4-libclucene-shared-so-2-3-3-4.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libclucene-shared.so.2.3.3.4",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libclucene-shared.so.2.3.3.4",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libclucene-shared.so.2.3.3.4": 135688,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libclucene-shared.so.2.3.3.4": 135568
+            }
+        },
+        "experiment": "usr/lib64/libclucene-shared-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libclucene-shared.so.2.3.3.4",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libclucene-shared.so.2.3.3.4",
+        "different_libs": true
+    }
+]

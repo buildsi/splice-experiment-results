@@ -1,0 +1,88 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgeotiff.so.5.2.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgeotiff.so.5.2.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgeotiff.so.5.2.0",
+                    "spliced_lib": "libgeotiff.so.5.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "fputc",
+                        "fputs",
+                        "__errno_location",
+                        "atof",
+                        "GTIFStrtod",
+                        "localeconv",
+                        "fwrite",
+                        "proj_crs_get_datum",
+                        "__memcpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.508827209472656e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgeotiff.so.5.2.0",
+                    "spliced_lib": "libgeotiff.so.5.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "atof",
+                        "GTIFStrtod"
+                    ],
+                    "prediction": false,
+                    "seconds": 9.679794311523438e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 2 Removed, 1 Changed (30 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 Removed functions:\n\n  [D] 'function double GTIFStrtod(const char*, char**)'    {GTIFStrtod}\n  [D] 'function double atof(const char*)'    {atof}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function void GTIFAttachPROJContext(GTIF*, void*)' at geo_normalize.c:3045:1 has some indirect sub-type changes:\n    parameter 1 of type 'GTIF*' has sub-type changes:\n      in pointed to type 'typedef GTIF' at geotiff.h:76:1:\n        underlying type 'struct gtiff' at geo_keyp.h:90:1 changed:\n          type size hasn't changed\n          1 data member changes (1 filtered):\n            type of 'PJ_CONTEXT* pj_context' changed:\n              in pointed to type 'typedef PJ_CONTEXT' at proj.h:359:1:\n                underlying type 'struct projCtx_t' changed:\n                  type name changed from 'projCtx_t' to 'pj_ctx'\n                  type size hasn't changed\n\n",
+                    "return_code": 12,
+                    "seconds": 0.054448843002319336,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgeotiff.so.5.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgeotiff.so.5.2.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgeotiff.so.5.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgeotiff.so.5.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgeotiff.so.5.2.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgeotiff.so.5.2.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgeotiff.so.5.2.0-abi-laboratory-libgeotiff-so-5-2-0-libgeotiff-so-5-2-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.1890397071838379,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgeotiff.so.5.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgeotiff.so.5.2.0 libgeotiff-so-5-2-0-libgeotiff-so-5-2-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgeotiff.so.5.2.0-abi-laboratory-libgeotiff-so-5-2-0-libgeotiff-so-5-2-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgeotiff.so.5.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgeotiff.so.5.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgeotiff.so.5.2.0": 218176,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgeotiff.so.5.2.0": 222200
+            }
+        },
+        "experiment": "usr/lib64/libgeotiff-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgeotiff.so.5.2.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgeotiff.so.5.2.0",
+        "different_libs": true
+    }
+]

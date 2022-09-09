@@ -1,0 +1,85 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libasound.so.2.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libasound.so.2.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libasound.so.2.0.0",
+                    "spliced_lib": "libasound.so.2.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "stat",
+                        "versionsort",
+                        "snd_pcm_direct_client_chk_xrun",
+                        "lstat",
+                        "readdir",
+                        "fstat",
+                        "scandir"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0005474090576171875
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libasound.so.2.0.0",
+                    "spliced_lib": "libasound.so.2.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "snd_pcm_direct_client_chk_xrun"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0190126895904541
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 1 Removed, 1 Changed (9 filtered out), 4 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function int snd_pcm_direct_client_chk_xrun(snd_pcm_direct_t*, snd_pcm_t*)'    {snd_pcm_direct_client_chk_xrun@@ALSA_0.9}\n\n4 Added functions:\n\n  [A] 'function int _snd_safe_strtod(const char*, double*)'    {_snd_safe_strtod@@ALSA_1.2.6}\n  [A] 'function int _snd_safe_strtol_base(const char*, long int*, int)'    {_snd_safe_strtol_base@@ALSA_1.2.6}\n  [A] 'function int _snd_safe_strtoll_base(const char*, long long int*, int)'    {_snd_safe_strtoll_base@@ALSA_1.2.6}\n  [A] 'function int snd_pcm_direct_check_xrun(snd_pcm_direct_t*, snd_pcm_t*)'    {snd_pcm_direct_check_xrun@@ALSA_0.9}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function int snd_use_case_get(snd_use_case_mgr_t*, const char*, const char**)' at main.c:2309:1 has some indirect sub-type changes:\n    parameter 1 of type 'snd_use_case_mgr_t*' has sub-type changes:\n      in pointed to type 'typedef snd_use_case_mgr_t' at use-case.h:195:1:\n        underlying type 'struct snd_use_case_mgr' at ucm_local.h:223:1 changed:\n          type size changed from 2304 to 2560 (in bits)\n          5 data member insertions:\n            'const char* parse_variant', at offset 384 (in bits) at ucm_local.h:235:1\n            'int parse_master_section', at offset 448 (in bits) at ucm_local.h:236:1\n            'int sequence_hops', at offset 480 (in bits) at ucm_local.h:237:1\n            'snd_config_t* macros', at offset 2240 (in bits) at ucm_local.h:273:1\n            'int macro_hops', at offset 2304 (in bits) at ucm_local.h:274:1\n          16 data member changes:\n            'list_head cards_list' offset changed from 384 to 512 (in bits) (by +128 bits)\n            'list_head verb_list' offset changed from 512 to 640 (in bits) (by +128 bits)\n            'list_head fixedboot_list' offset changed from 640 to 768 (in bits) (by +128 bits)\n            'list_head boot_list' offset changed from 768 to 896 (in bits) (by +128 bits)\n            'list_head default_list' offset changed from 896 to 1024 (in bits) (by +128 bits)\n            'int default_list_executed' offset changed from 1024 to 1152 (in bits) (by +128 bits)\n            'list_head value_list' offset changed from 1088 to 1216 (in bits) (by +128 bits)\n            'use_case_verb* active_verb' offset changed from 1216 to 1344 (in bits) (by +128 bits)\n            'list_head active_devices' offset changed from 1280 to 1408 (in bits) (by +128 bits)\n            'list_head active_modifiers' offset changed from 1408 to 1536 (in bits) (by +128 bits)\n            'pthread_mutex_t mutex' offset changed from 1536 to 1664 (in bits) (by +128 bits)\n            'list_head variable_list' offset changed from 1856 to 1984 (in bits) (by +128 bits)\n            'list_head ctl_list' offset changed from 1984 to 2112 (in bits) (by +128 bits)\n            'snd_config_t* local_config' offset changed from 2112 to 2368 (in bits) (by +256 bits)\n            'int in_component_domain' offset changed from 2176 to 2432 (in bits) (by +256 bits)\n            'char* cdev' offset changed from 2240 to 2496 (in bits) (by +256 bits)\n\n",
+                    "return_code": 12,
+                    "seconds": 0.7094762325286865,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libasound.so.2.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libasound.so.2.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libasound.so.2.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libasound.so.2.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libasound.so.2.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libasound.so.2.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libasound.so.2.0.0-abi-laboratory-libasound-so-2-0-0-libasound-so-2-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.27139759063720703,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libasound.so.2.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libasound.so.2.0.0 libasound-so-2-0-0-libasound-so-2-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libasound.so.2.0.0-abi-laboratory-libasound-so-2-0-0-libasound-so-2-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libasound.so.2.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libasound.so.2.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libasound.so.2.0.0": 1124624,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libasound.so.2.0.0": 1132264
+            }
+        },
+        "experiment": "usr/lib64/libasound-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libasound.so.2.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libasound.so.2.0.0",
+        "different_libs": true
+    }
+]

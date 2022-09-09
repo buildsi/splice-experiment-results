@@ -1,0 +1,100 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_cpp.so.103.2.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_cpp.so.200.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libhdf5_cpp.so.103.2.0",
+                    "spliced_lib": "libhdf5_cpp.so.200.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "userVisitOpWrpr",
+                        "H5Lget_info",
+                        "_ZNK2H510H5Location10getObjinfoEPKcR10H5O_info_tjRKNS_15LinkAccPropListE",
+                        "H5Dvlen_reclaim",
+                        "_ZNK2H510H5Location10getObjinfoEPKc10H5_index_t15H5_iter_order_tyR10H5O_info_tjRKNS_15LinkAccPropListE",
+                        "_ZNK2H510H5Location10getObjinfoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE10H5_index_t15H5_iter_order_tyR10H5O_info_tjRKNS_15LinkAccPropListE",
+                        "_ZN2H58H5Object5visitE10H5_index_t15H5_iter_order_tPFiRS0_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPK10H5O_info_tPvESD_j",
+                        "H5Oget_info2",
+                        "userAttrOpWrpr",
+                        "_ZNK2H510H5Location10getObjinfoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER10H5O_info_tjRKNS_15LinkAccPropListE",
+                        "H5Fis_hdf5",
+                        "_ZNK2H510H5Location10getObjinfoER10H5O_info_tj",
+                        "H5Ovisit2",
+                        "H5Oget_info_by_name2",
+                        "H5Oget_info_by_idx2"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00045871734619140625
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libhdf5_cpp.so.103.2.0",
+                    "spliced_lib": "libhdf5_cpp.so.200.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "userAttrOpWrpr",
+                        "userVisitOpWrpr",
+                        "_ZNK2H510H5Location10getObjinfoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE10H5_index_t15H5_iter_order_tyR10H5O_info_tjRKNS_15LinkAccPropListE",
+                        "_ZNK2H510H5Location10getObjinfoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER10H5O_info_tjRKNS_15LinkAccPropListE",
+                        "_ZNK2H510H5Location10getObjinfoEPKcR10H5O_info_tjRKNS_15LinkAccPropListE",
+                        "_ZNK2H510H5Location10getObjinfoEPKc10H5_index_t15H5_iter_order_tyR10H5O_info_tjRKNS_15LinkAccPropListE",
+                        "_ZNK2H510H5Location10getObjinfoER10H5O_info_tj",
+                        "_ZN2H58H5Object5visitE10H5_index_t15H5_iter_order_tPFiRS0_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPK10H5O_info_tPvESD_j"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.013040304183959961
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 2 Removed, 0 Changed (22 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 6 Removed, 17 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\nSONAME changed from 'libhdf5_cpp.so.103' to 'libhdf5_cpp.so.200'\n\n2 Removed functions:\n\n  [D] 'function herr_t H5::userAttrOpWrpr(hid_t, const char*, const H5A_info_t*, void*)'    {userAttrOpWrpr}\n  [D] 'function herr_t H5::userVisitOpWrpr(hid_t, const char*, const H5O_info_t*, void*)'    {userVisitOpWrpr}\n\n6 Removed function symbols not referenced by debug info:\n\n  [D] _ZN2H58H5Object5visitE10H5_index_t15H5_iter_order_tPFiRS0_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPK10H5O_info_tPvESD_j\n  [D] _ZNK2H510H5Location10getObjinfoEPKc10H5_index_t15H5_iter_order_tyR10H5O_info_tjRKNS_15LinkAccPropListE\n  [D] _ZNK2H510H5Location10getObjinfoEPKcR10H5O_info_tjRKNS_15LinkAccPropListE\n  [D] _ZNK2H510H5Location10getObjinfoER10H5O_info_tj\n  [D] _ZNK2H510H5Location10getObjinfoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE10H5_index_t15H5_iter_order_tyR10H5O_info_tjRKNS_15LinkAccPropListE\n  [D] _ZNK2H510H5Location10getObjinfoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER10H5O_info_tjRKNS_15LinkAccPropListE\n\n17 Added function symbols not referenced by debug info:\n\n  [A] _ZN2H56H5File12isAccessibleEPKcRKNS_15FileAccPropListE\n  [A] _ZN2H56H5File12isAccessibleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_15FileAccPropListE\n  [A] _ZN2H57DataSetaSERKS0_\n  [A] _ZN2H58H5Object5visitE10H5_index_t15H5_iter_order_tPFiRS0_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPK11H5O_info2_tPvESD_j\n  [A] _ZNK2H510H5Location10getObjinfoEPKc10H5_index_t15H5_iter_order_tyR11H5O_info2_tjRKNS_15LinkAccPropListE\n  [A] _ZNK2H510H5Location10getObjinfoEPKcR11H5O_info2_tjRKNS_15LinkAccPropListE\n  [A] _ZNK2H510H5Location10getObjinfoER11H5O_info2_tj\n  [A] _ZNK2H510H5Location10getObjinfoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE10H5_index_t15H5_iter_order_tyR11H5O_info2_tjRKNS_15LinkAccPropListE\n  [A] _ZNK2H510H5Location10getObjinfoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER11H5O_info2_tjRKNS_15LinkAccPropListE\n  [A] _ZNK2H510H5Location16getNativeObjinfoEPKc10H5_index_t15H5_iter_order_tyR17H5O_native_info_tjRKNS_15LinkAccPropListE\n  [A] _ZNK2H510H5Location16getNativeObjinfoEPKcR17H5O_native_info_tjRKNS_15LinkAccPropListE\n  [A] _ZNK2H510H5Location16getNativeObjinfoER17H5O_native_info_tj\n  [A] _ZNK2H510H5Location16getNativeObjinfoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE10H5_index_t15H5_iter_order_tyR17H5O_native_info_tjRKNS_15LinkAccPropListE\n  [A] _ZNK2H510H5Location16getNativeObjinfoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER17H5O_native_info_tjRKNS_15LinkAccPropListE\n  [A] _ZNK2H515FileAccPropList14getFileLockingERbS1_\n  [A] _ZNK2H515FileAccPropList14setFileLockingEbb\n  [A] _ZNK2H56H5File10getFileNumEv\n\n",
+                    "return_code": 12,
+                    "seconds": 0.7298080921173096,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_cpp.so.103.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_cpp.so.200.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_cpp.so.200.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_cpp.so.103.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_cpp.so.103.2.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_cpp.so.200.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_cpp.so.103.2.0-abi-laboratory-libhdf5_cpp-so-103-2-0-libhdf5_cpp-so-200-1-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.19402766227722168,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_cpp.so.103.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_cpp.so.200.1.0 libhdf5_cpp-so-103-2-0-libhdf5_cpp-so-200-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_cpp.so.103.2.0-abi-laboratory-libhdf5_cpp-so-103-2-0-libhdf5_cpp-so-200-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_cpp.so.200.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_cpp.so.103.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_cpp.so.103.2.0": 495720,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_cpp.so.200.1.0": 495184
+            }
+        },
+        "experiment": "usr/lib64/libhdf5_cpp-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_cpp.so.200.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_cpp.so.103.2.0",
+        "different_libs": true
+    }
+]

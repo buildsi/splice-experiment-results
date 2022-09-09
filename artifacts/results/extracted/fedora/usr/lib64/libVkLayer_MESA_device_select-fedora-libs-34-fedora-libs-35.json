@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libVkLayer_MESA_device_select.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libVkLayer_MESA_device_select.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libVkLayer_MESA_device_select.so",
+                    "spliced_lib": "libVkLayer_MESA_device_select.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "wl_proxy_marshal_constructor_versioned",
+                        "wl_proxy_marshal_constructor"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.459785461425781e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libVkLayer_MESA_device_select.so",
+                    "spliced_lib": "libVkLayer_MESA_device_select.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.821487426757812e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 3.577829122543335,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libVkLayer_MESA_device_select.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libVkLayer_MESA_device_select.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libVkLayer_MESA_device_select.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libVkLayer_MESA_device_select.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libVkLayer_MESA_device_select.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libVkLayer_MESA_device_select.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libVkLayer_MESA_device_select.so-abi-laboratory-libVkLayer_MESA_device_select-so-libVkLayer_MESA_device_select-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.28803515434265137,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libVkLayer_MESA_device_select.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libVkLayer_MESA_device_select.so libVkLayer_MESA_device_select-so-libVkLayer_MESA_device_select-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libVkLayer_MESA_device_select.so-abi-laboratory-libVkLayer_MESA_device_select-so-libVkLayer_MESA_device_select-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libVkLayer_MESA_device_select.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libVkLayer_MESA_device_select.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libVkLayer_MESA_device_select.so": 426168,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libVkLayer_MESA_device_select.so": 610912
+            }
+        },
+        "experiment": "usr/lib64/libVkLayer_MESA_device_select-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libVkLayer_MESA_device_select.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libVkLayer_MESA_device_select.so",
+        "different_libs": true
+    }
+]

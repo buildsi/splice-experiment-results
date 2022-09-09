@@ -1,0 +1,79 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcairo-script-interpreter.so.2.11704.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcairo-script-interpreter.so.2.11706.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcairo-script-interpreter.so.2.11704.0",
+                    "spliced_lib": "libcairo-script-interpreter.so.2.11706.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "mmap",
+                        "mkstemp",
+                        "fopen"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.53131103515625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcairo-script-interpreter.so.2.11704.0",
+                    "spliced_lib": "libcairo-script-interpreter.so.2.11706.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.5367431640625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (10 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function cairo_status_t cairo_script_interpreter_destroy(csi_t*)' at cairo-script-interpreter.c:674:1 has some indirect sub-type changes:\n    return type changed:\n      underlying type 'enum _cairo_status' at cairo.h:314:1 changed:\n        type size hasn't changed\n        1 enumerator insertion:\n          '_cairo_status::CAIRO_STATUS_DWRITE_ERROR' value '43'\n        1 enumerator change:\n          '_cairo_status::CAIRO_STATUS_LAST_STATUS' from value '43' to '44' at cairo.h:315:1\n\n",
+                    "return_code": 4,
+                    "seconds": 0.07802510261535645,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcairo-script-interpreter.so.2.11704.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcairo-script-interpreter.so.2.11706.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcairo-script-interpreter.so.2.11706.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcairo-script-interpreter.so.2.11704.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcairo-script-interpreter.so.2.11704.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcairo-script-interpreter.so.2.11706.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcairo-script-interpreter.so.2.11704.0-abi-laboratory-libcairo-script-interpreter-so-2-11704-0-libcairo-script-interpreter-so-2-11706-0.html\nFound link to libcairo-script-interpreter.so.2.11704.0-1.17.4-3.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libcairo-script-interpreter.so.2.11704.0-1.17.4-3.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/cairo-1.17.4-3.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 18251\nERROR: incomplete info for symbol 23246\nERROR: incomplete info for symbol 23335\nERROR: incomplete info for symbol 23362\nERROR: incomplete info for symbol 30953\nERROR: incomplete info for symbol 31380\nERROR: incomplete info for symbol 36469\nERROR: incomplete info for symbol 37804\nERROR: incomplete info for symbol 38441\nERROR: incomplete info for symbol 38665\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-svDdF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcairo-script-interpreter.so.2.11706.0-1.17.6-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcairo-script-interpreter.so.2.11706.0-1.17.6-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/cairo-1.17.6-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 18870\nERROR: incomplete info for symbol 23829\nERROR: incomplete info for symbol 23918\nERROR: incomplete info for symbol 23945\nERROR: incomplete info for symbol 31527\nERROR: incomplete info for symbol 31954\nERROR: incomplete info for symbol 36751\nERROR: incomplete info for symbol 37988\nERROR: incomplete info for symbol 38612\nERROR: incomplete info for symbol 38830\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-NXlH2.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 1\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcairo-script-interpreter.so.2.11704.0-abi-laboratory-libcairo-script-interpreter-so-2-11704-0-libcairo-script-interpreter-so-2-11706-0.html\n",
+                    "return_code": 0,
+                    "seconds": 1.2761304378509521,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcairo-script-interpreter.so.2.11704.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcairo-script-interpreter.so.2.11706.0 libcairo-script-interpreter-so-2-11704-0-libcairo-script-interpreter-so-2-11706-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcairo-script-interpreter.so.2.11704.0-abi-laboratory-libcairo-script-interpreter-so-2-11704-0-libcairo-script-interpreter-so-2-11706-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcairo-script-interpreter.so.2.11706.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcairo-script-interpreter.so.2.11704.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcairo-script-interpreter.so.2.11704.0": 157280,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcairo-script-interpreter.so.2.11706.0": 157104
+            }
+        },
+        "experiment": "usr/lib64/libcairo-script-interpreter-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcairo-script-interpreter.so.2.11706.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcairo-script-interpreter.so.2.11704.0",
+        "different_libs": true
+    }
+]

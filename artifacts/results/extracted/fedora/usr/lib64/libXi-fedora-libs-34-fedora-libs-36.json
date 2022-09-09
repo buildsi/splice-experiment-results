@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXi.so.6.1.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXi.so.6.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libXi.so.6.1.0",
+                    "spliced_lib": "libXi.so.6.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.0067901611328125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libXi.so.6.1.0",
+                    "spliced_lib": "libXi.so.6.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.866455078125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 4 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n4 Added functions:\n\n  [A] 'function int XIGrabPinchGestureBegin(Display*, int, Window, int, int, int, XIEventMask*, int, XIGrabModifiers*)'    {XIGrabPinchGestureBegin}\n  [A] 'function int XIGrabSwipeGestureBegin(Display*, int, Window, int, int, int, XIEventMask*, int, XIGrabModifiers*)'    {XIGrabSwipeGestureBegin}\n  [A] 'function int XIUngrabPinchGestureBegin(Display*, int, Window, int, XIGrabModifiers*)'    {XIUngrabPinchGestureBegin}\n  [A] 'function int XIUngrabSwipeGestureBegin(Display*, int, Window, int, XIGrabModifiers*)'    {XIUngrabSwipeGestureBegin}\n\n",
+                    "return_code": 4,
+                    "seconds": 0.07214903831481934,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXi.so.6.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXi.so.6.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXi.so.6.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXi.so.6.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXi.so.6.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXi.so.6.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXi.so.6.1.0-abi-laboratory-libXi-so-6-1-0-libXi-so-6-1-0.html\nFound link to libXi.so.6.1.0-1.7.10-6.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libXi.so.6.1.0-1.7.10-6.fc34.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 38723\nERROR: incomplete info for symbol 39744\nERROR: incomplete info for symbol 40937\nERROR: incomplete info for symbol 42019\nERROR: incomplete info for symbol 42283\nERROR: incomplete info for symbol 42679\nERROR: incomplete info for symbol 42969\nERROR: incomplete info for symbol 43247\nERROR: incomplete info for symbol 43473\nERROR: incomplete info for symbol 43693\nERROR: incomplete info for symbol 44384\nERROR: incomplete info for symbol 45466\nERROR: incomplete info for symbol 47055\nERROR: incomplete info for symbol 48394\nERROR: incomplete info for symbol 49348\nERROR: incomplete info for symbol 49399\nERROR: incomplete info for symbol 49773\nERROR: incomplete info for symbol 50112\nERROR: incomplete info for symbol 50451\nERROR: incomplete info for symbol 52615\nERROR: incomplete info for symbol 54321\nERROR: incomplete info for symbol 54372\nERROR: incomplete info for symbol 54638\nERROR: incomplete info for symbol 55027\nERROR: incomplete info for symbol 55449\nERROR: incomplete info for symbol 55834\nERROR: incomplete info for symbol 56111\nERROR: incomplete info for symbol 56644\nERROR: incomplete info for symbol 56888\nERROR: incomplete info for symbol 57107\nERROR: incomplete info for symbol 57364\nERROR: incomplete info for symbol 58676\nERROR: incomplete info for symbol 58797\nERROR: incomplete info for symbol 59034\nERROR: incomplete info for symbol 59834\nERROR: incomplete info for symbol 60053\nERROR: incomplete info for symbol 60504\nERROR: incomplete info for symbol 61342\nERROR: incomplete info for symbol 61428\nERROR: incomplete info for symbol 61660\nERROR: incomplete info for symbol 61974\nERROR: incomplete info for symbol 62181\nERROR: incomplete info for symbol 62365\nERROR: incomplete info for symbol 62549\nERROR: incomplete info for symbol 62723\nERROR: incomplete info for symbol 62973\nERROR: incomplete info for symbol 63122\nERROR: incomplete info for symbol 63271\nERROR: incomplete info for symbol 63405\nERROR: incomplete info for symbol 63539\nERROR: incomplete info for symbol 64167\nERROR: incomplete info for symbol 64387\nERROR: incomplete info for symbol 65883\nERROR: incomplete info for symbol 67559\nERROR: incomplete info for symbol 67778\nERROR: incomplete info for symbol 68089\nERROR: incomplete info for symbol 68890\nERROR: incomplete info for symbol 69122\nERROR: incomplete info for symbol 69218\nERROR: incomplete info for symbol 69665\nERROR: incomplete info for symbol 69900\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-3OiH5.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libXi.so.6.1.0-1.8-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libXi.so.6.1.0-1.8-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 39425\nERROR: incomplete info for symbol 40446\nERROR: incomplete info for symbol 41673\nERROR: incomplete info for symbol 42754\nERROR: incomplete info for symbol 43018\nERROR: incomplete info for symbol 43418\nERROR: incomplete info for symbol 43708\nERROR: incomplete info for symbol 43986\nERROR: incomplete info for symbol 44211\nERROR: incomplete info for symbol 44431\nERROR: incomplete info for symbol 45119\nERROR: incomplete info for symbol 46212\nERROR: incomplete info for symbol 47793\nERROR: incomplete info for symbol 49132\nERROR: incomplete info for symbol 50123\nERROR: incomplete info for symbol 50174\nERROR: incomplete info for symbol 50548\nERROR: incomplete info for symbol 50892\nERROR: incomplete info for symbol 51236\nERROR: incomplete info for symbol 53419\nERROR: incomplete info for symbol 55094\nERROR: incomplete info for symbol 55145\nERROR: incomplete info for symbol 55410\nERROR: incomplete info for symbol 55799\nERROR: incomplete info for symbol 56221\nERROR: incomplete info for symbol 56606\nERROR: incomplete info for symbol 56883\nERROR: incomplete info for symbol 57424\nERROR: incomplete info for symbol 57668\nERROR: incomplete info for symbol 57886\nERROR: incomplete info for symbol 58143\nERROR: incomplete info for symbol 59455\nERROR: incomplete info for symbol 59576\nERROR: incomplete info for symbol 59813\nERROR: incomplete info for symbol 60612\nERROR: incomplete info for symbol 60831\nERROR: incomplete info for symbol 61282\nERROR: incomplete info for symbol 62108\nERROR: incomplete info for symbol 62194\nERROR: incomplete info for symbol 62426\nERROR: incomplete info for symbol 62704\nERROR: incomplete info for symbol 62911\nERROR: incomplete info for symbol 63095\nERROR: incomplete info for symbol 63279\nERROR: incomplete info for symbol 63453\nERROR: incomplete info for symbol 63703\nERROR: incomplete info for symbol 63969\nERROR: incomplete info for symbol 64235\nERROR: incomplete info for symbol 64384\nERROR: incomplete info for symbol 64533\nERROR: incomplete info for symbol 64667\nERROR: incomplete info for symbol 64801\nERROR: incomplete info for symbol 65032\nERROR: incomplete info for symbol 65263\nERROR: incomplete info for symbol 65889\nERROR: incomplete info for symbol 66109\nERROR: incomplete info for symbol 67597\nERROR: incomplete info for symbol 69272\nERROR: incomplete info for symbol 69491\nERROR: incomplete info for symbol 69802\nERROR: incomplete info for symbol 70587\nERROR: incomplete info for symbol 70819\nERROR: incomplete info for symbol 70915\nERROR: incomplete info for symbol 71362\nERROR: incomplete info for symbol 71597\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-276lH.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXi.so.6.1.0-abi-laboratory-libXi-so-6-1-0-libXi-so-6-1-0.html\n",
+                    "return_code": 0,
+                    "seconds": 1.3586065769195557,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXi.so.6.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXi.so.6.1.0 libXi-so-6-1-0-libXi-so-6-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXi.so.6.1.0-abi-laboratory-libXi-so-6-1-0-libXi-so-6-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXi.so.6.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXi.so.6.1.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXi.so.6.1.0": 70520,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXi.so.6.1.0": 78616
+            }
+        },
+        "experiment": "usr/lib64/libXi-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXi.so.6.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXi.so.6.1.0",
+        "different_libs": true
+    }
+]

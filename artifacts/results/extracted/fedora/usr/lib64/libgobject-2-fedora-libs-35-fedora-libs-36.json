@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgobject-2.0.so.0.7000.4"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgobject-2.0.so.0.7200.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgobject-2.0.so.0.7000.4",
+                    "spliced_lib": "libgobject-2.0.so.0.7200.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00015473365783691406
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgobject-2.0.so.0.7000.4",
+                    "spliced_lib": "libgobject-2.0.so.0.7200.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0013034343719482422
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 18 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n18 Added functions:\n\n  [A] 'function void g_binding_group_bind(GBindingGroup*, const gchar*, gpointer, const gchar*, GBindingFlags)'    {g_binding_group_bind}\n  [A] 'function void g_binding_group_bind_full(GBindingGroup*, const gchar*, gpointer, const gchar*, GBindingFlags, GBindingTransformFunc, GBindingTransformFunc, gpointer, GDestroyNotify)'    {g_binding_group_bind_full}\n  [A] 'function void g_binding_group_bind_with_closures(GBindingGroup*, const gchar*, gpointer, const gchar*, GBindingFlags, GClosure*, GClosure*)'    {g_binding_group_bind_with_closures}\n  [A] 'function gpointer g_binding_group_dup_source(GBindingGroup*)'    {g_binding_group_dup_source}\n  [A] 'function GType g_binding_group_get_type()'    {g_binding_group_get_type}\n  [A] 'function GBindingGroup* g_binding_group_new()'    {g_binding_group_new}\n  [A] 'function void g_binding_group_set_source(GBindingGroup*, gpointer)'    {g_binding_group_set_source}\n  [A] 'function void g_signal_group_block(GSignalGroup*)'    {g_signal_group_block}\n  [A] 'function void g_signal_group_connect(GSignalGroup*, const gchar*, GCallback, gpointer)'    {g_signal_group_connect}\n  [A] 'function void g_signal_group_connect_after(GSignalGroup*, const gchar*, GCallback, gpointer)'    {g_signal_group_connect_after}\n  [A] 'function void g_signal_group_connect_data(GSignalGroup*, const gchar*, GCallback, gpointer, GClosureNotify, GConnectFlags)'    {g_signal_group_connect_data}\n  [A] 'function void g_signal_group_connect_object(GSignalGroup*, const gchar*, GCallback, gpointer, GConnectFlags)'    {g_signal_group_connect_object}\n  [A] 'function void g_signal_group_connect_swapped(GSignalGroup*, const gchar*, GCallback, gpointer)'    {g_signal_group_connect_swapped}\n  [A] 'function gpointer g_signal_group_dup_target(GSignalGroup*)'    {g_signal_group_dup_target}\n  [A] 'function GType g_signal_group_get_type()'    {g_signal_group_get_type}\n  [A] 'function GSignalGroup* g_signal_group_new(GType)'    {g_signal_group_new}\n  [A] 'function void g_signal_group_set_target(GSignalGroup*, gpointer)'    {g_signal_group_set_target}\n  [A] 'function void g_signal_group_unblock(GSignalGroup*)'    {g_signal_group_unblock}\n\n",
+                    "return_code": 4,
+                    "seconds": 0.09210681915283203,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgobject-2.0.so.0.7000.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgobject-2.0.so.0.7200.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgobject-2.0.so.0.7200.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgobject-2.0.so.0.7000.4",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgobject-2.0.so.0.7000.4\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgobject-2.0.so.0.7200.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgobject-2.0.so.0.7000.4-abi-laboratory-libgobject-2-0-so-0-7000-4-libgobject-2-0-so-0-7200-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.20866036415100098,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgobject-2.0.so.0.7000.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgobject-2.0.so.0.7200.0 libgobject-2-0-so-0-7000-4-libgobject-2-0-so-0-7200-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgobject-2.0.so.0.7000.4-abi-laboratory-libgobject-2-0-so-0-7000-4-libgobject-2-0-so-0-7200-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgobject-2.0.so.0.7200.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgobject-2.0.so.0.7000.4",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgobject-2.0.so.0.7000.4": 380272,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgobject-2.0.so.0.7200.0": 393448
+            }
+        },
+        "experiment": "usr/lib64/libgobject-2-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgobject-2.0.so.0.7200.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgobject-2.0.so.0.7000.4",
+        "different_libs": true
+    }
+]

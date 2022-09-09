@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgomp.so.1.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgomp.so.1.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgomp.so.1.0.0",
+                    "spliced_lib": "libgomp.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "aligned_alloc"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0001423358917236328
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgomp.so.1.0.0",
+                    "spliced_lib": "libgomp.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0016336441040039062
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (1 filtered out), 24 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 1 Added function symbol not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\n24 Added functions:\n\n  [A] 'function void GOACC_enter_data(int, size_t, void**, size_t*, unsigned short int*, int, int, ...)'    {GOACC_enter_data@@GOACC_2.0.2}\n  [A] 'function void GOACC_exit_data(int, size_t, void**, size_t*, unsigned short int*, int, int, ...)'    {GOACC_exit_data@@GOACC_2.0.2}\n  [A] 'function void GOMP_error(const char*, size_t)'    {GOMP_error@@GOMP_5.1}\n  [A] 'function void GOMP_scope_start(uintptr_t*)'    {GOMP_scope_start@@GOMP_5.1}\n  [A] 'function bool GOMP_teams4(unsigned int, unsigned int, unsigned int, bool)'    {GOMP_teams4@@GOMP_5.1}\n  [A] 'function void GOMP_warning(const char*, size_t)'    {GOMP_warning@@GOMP_5.1}\n  [A] 'function void* omp_aligned_alloc(size_t, size_t, omp_allocator_handle_t)'    {omp_aligned_alloc@@OMP_5.0.2}\n  [A] 'function void* omp_aligned_calloc(size_t, size_t, size_t, omp_allocator_handle_t)'    {omp_aligned_calloc@@OMP_5.0.2}\n  [A] 'function void* omp_calloc(size_t, size_t, omp_allocator_handle_t)'    {omp_calloc@@OMP_5.0.2}\n  [A] 'function void omp_display_env(int)'    {omp_display_env@@OMP_5.1}\n  [A] 'function void omp_display_env_(const int32_t*)'    {omp_display_env_@@OMP_5.1}\n  [A] 'function void omp_display_env_8_(const int64_t*)'    {omp_display_env_8_@@OMP_5.1}\n  [A] 'function int32_t omp_get_device_num_()'    {omp_get_device_num_@@OMP_5.0.2}\n  [A] 'function int omp_get_max_teams()'    {omp_get_max_teams@@OMP_5.1}\n  [A] 'function int32_t omp_get_max_teams_()'    {omp_get_max_teams_@@OMP_5.1}\n  [A] 'function int omp_get_teams_thread_limit()'    {omp_get_teams_thread_limit@@OMP_5.1}\n  [A] 'function int32_t omp_get_teams_thread_limit_()'    {omp_get_teams_thread_limit_@@OMP_5.1}\n  [A] 'function void* omp_realloc(void*, size_t, omp_allocator_handle_t, omp_allocator_handle_t)'    {omp_realloc@@OMP_5.0.2}\n  [A] 'function void omp_set_num_teams(int)'    {omp_set_num_teams@@OMP_5.1}\n  [A] 'function void omp_set_num_teams_(const int32_t*)'    {omp_set_num_teams_@@OMP_5.1}\n  [A] 'function void omp_set_num_teams_8_(const int64_t*)'    {omp_set_num_teams_8_@@OMP_5.1}\n  [A] 'function void omp_set_teams_thread_limit(int)'    {omp_set_teams_thread_limit@@OMP_5.1}\n  [A] 'function void omp_set_teams_thread_limit_(const int32_t*)'    {omp_set_teams_thread_limit_@@OMP_5.1}\n  [A] 'function void omp_set_teams_thread_limit_8_(const int64_t*)'    {omp_set_teams_thread_limit_8_@@OMP_5.1}\n\n1 Added function symbol not referenced by debug info:\n\n  [A] omp_get_device_num@@OMP_5.0.2\n\n",
+                    "return_code": 4,
+                    "seconds": 0.17687559127807617,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgomp.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgomp.so.1.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgomp.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgomp.so.1.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgomp.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgomp.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgomp.so.1.0.0-abi-laboratory-libgomp-so-1-0-0-libgomp-so-1-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22463107109069824,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgomp.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgomp.so.1.0.0 libgomp-so-1-0-0-libgomp-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgomp.so.1.0.0-abi-laboratory-libgomp-so-1-0-0-libgomp-so-1-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgomp.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgomp.so.1.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgomp.so.1.0.0": 286104,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgomp.so.1.0.0": 306872
+            }
+        },
+        "experiment": "usr/lib64/libgomp-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgomp.so.1.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgomp.so.1.0.0",
+        "different_libs": true
+    }
+]

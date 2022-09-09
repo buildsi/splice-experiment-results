@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcap.so.2.48"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcap.so.2.48"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcap.so.2.48",
+                    "spliced_lib": "libcap.so.2.48",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.05718994140625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcap.so.2.48",
+                    "spliced_lib": "libcap.so.2.48",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.00543212890625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.03184342384338379,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcap.so.2.48 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcap.so.2.48",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcap.so.2.48",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcap.so.2.48",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcap.so.2.48\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcap.so.2.48\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcap.so.2.48-abi-laboratory-libcap-so-2-48-libcap-so-2-48.html\nFound link to libcap.so.2.48-2.48-2.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libcap.so.2.48-2.48-2.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libcap-2.48-2.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2244\nERROR: incomplete info for symbol 2364\nERROR: incomplete info for symbol 3957\nERROR: incomplete info for symbol 4070\nERROR: incomplete info for symbol 4340\nERROR: incomplete info for symbol 4478\nERROR: incomplete info for symbol 4605\nERROR: incomplete info for symbol 4743\nERROR: incomplete info for symbol 5096\nERROR: incomplete info for symbol 5621\nERROR: incomplete info for symbol 6219\nERROR: incomplete info for symbol 6518\nERROR: incomplete info for symbol 6551\nERROR: incomplete info for symbol 6584\nERROR: incomplete info for symbol 6631\nERROR: incomplete info for symbol 6664\nERROR: incomplete info for symbol 6710\nERROR: incomplete info for symbol 6774\nERROR: incomplete info for symbol 6800\nERROR: incomplete info for symbol 7082\nERROR: incomplete info for symbol 7314\nERROR: incomplete info for symbol 7438\nERROR: incomplete info for symbol 8789\nERROR: incomplete info for symbol 8853\nERROR: incomplete info for symbol 9002\nERROR: incomplete info for symbol 10459\nERROR: incomplete info for symbol 10927\nERROR: incomplete info for symbol 11412\nERROR: incomplete info for symbol 11516\nERROR: incomplete info for symbol 12634\nERROR: incomplete info for symbol 13039\nERROR: incomplete info for symbol 13215\nERROR: incomplete info for symbol 13348\nERROR: incomplete info for symbol 13647\nERROR: incomplete info for symbol 14909\nERROR: incomplete info for symbol 14985\nERROR: incomplete info for symbol 16584\nERROR: incomplete info for symbol 16708\nERROR: incomplete info for symbol 16734\nERROR: incomplete info for symbol 17172\nERROR: incomplete info for symbol 17369\nERROR: incomplete info for symbol 17554\nERROR: incomplete info for symbol 17739\nERROR: incomplete info for symbol 17765\nERROR: incomplete info for symbol 18014\nERROR: incomplete info for symbol 18263\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-WKVFZ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcap.so.2.48-2.48-3.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libcap.so.2.48-2.48-3.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libcap-2.48-3.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2081\nERROR: incomplete info for symbol 2201\nERROR: incomplete info for symbol 3794\nERROR: incomplete info for symbol 3907\nERROR: incomplete info for symbol 4177\nERROR: incomplete info for symbol 4315\nERROR: incomplete info for symbol 4442\nERROR: incomplete info for symbol 4580\nERROR: incomplete info for symbol 4933\nERROR: incomplete info for symbol 5458\nERROR: incomplete info for symbol 6056\nERROR: incomplete info for symbol 6355\nERROR: incomplete info for symbol 6388\nERROR: incomplete info for symbol 6421\nERROR: incomplete info for symbol 6468\nERROR: incomplete info for symbol 6501\nERROR: incomplete info for symbol 6547\nERROR: incomplete info for symbol 6611\nERROR: incomplete info for symbol 6637\nERROR: incomplete info for symbol 6919\nERROR: incomplete info for symbol 7151\nERROR: incomplete info for symbol 7275\nERROR: incomplete info for symbol 8626\nERROR: incomplete info for symbol 8690\nERROR: incomplete info for symbol 8839\nERROR: incomplete info for symbol 10296\nERROR: incomplete info for symbol 10764\nERROR: incomplete info for symbol 11249\nERROR: incomplete info for symbol 11353\nERROR: incomplete info for symbol 12471\nERROR: incomplete info for symbol 12876\nERROR: incomplete info for symbol 13052\nERROR: incomplete info for symbol 13185\nERROR: incomplete info for symbol 13484\nERROR: incomplete info for symbol 14746\nERROR: incomplete info for symbol 14822\nERROR: incomplete info for symbol 16421\nERROR: incomplete info for symbol 16545\nERROR: incomplete info for symbol 16571\nERROR: incomplete info for symbol 17009\nERROR: incomplete info for symbol 17206\nERROR: incomplete info for symbol 17391\nERROR: incomplete info for symbol 17576\nERROR: incomplete info for symbol 17602\nERROR: incomplete info for symbol 17851\nERROR: incomplete info for symbol 18100\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-4fmxk.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcap.so.2.48-abi-laboratory-libcap-so-2-48-libcap-so-2-48.html\n",
+                    "return_code": 0,
+                    "seconds": 0.7013704776763916,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcap.so.2.48 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcap.so.2.48 libcap-so-2-48-libcap-so-2-48 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcap.so.2.48-abi-laboratory-libcap-so-2-48-libcap-so-2-48.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcap.so.2.48",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcap.so.2.48",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcap.so.2.48": 37672,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcap.so.2.48": 36816
+            }
+        },
+        "experiment": "usr/lib64/libcap-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcap.so.2.48",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcap.so.2.48",
+        "different_libs": true
+    }
+]

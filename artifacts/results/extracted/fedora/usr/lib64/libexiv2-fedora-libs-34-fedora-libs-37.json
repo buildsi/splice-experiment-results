@@ -1,0 +1,79 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libexiv2.so.0.27.3",
+                    "spliced_lib": "libexiv2.so.0.27.5",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "strncpy",
+                        "printf",
+                        "abort"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0004150867462158203
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libexiv2.so.0.27.3",
+                    "spliced_lib": "libexiv2.so.0.27.5",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.01128387451171875
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 2 Changed (310 filtered out), 13 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n13 Added functions:\n\n  [A] 'function Exiv2::ExifData::const_iterator Exiv2::apertureValue(const Exiv2::ExifData&)'    {_ZN5Exiv213apertureValueERKNS_8ExifDataE}\n  [A] 'function Exiv2::ExifData::const_iterator Exiv2::brightnessValue(const Exiv2::ExifData&)'    {_ZN5Exiv215brightnessValueERKNS_8ExifDataE}\n  [A] 'function Exiv2::ExifData::const_iterator Exiv2::dateTimeOriginal(const Exiv2::ExifData&)'    {_ZN5Exiv216dateTimeOriginalERKNS_8ExifDataE}\n  [A] 'function bool Exiv2::enableBMFF(bool)'    {_ZN5Exiv210enableBMFFEb}\n  [A] 'function Exiv2::ExifData::const_iterator Exiv2::exposureBiasValue(const Exiv2::ExifData&)'    {_ZN5Exiv217exposureBiasValueERKNS_8ExifDataE}\n  [A] 'function Exiv2::ExifData::const_iterator Exiv2::exposureIndex(const Exiv2::ExifData&)'    {_ZN5Exiv213exposureIndexERKNS_8ExifDataE}\n  [A] 'function Exiv2::ExifData::const_iterator Exiv2::flash(const Exiv2::ExifData&)'    {_ZN5Exiv25flashERKNS_8ExifDataE}\n  [A] 'function Exiv2::ExifData::const_iterator Exiv2::flashEnergy(const Exiv2::ExifData&)'    {_ZN5Exiv211flashEnergyERKNS_8ExifDataE}\n  [A] 'function Exiv2::ExifData::const_iterator Exiv2::lightSource(const Exiv2::ExifData&)'    {_ZN5Exiv211lightSourceERKNS_8ExifDataE}\n  [A] 'function Exiv2::ExifData::const_iterator Exiv2::maxApertureValue(const Exiv2::ExifData&)'    {_ZN5Exiv216maxApertureValueERKNS_8ExifDataE}\n  [A] 'function Exiv2::ExifData::const_iterator Exiv2::sensingMethod(const Exiv2::ExifData&)'    {_ZN5Exiv213sensingMethodERKNS_8ExifDataE}\n  [A] 'function Exiv2::ExifData::const_iterator Exiv2::shutterSpeedValue(const Exiv2::ExifData&)'    {_ZN5Exiv217shutterSpeedValueERKNS_8ExifDataE}\n  [A] 'function Exiv2::ExifData::const_iterator Exiv2::subjectArea(const Exiv2::ExifData&)'    {_ZN5Exiv211subjectAreaERKNS_8ExifDataE}\n\n2 functions with some indirect sub-type change:\n\n  [C] 'method virtual Exiv2::CommentValue* Exiv2::CommentValue::clone_() const' at value.cpp:602:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'const Exiv2::CommentValue*' has sub-type changes:\n      in pointed to type 'const Exiv2::CommentValue':\n        in unqualified underlying type 'class Exiv2::CommentValue' at value.hpp:500:1:\n          type size hasn't changed\n          1 base class change:\n            'class Exiv2::StringValueBase' at value.hpp:344:1 changed:\n              type size hasn't changed\n              1 member function changes (12 filtered):\n                'method virtual Exiv2::Rational Exiv2::StringValueBase::toRational(long int) const' has some sub-type changes:\n                  return type changed:\n                    underlying type 'struct std::pair<int, int>' at stl_pair.h:211:1 changed:\n                      type size hasn't changed\n                      1 base class change:\n                        'class std::__pair_base<int, int>' at stl_pair.h:189:1 changed:\n              no data member change (1 filtered);\n          no member function changes (8 filtered);\n\n  [C] 'function Exiv2::URational Exiv2::getURational(const Exiv2::byte*, Exiv2::ByteOrder)' at types.cpp:306:1 has some indirect sub-type changes:\n    return type changed:\n      underlying type 'struct std::pair<unsigned int, unsigned int>' at stl_pair.h:211:1 changed:\n        type size hasn't changed\n        1 base class change:\n          'class std::__pair_base<unsigned int, unsigned int>' at stl_pair.h:189:1 changed:\n\n",
+                    "return_code": 4,
+                    "seconds": 9.407633543014526,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.3-abi-laboratory-libexiv2-so-0-27-3-libexiv2-so-0-27-5.html\n",
+                    "return_code": 139,
+                    "seconds": 0.19276213645935059,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5 libexiv2-so-0-27-3-libexiv2-so-0-27-5 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.3-abi-laboratory-libexiv2-so-0-27-3-libexiv2-so-0-27-5.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.3": 2723240,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5": 2733656
+            }
+        },
+        "experiment": "usr/lib64/libexiv2-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.3",
+        "different_libs": true
+    }
+]

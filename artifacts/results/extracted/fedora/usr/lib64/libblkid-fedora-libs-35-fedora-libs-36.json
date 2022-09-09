@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libblkid.so.1.1.0",
+                    "spliced_lib": "libblkid.so.1.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__memmove_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 8.416175842285156e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libblkid.so.1.1.0",
+                    "spliced_lib": "libblkid.so.1.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00012445449829101562
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (67 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function int blkid_dev_has_tag(blkid_dev, const char*, const char*)' at tag.c:68:1 has some indirect sub-type changes:\n    parameter 1 of type 'typedef blkid_dev' has sub-type changes:\n      underlying type 'blkid_struct_dev*' changed:\n        in pointed to type 'struct blkid_struct_dev' at blkidP.h:45:1:\n          type size hasn't changed\n          1 data member change:\n            type of 'blkid_cache bid_cache' changed:\n              underlying type 'blkid_struct_cache*' changed:\n                in pointed to type 'struct blkid_struct_cache' at blkidP.h:291:1:\n                  type size hasn't changed\n                  1 data member change:\n                    type of 'blkid_probe probe' changed:\n                      underlying type 'blkid_struct_probe*' changed:\n                        in pointed to type 'struct blkid_struct_probe' at blkidP.h:203:1:\n                          type size changed from 2176 to 2240 (in bits)\n                          1 data member insertion:\n                            'uint64_t zone_size', at offset 384 (in bits) at blkidP.h:213:1\n                          12 data member changes:\n                            'int flags' offset changed from 384 to 448 (in bits) (by +64 bits)\n                            'int prob_flags' offset changed from 416 to 480 (in bits) (by +64 bits)\n                            'uint64_t wipe_off' offset changed from 448 to 512 (in bits) (by +64 bits)\n                            'uint64_t wipe_size' offset changed from 512 to 576 (in bits) (by +64 bits)\n                            'blkid_chain* wipe_chain' offset changed from 576 to 640 (in bits) (by +64 bits)\n                            'list_head buffers' offset changed from 640 to 704 (in bits) (by +64 bits)\n                            'list_head hints' offset changed from 768 to 832 (in bits) (by +64 bits)\n                            type of 'blkid_chain chains[3]' changed:\n                              array element type 'struct blkid_chain' changed:\n                                type size hasn't changed\n                                1 data member change:\n                                  type of 'const blkid_chaindrv* driver' changed:\n                                    in pointed to type 'const blkid_chaindrv':\n                                      in unqualified underlying type 'struct blkid_chaindrv' at blkidP.h:108:1:\n                                        type size hasn't changed\n                                        1 data member changes (3 filtered):\n                                          type of 'const blkid_idinfo** idinfos' changed:\n                                            in pointed to type 'const blkid_idinfo*':\n                                              in pointed to type 'const blkid_idinfo':\n                                                in unqualified underlying type 'struct blkid_idinfo' at blkidP.h:162:1:\n                                                  type size hasn't changed\n                                                  1 data member changes (1 filtered):\n                                                    type of 'blkid_idmag magics[]' changed:\n                                                      array element type 'struct blkid_idmag' changed:\n                                                        type size changed from 320 to 448 (in bits)\n                                                        3 data member insertions:\n                                                          'int is_zoned', at offset 288 (in bits) at blkidP.h:154:1\n                                                          'long int zonenum', at offset 320 (in bits) at blkidP.h:155:1\n                                                          'long int kboff_inzone', at offset 384 (in bits) at blkidP.h:156:1\n                                                      type size hasn't changed\n                              type size hasn't changed\n                            and offset changed from 896 to 960 (in bits) (by +64 bits)\n                            'blkid_chain* cur_chain' offset changed from 1856 to 1920 (in bits) (by +64 bits)\n                            'list_head values' offset changed from 1920 to 1984 (in bits) (by +64 bits)\n                            'blkid_struct_probe* parent' offset changed from 2048 to 2112 (in bits) (by +64 bits)\n                            'blkid_struct_probe* disk_probe' offset changed from 2112 to 2176 (in bits) (by +64 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.15664148330688477,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0-abi-laboratory-libblkid-so-1-1-0-libblkid-so-1-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.23096680641174316,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0 libblkid-so-1-1-0-libblkid-so-1-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0-abi-laboratory-libblkid-so-1-1-0-libblkid-so-1-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0": 230336,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0": 234704
+            }
+        },
+        "experiment": "usr/lib64/libblkid-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libedit.so.0.0.67"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libedit.so.0.0.68"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libedit.so.0.0.67",
+                    "spliced_lib": "libedit.so.0.0.68",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "memchr",
+                        "rl_did_startup_hook"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00010728836059570312
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libedit.so.0.0.67",
+                    "spliced_lib": "libedit.so.0.0.68",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "rl_did_startup_hook"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0003249645233154297
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 6 Added functions\nVariables changes summary: 1 Removed, 0 Changed, 10 Added variables\n\n6 Added functions:\n\n  [A] 'function void _rl_erase_entire_line()'    {_rl_erase_entire_line}\n  [A] 'function histdata_t free_history_entry(HIST_ENTRY*)'    {free_history_entry}\n  [A] 'function int rl_abort(int, int)'    {rl_abort}\n  [A] 'function int rl_crlf()'    {rl_crlf}\n  [A] 'function int rl_ding()'    {rl_ding}\n  [A] 'function int rl_set_keymap_name(const char*, Keymap)'    {rl_set_keymap_name}\n\n1 Removed variable:\n\n  [D] 'int rl_did_startup_hook'    {rl_did_startup_hook}\n\n10 Added variables:\n\n  [A] 'int _rl_complete_mark_directories'    {_rl_complete_mark_directories}\n  [A] 'int _rl_completion_prefix_display_length'    {_rl_completion_prefix_display_length}\n  [A] 'int _rl_echoing_p'    {_rl_echoing_p}\n  [A] 'int history_max_entries'    {history_max_entries}\n  [A] 'const char* rl_basic_quote_characters'    {rl_basic_quote_characters}\n  [A] 'int rl_completion_suppress_append'    {rl_completion_suppress_append}\n  [A] 'rl_icppfunc_t* rl_directory_completion_hook'    {rl_directory_completion_hook}\n  [A] 'char* rl_display_prompt'    {rl_display_prompt}\n  [A] 'unsigned long int rl_readline_state'    {rl_readline_state}\n  [A] 'int rl_sort_completion_matches'    {rl_sort_completion_matches}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.09732365608215332,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libedit.so.0.0.67 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libedit.so.0.0.68",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libedit.so.0.0.68",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libedit.so.0.0.67",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libedit.so.0.0.67\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libedit.so.0.0.68\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libedit.so.0.0.67-abi-laboratory-libedit-so-0-0-67-libedit-so-0-0-68.html\n",
+                    "return_code": 139,
+                    "seconds": 0.19589471817016602,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libedit.so.0.0.67 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libedit.so.0.0.68 libedit-so-0-0-67-libedit-so-0-0-68 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libedit.so.0.0.67-abi-laboratory-libedit-so-0-0-67-libedit-so-0-0-68.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libedit.so.0.0.68",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libedit.so.0.0.67",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libedit.so.0.0.67": 236368,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libedit.so.0.0.68": 236536
+            }
+        },
+        "experiment": "usr/lib64/libedit-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libedit.so.0.0.68",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libedit.so.0.0.67",
+        "different_libs": true
+    }
+]

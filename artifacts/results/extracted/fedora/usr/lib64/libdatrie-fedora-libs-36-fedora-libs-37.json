@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdatrie.so.1.4.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdatrie.so.1.4.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdatrie.so.1.4.0",
+                    "spliced_lib": "libdatrie.so.1.4.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.316734313964844e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdatrie.so.1.4.0",
+                    "spliced_lib": "libdatrie.so.1.4.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.3365020751953125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.028981447219848633,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdatrie.so.1.4.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdatrie.so.1.4.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdatrie.so.1.4.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdatrie.so.1.4.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdatrie.so.1.4.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdatrie.so.1.4.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdatrie.so.1.4.0-abi-laboratory-libdatrie-so-1-4-0-libdatrie-so-1-4-0.html\nFound link to libdatrie.so.1.4.0-0.2.13-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdatrie.so.1.4.0-0.2.13-3.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7880\nERROR: incomplete info for symbol 7931\nERROR: incomplete info for symbol 8273\nERROR: incomplete info for symbol 9983\nERROR: incomplete info for symbol 12354\nERROR: incomplete info for symbol 12513\nERROR: incomplete info for symbol 12539\nERROR: incomplete info for symbol 13146\nERROR: incomplete info for symbol 13959\nERROR: incomplete info for symbol 14102\nERROR: incomplete info for symbol 14135\nERROR: incomplete info for symbol 14278\nERROR: incomplete info for symbol 14304\nERROR: incomplete info for symbol 14836\nERROR: incomplete info for symbol 15120\nERROR: incomplete info for symbol 15591\nERROR: incomplete info for symbol 15617\nERROR: incomplete info for symbol 16080\nERROR: incomplete info for symbol 16142\nERROR: incomplete info for symbol 16323\nERROR: incomplete info for symbol 17325\nERROR: incomplete info for symbol 17909\nERROR: incomplete info for symbol 18073\nERROR: incomplete info for symbol 18428\nERROR: incomplete info for symbol 20070\nERROR: incomplete info for symbol 20166\nERROR: incomplete info for symbol 20262\nERROR: incomplete info for symbol 20357\nERROR: incomplete info for symbol 20467\nERROR: incomplete info for symbol 22231\nERROR: incomplete info for symbol 22361\nERROR: incomplete info for symbol 22591\nERROR: incomplete info for symbol 22731\nERROR: incomplete info for symbol 23149\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Dz9Vl.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdatrie.so.1.4.0-0.2.13-4.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libdatrie.so.1.4.0-0.2.13-4.fc37.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7947\nERROR: incomplete info for symbol 7998\nERROR: incomplete info for symbol 8340\nERROR: incomplete info for symbol 10050\nERROR: incomplete info for symbol 12431\nERROR: incomplete info for symbol 12590\nERROR: incomplete info for symbol 12616\nERROR: incomplete info for symbol 13223\nERROR: incomplete info for symbol 14052\nERROR: incomplete info for symbol 14195\nERROR: incomplete info for symbol 14228\nERROR: incomplete info for symbol 14371\nERROR: incomplete info for symbol 14397\nERROR: incomplete info for symbol 14929\nERROR: incomplete info for symbol 15213\nERROR: incomplete info for symbol 15684\nERROR: incomplete info for symbol 15710\nERROR: incomplete info for symbol 16173\nERROR: incomplete info for symbol 16235\nERROR: incomplete info for symbol 16416\nERROR: incomplete info for symbol 17418\nERROR: incomplete info for symbol 18002\nERROR: incomplete info for symbol 18166\nERROR: incomplete info for symbol 18521\nERROR: incomplete info for symbol 20187\nERROR: incomplete info for symbol 20283\nERROR: incomplete info for symbol 20379\nERROR: incomplete info for symbol 20474\nERROR: incomplete info for symbol 20584\nERROR: incomplete info for symbol 22348\nERROR: incomplete info for symbol 22478\nERROR: incomplete info for symbol 22708\nERROR: incomplete info for symbol 22848\nERROR: incomplete info for symbol 23266\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-gFNn5.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdatrie.so.1.4.0-abi-laboratory-libdatrie-so-1-4-0-libdatrie-so-1-4-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.6061272621154785,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdatrie.so.1.4.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdatrie.so.1.4.0 libdatrie-so-1-4-0-libdatrie-so-1-4-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdatrie.so.1.4.0-abi-laboratory-libdatrie-so-1-4-0-libdatrie-so-1-4-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdatrie.so.1.4.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdatrie.so.1.4.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdatrie.so.1.4.0": 33024,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdatrie.so.1.4.0": 33040
+            }
+        },
+        "experiment": "usr/lib64/libdatrie-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdatrie.so.1.4.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdatrie.so.1.4.0",
+        "different_libs": true
+    }
+]

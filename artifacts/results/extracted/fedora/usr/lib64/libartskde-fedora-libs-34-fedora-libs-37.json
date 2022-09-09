@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartskde.so.1.2.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartskde.so.1.2.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libartskde.so.1.2.0",
+                    "spliced_lib": "libartskde.so.1.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0003616809844970703
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libartskde.so.1.2.0",
+                    "spliced_lib": "libartskde.so.1.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0025839805603027344
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (111 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed (3 filtered out), 0 Added variables\n\n",
+                    "return_code": 0,
+                    "seconds": 1.8477272987365723,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartskde.so.1.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartskde.so.1.2.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartskde.so.1.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartskde.so.1.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartskde.so.1.2.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartskde.so.1.2.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartskde.so.1.2.0-abi-laboratory-libartskde-so-1-2-0-libartskde-so-1-2-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.1879417896270752,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartskde.so.1.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartskde.so.1.2.0 libartskde-so-1-2-0-libartskde-so-1-2-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartskde.so.1.2.0-abi-laboratory-libartskde-so-1-2-0-libartskde-so-1-2-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartskde.so.1.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartskde.so.1.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartskde.so.1.2.0": 477544,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartskde.so.1.2.0": 477472
+            }
+        },
+        "experiment": "usr/lib64/libartskde-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartskde.so.1.2.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartskde.so.1.2.0",
+        "different_libs": true
+    }
+]

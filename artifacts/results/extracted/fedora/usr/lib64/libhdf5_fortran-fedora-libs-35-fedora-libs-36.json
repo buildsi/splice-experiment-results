@@ -1,0 +1,98 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.1.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.200.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libhdf5_fortran.so.102.1.0",
+                    "spliced_lib": "libhdf5_fortran.so.200.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "H5Oget_info_by_name2",
+                        "_gfortran_runtime_error_at",
+                        "H5Ovisit_by_name2",
+                        "H5Oopen_by_addr",
+                        "H5Ovisit2",
+                        "realloc",
+                        "H5Lget_info_by_idx",
+                        "h5fis_hdf5_c",
+                        "H5Lget_info",
+                        "h5oopen_by_addr_c",
+                        "H5Fis_hdf5",
+                        "H5Literate_by_name",
+                        "H5Literate",
+                        "H5Sencode",
+                        "__h5o_MOD_h5oopen_by_addr_f",
+                        "H5Oget_info2",
+                        "H5Oget_info_by_idx2",
+                        "H5Dvlen_reclaim"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0006029605865478516
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libhdf5_fortran.so.102.1.0",
+                    "spliced_lib": "libhdf5_fortran.so.200.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "__h5o_MOD_h5oopen_by_addr_f",
+                        "h5oopen_by_addr_c",
+                        "h5fis_hdf5_c"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.014133214950561523
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 2 Removed, 8 Changed (3 filtered out), 3 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 1 Removed, 19 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 8 Added variable symbols not referenced by debug info\n\nSONAME changed from 'libhdf5_fortran.so.102' to 'libhdf5_fortran.so.200'\n\n2 Removed functions:\n\n  [D] 'function int_f h5fis_hdf5_c(_fcd, int_f*, int_f*)'    {h5fis_hdf5_c}\n  [D] 'function int_f h5oopen_by_addr_c(hid_t_f*, haddr_t_f*, hid_t_f*)'    {h5oopen_by_addr_c}\n\n3 Added functions:\n\n  [A] 'function int_f h5fget_fileno_c(hid_t_f*, int_f*)'    {h5fget_fileno_c}\n  [A] 'function int_f h5oopen_by_token_c(hid_t_f*, H5O_token_t*, hid_t_f*)'    {h5oopen_by_token_c}\n  [A] 'function int_f h5otoken_cmp_c(hid_t_f*, H5O_token_t*, H5O_token_t*, int_f*)'    {h5otoken_cmp_c}\n\n8 functions with some indirect sub-type change:\n\n  [C] 'function int_f fill_h5o_info_t_f(H5O_info_t, H5O_info_t_f*)' at H5Of.c:27:1 has some indirect sub-type changes:\n    parameter 1 of type 'typedef H5O_info_t' changed:\n      typedef name changed from H5O_info_t to H5O_info2_t at H5Opublic.h:158:1\n      underlying type 'struct H5O_info_t' at H5Opublic.h:119:1 changed:\n        type name changed from 'H5O_info_t' to 'H5O_info2_t'\n        type size changed from 1280 to 576 (in bits)\n        2 data member deletions:\n          'H5O_hdr_info_t hdr', at offset 512 (in bits) at H5Opublic.h:129:1\n          'struct {H5_ih_info_t obj; H5_ih_info_t attr;} meta_size', at offset 1024 (in bits) at H5Opublic.h:134:1\n        8 data member changes (1 filtered):\n          type of 'haddr_t addr' changed:\n            typedef name changed from haddr_t to H5O_token_t at H5public.h:449:1\n            underlying type 'unsigned long int' changed:\n              entity changed from 'unsigned long int' to 'struct H5O_token_t' at H5public.h:447:1\n              type size changed from 64 to 128 (in bits)\n          and name of 'H5O_info_t::addr' changed to 'H5O_info2_t::token' at H5Opublic.h:150:1\n          type of 'H5O_type_t type' changed:\n            underlying type 'enum H5O_type_t' at H5Opublic.h:92:1 changed:\n              type size hasn't changed\n              1 enumerator insertion:\n                'H5O_type_t::H5O_TYPE_MAP' value '3'\n              1 enumerator change:\n                'H5O_type_t::H5O_TYPE_NTYPES' from value '3' to '4' at H5Opublic.h:110:1\n          and name of 'H5O_info_t::type' changed to 'H5O_info2_t::type' at H5Opublic.h:151:1, offset changed from 128 to 192 (in bits) (by +64 bits)\n          'unsigned int rc' offset changed from 160 to 224 (in bits) (by +64 bits)\n          'time_t atime' offset changed from 192 to 256 (in bits) (by +64 bits)\n          'time_t mtime' offset changed from 256 to 320 (in bits) (by +64 bits)\n          'time_t ctime' offset changed from 320 to 384 (in bits) (by +64 bits)\n          'time_t btime' offset changed from 384 to 448 (in bits) (by +64 bits)\n          'hsize_t num_attrs' offset changed from 448 to 512 (in bits) (by +64 bits)\n    parameter 2 of type 'H5O_info_t_f*' has sub-type changes:\n      in pointed to type 'typedef H5O_info_t_f' at H5f90proto.h:64:1:\n        underlying type 'struct H5O_info_t_f' at H5f90proto.h:57:1 changed:\n          type size changed from 2048 to 1344 (in bits)\n          2 data member deletions:\n            'H5O_hdr_info_t_f hdr', at offset 1280 (in bits) at H5f90proto.h:67:1\n            'struct {H5_ih_info_t_f obj; H5_ih_info_t_f attr;} meta_size', at offset 1792 (in bits) at H5f90proto.h:72:1\n          8 data member changes:\n            type of 'haddr_t_f addr' changed:\n              typedef name changed from haddr_t_f to H5O_token_t at H5public.h:449:1\n              underlying type 'long long int' changed:\n                entity changed from 'long long int' to 'struct H5O_token_t' at H5public.h:447:1\n                type size changed from 64 to 128 (in bits)\n            and name of 'H5O_info_t_f::addr' changed to 'H5O_info_t_f::token' at H5f90proto.h:56:1\n            'int type' offset changed from 128 to 192 (in bits) (by +64 bits)\n            'int_f rc' offset changed from 160 to 224 (in bits) (by +64 bits)\n            'int_f atime[8]' offset changed from 192 to 256 (in bits) (by +64 bits)\n            'int_f mtime[8]' offset changed from 448 to 512 (in bits) (by +64 bits)\n            'int_f ctime[8]' offset changed from 704 to 768 (in bits) (by +64 bits)\n            'int_f btime[8]' offset changed from 960 to 1024 (in bits) (by +64 bits)\n            'hsize_t num_attrs' offset changed from 1216 to 1280 (in bits) (by +64 bits)\n\n  [C] 'function int_f h5lget_info_by_idx_c(hid_t_f*, _fcd, size_t_f*, int_f*, int_f*, hsize_t_f*, int_f*, int_f*, int_f*, int_f*, haddr_t_f*, size_t_f*, hid_t_f*)' at H5Lf.c:522:1 has some indirect sub-type changes:\n    parameter 11 of type 'haddr_t_f*' changed:\n      pointed to type 'typedef haddr_t_f' changed at H5f90i_gen.h:35:1, as reported earlier\n\n  [C] 'function int_f h5lget_info_c(hid_t_f*, _fcd, size_t_f*, int_f*, int_f*, int_f*, int_f*, haddr_t_f*, size_t_f*, hid_t_f*)' at H5Lf.c:454:1 has some indirect sub-type changes:\n    parameter 8 of type 'haddr_t_f*' changed:\n      pointed to type 'typedef haddr_t_f' changed at H5f90i_gen.h:35:1, as reported earlier\n\n  [C] 'function int_f h5literate_by_name_c(hid_t_f*, _fcd, size_t_f*, int_f*, int_f*, hsize_t_f*, H5L_iterate_t, void*, hid_t_f*)' at H5Lf.c:1035:1 has some indirect sub-type changes:\n    parameter 7 of type 'typedef H5L_iterate_t' changed:\n      typedef name changed from H5L_iterate_t to H5L_iterate2_t at H5Lpublic.h:173:1\n      underlying type 'typedef herr_t (typedef hid_t, const char*, const H5L_info_t*, void*)*' changed:\n        in pointed to type 'function type typedef herr_t (typedef hid_t, const char*, const H5L_info_t*, void*)':\n          parameter 3 of type 'const H5L_info_t*' changed:\n            in pointed to type 'const H5L_info_t':\n              'const H5L_info_t' changed to 'const H5L_info2_t'\n\n  [C] 'function int_f h5literate_c(hid_t_f*, int_f*, int_f*, hsize_t_f*, H5L_iterate_t, void*)' at H5Lf.c:983:1 has some indirect sub-type changes:\n    parameter 5 of type 'typedef H5L_iterate_t' changed:\n      typedef name changed from H5L_iterate_t to H5L_iterate2_t at H5Lpublic.h:173:1\n      underlying type 'typedef herr_t (typedef hid_t, const char*, const H5L_info_t*, void*)*' changed:\n        in pointed to type 'function type typedef herr_t (typedef hid_t, const char*, const H5L_info_t*, void*)':\n          parameter 3 of type 'const H5L_info_t*' changed:\n            in pointed to type 'const H5L_info_t':\n              'const H5L_info_t' changed to 'const H5L_info2_t'\n\n  [C] 'function int_f h5ovisit_by_name_c(hid_t_f*, _fcd, size_t_f*, int_f*, int_f*, H5O_iterate_t, void*, hid_t_f*, int_f*)' at H5Of.c:509:1 has some indirect sub-type changes:\n    parameter 6 of type 'typedef H5O_iterate_t' changed:\n      typedef name changed from H5O_iterate_t to H5O_iterate2_t at H5Opublic.h:185:1\n      underlying type 'typedef herr_t (typedef hid_t, const char*, const H5O_info_t*, void*)*' changed:\n        in pointed to type 'function type typedef herr_t (typedef hid_t, const char*, const H5O_info_t*, void*)':\n          parameter 3 of type 'const H5O_info_t*' changed:\n            in pointed to type 'const H5O_info_t':\n\n  [C] 'function int_f h5ovisit_c(hid_t_f*, int_f*, int_f*, H5O_iterate_t, void*, int_f*)' at H5Of.c:231:1 has some indirect sub-type changes:\n    parameter 4 of type 'typedef H5O_iterate_t' changed:\n      typedef name changed from H5O_iterate_t to H5O_iterate2_t at H5Opublic.h:185:1\n      underlying type 'typedef herr_t (typedef hid_t, const char*, const H5O_info_t*, void*)*' changed:\n        in pointed to type 'function type typedef herr_t (typedef hid_t, const char*, const H5O_info_t*, void*)':\n          parameter 3 of type 'const H5O_info_t*' changed:\n            in pointed to type 'const H5O_info_t':\n              'const H5O_info_t' changed to 'const H5O_info2_t'\n\n  [C] 'function int_f h5sencode_c(_fcd, hid_t_f*, size_t_f*)' at H5Sf.c:1341:1 has some indirect sub-type changes:\n    parameter 4 of type 'hid_t_f*' was added\n\n1 Removed function symbol not referenced by debug info:\n\n  [D] __h5o_MOD_h5oopen_by_addr_f\n\n19 Added function symbols not referenced by debug info:\n\n  [A] __h5f_MOD_h5fget_fileno_f\n  [A] __h5f_MOD_h5fis_accessible_f\n  [A] __h5global_MOD___copy_h5global_H5o_token_t_f\n  [A] __h5o_MOD___copy_h5o_C_h5o_native_info_t\n  [A] __h5o_MOD___copy_h5o_H5o_native_info_t\n  [A] __h5o_MOD_h5oopen_by_token_f\n  [A] __h5o_MOD_h5otoken_cmp_f\n  [A] __h5p_MOD_h5pget_vol_id_f\n  [A] __h5p_MOD_h5pset_vol_f\n  [A] __h5vl_MOD_h5vlclose_f\n  [A] __h5vl_MOD_h5vlget_connector_id_by_name_f\n  [A] __h5vl_MOD_h5vlget_connector_id_by_value_f\n  [A] __h5vl_MOD_h5vlget_connector_id_f\n  [A] __h5vl_MOD_h5vlget_connector_name_f\n  [A] __h5vl_MOD_h5vlis_connector_registered_by_name_f\n  [A] __h5vl_MOD_h5vlis_connector_registered_by_value_f\n  [A] __h5vl_MOD_h5vlregister_connector_by_name_f\n  [A] __h5vl_MOD_h5vlregister_connector_by_value_f\n  [A] __h5vl_MOD_h5vlunregister_connector_f\n\n8 Added variable symbols not referenced by debug info:\n\n  [A] __h5global_MOD___def_init_h5global_H5o_token_t_f\n  [A] __h5global_MOD___vtab_h5global_H5o_token_t_f\n  [A] __h5global_MOD_h5f_libver_v112_f\n  [A] __h5global_MOD_h5i_vol_f\n  [A] __h5o_MOD___def_init_h5o_C_h5o_native_info_t\n  [A] __h5o_MOD___def_init_h5o_H5o_native_info_t\n  [A] __h5o_MOD___vtab_h5o_C_h5o_native_info_t\n  [A] __h5o_MOD___vtab_h5o_H5o_native_info_t\n\n",
+                    "return_code": 12,
+                    "seconds": 0.18350672721862793,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.200.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.200.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.200.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.1.0-abi-laboratory-libhdf5_fortran-so-102-1-0-libhdf5_fortran-so-200-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.23174691200256348,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.200.1.0 libhdf5_fortran-so-102-1-0-libhdf5_fortran-so-200-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.1.0-abi-laboratory-libhdf5_fortran-so-102-1-0-libhdf5_fortran-so-200-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.200.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.1.0": 356192,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.200.1.0": 364792
+            }
+        },
+        "experiment": "usr/lib64/libhdf5_fortran-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.200.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.1.0",
+        "different_libs": true
+    }
+]

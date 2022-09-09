@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libblkid.so.1.1.0",
+                    "spliced_lib": "libblkid.so.1.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__memmove_chk",
+                        "strncpy"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.390975952148438e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libblkid.so.1.1.0",
+                    "spliced_lib": "libblkid.so.1.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.036064147949219e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 2 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\n2 Added function symbols not referenced by debug info:\n\n  [A] blkid_probe_reset_hints@@BLKID_2_37\n  [A] blkid_probe_set_hint@@BLKID_2_37\n\n",
+                    "return_code": 4,
+                    "seconds": 0.043682098388671875,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0-abi-laboratory-libblkid-so-1-1-0-libblkid-so-1-1-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.18436336517333984,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0 libblkid-so-1-1-0-libblkid-so-1-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0-abi-laboratory-libblkid-so-1-1-0-libblkid-so-1-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0": 217320,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0": 234744
+            }
+        },
+        "experiment": "usr/lib64/libblkid-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libblkid.so.1.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libblkid.so.1.1.0",
+        "different_libs": true
+    }
+]

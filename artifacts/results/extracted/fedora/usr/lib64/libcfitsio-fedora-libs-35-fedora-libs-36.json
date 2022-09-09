@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcfitsio.so.9.3.49"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcfitsio.so.9.4.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcfitsio.so.9.3.49",
+                    "spliced_lib": "libcfitsio.so.9.4.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0005946159362792969
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcfitsio.so.9.3.49",
+                    "spliced_lib": "libcfitsio.so.9.4.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.030366182327270508
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 3 Changed (6 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 1 Changed, 0 Added variable\n\n3 functions with some indirect sub-type change:\n\n  [C] 'function FF_BUFFER_STATE ff_create_buffer(FILE*, int)' at <stdout>:1932:1 has some indirect sub-type changes:\n    return type changed:\n      underlying type 'ff_buffer_state*' changed:\n        in pointed to type 'struct ff_buffer_state' at <stdout>:189:1:\n          type size changed from 512 to 576 (in bits)\n          8 data member changes:\n            type of 'int ff_n_chars' changed:\n              entity changed from 'int' to compatible type 'typedef ff_size_t' at <stdout>:158:1\n                type name changed from 'int' to 'unsigned long int'\n                type size changed from 32 to 64 (in bits)\n            'int ff_is_our_buffer' offset changed from 288 to 320 (in bits) (by +32 bits)\n            'int ff_is_interactive' offset changed from 320 to 352 (in bits) (by +32 bits)\n            'int ff_at_bol' offset changed from 352 to 384 (in bits) (by +32 bits)\n            'int ff_bs_lineno' offset changed from 384 to 416 (in bits) (by +32 bits)\n            'int ff_bs_column' offset changed from 416 to 448 (in bits) (by +32 bits)\n            'int ff_fill_buffer' offset changed from 448 to 480 (in bits) (by +32 bits)\n            'int ff_buffer_status' offset changed from 480 to 512 (in bits) (by +32 bits)\n\n  [C] 'function FF_BUFFER_STATE ff_scan_bytes(const char*, int)' at <stdout>:2188:1 has some indirect sub-type changes:\n    parameter 2 of type 'int' changed:\n      entity changed from 'int' to compatible type 'typedef ff_size_t' at <stdout>:158:1\n        type name changed from 'int' to 'unsigned long int'\n        type size changed from 32 to 64 (in bits)\n\n  [C] 'function int ffget_leng()' at <stdout>:2274:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'int' to compatible type 'typedef ff_size_t' at <stdout>:158:1\n        type name changed from 'int' to 'unsigned long int'\n        type size changed from 32 to 64 (in bits)\n\n1 Changed variable:\n\n  [C] 'int ffleng' was changed to 'ff_size_t ffleng' at <stdout>:161:1:\n    size of symbol changed from 4 to 8\n    type of variable changed:\n      entity changed from 'int' to compatible type 'typedef ff_size_t' at <stdout>:158:1\n        type name changed from 'int' to 'unsigned long int'\n        type size changed from 32 to 64 (in bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.5497848987579346,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcfitsio.so.9.3.49 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcfitsio.so.9.4.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcfitsio.so.9.4.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcfitsio.so.9.3.49",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcfitsio.so.9.3.49\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcfitsio.so.9.4.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcfitsio.so.9.3.49-abi-laboratory-libcfitsio-so-9-3-49-libcfitsio-so-9-4-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2382347583770752,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcfitsio.so.9.3.49 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcfitsio.so.9.4.0.0 libcfitsio-so-9-3-49-libcfitsio-so-9-4-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcfitsio.so.9.3.49-abi-laboratory-libcfitsio-so-9-3-49-libcfitsio-so-9-4-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcfitsio.so.9.4.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcfitsio.so.9.3.49",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcfitsio.so.9.3.49": 1609864,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcfitsio.so.9.4.0.0": 1615160
+            }
+        },
+        "experiment": "usr/lib64/libcfitsio-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcfitsio.so.9.4.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcfitsio.so.9.3.49",
+        "different_libs": true
+    }
+]

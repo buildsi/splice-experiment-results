@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libbrotlienc.so.1.0.9",
+                    "spliced_lib": "libbrotlienc.so.1.0.9",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.8848648071289062e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libbrotlienc.so.1.0.9",
+                    "spliced_lib": "libbrotlienc.so.1.0.9",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.775161743164062e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.030437946319580078,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9-abi-laboratory-libbrotlienc-so-1-0-9-libbrotlienc-so-1-0-9.html\nFound link to libbrotlienc.so.1.0.9-1.0.9-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libbrotlienc.so.1.0.9-1.0.9-7.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/brotli-1.0.9-7.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-qL2pk.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libbrotlienc.so.1.0.9-1.0.9-7.fc36.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file libbrotlienc.so.1.0.9-1.0.9-7.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 1.521209478378296,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9 libbrotlienc-so-1-0-9-libbrotlienc-so-1-0-9 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9-abi-laboratory-libbrotlienc-so-1-0-9-libbrotlienc-so-1-0-9.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9": 591576,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9": 591576
+            }
+        },
+        "experiment": "usr/lib64/libbrotlienc-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9",
+        "different_libs": true
+    }
+]

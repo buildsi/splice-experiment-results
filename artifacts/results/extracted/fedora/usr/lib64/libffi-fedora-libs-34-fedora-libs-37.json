@@ -1,0 +1,86 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libffi.so.6.0.2",
+                    "spliced_lib": "libffi.so.8.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "ffi_closure_unix64",
+                        "ffi_call_unix64",
+                        "ffi_closure_unix64_inner",
+                        "ffi_prep_cif_machdep",
+                        "mkstemp"
+                    ],
+                    "prediction": false,
+                    "seconds": 4.6253204345703125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libffi.so.6.0.2",
+                    "spliced_lib": "libffi.so.8.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "ffi_call_unix64",
+                        "ffi_closure_unix64_inner",
+                        "ffi_prep_cif_machdep",
+                        "ffi_closure_unix64"
+                    ],
+                    "prediction": false,
+                    "seconds": 2.288818359375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 2 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 2 Removed, 3 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 3 Added variable symbols not referenced by debug info\n\nSONAME changed from 'libffi.so.6' to 'libffi.so.8'\n\n2 Removed functions:\n\n  [D] 'function int ffi_closure_unix64_inner(ffi_closure*, void*, register_args*, char*)'    {ffi_closure_unix64_inner}\n  [D] 'function ffi_status ffi_prep_cif_machdep(ffi_cif*)'    {ffi_prep_cif_machdep}\n\n2 Removed function symbols not referenced by debug info:\n\n  [D] ffi_call_unix64\n  [D] ffi_closure_unix64\n\n3 Added function symbols not referenced by debug info:\n\n  [A] ffi_call_go@@LIBFFI_GO_CLOSURE_8.0\n  [A] ffi_get_struct_offsets@@LIBFFI_BASE_8.0\n  [A] ffi_prep_go_closure@@LIBFFI_GO_CLOSURE_8.0\n\n3 Added variable symbols not referenced by debug info:\n\n  [A] ffi_type_complex_double@@LIBFFI_COMPLEX_8.0\n  [A] ffi_type_complex_float@@LIBFFI_COMPLEX_8.0\n  [A] ffi_type_complex_longdouble@@LIBFFI_COMPLEX_8.0\n\n",
+                    "return_code": 12,
+                    "seconds": 0.015751123428344727,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2-abi-laboratory-libffi-so-6-0-2-libffi-so-8-1-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.1988964080810547,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0 libffi-so-6-0-2-libffi-so-8-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2-abi-laboratory-libffi-so-6-0-2-libffi-so-8-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2": 40192,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0": 45472
+            }
+        },
+        "experiment": "usr/lib64/libffi-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2",
+        "different_libs": true
+    }
+]

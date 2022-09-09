@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.5"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libexiv2.so.0.27.5",
+                    "spliced_lib": "libexiv2.so.0.27.5",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "abort",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0005021095275878906
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libexiv2.so.0.27.5",
+                    "spliced_lib": "libexiv2.so.0.27.5",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.01371145248413086
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 2 Changed (322 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 functions with some indirect sub-type change:\n\n  [C] 'method virtual Exiv2::CommentValue* Exiv2::CommentValue::clone_() const' at value.cpp:602:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'const Exiv2::CommentValue*' has sub-type changes:\n      in pointed to type 'const Exiv2::CommentValue':\n        in unqualified underlying type 'class Exiv2::CommentValue' at value.hpp:500:1:\n          type size hasn't changed\n          1 base class change:\n            'class Exiv2::StringValueBase' at value.hpp:335:1 changed:\n              type size hasn't changed\n              1 member function changes (12 filtered):\n                'method virtual Exiv2::Rational Exiv2::StringValueBase::toRational(long int) const' has some sub-type changes:\n                  return type changed:\n                    underlying type 'struct std::pair<int, int>' at stl_pair.h:211:1 changed:\n                      type size hasn't changed\n                      1 base class change:\n                        'class std::__pair_base<int, int>' at stl_pair.h:189:1 changed:\n              no data member change (1 filtered);\n          no member function changes (8 filtered);\n\n  [C] 'function Exiv2::URational Exiv2::getURational(const Exiv2::byte*, Exiv2::ByteOrder)' at types.cpp:306:1 has some indirect sub-type changes:\n    return type changed:\n      underlying type 'struct std::pair<unsigned int, unsigned int>' at stl_pair.h:211:1 changed:\n        type size hasn't changed\n        1 base class change:\n          'class std::__pair_base<unsigned int, unsigned int>' at stl_pair.h:189:1 changed:\n\n",
+                    "return_code": 4,
+                    "seconds": 10.74489974975586,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.5",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.5\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.5-abi-laboratory-libexiv2-so-0-27-5-libexiv2-so-0-27-5.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22139263153076172,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5 libexiv2-so-0-27-5-libexiv2-so-0-27-5 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.5-abi-laboratory-libexiv2-so-0-27-5-libexiv2-so-0-27-5.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.5",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.5": 2794464,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5": 2733656
+            }
+        },
+        "experiment": "usr/lib64/libexiv2-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexiv2.so.0.27.5",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexiv2.so.0.27.5",
+        "different_libs": true
+    }
+]

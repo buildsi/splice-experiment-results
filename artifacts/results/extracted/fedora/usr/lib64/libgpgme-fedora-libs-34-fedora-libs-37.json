@@ -1,0 +1,87 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgpgme.so.11.24.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgpgme.so.11.26.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgpgme.so.11.24.1",
+                    "spliced_lib": "libgpgme.so.11.26.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "lseek",
+                        "stat",
+                        "getrlimit",
+                        "fopen",
+                        "open",
+                        "fcntl",
+                        "__fdelt_chk",
+                        "__memcpy_chk",
+                        "select",
+                        "ftello",
+                        "fseeko"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00011491775512695312
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgpgme.so.11.24.1",
+                    "spliced_lib": "libgpgme.so.11.26.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0003325939178466797
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (170 filtered out), 2 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 Added functions:\n\n  [A] 'function gpgme_error_t gpgme_op_receive_keys(gpgme_ctx_t, const char**)'    {gpgme_op_receive_keys@@GPGME_1.0}\n  [A] 'function gpgme_error_t gpgme_op_receive_keys_start(gpgme_ctx_t, const char**)'    {gpgme_op_receive_keys_start@@GPGME_1.0}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function gpgme_error_t gpgme_cancel(gpgme_ctx_t)' at gpgme.c:201:1 has some indirect sub-type changes:\n    parameter 1 of type 'typedef gpgme_ctx_t' has sub-type changes:\n      underlying type 'gpgme_context*' changed:\n        in pointed to type 'struct gpgme_context' at context.h:77:1:\n          type size changed from 2368 to 2560 (in bits)\n          3 data member insertions:\n            'char* cert_expire', at offset 1472 (in bits) at context.h:178:1\n            'char* key_origin', at offset 1536 (in bits) at context.h:181:1\n            'char* import_filter', at offset 1600 (in bits) at context.h:184:1\n          10 data member changes (1 filtered):\n            type of 'engine_t engine' changed:\n              underlying type 'engine*' changed:\n                in pointed to type 'struct engine' at opassuan.c:163:1:\n                  type size hasn't changed\n                  1 data member change:\n                    type of 'engine_ops* ops' changed:\n                      in pointed to type 'struct engine_ops' at engine-backend.h:25:1:\n                        type size hasn't changed\n                        3 data member changes (18 filtered):\n                          type of 'typedef gpgme_error_t (void*, typedef gpgme_decrypt_flags_t, typedef gpgme_data_t, typedef gpgme_data_t, int, const char*, int)* decrypt' changed:\n                            in pointed to type 'function type typedef gpgme_error_t (void*, typedef gpgme_decrypt_flags_t, typedef gpgme_data_t, typedef gpgme_data_t, int, const char*, int)':\n                              parameter 3 of type 'typedef gpgme_data_t' has sub-type changes:\n                                underlying type 'gpgme_data*' changed:\n                                  in pointed to type 'struct gpgme_data' at data.h:89:1:\n                                    type size changed from 33408 to 33664 (in bits)\n                                    2 data member deletions:\n                                      'char pending[4096]', at offset 128 (in bits) at data.h:88:1\n                                      'int pending_len', at offset 32896 (in bits) at data.h:89:1\n                                    6 data member insertions:\n                                      'unsigned int io_buffer_size', at offset 256 (in bits) at data.h:103:1\n                                      'char* inbound_buffer', at offset 320 (in bits) at data.h:107:1\n                                      'char outboundspace[4096]', at offset 384 (in bits) at data.h:113:1\n                                      'unsigned int outbound_pending', at offset 33152 (in bits) at data.h:114:1\n                                      'char* outbound_buffer', at offset 33216 (in bits) at data.h:115:1\n                                      'unsigned int sensitive', at offset 33280 (in bits) at data.h:120:1\n                                    3 data member changes (1 filtered):\n                                      'char* file_name' offset changed from 32960 to 128 (in bits) (by -32832 bits)\n                                      'gpgme_off_t size_hint' offset changed from 33024 to 192 (in bits) (by -32832 bits)\n                                      'union {int fd; FILE* stream; gpgrt_stream_t e_stream; struct {gpgme_data_cbs_t cbs; void* handle;} user; struct {char* buffer; const char* orig_buffer; size_t size; size_t length; gpgme_off_t offset;} mem; struct {int (void*, char*, typedef size_t, size_t*)* cb; void* handle;} old_user;} data' offset changed from 33088 to 33344 (in bits) (by +256 bits)\n                          type of 'typedef gpgme_error_t (void*, typedef gpgme_key_t, unsigned int)* delete' changed:\n                            in pointed to type 'function type typedef gpgme_error_t (void*, typedef gpgme_key_t, unsigned int)':\n                              parameter 2 of type 'typedef gpgme_key_t' has sub-type changes:\n                                underlying type '_gpgme_key*' changed:\n                                  in pointed to type 'struct _gpgme_key' at gpgme.h:755:1:\n                                    type size hasn't changed\n                                    1 data member changes (1 filtered):\n                                      type of 'gpgme_user_id_t _last_uid' changed:\n                                        underlying type '_gpgme_user_id*' changed:\n                                          in pointed to type 'struct _gpgme_user_id' at gpgme.h:697:1:\n                                            type size hasn't changed\n                                            1 data member changes (2 filtered):\n                                              type of 'gpgme_key_sig_t _last_keysig' changed:\n                                                underlying type '_gpgme_key_sig*' changed:\n                                                  in pointed to type 'struct _gpgme_key_sig' at gpgme.h:617:1:\n                                                    type size changed from 1024 to 1088 (in bits)\n                                                    3 data member insertions:\n                                                      'unsigned int trust_depth', at offset 80 (in bits) at gpgme.h:637:1\n                                                      'unsigned int trust_value', at offset 88 (in bits) at gpgme.h:640:1\n                                                      'char* trust_scope', at offset 1024 (in bits) at gpgme.h:689:1\n                                                    no data member change (1 filtered);\n                          type of 'typedef gpgme_error_t (void*, typedef gpgme_data_t, gpgme_key_t*)* import' changed:\n                            in pointed to type 'function type typedef gpgme_error_t (void*, typedef gpgme_data_t, gpgme_key_t*)':\n                              parameter 4 of type 'const char**' was added\n                              parameter 5 of type 'const char*' was added\n                              parameter 6 of type 'const char*' was added\n            'ctx_op_data_t op_data' offset changed from 1472 to 1664 (in bits) (by +192 bits)\n            'gpgme_passphrase_cb_t passphrase_cb' offset changed from 1536 to 1728 (in bits) (by +192 bits)\n            'void* passphrase_cb_value' offset changed from 1600 to 1792 (in bits) (by +192 bits)\n            'gpgme_progress_cb_t progress_cb' offset changed from 1664 to 1856 (in bits) (by +192 bits)\n            'void* progress_cb_value' offset changed from 1728 to 1920 (in bits) (by +192 bits)\n            'gpgme_status_cb_t status_cb' offset changed from 1792 to 1984 (in bits) (by +192 bits)\n            'void* status_cb_value' offset changed from 1856 to 2048 (in bits) (by +192 bits)\n            'fd_table fdt' offset changed from 1920 to 2112 (in bits) (by +192 bits)\n            'gpgme_io_cbs io_cbs' offset changed from 2048 to 2240 (in bits) (by +192 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.44530725479125977,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgpgme.so.11.24.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgpgme.so.11.26.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgpgme.so.11.26.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgpgme.so.11.24.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgpgme.so.11.24.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgpgme.so.11.26.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgpgme.so.11.24.1-abi-laboratory-libgpgme-so-11-24-1-libgpgme-so-11-26-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.19416165351867676,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgpgme.so.11.24.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgpgme.so.11.26.0 libgpgme-so-11-24-1-libgpgme-so-11-26-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgpgme.so.11.24.1-abi-laboratory-libgpgme-so-11-24-1-libgpgme-so-11-26-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgpgme.so.11.26.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgpgme.so.11.24.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgpgme.so.11.24.1": 349712,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgpgme.so.11.26.0": 355024
+            }
+        },
+        "experiment": "usr/lib64/libgpgme-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgpgme.so.11.26.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgpgme.so.11.24.1",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgudev-1.0.so.0.3.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgudev-1.0.so.0.3.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgudev-1.0.so.0.3.0",
+                    "spliced_lib": "libgudev-1.0.so.0.3.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.3882598876953125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgudev-1.0.so.0.3.0",
+                    "spliced_lib": "libgudev-1.0.so.0.3.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.981590270996094e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.035271644592285156,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgudev-1.0.so.0.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgudev-1.0.so.0.3.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgudev-1.0.so.0.3.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgudev-1.0.so.0.3.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgudev-1.0.so.0.3.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgudev-1.0.so.0.3.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgudev-1.0.so.0.3.0-abi-laboratory-libgudev-1-0-so-0-3-0-libgudev-1-0-so-0-3-0.html\nFound link to libgudev-1.0.so.0.3.0-237-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgudev-1.0.so.0.3.0-237-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6086\nERROR: incomplete info for symbol 7027\nERROR: incomplete info for symbol 7648\nERROR: incomplete info for symbol 7978\nERROR: incomplete info for symbol 8397\nERROR: incomplete info for symbol 8775\nERROR: incomplete info for symbol 9255\nERROR: incomplete info for symbol 9466\nERROR: incomplete info for symbol 9677\nERROR: incomplete info for symbol 9888\nERROR: incomplete info for symbol 10099\nERROR: incomplete info for symbol 10310\nERROR: incomplete info for symbol 10521\nERROR: incomplete info for symbol 10977\nERROR: incomplete info for symbol 11188\nERROR: incomplete info for symbol 11399\nERROR: incomplete info for symbol 11610\nERROR: incomplete info for symbol 11908\nERROR: incomplete info for symbol 12306\nERROR: incomplete info for symbol 12559\nERROR: incomplete info for symbol 12932\nERROR: incomplete info for symbol 13315\nERROR: incomplete info for symbol 13627\nERROR: incomplete info for symbol 13935\nERROR: incomplete info for symbol 14308\nERROR: incomplete info for symbol 14681\nERROR: incomplete info for symbol 15049\nERROR: incomplete info for symbol 15425\nERROR: incomplete info for symbol 15861\nERROR: incomplete info for symbol 16244\nERROR: incomplete info for symbol 16556\nERROR: incomplete info for symbol 16897\nERROR: incomplete info for symbol 17265\nERROR: incomplete info for symbol 17633\nERROR: incomplete info for symbol 18704\nERROR: incomplete info for symbol 19751\nERROR: incomplete info for symbol 20064\nERROR: incomplete info for symbol 20432\nERROR: incomplete info for symbol 20800\nERROR: incomplete info for symbol 21866\nERROR: incomplete info for symbol 22272\nERROR: incomplete info for symbol 22655\nERROR: incomplete info for symbol 22866\nERROR: incomplete info for symbol 24764\nERROR: incomplete info for symbol 25026\nERROR: incomplete info for symbol 25333\nERROR: incomplete info for symbol 25645\nERROR: incomplete info for symbol 26054\nERROR: incomplete info for symbol 26463\nERROR: incomplete info for symbol 26867\nERROR: incomplete info for symbol 27179\nERROR: incomplete info for symbol 27491\nERROR: incomplete info for symbol 27803\nERROR: incomplete info for symbol 28014\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-wcl2Y.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgudev-1.0.so.0.3.0-237-3.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libgudev-1.0.so.0.3.0-237-3.fc37.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6134\nERROR: incomplete info for symbol 7075\nERROR: incomplete info for symbol 7696\nERROR: incomplete info for symbol 8026\nERROR: incomplete info for symbol 8445\nERROR: incomplete info for symbol 8823\nERROR: incomplete info for symbol 9303\nERROR: incomplete info for symbol 9514\nERROR: incomplete info for symbol 9725\nERROR: incomplete info for symbol 9936\nERROR: incomplete info for symbol 10147\nERROR: incomplete info for symbol 10358\nERROR: incomplete info for symbol 10569\nERROR: incomplete info for symbol 11025\nERROR: incomplete info for symbol 11236\nERROR: incomplete info for symbol 11447\nERROR: incomplete info for symbol 11658\nERROR: incomplete info for symbol 11956\nERROR: incomplete info for symbol 12354\nERROR: incomplete info for symbol 12607\nERROR: incomplete info for symbol 12980\nERROR: incomplete info for symbol 13363\nERROR: incomplete info for symbol 13675\nERROR: incomplete info for symbol 13983\nERROR: incomplete info for symbol 14356\nERROR: incomplete info for symbol 14729\nERROR: incomplete info for symbol 15097\nERROR: incomplete info for symbol 15473\nERROR: incomplete info for symbol 15909\nERROR: incomplete info for symbol 16292\nERROR: incomplete info for symbol 16604\nERROR: incomplete info for symbol 16945\nERROR: incomplete info for symbol 17313\nERROR: incomplete info for symbol 17681\nERROR: incomplete info for symbol 18752\nERROR: incomplete info for symbol 19799\nERROR: incomplete info for symbol 20112\nERROR: incomplete info for symbol 20480\nERROR: incomplete info for symbol 20848\nERROR: incomplete info for symbol 21914\nERROR: incomplete info for symbol 22320\nERROR: incomplete info for symbol 22703\nERROR: incomplete info for symbol 22914\nERROR: incomplete info for symbol 24812\nERROR: incomplete info for symbol 25074\nERROR: incomplete info for symbol 25381\nERROR: incomplete info for symbol 25693\nERROR: incomplete info for symbol 26102\nERROR: incomplete info for symbol 26511\nERROR: incomplete info for symbol 26915\nERROR: incomplete info for symbol 27227\nERROR: incomplete info for symbol 27539\nERROR: incomplete info for symbol 27851\nERROR: incomplete info for symbol 28062\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-bvKbS.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgudev-1.0.so.0.3.0-abi-laboratory-libgudev-1-0-so-0-3-0-libgudev-1-0-so-0-3-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.5711948871612549,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgudev-1.0.so.0.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgudev-1.0.so.0.3.0 libgudev-1-0-so-0-3-0-libgudev-1-0-so-0-3-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgudev-1.0.so.0.3.0-abi-laboratory-libgudev-1-0-so-0-3-0-libgudev-1-0-so-0-3-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgudev-1.0.so.0.3.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgudev-1.0.so.0.3.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgudev-1.0.so.0.3.0": 53272,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgudev-1.0.so.0.3.0": 53280
+            }
+        },
+        "experiment": "usr/lib64/libgudev-1-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgudev-1.0.so.0.3.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgudev-1.0.so.0.3.0",
+        "different_libs": true
+    }
+]

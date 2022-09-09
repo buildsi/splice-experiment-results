@@ -1,0 +1,86 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libffi.so.6.0.2",
+                    "spliced_lib": "libffi.so.8.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "mkstemp",
+                        "ffi_call_unix64",
+                        "ffi_closure_unix64",
+                        "ffi_prep_cif_machdep",
+                        "ffi_closure_unix64_inner"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.555152893066406e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libffi.so.6.0.2",
+                    "spliced_lib": "libffi.so.8.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "ffi_call_unix64",
+                        "ffi_closure_unix64_inner",
+                        "ffi_prep_cif_machdep",
+                        "ffi_closure_unix64"
+                    ],
+                    "prediction": false,
+                    "seconds": 2.384185791015625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 2 Removed, 0 Changed, 3 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 3 Added variables\nFunction symbols changes summary: 2 Removed, 0 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\nSONAME changed from 'libffi.so.6' to 'libffi.so.8'\n\n2 Removed functions:\n\n  [D] 'function int ffi_closure_unix64_inner(ffi_closure*, void*, register_args*, char*)'    {ffi_closure_unix64_inner}\n  [D] 'function ffi_status ffi_prep_cif_machdep(ffi_cif*)'    {ffi_prep_cif_machdep}\n\n3 Added functions:\n\n  [A] 'function void ffi_call_go(ffi_cif*, void ()*, void*, void**, void*)'    {ffi_call_go@@LIBFFI_GO_CLOSURE_8.0}\n  [A] 'function ffi_status ffi_get_struct_offsets(ffi_abi, ffi_type*, size_t*)'    {ffi_get_struct_offsets@@LIBFFI_BASE_8.0}\n  [A] 'function ffi_status ffi_prep_go_closure(ffi_go_closure*, ffi_cif*, void (ffi_cif*, void*, void**, void*)*)'    {ffi_prep_go_closure@@LIBFFI_GO_CLOSURE_8.0}\n\n3 Added variables:\n\n  [A] 'const ffi_type ffi_type_complex_double'    {ffi_type_complex_double@@LIBFFI_COMPLEX_8.0}\n  [A] 'const ffi_type ffi_type_complex_float'    {ffi_type_complex_float@@LIBFFI_COMPLEX_8.0}\n  [A] 'const ffi_type ffi_type_complex_longdouble'    {ffi_type_complex_longdouble@@LIBFFI_COMPLEX_8.0}\n\n2 Removed function symbols not referenced by debug info:\n\n  [D] ffi_call_unix64\n  [D] ffi_closure_unix64\n\n",
+                    "return_code": 12,
+                    "seconds": 0.028186321258544922,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2-abi-laboratory-libffi-so-6-0-2-libffi-so-8-1-0.html\nFound link to libffi.so.6.0.2-3.1-28.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libffi.so.6.0.2-3.1-28.fc34.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4026\nERROR: incomplete info for symbol 4091\nERROR: incomplete info for symbol 4175\nERROR: incomplete info for symbol 4606\nERROR: incomplete info for symbol 4690\nERROR: incomplete info for symbol 11386\nERROR: incomplete info for symbol 12990\nERROR: incomplete info for symbol 13150\nERROR: incomplete info for symbol 13310\nERROR: incomplete info for symbol 13524\nERROR: incomplete info for symbol 13673\nERROR: incomplete info for symbol 13791\nERROR: incomplete info for symbol 13940\nERROR: incomplete info for symbol 14058\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-5KxSe.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libffi.so.8.1.0-3.4.2-8.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libffi.so.8.1.0-3.4.2-8.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 9149\nERROR: incomplete info for symbol 9214\nERROR: incomplete info for symbol 9298\nERROR: incomplete info for symbol 9819\nERROR: incomplete info for symbol 14363\nERROR: incomplete info for symbol 14414\nERROR: incomplete info for symbol 14648\nERROR: incomplete info for symbol 14808\nERROR: incomplete info for symbol 14968\nERROR: incomplete info for symbol 15242\nERROR: incomplete info for symbol 15614\nERROR: incomplete info for symbol 15763\nERROR: incomplete info for symbol 15881\nERROR: incomplete info for symbol 16030\nERROR: incomplete info for symbol 16712\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Rng7r.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 77.8%\nSource compatibility: 77.8%\nTotal binary compatibility problems: 9, warnings: 12\nTotal source compatibility problems: 9, warnings: 4\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2-abi-laboratory-libffi-so-6-0-2-libffi-so-8-1-0.html\n",
+                    "return_code": 1,
+                    "seconds": 0.667271614074707,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0 libffi-so-6-0-2-libffi-so-8-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2-abi-laboratory-libffi-so-6-0-2-libffi-so-8-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2": 40192,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0": 45472
+            }
+        },
+        "experiment": "usr/lib64/libffi-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libffi.so.8.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libffi.so.6.0.2",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libassuan.so.0.8.5"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libassuan.so.0.8.5"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libassuan.so.0.8.5",
+                    "spliced_lib": "libassuan.so.0.8.5",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.555152893066406e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libassuan.so.0.8.5",
+                    "spliced_lib": "libassuan.so.0.8.5",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.058547973632812e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (74 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function int __assuan_spawn(unsigned int, pid_t*, assuan_context_t, pid_t*, const char*, const char**, assuan_fd_t, assuan_fd_t, assuan_fd_t*, void (void*, int)*, void*, unsigned int)' at system-posix.c:269:1 has some indirect sub-type changes:\n    parameter 1 of type 'unsigned int' changed:\n      entity changed from 'unsigned int' to 'typedef assuan_context_t' at assuan.h:83:1\n      type size changed from 32 to 64 (in bits)\n    parameter 3 of type 'typedef assuan_context_t' changed:\n      entity changed from 'typedef assuan_context_t' to compatible type 'const char*'\n        in pointed to type 'struct assuan_context_s':\n          entity changed from 'struct assuan_context_s' to 'const char'\n          type size changed from 30272 to 8 (in bits)\n    parameter 4 of type 'pid_t*' changed:\n      in pointed to type 'typedef pid_t':\n        entity changed from 'typedef pid_t' to 'const char*'\n        type size changed from 32 to 64 (in bits)\n    parameter 5 of type 'const char*' changed:\n      entity changed from 'const char*' to 'typedef assuan_fd_t' at assuan.h:85:1\n      type size changed from 64 to 32 (in bits)\n    parameter 6 of type 'const char**' changed:\n      entity changed from 'const char**' to 'typedef assuan_fd_t' at assuan.h:85:1\n      type size changed from 64 to 32 (in bits)\n    parameter 7 of type 'typedef assuan_fd_t' changed:\n      entity changed from 'typedef assuan_fd_t' to 'assuan_fd_t*'\n      type size changed from 32 to 64 (in bits)\n    parameter 8 of type 'typedef assuan_fd_t' changed:\n      entity changed from 'typedef assuan_fd_t' to 'void (void*, int)*'\n      type size changed from 32 to 64 (in bits)\n    parameter 9 of type 'assuan_fd_t*' changed:\n      in pointed to type 'typedef assuan_fd_t':\n        entity changed from 'typedef assuan_fd_t' to compatible type 'void'\n          type name changed from 'int' to 'void'\n          type size changed from 32 to 0 (in bits)\n    parameter 10 of type 'void (void*, int)*' changed:\n      entity changed from 'void (void*, int)*' to 'unsigned int'\n      type size changed from 64 to 32 (in bits)\n    parameter 11 of type 'void*' was removed\n    parameter 12 of type 'unsigned int' was removed\n\n",
+                    "return_code": 4,
+                    "seconds": 0.139268159866333,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libassuan.so.0.8.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libassuan.so.0.8.5",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libassuan.so.0.8.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libassuan.so.0.8.5",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libassuan.so.0.8.5\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libassuan.so.0.8.5\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libassuan.so.0.8.5-abi-laboratory-libassuan-so-0-8-5-libassuan-so-0-8-5.html\nFound link to libassuan.so.0.8.5-2.5.5-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libassuan.so.0.8.5-2.5.5-1.fc34.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 30390\nERROR: incomplete info for symbol 30567\nERROR: incomplete info for symbol 30649\nERROR: incomplete info for symbol 30718\nERROR: incomplete info for symbol 30894\nERROR: incomplete info for symbol 31003\nERROR: incomplete info for symbol 31133\nERROR: incomplete info for symbol 31263\nERROR: incomplete info for symbol 31438\nERROR: incomplete info for symbol 31567\nERROR: incomplete info for symbol 31676\nERROR: incomplete info for symbol 33128\nERROR: incomplete info for symbol 37494\nERROR: incomplete info for symbol 37607\nERROR: incomplete info for symbol 37633\nERROR: incomplete info for symbol 37760\nERROR: incomplete info for symbol 38007\nERROR: incomplete info for symbol 38068\nERROR: incomplete info for symbol 38129\nERROR: incomplete info for symbol 38353\nERROR: incomplete info for symbol 38479\nERROR: incomplete info for symbol 38646\nERROR: incomplete info for symbol 38815\nERROR: incomplete info for symbol 39039\nERROR: incomplete info for symbol 39150\nERROR: incomplete info for symbol 39533\nERROR: incomplete info for symbol 41037\nERROR: incomplete info for symbol 41391\nERROR: incomplete info for symbol 41417\nERROR: incomplete info for symbol 41701\nERROR: incomplete info for symbol 42143\nERROR: incomplete info for symbol 43621\nERROR: incomplete info for symbol 43865\nERROR: incomplete info for symbol 44116\nERROR: incomplete info for symbol 44811\nERROR: incomplete info for symbol 45715\nERROR: incomplete info for symbol 45741\nERROR: incomplete info for symbol 45774\nERROR: incomplete info for symbol 45807\nERROR: incomplete info for symbol 45840\nERROR: incomplete info for symbol 45873\nERROR: incomplete info for symbol 45906\nERROR: incomplete info for symbol 45939\nERROR: incomplete info for symbol 45972\nERROR: incomplete info for symbol 46005\nERROR: incomplete info for symbol 49276\nERROR: incomplete info for symbol 50831\nERROR: incomplete info for symbol 51334\nERROR: incomplete info for symbol 51510\nERROR: incomplete info for symbol 51718\nERROR: incomplete info for symbol 52283\nERROR: incomplete info for symbol 53510\nERROR: incomplete info for symbol 55721\nERROR: incomplete info for symbol 56728\nERROR: incomplete info for symbol 57391\nERROR: incomplete info for symbol 57538\nERROR: incomplete info for symbol 57564\nERROR: incomplete info for symbol 57590\nERROR: incomplete info for symbol 57897\nERROR: incomplete info for symbol 58700\nERROR: incomplete info for symbol 60217\nERROR: incomplete info for symbol 61199\nERROR: incomplete info for symbol 61232\nERROR: incomplete info for symbol 66325\nERROR: incomplete info for symbol 66578\nERROR: incomplete info for symbol 69297\nERROR: incomplete info for symbol 69340\nERROR: incomplete info for symbol 69420\nERROR: incomplete info for symbol 70099\nERROR: incomplete info for symbol 70268\nERROR: incomplete info for symbol 70440\nERROR: incomplete info for symbol 70778\nERROR: incomplete info for symbol 71089\nERROR: incomplete info for symbol 71180\nERROR: incomplete info for symbol 71711\nERROR: incomplete info for symbol 71888\nERROR: incomplete info for symbol 71979\nERROR: incomplete info for symbol 72100\nERROR: incomplete info for symbol 72133\nERROR: incomplete info for symbol 72275\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-V0Ncc.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libassuan.so.0.8.5-2.5.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libassuan.so.0.8.5-2.5.5-4.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 30433\nERROR: incomplete info for symbol 30610\nERROR: incomplete info for symbol 30692\nERROR: incomplete info for symbol 30761\nERROR: incomplete info for symbol 30937\nERROR: incomplete info for symbol 31046\nERROR: incomplete info for symbol 31176\nERROR: incomplete info for symbol 31306\nERROR: incomplete info for symbol 32705\nERROR: incomplete info for symbol 32880\nERROR: incomplete info for symbol 33009\nERROR: incomplete info for symbol 33118\nERROR: incomplete info for symbol 37272\nERROR: incomplete info for symbol 37385\nERROR: incomplete info for symbol 37411\nERROR: incomplete info for symbol 37538\nERROR: incomplete info for symbol 37785\nERROR: incomplete info for symbol 37846\nERROR: incomplete info for symbol 37907\nERROR: incomplete info for symbol 38131\nERROR: incomplete info for symbol 38257\nERROR: incomplete info for symbol 38423\nERROR: incomplete info for symbol 38592\nERROR: incomplete info for symbol 38811\nERROR: incomplete info for symbol 38922\nERROR: incomplete info for symbol 39305\nERROR: incomplete info for symbol 40773\nERROR: incomplete info for symbol 41127\nERROR: incomplete info for symbol 41153\nERROR: incomplete info for symbol 41437\nERROR: incomplete info for symbol 41761\nERROR: incomplete info for symbol 43282\nERROR: incomplete info for symbol 43526\nERROR: incomplete info for symbol 43777\nERROR: incomplete info for symbol 44519\nERROR: incomplete info for symbol 45502\nERROR: incomplete info for symbol 45528\nERROR: incomplete info for symbol 45561\nERROR: incomplete info for symbol 45594\nERROR: incomplete info for symbol 45627\nERROR: incomplete info for symbol 45660\nERROR: incomplete info for symbol 45693\nERROR: incomplete info for symbol 45726\nERROR: incomplete info for symbol 45759\nERROR: incomplete info for symbol 45792\nERROR: incomplete info for symbol 49075\nERROR: incomplete info for symbol 50593\nERROR: incomplete info for symbol 51096\nERROR: incomplete info for symbol 51267\nERROR: incomplete info for symbol 51476\nERROR: incomplete info for symbol 51986\nERROR: incomplete info for symbol 53053\nERROR: incomplete info for symbol 55240\nERROR: incomplete info for symbol 56241\nERROR: incomplete info for symbol 56850\nERROR: incomplete info for symbol 56995\nERROR: incomplete info for symbol 57021\nERROR: incomplete info for symbol 57047\nERROR: incomplete info for symbol 57318\nERROR: incomplete info for symbol 58085\nERROR: incomplete info for symbol 59595\nERROR: incomplete info for symbol 60576\nERROR: incomplete info for symbol 60609\nERROR: incomplete info for symbol 65670\nERROR: incomplete info for symbol 65923\nERROR: incomplete info for symbol 68633\nERROR: incomplete info for symbol 68676\nERROR: incomplete info for symbol 68756\nERROR: incomplete info for symbol 69425\nERROR: incomplete info for symbol 69594\nERROR: incomplete info for symbol 69766\nERROR: incomplete info for symbol 70036\nERROR: incomplete info for symbol 70287\nERROR: incomplete info for symbol 70378\nERROR: incomplete info for symbol 70918\nERROR: incomplete info for symbol 71095\nERROR: incomplete info for symbol 71186\nERROR: incomplete info for symbol 71307\nERROR: incomplete info for symbol 71340\nERROR: incomplete info for symbol 71482\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-MRbeP.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libassuan.so.0.8.5-abi-laboratory-libassuan-so-0-8-5-libassuan-so-0-8-5.html\n",
+                    "return_code": 0,
+                    "seconds": 0.943732500076294,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libassuan.so.0.8.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libassuan.so.0.8.5 libassuan-so-0-8-5-libassuan-so-0-8-5 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libassuan.so.0.8.5-abi-laboratory-libassuan-so-0-8-5-libassuan-so-0-8-5.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libassuan.so.0.8.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libassuan.so.0.8.5",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libassuan.so.0.8.5": 86472,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libassuan.so.0.8.5": 87008
+            }
+        },
+        "experiment": "usr/lib64/libassuan-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libassuan.so.0.8.5",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libassuan.so.0.8.5",
+        "different_libs": true
+    }
+]

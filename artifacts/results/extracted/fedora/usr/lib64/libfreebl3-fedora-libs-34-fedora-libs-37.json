@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreebl3.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreebl3.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libfreebl3.so",
+                    "spliced_lib": "libfreebl3.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.9802322387695312e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libfreebl3.so",
+                    "spliced_lib": "libfreebl3.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.344650268554688e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.05308032035827637,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreebl3.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreebl3.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreebl3.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreebl3.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreebl3.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreebl3.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreebl3.so-abi-laboratory-libfreebl3-so-libfreebl3-so.html\n",
+                    "return_code": 139,
+                    "seconds": 0.20226168632507324,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreebl3.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreebl3.so libfreebl3-so-libfreebl3-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreebl3.so-abi-laboratory-libfreebl3-so-libfreebl3-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreebl3.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreebl3.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreebl3.so": 16400,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreebl3.so": 16312
+            }
+        },
+        "experiment": "usr/lib64/libfreebl3-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfreebl3.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfreebl3.so",
+        "different_libs": true
+    }
+]

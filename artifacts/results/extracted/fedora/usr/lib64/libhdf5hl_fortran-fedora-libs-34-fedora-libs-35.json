@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5hl_fortran.so.100.0.5"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5hl_fortran.so.100.0.6"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libhdf5hl_fortran.so.100.0.5",
+                    "spliced_lib": "libhdf5hl_fortran.so.100.0.6",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001480579376220703
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libhdf5hl_fortran.so.100.0.5",
+                    "spliced_lib": "libhdf5hl_fortran.so.100.0.6",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0019028186798095703
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.036833763122558594,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5hl_fortran.so.100.0.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5hl_fortran.so.100.0.6",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5hl_fortran.so.100.0.6",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5hl_fortran.so.100.0.5",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5hl_fortran.so.100.0.5\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5hl_fortran.so.100.0.6\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5hl_fortran.so.100.0.5-abi-laboratory-libhdf5hl_fortran-so-100-0-5-libhdf5hl_fortran-so-100-0-6.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.1913158893585205,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5hl_fortran.so.100.0.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5hl_fortran.so.100.0.6 libhdf5hl_fortran-so-100-0-5-libhdf5hl_fortran-so-100-0-6 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5hl_fortran.so.100.0.5-abi-laboratory-libhdf5hl_fortran-so-100-0-5-libhdf5hl_fortran-so-100-0-6.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5hl_fortran.so.100.0.6",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5hl_fortran.so.100.0.5",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5hl_fortran.so.100.0.5": 155528,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5hl_fortran.so.100.0.6": 155352
+            }
+        },
+        "experiment": "usr/lib64/libhdf5hl_fortran-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5hl_fortran.so.100.0.6",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5hl_fortran.so.100.0.5",
+        "different_libs": true
+    }
+]

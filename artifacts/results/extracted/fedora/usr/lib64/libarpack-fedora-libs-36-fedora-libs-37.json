@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarpack.so.2.1.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarpack.so.2.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libarpack.so.2.1.0",
+                    "spliced_lib": "libarpack.so.2.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.604194641113281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libarpack.so.2.1.0",
+                    "spliced_lib": "libarpack.so.2.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001366138458251953
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0191037654876709,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarpack.so.2.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarpack.so.2.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarpack.so.2.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarpack.so.2.1.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarpack.so.2.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarpack.so.2.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarpack.so.2.1.0-abi-laboratory-libarpack-so-2-1-0-libarpack-so-2-1-0.html\nFound link to libarpack.so.2.1.0-3.8.0-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libarpack.so.2.1.0-3.8.0-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/arpack-3.8.0-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1071\nERROR: incomplete info for symbol 1404\nERROR: incomplete info for symbol 1570\nERROR: incomplete info for symbol 2022\nERROR: incomplete info for symbol 4006\nERROR: incomplete info for symbol 4359\nERROR: incomplete info for symbol 4658\nERROR: incomplete info for symbol 6092\nERROR: incomplete info for symbol 6790\nERROR: incomplete info for symbol 8664\nERROR: incomplete info for symbol 12032\nERROR: incomplete info for symbol 15022\nERROR: incomplete info for symbol 16111\nERROR: incomplete info for symbol 20604\nERROR: incomplete info for symbol 22350\nERROR: incomplete info for symbol 22737\nERROR: incomplete info for symbol 27958\nERROR: incomplete info for symbol 28703\nERROR: incomplete info for symbol 31962\nERROR: incomplete info for symbol 33962\nERROR: incomplete info for symbol 34977\nERROR: incomplete info for symbol 39004\nERROR: incomplete info for symbol 40643\nERROR: incomplete info for symbol 41030\nERROR: incomplete info for symbol 44719\nERROR: incomplete info for symbol 45538\nERROR: incomplete info for symbol 45871\nERROR: incomplete info for symbol 46037\nERROR: incomplete info for symbol 46489\nERROR: incomplete info for symbol 48473\nERROR: incomplete info for symbol 48830\nERROR: incomplete info for symbol 49133\nERROR: incomplete info for symbol 50445\nERROR: incomplete info for symbol 51091\nERROR: incomplete info for symbol 52939\nERROR: incomplete info for symbol 56260\nERROR: incomplete info for symbol 59105\nERROR: incomplete info for symbol 60129\nERROR: incomplete info for symbol 64366\nERROR: incomplete info for symbol 66112\nERROR: incomplete info for symbol 66499\nERROR: incomplete info for symbol 71402\nERROR: incomplete info for symbol 72147\nERROR: incomplete info for symbol 75328\nERROR: incomplete info for symbol 77237\nERROR: incomplete info for symbol 78200\nERROR: incomplete info for symbol 81997\nERROR: incomplete info for symbol 83636\nERROR: incomplete info for symbol 84023\nERROR: incomplete info for symbol 87534\nERROR: incomplete info for symbol 88337\nERROR: incomplete info for symbol 88706\nERROR: incomplete info for symbol 89051\nERROR: incomplete info for symbol 89141\nERROR: incomplete info for symbol 89302\nERROR: incomplete info for symbol 89376\nERROR: incomplete info for symbol 89539\nERROR: incomplete info for symbol 90981\nERROR: incomplete info for symbol 93936\nERROR: incomplete info for symbol 95317\nERROR: incomplete info for symbol 95967\nERROR: incomplete info for symbol 99787\nERROR: incomplete info for symbol 100476\nERROR: incomplete info for symbol 102381\nERROR: incomplete info for symbol 105872\nERROR: incomplete info for symbol 109589\nERROR: incomplete info for symbol 111299\nERROR: incomplete info for symbol 111712\nERROR: incomplete info for symbol 114662\nERROR: incomplete info for symbol 116043\nERROR: incomplete info for symbol 116693\nERROR: incomplete info for symbol 120492\nERROR: incomplete info for symbol 121181\nERROR: incomplete info for symbol 123081\nERROR: incomplete info for symbol 126579\nERROR: incomplete info for symbol 130302\nERROR: incomplete info for symbol 132004\nERROR: incomplete info for symbol 132633\nERROR: incomplete info for symbol 132660\nERROR: incomplete info for symbol 134102\nERROR: incomplete info for symbol 136200\nERROR: incomplete info for symbol 137642\nERROR: incomplete info for symbol 139740\nERROR: incomplete info for symbol 141993\nERROR: incomplete info for symbol 144229\nERROR: incomplete info for symbol 146482\nERROR: incomplete info for symbol 148718\nERROR: incomplete info for symbol 148934\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-DNXwn.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libarpack.so.2.1.0-3.8.0-5.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libarpack.so.2.1.0-3.8.0-5.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/arpack-3.8.0-5.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1071\nERROR: incomplete info for symbol 1404\nERROR: incomplete info for symbol 1570\nERROR: incomplete info for symbol 2022\nERROR: incomplete info for symbol 3997\nERROR: incomplete info for symbol 4350\nERROR: incomplete info for symbol 4649\nERROR: incomplete info for symbol 6083\nERROR: incomplete info for symbol 6781\nERROR: incomplete info for symbol 8655\nERROR: incomplete info for symbol 12023\nERROR: incomplete info for symbol 15007\nERROR: incomplete info for symbol 16096\nERROR: incomplete info for symbol 20589\nERROR: incomplete info for symbol 22335\nERROR: incomplete info for symbol 22722\nERROR: incomplete info for symbol 27930\nERROR: incomplete info for symbol 28675\nERROR: incomplete info for symbol 32004\nERROR: incomplete info for symbol 34004\nERROR: incomplete info for symbol 35019\nERROR: incomplete info for symbol 39046\nERROR: incomplete info for symbol 40685\nERROR: incomplete info for symbol 41072\nERROR: incomplete info for symbol 44761\nERROR: incomplete info for symbol 45580\nERROR: incomplete info for symbol 45913\nERROR: incomplete info for symbol 46079\nERROR: incomplete info for symbol 46531\nERROR: incomplete info for symbol 48506\nERROR: incomplete info for symbol 48863\nERROR: incomplete info for symbol 49166\nERROR: incomplete info for symbol 50478\nERROR: incomplete info for symbol 51124\nERROR: incomplete info for symbol 52972\nERROR: incomplete info for symbol 56293\nERROR: incomplete info for symbol 59159\nERROR: incomplete info for symbol 60183\nERROR: incomplete info for symbol 64420\nERROR: incomplete info for symbol 66166\nERROR: incomplete info for symbol 66553\nERROR: incomplete info for symbol 71466\nERROR: incomplete info for symbol 72211\nERROR: incomplete info for symbol 75462\nERROR: incomplete info for symbol 77371\nERROR: incomplete info for symbol 78334\nERROR: incomplete info for symbol 82131\nERROR: incomplete info for symbol 83770\nERROR: incomplete info for symbol 84157\nERROR: incomplete info for symbol 87668\nERROR: incomplete info for symbol 88471\nERROR: incomplete info for symbol 88840\nERROR: incomplete info for symbol 89185\nERROR: incomplete info for symbol 89275\nERROR: incomplete info for symbol 89436\nERROR: incomplete info for symbol 89510\nERROR: incomplete info for symbol 89673\nERROR: incomplete info for symbol 91117\nERROR: incomplete info for symbol 94086\nERROR: incomplete info for symbol 95467\nERROR: incomplete info for symbol 96117\nERROR: incomplete info for symbol 99937\nERROR: incomplete info for symbol 100626\nERROR: incomplete info for symbol 102531\nERROR: incomplete info for symbol 106022\nERROR: incomplete info for symbol 109740\nERROR: incomplete info for symbol 111450\nERROR: incomplete info for symbol 111863\nERROR: incomplete info for symbol 114873\nERROR: incomplete info for symbol 116254\nERROR: incomplete info for symbol 116904\nERROR: incomplete info for symbol 120703\nERROR: incomplete info for symbol 121392\nERROR: incomplete info for symbol 123292\nERROR: incomplete info for symbol 126790\nERROR: incomplete info for symbol 130518\nERROR: incomplete info for symbol 132220\nERROR: incomplete info for symbol 132849\nERROR: incomplete info for symbol 132876\nERROR: incomplete info for symbol 134320\nERROR: incomplete info for symbol 136417\nERROR: incomplete info for symbol 137861\nERROR: incomplete info for symbol 139958\nERROR: incomplete info for symbol 142211\nERROR: incomplete info for symbol 144448\nERROR: incomplete info for symbol 146701\nERROR: incomplete info for symbol 148940\nERROR: incomplete info for symbol 149162\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-wPbY4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarpack.so.2.1.0-abi-laboratory-libarpack-so-2-1-0-libarpack-so-2-1-0.html\n",
+                    "return_code": 0,
+                    "seconds": 1.5377180576324463,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarpack.so.2.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarpack.so.2.1.0 libarpack-so-2-1-0-libarpack-so-2-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarpack.so.2.1.0-abi-laboratory-libarpack-so-2-1-0-libarpack-so-2-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarpack.so.2.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarpack.so.2.1.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarpack.so.2.1.0": 312488,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarpack.so.2.1.0": 312448
+            }
+        },
+        "experiment": "usr/lib64/libarpack-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarpack.so.2.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarpack.so.2.1.0",
+        "different_libs": true
+    }
+]

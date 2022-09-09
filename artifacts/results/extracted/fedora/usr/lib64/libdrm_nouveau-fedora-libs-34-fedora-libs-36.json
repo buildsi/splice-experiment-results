@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_nouveau.so.2.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_nouveau.so.2.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdrm_nouveau.so.2.0.0",
+                    "spliced_lib": "libdrm_nouveau.so.2.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.647804260253906e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdrm_nouveau.so.2.0.0",
+                    "spliced_lib": "libdrm_nouveau.so.2.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.3126602172851562e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.024840354919433594,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_nouveau.so.2.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_nouveau.so.2.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_nouveau.so.2.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_nouveau.so.2.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_nouveau.so.2.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_nouveau.so.2.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_nouveau.so.2.0.0-abi-laboratory-libdrm_nouveau-so-2-0-0-libdrm_nouveau-so-2-0-0.html\nFound link to libdrm_nouveau.so.2.0.0-2.4.109-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libdrm_nouveau.so.2.0.0-2.4.109-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libdrm-2.4.109-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12081\nERROR: incomplete info for symbol 12425\nERROR: incomplete info for symbol 12823\nERROR: incomplete info for symbol 12869\nERROR: incomplete info for symbol 14593\nERROR: incomplete info for symbol 14736\nERROR: incomplete info for symbol 15038\nERROR: incomplete info for symbol 16038\nERROR: incomplete info for symbol 16757\nERROR: incomplete info for symbol 16853\nERROR: incomplete info for symbol 16909\nERROR: incomplete info for symbol 17005\nERROR: incomplete info for symbol 17083\nERROR: incomplete info for symbol 17190\nERROR: incomplete info for symbol 17319\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-aJgZb.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdrm_nouveau.so.2.0.0-2.4.110-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdrm_nouveau.so.2.0.0-2.4.110-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libdrm-2.4.110-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12112\nERROR: incomplete info for symbol 12456\nERROR: incomplete info for symbol 12847\nERROR: incomplete info for symbol 12893\nERROR: incomplete info for symbol 14616\nERROR: incomplete info for symbol 14759\nERROR: incomplete info for symbol 15114\nERROR: incomplete info for symbol 16104\nERROR: incomplete info for symbol 16831\nERROR: incomplete info for symbol 16927\nERROR: incomplete info for symbol 16983\nERROR: incomplete info for symbol 17079\nERROR: incomplete info for symbol 17157\nERROR: incomplete info for symbol 17264\nERROR: incomplete info for symbol 17393\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-9OaNy.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_nouveau.so.2.0.0-abi-laboratory-libdrm_nouveau-so-2-0-0-libdrm_nouveau-so-2-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.8239312171936035,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_nouveau.so.2.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_nouveau.so.2.0.0 libdrm_nouveau-so-2-0-0-libdrm_nouveau-so-2-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_nouveau.so.2.0.0-abi-laboratory-libdrm_nouveau-so-2-0-0-libdrm_nouveau-so-2-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_nouveau.so.2.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_nouveau.so.2.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_nouveau.so.2.0.0": 40976,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_nouveau.so.2.0.0": 41072
+            }
+        },
+        "experiment": "usr/lib64/libdrm_nouveau-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_nouveau.so.2.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_nouveau.so.2.0.0",
+        "different_libs": true
+    }
+]

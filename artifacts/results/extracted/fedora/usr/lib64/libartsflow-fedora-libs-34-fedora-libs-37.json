@@ -1,0 +1,79 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartsflow.so.1.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartsflow.so.1.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libartsflow.so.1.0.0",
+                    "spliced_lib": "libartsflow.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__read_chk",
+                        "abort",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0004868507385253906
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libartsflow.so.1.0.0",
+                    "spliced_lib": "libartsflow.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.006579160690307617
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (148 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed (26 filtered out), 0 Added variables\n\n1 function with some indirect sub-type change:\n\n  [C] 'method virtual void Arts::ASyncNetSend::disconnect()' at asyncschedule.cc:417:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'Arts::ASyncNetSend*' has sub-type changes:\n      in pointed to type 'class Arts::ASyncNetSend' at asyncschedule.h:43:1:\n        type size hasn't changed\n        no member function changes (7 filtered);\n        1 data member changes (2 filtered):\n          type of 'Arts::ASyncPort* ap' changed:\n            in pointed to type 'class Arts::ASyncPort' at asyncschedule.h:92:1:\n              type size hasn't changed\n              no base class changes (2 filtered);\n              1 member function changes (9 filtered):\n                'method virtual void Arts::ASyncPort::connect(Arts::Port*)' has some sub-type changes:\n                  parameter 1 of type 'Arts::Port*' has sub-type changes:\n                    in pointed to type 'class Arts::Port' at gslschedule.h:48:1:\n                      type size hasn't changed\n                      1 member function changes (7 filtered):\n                        'method virtual Arts::AudioPort* Arts::Port::audioPort()' has some sub-type changes:\n                          return type changed:\n                            in pointed to type 'class Arts::AudioPort' at gslschedule.h:99:1:\n                              type size hasn't changed\n                              1 base class change:\n                                'class Arts::Port' at gslschedule.h:48:1 changed:\n                                  details are being reported\n                              no member function changes (6 filtered);\n                              no data member changes (2 filtered);\n                      no data member changes (4 filtered);\n              no data member changes (3 filtered);\n\n",
+                    "return_code": 4,
+                    "seconds": 2.4299745559692383,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartsflow.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartsflow.so.1.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartsflow.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartsflow.so.1.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartsflow.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartsflow.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartsflow.so.1.0.0-abi-laboratory-libartsflow-so-1-0-0-libartsflow-so-1-0-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.18758058547973633,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartsflow.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartsflow.so.1.0.0 libartsflow-so-1-0-0-libartsflow-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartsflow.so.1.0.0-abi-laboratory-libartsflow-so-1-0-0-libartsflow-so-1-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartsflow.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartsflow.so.1.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartsflow.so.1.0.0": 1489616,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartsflow.so.1.0.0": 1489504
+            }
+        },
+        "experiment": "usr/lib64/libartsflow-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libartsflow.so.1.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libartsflow.so.1.0.0",
+        "different_libs": true
+    }
+]

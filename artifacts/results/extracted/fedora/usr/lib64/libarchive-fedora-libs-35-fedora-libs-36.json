@@ -1,0 +1,81 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarchive.so.13.5.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarchive.so.13.5.3"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libarchive.so.13.5.2",
+                    "spliced_lib": "libarchive.so.13.5.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "EVP_ripemd160",
+                        "__poll_chk",
+                        "wmemmove",
+                        "__read_chk",
+                        "__memmove_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00020122528076171875
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libarchive.so.13.5.2",
+                    "spliced_lib": "libarchive.so.13.5.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.002642393112182617
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.33886051177978516,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarchive.so.13.5.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarchive.so.13.5.3",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarchive.so.13.5.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarchive.so.13.5.2",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarchive.so.13.5.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarchive.so.13.5.3\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarchive.so.13.5.2-abi-laboratory-libarchive-so-13-5-2-libarchive-so-13-5-3.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22881031036376953,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarchive.so.13.5.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarchive.so.13.5.3 libarchive-so-13-5-2-libarchive-so-13-5-3 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarchive.so.13.5.2-abi-laboratory-libarchive-so-13-5-2-libarchive-so-13-5-3.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarchive.so.13.5.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarchive.so.13.5.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarchive.so.13.5.2": 841968,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarchive.so.13.5.3": 850200
+            }
+        },
+        "experiment": "usr/lib64/libarchive-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarchive.so.13.5.3",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarchive.so.13.5.2",
+        "different_libs": true
+    }
+]

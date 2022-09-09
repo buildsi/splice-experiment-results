@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcord.so.1.4.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcord.so.1.4.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcord.so.1.4.0",
+                    "spliced_lib": "libcord.so.1.4.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.552436828613281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcord.so.1.4.0",
+                    "spliced_lib": "libcord.so.1.4.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5033950805664062e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.020740509033203125,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcord.so.1.4.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcord.so.1.4.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcord.so.1.4.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcord.so.1.4.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcord.so.1.4.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcord.so.1.4.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcord.so.1.4.0-abi-laboratory-libcord-so-1-4-0-libcord-so-1-4-0.html\nFound link to libcord.so.1.4.0-8.0.4-5.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libcord.so.1.4.0-8.0.4-5.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/gc-8.0.4-5.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 11322\nERROR: incomplete info for symbol 13036\nERROR: incomplete info for symbol 13137\nERROR: incomplete info for symbol 13245\nERROR: incomplete info for symbol 13327\nERROR: incomplete info for symbol 13759\nERROR: incomplete info for symbol 14151\nERROR: incomplete info for symbol 14493\nERROR: incomplete info for symbol 14536\nERROR: incomplete info for symbol 14814\nERROR: incomplete info for symbol 14916\nERROR: incomplete info for symbol 15053\nERROR: incomplete info for symbol 15197\nERROR: incomplete info for symbol 15319\nERROR: incomplete info for symbol 15441\nERROR: incomplete info for symbol 15578\nERROR: incomplete info for symbol 15702\nERROR: incomplete info for symbol 16169\nERROR: incomplete info for symbol 16256\nERROR: incomplete info for symbol 16575\nERROR: incomplete info for symbol 16853\nERROR: incomplete info for symbol 17115\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-WUL6e.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcord.so.1.4.0-8.0.6-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcord.so.1.4.0-8.0.6-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/gc-8.0.6-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 11019\nERROR: incomplete info for symbol 12727\nERROR: incomplete info for symbol 12828\nERROR: incomplete info for symbol 12936\nERROR: incomplete info for symbol 13330\nERROR: incomplete info for symbol 13777\nERROR: incomplete info for symbol 14169\nERROR: incomplete info for symbol 14511\nERROR: incomplete info for symbol 14554\nERROR: incomplete info for symbol 14831\nERROR: incomplete info for symbol 14933\nERROR: incomplete info for symbol 15070\nERROR: incomplete info for symbol 15214\nERROR: incomplete info for symbol 15336\nERROR: incomplete info for symbol 15458\nERROR: incomplete info for symbol 15595\nERROR: incomplete info for symbol 15719\nERROR: incomplete info for symbol 16185\nERROR: incomplete info for symbol 16272\nERROR: incomplete info for symbol 16591\nERROR: incomplete info for symbol 16869\nERROR: incomplete info for symbol 17126\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-DcSiw.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcord.so.1.4.0-abi-laboratory-libcord-so-1-4-0-libcord-so-1-4-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.5086393356323242,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcord.so.1.4.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcord.so.1.4.0 libcord-so-1-4-0-libcord-so-1-4-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcord.so.1.4.0-abi-laboratory-libcord-so-1-4-0-libcord-so-1-4-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcord.so.1.4.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcord.so.1.4.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcord.so.1.4.0": 41168,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcord.so.1.4.0": 41136
+            }
+        },
+        "experiment": "usr/lib64/libcord-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcord.so.1.4.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcord.so.1.4.0",
+        "different_libs": true
+    }
+]

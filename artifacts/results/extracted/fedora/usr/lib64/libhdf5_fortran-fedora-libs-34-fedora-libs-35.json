@@ -1,0 +1,79 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.0.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.102.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libhdf5_fortran.so.102.0.1",
+                    "spliced_lib": "libhdf5_fortran.so.102.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "h5pset_libver_bounds_c"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0004837512969970703
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libhdf5_fortran.so.102.0.1",
+                    "spliced_lib": "libhdf5_fortran.so.102.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "h5pset_libver_bounds_c"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.014673471450805664
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 1 Removed, 0 Changed, 3 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 3 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 13 Added variable symbols not referenced by debug info\n\n1 Removed function:\n\n  [D] 'function int_f h5pset_libver_bounds_c(hid_t_f*, int_f*, int_f*)'    {h5pset_libver_bounds_c}\n\n3 Added functions:\n\n  [A] 'function int_f h5scombine_hyperslab_c(hid_t_f*, int_f*, hsize_t_f*, hsize_t_f*, hsize_t_f*, hsize_t_f*, hid_t_f*)'    {h5scombine_hyperslab_c}\n  [A] 'function int_f h5scombine_select_c(hid_t_f*, int_f*, hid_t_f*, hid_t_f*)'    {h5scombine_select_c}\n  [A] 'function int_f h5smodify_select_c(hid_t_f*, int_f*, hid_t_f*)'    {h5smodify_select_c}\n\n3 Added function symbols not referenced by debug info:\n\n  [A] __h5p_MOD_h5pget_file_locking_f\n  [A] __h5p_MOD_h5pget_libver_bounds_f\n  [A] __h5p_MOD_h5pset_file_locking_f\n\n13 Added variable symbols not referenced by debug info:\n\n  [A] __h5global_MOD_h5f_libver_error_f\n  [A] __h5global_MOD_h5f_libver_nbounds_f\n  [A] __h5global_MOD_h5f_libver_v110_f\n  [A] __h5global_MOD_h5f_libver_v18_f\n  [A] __h5global_MOD_h5i_error_class_f\n  [A] __h5global_MOD_h5i_error_msg_f\n  [A] __h5global_MOD_h5i_error_stack_f\n  [A] __h5global_MOD_h5i_genprop_cls_f\n  [A] __h5global_MOD_h5i_genprop_lst_f\n  [A] __h5global_MOD_h5i_invalid_hid_f\n  [A] __h5global_MOD_h5i_ntypes_f\n  [A] __h5global_MOD_h5i_uninit_f\n  [A] __h5global_MOD_h5i_vfl_f\n\n",
+                    "return_code": 12,
+                    "seconds": 0.14222455024719238,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.102.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.102.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.102.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.0.1-abi-laboratory-libhdf5_fortran-so-102-0-1-libhdf5_fortran-so-102-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19195222854614258,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.102.1.0 libhdf5_fortran-so-102-0-1-libhdf5_fortran-so-102-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.0.1-abi-laboratory-libhdf5_fortran-so-102-0-1-libhdf5_fortran-so-102-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.102.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.0.1": 352504,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.102.1.0": 356192
+            }
+        },
+        "experiment": "usr/lib64/libhdf5_fortran-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libhdf5_fortran.so.102.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libhdf5_fortran.so.102.0.1",
+        "different_libs": true
+    }
+]

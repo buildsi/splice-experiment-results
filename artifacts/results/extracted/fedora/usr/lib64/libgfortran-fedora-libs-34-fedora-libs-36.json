@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgfortran.so.5.0.0",
+                    "spliced_lib": "libgfortran.so.5.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "gettimeofday"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00046181678771972656
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgfortran.so.5.0.0",
+                    "spliced_lib": "libgfortran.so.5.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.01586294174194336
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (27 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
+                    "return_code": 0,
+                    "seconds": 1.093836784362793,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0-abi-laboratory-libgfortran-so-5-0-0-libgfortran-so-5-0-0.html\nFound link to libgfortran.so.5.0.0-11.3.1-2.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libgfortran.so.5.0.0-11.3.1-2.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/gcc-11.3.1-2.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-5uaOF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgfortran.so.5.0.0-12.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgfortran.so.5.0.0-12.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/gcc-12.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-yJ3eV.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 98.1%\nTotal binary compatibility problems: 0, warnings: 3\nTotal source compatibility problems: 1, warnings: 2\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0-abi-laboratory-libgfortran-so-5-0-0-libgfortran-so-5-0-0.html\n",
+                    "return_code": 1,
+                    "seconds": 587.6663064956665,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0 libgfortran-so-5-0-0-libgfortran-so-5-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0-abi-laboratory-libgfortran-so-5-0-0-libgfortran-so-5-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0": 2822408,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0": 2953608
+            }
+        },
+        "experiment": "usr/lib64/libgfortran-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0",
+        "different_libs": true
+    }
+]

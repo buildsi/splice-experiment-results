@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libSDL2-2.0.so.0.22.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libSDL2-2.0.so.0.2400.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libSDL2-2.0.so.0.22.0",
+                    "spliced_lib": "libSDL2-2.0.so.0.2400.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__snprintf_chk",
+                        "__read_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00021409988403320312
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libSDL2-2.0.so.0.22.0",
+                    "spliced_lib": "libSDL2-2.0.so.0.2400.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.004007816314697266
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 7 Changed (215 filtered out), 20 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n20 Added functions:\n\n  [A] 'function SDL_GUID SDL_GUIDFromString(const char*)'    {SDL_GUIDFromString}\n  [A] 'function void SDL_GUIDToString(SDL_GUID, char*, int)'    {SDL_GUIDToString}\n  [A] 'function Uint16 SDL_GameControllerGetFirmwareVersion(SDL_GameController*)'    {SDL_GameControllerGetFirmwareVersion}\n  [A] 'function const char* SDL_GameControllerPath(SDL_GameController*)'    {SDL_GameControllerPath}\n  [A] 'function const char* SDL_GameControllerPathForIndex(int)'    {SDL_GameControllerPathForIndex}\n  [A] 'function int SDL_GetDefaultAudioInfo(char**, SDL_AudioSpec*, int)'    {SDL_GetDefaultAudioInfo}\n  [A] 'function void SDL_GetOriginalMemoryFunctions(SDL_malloc_func*, SDL_calloc_func*, SDL_realloc_func*, SDL_free_func*)'    {SDL_GetOriginalMemoryFunctions}\n  [A] 'function int SDL_GetPointDisplayIndex(const SDL_Point*)'    {SDL_GetPointDisplayIndex}\n  [A] 'function int SDL_GetRectDisplayIndex(const SDL_Rect*)'    {SDL_GetRectDisplayIndex}\n  [A] 'function SDL_bool SDL_HasLASX()'    {SDL_HasLASX}\n  [A] 'function SDL_bool SDL_HasLSX()'    {SDL_HasLSX}\n  [A] 'function int SDL_JoystickAttachVirtualEx(const SDL_VirtualJoystickDesc*)'    {SDL_JoystickAttachVirtualEx}\n  [A] 'function Uint16 SDL_JoystickGetFirmwareVersion(SDL_Joystick*)'    {SDL_JoystickGetFirmwareVersion}\n  [A] 'function const char* SDL_JoystickPath(SDL_Joystick*)'    {SDL_JoystickPath}\n  [A] 'function const char* SDL_JoystickPathForIndex(int)'    {SDL_JoystickPathForIndex}\n  [A] 'function SDL_bool SDL_ResetHint(const char*)'    {SDL_ResetHint}\n  [A] 'function void SDL_ResetKeyboard()'    {SDL_ResetKeyboard}\n  [A] 'function void* SDL_bsearch(void*, void*, size_t, size_t, int (void*, void*)*)'    {SDL_bsearch}\n  [A] 'function Uint16 SDL_crc16(Uint16, void*, size_t)'    {SDL_crc16}\n  [A] 'function size_t SDL_utf8strnlen(const char*, size_t)'    {SDL_utf8strnlen}\n\n7 functions with some indirect sub-type change:\n\n  [C] 'function SDL_Surface* SDL_ConvertSurface(SDL_Surface*, const SDL_PixelFormat*, Uint32)' at SDL_dynapi_procs.h:495:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'typedef SDL_Surface' at SDL_surface.h:97:1:\n        underlying type 'struct SDL_Surface' at SDL_surface.h:70:1 changed:\n          type size hasn't changed\n          1 data member change:\n            type of 'SDL_BlitMap* map' changed:\n              in pointed to type 'struct SDL_BlitMap' at SDL_surface.h:64:1:\n                entity changed from 'struct SDL_BlitMap' to compatible type 'typedef SDL_BlitMap' at SDL_surface.h:64:1\n\n  [C] 'function SDL_Thread* SDL_CreateThread(SDL_ThreadFunction, const char*, void*)' at SDL_dynapi_procs.h:56:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'typedef SDL_Thread' at SDL_thread.h:57:1:\n        underlying type 'struct SDL_Thread' at SDL_thread_c.h:58:1 changed:\n          type size changed from 1664 to 896 (in bits)\n          7 data member changes:\n            type of 'SDL_error errbuf' changed:\n              underlying type 'struct SDL_error' at SDL_error_c.h:32:1 changed:\n                type size changed from 1056 to 320 (in bits)\n                3 data member insertions:\n                  'size_t len', at offset 128 (in bits) at SDL_error_c.h:34:1\n                  'SDL_realloc_func realloc_func', at offset 192 (in bits) at SDL_error_c.h:35:1\n                  'SDL_free_func free_func', at offset 256 (in bits) at SDL_error_c.h:36:1\n                1 data member change:\n                  type of 'char str[128]' changed:\n                    entity changed from 'char[128]' to 'char*'\n                    type size changed from 1024 to 64 (in bits)\n                  and offset changed from 32 to 64 (in bits) (by +32 bits)\n            'char* name' offset changed from 1280 to 512 (in bits) (by -768 bits)\n            'size_t stacksize' offset changed from 1344 to 576 (in bits) (by -768 bits)\n            'int (void*)* userfunc' offset changed from 1408 to 640 (in bits) (by -768 bits)\n            'void* userdata' offset changed from 1472 to 704 (in bits) (by -768 bits)\n            'void* data' offset changed from 1536 to 768 (in bits) (by -768 bits)\n            'void* endfunc' offset changed from 1600 to 832 (in bits) (by -768 bits)\n\n  [C] 'function char* SDL_GameControllerMappingForGUID(SDL_JoystickGUID)' at SDL_dynapi_procs.h:170:1 has some indirect sub-type changes:\n    parameter 1 of type 'typedef SDL_JoystickGUID' changed:\n      underlying type 'struct SDL_JoystickGUID' at SDL_joystick.h:72:1 changed:\n        entity changed from 'struct SDL_JoystickGUID' to compatible type 'typedef SDL_GUID' at SDL_guid.h:57:1\n          type name changed from 'SDL_JoystickGUID' to 'SDL_GUID'\n          type size hasn't changed\n\n  [C] 'function SDL_JoystickGUID SDL_JoystickGetDeviceGUID(int)' at SDL_dynapi_procs.h:233:1 has some indirect sub-type changes:\n\n  [C] 'function SDL_JoystickGUID SDL_JoystickGetGUID(SDL_Joystick*)' at SDL_dynapi_procs.h:234:1 has some indirect sub-type changes:\n\n  [C] 'function SDL_JoystickGUID SDL_JoystickGetGUIDFromString(const char*)' at SDL_dynapi_procs.h:236:1 has some indirect sub-type changes:\n\n  [C] 'function void SDL_JoystickGetGUIDString(SDL_JoystickGUID, char*, int)' at SDL_dynapi_procs.h:235:1 has some indirect sub-type changes:\n\n",
+                    "return_code": 4,
+                    "seconds": 1.4810638427734375,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libSDL2-2.0.so.0.22.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libSDL2-2.0.so.0.2400.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libSDL2-2.0.so.0.2400.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libSDL2-2.0.so.0.22.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libSDL2-2.0.so.0.22.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libSDL2-2.0.so.0.2400.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libSDL2-2.0.so.0.22.0-abi-laboratory-libSDL2-2-0-so-0-22-0-libSDL2-2-0-so-0-2400-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2495436668395996,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libSDL2-2.0.so.0.22.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libSDL2-2.0.so.0.2400.0 libSDL2-2-0-so-0-22-0-libSDL2-2-0-so-0-2400-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libSDL2-2.0.so.0.22.0-abi-laboratory-libSDL2-2-0-so-0-22-0-libSDL2-2-0-so-0-2400-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libSDL2-2.0.so.0.2400.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libSDL2-2.0.so.0.22.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libSDL2-2.0.so.0.22.0": 1790112,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libSDL2-2.0.so.0.2400.0": 1850368
+            }
+        },
+        "experiment": "usr/lib64/libSDL2-2-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libSDL2-2.0.so.0.2400.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libSDL2-2.0.so.0.22.0",
+        "different_libs": true
+    }
+]

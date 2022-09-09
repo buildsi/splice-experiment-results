@@ -1,0 +1,84 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgio-2.0.so.0.6800.4"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgio-2.0.so.0.7200.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgio-2.0.so.0.6800.4",
+                    "spliced_lib": "libgio-2.0.so.0.7200.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__dn_expand",
+                        "__res_nquery",
+                        "__res_init",
+                        "g_spawn_async_with_pipes",
+                        "g_module_open",
+                        "__read_chk",
+                        "g_spawn_check_exit_status",
+                        "g_variant_dict_lookup_value"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0007727146148681641
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgio-2.0.so.0.6800.4",
+                    "spliced_lib": "libgio-2.0.so.0.7200.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.028680801391601562
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 32 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\n32 Added function symbols not referenced by debug info:\n\n  [A] g_dbus_is_error_name\n  [A] g_debug_controller_dbus_get_type\n  [A] g_debug_controller_dbus_new\n  [A] g_debug_controller_dbus_stop\n  [A] g_debug_controller_get_debug_enabled\n  [A] g_debug_controller_get_type\n  [A] g_debug_controller_set_debug_enabled\n  [A] g_dtls_connection_get_ciphersuite_name\n  [A] g_dtls_connection_get_protocol_version\n  [A] g_file_info_get_access_date_time\n  [A] g_file_info_get_creation_date_time\n  [A] g_file_info_set_access_date_time\n  [A] g_file_info_set_creation_date_time\n  [A] g_file_move_async\n  [A] g_file_move_finish\n  [A] g_notification_set_category\n  [A] g_power_profile_monitor_dup_default\n  [A] g_power_profile_monitor_get_power_saver_enabled\n  [A] g_power_profile_monitor_get_type\n  [A] g_resolver_record_type_to_rrtype\n  [A] g_resolver_records_from_res_query\n  [A] g_tls_certificate_get_dns_names\n  [A] g_tls_certificate_get_ip_addresses\n  [A] g_tls_certificate_get_issuer_name\n  [A] g_tls_certificate_get_not_valid_after\n  [A] g_tls_certificate_get_not_valid_before\n  [A] g_tls_certificate_get_subject_name\n  [A] g_tls_certificate_new_from_file_with_password\n  [A] g_tls_certificate_new_from_pkcs12\n  [A] g_tls_connection_get_ciphersuite_name\n  [A] g_tls_connection_get_protocol_version\n  [A] g_tls_protocol_version_get_type\n\n",
+                    "return_code": 4,
+                    "seconds": 0.5088605880737305,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgio-2.0.so.0.6800.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgio-2.0.so.0.7200.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgio-2.0.so.0.7200.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgio-2.0.so.0.6800.4",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgio-2.0.so.0.6800.4\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgio-2.0.so.0.7200.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgio-2.0.so.0.6800.4-abi-laboratory-libgio-2-0-so-0-6800-4-libgio-2-0-so-0-7200-1.html\n",
+                    "return_code": 139,
+                    "seconds": 0.1926867961883545,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgio-2.0.so.0.6800.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgio-2.0.so.0.7200.1 libgio-2-0-so-0-6800-4-libgio-2-0-so-0-7200-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgio-2.0.so.0.6800.4-abi-laboratory-libgio-2-0-so-0-6800-4-libgio-2-0-so-0-7200-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgio-2.0.so.0.7200.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgio-2.0.so.0.6800.4",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgio-2.0.so.0.6800.4": 1938472,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgio-2.0.so.0.7200.1": 1967880
+            }
+        },
+        "experiment": "usr/lib64/libgio-2-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgio-2.0.so.0.7200.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgio-2.0.so.0.6800.4",
+        "different_libs": true
+    }
+]

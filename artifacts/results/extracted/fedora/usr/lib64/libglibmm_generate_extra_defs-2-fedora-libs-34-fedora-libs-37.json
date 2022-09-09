@@ -1,0 +1,81 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libglibmm_generate_extra_defs-2.4.so.1.3.0",
+                    "spliced_lib": "libglibmm_generate_extra_defs-2.4.so.1.3.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "_ZTSSt23_Sp_counted_ptr_inplaceINSt8__detail4_NFAINSt7__cxx1112regex_traitsIcEEEESaIS5_ELN9__gnu_cxx12_Lock_policyE2EE",
+                        "abort",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.914138793945312e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libglibmm_generate_extra_defs-2.4.so.1.3.0",
+                    "spliced_lib": "libglibmm_generate_extra_defs-2.4.so.1.3.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZTSSt23_Sp_counted_ptr_inplaceINSt8__detail4_NFAINSt7__cxx1112regex_traitsIcEEEESaIS5_ELN9__gnu_cxx12_Lock_policyE2EE"
+                    ],
+                    "prediction": false,
+                    "seconds": 8.797645568847656e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (7 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 0 Added function symbol not referenced by debug info\nVariable symbols changes summary: 1 Removed, 1 Added variable symbols not referenced by debug info\n\n1 Removed variable symbol not referenced by debug info:\n\n  [D] _ZTSSt23_Sp_counted_ptr_inplaceINSt8__detail4_NFAINSt7__cxx1112regex_traitsIcEEEESaIS5_ELN9__gnu_cxx12_Lock_policyE2EE\n\n1 Added variable symbol not referenced by debug info:\n\n  [A] _ZTSSt23_Sp_counted_ptr_inplaceINSt8__detail4_NFAINSt7__cxx1112regex_traitsIcEEEESaIvELN9__gnu_cxx12_Lock_policyE2EE\n\n",
+                    "return_code": 12,
+                    "seconds": 0.991645097732544,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0-abi-laboratory-libglibmm_generate_extra_defs-2-4-so-1-3-0-libglibmm_generate_extra_defs-2-4-so-1-3-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.19365763664245605,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0 libglibmm_generate_extra_defs-2-4-so-1-3-0-libglibmm_generate_extra_defs-2-4-so-1-3-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0-abi-laboratory-libglibmm_generate_extra_defs-2-4-so-1-3-0-libglibmm_generate_extra_defs-2-4-so-1-3-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0": 176928,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0": 172976
+            }
+        },
+        "experiment": "usr/lib64/libglibmm_generate_extra_defs-2-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0",
+        "different_libs": true
+    }
+]

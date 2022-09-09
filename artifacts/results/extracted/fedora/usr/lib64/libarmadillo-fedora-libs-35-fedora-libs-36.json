@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarmadillo.so.10.8.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarmadillo.so.10.8.2"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libarmadillo.so.10.8.2",
+                    "spliced_lib": "libarmadillo.so.10.8.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "H5Ovisit"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0001838207244873047
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libarmadillo.so.10.8.2",
+                    "spliced_lib": "libarmadillo.so.10.8.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00257110595703125
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function herr_t arma::arma_H5Ovisit(hid_t, H5_index_t, H5_iter_order_t, H5O_iterate_t, void*)' at wrapper1.cpp:1851:1 has some indirect sub-type changes:\n    parameter 4 of type 'typedef H5O_iterate_t' changed:\n      typedef name changed from H5O_iterate_t to H5O_iterate1_t at H5Opublic.h:1884:1\n      underlying type 'typedef herr_t (typedef hid_t, const char*, const H5O_info_t*, void*)*' changed:\n        in pointed to type 'function type typedef herr_t (typedef hid_t, const char*, const H5O_info_t*, void*)':\n          parameter 3 of type 'const H5O_info_t*' changed:\n            in pointed to type 'const H5O_info_t':\n              'const H5O_info_t' changed to 'const H5O_info1_t'\n\n",
+                    "return_code": 4,
+                    "seconds": 0.2361898422241211,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarmadillo.so.10.8.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarmadillo.so.10.8.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarmadillo.so.10.8.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarmadillo.so.10.8.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarmadillo.so.10.8.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarmadillo.so.10.8.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarmadillo.so.10.8.2-abi-laboratory-libarmadillo-so-10-8-2-libarmadillo-so-10-8-2.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.21716761589050293,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarmadillo.so.10.8.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarmadillo.so.10.8.2 libarmadillo-so-10-8-2-libarmadillo-so-10-8-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarmadillo.so.10.8.2-abi-laboratory-libarmadillo-so-10-8-2-libarmadillo-so-10-8-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarmadillo.so.10.8.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarmadillo.so.10.8.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarmadillo.so.10.8.2": 92664,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarmadillo.so.10.8.2": 92848
+            }
+        },
+        "experiment": "usr/lib64/libarmadillo-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libarmadillo.so.10.8.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libarmadillo.so.10.8.2",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,117 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdap.so.25.2.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdap.so.27.0.5"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdap.so.25.2.3",
+                    "spliced_lib": "libdap.so.27.0.5",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "printf",
+                        "_ZN6libdap5RegexC1EPKci",
+                        "_ZN6libdap5Regex6searchEPKciRii",
+                        "_ZN6libdap5ErrorC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE",
+                        "_ZN6libdap14build_btp_argsEPSt6vectorIPNS_6rvalueESaIS2_EERNS_3DDSE",
+                        "_ZN6libdap5ErrorD1Ev",
+                        "_ZdlPvm",
+                        "_ZN6libdap5RegexC2EPKci",
+                        "_ZN6libdap5RegexC1EPKc",
+                        "_ZN6libdap5ErrorD0Ev",
+                        "_ZN6libdap5Regex5matchEPKcii",
+                        "_ZN6libdap5ErrorC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE",
+                        "_ZTVN6libdap5ErrorE",
+                        "_ZN6libdap5ErrorC2EiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE",
+                        "_ZN6libdap5ErrorC1Ev",
+                        "_ZN6libdap5ErrorD2Ev",
+                        "_ZN6libdap5ErrorC1EiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE",
+                        "_ZN6libdap5ErrorC2ERKS0_",
+                        "_ZN6libdap5ErrorC2Ev",
+                        "_ZN6libdap5ErrorC1ERKS0_",
+                        "_ZN6libdap5RegexC2EPKc"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0006737709045410156
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdap.so.25.2.3",
+                    "spliced_lib": "libdap.so.27.0.5",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZN6libdap5ErrorD1Ev",
+                        "_ZN6libdap5ErrorC2EiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE",
+                        "_ZN6libdap5ErrorC2Ev",
+                        "_ZN6libdap5RegexC2EPKci",
+                        "_ZN6libdap5ErrorC1EiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE",
+                        "_ZN6libdap5RegexC1EPKc",
+                        "_ZN6libdap14build_btp_argsEPSt6vectorIPNS_6rvalueESaIS2_EERNS_3DDSE",
+                        "_ZN6libdap5ErrorC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE",
+                        "_ZN6libdap5ErrorD0Ev",
+                        "_ZN6libdap5ErrorC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE",
+                        "_ZN6libdap5ErrorC1Ev",
+                        "_ZN6libdap5Regex5matchEPKcii",
+                        "_ZN6libdap5RegexC1EPKci",
+                        "_ZN6libdap5Regex6searchEPKciRii",
+                        "_ZN6libdap5ErrorD2Ev",
+                        "_ZN6libdap5ErrorC2ERKS0_",
+                        "_ZTVN6libdap5ErrorE",
+                        "_ZN6libdap5ErrorC1ERKS0_",
+                        "_ZN6libdap5RegexC2EPKc"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.03958487510681152
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 4 Removed, 2 Changed (530 filtered out), 3 Added functions\nVariables changes summary: 0 Removed, 0 Changed (1 filtered out), 0 Added variable\nFunction symbols changes summary: 14 Removed, 8 Added function symbols not referenced by debug info\nVariable symbols changes summary: 1 Removed, 1 Added variable symbols not referenced by debug info\n\nSONAME changed from 'libdap.so.25' to 'libdap.so.27'\n\n4 Removed functions:\n\n  [D] 'method virtual libdap::Error::~Error(int)'    {_ZN6libdap5ErrorD0Ev}\n    note that this removes an entry from the vtable of class libdap::Error\n  [D] 'method virtual libdap::Error::~Error(int)'    {_ZN6libdap5ErrorD1Ev, aliases _ZN6libdap5ErrorD2Ev}\n    note that this removes an entry from the vtable of class libdap::Error\n  [D] 'method virtual libdap::Error::~Error(int)'    {_ZN6libdap5ErrorD2Ev}\n    note that this removes an entry from the vtable of class libdap::Error\n  [D] 'function libdap::BaseType** libdap::build_btp_args(libdap::rvalue_list*, libdap::DDS&)'    {_ZN6libdap14build_btp_argsEPSt6vectorIPNS_6rvalueESaIS2_EERNS_3DDSE}\n\n3 Added functions:\n\n  [A] 'method virtual unsigned int libdap::Int64::buf2val(void**)'    {_ZN6libdap5Int647buf2valEPPv}\n    note that this adds a new entry to the vtable of class libdap::Int64\n  [A] 'method virtual unsigned int libdap::UInt64::buf2val(void**)'    {_ZN6libdap6UInt647buf2valEPPv}\n    note that this adds a new entry to the vtable of class libdap::UInt64\n  [A] 'function libdap::BaseType** libdap::build_btp_args(const libdap::rvalue_list*, libdap::DDS&)'    {_ZN6libdap14build_btp_argsEPKSt6vectorIPNS_6rvalueESaIS2_EERNS_3DDSE}\n\n2 functions with some indirect sub-type change:\n\n  [C] 'method virtual void libdap::Array::add_constraint(libdap::Array::Dim_iter, libdap::D4Dimension*)' at Array.cc:676:1 has some indirect sub-type changes:\n    parameter 2 of type 'libdap::D4Dimension*' has sub-type changes:\n      in pointed to type 'class libdap::D4Dimension' at D4Dimensions.h:41:1:\n        type size hasn't changed\n        1 data member changes (2 filtered):\n          type of 'unsigned long int d_size' changed:\n            type name changed from 'unsigned long int' to 'long long unsigned int'\n            type size hasn't changed\n\n  [C] 'method virtual void libdap::D4Enum::set_enumeration(libdap::D4EnumDef*)' at D4Enum.h:122:1 has some indirect sub-type changes:\n    parameter 1 of type 'libdap::D4EnumDef*' has sub-type changes:\n      in pointed to type 'class libdap::D4EnumDef' at D4EnumDefs.h:42:1:\n        type size changed from 576 to 640 (in bits)\n        3 member function insertions:\n          'method virtual libdap::D4EnumDef::~D4EnumDef(int)' at D4EnumDefs.h:75:1\n          'method virtual libdap::D4EnumDef::~D4EnumDef(int)' at D4EnumDefs.h:75:1\n          'method virtual libdap::D4EnumDef::~D4EnumDef(int)' at D4EnumDefs.h:75:1\n        4 data member changes:\n          'std::string d_name' offset changed from 0 to 64 (in bits) (by +64 bits)\n          'libdap::Type d_type' offset changed from 256 to 320 (in bits) (by +64 bits)\n          'libdap::D4EnumDefs* d_parent' offset changed from 320 to 384 (in bits) (by +64 bits)\n          'std::vector<libdap::D4EnumDef::tuple, std::allocator<libdap::D4EnumDef::tuple> > d_tuples' offset changed from 384 to 448 (in bits) (by +64 bits)\n\n14 Removed function symbols not referenced by debug info:\n\n  [D] _ZN6libdap5ErrorC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE\n  [D] _ZN6libdap5ErrorC1ERKS0_\n  [D] _ZN6libdap5ErrorC1EiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE\n  [D] _ZN6libdap5ErrorC1Ev\n  [D] _ZN6libdap5ErrorC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, aliases _ZN6libdap5ErrorC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE\n  [D] _ZN6libdap5ErrorC2ERKS0_, aliases _ZN6libdap5ErrorC1ERKS0_\n  [D] _ZN6libdap5ErrorC2EiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, aliases _ZN6libdap5ErrorC1EiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE\n  [D] _ZN6libdap5ErrorC2Ev, aliases _ZN6libdap5ErrorC1Ev\n  [D] _ZN6libdap5Regex5matchEPKcii\n  [D] _ZN6libdap5Regex6searchEPKciRii\n  [D] _ZN6libdap5RegexC1EPKc, aliases _ZN6libdap5RegexC2EPKc\n  [D] _ZN6libdap5RegexC1EPKci\n  [D] _ZN6libdap5RegexC2EPKc\n  [D] _ZN6libdap5RegexC2EPKci, aliases _ZN6libdap5RegexC1EPKci\n\n8 Added function symbols not referenced by debug info:\n\n  [A] _ZN6libdap11InternalErraSERKS0_\n  [A] _ZN6libdap3DDS19get_request_size_kbEb\n  [A] _ZN6libdap3DMR15request_size_kbEb\n  [A] _ZN6libdap7D4Group15request_size_kbEb\n  [A] _ZNK6libdap5Regex5matchEPKcii\n  [A] _ZNK6libdap5Regex5matchERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE\n  [A] _ZNK6libdap5Regex6searchEPKciRii\n  [A] _ZNK6libdap5Regex6searchERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERi\n\n1 Removed variable symbol not referenced by debug info:\n\n  [D] _ZTVN6libdap5ErrorE\n\n1 Added variable symbol not referenced by debug info:\n\n  [A] _ZTSN6libdap9D4EnumDefE\n\n",
+                    "return_code": 12,
+                    "seconds": 9.67018723487854,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdap.so.25.2.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdap.so.27.0.5",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdap.so.27.0.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdap.so.25.2.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdap.so.25.2.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdap.so.27.0.5\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdap.so.25.2.3-abi-laboratory-libdap-so-25-2-3-libdap-so-27-0-5.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2461857795715332,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdap.so.25.2.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdap.so.27.0.5 libdap-so-25-2-3-libdap-so-27-0-5 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdap.so.25.2.3-abi-laboratory-libdap-so-25-2-3-libdap-so-27-0-5.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdap.so.27.0.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdap.so.25.2.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdap.so.25.2.3": 1707024,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdap.so.27.0.5": 1785280
+            }
+        },
+        "experiment": "usr/lib64/libdap-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdap.so.27.0.5",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdap.so.25.2.3",
+        "different_libs": true
+    }
+]

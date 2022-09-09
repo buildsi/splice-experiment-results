@@ -1,0 +1,97 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm.so.6.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm.so.6.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgdbm.so.6.0.0",
+                    "spliced_lib": "libgdbm.so.6.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "get_len",
+                        "_gdbm_init_cache",
+                        "_gdbm_cache_entry_invalidate",
+                        "gdbm_bucket_element_valid_p",
+                        "read_record",
+                        "_gdbm_read_bucket_at",
+                        "gdbm_load_bdb_dump",
+                        "_gdbm_load_file",
+                        "gdbm_dir_entry_valid_p",
+                        "gdbm_avail_table_valid_p"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.8650970458984375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgdbm.so.6.0.0",
+                    "spliced_lib": "libgdbm.so.6.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "gdbm_bucket_element_valid_p",
+                        "gdbm_dir_entry_valid_p",
+                        "_gdbm_load_file",
+                        "get_len",
+                        "_gdbm_read_bucket_at",
+                        "_gdbm_init_cache",
+                        "gdbm_avail_table_valid_p",
+                        "_gdbm_cache_entry_invalidate",
+                        "gdbm_load_bdb_dump",
+                        "read_record"
+                    ],
+                    "prediction": false,
+                    "seconds": 8.0108642578125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 10 Removed, 2 Changed (59 filtered out), 19 Added functions\nVariables changes summary: 0 Removed, 1 Changed, 0 Added variable\n\n10 Removed functions:\n\n  [D] 'function void _gdbm_cache_entry_invalidate(GDBM_FILE, int)'    {_gdbm_cache_entry_invalidate}\n  [D] 'function int _gdbm_init_cache(GDBM_FILE, size_t)'    {_gdbm_init_cache}\n  [D] 'function int _gdbm_load_file(dump_file*, GDBM_FILE, GDBM_FILE*, int, int)'    {_gdbm_load_file}\n  [D] 'function int _gdbm_read_bucket_at(GDBM_FILE, off_t, hash_bucket*, size_t)'    {_gdbm_read_bucket_at}\n  [D] 'function int gdbm_avail_table_valid_p(GDBM_FILE, avail_elem*, int)'    {gdbm_avail_table_valid_p}\n  [D] 'function int gdbm_bucket_element_valid_p(GDBM_FILE, int)'    {gdbm_bucket_element_valid_p}\n  [D] 'function int gdbm_dir_entry_valid_p(GDBM_FILE, int)'    {gdbm_dir_entry_valid_p}\n  [D] 'function int gdbm_load_bdb_dump(dump_file*, GDBM_FILE, int)'    {gdbm_load_bdb_dump}\n  [D] 'function int get_len(const char*, size_t*)'    {get_len}\n  [D] 'function int read_record(dump_file*, char*, int, datum*)'    {read_record}\n\n19 Added functions:\n\n  [A] 'function int _gdbm_avail_block_read(GDBM_FILE, avail_block*, size_t)'    {_gdbm_avail_block_read}\n  [A] 'function int _gdbm_cache_flush(GDBM_FILE)'    {_gdbm_cache_flush}\n  [A] 'function void _gdbm_cache_free(GDBM_FILE)'    {_gdbm_cache_free}\n  [A] 'function int _gdbm_cache_init(GDBM_FILE, size_t)'    {_gdbm_cache_init}\n  [A] 'function cache_tree* _gdbm_cache_tree_alloc()'    {_gdbm_cache_tree_alloc}\n  [A] 'function void _gdbm_cache_tree_delete(cache_tree*, cache_node*)'    {_gdbm_cache_tree_delete}\n  [A] 'function void _gdbm_cache_tree_destroy(cache_tree*)'    {_gdbm_cache_tree_destroy}\n  [A] 'function int _gdbm_cache_tree_lookup(cache_tree*, off_t, cache_node**)'    {_gdbm_cache_tree_lookup}\n  [A] 'function int _gdbm_fetch_data(GDBM_FILE, off_t, size_t, void*)'    {_gdbm_fetch_data}\n  [A] 'function int _gdbm_snapshot(GDBM_FILE)'    {_gdbm_snapshot}\n  [A] 'function int _gdbm_str2fmt(const char*)'    {_gdbm_str2fmt}\n  [A] 'function int gdbm_avail_traverse(GDBM_FILE, int (avail_block*, typedef off_t, void*)*, void*)'    {gdbm_avail_traverse}\n  [A] 'function int gdbm_avail_verify(GDBM_FILE)'    {gdbm_avail_verify}\n  [A] 'function int gdbm_bucket_count(GDBM_FILE, size_t*)'    {gdbm_bucket_count}\n  [A] 'function int gdbm_convert(GDBM_FILE, int)'    {gdbm_convert}\n  [A] 'function int gdbm_failure_atomic(GDBM_FILE, const char*, const char*)'    {gdbm_failure_atomic}\n  [A] 'function int gdbm_file_sync(GDBM_FILE)'    {gdbm_file_sync}\n  [A] 'function void gdbm_get_cache_stats(GDBM_FILE, size_t*, size_t*, size_t*, gdbm_cache_stat*, size_t)'    {gdbm_get_cache_stats}\n  [A] 'function int gdbm_latest_snapshot(const char*, const char*, const char**)'    {gdbm_latest_snapshot}\n\n2 functions with some indirect sub-type change:\n\n  [C] 'function off_t _gdbm_alloc(GDBM_FILE, int)' at falloc.c:68:1 has some indirect sub-type changes:\n    parameter 1 of type 'typedef GDBM_FILE' has sub-type changes:\n      underlying type 'gdbm_file_info*' changed:\n        in pointed to type 'struct gdbm_file_info' at gdbmdefs.h:215:1:\n          type size changed from 1344 to 2048 (in bits)\n          1 data member deletion:\n            'size_t last_read', at offset 704 (in bits) at gdbmdefs.h:230:1\n          13 data member insertions:\n            'avail_block* avail', at offset 512 (in bits) at gdbmdefs.h:267:1\n            'gdbm_ext_header* xheader', at offset 640 (in bits) at gdbmdefs.h:271:1\n            'size_t cache_num', at offset 832 (in bits) at gdbmdefs.h:279:1\n            'cache_tree* cache_tree', at offset 896 (in bits) at gdbmdefs.h:281:1\n            'cache_elem* cache_mru', at offset 960 (in bits) at gdbmdefs.h:283:1\n            'cache_elem* cache_lru', at offset 1024 (in bits) at gdbmdefs.h:284:1\n            'cache_elem* cache_avail', at offset 1088 (in bits) at gdbmdefs.h:285:1\n            'size_t cache_access_count', at offset 1344 (in bits) at gdbmdefs.h:297:1\n            'size_t cache_hits', at offset 1408 (in bits) at gdbmdefs.h:298:1\n            'off_t file_size', at offset 1536 (in bits) at gdbmdefs.h:307:1\n            'int mmap_preread', at offset 1920 (in bits) at gdbmdefs.h:317:1\n            'int eo', at offset 1952 (in bits) at gdbmdefs.h:321:1\n            'int snapfd[2]', at offset 1984 (in bits) at gdbmdefs.h:323:1\n          16 data member changes:\n            type of 'cache_elem* bucket_cache' changed:\n              entity changed from 'cache_elem*' to 'typedef size_t' at stddef.h:209:1\n              type size hasn't changed\n            and name of 'gdbm_file_info::bucket_cache' changed to 'gdbm_file_info::avail_size' at gdbmdefs.h:268:1\n            type of 'gdbm_file_header* header' changed:\n              in pointed to type 'typedef gdbm_file_header' at gdbmdefs.h:98:1:\n                underlying type 'struct gdbm_file_header' at gdbmdefs.h:84:1 changed:\n                  type size changed from 576 to 320 (in bits)\n                  1 data member deletion:\n                    'avail_block avail', at offset 320 (in bits) at gdbmdefs.h:94:1\n            'off_t* dir' offset changed from 512 to 704 (in bits) (by +192 bits)\n            'size_t cache_size' offset changed from 640 to 768 (in bits) (by +128 bits)\n            'hash_bucket* bucket' offset changed from 768 to 1216 (in bits) (by +448 bits)\n            'int bucket_dir' offset changed from 832 to 1280 (in bits) (by +448 bits)\n            type of 'cache_elem* cache_entry' changed:\n              in pointed to type 'typedef cache_elem' at gdbmdefs.h:181:1:\n                underlying type 'struct cache_elem' at gdbmdefs.h:160:1 changed:\n                  type size changed from 512 to 1792 (in bits)\n                  4 data member insertions:\n                    'cache_elem* ca_prev', at offset 448 (in bits) at gdbmdefs.h:197:1\n                    'cache_elem* ca_next', at offset 512 (in bits) at gdbmdefs.h:198:1\n                    'size_t ca_hits', at offset 576 (in bits) at gdbmdefs.h:202:1\n                    'cache_node* ca_node', at offset 640 (in bits) at gdbmdefs.h:203:1\n                  4 data member changes:\n                    type of 'hash_bucket* ca_bucket' changed:\n                      entity changed from 'hash_bucket*' to 'hash_bucket[1]'\n                      type size changed from 64 to 1088 (in bits)\n                    and offset changed from 0 to 704 (in bits) (by +704 bits)\n                    'off_t ca_adr' offset changed from 64 to 0 (in bits) (by -64 bits)\n                    'char ca_changed' offset changed from 128 to 64 (in bits) (by -64 bits)\n                    'data_cache_elem ca_data' offset changed from 192 to 128 (in bits) (by -64 bits)\n            and offset changed from 896 to 1152 (in bits) (by +256 bits)\n            'unsigned int header_changed' offset changed from 960 to 1472 (in bits) (by +512 bits)\n            'unsigned int directory_changed' offset changed from 961 to 1473 (in bits) (by +512 bits)\n            'unsigned int bucket_changed' offset changed from 962 to 1474 (in bits) (by +512 bits)\n            'unsigned int second_changed' offset changed from 963 to 1475 (in bits) (by +512 bits)\n            'size_t mapped_size_max' offset changed from 1024 to 1600 (in bits) (by +576 bits)\n            'void* mapped_region' offset changed from 1088 to 1664 (in bits) (by +576 bits)\n            'size_t mapped_size' offset changed from 1152 to 1728 (in bits) (by +576 bits)\n            'off_t mapped_pos' offset changed from 1216 to 1792 (in bits) (by +576 bits)\n            'off_t mapped_off' offset changed from 1280 to 1856 (in bits) (by +576 bits)\n\n  [C] 'function int gdbm_avail_block_validate(GDBM_FILE, avail_block*)' at avail.c:78:1 has some indirect sub-type changes:\n    parameter 3 of type 'typedef size_t' was added\n\n1 Changed variable:\n\n  [C] 'const char* const gdbm_errlist[]' was changed at gdbm.h:273:1:\n    size of symbol changed from 320 to 360\n\n",
+                    "return_code": 12,
+                    "seconds": 0.07235407829284668,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm.so.6.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm.so.6.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm.so.6.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm.so.6.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm.so.6.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm.so.6.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm.so.6.0.0-abi-laboratory-libgdbm-so-6-0-0-libgdbm-so-6-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.18704819679260254,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm.so.6.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm.so.6.0.0 libgdbm-so-6-0-0-libgdbm-so-6-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm.so.6.0.0-abi-laboratory-libgdbm-so-6-0-0-libgdbm-so-6-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm.so.6.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm.so.6.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm.so.6.0.0": 65720,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm.so.6.0.0": 78096
+            }
+        },
+        "experiment": "usr/lib64/libgdbm-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgdbm.so.6.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgdbm.so.6.0.0",
+        "different_libs": true
+    }
+]

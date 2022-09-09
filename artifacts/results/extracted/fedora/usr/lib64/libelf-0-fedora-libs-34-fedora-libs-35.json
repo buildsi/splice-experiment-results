@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libelf-0.186.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libelf-0.187.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libelf-0.186.so",
+                    "spliced_lib": "libelf-0.187.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.5789947509765625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libelf-0.186.so",
+                    "spliced_lib": "libelf-0.187.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00011229515075683594
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (65 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function long int elf32_checksum(Elf*)' at elf32_checksum.c:54:1 has some indirect sub-type changes:\n    parameter 1 of type 'Elf*' has sub-type changes:\n      in pointed to type 'typedef Elf' at libelf.h:216:1:\n        underlying type 'struct Elf' at libelfP.h:273:1 changed:\n          type size hasn't changed\n          1 data member changes (2 filtered):\n            type of 'union {struct {void* ehdr; void* shdr; void* phdr; Elf_ScnList* scns_last; Elf_Data_Chunk* rawchunks; unsigned int scnincr; int ehdr_flags; int phdr_flags; int shdr_malloced; off_t sizestr_offset;} elf; struct {Elf32_Ehdr* ehdr; Elf32_Shdr* shdr; Elf32_Phdr* phdr; Elf_ScnList* scns_last; Elf_Data_Chunk* rawchunks; unsigned int scnincr; int ehdr_flags; int phdr_flags; int shdr_malloced; int64_t sizestr_offset; Elf32_Ehdr ehdr_mem; char __e32scnspad[12]; Elf_ScnList scns;} elf32; struct {Elf64_Ehdr* ehdr; Elf64_Shdr* shdr; Elf64_Phdr* phdr; Elf_ScnList* scns_last; Elf_Data_Chunk* rawchunks; unsigned int scnincr; int ehdr_flags; int phdr_flags; int shdr_malloced; int64_t sizestr_offset; Elf64_Ehdr ehdr_mem; Elf_ScnList scns;} elf64; struct {Elf* children; Elf_Arsym* ar_sym; size_t ar_sym_num; char* long_names; size_t long_names_len; int64_t offset; Elf_Arhdr elf_ar_hdr; ar_hdr ar_hdr; char ar_name[16]; char raw_name[17];} ar;} state' changed:\n              type size hasn't changed\n              1 data member changes (3 filtered):\n                type of 'struct {void* ehdr; void* shdr; void* phdr; Elf_ScnList* scns_last; Elf_Data_Chunk* rawchunks; unsigned int scnincr; int ehdr_flags; int phdr_flags; int shdr_malloced; off_t sizestr_offset;} elf' changed:\n                  type size hasn't changed\n                  1 data member changes (1 filtered):\n                    type of 'Elf_Data_Chunk* rawchunks' changed:\n                      in pointed to type 'struct Elf_Data_Chunk' at libelfP.h:261:1:\n                        type size changed from 2048 to 2112 (in bits)\n                        1 data member insertion:\n                          'int64_t offset', at offset 2048 (in bits) at libelfP.h:269:1\n                        no data member changes (2 filtered);\n\n",
+                    "return_code": 4,
+                    "seconds": 0.11850380897521973,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libelf-0.186.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libelf-0.187.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libelf-0.187.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libelf-0.186.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libelf-0.186.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libelf-0.187.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libelf-0.186.so-abi-laboratory-libelf-0-186-so-libelf-0-187-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.18727350234985352,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libelf-0.186.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libelf-0.187.so libelf-0-186-so-libelf-0-187-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libelf-0.186.so-abi-laboratory-libelf-0-186-so-libelf-0-187-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libelf-0.187.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libelf-0.186.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libelf-0.186.so": 108728,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libelf-0.187.so": 108400
+            }
+        },
+        "experiment": "usr/lib64/libelf-0-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libelf-0.187.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libelf-0.186.so",
+        "different_libs": true
+    }
+]
