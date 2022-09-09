@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtheora.so.0.3.10"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtheora.so.0.3.10"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtheora.so.0.3.10",
+                    "spliced_lib": "libtheora.so.0.3.10",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.981590270996094e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtheora.so.0.3.10",
+                    "spliced_lib": "libtheora.so.0.3.10",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.8358230590820312e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.06920313835144043,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtheora.so.0.3.10 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtheora.so.0.3.10",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtheora.so.0.3.10",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtheora.so.0.3.10",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtheora.so.0.3.10\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtheora.so.0.3.10\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtheora.so.0.3.10-abi-laboratory-libtheora-so-0-3-10-libtheora-so-0-3-10.html\nFound link to libtheora.so.0.3.10-1.1.1-29.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libtheora.so.0.3.10-1.1.1-29.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libtheora-1.1.1-29.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 26134\nERROR: incomplete info for symbol 26228\nERROR: incomplete info for symbol 26485\nERROR: incomplete info for symbol 26633\nERROR: incomplete info for symbol 26784\nERROR: incomplete info for symbol 26883\nERROR: incomplete info for symbol 27317\nERROR: incomplete info for symbol 27397\nERROR: incomplete info for symbol 27531\nERROR: incomplete info for symbol 27754\nERROR: incomplete info for symbol 27944\nERROR: incomplete info for symbol 28036\nERROR: incomplete info for symbol 28107\nERROR: incomplete info for symbol 28864\nERROR: incomplete info for symbol 35608\nERROR: incomplete info for symbol 50128\nERROR: incomplete info for symbol 53307\nERROR: incomplete info for symbol 90958\nERROR: incomplete info for symbol 91237\nERROR: incomplete info for symbol 91432\nERROR: incomplete info for symbol 91768\nERROR: incomplete info for symbol 95203\nERROR: incomplete info for symbol 96927\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-LPcEw.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libtheora.so.0.3.10-1.1.1-31.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libtheora.so.0.3.10-1.1.1-31.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libtheora-1.1.1-31.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 25858\nERROR: incomplete info for symbol 25952\nERROR: incomplete info for symbol 26209\nERROR: incomplete info for symbol 26357\nERROR: incomplete info for symbol 26508\nERROR: incomplete info for symbol 26607\nERROR: incomplete info for symbol 27030\nERROR: incomplete info for symbol 27110\nERROR: incomplete info for symbol 27244\nERROR: incomplete info for symbol 27465\nERROR: incomplete info for symbol 27650\nERROR: incomplete info for symbol 27742\nERROR: incomplete info for symbol 27813\nERROR: incomplete info for symbol 28570\nERROR: incomplete info for symbol 35290\nERROR: incomplete info for symbol 49961\nERROR: incomplete info for symbol 53130\nERROR: incomplete info for symbol 89128\nERROR: incomplete info for symbol 89412\nERROR: incomplete info for symbol 89607\nERROR: incomplete info for symbol 89941\nERROR: incomplete info for symbol 93395\nERROR: incomplete info for symbol 95115\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-cuhuh.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtheora.so.0.3.10-abi-laboratory-libtheora-so-0-3-10-libtheora-so-0-3-10.html\n",
+                    "return_code": 0,
+                    "seconds": 1.7523646354675293,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtheora.so.0.3.10 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtheora.so.0.3.10 libtheora-so-0-3-10-libtheora-so-0-3-10 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtheora.so.0.3.10-abi-laboratory-libtheora-so-0-3-10-libtheora-so-0-3-10.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtheora.so.0.3.10",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtheora.so.0.3.10",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtheora.so.0.3.10": 215280,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtheora.so.0.3.10": 219352
+            }
+        },
+        "experiment": "usr/lib64/libtheora-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtheora.so.0.3.10",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtheora.so.0.3.10",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/light.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/light.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "light.so",
+                    "spliced_lib": "light.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.413459777832031e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "light.so",
+                    "spliced_lib": "light.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.221366882324219e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.5448429584503174,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/light.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/light.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/light.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/light.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/light.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/light.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/light.so-abi-laboratory-light-so-light-so.html\nFound link to light.so-3.5.10-111.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file light.so-3.5.10-111.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/plugins/styles/../../../../../.dwz/kdelibs3-3.5.10-111.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1161\nERROR: incomplete info for symbol 1284\nERROR: incomplete info for symbol 2356\nERROR: incomplete info for symbol 4588\nERROR: incomplete info for symbol 4727\nERROR: incomplete info for symbol 4794\nERROR: incomplete info for symbol 4845\nERROR: incomplete info for symbol 10722\nERROR: incomplete info for symbol 11037\nERROR: incomplete info for symbol 12094\nERROR: incomplete info for symbol 12141\nERROR: incomplete info for symbol 13077\nERROR: incomplete info for symbol 13492\nERROR: incomplete info for symbol 13568\nERROR: incomplete info for symbol 13639\nERROR: incomplete info for symbol 13724\nERROR: incomplete info for symbol 36434\nERROR: incomplete info for symbol 60991\nERROR: incomplete info for symbol 76122\nERROR: incomplete info for symbol 90388\nERROR: incomplete info for symbol 90816\nERROR: incomplete info for symbol 91239\nERROR: incomplete info for symbol 91778\nERROR: incomplete info for symbol 92722\nERROR: incomplete info for symbol 94277\nERROR: incomplete info for symbol 105161\nERROR: incomplete info for symbol 115870\nERROR: incomplete info for symbol 116016\nERROR: incomplete info for symbol 119080\nERROR: incomplete info for symbol 119192\nERROR: incomplete info for symbol 119351\nERROR: incomplete info for symbol 119445\nERROR: incomplete info for symbol 119539\nERROR: incomplete info for symbol 119744\nERROR: incomplete info for symbol 119867\nERROR: incomplete info for symbol 120053\nERROR: incomplete info for symbol 120100\nERROR: incomplete info for symbol 120520\nERROR: incomplete info for symbol 123326\nERROR: incomplete info for symbol 123471\nERROR: incomplete info for symbol 126684\nERROR: incomplete info for symbol 126795\nERROR: incomplete info for symbol 126952\nERROR: incomplete info for symbol 127045\nERROR: incomplete info for symbol 127138\nReading v-tables\nlibkdefx.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-KHFpT.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to light.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file light.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/plugins/styles/../../../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1161\nERROR: incomplete info for symbol 1284\nERROR: incomplete info for symbol 2361\nERROR: incomplete info for symbol 4592\nERROR: incomplete info for symbol 4730\nERROR: incomplete info for symbol 4797\nERROR: incomplete info for symbol 4848\nERROR: incomplete info for symbol 10743\nERROR: incomplete info for symbol 11058\nERROR: incomplete info for symbol 12115\nERROR: incomplete info for symbol 12162\nERROR: incomplete info for symbol 13098\nERROR: incomplete info for symbol 13513\nERROR: incomplete info for symbol 13589\nERROR: incomplete info for symbol 13660\nERROR: incomplete info for symbol 13745\nERROR: incomplete info for symbol 36206\nERROR: incomplete info for symbol 60590\nERROR: incomplete info for symbol 75318\nERROR: incomplete info for symbol 89577\nERROR: incomplete info for symbol 90005\nERROR: incomplete info for symbol 90428\nERROR: incomplete info for symbol 90967\nERROR: incomplete info for symbol 91906\nERROR: incomplete info for symbol 93461\nERROR: incomplete info for symbol 104391\nERROR: incomplete info for symbol 115163\nERROR: incomplete info for symbol 115309\nERROR: incomplete info for symbol 118360\nERROR: incomplete info for symbol 118472\nERROR: incomplete info for symbol 118631\nERROR: incomplete info for symbol 118725\nERROR: incomplete info for symbol 118819\nERROR: incomplete info for symbol 119024\nERROR: incomplete info for symbol 119147\nERROR: incomplete info for symbol 119333\nERROR: incomplete info for symbol 119380\nERROR: incomplete info for symbol 119800\nERROR: incomplete info for symbol 122659\nERROR: incomplete info for symbol 122804\nERROR: incomplete info for symbol 126011\nERROR: incomplete info for symbol 126122\nERROR: incomplete info for symbol 126279\nERROR: incomplete info for symbol 126372\nERROR: incomplete info for symbol 126465\nReading v-tables\nlibkdefx.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-00zQF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/light.so-abi-laboratory-light-so-light-so.html\n",
+                    "return_code": 0,
+                    "seconds": 17.147104501724243,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/light.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/light.so light-so-light-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/light.so-abi-laboratory-light-so-light-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/light.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/light.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/light.so": 98688,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/light.so": 98856
+            }
+        },
+        "experiment": "usr/lib64/kde3/plugins/styles/light-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/plugins/styles/light.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/plugins/styles/light.so",
+        "different_libs": true
+    }
+]

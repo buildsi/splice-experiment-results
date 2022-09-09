@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "ld-linux-x86-64.so.2",
+                    "spliced_lib": "ld-linux-x86-64.so.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.075599670410156e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "ld-linux-x86-64.so.2",
+                    "spliced_lib": "ld-linux-x86-64.so.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.8596649169921875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (6 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed (2 filtered out), 0 Added variables\n\n",
+                    "return_code": 0,
+                    "seconds": 0.14919495582580566,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2-abi-laboratory-ld-linux-x86-64-so-2-ld-linux-x86-64-so-2.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.334500789642334,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2 ld-linux-x86-64-so-2-ld-linux-x86-64-so-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2-abi-laboratory-ld-linux-x86-64-so-2-ld-linux-x86-64-so-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2": 916624,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2": 928896
+            }
+        },
+        "experiment": "usr/lib64/ld-linux-x86-64-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtcl8.6.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtcl8.6.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtcl8.6.so",
+                    "spliced_lib": "libtcl8.6.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__xmknod",
+                        "_environ",
+                        "__xstat",
+                        "__lxstat"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00018644332885742188
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtcl8.6.so",
+                    "spliced_lib": "libtcl8.6.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.004651784896850586
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 9 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n9 functions with some indirect sub-type change:\n\n  [C] 'function void TclBN_mp_clear_multi(mp_int*)' at bn_mp_clear_multi.c:8:1 has some indirect sub-type changes:\n    parameter 2 of type '...' was added\n\n  [C] 'function mp_err TclBN_mp_init_multi(mp_int*)' at bn_mp_init_multi.c:8:1 has some indirect sub-type changes:\n    parameter 2 of type '...' was added\n\n  [C] 'function void Tcl_AppendPrintfToObj(Tcl_Obj*, const char*)' at tclStringObj.c:2651:1 has some indirect sub-type changes:\n    parameter 3 of type '...' was added\n\n  [C] 'function void Tcl_AppendResult(Tcl_Interp*)' at tclResult.c:684:1 has some indirect sub-type changes:\n    parameter 2 of type '...' was added\n\n  [C] 'function void Tcl_AppendStringsToObj(Tcl_Obj*)' at tclStringObj.c:1703:1 has some indirect sub-type changes:\n    parameter 2 of type '...' was added\n\n  [C] 'function Tcl_Obj* Tcl_ObjPrintf(const char*)' at tclStringObj.c:2678:1 has some indirect sub-type changes:\n    parameter 2 of type '...' was added\n\n  [C] 'function void Tcl_Panic(const char*)' at tclPanic.c:153:1 has some indirect sub-type changes:\n    parameter 2 of type '...' was added\n\n  [C] 'function void Tcl_SetErrorCode(Tcl_Interp*)' at tclResult.c:1058:1 has some indirect sub-type changes:\n    parameter 2 of type '...' was added\n\n  [C] 'function int Tcl_VarEval(Tcl_Interp*)' at tclBasic.c:6978:1 has some indirect sub-type changes:\n    parameter 2 of type '...' was added\n\n",
+                    "return_code": 4,
+                    "seconds": 0.5317316055297852,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtcl8.6.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtcl8.6.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtcl8.6.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtcl8.6.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtcl8.6.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtcl8.6.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtcl8.6.so-abi-laboratory-libtcl8-6-so-libtcl8-6-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.18959689140319824,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtcl8.6.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtcl8.6.so libtcl8-6-so-libtcl8-6-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtcl8.6.so-abi-laboratory-libtcl8-6-so-libtcl8-6-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtcl8.6.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtcl8.6.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtcl8.6.so": 1968632,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtcl8.6.so": 2093424
+            }
+        },
+        "experiment": "usr/lib64/libtcl8-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtcl8.6.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtcl8.6.so",
+        "different_libs": true
+    }
+]

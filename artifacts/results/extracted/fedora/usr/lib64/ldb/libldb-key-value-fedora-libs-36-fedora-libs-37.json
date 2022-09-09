@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-key-value.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-key-value.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldb-key-value.so",
+                    "spliced_lib": "libldb-key-value.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.412101745605469e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldb-key-value.so",
+                    "spliced_lib": "libldb-key-value.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.1219253540039062e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 33 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 2 Removed, 0 Changed, 0 Added variables\n\n33 Removed functions:\n\n  [D] 'function int ldb_kv_cache_load(ldb_module*)'    {ldb_kv_cache_load@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_cache_reload(ldb_module*)'    {ldb_kv_cache_reload@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_check_at_attributes_values(const ldb_val*)'    {ldb_kv_check_at_attributes_values@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_delete_noindex(ldb_module*, const ldb_message*)'    {ldb_kv_delete_noindex@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_filter_attrs(ldb_context*, const ldb_message*, const char* const*, ldb_message*)'    {ldb_kv_filter_attrs@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_guid_to_key(const ldb_val*, ldb_val*)'    {ldb_kv_guid_to_key@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_idx_to_key(ldb_module*, ldb_kv_private*, TALLOC_CTX*, const ldb_val*, ldb_val*)'    {ldb_kv_idx_to_key@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_increase_sequence_number(ldb_module*)'    {ldb_kv_increase_sequence_number@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_index_add_element(ldb_module*, ldb_kv_private*, const ldb_message*, ldb_message_element*)'    {ldb_kv_index_add_element@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_index_add_new(ldb_module*, ldb_kv_private*, const ldb_message*)'    {ldb_kv_index_add_new@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_index_del_element(ldb_module*, ldb_kv_private*, const ldb_message*, ldb_message_element*)'    {ldb_kv_index_del_element@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_index_del_value(ldb_module*, ldb_kv_private*, const ldb_message*, ldb_message_element*, unsigned int)'    {ldb_kv_index_del_value@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_index_delete(ldb_module*, const ldb_message*)'    {ldb_kv_index_delete@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_index_sub_transaction_cancel(ldb_kv_private*)'    {ldb_kv_index_sub_transaction_cancel@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_index_sub_transaction_commit(ldb_kv_private*)'    {ldb_kv_index_sub_transaction_commit@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_index_sub_transaction_start(ldb_kv_private*)'    {ldb_kv_index_sub_transaction_start@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_index_transaction_cancel(ldb_module*)'    {ldb_kv_index_transaction_cancel@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_index_transaction_commit(ldb_module*)'    {ldb_kv_index_transaction_commit@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_index_transaction_start(ldb_module*, size_t)'    {ldb_kv_index_transaction_start@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_init_store(ldb_kv_private*, const char*, ldb_context*, const char**, ldb_module**)'    {ldb_kv_init_store@@LDB_2.5.2_LDB}\n  [D] 'function ldb_val ldb_kv_key_dn(TALLOC_CTX*, ldb_dn*)'    {ldb_kv_key_dn@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_key_dn_from_idx(ldb_module*, ldb_kv_private*, TALLOC_CTX*, ldb_dn*, ldb_val*)'    {ldb_kv_key_dn_from_idx@@LDB_2.5.2_LDB}\n  [D] 'function bool ldb_kv_key_is_normal_record(ldb_val)'    {ldb_kv_key_is_normal_record@@LDB_2.5.2_LDB}\n  [D] 'function ldb_val ldb_kv_key_msg(ldb_module*, TALLOC_CTX*, const ldb_message*)'    {ldb_kv_key_msg@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_modify_internal(ldb_module*, const ldb_message*, ldb_request*)'    {ldb_kv_modify_internal@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_reindex(ldb_module*)'    {ldb_kv_reindex@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_repack(ldb_module*)'    {ldb_kv_repack@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_search(ldb_kv_context*)'    {ldb_kv_search@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_search_base(ldb_module*, TALLOC_CTX*, ldb_dn*, ldb_dn**)'    {ldb_kv_search_base@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_search_dn1(ldb_module*, ldb_dn*, ldb_message*, unsigned int)'    {ldb_kv_search_dn1@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_search_indexed(ldb_kv_context*, uint32_t*)'    {ldb_kv_search_indexed@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_search_key(ldb_module*, ldb_kv_private*, const ldb_val, ldb_message*, unsigned int)'    {ldb_kv_search_key@@LDB_2.5.2_LDB}\n  [D] 'function int ldb_kv_store(ldb_module*, const ldb_message*, int)'    {ldb_kv_store@@LDB_2.5.2_LDB}\n\n2 Removed variables:\n\n  [D] 'ldb_val end_of_db_key'    {end_of_db_key@@LDB_2.5.2_LDB}\n  [D] 'ldb_val start_of_db_key'    {start_of_db_key@@LDB_2.5.2_LDB}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.03831362724304199,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-key-value.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-key-value.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-key-value.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-key-value.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-key-value.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-key-value.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-key-value.so-abi-laboratory-libldb-key-value-so-libldb-key-value-so.html\nFound link to libldb-key-value.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libldb-key-value.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 18827\nERROR: incomplete info for symbol 19057\nERROR: incomplete info for symbol 19965\nERROR: incomplete info for symbol 20438\nERROR: incomplete info for symbol 21525\nERROR: incomplete info for symbol 22211\nERROR: incomplete info for symbol 29786\nERROR: incomplete info for symbol 30142\nERROR: incomplete info for symbol 30451\nERROR: incomplete info for symbol 32770\nERROR: incomplete info for symbol 33000\nERROR: incomplete info for symbol 35965\nERROR: incomplete info for symbol 36531\nERROR: incomplete info for symbol 36766\nERROR: incomplete info for symbol 36935\nERROR: incomplete info for symbol 38372\nERROR: incomplete info for symbol 38479\nERROR: incomplete info for symbol 38726\nERROR: incomplete info for symbol 38982\nERROR: incomplete info for symbol 43517\nERROR: incomplete info for symbol 45219\nERROR: incomplete info for symbol 45508\nERROR: incomplete info for symbol 46337\nERROR: incomplete info for symbol 51593\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-uxR5h.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libldb-key-value.so-2.6.1-1.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libldb-key-value.so-2.6.1-1.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/../../../.dwz/libldb-2.6.1-1.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12653\nERROR: incomplete info for symbol 12684\nERROR: incomplete info for symbol 14059\nERROR: incomplete info for symbol 14326\nERROR: incomplete info for symbol 14639\nERROR: incomplete info for symbol 15754\nERROR: incomplete info for symbol 17012\nERROR: incomplete info for symbol 18827\nERROR: incomplete info for symbol 19057\nERROR: incomplete info for symbol 19965\nERROR: incomplete info for symbol 20438\nERROR: incomplete info for symbol 21525\nERROR: incomplete info for symbol 22211\nERROR: incomplete info for symbol 29786\nERROR: incomplete info for symbol 30142\nERROR: incomplete info for symbol 30451\nERROR: incomplete info for symbol 32770\nERROR: incomplete info for symbol 33000\nERROR: incomplete info for symbol 35965\nERROR: incomplete info for symbol 36531\nERROR: incomplete info for symbol 36766\nERROR: incomplete info for symbol 36935\nERROR: incomplete info for symbol 38372\nERROR: incomplete info for symbol 38479\nERROR: incomplete info for symbol 38726\nERROR: incomplete info for symbol 38982\nERROR: incomplete info for symbol 42379\nERROR: incomplete info for symbol 43517\nERROR: incomplete info for symbol 45219\nERROR: incomplete info for symbol 45508\nERROR: incomplete info for symbol 46337\nERROR: incomplete info for symbol 47108\nERROR: incomplete info for symbol 51593\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-QLc4l.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 35, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-key-value.so-abi-laboratory-libldb-key-value-so-libldb-key-value-so.html\n",
+                    "return_code": 1,
+                    "seconds": 0.8721046447753906,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-key-value.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-key-value.so libldb-key-value-so-libldb-key-value-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-key-value.so-abi-laboratory-libldb-key-value-so-libldb-key-value-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-key-value.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-key-value.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-key-value.so": 99072,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-key-value.so": 99072
+            }
+        },
+        "experiment": "usr/lib64/ldb/libldb-key-value-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-key-value.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-key-value.so",
+        "different_libs": true
+    }
+]

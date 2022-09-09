@@ -1,0 +1,79 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtiffxx.so.5.6.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtiffxx.so.5.8.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtiffxx.so.5.6.0",
+                    "spliced_lib": "libtiffxx.so.5.8.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "libport_dummy_function"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.552436828613281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtiffxx.so.5.6.0",
+                    "spliced_lib": "libtiffxx.so.5.8.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "libport_dummy_function"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.867813110351562e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 1 Removed, 1 Changed (1 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function void libport_dummy_function()'    {libport_dummy_function@@LIBTIFFXX_4.0}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function TIFF* TIFFStreamOpen(const char*, std::istream*)' at tif_stream.cxx:414:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'typedef TIFF' at tiffio.h:38:1:\n        underlying type 'struct tiff' at tiffiop.h:115:1 changed:\n          type size changed from 9920 to 10048 (in bits)\n          2 data member insertions:\n            'uint64_t tif_lastdiroff', at offset 320 (in bits) at tiffiop.h:120:1\n            'uint64_t tif_lastvalidoff', at offset 6592 (in bits) at tiffiop.h:136:1\n          63 data member changes (3 filtered):\n            'uint64* tif_dirlist' offset changed from 320 to 384 (in bits) (by +64 bits)\n            'uint16 tif_dirlistsize' offset changed from 384 to 448 (in bits) (by +64 bits)\n            'uint16 tif_dirnumber' offset changed from 400 to 464 (in bits) (by +64 bits)\n            'TIFFDirectory tif_dir' offset changed from 448 to 512 (in bits) (by +64 bits)\n            'TIFFDirectory tif_customdir' offset changed from 3328 to 3392 (in bits) (by +64 bits)\n            'union {TIFFHeaderCommon common; TIFFHeaderClassic classic; TIFFHeaderBig big;} tif_header' offset changed from 6208 to 6272 (in bits) (by +64 bits)\n            'uint16 tif_header_size' offset changed from 6336 to 6400 (in bits) (by +64 bits)\n            'uint32 tif_row' offset changed from 6368 to 6432 (in bits) (by +64 bits)\n            'uint16 tif_curdir' offset changed from 6400 to 6464 (in bits) (by +64 bits)\n            'uint32 tif_curstrip' offset changed from 6432 to 6496 (in bits) (by +64 bits)\n            'uint64 tif_curoff' offset changed from 6464 to 6528 (in bits) (by +64 bits)\n            'uint64 tif_dataoff' offset changed from 6528 to 6656 (in bits) (by +128 bits)\n            'uint16 tif_nsubifd' offset changed from 6592 to 6720 (in bits) (by +128 bits)\n            'uint64 tif_subifdoff' offset changed from 6656 to 6784 (in bits) (by +128 bits)\n            'uint32 tif_col' offset changed from 6720 to 6848 (in bits) (by +128 bits)\n            'uint32 tif_curtile' offset changed from 6752 to 6880 (in bits) (by +128 bits)\n            'tmsize_t tif_tilesize' offset changed from 6784 to 6912 (in bits) (by +128 bits)\n            'int tif_decodestatus' offset changed from 6848 to 6976 (in bits) (by +128 bits)\n            'TIFFBoolMethod tif_fixuptags' offset changed from 6912 to 7040 (in bits) (by +128 bits)\n            'TIFFBoolMethod tif_setupdecode' offset changed from 6976 to 7104 (in bits) (by +128 bits)\n            'TIFFPreMethod tif_predecode' offset changed from 7040 to 7168 (in bits) (by +128 bits)\n            'TIFFBoolMethod tif_setupencode' offset changed from 7104 to 7232 (in bits) (by +128 bits)\n            'int tif_encodestatus' offset changed from 7168 to 7296 (in bits) (by +128 bits)\n            'TIFFPreMethod tif_preencode' offset changed from 7232 to 7360 (in bits) (by +128 bits)\n            'TIFFBoolMethod tif_postencode' offset changed from 7296 to 7424 (in bits) (by +128 bits)\n            'TIFFCodeMethod tif_decoderow' offset changed from 7360 to 7488 (in bits) (by +128 bits)\n            'TIFFCodeMethod tif_encoderow' offset changed from 7424 to 7552 (in bits) (by +128 bits)\n            'TIFFCodeMethod tif_decodestrip' offset changed from 7488 to 7616 (in bits) (by +128 bits)\n            'TIFFCodeMethod tif_encodestrip' offset changed from 7552 to 7680 (in bits) (by +128 bits)\n            'TIFFCodeMethod tif_decodetile' offset changed from 7616 to 7744 (in bits) (by +128 bits)\n            'TIFFCodeMethod tif_encodetile' offset changed from 7680 to 7808 (in bits) (by +128 bits)\n            'TIFFVoidMethod tif_close' offset changed from 7744 to 7872 (in bits) (by +128 bits)\n            'TIFFSeekMethod tif_seek' offset changed from 7808 to 7936 (in bits) (by +128 bits)\n            'TIFFVoidMethod tif_cleanup' offset changed from 7872 to 8000 (in bits) (by +128 bits)\n            'TIFFStripMethod tif_defstripsize' offset changed from 7936 to 8064 (in bits) (by +128 bits)\n            'TIFFTileMethod tif_deftilesize' offset changed from 8000 to 8128 (in bits) (by +128 bits)\n            'uint8* tif_data' offset changed from 8064 to 8192 (in bits) (by +128 bits)\n            'tmsize_t tif_scanlinesize' offset changed from 8128 to 8256 (in bits) (by +128 bits)\n            'tmsize_t tif_scanlineskew' offset changed from 8192 to 8320 (in bits) (by +128 bits)\n            'uint8* tif_rawdata' offset changed from 8256 to 8384 (in bits) (by +128 bits)\n            'tmsize_t tif_rawdatasize' offset changed from 8320 to 8448 (in bits) (by +128 bits)\n            'tmsize_t tif_rawdataoff' offset changed from 8384 to 8512 (in bits) (by +128 bits)\n            'tmsize_t tif_rawdataloaded' offset changed from 8448 to 8576 (in bits) (by +128 bits)\n            'uint8* tif_rawcp' offset changed from 8512 to 8640 (in bits) (by +128 bits)\n            'tmsize_t tif_rawcc' offset changed from 8576 to 8704 (in bits) (by +128 bits)\n            'uint8* tif_base' offset changed from 8640 to 8768 (in bits) (by +128 bits)\n            'tmsize_t tif_size' offset changed from 8704 to 8832 (in bits) (by +128 bits)\n            'TIFFMapFileProc tif_mapproc' offset changed from 8768 to 8896 (in bits) (by +128 bits)\n            'TIFFUnmapFileProc tif_unmapproc' offset changed from 8832 to 8960 (in bits) (by +128 bits)\n            'thandle_t tif_clientdata' offset changed from 8896 to 9024 (in bits) (by +128 bits)\n            'TIFFReadWriteProc tif_readproc' offset changed from 8960 to 9088 (in bits) (by +128 bits)\n            'TIFFReadWriteProc tif_writeproc' offset changed from 9024 to 9152 (in bits) (by +128 bits)\n            'TIFFSeekProc tif_seekproc' offset changed from 9088 to 9216 (in bits) (by +128 bits)\n            'TIFFCloseProc tif_closeproc' offset changed from 9152 to 9280 (in bits) (by +128 bits)\n            'TIFFSizeProc tif_sizeproc' offset changed from 9216 to 9344 (in bits) (by +128 bits)\n            'TIFFPostMethod tif_postdecode' offset changed from 9280 to 9408 (in bits) (by +128 bits)\n            'TIFFField** tif_fields' offset changed from 9344 to 9472 (in bits) (by +128 bits)\n            'size_t tif_nfields' offset changed from 9408 to 9536 (in bits) (by +128 bits)\n            'const TIFFField* tif_foundfield' offset changed from 9472 to 9600 (in bits) (by +128 bits)\n            'TIFFTagMethods tif_tagmethods' offset changed from 9536 to 9664 (in bits) (by +128 bits)\n            'TIFFClientInfoLink* tif_clientinfo' offset changed from 9728 to 9856 (in bits) (by +128 bits)\n            'TIFFFieldArray* tif_fieldscompat' offset changed from 9792 to 9920 (in bits) (by +128 bits)\n            'size_t tif_nfieldscompat' offset changed from 9856 to 9984 (in bits) (by +128 bits)\n\n",
+                    "return_code": 12,
+                    "seconds": 0.07084512710571289,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtiffxx.so.5.6.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtiffxx.so.5.8.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtiffxx.so.5.8.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtiffxx.so.5.6.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtiffxx.so.5.6.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtiffxx.so.5.8.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtiffxx.so.5.6.0-abi-laboratory-libtiffxx-so-5-6-0-libtiffxx-so-5-8-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.20156192779541016,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtiffxx.so.5.6.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtiffxx.so.5.8.0 libtiffxx-so-5-6-0-libtiffxx-so-5-8-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtiffxx.so.5.6.0-abi-laboratory-libtiffxx-so-5-6-0-libtiffxx-so-5-8-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtiffxx.so.5.8.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtiffxx.so.5.6.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtiffxx.so.5.6.0": 16208,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtiffxx.so.5.8.0": 16184
+            }
+        },
+        "experiment": "usr/lib64/libtiffxx-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtiffxx.so.5.8.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtiffxx.so.5.6.0",
+        "different_libs": true
+    }
+]

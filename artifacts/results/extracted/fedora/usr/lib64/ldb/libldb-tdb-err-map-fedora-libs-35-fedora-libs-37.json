@@ -1,0 +1,114 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-err-map.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-err-map.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldb-tdb-err-map.so",
+                    "spliced_lib": "libldb-tdb-err-map.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "nss_wrapper_hosts_enabled",
+                        "memcpy",
+                        "rep_strlcat",
+                        "rep_strerror_r",
+                        "memset",
+                        "getsockopt",
+                        "strerror_r",
+                        "program_invocation_short_name",
+                        "rep_setproctitle",
+                        "rep_setproctitle_init",
+                        "socket_wrapper_enabled",
+                        "__stack_chk_fail",
+                        "rep_strlcpy",
+                        "uid_wrapper_enabled",
+                        "strnlen",
+                        "__cxa_finalize",
+                        "replace_dummy",
+                        "rep_getpeereid",
+                        "rep_memset_s",
+                        "strlen",
+                        "__errno_location",
+                        "__progname",
+                        "rep_getprogname",
+                        "nss_wrapper_enabled"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.838539123535156e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldb-tdb-err-map.so",
+                    "spliced_lib": "libldb-tdb-err-map.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "rep_setproctitle",
+                        "rep_strlcat",
+                        "nss_wrapper_enabled",
+                        "socket_wrapper_enabled",
+                        "rep_getprogname",
+                        "rep_getpeereid",
+                        "rep_setproctitle_init",
+                        "rep_strerror_r",
+                        "uid_wrapper_enabled",
+                        "nss_wrapper_hosts_enabled",
+                        "rep_memset_s",
+                        "rep_strlcpy",
+                        "replace_dummy"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.1205673217773438e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 14 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n14 Removed functions:\n\n  [D] 'function int ltdb_err_map(TDB_ERROR)'    {ltdb_err_map@@LDB_2.4.4}\n  [D] 'function bool nss_wrapper_enabled()'    {nss_wrapper_enabled@@LDB_2.4.4}\n  [D] 'function bool nss_wrapper_hosts_enabled()'    {nss_wrapper_hosts_enabled@@LDB_2.4.4}\n  [D] 'function int rep_getpeereid(int, uid_t*, gid_t*)'    {rep_getpeereid@@LDB_2.4.4}\n  [D] 'function const char* rep_getprogname()'    {rep_getprogname@@LDB_2.4.4}\n  [D] 'function int rep_memset_s(void*, size_t, int, size_t)'    {rep_memset_s@@LDB_2.4.4}\n  [D] 'function void rep_setproctitle(const char*, ...)'    {rep_setproctitle@@LDB_2.4.4}\n  [D] 'function void rep_setproctitle_init(int, char**, char**)'    {rep_setproctitle_init@@LDB_2.4.4}\n  [D] 'function int rep_strerror_r(int, char*, size_t)'    {rep_strerror_r@@LDB_2.4.4}\n  [D] 'function size_t rep_strlcat(char*, const char*, size_t)'    {rep_strlcat@@LDB_2.4.4}\n  [D] 'function size_t rep_strlcpy(char*, const char*, size_t)'    {rep_strlcpy@@LDB_2.4.4}\n  [D] 'function void replace_dummy()'    {replace_dummy@@LDB_2.4.4}\n  [D] 'function bool socket_wrapper_enabled()'    {socket_wrapper_enabled@@LDB_2.4.4}\n  [D] 'function bool uid_wrapper_enabled()'    {uid_wrapper_enabled@@LDB_2.4.4}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.010064840316772461,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-err-map.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-err-map.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-err-map.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-err-map.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-err-map.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-err-map.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-err-map.so-abi-laboratory-libldb-tdb-err-map-so-libldb-tdb-err-map-so.html\nFound link to libldb-tdb-err-map.so-2.4.4-1.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libldb-tdb-err-map.so-2.4.4-1.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/../../../.dwz/libldb-2.4.4-1.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1304\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-koAYA.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libldb-tdb-err-map.so-2.6.1-1.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libldb-tdb-err-map.so-2.6.1-1.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/../../../.dwz/libldb-2.6.1-1.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 76\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-z3OhZ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 7.09999999999999%\nTotal binary compatibility problems: 14, warnings: 0\nTotal source compatibility problems: 13, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-err-map.so-abi-laboratory-libldb-tdb-err-map-so-libldb-tdb-err-map-so.html\n",
+                    "return_code": 1,
+                    "seconds": 0.489119291305542,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-err-map.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-err-map.so libldb-tdb-err-map-so-libldb-tdb-err-map-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-err-map.so-abi-laboratory-libldb-tdb-err-map-so-libldb-tdb-err-map-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-err-map.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-err-map.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-err-map.so": 15968,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-err-map.so": 15824
+            }
+        },
+        "experiment": "usr/lib64/ldb/libldb-tdb-err-map-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-tdb-err-map.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-tdb-err-map.so",
+        "different_libs": true
+    }
+]

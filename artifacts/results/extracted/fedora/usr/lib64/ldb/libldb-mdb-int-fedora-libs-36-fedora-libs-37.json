@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-mdb-int.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-mdb-int.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldb-mdb-int.so",
+                    "spliced_lib": "libldb-mdb-int.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.647804260253906e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldb-mdb-int.so",
+                    "spliced_lib": "libldb-mdb-int.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.9141387939453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 2 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 Removed functions:\n\n  [D] 'function int ldb_mdb_err_map(int)'    {ldb_mdb_err_map@@LDB_2.5.2_LDB}\n  [D] 'function int lmdb_connect(ldb_context*, const char*, unsigned int, const char**, ldb_module**)'    {lmdb_connect@@LDB_2.5.2_LDB}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.025417327880859375,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-mdb-int.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-mdb-int.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-mdb-int.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-mdb-int.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-mdb-int.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-mdb-int.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-mdb-int.so-abi-laboratory-libldb-mdb-int-so-libldb-mdb-int-so.html\nFound link to libldb-mdb-int.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libldb-mdb-int.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-8Cl9R.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libldb-mdb-int.so-2.6.1-1.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libldb-mdb-int.so-2.6.1-1.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/../../../.dwz/libldb-2.6.1-1.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-vcsjF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 2, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-mdb-int.so-abi-laboratory-libldb-mdb-int-so-libldb-mdb-int-so.html\n",
+                    "return_code": 1,
+                    "seconds": 0.6062421798706055,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-mdb-int.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-mdb-int.so libldb-mdb-int-so-libldb-mdb-int-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-mdb-int.so-abi-laboratory-libldb-mdb-int-so-libldb-mdb-int-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-mdb-int.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-mdb-int.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-mdb-int.so": 32960,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-mdb-int.so": 32960
+            }
+        },
+        "experiment": "usr/lib64/ldb/libldb-mdb-int-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/libldb-mdb-int.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/libldb-mdb-int.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssh.so.4.8.7"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssh.so.4.8.7"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libssh.so.4.8.7",
+                    "spliced_lib": "libssh.so.4.8.7",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "EVP_KDF_ctrl",
+                        "EVP_PKEY_base_id",
+                        "EVP_PKEY_size",
+                        "FIPS_mode",
+                        "EVP_KDF_CTX_free",
+                        "EVP_KDF_derive",
+                        "__memcpy_chk",
+                        "__recv_chk",
+                        "EVP_KDF_CTX_new_id",
+                        "__read_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00017595291137695312
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libssh.so.4.8.7",
+                    "spliced_lib": "libssh.so.4.8.7",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0013284683227539062
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.19295787811279297,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssh.so.4.8.7 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssh.so.4.8.7",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssh.so.4.8.7",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssh.so.4.8.7",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssh.so.4.8.7\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssh.so.4.8.7\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssh.so.4.8.7-abi-laboratory-libssh-so-4-8-7-libssh-so-4-8-7.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.25843048095703125,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssh.so.4.8.7 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssh.so.4.8.7 libssh-so-4-8-7-libssh-so-4-8-7 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssh.so.4.8.7-abi-laboratory-libssh-so-4-8-7-libssh-so-4-8-7.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssh.so.4.8.7",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssh.so.4.8.7",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssh.so.4.8.7": 459880,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssh.so.4.8.7": 460064
+            }
+        },
+        "experiment": "usr/lib64/libssh-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssh.so.4.8.7",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssh.so.4.8.7",
+        "different_libs": true
+    }
+]

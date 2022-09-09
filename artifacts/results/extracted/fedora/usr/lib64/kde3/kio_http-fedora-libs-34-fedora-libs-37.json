@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_http.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_http.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kio_http.so",
+                    "spliced_lib": "kio_http.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00013685226440429688
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "kio_http.so",
+                    "spliced_lib": "kio_http.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0003037452697753906
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.6374144554138184,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_http.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_http.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_http.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_http.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_http.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_http.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_http.so-abi-laboratory-kio_http-so-kio_http-so.html\nFound link to kio_http.so-3.5.10-110.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file kio_http.so-3.5.10-110.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-110.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2215\nERROR: incomplete info for symbol 3492\nERROR: incomplete info for symbol 8176\nERROR: incomplete info for symbol 13829\nERROR: incomplete info for symbol 13855\nERROR: incomplete info for symbol 14269\nERROR: incomplete info for symbol 14552\nERROR: incomplete info for symbol 15099\nERROR: incomplete info for symbol 15359\nERROR: incomplete info for symbol 19298\nERROR: incomplete info for symbol 19325\nERROR: incomplete info for symbol 19483\nERROR: incomplete info for symbol 19510\nERROR: incomplete info for symbol 19537\nERROR: incomplete info for symbol 19883\nERROR: incomplete info for symbol 20024\nERROR: incomplete info for symbol 20604\nERROR: incomplete info for symbol 24796\nERROR: incomplete info for symbol 25407\nERROR: incomplete info for symbol 25480\nERROR: incomplete info for symbol 25556\nERROR: incomplete info for symbol 33552\nERROR: incomplete info for symbol 35436\nERROR: incomplete info for symbol 35757\nERROR: incomplete info for symbol 36158\nERROR: incomplete info for symbol 37995\nERROR: incomplete info for symbol 40950\nERROR: incomplete info for symbol 41327\nERROR: incomplete info for symbol 46096\nERROR: incomplete info for symbol 51841\nERROR: incomplete info for symbol 53587\nERROR: incomplete info for symbol 70779\nERROR: incomplete info for symbol 110959\nERROR: incomplete info for symbol 112142\nERROR: incomplete info for symbol 112548\nERROR: incomplete info for symbol 112984\nERROR: incomplete info for symbol 114474\nERROR: incomplete info for symbol 115192\nERROR: incomplete info for symbol 116067\nERROR: incomplete info for symbol 123375\nERROR: incomplete info for symbol 124261\nERROR: incomplete info for symbol 125886\nERROR: incomplete info for symbol 127442\nERROR: incomplete info for symbol 129495\nERROR: incomplete info for symbol 130381\nERROR: incomplete info for symbol 142934\nERROR: incomplete info for symbol 150860\nERROR: incomplete info for symbol 151709\nERROR: incomplete info for symbol 151920\nERROR: incomplete info for symbol 155369\nERROR: incomplete info for symbol 155811\nERROR: incomplete info for symbol 155940\nERROR: incomplete info for symbol 156121\nERROR: incomplete info for symbol 163147\nERROR: incomplete info for symbol 164975\nERROR: incomplete info for symbol 169036\nERROR: incomplete info for symbol 171962\nERROR: incomplete info for symbol 175415\nERROR: incomplete info for symbol 180549\nERROR: incomplete info for symbol 183743\nERROR: incomplete info for symbol 187254\nERROR: incomplete info for symbol 188003\nERROR: incomplete info for symbol 190525\nERROR: incomplete info for symbol 192148\nERROR: incomplete info for symbol 192743\nERROR: incomplete info for symbol 195087\nERROR: incomplete info for symbol 199842\nERROR: incomplete info for symbol 202538\nERROR: incomplete info for symbol 207332\nERROR: incomplete info for symbol 209637\nERROR: incomplete info for symbol 215171\nERROR: incomplete info for symbol 215248\nERROR: incomplete info for symbol 216581\nERROR: incomplete info for symbol 219594\nERROR: incomplete info for symbol 222977\nERROR: incomplete info for symbol 224244\nERROR: incomplete info for symbol 226441\nERROR: incomplete info for symbol 229979\nERROR: incomplete info for symbol 230831\nERROR: incomplete info for symbol 231584\nERROR: incomplete info for symbol 233531\nERROR: incomplete info for symbol 233910\nERROR: incomplete info for symbol 234945\nERROR: incomplete info for symbol 235347\nERROR: incomplete info for symbol 235839\nERROR: incomplete info for symbol 238594\nERROR: incomplete info for symbol 244536\nERROR: incomplete info for symbol 249806\nERROR: incomplete info for symbol 260642\nERROR: incomplete info for symbol 263249\nERROR: incomplete info for symbol 263867\nERROR: incomplete info for symbol 264344\nERROR: incomplete info for symbol 265168\nERROR: incomplete info for symbol 265831\nERROR: incomplete info for symbol 266322\nERROR: incomplete info for symbol 266601\nERROR: incomplete info for symbol 266945\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-xgI0U.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to kio_http.so-3.5.10-117.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file kio_http.so-3.5.10-117.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-117.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2210\nERROR: incomplete info for symbol 3435\nERROR: incomplete info for symbol 8068\nERROR: incomplete info for symbol 13661\nERROR: incomplete info for symbol 13687\nERROR: incomplete info for symbol 14096\nERROR: incomplete info for symbol 14379\nERROR: incomplete info for symbol 14926\nERROR: incomplete info for symbol 15186\nERROR: incomplete info for symbol 19124\nERROR: incomplete info for symbol 19151\nERROR: incomplete info for symbol 19309\nERROR: incomplete info for symbol 19336\nERROR: incomplete info for symbol 19363\nERROR: incomplete info for symbol 19707\nERROR: incomplete info for symbol 19848\nERROR: incomplete info for symbol 20424\nERROR: incomplete info for symbol 24616\nERROR: incomplete info for symbol 25195\nERROR: incomplete info for symbol 25268\nERROR: incomplete info for symbol 25344\nERROR: incomplete info for symbol 33393\nERROR: incomplete info for symbol 35298\nERROR: incomplete info for symbol 35619\nERROR: incomplete info for symbol 36020\nERROR: incomplete info for symbol 37843\nERROR: incomplete info for symbol 40724\nERROR: incomplete info for symbol 41101\nERROR: incomplete info for symbol 45874\nERROR: incomplete info for symbol 51618\nERROR: incomplete info for symbol 53360\nERROR: incomplete info for symbol 70506\nERROR: incomplete info for symbol 110644\nERROR: incomplete info for symbol 111827\nERROR: incomplete info for symbol 112233\nERROR: incomplete info for symbol 112669\nERROR: incomplete info for symbol 114158\nERROR: incomplete info for symbol 114876\nERROR: incomplete info for symbol 115750\nERROR: incomplete info for symbol 123001\nERROR: incomplete info for symbol 123886\nERROR: incomplete info for symbol 125510\nERROR: incomplete info for symbol 127064\nERROR: incomplete info for symbol 129115\nERROR: incomplete info for symbol 130000\nERROR: incomplete info for symbol 143276\nERROR: incomplete info for symbol 151166\nERROR: incomplete info for symbol 152013\nERROR: incomplete info for symbol 152224\nERROR: incomplete info for symbol 155668\nERROR: incomplete info for symbol 156110\nERROR: incomplete info for symbol 156239\nERROR: incomplete info for symbol 156420\nERROR: incomplete info for symbol 163493\nERROR: incomplete info for symbol 165368\nERROR: incomplete info for symbol 169393\nERROR: incomplete info for symbol 171998\nERROR: incomplete info for symbol 175444\nERROR: incomplete info for symbol 180228\nERROR: incomplete info for symbol 183413\nERROR: incomplete info for symbol 186918\nERROR: incomplete info for symbol 187661\nERROR: incomplete info for symbol 190169\nERROR: incomplete info for symbol 191788\nERROR: incomplete info for symbol 192383\nERROR: incomplete info for symbol 194724\nERROR: incomplete info for symbol 199490\nERROR: incomplete info for symbol 202182\nERROR: incomplete info for symbol 206964\nERROR: incomplete info for symbol 209274\nERROR: incomplete info for symbol 214860\nERROR: incomplete info for symbol 214937\nERROR: incomplete info for symbol 216310\nERROR: incomplete info for symbol 219296\nERROR: incomplete info for symbol 222667\nERROR: incomplete info for symbol 223920\nERROR: incomplete info for symbol 226111\nERROR: incomplete info for symbol 229652\nERROR: incomplete info for symbol 230502\nERROR: incomplete info for symbol 231255\nERROR: incomplete info for symbol 233198\nERROR: incomplete info for symbol 233577\nERROR: incomplete info for symbol 234612\nERROR: incomplete info for symbol 235014\nERROR: incomplete info for symbol 235506\nERROR: incomplete info for symbol 238282\nERROR: incomplete info for symbol 244156\nERROR: incomplete info for symbol 249452\nERROR: incomplete info for symbol 260288\nERROR: incomplete info for symbol 262816\nERROR: incomplete info for symbol 263382\nERROR: incomplete info for symbol 263859\nERROR: incomplete info for symbol 264624\nERROR: incomplete info for symbol 265287\nERROR: incomplete info for symbol 265719\nERROR: incomplete info for symbol 265998\nERROR: incomplete info for symbol 266342\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-fWh8W.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_http.so-abi-laboratory-kio_http-so-kio_http-so.html\n",
+                    "return_code": 0,
+                    "seconds": 17.198563814163208,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_http.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_http.so kio_http-so-kio_http-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_http.so-abi-laboratory-kio_http-so-kio_http-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_http.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_http.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_http.so": 222376,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_http.so": 226544
+            }
+        },
+        "experiment": "usr/lib64/kde3/kio_http-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kio_http.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kio_http.so",
+        "different_libs": true
+    }
+]

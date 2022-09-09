@@ -1,0 +1,81 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag.so.1.18.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag.so.1.18.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtag.so.1.18.0",
+                    "spliced_lib": "libtag.so.1.18.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "wmemmove",
+                        "abort",
+                        "_ZSt17__throw_bad_allocv",
+                        "wmemset",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0005512237548828125
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtag.so.1.18.0",
+                    "spliced_lib": "libtag.so.1.18.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.04192328453063965
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (83 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
+                    "return_code": 0,
+                    "seconds": 4.608166456222534,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag.so.1.18.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag.so.1.18.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag.so.1.18.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag.so.1.18.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag.so.1.18.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag.so.1.18.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag.so.1.18.0-abi-laboratory-libtag-so-1-18-0-libtag-so-1-18-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.21860313415527344,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag.so.1.18.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag.so.1.18.0 libtag-so-1-18-0-libtag-so-1-18-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag.so.1.18.0-abi-laboratory-libtag-so-1-18-0-libtag-so-1-18-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag.so.1.18.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag.so.1.18.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag.so.1.18.0": 1046456,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag.so.1.18.0": 1050584
+            }
+        },
+        "experiment": "usr/lib64/libtag-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag.so.1.18.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag.so.1.18.0",
+        "different_libs": true
+    }
+]

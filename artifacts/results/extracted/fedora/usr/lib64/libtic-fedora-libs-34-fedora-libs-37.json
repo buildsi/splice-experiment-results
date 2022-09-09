@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtic.so.6.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtic.so.6.3"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtic.so.6.2",
+                    "spliced_lib": "libtic.so.6.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__memcpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.936622619628906e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtic.so.6.2",
+                    "spliced_lib": "libtic.so.6.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.8596649169921875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (1 filtered out), 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
+                    "return_code": 0,
+                    "seconds": 0.027782201766967773,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtic.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtic.so.6.3",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtic.so.6.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtic.so.6.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtic.so.6.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtic.so.6.3\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtic.so.6.2-abi-laboratory-libtic-so-6-2-libtic-so-6-3.html\n",
+                    "return_code": 139,
+                    "seconds": 0.20083236694335938,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtic.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtic.so.6.3 libtic-so-6-2-libtic-so-6-3 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtic.so.6.2-abi-laboratory-libtic-so-6-2-libtic-so-6-3.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtic.so.6.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtic.so.6.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtic.so.6.2": 73880,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtic.so.6.3": 73960
+            }
+        },
+        "experiment": "usr/lib64/libtic-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtic.so.6.3",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtic.so.6.2",
+        "different_libs": true
+    }
+]

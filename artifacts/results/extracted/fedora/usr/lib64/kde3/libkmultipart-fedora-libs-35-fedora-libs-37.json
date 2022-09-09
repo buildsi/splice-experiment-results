@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/libkmultipart.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/libkmultipart.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkmultipart.so",
+                    "spliced_lib": "libkmultipart.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.72747802734375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkmultipart.so",
+                    "spliced_lib": "libkmultipart.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00013256072998046875
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.5823202133178711,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/libkmultipart.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/libkmultipart.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/libkmultipart.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/libkmultipart.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/libkmultipart.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/libkmultipart.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/libkmultipart.so-abi-laboratory-libkmultipart-so-libkmultipart-so.html\nFound link to libkmultipart.so-3.5.10-111.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libkmultipart.so-3.5.10-111.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-111.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2296\nERROR: incomplete info for symbol 22578\nERROR: incomplete info for symbol 22656\nERROR: incomplete info for symbol 23930\nERROR: incomplete info for symbol 26856\nERROR: incomplete info for symbol 35217\nERROR: incomplete info for symbol 36193\nERROR: incomplete info for symbol 37230\nERROR: incomplete info for symbol 37730\nReading v-tables\nlibkparts.so.2: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-xS509.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkmultipart.so-3.5.10-117.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libkmultipart.so-3.5.10-117.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-117.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2283\nERROR: incomplete info for symbol 22542\nERROR: incomplete info for symbol 22620\nERROR: incomplete info for symbol 23930\nERROR: incomplete info for symbol 26829\nERROR: incomplete info for symbol 35158\nERROR: incomplete info for symbol 36134\nERROR: incomplete info for symbol 37112\nERROR: incomplete info for symbol 37612\nReading v-tables\nlibkparts.so.2: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-hzPcF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nWARNING: unknown rule \"Function_Became_Private\" (\"Binary\")\nWARNING: unknown rule \"Function_Became_Private\" (\"Source\")\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/libkmultipart.so-abi-laboratory-libkmultipart-so-libkmultipart-so.html\n",
+                    "return_code": 0,
+                    "seconds": 16.427300453186035,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/libkmultipart.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/libkmultipart.so libkmultipart-so-libkmultipart-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/libkmultipart.so-abi-laboratory-libkmultipart-so-libkmultipart-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/libkmultipart.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/libkmultipart.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/libkmultipart.so": 86072,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/libkmultipart.so": 86728
+            }
+        },
+        "experiment": "usr/lib64/kde3/libkmultipart-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/libkmultipart.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/libkmultipart.so",
+        "different_libs": true
+    }
+]

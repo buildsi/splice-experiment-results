@@ -1,0 +1,83 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsystemd.so.0.32.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsystemd.so.0.33.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsystemd.so.0.32.0",
+                    "spliced_lib": "libsystemd.so.0.33.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__strncpy_chk",
+                        "pthread_setname_np",
+                        "usleep",
+                        "send",
+                        "accept4",
+                        "recv",
+                        "pthread_self"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00016379356384277344
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsystemd.so.0.32.0",
+                    "spliced_lib": "libsystemd.so.0.33.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0019240379333496094
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 3 Changed (430 filtered out), 3 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n3 Added functions:\n\n  [A] 'function int sd_device_get_diskseq(sd_device*, uint64_t*)'    {sd_device_get_diskseq@@LIBSYSTEMD_250}\n  [A] 'function int sd_event_add_inotify_fd(sd_event*, sd_event_source**, int, uint32_t, sd_event_inotify_handler_t, void*)'    {sd_event_add_inotify_fd@@LIBSYSTEMD_250}\n  [A] 'function int sd_event_source_set_ratelimit_expire_callback(sd_event_source*, sd_event_handler_t)'    {sd_event_source_set_ratelimit_expire_callback@@LIBSYSTEMD_250}\n\n3 functions with some indirect sub-type change:\n\n  [C] 'function int sd_bus_add_fallback(sd_bus*, sd_bus_slot**, const char*, sd_bus_message_handler_t, void*)' at bus-objects.c:1654:1 has some indirect sub-type changes:\n    parameter 1 of type 'sd_bus*' has sub-type changes:\n      in pointed to type 'typedef sd_bus' at sd-bus.h:39:1:\n        underlying type 'struct sd_bus' at bus-internal.h:183:1 changed:\n          type size hasn't changed\n          2 data member changes (13 filtered):\n            type of 'sd_event* event' changed:\n              in pointed to type 'typedef sd_event' at sd-event.h:45:1:\n                underlying type 'struct sd_event' at sd-event.c:93:1 changed:\n                  type size hasn't changed\n                  1 data member changes (3 filtered):\n                    type of 'inode_data* inode_data_to_close' changed:\n                      in pointed to type 'struct inode_data' at event-source.h:166:1:\n                        type size hasn't changed\n                        1 data member changes (2 filtered):\n                          type of 'sd_event_source* event_sources' changed:\n                            in pointed to type 'typedef sd_event_source' at sd-event.h:46:1:\n                              underlying type 'struct sd_event_source' at event-source.h:48:1 changed:\n                                type size changed from 2304 to 2368 (in bits)\n                                1 data member insertion:\n                                  'sd_event_handler_t ratelimit_expire_callback', at offset 704 (in bits) at event-source.h:74:1\n                                6 data member changes (2 filtered):\n                                  'sd_event_source* sources_next' offset changed from 704 to 768 (in bits) (by +64 bits)\n                                  'sd_event_source* sources_prev' offset changed from 768 to 832 (in bits) (by +64 bits)\n                                  'RateLimit rate_limit' offset changed from 832 to 896 (in bits) (by +64 bits)\n                                  'unsigned int earliest_index' offset changed from 1024 to 1088 (in bits) (by +64 bits)\n                                  'unsigned int latest_index' offset changed from 1056 to 1120 (in bits) (by +64 bits)\n                                  anonymous data member 'union {struct {sd_event_io_handler_t callback; int fd; uint32_t events; uint32_t revents; bool registered; bool owned;} io; struct {sd_event_time_handler_t callback; usec_t next; usec_t accuracy;} time; struct {sd_event_signal_handler_t callback; signalfd_siginfo siginfo; int sig;} signal; struct {sd_event_child_handler_t callback; siginfo_t siginfo; pid_t pid; int options; int pidfd; bool registered; bool pidfd_owned; bool process_owned; bool exited; bool waited;} child; struct {sd_event_handler_t callback;} defer; struct {sd_event_handler_t callback;} post; struct {sd_event_handler_t callback; unsigned int prioq_index;} exit; struct {sd_event_inotify_handler_t callback; uint32_t mask; inode_data* inode_data; sd_event_source* by_inode_data_next; sd_event_source* by_inode_data_prev;} inotify;}' offset changed from 1088 to 1152 (in bits) (by +64 bits)\n            type of 'sd_bus_slot* current_slot' changed:\n              in pointed to type 'typedef sd_bus_slot' at sd-bus.h:41:1:\n                underlying type 'struct sd_bus_slot' at bus-internal.h:128:1 changed:\n                  type size hasn't changed\n                  3 data member changes (1 filtered):\n                    type of 'sd_bus_slot* slots_next' changed:\n                      in pointed to type 'typedef sd_bus_slot' at sd-bus.h:41:1:\n                        underlying type 'struct sd_bus_slot' changed, as being reported\n                    type of 'sd_bus_slot* slots_prev' changed:\n                      in pointed to type 'typedef sd_bus_slot' at sd-bus.h:41:1:\n                        underlying type 'struct sd_bus_slot' changed, as being reported\n                    type of 'anonymous data member union {reply_callback reply_callback; filter_callback filter_callback; match_callback match_callback; node_callback node_callback; node_enumerator node_enumerator; node_object_manager node_object_manager; node_vtable node_vtable;}' changed:\n                      type size hasn't changed\n                      1 data member changes (4 filtered):\n                        type of 'match_callback match_callback' changed:\n                          type size hasn't changed\n                          1 data member changes (1 filtered):\n                            type of 'sd_bus_slot* install_slot' changed:\n                              in pointed to type 'typedef sd_bus_slot' at sd-bus.h:41:1:\n                                underlying type 'struct sd_bus_slot' changed, as being reported\n\n  [C] 'function int sd_device_enumerator_add_match_parent(sd_device_enumerator*, sd_device*)' at device-enumerator.c:197:1 has some indirect sub-type changes:\n    parameter 1 of type 'sd_device_enumerator*' has sub-type changes:\n      in pointed to type 'typedef sd_device_enumerator' at sd-device.h:34:1:\n        underlying type 'struct sd_device_enumerator' at device-enumerator.c:27:1 changed:\n          type size hasn't changed\n          1 data member change:\n            type of 'sd_device** devices' changed:\n              in pointed to type 'sd_device*':\n                in pointed to type 'typedef sd_device' at sd-device.h:33:1:\n                  underlying type 'struct sd_device' at device-internal.h:13:1 changed:\n                    type size changed from 3072 to 3136 (in bits)\n                    1 data member insertion:\n                      'uint64_t diskseq', at offset 2880 (in bits) at device-internal.h:78:1\n                    14 data member changes (1 filtered):\n                      'sd_device_action_t action' offset changed from 2880 to 2944 (in bits) (by +64 bits)\n                      'uint64_t seqnum' offset changed from 2944 to 3008 (in bits) (by +64 bits)\n                      'bool parent_set' offset changed from 3008 to 3072 (in bits) (by +64 bits)\n                      'bool sysattrs_read' offset changed from 3009 to 3073 (in bits) (by +64 bits)\n                      'bool property_tags_outdated' offset changed from 3010 to 3074 (in bits) (by +64 bits)\n                      'bool property_devlinks_outdated' offset changed from 3011 to 3075 (in bits) (by +64 bits)\n                      'bool properties_buf_outdated' offset changed from 3012 to 3076 (in bits) (by +64 bits)\n                      'bool subsystem_set' offset changed from 3013 to 3077 (in bits) (by +64 bits)\n                      'bool driver_set' offset changed from 3014 to 3078 (in bits) (by +64 bits)\n                      'bool uevent_loaded' offset changed from 3015 to 3079 (in bits) (by +64 bits)\n                      'bool db_loaded' offset changed from 3016 to 3080 (in bits) (by +64 bits)\n                      'bool is_initialized' offset changed from 3024 to 3088 (in bits) (by +64 bits)\n                      'bool sealed' offset changed from 3025 to 3089 (in bits) (by +64 bits)\n                      'bool db_persist' offset changed from 3026 to 3090 (in bits) (by +64 bits)\n\n  [C] 'function int sd_journal_add_conjunction(sd_journal*)' at sd-journal.c:334:1 has some indirect sub-type changes:\n    parameter 1 of type 'sd_journal*' has sub-type changes:\n      in pointed to type 'typedef sd_journal' at sd-journal.h:63:1:\n        underlying type 'struct sd_journal' at journal-internal.h:67:1 changed:\n          type size hasn't changed\n          1 data member changes (2 filtered):\n            type of 'JournalFile* current_file' changed:\n              in pointed to type 'typedef JournalFile' at journal-file.h:127:1:\n                underlying type 'struct JournalFile' at journal-file.h:59:1 changed:\n                  type size changed from 3840 to 3776 (in bits)\n                  2 data member deletions:\n                    'bool defrag_on_close', at offset 197 (in bits) at journal-file.h:71:1\n                    'MMapCache* mmap', at offset 2688 (in bits) at journal-file.h:96:1\n                  21 data member changes:\n                    'bool close_fd' offset changed from 198 to 197 (in bits) (by -1 bits)\n                    'bool archive' offset changed from 199 to 198 (in bits) (by -1 bits)\n                    'bool keyed_hash' offset changed from 200 to 199 (in bits) (by -1 bits)\n                    'sd_event_source* post_change_timer' offset changed from 2752 to 2688 (in bits) (by -64 bits)\n                    'usec_t post_change_timer_period' offset changed from 2816 to 2752 (in bits) (by -64 bits)\n                    'OrderedHashmap* chain_cache' offset changed from 2880 to 2816 (in bits) (by -64 bits)\n                    'pthread_t offline_thread' offset changed from 2944 to 2880 (in bits) (by -64 bits)\n                    'volatile OfflineState offline_state' offset changed from 3008 to 2944 (in bits) (by -64 bits)\n                    'unsigned int last_seen_generation' offset changed from 3040 to 2976 (in bits) (by -64 bits)\n                    'uint64_t compress_threshold_bytes' offset changed from 3072 to 3008 (in bits) (by -64 bits)\n                    'void* compress_buffer' offset changed from 3136 to 3072 (in bits) (by -64 bits)\n                    'gcry_md_hd_t hmac' offset changed from 3200 to 3136 (in bits) (by -64 bits)\n                    'bool hmac_running' offset changed from 3264 to 3200 (in bits) (by -64 bits)\n                    'FSSHeader* fss_file' offset changed from 3328 to 3264 (in bits) (by -64 bits)\n                    'size_t fss_file_size' offset changed from 3392 to 3328 (in bits) (by -64 bits)\n                    'uint64_t fss_start_usec' offset changed from 3456 to 3392 (in bits) (by -64 bits)\n                    'uint64_t fss_interval_usec' offset changed from 3520 to 3456 (in bits) (by -64 bits)\n                    'void* fsprg_state' offset changed from 3584 to 3520 (in bits) (by -64 bits)\n                    'size_t fsprg_state_size' offset changed from 3648 to 3584 (in bits) (by -64 bits)\n                    'void* fsprg_seed' offset changed from 3712 to 3648 (in bits) (by -64 bits)\n                    'size_t fsprg_seed_size' offset changed from 3776 to 3712 (in bits) (by -64 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 1.2881460189819336,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsystemd.so.0.32.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsystemd.so.0.33.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsystemd.so.0.33.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsystemd.so.0.32.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsystemd.so.0.32.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsystemd.so.0.33.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsystemd.so.0.32.0-abi-laboratory-libsystemd-so-0-32-0-libsystemd-so-0-33-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.21008992195129395,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsystemd.so.0.32.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsystemd.so.0.33.0 libsystemd-so-0-32-0-libsystemd-so-0-33-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsystemd.so.0.32.0-abi-laboratory-libsystemd-so-0-32-0-libsystemd-so-0-33-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsystemd.so.0.33.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsystemd.so.0.32.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsystemd.so.0.32.0": 871296,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsystemd.so.0.33.0": 916504
+            }
+        },
+        "experiment": "usr/lib64/libsystemd-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsystemd.so.0.33.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsystemd.so.0.32.0",
+        "different_libs": true
+    }
+]
