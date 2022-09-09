@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdecore.so.4.2.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdecore.so.4.2.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdecore.so.4.2.0",
+                    "spliced_lib": "libkdecore.so.4.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.001977682113647461
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdecore.so.4.2.0",
+                    "spliced_lib": "libkdecore.so.4.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.23008322715759277
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'method KSycoca::KSycoca()' at ksycoca.cpp:89:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was added\n\n",
+                    "return_code": 4,
+                    "seconds": 11.12781310081482,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdecore.so.4.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdecore.so.4.2.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdecore.so.4.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdecore.so.4.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdecore.so.4.2.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdecore.so.4.2.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdecore.so.4.2.0-abi-laboratory-libkdecore-so-4-2-0-libkdecore-so-4-2-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.24163460731506348,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdecore.so.4.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdecore.so.4.2.0 libkdecore-so-4-2-0-libkdecore-so-4-2-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdecore.so.4.2.0-abi-laboratory-libkdecore-so-4-2-0-libkdecore-so-4-2-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdecore.so.4.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdecore.so.4.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdecore.so.4.2.0": 2654064,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdecore.so.4.2.0": 2654688
+            }
+        },
+        "experiment": "usr/lib64/libkdecore-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdecore.so.4.2.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdecore.so.4.2.0",
+        "different_libs": true
+    }
+]

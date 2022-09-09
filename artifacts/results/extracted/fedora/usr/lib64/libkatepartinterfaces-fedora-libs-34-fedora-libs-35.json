@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkatepartinterfaces.so.0.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkatepartinterfaces.so.0.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkatepartinterfaces.so.0.0.0",
+                    "spliced_lib": "libkatepartinterfaces.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.000141143798828125
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkatepartinterfaces.so.0.0.0",
+                    "spliced_lib": "libkatepartinterfaces.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00019288063049316406
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.49987006187438965,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkatepartinterfaces.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkatepartinterfaces.so.0.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkatepartinterfaces.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkatepartinterfaces.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkatepartinterfaces.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkatepartinterfaces.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkatepartinterfaces.so.0.0.0-abi-laboratory-libkatepartinterfaces-so-0-0-0-libkatepartinterfaces-so-0-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19213199615478516,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkatepartinterfaces.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkatepartinterfaces.so.0.0.0 libkatepartinterfaces-so-0-0-0-libkatepartinterfaces-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkatepartinterfaces.so.0.0.0-abi-laboratory-libkatepartinterfaces-so-0-0-0-libkatepartinterfaces-so-0-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkatepartinterfaces.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkatepartinterfaces.so.0.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkatepartinterfaces.so.0.0.0": 132080,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkatepartinterfaces.so.0.0.0": 131952
+            }
+        },
+        "experiment": "usr/lib64/libkatepartinterfaces-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkatepartinterfaces.so.0.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkatepartinterfaces.so.0.0.0",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdb5.so.10.0",
+                    "spliced_lib": "libkdb5.so.10.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.245208740234375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdb5.so.10.0",
+                    "spliced_lib": "libkdb5.so.10.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001270771026611328
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.08197021484375,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0-abi-laboratory-libkdb5-so-10-0-libkdb5-so-10-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22715353965759277,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0 libkdb5-so-10-0-libkdb5-so-10-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0-abi-laboratory-libkdb5-so-10-0-libkdb5-so-10-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0": 91464,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0": 91632
+            }
+        },
+        "experiment": "usr/lib64/libkdb5-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdb5.so.10.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdb5.so.10.0",
+        "different_libs": true
+    }
+]

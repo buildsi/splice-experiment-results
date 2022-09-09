@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkms.so.1.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkms.so.1.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkms.so.1.0.0",
+                    "spliced_lib": "libkms.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.62396240234375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkms.so.1.0.0",
+                    "spliced_lib": "libkms.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.059906005859375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.01959514617919922,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkms.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkms.so.1.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkms.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkms.so.1.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkms.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkms.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkms.so.1.0.0-abi-laboratory-libkms-so-1-0-0-libkms-so-1-0-0.html\nFound link to libkms.so.1.0.0-2.4.109-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libkms.so.1.0.0-2.4.109-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libdrm-2.4.109-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6356\nERROR: incomplete info for symbol 7235\nERROR: incomplete info for symbol 7324\nERROR: incomplete info for symbol 7367\nERROR: incomplete info for symbol 7540\nERROR: incomplete info for symbol 7580\nERROR: incomplete info for symbol 7649\nERROR: incomplete info for symbol 7698\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-McRbz.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkms.so.1.0.0-2.4.110-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkms.so.1.0.0-2.4.110-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libdrm-2.4.110-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5688\nERROR: incomplete info for symbol 6570\nERROR: incomplete info for symbol 6659\nERROR: incomplete info for symbol 6702\nERROR: incomplete info for symbol 6875\nERROR: incomplete info for symbol 6915\nERROR: incomplete info for symbol 6984\nERROR: incomplete info for symbol 7033\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-AMqeF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkms.so.1.0.0-abi-laboratory-libkms-so-1-0-0-libkms-so-1-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.715510368347168,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkms.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkms.so.1.0.0 libkms-so-1-0-0-libkms-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkms.so.1.0.0-abi-laboratory-libkms-so-1-0-0-libkms-so-1-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkms.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkms.so.1.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkms.so.1.0.0": 20272,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkms.so.1.0.0": 20352
+            }
+        },
+        "experiment": "usr/lib64/libkms-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkms.so.1.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkms.so.1.0.0",
+        "different_libs": true
+    }
+]

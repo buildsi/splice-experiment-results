@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libidn2.so.0.3.7",
+                    "spliced_lib": "libidn2.so.0.3.7",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__memcpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.435943603515625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libidn2.so.0.3.7",
+                    "spliced_lib": "libidn2.so.0.3.7",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.8358230590820312e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function int idn2_to_unicode_8z4z(int, const char*, uint32_t**, int)' at decode.c:64:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' changed:\n      entity changed from 'int' to 'const char*'\n      type size changed from 32 to 64 (in bits)\n    parameter 2 of type 'const char*' changed:\n      in pointed to type 'const char':\n        entity changed from 'const char' to 'uint32_t*'\n        type size changed from 8 to 64 (in bits)\n    parameter 3 of type 'uint32_t**' changed:\n      entity changed from 'uint32_t**' to 'int'\n      type size changed from 64 to 32 (in bits)\n    parameter 4 of type 'int' was removed\n\n",
+                    "return_code": 4,
+                    "seconds": 0.03237485885620117,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7-abi-laboratory-libidn2-so-0-3-7-libidn2-so-0-3-7.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.3298380374908447,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7 libidn2-so-0-3-7-libidn2-so-0-3-7 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7-abi-laboratory-libidn2-so-0-3-7-libidn2-so-0-3-7.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7": 130864,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7": 131008
+            }
+        },
+        "experiment": "usr/lib64/libidn2-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7",
+        "different_libs": true
+    }
+]

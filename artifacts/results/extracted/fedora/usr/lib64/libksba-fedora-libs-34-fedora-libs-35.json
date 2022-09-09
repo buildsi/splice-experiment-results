@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libksba.so.8.13.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libksba.so.8.14.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libksba.so.8.13.0",
+                    "spliced_lib": "libksba.so.8.14.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.079673767089844e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libksba.so.8.13.0",
+                    "spliced_lib": "libksba.so.8.14.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00026988983154296875
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (30 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function gpg_error_t ksba_cms_add_cert(ksba_cms_t, ksba_cert_t)' at visibility.c:491:1 has some indirect sub-type changes:\n    parameter 1 of type 'typedef ksba_cms_t' has sub-type changes:\n      underlying type 'ksba_cms_s*' changed:\n        in pointed to type 'struct ksba_cms_s' at cms.h:114:1:\n          type size changed from 1728 to 1856 (in bits)\n          17 data member changes (1 filtered):\n            type of 'struct {unsigned char* digest; int digest_len;} data' changed:\n              type size changed from 128 to 256 (in bits)\n              2 data member insertions:\n                'unsigned char* attr', at offset 128 (in bits) at cms.h:137:1\n                'int attr_len', at offset 192 (in bits) at cms.h:138:1\n              no data member changes (2 filtered);\n            and name of 'ksba_cms_s::data' changed to 'ksba_cms_s::authdata' at cms.h:139:1\n            'int cms_version' offset changed from 768 to 896 (in bits) (by +128 bits)\n            'oidlist_s* digest_algos' offset changed from 832 to 960 (in bits) (by +128 bits)\n            'certlist_s* cert_list' offset changed from 896 to 1024 (in bits) (by +128 bits)\n            'char* inner_cont_oid' offset changed from 960 to 1088 (in bits) (by +128 bits)\n            'unsigned long int inner_cont_len' offset changed from 1024 to 1152 (in bits) (by +128 bits)\n            'int inner_cont_ndef' offset changed from 1088 to 1216 (in bits) (by +128 bits)\n            'int detached_data' offset changed from 1120 to 1248 (in bits) (by +128 bits)\n            'char* encr_algo_oid' offset changed from 1152 to 1280 (in bits) (by +128 bits)\n            'char* encr_iv' offset changed from 1216 to 1344 (in bits) (by +128 bits)\n            'size_t encr_ivlen' offset changed from 1280 to 1408 (in bits) (by +128 bits)\n            'certlist_s* cert_info_list' offset changed from 1344 to 1472 (in bits) (by +128 bits)\n            'oidparmlist_s* capability_list' offset changed from 1408 to 1536 (in bits) (by +128 bits)\n            'signer_info_s* signer_info' offset changed from 1472 to 1600 (in bits) (by +128 bits)\n            'value_tree_s* recp_info' offset changed from 1536 to 1664 (in bits) (by +128 bits)\n            'sig_val_s* sig_val' offset changed from 1600 to 1728 (in bits) (by +128 bits)\n            'enc_val_s* enc_val' offset changed from 1664 to 1792 (in bits) (by +128 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.10141777992248535,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libksba.so.8.13.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libksba.so.8.14.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libksba.so.8.14.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libksba.so.8.13.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libksba.so.8.13.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libksba.so.8.14.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libksba.so.8.13.0-abi-laboratory-libksba-so-8-13-0-libksba-so-8-14-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.18980622291564941,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libksba.so.8.13.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libksba.so.8.14.0 libksba-so-8-13-0-libksba-so-8-14-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libksba.so.8.13.0-abi-laboratory-libksba-so-8-13-0-libksba-so-8-14-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libksba.so.8.14.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libksba.so.8.13.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libksba.so.8.13.0": 267952,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libksba.so.8.14.0": 272904
+            }
+        },
+        "experiment": "usr/lib64/libksba-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libksba.so.8.14.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libksba.so.8.13.0",
+        "different_libs": true
+    }
+]

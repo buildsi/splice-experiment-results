@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdesu.so.4.2.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdesu.so.4.2.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdesu.so.4.2.0",
+                    "spliced_lib": "libkdesu.so.4.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.799003601074219e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdesu.so.4.2.0",
+                    "spliced_lib": "libkdesu.so.4.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00011968612670898438
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.8185832500457764,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdesu.so.4.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdesu.so.4.2.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdesu.so.4.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdesu.so.4.2.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdesu.so.4.2.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdesu.so.4.2.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdesu.so.4.2.0-abi-laboratory-libkdesu-so-4-2-0-libkdesu-so-4-2-0.html\nFound link to libkdesu.so.4.2.0-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdesu.so.4.2.0-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1402\nERROR: incomplete info for symbol 1441\nERROR: incomplete info for symbol 5466\nERROR: incomplete info for symbol 5602\nERROR: incomplete info for symbol 6403\nERROR: incomplete info for symbol 6624\nERROR: incomplete info for symbol 12195\nERROR: incomplete info for symbol 16128\nERROR: incomplete info for symbol 16634\nERROR: incomplete info for symbol 20410\nERROR: incomplete info for symbol 21256\nERROR: incomplete info for symbol 23064\nERROR: incomplete info for symbol 23466\nERROR: incomplete info for symbol 23732\nERROR: incomplete info for symbol 23998\nERROR: incomplete info for symbol 24657\nERROR: incomplete info for symbol 25947\nERROR: incomplete info for symbol 26465\nERROR: incomplete info for symbol 26868\nERROR: incomplete info for symbol 27271\nERROR: incomplete info for symbol 27674\nERROR: incomplete info for symbol 28077\nERROR: incomplete info for symbol 28214\nERROR: incomplete info for symbol 28513\nERROR: incomplete info for symbol 28650\nERROR: incomplete info for symbol 32206\nERROR: incomplete info for symbol 37176\nERROR: incomplete info for symbol 40054\nERROR: incomplete info for symbol 40277\nERROR: incomplete info for symbol 40744\nERROR: incomplete info for symbol 43868\nERROR: incomplete info for symbol 44621\nERROR: incomplete info for symbol 45175\nERROR: incomplete info for symbol 45202\nERROR: incomplete info for symbol 49306\nERROR: incomplete info for symbol 53005\nERROR: incomplete info for symbol 53378\nERROR: incomplete info for symbol 53854\nERROR: incomplete info for symbol 58172\nERROR: incomplete info for symbol 64691\nERROR: incomplete info for symbol 69148\nERROR: incomplete info for symbol 75076\nERROR: incomplete info for symbol 75666\nERROR: incomplete info for symbol 77681\nERROR: incomplete info for symbol 77832\nERROR: incomplete info for symbol 77968\nERROR: incomplete info for symbol 91636\nERROR: incomplete info for symbol 92388\nERROR: incomplete info for symbol 113151\nERROR: incomplete info for symbol 113408\nERROR: incomplete info for symbol 113665\nERROR: incomplete info for symbol 113923\nERROR: incomplete info for symbol 115812\nERROR: incomplete info for symbol 118690\nERROR: incomplete info for symbol 130002\nERROR: incomplete info for symbol 140646\nERROR: incomplete info for symbol 140724\nERROR: incomplete info for symbol 140787\nERROR: incomplete info for symbol 141470\nERROR: incomplete info for symbol 141608\nERROR: incomplete info for symbol 141673\nERROR: incomplete info for symbol 141738\nERROR: incomplete info for symbol 142062\nERROR: incomplete info for symbol 142385\nERROR: incomplete info for symbol 142456\nERROR: incomplete info for symbol 142496\nERROR: incomplete info for symbol 142587\nERROR: incomplete info for symbol 142678\nERROR: incomplete info for symbol 142821\nERROR: incomplete info for symbol 142892\nERROR: incomplete info for symbol 143076\nERROR: incomplete info for symbol 143143\nERROR: incomplete info for symbol 144260\nERROR: incomplete info for symbol 145272\nERROR: incomplete info for symbol 145490\nERROR: incomplete info for symbol 145580\nERROR: incomplete info for symbol 145828\nERROR: incomplete info for symbol 145876\nERROR: incomplete info for symbol 145924\nERROR: incomplete info for symbol 146115\nERROR: incomplete info for symbol 149904\nERROR: incomplete info for symbol 151704\nERROR: incomplete info for symbol 152922\nERROR: incomplete info for symbol 161563\nERROR: incomplete info for symbol 171624\nERROR: incomplete info for symbol 171700\nERROR: incomplete info for symbol 171761\nERROR: incomplete info for symbol 172290\nReading v-tables\nlibkdecore.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-c0VRT.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkdesu.so.4.2.0-3.5.10-117.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdesu.so.4.2.0-3.5.10-117.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-117.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1402\nERROR: incomplete info for symbol 1441\nERROR: incomplete info for symbol 5466\nERROR: incomplete info for symbol 5602\nERROR: incomplete info for symbol 6403\nERROR: incomplete info for symbol 6624\nERROR: incomplete info for symbol 12195\nERROR: incomplete info for symbol 16128\nERROR: incomplete info for symbol 16634\nERROR: incomplete info for symbol 20410\nERROR: incomplete info for symbol 21256\nERROR: incomplete info for symbol 23064\nERROR: incomplete info for symbol 23466\nERROR: incomplete info for symbol 23732\nERROR: incomplete info for symbol 23998\nERROR: incomplete info for symbol 24657\nERROR: incomplete info for symbol 25947\nERROR: incomplete info for symbol 26465\nERROR: incomplete info for symbol 26868\nERROR: incomplete info for symbol 27271\nERROR: incomplete info for symbol 27674\nERROR: incomplete info for symbol 28077\nERROR: incomplete info for symbol 28214\nERROR: incomplete info for symbol 28513\nERROR: incomplete info for symbol 28650\nERROR: incomplete info for symbol 32206\nERROR: incomplete info for symbol 37176\nERROR: incomplete info for symbol 40054\nERROR: incomplete info for symbol 40277\nERROR: incomplete info for symbol 40744\nERROR: incomplete info for symbol 43868\nERROR: incomplete info for symbol 44621\nERROR: incomplete info for symbol 45175\nERROR: incomplete info for symbol 45202\nERROR: incomplete info for symbol 49306\nERROR: incomplete info for symbol 53005\nERROR: incomplete info for symbol 53378\nERROR: incomplete info for symbol 53854\nERROR: incomplete info for symbol 58172\nERROR: incomplete info for symbol 64691\nERROR: incomplete info for symbol 69148\nERROR: incomplete info for symbol 75076\nERROR: incomplete info for symbol 75666\nERROR: incomplete info for symbol 77681\nERROR: incomplete info for symbol 77832\nERROR: incomplete info for symbol 77968\nERROR: incomplete info for symbol 91636\nERROR: incomplete info for symbol 92388\nERROR: incomplete info for symbol 113150\nERROR: incomplete info for symbol 113407\nERROR: incomplete info for symbol 113664\nERROR: incomplete info for symbol 113922\nERROR: incomplete info for symbol 115811\nERROR: incomplete info for symbol 118689\nERROR: incomplete info for symbol 130001\nERROR: incomplete info for symbol 140645\nERROR: incomplete info for symbol 140723\nERROR: incomplete info for symbol 140786\nERROR: incomplete info for symbol 141469\nERROR: incomplete info for symbol 141607\nERROR: incomplete info for symbol 141672\nERROR: incomplete info for symbol 141737\nERROR: incomplete info for symbol 142061\nERROR: incomplete info for symbol 142384\nERROR: incomplete info for symbol 142455\nERROR: incomplete info for symbol 142495\nERROR: incomplete info for symbol 142586\nERROR: incomplete info for symbol 142677\nERROR: incomplete info for symbol 142820\nERROR: incomplete info for symbol 142891\nERROR: incomplete info for symbol 143075\nERROR: incomplete info for symbol 143142\nERROR: incomplete info for symbol 144259\nERROR: incomplete info for symbol 145271\nERROR: incomplete info for symbol 145489\nERROR: incomplete info for symbol 145579\nERROR: incomplete info for symbol 145827\nERROR: incomplete info for symbol 145875\nERROR: incomplete info for symbol 145923\nERROR: incomplete info for symbol 146114\nERROR: incomplete info for symbol 149903\nERROR: incomplete info for symbol 151703\nERROR: incomplete info for symbol 152921\nERROR: incomplete info for symbol 161557\nERROR: incomplete info for symbol 171618\nERROR: incomplete info for symbol 171694\nERROR: incomplete info for symbol 171755\nERROR: incomplete info for symbol 172284\nReading v-tables\nSegmentation fault (core dumped)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Q4CQv.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdesu.so.4.2.0-abi-laboratory-libkdesu-so-4-2-0-libkdesu-so-4-2-0.html\n",
+                    "return_code": 0,
+                    "seconds": 24.90498924255371,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdesu.so.4.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdesu.so.4.2.0 libkdesu-so-4-2-0-libkdesu-so-4-2-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdesu.so.4.2.0-abi-laboratory-libkdesu-so-4-2-0-libkdesu-so-4-2-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdesu.so.4.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdesu.so.4.2.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdesu.so.4.2.0": 102888,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdesu.so.4.2.0": 102840
+            }
+        },
+        "experiment": "usr/lib64/libkdesu-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdesu.so.4.2.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdesu.so.4.2.0",
+        "different_libs": true
+    }
+]

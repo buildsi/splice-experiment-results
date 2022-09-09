@@ -1,0 +1,81 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libk5crypto.so.3.1",
+                    "spliced_lib": "libk5crypto.so.3.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "EVP_KDF_ctrl",
+                        "FIPS_mode",
+                        "EVP_MD_size",
+                        "EVP_des_ede3_cbc",
+                        "EVP_KDF_CTX_new_id"
+                    ],
+                    "prediction": false,
+                    "seconds": 9.989738464355469e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libk5crypto.so.3.1",
+                    "spliced_lib": "libk5crypto.so.3.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001068115234375
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.0781712532043457,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1-abi-laboratory-libk5crypto-so-3-1-libk5crypto-so-3-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2622098922729492,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1 libk5crypto-so-3-1-libk5crypto-so-3-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1-abi-laboratory-libk5crypto-so-3-1-libk5crypto-so-3-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1": 95496,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1": 99976
+            }
+        },
+        "experiment": "usr/lib64/libk5crypto-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libk5crypto.so.3.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libk5crypto.so.3.1",
+        "different_libs": true
+    }
+]

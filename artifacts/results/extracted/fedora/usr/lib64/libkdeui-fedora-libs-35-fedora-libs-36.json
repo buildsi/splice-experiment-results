@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeui.so.4.2.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeui.so.4.2.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdeui.so.4.2.0",
+                    "spliced_lib": "libkdeui.so.4.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0027894973754882812
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdeui.so.4.2.0",
+                    "spliced_lib": "libkdeui.so.4.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.36654067039489746
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 13.519556283950806,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeui.so.4.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeui.so.4.2.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeui.so.4.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeui.so.4.2.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeui.so.4.2.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeui.so.4.2.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeui.so.4.2.0-abi-laboratory-libkdeui-so-4-2-0-libkdeui-so-4-2-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.21878552436828613,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeui.so.4.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeui.so.4.2.0 libkdeui-so-4-2-0-libkdeui-so-4-2-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeui.so.4.2.0-abi-laboratory-libkdeui-so-4-2-0-libkdeui-so-4-2-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeui.so.4.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeui.so.4.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeui.so.4.2.0": 3863416,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeui.so.4.2.0": 3851336
+            }
+        },
+        "experiment": "usr/lib64/libkdeui-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeui.so.4.2.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeui.so.4.2.0",
+        "different_libs": true
+    }
+]

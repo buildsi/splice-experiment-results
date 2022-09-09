@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldb.so.2.4.4"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldb.so.2.5.2"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldb.so.2.4.4",
+                    "spliced_lib": "libldb.so.2.5.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__strncpy_chk",
+                        "__memcpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00010967254638671875
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldb.so.2.4.4",
+                    "spliced_lib": "libldb.so.2.5.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0006322860717773438
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 8 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n8 Removed functions:\n\n  [D] 'function int ldb_msg_add_string_flags(ldb_message*, const char*, const char*, int)'    {ldb_msg_add_string_flags@@LDB_2.4.4}\n  [D] 'function int ldb_msg_append_fmt(ldb_message*, int, const char*, const char*, ...)'    {ldb_msg_append_fmt@@LDB_2.4.4}\n  [D] 'function int ldb_msg_append_linearized_dn(ldb_message*, const char*, ldb_dn*, int)'    {ldb_msg_append_linearized_dn@@LDB_2.4.4}\n  [D] 'function int ldb_msg_append_steal_string(ldb_message*, const char*, char*, int)'    {ldb_msg_append_steal_string@@LDB_2.4.4}\n  [D] 'function int ldb_msg_append_steal_value(ldb_message*, const char*, ldb_val*, int)'    {ldb_msg_append_steal_value@@LDB_2.4.4}\n  [D] 'function int ldb_msg_append_string(ldb_message*, const char*, const char*, int)'    {ldb_msg_append_string@@LDB_2.4.4}\n  [D] 'function int ldb_msg_append_value(ldb_message*, const char*, const ldb_val*, int)'    {ldb_msg_append_value@@LDB_2.4.4}\n  [D] 'function int ldb_msg_element_add_value(TALLOC_CTX*, ldb_message_element*, const ldb_val*)'    {ldb_msg_element_add_value@@LDB_2.4.4}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.10464882850646973,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldb.so.2.4.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldb.so.2.5.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldb.so.2.5.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldb.so.2.4.4",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldb.so.2.4.4\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldb.so.2.5.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldb.so.2.4.4-abi-laboratory-libldb-so-2-4-4-libldb-so-2-5-2.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.23618483543395996,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldb.so.2.4.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldb.so.2.5.2 libldb-so-2-4-4-libldb-so-2-5-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldb.so.2.4.4-abi-laboratory-libldb-so-2-4-4-libldb-so-2-5-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldb.so.2.5.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldb.so.2.4.4",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldb.so.2.4.4": 229720,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldb.so.2.5.2": 225816
+            }
+        },
+        "experiment": "usr/lib64/libldb-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldb.so.2.5.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldb.so.2.4.4",
+        "different_libs": true
+    }
+]

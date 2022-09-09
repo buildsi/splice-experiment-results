@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkcapi.so.1.2.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkcapi.so.1.4.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkcapi.so.1.2.1",
+                    "spliced_lib": "libkcapi.so.1.4.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "prctl",
+                        "getpagesize"
+                    ],
+                    "prediction": false,
+                    "seconds": 9.393692016601562e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkcapi.so.1.2.1",
+                    "spliced_lib": "libkcapi.so.1.4.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.818771362304688e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 2 Changed (22 filtered out), 10 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n10 Added functions:\n\n  [A] 'function ssize_t kcapi_cipher_dec_sm4_cbc(const uint8_t*, uint32_t, const uint8_t*, size_t, const uint8_t*, uint8_t*, size_t)'    {kcapi_cipher_dec_sm4_cbc@@LIBKCAPI_1.4.0}\n  [A] 'function ssize_t kcapi_cipher_dec_sm4_ctr(const uint8_t*, uint32_t, const uint8_t*, size_t, const uint8_t*, uint8_t*, size_t)'    {kcapi_cipher_dec_sm4_ctr@@LIBKCAPI_1.4.0}\n  [A] 'function ssize_t kcapi_cipher_enc_sm4_cbc(const uint8_t*, uint32_t, const uint8_t*, size_t, const uint8_t*, uint8_t*, size_t)'    {kcapi_cipher_enc_sm4_cbc@@LIBKCAPI_1.4.0}\n  [A] 'function ssize_t kcapi_cipher_enc_sm4_ctr(const uint8_t*, uint32_t, const uint8_t*, size_t, const uint8_t*, uint8_t*, size_t)'    {kcapi_cipher_enc_sm4_ctr@@LIBKCAPI_1.4.0}\n  [A] 'function int kcapi_get_maxsplicesize(kcapi_handle*)'    {kcapi_get_maxsplicesize@@LIBKCAPI_1.3.0}\n  [A] 'function ssize_t kcapi_md_hmac_sm3(const uint8_t*, uint32_t, const uint8_t*, size_t, uint8_t*, size_t)'    {kcapi_md_hmac_sm3@@LIBKCAPI_1.4.0}\n  [A] 'function ssize_t kcapi_md_sm3(const uint8_t*, size_t, uint8_t*, size_t)'    {kcapi_md_sm3@@LIBKCAPI_1.4.0}\n  [A] 'function int kcapi_rng_setaddtl(kcapi_handle*, uint8_t*, uint32_t)'    {kcapi_rng_setaddtl@@LIBKCAPI_1.4.0}\n  [A] 'function int kcapi_rng_setentropy(kcapi_handle*, uint8_t*, uint32_t)'    {kcapi_rng_setentropy@@LIBKCAPI_1.4.0}\n  [A] 'function int kcapi_set_maxsplicesize(kcapi_handle*, unsigned int)'    {kcapi_set_maxsplicesize@@LIBKCAPI_1.3.0}\n\n2 functions with some indirect sub-type change:\n\n  [C] 'function uint32_t kcapi_aead_authsize(kcapi_handle*)' at kcapi-aead.c:517:1 has some indirect sub-type changes:\n    parameter 1 of type 'kcapi_handle*' has sub-type changes:\n      in pointed to type 'struct kcapi_handle' at internal.h:251:1:\n        type size changed from 960 to 1152 (in bits)\n        2 data member insertions:\n          'unsigned int pagesize', at offset 160 (in bits) at internal.h:255:1\n          'unsigned int pipesize', at offset 192 (in bits) at internal.h:256:1\n        5 data member changes:\n          'uint32_t processed_sg' offset changed from 160 to 256 (in bits) (by +96 bits), size changed from 32 to 64 (in bits) (by +32 bits)\n          'kcapi_cipher_data cipher' offset changed from 192 to 320 (in bits) (by +128 bits)\n          type of 'kcapi_aead_data aead' changed:\n            type size changed from 320 to 384 (in bits)\n            6 data member changes:\n              'uint32_t datalen' size changed from 32 to 64 (in bits) (by +32 bits)\n              type of 'uint32_t assoclen' changed:\n                typedef name changed from uint32_t to size_t at stddef.h:209:1\n                underlying type 'typedef __uint32_t' at types.h:42:1 changed:\n                  entity changed from 'typedef __uint32_t' to compatible type 'unsigned long int'\n                    type name changed from 'unsigned int' to 'unsigned long int'\n                    type size changed from 32 to 64 (in bits)\n              and offset changed from 32 to 64 (in bits) (by +32 bits)\n              'uint32_t taglen' offset changed from 64 to 128 (in bits) (by +64 bits), size changed from 32 to 64 (in bits) (by +32 bits)\n              'uint8_t* data' offset changed from 128 to 192 (in bits) (by +64 bits)\n              'uint8_t* assoc' offset changed from 192 to 256 (in bits) (by +64 bits)\n              'uint8_t* tag' offset changed from 256 to 320 (in bits) (by +64 bits)\n          and offset changed from 256 to 384 (in bits) (by +128 bits)\n          'kcapi_aio aio' offset changed from 576 to 768 (in bits) (by +192 bits)\n          'kcapi_flags flags' offset changed from 896 to 1088 (in bits) (by +192 bits)\n\n  [C] 'function int32_t kcapi_md_update(kcapi_handle*, const uint8_t*, uint32_t)' at kcapi-md.c:69:1 has some indirect sub-type changes:\n    return type changed:\n      typedef name changed from int32_t to ssize_t at unistd.h:220:1\n      underlying type 'typedef __int32_t' at types.h:41:1 changed:\n        typedef name changed from __int32_t to __ssize_t at types.h:194:1\n        underlying type 'int' changed:\n          type name changed from 'int' to 'long int'\n          type size changed from 32 to 64 (in bits)\n    parameter 3 of type 'typedef uint32_t' changed:\n      typedef name changed from uint32_t to size_t at stddef.h:209:1\n      underlying type 'typedef __uint32_t' at types.h:42:1 changed:\n        entity changed from 'typedef __uint32_t' to compatible type 'unsigned long int'\n          type name changed from 'unsigned int' to 'unsigned long int'\n          type size changed from 32 to 64 (in bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.04678988456726074,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkcapi.so.1.2.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkcapi.so.1.4.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkcapi.so.1.4.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkcapi.so.1.2.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkcapi.so.1.2.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkcapi.so.1.4.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkcapi.so.1.2.1-abi-laboratory-libkcapi-so-1-2-1-libkcapi-so-1-4-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.18822288513183594,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkcapi.so.1.2.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkcapi.so.1.4.0 libkcapi-so-1-2-1-libkcapi-so-1-4-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkcapi.so.1.2.1-abi-laboratory-libkcapi-so-1-2-1-libkcapi-so-1-4-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkcapi.so.1.4.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkcapi.so.1.2.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkcapi.so.1.2.1": 53688,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkcapi.so.1.4.0": 70128
+            }
+        },
+        "experiment": "usr/lib64/libkcapi-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkcapi.so.1.4.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkcapi.so.1.2.1",
+        "different_libs": true
+    }
+]

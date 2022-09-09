@@ -1,0 +1,80 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl.so.0.6.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl.so.0.6.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjxl.so.0.6.1",
+                    "spliced_lib": "libjxl.so.0.6.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "abort",
+                        "printf",
+                        "__pthread_key_create",
+                        "_ZSt19__throw_logic_errorPKc"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.700920104980469e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjxl.so.0.6.1",
+                    "spliced_lib": "libjxl.so.0.6.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.57763671875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 2 Changed (60 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 functions with some indirect sub-type change:\n\n  [C] 'function JxlDecoder* JxlDecoderCreate(const JxlMemoryManager*)' at decode.cc:602:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'typedef JxlDecoder' at decode.h:80:1:\n        underlying type 'struct JxlDecoderStruct' at decode.cc:377:1 changed:\n          type size hasn't changed\n          1 data member changes (15 filtered):\n            'jxl::ColorEncoding default_enc' has *some* difference - please report as a bug\n\n  [C] 'function JxlEncoderStatus JxlEncoderAddImageFrame(const JxlEncoderOptions*, const JxlPixelFormat*, void*, size_t)' at encode.cc:393:1 has some indirect sub-type changes:\n    parameter 1 of type 'const JxlEncoderOptions*' has sub-type changes:\n      in pointed to type 'const JxlEncoderOptions':\n        in unqualified underlying type 'typedef JxlEncoderOptions' at encode.h:48:1:\n          underlying type 'struct JxlEncoderOptionsStruct' at encode_internal.h:115:1 changed:\n            type size hasn't changed\n            1 data member changes (1 filtered):\n              type of 'JxlEncoder* enc' changed:\n                in pointed to type 'typedef JxlEncoder' at encode.h:38:1:\n                  underlying type 'struct JxlEncoderStruct' at encode_internal.h:83:1 changed:\n                    type size hasn't changed\n                    1 data member changes (5 filtered):\n                      type of 'jxl::CompressParams last_used_cparams' changed:\n                        type size hasn't changed\n                        1 data member changes (2 filtered):\n                          type of 'std::pair<float, float> quality_pair' changed:\n                            type size hasn't changed\n                            1 base class change:\n                              'class std::__pair_base<float, float>' at stl_pair.h:189:1 changed:\n\n",
+                    "return_code": 4,
+                    "seconds": 12.363669633865356,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl.so.0.6.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl.so.0.6.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl.so.0.6.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl.so.0.6.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl.so.0.6.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl.so.0.6.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl.so.0.6.1-abi-laboratory-libjxl-so-0-6-1-libjxl-so-0-6-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.25905799865722656,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl.so.0.6.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl.so.0.6.1 libjxl-so-0-6-1-libjxl-so-0-6-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl.so.0.6.1-abi-laboratory-libjxl-so-0-6-1-libjxl-so-0-6-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl.so.0.6.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl.so.0.6.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl.so.0.6.1": 2952624,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl.so.0.6.1": 2916224
+            }
+        },
+        "experiment": "usr/lib64/libjxl-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl.so.0.6.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl.so.0.6.1",
+        "different_libs": true
+    }
+]

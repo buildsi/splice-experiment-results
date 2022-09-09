@@ -1,0 +1,83 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.7.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjxl_threads.so.0.6.1",
+                    "spliced_lib": "libjxl_threads.so.0.7.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__pthread_key_create",
+                        "_ZTINSt6thread6_StateE",
+                        "pthread_create",
+                        "_ZTVN10__cxxabiv120__si_class_type_infoE",
+                        "_ZTSNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvPN6jpegxl20ThreadParallelRunnerEiES5_jEEEEEE"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.647804260253906e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjxl_threads.so.0.6.1",
+                    "spliced_lib": "libjxl_threads.so.0.7.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZTSNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvPN6jpegxl20ThreadParallelRunnerEiES5_jEEEEEE"
+                    ],
+                    "prediction": false,
+                    "seconds": 9.298324584960938e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 0 Added function symbol not referenced by debug info\nVariable symbols changes summary: 1 Removed, 0 Added variable symbol not referenced by debug info\n\nSONAME changed from 'libjxl_threads.so.0.6' to 'libjxl_threads.so.0.7'\n\n1 Removed variable symbol not referenced by debug info:\n\n  [D] _ZTSNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvPN6jpegxl20ThreadParallelRunnerEiES5_jEEEEEE\n\n",
+                    "return_code": 12,
+                    "seconds": 1.3576111793518066,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.7.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.7.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.7.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1-abi-laboratory-libjxl_threads-so-0-6-1-libjxl_threads-so-0-7-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.1893761157989502,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.7.0 libjxl_threads-so-0-6-1-libjxl_threads-so-0-7-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1-abi-laboratory-libjxl_threads-so-0-6-1-libjxl_threads-so-0-7-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.7.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1": 24320,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.7.0": 20560
+            }
+        },
+        "experiment": "usr/lib64/libjxl_threads-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.7.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1",
+        "different_libs": true
+    }
+]

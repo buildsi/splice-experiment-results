@@ -1,0 +1,82 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkio.so.4.2.0",
+                    "spliced_lib": "libkio.so.4.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "_ZN13KOpenSSLProxy16EVP_PKEY_base_idEPK11evp_pkey_st",
+                        "_ZN10QBoxLayout7addItemEP11QLayoutItem",
+                        "_ZN13KOpenSSLProxy24SSL_get_peer_certificateEP6ssl_st"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.002708911895751953
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkio.so.4.2.0",
+                    "spliced_lib": "libkio.so.4.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZN13KOpenSSLProxy16EVP_PKEY_base_idEPK11evp_pkey_st",
+                        "_ZN13KOpenSSLProxy24SSL_get_peer_certificateEP6ssl_st"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.3406980037689209
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 2 Removed, 12 Changed (29 filtered out), 2 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 Removed functions:\n\n  [D] 'method int KOpenSSLProxy::EVP_PKEY_base_id(const EVP_PKEY*)'    {_ZN13KOpenSSLProxy16EVP_PKEY_base_idEPK11evp_pkey_st}\n  [D] 'method X509* KOpenSSLProxy::SSL_get_peer_certificate(SSL*)'    {_ZN13KOpenSSLProxy24SSL_get_peer_certificateEP6ssl_st}\n\n2 Added functions:\n\n  [A] 'method int KOpenSSLProxy::EVP_PKEY_get_base_id(const EVP_PKEY*)'    {_ZN13KOpenSSLProxy20EVP_PKEY_get_base_idEPK11evp_pkey_st}\n  [A] 'method X509* KOpenSSLProxy::SSL_get1_peer_certificate(SSL*)'    {_ZN13KOpenSSLProxy25SSL_get1_peer_certificateEP6ssl_st}\n\n12 functions with some indirect sub-type change:\n\n  [C] 'method void KDirOperator::slotDetailedView(int)' at kdiroperator.cpp:290:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotSeparateDirs(int)' at kdiroperator.cpp:310:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotSimpleView(int)' at kdiroperator.cpp:296:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotSortByDate(int)' at kdiroperator.cpp:351:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotSortByName(int)' at kdiroperator.cpp:335:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotSortBySize(int)' at kdiroperator.cpp:343:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotToggleDirsFirst(int)' at kdiroperator.cpp:365:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotToggleIgnoreCase(int)' at kdiroperator.cpp:375:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::updateDir(int)' at kdiroperator.cpp:684:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KFilePropsPlugin::slotSizeStop()' at kpropertiesdialog.cpp:1278:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was added\n\n  [C] 'method void KOpenSSLProxy::PKCS7_content_free(PKCS7*)' at kopenssl.cc:1536:1 has some indirect sub-type changes:\n    parameter 1 of type 'PKCS7*' has sub-type changes:\n      in pointed to type 'typedef PKCS7' at pkcs7.h:216:1:\n        underlying type 'struct pkcs7_st' at pkcs7.h:109:1 changed:\n          type size changed from 320 to 448 (in bits)\n          1 data member insertion:\n            'PKCS7_CTX ctx', at offset 320 (in bits) at pkcs7.h:215:1\n          1 data member change:\n            type of 'union {char* ptr; ASN1_OCTET_STRING* data; PKCS7_SIGNED* sign; PKCS7_ENVELOPE* enveloped; PKCS7_SIGN_ENVELOPE* signed_and_enveloped; PKCS7_DIGEST* digest; PKCS7_ENCRYPT* encrypted; ASN1_TYPE* other;} d' changed:\n              type size hasn't changed\n              1 data member changes (4 filtered):\n                type of 'PKCS7_ENCRYPT* encrypted' changed:\n                  in pointed to type 'typedef PKCS7_ENCRYPT' at pkcs7.h:178:1:\n                    underlying type 'struct pkcs7_encrypted_st' at pkcs7.h:104:1 changed:\n                      type size hasn't changed\n                      1 data member change:\n                        type of 'PKCS7_ENC_CONTENT* enc_data' changed:\n                          in pointed to type 'typedef PKCS7_ENC_CONTENT' at pkcs7.h:150:1:\n                            underlying type 'struct pkcs7_enc_content_st' at pkcs7.h:74:1 changed:\n                              type size changed from 256 to 320 (in bits)\n                              1 data member insertion:\n                                'const PKCS7_CTX* ctx', at offset 256 (in bits) at pkcs7.h:149:1\n\n  [C] 'method char* KOpenSSLProxy::i2s_ASN1_INTEGER(X509V3_EXT_METHOD*, ASN1_INTEGER*)' at kopenssl.cc:1384:1 has some indirect sub-type changes:\n    parameter 1 of type 'X509V3_EXT_METHOD*' has sub-type changes:\n      in pointed to type 'typedef X509V3_EXT_METHOD' at x509v3.h:107:1:\n        underlying type 'struct v3_ext_method' at x509v3.h:49:1 changed:\n          type size hasn't changed\n          2 data member changes (5 filtered):\n            type of 'ASN1_ITEM_EXP* it' changed:\n              in pointed to type 'typedef ASN1_ITEM_EXP' at asn1.h:415:1:\n                underlying type 'const ASN1_ITEM' changed:\n                  entity changed from 'const ASN1_ITEM' to 'function type const ASN1_ITEM* ()'\n                  type size changed from 0 to 64 (in bits)\n            type of 'X509V3_EXT_R2I r2i' changed:\n              underlying type 'void* (const v3_ext_method*, v3_ext_ctx*, const char*)*' changed:\n                in pointed to type 'function type void* (const v3_ext_method*, v3_ext_ctx*, const char*)':\n                  parameter 2 of type 'v3_ext_ctx*' has sub-type changes:\n                    in pointed to type 'struct v3_ext_ctx' at x509v3.h:90:1:\n                      type size changed from 448 to 512 (in bits)\n                      1 data member insertion:\n                        'EVP_PKEY* issuer_pkey', at offset 448 (in bits) at x509v3.h:103:1\n\n",
+                    "return_code": 12,
+                    "seconds": 14.238518238067627,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0-abi-laboratory-libkio-so-4-2-0-libkio-so-4-2-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.1921098232269287,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0 libkio-so-4-2-0-libkio-so-4-2-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0-abi-laboratory-libkio-so-4-2-0-libkio-so-4-2-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0": 3921936,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0": 3913608
+            }
+        },
+        "experiment": "usr/lib64/libkio-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0",
+        "different_libs": true
+    }
+]

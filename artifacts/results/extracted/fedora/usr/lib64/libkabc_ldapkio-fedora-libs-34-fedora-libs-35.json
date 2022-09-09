@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_ldapkio.so.1.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_ldapkio.so.1.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkabc_ldapkio.so.1.0.0",
+                    "spliced_lib": "libkabc_ldapkio.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001456737518310547
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkabc_ldapkio.so.1.0.0",
+                    "spliced_lib": "libkabc_ldapkio.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00018215179443359375
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.7565736770629883,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_ldapkio.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_ldapkio.so.1.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_ldapkio.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_ldapkio.so.1.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_ldapkio.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_ldapkio.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_ldapkio.so.1.0.0-abi-laboratory-libkabc_ldapkio-so-1-0-0-libkabc_ldapkio-so-1-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.18871784210205078,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_ldapkio.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_ldapkio.so.1.0.0 libkabc_ldapkio-so-1-0-0-libkabc_ldapkio-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_ldapkio.so.1.0.0-abi-laboratory-libkabc_ldapkio-so-1-0-0-libkabc_ldapkio-so-1-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_ldapkio.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_ldapkio.so.1.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_ldapkio.so.1.0.0": 172920,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_ldapkio.so.1.0.0": 172760
+            }
+        },
+        "experiment": "usr/lib64/libkabc_ldapkio-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_ldapkio.so.1.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_ldapkio.so.1.0.0",
+        "different_libs": true
+    }
+]

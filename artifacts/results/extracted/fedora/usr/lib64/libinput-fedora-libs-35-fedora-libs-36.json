@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libinput.so.10.13.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libinput.so.10.13.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libinput.so.10.13.0",
+                    "spliced_lib": "libinput.so.10.13.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__memcpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0002624988555908203
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libinput.so.10.13.0",
+                    "spliced_lib": "libinput.so.10.13.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0006270408630371094
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (240 filtered out), 4 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n4 Added functions:\n\n  [A] 'function libinput_config_dwtp_state libinput_device_config_dwtp_get_default_enabled(libinput_device*)'    {libinput_device_config_dwtp_get_default_enabled@@LIBINPUT_1.21}\n  [A] 'function libinput_config_dwtp_state libinput_device_config_dwtp_get_enabled(libinput_device*)'    {libinput_device_config_dwtp_get_enabled@@LIBINPUT_1.21}\n  [A] 'function int libinput_device_config_dwtp_is_available(libinput_device*)'    {libinput_device_config_dwtp_is_available@@LIBINPUT_1.21}\n  [A] 'function libinput_config_status libinput_device_config_dwtp_set_enabled(libinput_device*, libinput_config_dwtp_state)'    {libinput_device_config_dwtp_set_enabled@@LIBINPUT_1.21}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function libinput_config_accel_profile libinput_device_config_accel_get_default_profile(libinput_device*)' at libinput.c:4147:1 has some indirect sub-type changes:\n    parameter 1 of type 'libinput_device*' has sub-type changes:\n      in pointed to type 'struct libinput_device' at libinput-private.h:360:1:\n        type size changed from 1280 to 1344 (in bits)\n        2 data member changes:\n          type of 'libinput_seat* seat' changed:\n            in pointed to type 'struct libinput_seat' at libinput-private.h:177:1:\n              type size hasn't changed\n              1 data member changes (1 filtered):\n                type of 'libinput* libinput' changed:\n                  in pointed to type 'struct libinput' at libinput-private.h:128:1:\n                    type size changed from 1984 to 2176 (in bits)\n                    19 data member changes:\n                      type of 'struct {list list; libinput_source* source; int fd; uint64_t next_expiry;} timer' changed:\n                        type size changed from 320 to 512 (in bits)\n                        1 data member insertion:\n                          'ratelimit expiry_in_past_limit', at offset 320 (in bits) at libinput-private.h:140:1\n                      'libinput_event** events' offset changed from 640 to 832 (in bits) (by +192 bits)\n                      'size_t events_count' offset changed from 704 to 896 (in bits) (by +192 bits)\n                      'size_t events_len' offset changed from 768 to 960 (in bits) (by +192 bits)\n                      'size_t events_in' offset changed from 832 to 1024 (in bits) (by +192 bits)\n                      'size_t events_out' offset changed from 896 to 1088 (in bits) (by +192 bits)\n                      'list tool_list' offset changed from 960 to 1152 (in bits) (by +192 bits)\n                      'const libinput_interface* interface' offset changed from 1088 to 1280 (in bits) (by +192 bits)\n                      'const libinput_interface_backend* interface_backend' offset changed from 1152 to 1344 (in bits) (by +192 bits)\n                      'libinput_log_handler log_handler' offset changed from 1216 to 1408 (in bits) (by +192 bits)\n                      'libinput_log_priority log_priority' offset changed from 1280 to 1472 (in bits) (by +192 bits)\n                      'void* user_data' offset changed from 1344 to 1536 (in bits) (by +192 bits)\n                      'int refcount' offset changed from 1408 to 1600 (in bits) (by +192 bits)\n                      'list device_group_list' offset changed from 1472 to 1664 (in bits) (by +192 bits)\n                      'uint64_t last_event_time' offset changed from 1600 to 1792 (in bits) (by +192 bits)\n                      'uint64_t dispatch_time' offset changed from 1664 to 1856 (in bits) (by +192 bits)\n                      'bool quirks_initialized' offset changed from 1728 to 1920 (in bits) (by +192 bits)\n                      'quirks_context* quirks' offset changed from 1792 to 1984 (in bits) (by +192 bits)\n                      'struct {WacomDeviceDatabase* db; size_t refcount;} libwacom' offset changed from 1856 to 2048 (in bits) (by +192 bits)\n          type of 'libinput_device_config config' changed:\n            type size changed from 768 to 832 (in bits)\n            1 data member insertion:\n              'libinput_device_config_dwtp* dwtp', at offset 640 (in bits) at libinput-private.h:347:1\n            2 data member changes (10 filtered):\n              'libinput_device_config_rotation* rotation' offset changed from 640 to 704 (in bits) (by +64 bits)\n              'libinput_device_config_gesture* gesture' offset changed from 704 to 768 (in bits) (by +64 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 1.3328371047973633,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libinput.so.10.13.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libinput.so.10.13.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libinput.so.10.13.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libinput.so.10.13.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libinput.so.10.13.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libinput.so.10.13.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libinput.so.10.13.0-abi-laboratory-libinput-so-10-13-0-libinput-so-10-13-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.4305102825164795,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libinput.so.10.13.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libinput.so.10.13.0 libinput-so-10-13-0-libinput-so-10-13-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libinput.so.10.13.0-abi-laboratory-libinput-so-10-13-0-libinput-so-10-13-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libinput.so.10.13.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libinput.so.10.13.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libinput.so.10.13.0": 349672,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libinput.so.10.13.0": 354056
+            }
+        },
+        "experiment": "usr/lib64/libinput-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libinput.so.10.13.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libinput.so.10.13.0",
+        "different_libs": true
+    }
+]

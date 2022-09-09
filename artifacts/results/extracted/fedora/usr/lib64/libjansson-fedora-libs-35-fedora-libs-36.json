@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjansson.so.4.13.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjansson.so.4.13.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjansson.so.4.13.0",
+                    "spliced_lib": "libjansson.so.4.13.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__strncpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.557868957519531e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjansson.so.4.13.0",
+                    "spliced_lib": "libjansson.so.4.13.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.365776062011719e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.05279421806335449,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjansson.so.4.13.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjansson.so.4.13.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjansson.so.4.13.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjansson.so.4.13.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjansson.so.4.13.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjansson.so.4.13.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjansson.so.4.13.0-abi-laboratory-libjansson-so-4-13-0-libjansson-so-4-13-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.362346887588501,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjansson.so.4.13.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjansson.so.4.13.0 libjansson-so-4-13-0-libjansson-so-4-13-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjansson.so.4.13.0-abi-laboratory-libjansson-so-4-13-0-libjansson-so-4-13-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjansson.so.4.13.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjansson.so.4.13.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjansson.so.4.13.0": 61976,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjansson.so.4.13.0": 62160
+            }
+        },
+        "experiment": "usr/lib64/libjansson-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjansson.so.4.13.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjansson.so.4.13.0",
+        "different_libs": true
+    }
+]

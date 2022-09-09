@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldap_r-2.4.so.2.11.5"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldap_r-2.4.so.2.11.7"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldap_r-2.4.so.2.11.5",
+                    "spliced_lib": "libldap_r-2.4.so.2.11.7",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__dn_expand",
+                        "__res_query"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00018095970153808594
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libldap_r-2.4.so.2.11.5",
+                    "spliced_lib": "libldap_r-2.4.so.2.11.7",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0018732547760009766
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.16108036041259766,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldap_r-2.4.so.2.11.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldap_r-2.4.so.2.11.7",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldap_r-2.4.so.2.11.7",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldap_r-2.4.so.2.11.5",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldap_r-2.4.so.2.11.5\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldap_r-2.4.so.2.11.7\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldap_r-2.4.so.2.11.5-abi-laboratory-libldap_r-2-4-so-2-11-5-libldap_r-2-4-so-2-11-7.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19278860092163086,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldap_r-2.4.so.2.11.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldap_r-2.4.so.2.11.7 libldap_r-2-4-so-2-11-5-libldap_r-2-4-so-2-11-7 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldap_r-2.4.so.2.11.5-abi-laboratory-libldap_r-2-4-so-2-11-5-libldap_r-2-4-so-2-11-7.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldap_r-2.4.so.2.11.7",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldap_r-2.4.so.2.11.5",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldap_r-2.4.so.2.11.5": 365960,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldap_r-2.4.so.2.11.7": 369968
+            }
+        },
+        "experiment": "usr/lib64/libldap_r-2-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libldap_r-2.4.so.2.11.7",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libldap_r-2.4.so.2.11.5",
+        "different_libs": true
+    }
+]

@@ -41,10 +41,12 @@ $ python get_artifacts.py 3019032895  # fedora results 350-450
 $ python get_artifacts.py 3019727038  # fedora results 550-650
 $ python get_artifacts.py 3019728826  # fedora results 650-750
 
+$ python get_artifacts.py 3020343625  # fedora results 750-850
+
+
 $ python get_artifacts.py   # fedora results 500-600
 $ python get_artifacts.py   # fedora results 600-700
 $ python get_artifacts.py   # fedora results 700-800
-$ python get_artifacts.py   # fedora results 800-900
 $ python get_artifacts.py   # fedora results 900-1000
 $ python get_artifacts.py   # fedora results 1000-1100
 $ python get_artifacts.py   # fedora results 1100-1200

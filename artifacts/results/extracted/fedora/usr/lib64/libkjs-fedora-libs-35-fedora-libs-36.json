@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkjs.so.1.2.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkjs.so.1.2.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkjs.so.1.2.0",
+                    "spliced_lib": "libkjs.so.1.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00017499923706054688
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkjs.so.1.2.0",
+                    "spliced_lib": "libkjs.so.1.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.002843618392944336
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 1.3180553913116455,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkjs.so.1.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkjs.so.1.2.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkjs.so.1.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkjs.so.1.2.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkjs.so.1.2.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkjs.so.1.2.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkjs.so.1.2.0-abi-laboratory-libkjs-so-1-2-0-libkjs-so-1-2-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2404317855834961,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkjs.so.1.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkjs.so.1.2.0 libkjs-so-1-2-0-libkjs-so-1-2-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkjs.so.1.2.0-abi-laboratory-libkjs-so-1-2-0-libkjs-so-1-2-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkjs.so.1.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkjs.so.1.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkjs.so.1.2.0": 536680,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkjs.so.1.2.0": 536752
+            }
+        },
+        "experiment": "usr/lib64/libkjs-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkjs.so.1.2.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkjs.so.1.2.0",
+        "different_libs": true
+    }
+]

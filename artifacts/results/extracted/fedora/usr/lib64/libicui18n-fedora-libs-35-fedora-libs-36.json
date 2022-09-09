@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicui18n.so.69.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicui18n.so.69.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libicui18n.so.69.1",
+                    "spliced_lib": "libicui18n.so.69.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.004477500915527344
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libicui18n.so.69.1",
+                    "spliced_lib": "libicui18n.so.69.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.5206637382507324
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 20.63630509376526,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicui18n.so.69.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicui18n.so.69.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicui18n.so.69.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicui18n.so.69.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicui18n.so.69.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicui18n.so.69.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicui18n.so.69.1-abi-laboratory-libicui18n-so-69-1-libicui18n-so-69-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.3181025981903076,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicui18n.so.69.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicui18n.so.69.1 libicui18n-so-69-1-libicui18n-so-69-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicui18n.so.69.1-abi-laboratory-libicui18n-so-69-1-libicui18n-so-69-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicui18n.so.69.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicui18n.so.69.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicui18n.so.69.1": 3354688,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicui18n.so.69.1": 3346304
+            }
+        },
+        "experiment": "usr/lib64/libicui18n-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicui18n.so.69.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicui18n.so.69.1",
+        "different_libs": true
+    }
+]

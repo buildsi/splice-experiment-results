@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdeinit_klauncher.so",
+                    "spliced_lib": "libkdeinit_klauncher.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00011014938354492188
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdeinit_klauncher.so",
+                    "spliced_lib": "libkdeinit_klauncher.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0003333091735839844
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.7616875171661377,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so-abi-laboratory-libkdeinit_klauncher-so-libkdeinit_klauncher-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.23819923400878906,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so libkdeinit_klauncher-so-libkdeinit_klauncher-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so-abi-laboratory-libkdeinit_klauncher-so-libkdeinit_klauncher-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so": 127232,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so": 127408
+            }
+        },
+        "experiment": "usr/lib64/libkdeinit_klauncher-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so",
+        "different_libs": true
+    }
+]

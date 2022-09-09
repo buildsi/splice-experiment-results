@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkio.so.4.2.0",
+                    "spliced_lib": "libkio.so.4.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0028052330017089844
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkio.so.4.2.0",
+                    "spliced_lib": "libkio.so.4.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.34012532234191895
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 10 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n10 functions with some indirect sub-type change:\n\n  [C] 'method void KDirOperator::slotDetailedView(int)' at kdiroperator.cpp:290:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotSeparateDirs(int)' at kdiroperator.cpp:310:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotSimpleView(int)' at kdiroperator.cpp:296:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotSortByDate(int)' at kdiroperator.cpp:351:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotSortByName(int)' at kdiroperator.cpp:335:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotSortBySize(int)' at kdiroperator.cpp:343:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotToggleDirsFirst(int)' at kdiroperator.cpp:365:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::slotToggleIgnoreCase(int)' at kdiroperator.cpp:375:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KDirOperator::updateDir(int)' at kdiroperator.cpp:684:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was removed\n\n  [C] 'method void KFilePropsPlugin::slotSizeStop()' at kpropertiesdialog.cpp:1278:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' was added\n\n",
+                    "return_code": 4,
+                    "seconds": 14.168049335479736,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0-abi-laboratory-libkio-so-4-2-0-libkio-so-4-2-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.1911609172821045,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0 libkio-so-4-2-0-libkio-so-4-2-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0-abi-laboratory-libkio-so-4-2-0-libkio-so-4-2-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0": 3921936,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0": 3917512
+            }
+        },
+        "experiment": "usr/lib64/libkio-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkio.so.4.2.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkio.so.4.2.0",
+        "different_libs": true
+    }
+]

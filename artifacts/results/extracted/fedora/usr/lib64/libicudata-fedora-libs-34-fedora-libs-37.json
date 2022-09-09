@@ -1,0 +1,79 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicudata.so.67.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicudata.so.71.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libicudata.so.67.1",
+                    "spliced_lib": "libicudata.so.71.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "icudt67_dat"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.4066696166992188e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libicudata.so.67.1",
+                    "spliced_lib": "libicudata.so.71.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "icudt67_dat"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.0067901611328125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 0 Added function symbol not referenced by debug info\nVariable symbols changes summary: 1 Removed, 1 Added variable symbols not referenced by debug info\n\nSONAME changed from 'libicudata.so.67' to 'libicudata.so.71'\n\n1 Removed variable symbol not referenced by debug info:\n\n  [D] icudt67_dat\n\n1 Added variable symbol not referenced by debug info:\n\n  [A] icudt71_dat\n\n",
+                    "return_code": 12,
+                    "seconds": 0.02836775779724121,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicudata.so.67.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicudata.so.71.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicudata.so.71.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicudata.so.67.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicudata.so.67.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicudata.so.71.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicudata.so.67.1-abi-laboratory-libicudata-so-67-1-libicudata-so-71-1.html\n",
+                    "return_code": 139,
+                    "seconds": 0.38858556747436523,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicudata.so.67.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicudata.so.71.1 libicudata-so-67-1-libicudata-so-71-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicudata.so.67.1-abi-laboratory-libicudata-so-67-1-libicudata-so-71-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicudata.so.71.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicudata.so.67.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicudata.so.67.1": 28408488,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicudata.so.71.1": 30432016
+            }
+        },
+        "experiment": "usr/lib64/libicudata-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicudata.so.71.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicudata.so.67.1",
+        "different_libs": true
+    }
+]

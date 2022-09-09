@@ -1,0 +1,79 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjsoncpp.so.1.9.4"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjsoncpp.so.1.9.5"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjsoncpp.so.1.9.4",
+                    "spliced_lib": "libjsoncpp.so.1.9.5",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "printf",
+                        "abort",
+                        "_ZSt7getlineIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EES4_"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0005223751068115234
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libjsoncpp.so.1.9.4",
+                    "spliced_lib": "libjsoncpp.so.1.9.5",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0014255046844482422
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed (32 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\nSONAME changed from 'libjsoncpp.so.24' to 'libjsoncpp.so.25'\n\n",
+                    "return_code": 12,
+                    "seconds": 1.1645491123199463,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjsoncpp.so.1.9.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjsoncpp.so.1.9.5",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjsoncpp.so.1.9.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjsoncpp.so.1.9.4",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjsoncpp.so.1.9.4\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjsoncpp.so.1.9.5\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjsoncpp.so.1.9.4-abi-laboratory-libjsoncpp-so-1-9-4-libjsoncpp-so-1-9-5.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22508955001831055,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjsoncpp.so.1.9.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjsoncpp.so.1.9.5 libjsoncpp-so-1-9-4-libjsoncpp-so-1-9-5 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjsoncpp.so.1.9.4-abi-laboratory-libjsoncpp-so-1-9-4-libjsoncpp-so-1-9-5.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjsoncpp.so.1.9.5",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjsoncpp.so.1.9.4",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjsoncpp.so.1.9.4": 233176,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjsoncpp.so.1.9.5": 245680
+            }
+        },
+        "experiment": "usr/lib64/libjsoncpp-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjsoncpp.so.1.9.5",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjsoncpp.so.1.9.4",
+        "different_libs": true
+    }
+]

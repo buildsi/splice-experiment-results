@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libidn2.so.0.3.7",
+                    "spliced_lib": "libidn2.so.0.3.7",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__memcpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 8.225440979003906e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libidn2.so.0.3.7",
+                    "spliced_lib": "libidn2.so.0.3.7",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.6450881958007812e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function int idn2_to_unicode_8z4z(int, const char*, uint32_t**, int)' at decode.c:64:1 has some indirect sub-type changes:\n    parameter 1 of type 'int' changed:\n      entity changed from 'int' to 'const char*'\n      type size changed from 32 to 64 (in bits)\n    parameter 2 of type 'const char*' changed:\n      in pointed to type 'const char':\n        entity changed from 'const char' to 'uint32_t*'\n        type size changed from 8 to 64 (in bits)\n    parameter 3 of type 'uint32_t**' changed:\n      entity changed from 'uint32_t**' to 'int'\n      type size changed from 64 to 32 (in bits)\n    parameter 4 of type 'int' was removed\n\n",
+                    "return_code": 4,
+                    "seconds": 0.024699926376342773,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7-abi-laboratory-libidn2-so-0-3-7-libidn2-so-0-3-7.html\nFound link to libidn2.so.0.3.7-2.3.2-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libidn2.so.0.3.7-2.3.2-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libidn2-2.3.2-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4868\nERROR: incomplete info for symbol 7803\nERROR: incomplete info for symbol 7979\nERROR: incomplete info for symbol 8316\nERROR: incomplete info for symbol 8765\nERROR: incomplete info for symbol 9003\nERROR: incomplete info for symbol 9226\nERROR: incomplete info for symbol 9497\nERROR: incomplete info for symbol 9559\nERROR: incomplete info for symbol 9592\nERROR: incomplete info for symbol 9625\nERROR: incomplete info for symbol 10049\nERROR: incomplete info for symbol 13427\nERROR: incomplete info for symbol 13715\nERROR: incomplete info for symbol 13806\nERROR: incomplete info for symbol 14241\nERROR: incomplete info for symbol 14639\nERROR: incomplete info for symbol 14942\nERROR: incomplete info for symbol 16035\nERROR: incomplete info for symbol 16151\nERROR: incomplete info for symbol 16459\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-E8hw3.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libidn2.so.0.3.7-2.3.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libidn2.so.0.3.7-2.3.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libidn2-2.3.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7571\nERROR: incomplete info for symbol 7633\nERROR: incomplete info for symbol 7666\nERROR: incomplete info for symbol 7699\nERROR: incomplete info for symbol 8123\nERROR: incomplete info for symbol 8581\nERROR: incomplete info for symbol 11550\nERROR: incomplete info for symbol 11851\nERROR: incomplete info for symbol 11942\nERROR: incomplete info for symbol 12383\nERROR: incomplete info for symbol 12781\nERROR: incomplete info for symbol 13090\nERROR: incomplete info for symbol 13181\nERROR: incomplete info for symbol 13596\nERROR: incomplete info for symbol 13925\nERROR: incomplete info for symbol 14253\nERROR: incomplete info for symbol 14491\nERROR: incomplete info for symbol 14709\nERROR: incomplete info for symbol 14976\nERROR: incomplete info for symbol 15813\nERROR: incomplete info for symbol 16124\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-YvVG2.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7-abi-laboratory-libidn2-so-0-3-7-libidn2-so-0-3-7.html\n",
+                    "return_code": 0,
+                    "seconds": 0.6366102695465088,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7 libidn2-so-0-3-7-libidn2-so-0-3-7 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7-abi-laboratory-libidn2-so-0-3-7-libidn2-so-0-3-7.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7": 130944,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7": 131008
+            }
+        },
+        "experiment": "usr/lib64/libidn2-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libidn2.so.0.3.7",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libidn2.so.0.3.7",
+        "different_libs": true
+    }
+]
