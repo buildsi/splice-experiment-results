@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/CSN_369103.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/CSN_369103.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "CSN_369103.so",
+                    "spliced_lib": "CSN_369103.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.1219253540039062e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "CSN_369103.so",
+                    "spliced_lib": "CSN_369103.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.4373016357421875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.012605667114257812,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/CSN_369103.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/CSN_369103.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/CSN_369103.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/CSN_369103.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/CSN_369103.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/CSN_369103.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/CSN_369103.so-abi-laboratory-CSN_369103-so-CSN_369103-so.html\nFound link to CSN_369103.so-2.33-21.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file CSN_369103.so-2.33-21.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gconv/../../../.dwz/glibc-2.33-21.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-XIxcz.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to CSN_369103.so-2.35-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file CSN_369103.so-2.35-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gconv/../../../.dwz/glibc-2.35-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-VPR9E.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/CSN_369103.so-abi-laboratory-CSN_369103-so-CSN_369103-so.html\n",
+                    "return_code": 0,
+                    "seconds": 1.7983739376068115,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/CSN_369103.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/CSN_369103.so CSN_369103-so-CSN_369103-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/CSN_369103.so-abi-laboratory-CSN_369103-so-CSN_369103-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/CSN_369103.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/CSN_369103.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/CSN_369103.so": 20088,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/CSN_369103.so": 20016
+            }
+        },
+        "experiment": "usr/lib64/gconv/CSN_369103-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/CSN_369103.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/CSN_369103.so",
+        "different_libs": true
+    }
+]
