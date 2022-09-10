@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libplc4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libplc4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libplc4.so",
+                    "spliced_lib": "libplc4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.62396240234375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libplc4.so",
+                    "spliced_lib": "libplc4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.3365020751953125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.03725457191467285,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libplc4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libplc4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libplc4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libplc4.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libplc4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libplc4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libplc4.so-abi-laboratory-libplc4-so-libplc4-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22608327865600586,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libplc4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libplc4.so libplc4-so-libplc4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libplc4.so-abi-laboratory-libplc4-so-libplc4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libplc4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libplc4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libplc4.so": 25416,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libplc4.so": 25216
+            }
+        },
+        "experiment": "usr/lib64/libplc4-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libplc4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libplc4.so",
+        "different_libs": true
+    }
+]

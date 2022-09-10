@@ -1,0 +1,129 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmbconf.so.0.0.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmbconf.so.0.0.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsmbconf.so.0.0.1",
+                    "spliced_lib": "libsmbconf.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "flock",
+                        "prefork_warn_active_children",
+                        "pfh_manage_pool",
+                        "getsockname",
+                        "_tevent_add_signal",
+                        "anonymous_shared_allocate",
+                        "qsort",
+                        "memset",
+                        "pfh_daemon_config",
+                        "anonymous_shared_free",
+                        "prefork_decrease_allowed_clients",
+                        "prefork_listen_recv",
+                        "prefork_add_children",
+                        "data_blob_null",
+                        "prefork_expand_pool",
+                        "prefork_send_signal_to_all",
+                        "dbwrap_watched_wakeup",
+                        "uid_wrapper_enabled",
+                        "prefork_listen_send",
+                        "anonymous_shared_resize",
+                        "prefork_increase_allowed_clients",
+                        "prefork_count_allowed_connections",
+                        "kernel_flock",
+                        "prefork_set_sigchld_callback",
+                        "_tsocket_address_bsd_from_sockaddr",
+                        "prefork_count_children",
+                        "pfh_child_allowed_to_accept",
+                        "prefork_retire_children",
+                        "pfh_client_terminated",
+                        "talloc_asprintf_append_buffer",
+                        "prefork_create_pool",
+                        "prefork_reset_allowed_clients"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0005028247833251953
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsmbconf.so.0.0.1",
+                    "spliced_lib": "libsmbconf.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "pfh_daemon_config",
+                        "prefork_listen_recv",
+                        "prefork_set_sigchld_callback",
+                        "kernel_flock",
+                        "prefork_send_signal_to_all",
+                        "prefork_retire_children",
+                        "prefork_create_pool",
+                        "pfh_manage_pool",
+                        "prefork_increase_allowed_clients",
+                        "prefork_listen_send",
+                        "prefork_add_children",
+                        "prefork_expand_pool",
+                        "pfh_child_allowed_to_accept",
+                        "prefork_warn_active_children",
+                        "pfh_client_terminated",
+                        "prefork_count_allowed_connections",
+                        "prefork_reset_allowed_clients",
+                        "dbwrap_watched_wakeup",
+                        "prefork_count_children",
+                        "prefork_decrease_allowed_clients"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.009043455123901367
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 20 Removed, 2 Changed (55 filtered out), 3 Added functions\nVariables changes summary: 0 Removed, 0 Changed (1 filtered out), 0 Added variable\n\n20 Removed functions:\n\n  [D] 'function void dbwrap_watched_wakeup(db_record*)'    {dbwrap_watched_wakeup@@SMBCONF_0.0.1}\n  [D] 'function void kernel_flock(int, uint32_t, uint32_t)'    {kernel_flock@@SMBCONF_0.0.1}\n  [D] 'function bool pfh_child_allowed_to_accept(pf_worker_data*)'    {pfh_child_allowed_to_accept@@SMBCONF_0.0.1}\n  [D] 'function void pfh_client_terminated(pf_worker_data*)'    {pfh_client_terminated@@SMBCONF_0.0.1}\n  [D] 'function void pfh_daemon_config(const char*, pf_daemon_config*, const pf_daemon_config*)'    {pfh_daemon_config@@SMBCONF_0.0.1}\n  [D] 'function void pfh_manage_pool(tevent_context*, messaging_context*, pf_daemon_config*, prefork_pool*)'    {pfh_manage_pool@@SMBCONF_0.0.1}\n  [D] 'function int prefork_add_children(tevent_context*, messaging_context*, prefork_pool*, int)'    {prefork_add_children@@SMBCONF_0.0.1}\n  [D] 'function int prefork_count_allowed_connections(prefork_pool*)'    {prefork_count_allowed_connections@@SMBCONF_0.0.1}\n  [D] 'function int prefork_count_children(prefork_pool*, int*)'    {prefork_count_children@@SMBCONF_0.0.1}\n  [D] 'function bool prefork_create_pool(TALLOC_CTX*, tevent_context*, messaging_context*, int, pf_listen_fd*, int, int, prefork_main_fn_t*, void*, prefork_pool**)'    {prefork_create_pool@@SMBCONF_0.0.1}\n  [D] 'function void prefork_decrease_allowed_clients(prefork_pool*)'    {prefork_decrease_allowed_clients@@SMBCONF_0.0.1}\n  [D] 'function int prefork_expand_pool(prefork_pool*, int)'    {prefork_expand_pool@@SMBCONF_0.0.1}\n  [D] 'function void prefork_increase_allowed_clients(prefork_pool*, int)'    {prefork_increase_allowed_clients@@SMBCONF_0.0.1}\n  [D] 'function int prefork_listen_recv(tevent_req*, TALLOC_CTX*, int*, void**, tsocket_address**, tsocket_address**)'    {prefork_listen_recv@@SMBCONF_0.0.1}\n  [D] 'function tevent_req* prefork_listen_send(TALLOC_CTX*, tevent_context*, pf_worker_data*, int, pf_listen_fd*)'    {prefork_listen_send@@SMBCONF_0.0.1}\n  [D] 'function void prefork_reset_allowed_clients(prefork_pool*)'    {prefork_reset_allowed_clients@@SMBCONF_0.0.1}\n  [D] 'function int prefork_retire_children(messaging_context*, prefork_pool*, int, time_t)'    {prefork_retire_children@@SMBCONF_0.0.1}\n  [D] 'function void prefork_send_signal_to_all(prefork_pool*, int)'    {prefork_send_signal_to_all@@SMBCONF_0.0.1}\n  [D] 'function void prefork_set_sigchld_callback(prefork_pool*, prefork_sigchld_fn_t*, void*)'    {prefork_set_sigchld_callback@@SMBCONF_0.0.1}\n  [D] 'function void prefork_warn_active_children(messaging_context*, prefork_pool*)'    {prefork_warn_active_children@@SMBCONF_0.0.1}\n\n3 Added functions:\n\n  [A] 'function bool lp_debug_syslog_format()'    {lp_debug_syslog_format@@SMBCONF_0.0.1}\n  [A] 'function bool lp_kdc_enable_fast()'    {lp_kdc_enable_fast@@SMBCONF_0.0.1}\n  [A] 'function bool lp_rpc_start_on_demand_helpers()'    {lp_rpc_start_on_demand_helpers@@SMBCONF_0.0.1}\n\n2 functions with some indirect sub-type change:\n\n  [C] 'function loadparm_global* get_globals()' at loadparm.c:4781:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'struct loadparm_global' at param_global.h:9:1:\n        type size hasn't changed\n        3 data member insertions:\n          'bool debug_syslog_format', at offset 2760 (in bits) at param_global.h:80:1\n          'bool kdc_enable_fast', at offset 4992 (in bits) at param_global.h:128:1\n          'bool rpc_start_on_demand_helpers', at offset 10592 (in bits) at param_global.h:253:1\n        9 data member changes:\n          'bool debug_uid' offset changed from 2760 to 2768 (in bits) (by +8 bits)\n          'int keepalive' offset changed from 4992 to 5024 (in bits) (by +32 bits)\n          'int kerberos_encryption_types' offset changed from 5024 to 5056 (in bits) (by +32 bits)\n          'int kerberos_method' offset changed from 5056 to 5088 (in bits) (by +32 bits)\n          'bool kernel_change_notify' offset changed from 5088 to 5120 (in bits) (by +32 bits)\n          'int kpasswd_port' offset changed from 5120 to 5152 (in bits) (by +32 bits)\n          'int krb5_port' offset changed from 5152 to 5184 (in bits) (by +32 bits)\n          'bool _lanman_auth' offset changed from 5184 to 5216 (in bits) (by +32 bits)\n          'bool large_readwrite' offset changed from 5192 to 5224 (in bits) (by +32 bits)\n\n  [C] 'function brl_flavour lp_posix_cifsu_locktype(files_struct*)' at loadparm.c:4624:1 has some indirect sub-type changes:\n    parameter 1 of type 'files_struct*' has sub-type changes:\n      in pointed to type 'typedef files_struct' at vfs.h:510:1:\n        underlying type 'struct files_struct' at vfs.h:400:1 changed:\n          type size hasn't changed\n          1 data member changes (5 filtered):\n            type of 'connection_struct* conn' changed:\n              in pointed to type 'struct connection_struct' at vfs.h:695:1:\n                type size hasn't changed\n                1 data member changes (3 filtered):\n                  type of 'vfs_handle_struct* vfs_handles' changed:\n                    in pointed to type 'struct vfs_handle_struct' at vfs.h:1288:1:\n                      type size hasn't changed\n                      1 data member changes (3 filtered):\n                        type of 'const vfs_fn_pointers* fns' changed:\n                          in pointed to type 'const vfs_fn_pointers':\n                            in unqualified underlying type 'struct vfs_fn_pointers' at vfs.h:904:1:\n                              type size hasn't changed\n                              2 data member changes (92 filtered):\n                                name of 'vfs_fn_pointers::kernel_flock_fn' changed to 'vfs_fn_pointers::filesystem_sharemode_fn' at vfs.h:1044:1\n                                type of 'typedef NTSTATUS (tevent_req*, vfs_handle_struct*, TALLOC_CTX*, DATA_BLOB*)* offload_read_recv_fn' changed:\n                                  in pointed to type 'function type typedef NTSTATUS (tevent_req*, vfs_handle_struct*, TALLOC_CTX*, DATA_BLOB*)':\n                                    parameter 4 of type 'DATA_BLOB*' changed:\n                                      in pointed to type 'typedef DATA_BLOB' at stdint-uintn.h:26:1:\n                                        typedef name changed from DATA_BLOB to uint32_t at stdint-uintn.h:26:1\n                                        underlying type 'struct datablob' at data_blob.h:38:1 changed:\n                                          entity changed from 'struct datablob' to 'typedef __uint32_t' at types.h:42:1\n                                          type size changed from 128 to 32 (in bits)\n                                    parameter 5 of type 'uint64_t*' was added\n                                    parameter 6 of type 'DATA_BLOB*' was added\n\n",
+                    "return_code": 12,
+                    "seconds": 0.5188286304473877,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmbconf.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmbconf.so.0.0.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmbconf.so.0.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmbconf.so.0.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmbconf.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmbconf.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmbconf.so.0.0.1-abi-laboratory-libsmbconf-so-0-0-1-libsmbconf-so-0-0-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19558382034301758,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmbconf.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmbconf.so.0.0.1 libsmbconf-so-0-0-1-libsmbconf-so-0-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmbconf.so.0.0.1-abi-laboratory-libsmbconf-so-0-0-1-libsmbconf-so-0-0-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmbconf.so.0.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmbconf.so.0.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmbconf.so.0.0.1": 646208,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmbconf.so.0.0.1": 631528
+            }
+        },
+        "experiment": "usr/lib64/libsmbconf-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmbconf.so.0.0.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmbconf.so.0.0.1",
+        "different_libs": true
+    }
+]

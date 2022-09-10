@@ -1,0 +1,79 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsemanage.so.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsemanage.so.2"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsemanage.so.2",
+                    "spliced_lib": "libsemanage.so.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "fseek",
+                        "ftell",
+                        "__memcpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.000133514404296875
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsemanage.so.2",
+                    "spliced_lib": "libsemanage.so.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0007715225219726562
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 3 Changed (246 filtered out), 2 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 Added functions:\n\n  [A] 'function int semanage_module_compute_checksum(semanage_handle_t*, semanage_module_key_t*, int, char**, size_t*)'    {semanage_module_compute_checksum@@LIBSEMANAGE_3.4}\n  [A] 'function void semanage_set_check_ext_changes(semanage_handle_t*, int)'    {semanage_set_check_ext_changes@@LIBSEMANAGE_3.4}\n\n3 functions with some indirect sub-type change:\n\n  [C] 'function int semanage_access_check(semanage_handle_t*)' at handle.c:355:1 has some indirect sub-type changes:\n    parameter 1 of type 'semanage_handle_t*' has sub-type changes:\n      in pointed to type 'typedef semanage_handle_t' at handle.h:31:1:\n        underlying type 'struct semanage_handle' at handle.h:35:1 changed:\n          type size changed from 3968 to 4032 (in bits)\n          1 data member insertion:\n            'int check_ext_changes', at offset 672 (in bits) at handle.h:64:1\n          7 data member changes (1 filtered):\n            'int commit_err' offset changed from 672 to 704 (in bits) (by +32 bits)\n            'int modules_modified' offset changed from 704 to 736 (in bits) (by +32 bits)\n            'int create_store' offset changed from 736 to 768 (in bits) (by +32 bits)\n            'int do_check_contexts' offset changed from 768 to 800 (in bits) (by +32 bits)\n            'int timeout' offset changed from 800 to 832 (in bits) (by +32 bits)\n            'semanage_policy_table* funcs' offset changed from 832 to 896 (in bits) (by +64 bits)\n            'dbase_config_t dbase[24]' offset changed from 896 to 960 (in bits) (by +64 bits)\n\n  [C] 'function int semanage_reload_policy(semanage_handle_t*)' at semanage_store.c:1477:1 has some indirect sub-type changes:\n    parameter 1 of type 'semanage_handle_t*' has sub-type changes:\n      in pointed to type 'typedef semanage_handle_t' at handle.h:31:1:\n        underlying type 'struct semanage_handle' at handle.h:35:1 changed:\n          type size changed from 3968 to 4032 (in bits)\n          1 data member insertion:\n            'int check_ext_changes', at offset 672 (in bits) at handle.h:64:1\n          1 data member changes (7 filtered):\n            'dbase_config_t dbase[24]' offset changed from 896 to 960 (in bits) (by +64 bits)\n\n  [C] 'function int semanage_seuser_set_sename(semanage_handle_t*, semanage_seuser_t*, const char*)' at seuser_record.c:140:1 has some indirect sub-type changes:\n    parameter 1 of type 'semanage_handle_t*' changed:\n      in pointed to type 'typedef semanage_handle_t':\n        entity changed from 'typedef semanage_handle_t' to 'const char'\n        type size changed from 3968 to 8 (in bits)\n    parameter 3 of type 'const char*' changed:\n      in pointed to type 'const char' at handle.h:31:1:\n        entity changed from 'const char' to 'typedef semanage_handle_t' at handle.h:31:1\n        type size changed from 8 to 4032 (in bits)\n    parameter 4 of type 'semanage_seuser_t*' was added\n    parameter 5 of type 'const char*' was added\n\n",
+                    "return_code": 4,
+                    "seconds": 0.5083644390106201,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsemanage.so.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsemanage.so.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsemanage.so.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsemanage.so.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsemanage.so.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsemanage.so.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsemanage.so.2-abi-laboratory-libsemanage-so-2-libsemanage-so-2.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.17099785804748535,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsemanage.so.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsemanage.so.2 libsemanage-so-2-libsemanage-so-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsemanage.so.2-abi-laboratory-libsemanage-so-2-libsemanage-so-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsemanage.so.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsemanage.so.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsemanage.so.2": 269744,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsemanage.so.2": 270096
+            }
+        },
+        "experiment": "usr/lib64/libsemanage-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsemanage.so.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsemanage.so.2",
+        "different_libs": true
+    }
+]

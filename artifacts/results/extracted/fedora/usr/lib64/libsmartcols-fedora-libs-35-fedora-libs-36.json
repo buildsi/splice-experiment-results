@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmartcols.so.1.1.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmartcols.so.1.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsmartcols.so.1.1.0",
+                    "spliced_lib": "libsmartcols.so.1.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "strcpy"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.128715515136719e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsmartcols.so.1.1.0",
+                    "spliced_lib": "libsmartcols.so.1.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00021028518676757812
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 1 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Added function:\n\n  [A] 'function const char* scols_line_get_column_data(libscols_line*, libscols_column*)'    {scols_line_get_column_data@@SMARTCOLS_2.38}\n\n",
+                    "return_code": 4,
+                    "seconds": 0.0614013671875,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmartcols.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmartcols.so.1.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmartcols.so.1.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmartcols.so.1.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmartcols.so.1.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmartcols.so.1.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmartcols.so.1.1.0-abi-laboratory-libsmartcols-so-1-1-0-libsmartcols-so-1-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19702672958374023,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmartcols.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmartcols.so.1.1.0 libsmartcols-so-1-1-0-libsmartcols-so-1-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmartcols.so.1.1.0-abi-laboratory-libsmartcols-so-1-1-0-libsmartcols-so-1-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmartcols.so.1.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmartcols.so.1.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmartcols.so.1.1.0": 108424,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmartcols.so.1.1.0": 112696
+            }
+        },
+        "experiment": "usr/lib64/libsmartcols-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmartcols.so.1.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmartcols.so.1.1.0",
+        "different_libs": true
+    }
+]

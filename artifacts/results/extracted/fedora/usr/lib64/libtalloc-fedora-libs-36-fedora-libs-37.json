@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtalloc.so.2.3.4",
+                    "spliced_lib": "libtalloc.so.2.3.4",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.839897155761719e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libtalloc.so.2.3.4",
+                    "spliced_lib": "libtalloc.so.2.3.4",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.601478576660156e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.028998851776123047,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4-abi-laboratory-libtalloc-so-2-3-4-libtalloc-so-2-3-4.html\nFound link to libtalloc.so.2.3.4-2.3.4-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libtalloc.so.2.3.4-2.3.4-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libtalloc-2.3.4-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-pPbpH.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libtalloc.so.2.3.4-2.3.4-3.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libtalloc.so.2.3.4-2.3.4-3.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libtalloc-2.3.4-3.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 633\nERROR: incomplete info for symbol 703\nERROR: incomplete info for symbol 11695\nERROR: incomplete info for symbol 13259\nERROR: incomplete info for symbol 13667\nERROR: incomplete info for symbol 13832\nERROR: incomplete info for symbol 14451\nERROR: incomplete info for symbol 14860\nERROR: incomplete info for symbol 14974\nERROR: incomplete info for symbol 15412\nERROR: incomplete info for symbol 15846\nERROR: incomplete info for symbol 16899\nERROR: incomplete info for symbol 17000\nERROR: incomplete info for symbol 19879\nERROR: incomplete info for symbol 24758\nERROR: incomplete info for symbol 29107\nERROR: incomplete info for symbol 29241\nERROR: incomplete info for symbol 32591\nERROR: incomplete info for symbol 32815\nERROR: incomplete info for symbol 32897\nERROR: incomplete info for symbol 36263\nERROR: incomplete info for symbol 36432\nERROR: incomplete info for symbol 38245\nERROR: incomplete info for symbol 38427\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-AN2UF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4-abi-laboratory-libtalloc-so-2-3-4-libtalloc-so-2-3-4.html\n",
+                    "return_code": 0,
+                    "seconds": 0.7880020141601562,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4 libtalloc-so-2-3-4-libtalloc-so-2-3-4 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4-abi-laboratory-libtalloc-so-2-3-4-libtalloc-so-2-3-4.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4": 50504,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4": 50504
+            }
+        },
+        "experiment": "usr/lib64/libtalloc-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4",
+        "different_libs": true
+    }
+]

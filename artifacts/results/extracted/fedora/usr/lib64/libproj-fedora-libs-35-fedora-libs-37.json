@@ -1,0 +1,86 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libproj.so.22.2.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libproj.so.25.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libproj.so.22.2.1",
+                    "spliced_lib": "libproj.so.25.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__memmove_chk",
+                        "_ZNK5osgeo4proj9operation14Transformation34substitutePROJAlternativeGridNamesEN7dropbox6oxygen2nnISt10shared_ptrINS0_2io15DatabaseContextEEEE",
+                        "_ZTSSt23_Sp_counted_ptr_inplaceIN5osgeo4proj6common13UnitOfMeasureESaIS3_ELN9__gnu_cxx12_Lock_policyE2EE",
+                        "printf",
+                        "_ZTSSt23_Sp_counted_ptr_inplaceISt6vectorIhSaIhEESaIS2_ELN9__gnu_cxx12_Lock_policyE2EE",
+                        "__memcpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0006406307220458984
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libproj.so.22.2.1",
+                    "spliced_lib": "libproj.so.25.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZTSSt23_Sp_counted_ptr_inplaceISt6vectorIhSaIhEESaIS2_ELN9__gnu_cxx12_Lock_policyE2EE",
+                        "_ZNK5osgeo4proj9operation14Transformation34substitutePROJAlternativeGridNamesEN7dropbox6oxygen2nnISt10shared_ptrINS0_2io15DatabaseContextEEEE",
+                        "_ZTSSt23_Sp_counted_ptr_inplaceIN5osgeo4proj6common13UnitOfMeasureESaIS3_ELN9__gnu_cxx12_Lock_policyE2EE"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.02906632423400879
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 2 Changed (353 filtered out), 4 Added functions\nVariables changes summary: 0 Removed, 1 Changed, 0 Added variable\nFunction symbols changes summary: 1 Removed, 6 Added function symbols not referenced by debug info\nVariable symbols changes summary: 2 Removed, 2 Added variable symbols not referenced by debug info\n\nSONAME changed from 'libproj.so.22' to 'libproj.so.25'\n\n4 Added functions:\n\n  [A] 'function void pj_stderr_proj_lib_deprecation_warning()'    {_Z38pj_stderr_proj_lib_deprecation_warningv}\n  [A] 'function void proj_area_set_name(PJ_AREA*, const char*)'    {proj_area_set_name}\n  [A] 'function void proj_operation_factory_context_set_area_of_interest_name(PJ_CONTEXT*, PJ_OPERATION_FACTORY_CONTEXT*, const char*)'    {proj_operation_factory_context_set_area_of_interest_name}\n  [A] 'function PJ* proj_trans_get_last_used_operation(PJ*)'    {proj_trans_get_last_used_operation}\n\n2 functions with some indirect sub-type change:\n\n  [C] 'method virtual osgeo::proj::GenericShiftGrid::~GenericShiftGrid(int)' at grids.cpp:2795:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'osgeo::proj::GenericShiftGrid*' has sub-type changes:\n      in pointed to type 'class osgeo::proj::GenericShiftGrid' at grids.hpp:187:1:\n        type size hasn't changed\n        1 member function changes (8 filtered):\n          'method virtual void osgeo::proj::GenericShiftGrid::reassign_context(PJ_CONTEXT*)' has some sub-type changes:\n            parameter 1 of type 'PJ_CONTEXT*' has sub-type changes:\n              in pointed to type 'typedef PJ_CONTEXT' at proj.h:359:1:\n                underlying type 'struct pj_ctx' at proj_internal.h:681:1 changed:\n                  type size hasn't changed\n                  2 data member deletions:\n                    'std::string env_var_proj_lib', at offset 832 (in bits) at proj_internal.h:692:1\n                    'const char* (const char*)* file_finder_legacy', at offset 1344 (in bits) at proj_internal.h:696:1\n                  2 data member insertions:\n                    'bool forceOver', at offset 544 (in bits) at proj_internal.h:689:1\n                    'std::string env_var_proj_data', at offset 640 (in bits) at proj_internal.h:692:1\n                  13 data member changes (3 filtered):\n                    'int epsg_file_exists' offset changed from 544 to 576 (in bits) (by +32 bits)\n                    'std::string ca_bundle_path' offset changed from 576 to 3264 (in bits) (by +2688 bits)\n                    'std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > search_paths' offset changed from 1088 to 896 (in bits) (by -192 bits)\n                    'const char** c_compat_paths' offset changed from 1280 to 1088 (in bits) (by -192 bits)\n                    'const char* (PJ_CONTEXT*, const char*, void*)* file_finder' offset changed from 1408 to 1152 (in bits) (by -256 bits)\n                    'void* file_finder_user_data' offset changed from 1472 to 1216 (in bits) (by -256 bits)\n                    'bool defer_grid_opening' offset changed from 1536 to 1280 (in bits) (by -256 bits)\n                    'projFileApiCallbackAndData fileApi' offset changed from 1600 to 1344 (in bits) (by -256 bits)\n                    'std::string custom_sqlite3_vfs_name' offset changed from 2304 to 2048 (in bits) (by -256 bits)\n                    'std::string user_writable_directory' offset changed from 2560 to 2304 (in bits) (by -256 bits)\n                    'bool iniFileLoaded' offset changed from 2816 to 2560 (in bits) (by -256 bits)\n                    'std::string endpoint' offset changed from 2880 to 2624 (in bits) (by -256 bits)\n                    type of 'projNetworkCallbacksAndData networking' changed:\n                      type size hasn't changed\n                      1 data member deletion:\n                        'bool enabled_env_variable_checked', at offset 8 (in bits) at proj_internal.h:647:1\n                      no data member changes (4 filtered);\n                    and offset changed from 3136 to 2880 (in bits) (by -256 bits)\n        no data member change (1 filtered);\n\n  [C] 'function PJ_AREA* proj_area_create()' at 4D_api.cpp:897:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'typedef PJ_AREA' at proj.h:200:1:\n        underlying type 'struct PJ_AREA' at proj_internal.h:238:1 changed:\n          type size changed from 320 to 576 (in bits)\n          1 data member insertion:\n            'std::string name', at offset 320 (in bits) at proj_internal.h:244:1\n          1 data member change:\n            type of 'int bbox_set' changed:\n              type name changed from 'int' to 'bool'\n              type size changed from 32 to 8 (in bits)\n\n1 Changed variable:\n\n  [C] 'const char pj_release[]' was changed at proj.h:191:1:\n    size of symbol changed from 30 to 32\n\n1 Removed function symbol not referenced by debug info:\n\n  [D] _ZNK5osgeo4proj9operation14Transformation34substitutePROJAlternativeGridNamesEN7dropbox6oxygen2nnISt10shared_ptrINS0_2io15DatabaseContextEEEE\n\n6 Added function symbols not referenced by debug info:\n\n  [A] _ZN5osgeo4proj2io12WKTFormatter19setAllowLINUNITNodeEb\n  [A] _ZN5osgeo4proj2io9WKTParser36setUnsetIdentifiersIfIncompatibleDefEb\n  [A] _ZNK5osgeo4proj2io12WKTFormatter20isAllowedLINUNITNodeEv\n  [A] _ZNK5osgeo4proj9operation15SingleOperation34substitutePROJAlternativeGridNamesEN7dropbox6oxygen2nnISt10shared_ptrINS0_2io15DatabaseContextEEEE\n  [A] _ZThn40_N5osgeo4proj2cs8MeridianD0Ev\n  [A] _ZThn40_N5osgeo4proj2cs8MeridianD1Ev\n\n2 Removed variable symbols not referenced by debug info:\n\n  [D] _ZTSSt23_Sp_counted_ptr_inplaceIN5osgeo4proj6common13UnitOfMeasureESaIS3_ELN9__gnu_cxx12_Lock_policyE2EE\n  [D] _ZTSSt23_Sp_counted_ptr_inplaceISt6vectorIhSaIhEESaIS2_ELN9__gnu_cxx12_Lock_policyE2EE\n\n2 Added variable symbols not referenced by debug info:\n\n  [A] _ZTSSt23_Sp_counted_ptr_inplaceIN5osgeo4proj6common13UnitOfMeasureESaIvELN9__gnu_cxx12_Lock_policyE2EE\n  [A] _ZTSSt23_Sp_counted_ptr_inplaceISt6vectorIhSaIhEESaIvELN9__gnu_cxx12_Lock_policyE2EE\n\n",
+                    "return_code": 12,
+                    "seconds": 28.72162890434265,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libproj.so.22.2.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libproj.so.25.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libproj.so.25.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libproj.so.22.2.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libproj.so.22.2.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libproj.so.25.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libproj.so.22.2.1-abi-laboratory-libproj-so-22-2-1-libproj-so-25-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.23546504974365234,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libproj.so.22.2.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libproj.so.25.9.1.0 libproj-so-22-2-1-libproj-so-25-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libproj.so.22.2.1-abi-laboratory-libproj-so-22-2-1-libproj-so-25-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libproj.so.25.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libproj.so.22.2.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libproj.so.22.2.1": 3886440,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libproj.so.25.9.1.0": 3975592
+            }
+        },
+        "experiment": "usr/lib64/libproj-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libproj.so.25.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libproj.so.22.2.1",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamdb.so.0.0.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamdb.so.0.0.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsamdb.so.0.0.1",
+                    "spliced_lib": "libsamdb.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.748603820800781e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsamdb.so.0.0.1",
+                    "spliced_lib": "libsamdb.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.86102294921875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.09054899215698242,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamdb.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamdb.so.0.0.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamdb.so.0.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamdb.so.0.0.1",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamdb.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamdb.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamdb.so.0.0.1-abi-laboratory-libsamdb-so-0-0-1-libsamdb-so-0-0-1.html\nFound link to libsamdb.so.0.0.1-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsamdb.so.0.0.1-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5006\nERROR: incomplete info for symbol 7747\nERROR: incomplete info for symbol 10496\nERROR: incomplete info for symbol 10937\nERROR: incomplete info for symbol 12102\nERROR: incomplete info for symbol 12429\nERROR: incomplete info for symbol 15334\nERROR: incomplete info for symbol 16153\nERROR: incomplete info for symbol 17157\nERROR: incomplete info for symbol 17704\nERROR: incomplete info for symbol 18241\nERROR: incomplete info for symbol 18883\nERROR: incomplete info for symbol 19084\nERROR: incomplete info for symbol 19188\nERROR: incomplete info for symbol 20163\nERROR: incomplete info for symbol 22274\nERROR: incomplete info for symbol 22664\nERROR: incomplete info for symbol 22888\nERROR: incomplete info for symbol 24091\nERROR: incomplete info for symbol 24567\nERROR: incomplete info for symbol 34167\nERROR: incomplete info for symbol 34477\nERROR: incomplete info for symbol 34969\nERROR: incomplete info for symbol 36439\nERROR: incomplete info for symbol 36744\nERROR: incomplete info for symbol 37143\nERROR: incomplete info for symbol 37517\nERROR: incomplete info for symbol 38076\nERROR: incomplete info for symbol 38400\nERROR: incomplete info for symbol 39446\nERROR: incomplete info for symbol 41653\nERROR: incomplete info for symbol 43399\nERROR: incomplete info for symbol 44413\nERROR: incomplete info for symbol 46386\nERROR: incomplete info for symbol 49730\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-sMEr6.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsamdb.so.0.0.1-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libsamdb.so.0.0.1-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5355\nERROR: incomplete info for symbol 6012\nERROR: incomplete info for symbol 6213\nERROR: incomplete info for symbol 6317\nERROR: incomplete info for symbol 7317\nERROR: incomplete info for symbol 7880\nERROR: incomplete info for symbol 17520\nERROR: incomplete info for symbol 17830\nERROR: incomplete info for symbol 18135\nERROR: incomplete info for symbol 18534\nERROR: incomplete info for symbol 18908\nERROR: incomplete info for symbol 19467\nERROR: incomplete info for symbol 19796\nERROR: incomplete info for symbol 20847\nERROR: incomplete info for symbol 23064\nERROR: incomplete info for symbol 24810\nERROR: incomplete info for symbol 25824\nERROR: incomplete info for symbol 27797\nERROR: incomplete info for symbol 31141\nERROR: incomplete info for symbol 32713\nERROR: incomplete info for symbol 34286\nERROR: incomplete info for symbol 34912\nERROR: incomplete info for symbol 35313\nERROR: incomplete info for symbol 35538\nERROR: incomplete info for symbol 38269\nERROR: incomplete info for symbol 40978\nERROR: incomplete info for symbol 41419\nERROR: incomplete info for symbol 41916\nERROR: incomplete info for symbol 42978\nERROR: incomplete info for symbol 43391\nERROR: incomplete info for symbol 44536\nERROR: incomplete info for symbol 44853\nERROR: incomplete info for symbol 47743\nERROR: incomplete info for symbol 48285\nERROR: incomplete info for symbol 48670\nERROR: incomplete info for symbol 48894\nERROR: incomplete info for symbol 50097\nERROR: incomplete info for symbol 50634\nERROR: incomplete info for symbol 51005\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-8Efy3.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 63.6%\nSource compatibility: 63.6%\nTotal binary compatibility problems: 6, warnings: 1\nTotal source compatibility problems: 1, warnings: 5\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamdb.so.0.0.1-abi-laboratory-libsamdb-so-0-0-1-libsamdb-so-0-0-1.html\n",
+                    "return_code": 1,
+                    "seconds": 17.92839550971985,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamdb.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamdb.so.0.0.1 libsamdb-so-0-0-1-libsamdb-so-0-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamdb.so.0.0.1-abi-laboratory-libsamdb-so-0-0-1-libsamdb-so-0-0-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamdb.so.0.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamdb.so.0.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamdb.so.0.0.1": 115840,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamdb.so.0.0.1": 115864
+            }
+        },
+        "experiment": "usr/lib64/libsamdb-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamdb.so.0.0.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamdb.so.0.0.1",
+        "different_libs": true
+    }
+]

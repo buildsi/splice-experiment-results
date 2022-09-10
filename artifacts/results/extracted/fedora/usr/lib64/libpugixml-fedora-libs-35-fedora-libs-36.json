@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpugixml.so.1.11"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpugixml.so.1.12"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libpugixml.so.1.11",
+                    "spliced_lib": "libpugixml.so.1.12",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "printf",
+                        "abort"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00013780593872070312
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libpugixml.so.1.11",
+                    "spliced_lib": "libpugixml.so.1.12",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0010616779327392578
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (4 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
+                    "return_code": 0,
+                    "seconds": 0.2369835376739502,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpugixml.so.1.11 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpugixml.so.1.12",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpugixml.so.1.12",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpugixml.so.1.11",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpugixml.so.1.11\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpugixml.so.1.12\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpugixml.so.1.11-abi-laboratory-libpugixml-so-1-11-libpugixml-so-1-12.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.18668198585510254,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpugixml.so.1.11 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpugixml.so.1.12 libpugixml-so-1-11-libpugixml-so-1-12 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpugixml.so.1.11-abi-laboratory-libpugixml-so-1-11-libpugixml-so-1-12.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpugixml.so.1.12",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpugixml.so.1.11",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpugixml.so.1.11": 257472,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpugixml.so.1.12": 257384
+            }
+        },
+        "experiment": "usr/lib64/libpugixml-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpugixml.so.1.12",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpugixml.so.1.11",
+        "different_libs": true
+    }
+]

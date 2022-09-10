@@ -39,40 +39,16 @@ $ python get_artifacts.py 3018521212  # fedora results 150-250
 $ python get_artifacts.py 3019031567  # fedora results 250-350
 $ python get_artifacts.py 3019032895  # fedora results 350-450
 $ python get_artifacts.py 3023207569  # fedora results 450-500
-
 $ python get_artifacts.py 3019727038  # fedora results 550-650
 $ python get_artifacts.py 3019728826  # fedora results 650-750
-
 $ python get_artifacts.py 3020343625  # fedora results 750-850
+
+TODO need to do 850-900/900-950
+
+$ python get_artifacts.py 3023223782  # fedora results 950-1000 (34 vs all others had runner issues)
 $ python get_artifacts.py 3023226112  # fedora results 1000-1050 (36 vs 37 runner had issues)
 
-
-$ python get_artifacts.py   # fedora results 500-600
-$ python get_artifacts.py   # fedora results 600-700
-$ python get_artifacts.py   # fedora results 700-800
-$ python get_artifacts.py   # fedora results 900-1000
-$ python get_artifacts.py   # fedora results 1000-1100
-$ python get_artifacts.py   # fedora results 1100-1200
-$ python get_artifacts.py   # fedora results 1200-1300
-$ python get_artifacts.py   # fedora results 1300-1400
-$ python get_artifacts.py   # fedora results 1400-1500
-$ python get_artifacts.py   # fedora results 1500-1600
-$ python get_artifacts.py   # fedora results 1600-1700
-$ python get_artifacts.py   # fedora results 1700-1800
-$ python get_artifacts.py   # fedora results 1800-1900
 ```
-
-- [375-400 out of disk space](https://github.com/buildsi/splice-experiment-runs/actions/runs/2997500322/workflow)
-- [850-875 always killed runner](https://github.com/buildsi/splice-experiment-runs/actions/runs/2997496147/workflow)
-
-And for the symbols results:
-
-```bash
-$ python get_artifacts.py 3009698122
-```
-
-Those are under `symbols_usr`.
-
 And then to open (and run/update the notebook)
 
 ```bash

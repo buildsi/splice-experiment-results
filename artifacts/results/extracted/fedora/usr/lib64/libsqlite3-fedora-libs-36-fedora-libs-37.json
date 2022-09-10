@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsqlite3.so.0.8.6"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsqlite3.so.0.8.6"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsqlite3.so.0.8.6",
+                    "spliced_lib": "libsqlite3.so.0.8.6",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00010704994201660156
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsqlite3.so.0.8.6",
+                    "spliced_lib": "libsqlite3.so.0.8.6",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0005552768707275391
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 9 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\n9 Added function symbols not referenced by debug info:\n\n  [A] sqlite3_autovacuum_pages\n  [A] sqlite3_changes64\n  [A] sqlite3_error_offset\n  [A] sqlite3_total_changes64\n  [A] sqlite3_vtab_distinct\n  [A] sqlite3_vtab_in\n  [A] sqlite3_vtab_in_first\n  [A] sqlite3_vtab_in_next\n  [A] sqlite3_vtab_rhs_value\n\n",
+                    "return_code": 4,
+                    "seconds": 0.12447428703308105,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsqlite3.so.0.8.6 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsqlite3.so.0.8.6",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsqlite3.so.0.8.6",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsqlite3.so.0.8.6",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsqlite3.so.0.8.6\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsqlite3.so.0.8.6\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsqlite3.so.0.8.6-abi-laboratory-libsqlite3-so-0-8-6-libsqlite3-so-0-8-6.html\nFound link to libsqlite3.so.0.8.6-3.36.0-5.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsqlite3.so.0.8.6-3.36.0-5.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/sqlite-3.36.0-5.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-tYYyQ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsqlite3.so.0.8.6-3.38.5-1.fc37.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file libsqlite3.so.0.8.6-3.38.5-1.fc37.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 4.203896522521973,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsqlite3.so.0.8.6 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsqlite3.so.0.8.6 libsqlite3-so-0-8-6-libsqlite3-so-0-8-6 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsqlite3.so.0.8.6-abi-laboratory-libsqlite3-so-0-8-6-libsqlite3-so-0-8-6.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsqlite3.so.0.8.6",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsqlite3.so.0.8.6",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsqlite3.so.0.8.6": 1343424,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsqlite3.so.0.8.6": 1366160
+            }
+        },
+        "experiment": "usr/lib64/libsqlite3-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsqlite3.so.0.8.6",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsqlite3.so.0.8.6",
+        "different_libs": true
+    }
+]
