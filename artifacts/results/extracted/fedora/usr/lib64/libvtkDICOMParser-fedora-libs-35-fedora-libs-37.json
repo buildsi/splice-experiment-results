@@ -1,0 +1,88 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkDICOMParser.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkDICOMParser.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkDICOMParser.so.9.0.3",
+                    "spliced_lib": "libvtkDICOMParser.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPSt4pairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEESt6vectorIS9_SaIS9_EEEENS0_5__ops15_Iter_comp_iterI18lt_pair_int_stringEEEvT_SJ_RT0_",
+                        "_ZSt17__throw_bad_allocv",
+                        "_ZNSt8_Rb_treeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS5_St6vectorIS5_SaIS5_EEESt10_Select1stISB_E8ltstdstrSaISB_EE16_M_insert_uniqueISB_EES6_ISt17_Rb_tree_iteratorISB_EbEOT_",
+                        "_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPSt4pairIfNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEESt6vectorIS9_SaIS9_EEEENS0_5__ops15_Iter_comp_iterI20gt_pair_float_stringEEEvT_SJ_RT0_",
+                        "_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPSt4pairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEESt6vectorIS9_SaIS9_EEEENS0_5__ops15_Iter_comp_iterI18gt_pair_int_stringEEEvT_SJ_RT0_",
+                        "_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPSt4pairIfNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEESt6vectorIS9_SaIS9_EEEENS0_5__ops15_Iter_comp_iterI20lt_pair_float_stringEEEvT_SJ_RT0_"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.961822509765625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkDICOMParser.so.9.0.3",
+                    "spliced_lib": "libvtkDICOMParser.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPSt4pairIfNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEESt6vectorIS9_SaIS9_EEEENS0_5__ops15_Iter_comp_iterI20lt_pair_float_stringEEEvT_SJ_RT0_",
+                        "_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPSt4pairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEESt6vectorIS9_SaIS9_EEEENS0_5__ops15_Iter_comp_iterI18lt_pair_int_stringEEEvT_SJ_RT0_",
+                        "_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPSt4pairIiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEESt6vectorIS9_SaIS9_EEEENS0_5__ops15_Iter_comp_iterI18gt_pair_int_stringEEEvT_SJ_RT0_",
+                        "_ZNSt8_Rb_treeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS5_St6vectorIS5_SaIS5_EEESt10_Select1stISB_E8ltstdstrSaISB_EE16_M_insert_uniqueISB_EES6_ISt17_Rb_tree_iteratorISB_EbEOT_",
+                        "_ZSt11__make_heapIN9__gnu_cxx17__normal_iteratorIPSt4pairIfNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEESt6vectorIS9_SaIS9_EEEENS0_5__ops15_Iter_comp_iterI20gt_pair_float_stringEEEvT_SJ_RT0_"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00014710426330566406
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed (5 filtered out), 0 Changed (83 filtered out), 0 Added (1 filtered out) functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
+                    "return_code": 0,
+                    "seconds": 17.760430574417114,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkDICOMParser.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkDICOMParser.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkDICOMParser.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkDICOMParser.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkDICOMParser.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkDICOMParser.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkDICOMParser.so.9.0.3-abi-laboratory-libvtkDICOMParser-so-9-0-3-libvtkDICOMParser-so-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2035520076751709,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkDICOMParser.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkDICOMParser.so.9.1.0 libvtkDICOMParser-so-9-0-3-libvtkDICOMParser-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkDICOMParser.so.9.0.3-abi-laboratory-libvtkDICOMParser-so-9-0-3-libvtkDICOMParser-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkDICOMParser.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkDICOMParser.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkDICOMParser.so.9.0.3": 108536,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkDICOMParser.so.9.1.0": 108824
+            }
+        },
+        "experiment": "usr/lib64/libvtkDICOMParser-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkDICOMParser.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkDICOMParser.so.9.0.3",
+        "different_libs": true
+    }
+]

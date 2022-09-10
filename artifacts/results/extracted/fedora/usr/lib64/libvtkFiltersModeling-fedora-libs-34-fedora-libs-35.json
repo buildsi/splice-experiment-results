@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkFiltersModeling.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkFiltersModeling.so.9.0.3"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkFiltersModeling.so.9.0.3",
+                    "spliced_lib": "libvtkFiltersModeling.so.9.0.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001804828643798828
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkFiltersModeling.so.9.0.3",
+                    "spliced_lib": "libvtkFiltersModeling.so.9.0.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0015587806701660156
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 13.911601543426514,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkFiltersModeling.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkFiltersModeling.so.9.0.3",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkFiltersModeling.so.9.0.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkFiltersModeling.so.9.0.3",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkFiltersModeling.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkFiltersModeling.so.9.0.3\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkFiltersModeling.so.9.0.3-abi-laboratory-libvtkFiltersModeling-so-9-0-3-libvtkFiltersModeling-so-9-0-3.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.1874697208404541,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkFiltersModeling.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkFiltersModeling.so.9.0.3 libvtkFiltersModeling-so-9-0-3-libvtkFiltersModeling-so-9-0-3 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkFiltersModeling.so.9.0.3-abi-laboratory-libvtkFiltersModeling-so-9-0-3-libvtkFiltersModeling-so-9-0-3.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkFiltersModeling.so.9.0.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkFiltersModeling.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkFiltersModeling.so.9.0.3": 788312,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkFiltersModeling.so.9.0.3": 784096
+            }
+        },
+        "experiment": "usr/lib64/libvtkFiltersModeling-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkFiltersModeling.so.9.0.3",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkFiltersModeling.so.9.0.3",
+        "different_libs": true
+    }
+]

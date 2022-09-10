@@ -47,7 +47,7 @@ TODO need to do 850-900/900-950
 
 $ python get_artifacts.py 3023223782  # fedora results 950-1000 (34 vs all others had runner issues)
 $ python get_artifacts.py 3023226112  # fedora results 1000-1050 (36 vs 37 runner had issues)
-
+$ python get_artifacts.py 3025057440  # fedora results 1050-1100
 ```
 And then to open (and run/update the notebook)
 

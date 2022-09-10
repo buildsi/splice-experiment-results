@@ -1,0 +1,82 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libudev.so.1.7.2",
+                    "spliced_lib": "libudev.so.1.7.4",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "usleep",
+                        "strrchr",
+                        "_environ",
+                        "basename",
+                        "dirname",
+                        "__ctype_b_loc"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.745887756347656e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libudev.so.1.7.2",
+                    "spliced_lib": "libudev.so.1.7.4",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.842613220214844e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (34 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function const char* udev_device_get_action(udev_device*)' at libudev-device.c:695:1 has some indirect sub-type changes:\n    parameter 1 of type 'udev_device*' has sub-type changes:\n      in pointed to type 'struct udev_device' at libudev-device.c:45:1:\n        type size hasn't changed\n        1 data member changes (1 filtered):\n          type of 'sd_device* device' changed:\n            in pointed to type 'typedef sd_device' at sd-device.h:33:1:\n              underlying type 'struct sd_device' at device-internal.h:13:1 changed:\n                type size changed from 3072 to 3136 (in bits)\n                1 data member insertion:\n                  'uint64_t diskseq', at offset 2880 (in bits) at device-internal.h:78:1\n                15 data member changes (1 filtered):\n                  type of 'uint8_t* properties_nulstr' changed:\n                    in pointed to type 'typedef uint8_t':\n                      entity changed from 'typedef uint8_t' to compatible type 'char'\n                        type name changed from 'unsigned char' to 'char'\n                        type size hasn't changed\n                  'sd_device_action_t action' offset changed from 2880 to 2944 (in bits) (by +64 bits)\n                  'uint64_t seqnum' offset changed from 2944 to 3008 (in bits) (by +64 bits)\n                  'bool parent_set' offset changed from 3008 to 3072 (in bits) (by +64 bits)\n                  'bool sysattrs_read' offset changed from 3009 to 3073 (in bits) (by +64 bits)\n                  'bool property_tags_outdated' offset changed from 3010 to 3074 (in bits) (by +64 bits)\n                  'bool property_devlinks_outdated' offset changed from 3011 to 3075 (in bits) (by +64 bits)\n                  'bool properties_buf_outdated' offset changed from 3012 to 3076 (in bits) (by +64 bits)\n                  'bool subsystem_set' offset changed from 3013 to 3077 (in bits) (by +64 bits)\n                  'bool driver_set' offset changed from 3014 to 3078 (in bits) (by +64 bits)\n                  'bool uevent_loaded' offset changed from 3015 to 3079 (in bits) (by +64 bits)\n                  'bool db_loaded' offset changed from 3016 to 3080 (in bits) (by +64 bits)\n                  'bool is_initialized' offset changed from 3024 to 3088 (in bits) (by +64 bits)\n                  'bool sealed' offset changed from 3025 to 3089 (in bits) (by +64 bits)\n                  'bool db_persist' offset changed from 3026 to 3090 (in bits) (by +64 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.16374659538269043,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.2-abi-laboratory-libudev-so-1-7-2-libudev-so-1-7-4.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2144160270690918,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4 libudev-so-1-7-2-libudev-so-1-7-4 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.2-abi-laboratory-libudev-so-1-7-2-libudev-so-1-7-4.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.2": 180264,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4": 188880
+            }
+        },
+        "experiment": "usr/lib64/libudev-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.2",
+        "different_libs": true
+    }
+]

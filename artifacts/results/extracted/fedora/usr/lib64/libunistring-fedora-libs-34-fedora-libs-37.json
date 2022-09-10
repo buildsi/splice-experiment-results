@@ -1,0 +1,104 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunistring.so.2.1.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunistring.so.2.2.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libunistring.so.2.1.0",
+                    "spliced_lib": "libunistring.so.2.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "open",
+                        "libunistring_gl_uninorm_compose_lookup",
+                        "libunistring_uc_locale_languages_lookup",
+                        "fclose",
+                        "libunistring_uc_property_lookup",
+                        "libunistring_gl_uninorm_decompose_merge_sort_fromto",
+                        "close",
+                        "libunistring_uc_combining_class_lookup",
+                        "ungetc",
+                        "libunistring_uc_joining_type_lookup",
+                        "libunistring_uc_bidi_class_lookup",
+                        "__uflow",
+                        "libunistring_uc_general_category_lookup",
+                        "__isoc99_fscanf",
+                        "libunistring_uc_script_lookup",
+                        "fdopen",
+                        "libunistring_uc_joining_group_lookup"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00015807151794433594
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libunistring.so.2.1.0",
+                    "spliced_lib": "libunistring.so.2.2.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "libunistring_gl_uninorm_compose_lookup",
+                        "libunistring_uc_property_lookup",
+                        "libunistring_uc_combining_class_lookup",
+                        "libunistring_uc_joining_type_lookup",
+                        "libunistring_uc_script_lookup",
+                        "libunistring_uc_joining_group_lookup",
+                        "libunistring_uc_locale_languages_lookup",
+                        "libunistring_uc_general_category_lookup",
+                        "libunistring_gl_uninorm_decompose_merge_sort_fromto",
+                        "libunistring_uc_bidi_class_lookup"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.002821207046508789
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 10 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 22 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 7 Added variable symbols not referenced by debug info\n\n10 Removed functions:\n\n  [D] 'function const composition_rule* libunistring_gl_uninorm_compose_lookup(const char*, size_t)'    {libunistring_gl_uninorm_compose_lookup}\n  [D] 'function void libunistring_gl_uninorm_decompose_merge_sort_fromto(const ucs4_with_ccc*, ucs4_with_ccc*, size_t, ucs4_with_ccc*)'    {libunistring_gl_uninorm_decompose_merge_sort_fromto}\n  [D] 'function const named_bidi_class* libunistring_uc_bidi_class_lookup(const char*, size_t)'    {libunistring_uc_bidi_class_lookup}\n  [D] 'function const named_combining_class* libunistring_uc_combining_class_lookup(const char*, size_t)'    {libunistring_uc_combining_class_lookup}\n  [D] 'function const named_category* libunistring_uc_general_category_lookup(const char*, size_t)'    {libunistring_uc_general_category_lookup}\n  [D] 'function const named_joining_group* libunistring_uc_joining_group_lookup(const char*, size_t)'    {libunistring_uc_joining_group_lookup}\n  [D] 'function const named_joining_type* libunistring_uc_joining_type_lookup(const char*, size_t)'    {libunistring_uc_joining_type_lookup}\n  [D] 'function const char* libunistring_uc_locale_languages_lookup(const char*, size_t)'    {libunistring_uc_locale_languages_lookup}\n  [D] 'function const named_property* libunistring_uc_property_lookup(const char*, size_t)'    {libunistring_uc_property_lookup}\n  [D] 'function const named_script* libunistring_uc_script_lookup(const char*, size_t)'    {libunistring_uc_script_lookup}\n\n22 Added function symbols not referenced by debug info:\n\n  [A] libunistring_glthread_once_multithreaded\n  [A] libunistring_setlocale_null\n  [A] libunistring_setlocale_null_r\n  [A] libunistring_u16_possible_linebreaks_loop\n  [A] libunistring_u32_possible_linebreaks_loop\n  [A] libunistring_u8_possible_linebreaks_loop\n  [A] libunistring_u8_width_linebreaks_internal\n  [A] u16_possible_linebreaks_v2\n  [A] u16_width_linebreaks_v2\n  [A] u32_possible_linebreaks_v2\n  [A] u32_width_linebreaks_v2\n  [A] u8_possible_linebreaks_v2\n  [A] u8_width_linebreaks_v2\n  [A] uc_is_property_emoji\n  [A] uc_is_property_emoji_component\n  [A] uc_is_property_emoji_modifier\n  [A] uc_is_property_emoji_modifier_base\n  [A] uc_is_property_emoji_presentation\n  [A] uc_is_property_extended_pictographic\n  [A] uc_is_property_regional_indicator\n  [A] ulc_possible_linebreaks_v2\n  [A] ulc_width_linebreaks_v2\n\n7 Added variable symbols not referenced by debug info:\n\n  [A] UC_PROPERTY_EMOJI\n  [A] UC_PROPERTY_EMOJI_COMPONENT\n  [A] UC_PROPERTY_EMOJI_MODIFIER\n  [A] UC_PROPERTY_EMOJI_MODIFIER_BASE\n  [A] UC_PROPERTY_EMOJI_PRESENTATION\n  [A] UC_PROPERTY_EXTENDED_PICTOGRAPHIC\n  [A] UC_PROPERTY_REGIONAL_INDICATOR\n\n",
+                    "return_code": 12,
+                    "seconds": 0.09805560111999512,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunistring.so.2.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunistring.so.2.2.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunistring.so.2.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunistring.so.2.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunistring.so.2.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunistring.so.2.2.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunistring.so.2.1.0-abi-laboratory-libunistring-so-2-1-0-libunistring-so-2-2-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.18493294715881348,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunistring.so.2.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunistring.so.2.2.0 libunistring-so-2-1-0-libunistring-so-2-2-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunistring.so.2.1.0-abi-laboratory-libunistring-so-2-1-0-libunistring-so-2-2-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunistring.so.2.2.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunistring.so.2.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunistring.so.2.1.0": 1587784,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunistring.so.2.2.0": 1800992
+            }
+        },
+        "experiment": "usr/lib64/libunistring-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libunistring.so.2.2.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libunistring.so.2.1.0",
+        "different_libs": true
+    }
+]

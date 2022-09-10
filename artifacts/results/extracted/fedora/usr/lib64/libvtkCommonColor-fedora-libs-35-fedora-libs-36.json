@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkCommonColor.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkCommonColor.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkCommonColor.so.9.0.3",
+                    "spliced_lib": "libvtkCommonColor.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "printf",
+                        "abort"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.581710815429688e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkCommonColor.so.9.0.3",
+                    "spliced_lib": "libvtkCommonColor.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.796287536621094e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 2 Changed (69 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 functions with some indirect sub-type change:\n\n  [C] 'method virtual void vtkColorSeries::AddColor(const vtkColor3ub&)' at vtkColorSeries.cxx:514:1 has some indirect sub-type changes:\n    the vtable offset of method virtual void vtkColorSeries::AddColor(const vtkColor3ub&) changed from 29 to 28\n      note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n    implicit parameter 0 of type 'vtkColorSeries*' has sub-type changes:\n      in pointed to type 'class vtkColorSeries' at vtkColorSeries.h:58:1:\n        type size hasn't changed\n        14 member function changes (8 filtered):\n          'method virtual vtkObjectBase* vtkColorSeries::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkColorSeries::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual void vtkColorSeries::SetColorScheme(int)' has some sub-type changes:\n            the vtable offset of method virtual void vtkColorSeries::SetColorScheme(int) changed from 21 to 20\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual int vtkColorSeries::SetColorSchemeByName(const vtkStdString&)' has some sub-type changes:\n            the vtable offset of method virtual int vtkColorSeries::SetColorSchemeByName(const vtkStdString&) changed from 22 to 21\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual vtkStdString vtkColorSeries::GetColorSchemeName() const' has some sub-type changes:\n            the vtable offset of method virtual vtkStdString vtkColorSeries::GetColorSchemeName() const changed from 23 to 22\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual void vtkColorSeries::SetColorSchemeName(const vtkStdString&)' has some sub-type changes:\n            the vtable offset of method virtual void vtkColorSeries::SetColorSchemeName(const vtkStdString&) changed from 24 to 23\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual int vtkColorSeries::GetColorScheme() const' has some sub-type changes:\n            the vtable offset of method virtual int vtkColorSeries::GetColorScheme() const changed from 25 to 24\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual int vtkColorSeries::GetNumberOfColors() const' has some sub-type changes:\n            the vtable offset of method virtual int vtkColorSeries::GetNumberOfColors() const changed from 26 to 25\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual void vtkColorSeries::SetNumberOfColors(int)' has some sub-type changes:\n            the vtable offset of method virtual void vtkColorSeries::SetNumberOfColors(int) changed from 27 to 26\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual void vtkColorSeries::SetColor(int, const vtkColor3ub&)' has some sub-type changes:\n            the vtable offset of method virtual void vtkColorSeries::SetColor(int, const vtkColor3ub&) changed from 28 to 27\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual void vtkColorSeries::InsertColor(int, const vtkColor3ub&)' has some sub-type changes:\n            the vtable offset of method virtual void vtkColorSeries::InsertColor(int, const vtkColor3ub&) changed from 30 to 29\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual void vtkColorSeries::RemoveColor(int)' has some sub-type changes:\n            the vtable offset of method virtual void vtkColorSeries::RemoveColor(int) changed from 31 to 30\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual void vtkColorSeries::ClearColors()' has some sub-type changes:\n            the vtable offset of method virtual void vtkColorSeries::ClearColors() changed from 32 to 31\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual void vtkColorSeries::DeepCopy(vtkColorSeries*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkColorSeries::DeepCopy(vtkColorSeries*) changed from 33 to 32\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n          'method virtual void vtkColorSeries::CopyOnWrite()' has some sub-type changes:\n            the vtable offset of method virtual void vtkColorSeries::CopyOnWrite() changed from 34 to 33\n              note that this is an ABI incompatible change to the vtable of class vtkColorSeries\n        no data member changes (2 filtered);\n\n  [C] 'method bool vtkNamedColors::ColorExists(const vtkStdString&)' at vtkNamedColors.cxx:1043:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'vtkNamedColors* const' has sub-type changes:\n      in unqualified underlying type 'vtkNamedColors*':\n        in pointed to type 'class vtkNamedColors' at vtkNamedColors.h:80:1:\n          type size hasn't changed\n          9 member function changes (7 filtered):\n            'method virtual vtkObjectBase* vtkNamedColors::NewInstanceInternal() const' has some sub-type changes:\n              the vtable offset of method virtual vtkObjectBase* vtkNamedColors::NewInstanceInternal() const changed from 16 to 15\n                note that this is an ABI incompatible change to the vtable of class vtkNamedColors\n            'method virtual void vtkNamedColors::SetColor(const vtkStdString&, const unsigned char&, const unsigned char&, const unsigned char&, const unsigned char&)' has some sub-type changes:\n              the vtable offset of method virtual void vtkNamedColors::SetColor(const vtkStdString&, const unsigned char&, const unsigned char&, const unsigned char&, const unsigned char&) changed from 21 to 20\n                note that this is an ABI incompatible change to the vtable of class vtkNamedColors\n            'method virtual void vtkNamedColors::SetColor(const vtkStdString&, const double&, const double&, const double&, const double&)' has some sub-type changes:\n              the vtable offset of method virtual void vtkNamedColors::SetColor(const vtkStdString&, const double&, const double&, const double&, const double&) changed from 22 to 21\n                note that this is an ABI incompatible change to the vtable of class vtkNamedColors\n            'method virtual void vtkNamedColors::SetColor(const vtkStdString&, const unsigned char*)' has some sub-type changes:\n              the vtable offset of method virtual void vtkNamedColors::SetColor(const vtkStdString&, const unsigned char*) changed from 23 to 22\n                note that this is an ABI incompatible change to the vtable of class vtkNamedColors\n            'method virtual void vtkNamedColors::SetColor(const vtkStdString&, const vtkColor4ub&)' has some sub-type changes:\n              the vtable offset of method virtual void vtkNamedColors::SetColor(const vtkStdString&, const vtkColor4ub&) changed from 24 to 23\n                note that this is an ABI incompatible change to the vtable of class vtkNamedColors\n            'method virtual void vtkNamedColors::SetColor(const vtkStdString&, const vtkColor3ub&)' has some sub-type changes:\n              the vtable offset of method virtual void vtkNamedColors::SetColor(const vtkStdString&, const vtkColor3ub&) changed from 25 to 24\n                note that this is an ABI incompatible change to the vtable of class vtkNamedColors\n            'method virtual void vtkNamedColors::SetColor(const vtkStdString&, const double*)' has some sub-type changes:\n              the vtable offset of method virtual void vtkNamedColors::SetColor(const vtkStdString&, const double*) changed from 26 to 25\n                note that this is an ABI incompatible change to the vtable of class vtkNamedColors\n            'method virtual void vtkNamedColors::SetColor(const vtkStdString&, const vtkColor4d&)' has some sub-type changes:\n              the vtable offset of method virtual void vtkNamedColors::SetColor(const vtkStdString&, const vtkColor4d&) changed from 27 to 26\n                note that this is an ABI incompatible change to the vtable of class vtkNamedColors\n            'method virtual void vtkNamedColors::SetColor(const vtkStdString&, const vtkColor3d&)' has some sub-type changes:\n              the vtable offset of method virtual void vtkNamedColors::SetColor(const vtkStdString&, const vtkColor3d&) changed from 28 to 27\n                note that this is an ABI incompatible change to the vtable of class vtkNamedColors\n          no data member changes (2 filtered);\n\n",
+                    "return_code": 12,
+                    "seconds": 20.11644697189331,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkCommonColor.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkCommonColor.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkCommonColor.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkCommonColor.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkCommonColor.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkCommonColor.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkCommonColor.so.9.0.3-abi-laboratory-libvtkCommonColor-so-9-0-3-libvtkCommonColor-so-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2295677661895752,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkCommonColor.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkCommonColor.so.9.1.0 libvtkCommonColor-so-9-0-3-libvtkCommonColor-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkCommonColor.so.9.0.3-abi-laboratory-libvtkCommonColor-so-9-0-3-libvtkCommonColor-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkCommonColor.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkCommonColor.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkCommonColor.so.9.0.3": 123336,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkCommonColor.so.9.1.0": 119896
+            }
+        },
+        "experiment": "usr/lib64/libvtkCommonColor-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkCommonColor.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkCommonColor.so.9.0.3",
+        "different_libs": true
+    }
+]
