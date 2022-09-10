@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-unix-token-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-unix-token-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libauth-unix-token-samba4.so",
+                    "spliced_lib": "libauth-unix-token-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5510787963867188e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libauth-unix-token-samba4.so",
+                    "spliced_lib": "libauth-unix-token-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.198883056640625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 4 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n4 Removed functions:\n\n  [D] 'function NTSTATUS auth_session_info_fill_unix(loadparm_context*, const char*, auth_session_info*)'    {auth_session_info_fill_unix@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS auth_session_info_set_unix(loadparm_context*, const char*, int, int, auth_session_info*)'    {auth_session_info_set_unix@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS fill_unix_info(loadparm_context*, const char*, auth_session_info*)'    {fill_unix_info@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS security_token_to_unix_token(TALLOC_CTX*, security_token*, security_unix_token**)'    {security_token_to_unix_token@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.025916099548339844,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-unix-token-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-unix-token-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-unix-token-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-unix-token-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-unix-token-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-unix-token-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-unix-token-samba4.so-abi-laboratory-libauth-unix-token-samba4-so-libauth-unix-token-samba4-so.html\nFound link to libauth-unix-token-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libauth-unix-token-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ckVZ6.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libauth-unix-token-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libauth-unix-token-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Kfoly.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 4, warnings: 0\nTotal source compatibility problems: 0, warnings: 3\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-unix-token-samba4.so-abi-laboratory-libauth-unix-token-samba4-so-libauth-unix-token-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 12.226280212402344,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-unix-token-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-unix-token-samba4.so libauth-unix-token-samba4-so-libauth-unix-token-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-unix-token-samba4.so-abi-laboratory-libauth-unix-token-samba4-so-libauth-unix-token-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-unix-token-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-unix-token-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-unix-token-samba4.so": 12072,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-unix-token-samba4.so": 16096
+            }
+        },
+        "experiment": "usr/lib64/samba/libauth-unix-token-samba4-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libauth-unix-token-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libauth-unix-token-samba4.so",
+        "different_libs": true
+    }
+]

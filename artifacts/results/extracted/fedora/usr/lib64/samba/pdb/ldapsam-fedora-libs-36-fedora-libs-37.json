@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "ldapsam.so",
+                    "spliced_lib": "ldapsam.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.103515625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "ldapsam.so",
+                    "spliced_lib": "ldapsam.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.867813110351562e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 8 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n8 Removed functions:\n\n  [D] 'function const char** get_userattr_list(TALLOC_CTX*, int)'    {get_userattr_list@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function int ldapsam_search_suffix_by_name(ldapsam_privates*, const char*, LDAPMessage**, const char**)'    {ldapsam_search_suffix_by_name@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS pdb_ldapsam_init_common(pdb_methods**, const char*)'    {pdb_ldapsam_init_common@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function int pdb_nds_get_password(smbldap_state*, char*, size_t*, char*)'    {pdb_nds_get_password@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS pdb_nds_init(TALLOC_CTX*)'    {pdb_nds_init@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function int pdb_nds_set_password(smbldap_state*, char*, const char*)'    {pdb_nds_set_password@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function LDAP* priv2ld(ldapsam_privates*)'    {priv2ld@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS samba_init_module(TALLOC_CTX*)'    {samba_init_module@@SAMBA_4.16.4_SAMBA4}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.05826902389526367,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so-abi-laboratory-ldapsam-so-ldapsam-so.html\nFound link to ldapsam.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file ldapsam.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/pdb/../../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 21466\nERROR: incomplete info for symbol 50901\nERROR: incomplete info for symbol 51931\nERROR: incomplete info for symbol 75479\nERROR: incomplete info for symbol 79607\nERROR: incomplete info for symbol 82093\nERROR: incomplete info for symbol 83005\nERROR: incomplete info for symbol 83092\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Flpob.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to ldapsam.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file ldapsam.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/pdb/../../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 21471\nERROR: incomplete info for symbol 50906\nERROR: incomplete info for symbol 51936\nERROR: incomplete info for symbol 75484\nERROR: incomplete info for symbol 79612\nERROR: incomplete info for symbol 82098\nERROR: incomplete info for symbol 83010\nERROR: incomplete info for symbol 83097\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-v4dl2.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 87.5%\nTotal binary compatibility problems: 8, warnings: 0\nTotal source compatibility problems: 1, warnings: 5\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so-abi-laboratory-ldapsam-so-ldapsam-so.html\n",
+                    "return_code": 1,
+                    "seconds": 14.301106929779053,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so ldapsam-so-ldapsam-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so-abi-laboratory-ldapsam-so-ldapsam-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so": 156448,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so": 156448
+            }
+        },
+        "experiment": "usr/lib64/samba/pdb/ldapsam-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so",
+        "different_libs": true
+    }
+]

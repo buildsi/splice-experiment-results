@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsys-rw-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsys-rw-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsys-rw-samba4.so",
+                    "spliced_lib": "libsys-rw-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.170967102050781e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsys-rw-samba4.so",
+                    "spliced_lib": "libsys-rw-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.1444091796875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 16 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n16 Removed functions:\n\n  [D] 'function ssize_t read_data(int, void*, size_t)'    {read_data@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function off_t sys_block_align(off_t, off_t)'    {sys_block_align@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function off_t sys_block_align_truncate(off_t, off_t)'    {sys_block_align_truncate@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function bool sys_io_ranges_overlap(size_t, off_t, size_t, off_t)'    {sys_io_ranges_overlap@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ssize_t sys_pread(int, void*, size_t, off_t)'    {sys_pread@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ssize_t sys_pread_full(int, void*, size_t, off_t)'    {sys_pread_full@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ssize_t sys_pwrite(int, void*, size_t, off_t)'    {sys_pwrite@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ssize_t sys_pwrite_full(int, void*, size_t, off_t)'    {sys_pwrite_full@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ssize_t sys_read(int, void*, size_t)'    {sys_read@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function void sys_read_v(int, void*, size_t)'    {sys_read_v@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function bool sys_valid_io_range(off_t, size_t)'    {sys_valid_io_range@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ssize_t sys_write(int, void*, size_t)'    {sys_write@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function void sys_write_v(int, void*, size_t)'    {sys_write_v@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ssize_t sys_writev(int, const iovec*, int)'    {sys_writev@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ssize_t write_data(int, void*, size_t)'    {write_data@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ssize_t write_data_iov(int, const iovec*, int)'    {write_data_iov@@SAMBA_4.16.4_SAMBA4}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.024272680282592773,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsys-rw-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsys-rw-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsys-rw-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsys-rw-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsys-rw-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsys-rw-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsys-rw-samba4.so-abi-laboratory-libsys-rw-samba4-so-libsys-rw-samba4-so.html\nFound link to libsys-rw-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsys-rw-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2274\nERROR: incomplete info for symbol 2712\nERROR: incomplete info for symbol 2823\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-g8Uje.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsys-rw-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libsys-rw-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2274\nERROR: incomplete info for symbol 2712\nERROR: incomplete info for symbol 2823\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-A5Mq7.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 16, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsys-rw-samba4.so-abi-laboratory-libsys-rw-samba4-so-libsys-rw-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 13.256374597549438,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsys-rw-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsys-rw-samba4.so libsys-rw-samba4-so-libsys-rw-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsys-rw-samba4.so-abi-laboratory-libsys-rw-samba4-so-libsys-rw-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsys-rw-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsys-rw-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsys-rw-samba4.so": 16168,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsys-rw-samba4.so": 16184
+            }
+        },
+        "experiment": "usr/lib64/samba/libsys-rw-samba4-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsys-rw-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsys-rw-samba4.so",
+        "different_libs": true
+    }
+]

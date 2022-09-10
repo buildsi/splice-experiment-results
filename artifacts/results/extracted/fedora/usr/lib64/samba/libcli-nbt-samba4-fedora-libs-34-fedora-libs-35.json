@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-nbt-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-nbt-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcli-nbt-samba4.so",
+                    "spliced_lib": "libcli-nbt-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.553794860839844e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcli-nbt-samba4.so",
+                    "spliced_lib": "libcli-nbt-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.9073486328125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 36 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n36 Removed functions:\n\n  [D] 'function void endlmhosts(FILE*)'    {endlmhosts@@SAMBA_4.14.12}\n  [D] 'function bool getlmhostsent(TALLOC_CTX*, FILE*, char**, int*, sockaddr_storage*)'    {getlmhostsent@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_query(nbt_name_socket*, TALLOC_CTX*, nbt_name_query*)'    {nbt_name_query@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_query_recv(nbt_name_request*, TALLOC_CTX*, nbt_name_query*)'    {nbt_name_query_recv@@SAMBA_4.14.12}\n  [D] 'function nbt_name_request* nbt_name_query_send(nbt_name_socket*, nbt_name_query*)'    {nbt_name_query_send@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_refresh(nbt_name_socket*, TALLOC_CTX*, nbt_name_refresh*)'    {nbt_name_refresh@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_refresh_recv(nbt_name_request*, TALLOC_CTX*, nbt_name_refresh*)'    {nbt_name_refresh_recv@@SAMBA_4.14.12}\n  [D] 'function nbt_name_request* nbt_name_refresh_send(nbt_name_socket*, nbt_name_refresh*)'    {nbt_name_refresh_send@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_refresh_wins(nbt_name_socket*, TALLOC_CTX*, nbt_name_refresh_wins*)'    {nbt_name_refresh_wins@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_refresh_wins_recv(tevent_req*, TALLOC_CTX*, nbt_name_refresh_wins*)'    {nbt_name_refresh_wins_recv@@SAMBA_4.14.12}\n  [D] 'function tevent_req* nbt_name_refresh_wins_send(TALLOC_CTX*, tevent_context*, nbt_name_socket*, nbt_name_refresh_wins*)'    {nbt_name_refresh_wins_send@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_register(nbt_name_socket*, TALLOC_CTX*, nbt_name_register*)'    {nbt_name_register@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_register_bcast(nbt_name_socket*, nbt_name_register_bcast*)'    {nbt_name_register_bcast@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_register_bcast_recv(tevent_req*)'    {nbt_name_register_bcast_recv@@SAMBA_4.14.12}\n  [D] 'function tevent_req* nbt_name_register_bcast_send(TALLOC_CTX*, tevent_context*, nbt_name_socket*, nbt_name_register_bcast*)'    {nbt_name_register_bcast_send@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_register_recv(nbt_name_request*, TALLOC_CTX*, nbt_name_register*)'    {nbt_name_register_recv@@SAMBA_4.14.12}\n  [D] 'function nbt_name_request* nbt_name_register_send(nbt_name_socket*, nbt_name_register*)'    {nbt_name_register_send@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_register_wins(nbt_name_socket*, TALLOC_CTX*, nbt_name_register_wins*)'    {nbt_name_register_wins@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_register_wins_recv(tevent_req*, TALLOC_CTX*, nbt_name_register_wins*)'    {nbt_name_register_wins_recv@@SAMBA_4.14.12}\n  [D] 'function tevent_req* nbt_name_register_wins_send(TALLOC_CTX*, tevent_context*, nbt_name_socket*, nbt_name_register_wins*)'    {nbt_name_register_wins_send@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_release(nbt_name_socket*, TALLOC_CTX*, nbt_name_release*)'    {nbt_name_release@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_release_recv(nbt_name_request*, TALLOC_CTX*, nbt_name_release*)'    {nbt_name_release_recv@@SAMBA_4.14.12}\n  [D] 'function nbt_name_request* nbt_name_release_send(nbt_name_socket*, nbt_name_release*)'    {nbt_name_release_send@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_reply_send(nbt_name_socket*, socket_address*, nbt_name_packet*)'    {nbt_name_reply_send@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_request_recv(nbt_name_request*)'    {nbt_name_request_recv@@SAMBA_4.14.12}\n  [D] 'function nbt_name_request* nbt_name_request_send(TALLOC_CTX*, nbt_name_socket*, socket_address*, nbt_name_packet*, int, int, bool)'    {nbt_name_request_send@@SAMBA_4.14.12}\n  [D] 'function void nbt_name_socket_handle_response_packet(nbt_name_request*, nbt_name_packet*, socket_address*)'    {nbt_name_socket_handle_response_packet@@SAMBA_4.14.12}\n  [D] 'function nbt_name_socket* nbt_name_socket_init(TALLOC_CTX*, tevent_context*)'    {nbt_name_socket_init@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_status(nbt_name_socket*, TALLOC_CTX*, nbt_name_status*)'    {nbt_name_status@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_name_status_recv(nbt_name_request*, TALLOC_CTX*, nbt_name_status*)'    {nbt_name_status_recv@@SAMBA_4.14.12}\n  [D] 'function nbt_name_request* nbt_name_status_send(nbt_name_socket*, nbt_name_status*)'    {nbt_name_status_send@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_rcode_to_ntstatus(uint8_t)'    {nbt_rcode_to_ntstatus@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_set_incoming_handler(nbt_name_socket*, void (nbt_name_socket*, nbt_name_packet*, socket_address*)*, void*)'    {nbt_set_incoming_handler@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS nbt_set_unexpected_handler(nbt_name_socket*, void (nbt_name_socket*, nbt_name_packet*, socket_address*)*, void*)'    {nbt_set_unexpected_handler@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS resolve_lmhosts_file_as_sockaddr(TALLOC_CTX*, const char*, const char*, int, sockaddr_storage**, size_t*)'    {resolve_lmhosts_file_as_sockaddr@@SAMBA_4.14.12}\n  [D] 'function FILE* startlmhosts(const char*)'    {startlmhosts@@SAMBA_4.14.12}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.03990340232849121,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-nbt-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-nbt-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-nbt-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-nbt-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-nbt-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-nbt-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-nbt-samba4.so-abi-laboratory-libcli-nbt-samba4-so-libcli-nbt-samba4-so.html\nFound link to libcli-nbt-samba4.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libcli-nbt-samba4.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6162\nERROR: incomplete info for symbol 8379\nERROR: incomplete info for symbol 8710\nERROR: incomplete info for symbol 9424\nERROR: incomplete info for symbol 9892\nERROR: incomplete info for symbol 9966\nERROR: incomplete info for symbol 10046\nERROR: incomplete info for symbol 10126\nERROR: incomplete info for symbol 10194\nERROR: incomplete info for symbol 10501\nERROR: incomplete info for symbol 11041\nERROR: incomplete info for symbol 11165\nERROR: incomplete info for symbol 11462\nERROR: incomplete info for symbol 11961\nERROR: incomplete info for symbol 12085\nERROR: incomplete info for symbol 12480\nERROR: incomplete info for symbol 13790\nERROR: incomplete info for symbol 13914\nERROR: incomplete info for symbol 14187\nERROR: incomplete info for symbol 14307\nERROR: incomplete info for symbol 14683\nERROR: incomplete info for symbol 15087\nERROR: incomplete info for symbol 15326\nERROR: incomplete info for symbol 15712\nERROR: incomplete info for symbol 16107\nERROR: incomplete info for symbol 16964\nERROR: incomplete info for symbol 17088\nERROR: incomplete info for symbol 17559\nERROR: incomplete info for symbol 17798\nERROR: incomplete info for symbol 18184\nERROR: incomplete info for symbol 18579\nERROR: incomplete info for symbol 19100\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-BCllI.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcli-nbt-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libcli-nbt-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6157\nERROR: incomplete info for symbol 8374\nERROR: incomplete info for symbol 8705\nERROR: incomplete info for symbol 9419\nERROR: incomplete info for symbol 9887\nERROR: incomplete info for symbol 9961\nERROR: incomplete info for symbol 10041\nERROR: incomplete info for symbol 10121\nERROR: incomplete info for symbol 10189\nERROR: incomplete info for symbol 10496\nERROR: incomplete info for symbol 11036\nERROR: incomplete info for symbol 11160\nERROR: incomplete info for symbol 11457\nERROR: incomplete info for symbol 11956\nERROR: incomplete info for symbol 12080\nERROR: incomplete info for symbol 12475\nERROR: incomplete info for symbol 13785\nERROR: incomplete info for symbol 13909\nERROR: incomplete info for symbol 14182\nERROR: incomplete info for symbol 14302\nERROR: incomplete info for symbol 14678\nERROR: incomplete info for symbol 15082\nERROR: incomplete info for symbol 15321\nERROR: incomplete info for symbol 15707\nERROR: incomplete info for symbol 16102\nERROR: incomplete info for symbol 16959\nERROR: incomplete info for symbol 17083\nERROR: incomplete info for symbol 17554\nERROR: incomplete info for symbol 17793\nERROR: incomplete info for symbol 18179\nERROR: incomplete info for symbol 18574\nERROR: incomplete info for symbol 19095\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-E8cvO.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 36, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-nbt-samba4.so-abi-laboratory-libcli-nbt-samba4-so-libcli-nbt-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 11.069698572158813,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-nbt-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-nbt-samba4.so libcli-nbt-samba4-so-libcli-nbt-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-nbt-samba4.so-abi-laboratory-libcli-nbt-samba4-so-libcli-nbt-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-nbt-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-nbt-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-nbt-samba4.so": 44824,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-nbt-samba4.so": 45232
+            }
+        },
+        "experiment": "usr/lib64/samba/libcli-nbt-samba4-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-nbt-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-nbt-samba4.so",
+        "different_libs": true
+    }
+]

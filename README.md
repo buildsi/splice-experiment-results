@@ -26,9 +26,17 @@ export GITHUB_TOKEN=xxxxxxxxxxx
 $ python get_artifacts.py
 ```
 
-You can also ask for a specific run. Here are results for:
+You can also ask for a specific run. Since we had too much data for a single run and 50 results,
+we split the runs into two groups. You can edit the [fedora_installs.sh](https://github.com/buildsi/splice-experiment-runs/blob/main/fedora_installs.sh)
+to see the groups. Here are results for:
 
 ```bash
+declare -a libs=("libadwaita-qt5" "aspell" "boost-log", "clucene-core" "libdap" "samba-libs" "djvulibre-libs"
+  "dovecot" "exiv2-libs" "gdal-libs" "geos" "glibmm24" "hdf5" "libicu" "dyninst" "webkit2gtk3-jsc"
+  "libjxl" "libkml" "libmusicbrainz5" "openexr-libs" "openh264" "mesa-libOSMesa" "proj"
+  "qt5-qtwayland" "qt5-qtxmlpatterns" "SDL2_image" "libstdc++" "taglib" "vtk"
+  "webrtc-audio-processing" "python3"
+)
 ```
 
 ```bash
@@ -46,7 +54,7 @@ $ python get_artifacts.py 3019727038  # fedora results 550-650
 $ python get_artifacts.py 3019728826  # fedora results 650-750
 $ python get_artifacts.py 3020343625  # fedora results 750-850
 $ python get_artifacts.py 3027789022  # fedora results 850-900
-
+$ python get_artifacts.py 3027790466  # fedora resutls 900-950
 $ python get_artifacts.py 3023223782  # fedora results 950-1000 (34 vs all others had runner issues)
 $ python get_artifacts.py 3023226112  # fedora results 1000-1050 (36 vs 37 runner had issues)
 $ python get_artifacts.py 3025057440  # fedora results 1050-1100
@@ -57,8 +65,18 @@ $ python get_artifacts.py 3027334558  # fedora results 1300-1350 # this is where
 $ python get_artifacts.py 3027336141  # fedora results 1350-1400
 $ python get_artifacts.py 3027772125  # fedora results 1400-1450
 $ python get_artifacts.py 3027773113  # fedora results 1450-1500
+$ python get_artifacts.py 3028703062  # fedora resutls 1500-1550
+$ python get_artifacts.py 3028703764  # fedora results 1550-1600
 ```
+
+And then group 2:
+
+```bash
+TBA
+```
+
 And then to open (and run/update the notebook)
+
 
 ```bash
 $ jupyter notebook

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgenrand-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgenrand-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgenrand-samba4.so",
+                    "spliced_lib": "libgenrand-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.86102294921875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgenrand-samba4.so",
+                    "spliced_lib": "libgenrand-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.059906005859375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 3 Removed, 0 Changed, 10 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 1 Added variable\n\n3 Removed functions:\n\n  [D] 'function void generate_nonce_buffer(uint8_t*, int)'    {generate_nonce_buffer@@SAMBA_4.15.9}\n  [D] 'function void generate_random_buffer(uint8_t*, int)'    {generate_random_buffer@@SAMBA_4.15.9}\n  [D] 'function void generate_secret_buffer(uint8_t*, int)'    {generate_secret_buffer@@SAMBA_4.15.9}\n\n10 Added functions:\n\n  [A] 'function void BlockSignals(bool, int)'    {BlockSignals@@SAMBA_4.17.0RC3_SAMBA4}\n  [A] 'function void (int)* CatchChild()'    {CatchChild@@SAMBA_4.17.0RC3_SAMBA4}\n  [A] 'function void (int)* CatchChildLeaveStatus()'    {CatchChildLeaveStatus@@SAMBA_4.17.0RC3_SAMBA4}\n  [A] 'function void (int)* CatchSignal(int, void (int)*)'    {CatchSignal@@SAMBA_4.17.0RC3_SAMBA4}\n  [A] 'function void fault_configure(smb_panic_handler_t)'    {fault_configure@@SAMBA_4.17.0RC3_SAMBA4}\n  [A] 'function void fault_setup()'    {fault_setup@@SAMBA_4.17.0RC3_SAMBA4}\n  [A] 'function void fault_setup_disable()'    {fault_setup_disable@@SAMBA_4.17.0RC3_SAMBA4}\n  [A] 'function void log_stack_trace()'    {log_stack_trace@@SAMBA_4.17.0RC3_SAMBA4}\n  [A] 'function void smb_panic(const char*)'    {smb_panic@@SAMBA_4.17.0RC3_SAMBA4}\n  [A] 'function void smb_panic_log(const char*)'    {smb_panic_log@@SAMBA_4.17.0RC3_SAMBA4}\n\n1 Added variable:\n\n  [A] 'const char* panic_action'    {panic_action@@SAMBA_4.17.0RC3_SAMBA4}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.02539992332458496,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgenrand-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgenrand-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgenrand-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgenrand-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgenrand-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgenrand-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgenrand-samba4.so-abi-laboratory-libgenrand-samba4-so-libgenrand-samba4-so.html\nFound link to libgenrand-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libgenrand-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Prm9w.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgenrand-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libgenrand-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1322\nERROR: incomplete info for symbol 1484\nERROR: incomplete info for symbol 2688\nERROR: incomplete info for symbol 2845\nERROR: incomplete info for symbol 2997\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-9hFXd.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 3, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgenrand-samba4.so-abi-laboratory-libgenrand-samba4-so-libgenrand-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 14.95892071723938,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgenrand-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgenrand-samba4.so libgenrand-samba4-so-libgenrand-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgenrand-samba4.so-abi-laboratory-libgenrand-samba4-so-libgenrand-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgenrand-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgenrand-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgenrand-samba4.so": 7824,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgenrand-samba4.so": 20360
+            }
+        },
+        "experiment": "usr/lib64/samba/libgenrand-samba4-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgenrand-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgenrand-samba4.so",
+        "different_libs": true
+    }
+]

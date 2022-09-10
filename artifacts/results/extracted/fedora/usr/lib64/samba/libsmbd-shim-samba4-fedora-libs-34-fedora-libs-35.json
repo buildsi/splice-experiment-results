@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbd-shim-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbd-shim-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsmbd-shim-samba4.so",
+                    "spliced_lib": "libsmbd-shim-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.457069396972656e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsmbd-shim-samba4.so",
+                    "spliced_lib": "libsmbd-shim-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.0728836059570312e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 11 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n11 Removed functions:\n\n  [D] 'function bool become_authenticated_pipe_user(auth_session_info*)'    {become_authenticated_pipe_user@@SAMBA_4.14.12}\n  [D] 'function void become_root()'    {become_root@@SAMBA_4.14.12}\n  [D] 'function bool change_to_root_user()'    {change_to_root_user@@SAMBA_4.14.12}\n  [D] 'function void contend_level2_oplocks_begin(files_struct*, level2_contention_type)'    {contend_level2_oplocks_begin@@SAMBA_4.14.12}\n  [D] 'function void contend_level2_oplocks_end(files_struct*, level2_contention_type)'    {contend_level2_oplocks_end@@SAMBA_4.14.12}\n  [D] 'function void exit_server(const char*)'    {exit_server@@SAMBA_4.14.12}\n  [D] 'function void exit_server_cleanly(const char* const)'    {exit_server_cleanly@@SAMBA_4.14.12}\n  [D] 'function void send_stat_cache_delete_message(messaging_context*, const char*)'    {send_stat_cache_delete_message@@SAMBA_4.14.12}\n  [D] 'function void set_smbd_shim(const smbd_shim*)'    {set_smbd_shim@@SAMBA_4.14.12}\n  [D] 'function bool unbecome_authenticated_pipe_user()'    {unbecome_authenticated_pipe_user@@SAMBA_4.14.12}\n  [D] 'function void unbecome_root()'    {unbecome_root@@SAMBA_4.14.12}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.06900453567504883,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbd-shim-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbd-shim-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbd-shim-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbd-shim-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbd-shim-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbd-shim-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbd-shim-samba4.so-abi-laboratory-libsmbd-shim-samba4-so-libsmbd-shim-samba4-so.html\nFound link to libsmbd-shim-samba4.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmbd-shim-samba4.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-QQ4pd.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsmbd-shim-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmbd-shim-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-wI7sm.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 63.6%\nTotal binary compatibility problems: 11, warnings: 0\nTotal source compatibility problems: 28, warnings: 39\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbd-shim-samba4.so-abi-laboratory-libsmbd-shim-samba4-so-libsmbd-shim-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 16.399109840393066,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbd-shim-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbd-shim-samba4.so libsmbd-shim-samba4-so-libsmbd-shim-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbd-shim-samba4.so-abi-laboratory-libsmbd-shim-samba4-so-libsmbd-shim-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbd-shim-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbd-shim-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbd-shim-samba4.so": 7536,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbd-shim-samba4.so": 7952
+            }
+        },
+        "experiment": "usr/lib64/samba/libsmbd-shim-samba4-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbd-shim-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbd-shim-samba4.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libanonymous.so.3.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libanonymous.so.3.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libanonymous.so.3.0.0",
+                    "spliced_lib": "libanonymous.so.3.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.2901763916015625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libanonymous.so.3.0.0",
+                    "spliced_lib": "libanonymous.so.3.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.4543533325195312e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.035214900970458984,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libanonymous.so.3.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libanonymous.so.3.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libanonymous.so.3.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libanonymous.so.3.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libanonymous.so.3.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libanonymous.so.3.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libanonymous.so.3.0.0-abi-laboratory-libanonymous-so-3-0-0-libanonymous-so-3-0-0.html\nFound link to libanonymous.so.3.0.0-2.1.27-13.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libanonymous.so.3.0.0-2.1.27-13.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/sasl2/../../../.dwz/cyrus-sasl-2.1.27-13.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5365\nERROR: incomplete info for symbol 5496\nERROR: incomplete info for symbol 5627\nERROR: incomplete info for symbol 6397\nERROR: incomplete info for symbol 6646\nERROR: incomplete info for symbol 7189\nERROR: incomplete info for symbol 7465\nERROR: incomplete info for symbol 7559\nERROR: incomplete info for symbol 7604\nERROR: incomplete info for symbol 7656\nERROR: incomplete info for symbol 7957\nERROR: incomplete info for symbol 8351\nERROR: incomplete info for symbol 8679\nERROR: incomplete info for symbol 8965\nERROR: incomplete info for symbol 10133\nERROR: incomplete info for symbol 10235\nERROR: incomplete info for symbol 10906\nERROR: incomplete info for symbol 10938\nERROR: incomplete info for symbol 11410\nERROR: incomplete info for symbol 11812\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-0FCRo.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libanonymous.so.3.0.0-2.1.27-18.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libanonymous.so.3.0.0-2.1.27-18.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/sasl2/../../../.dwz/cyrus-sasl-2.1.27-18.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5350\nERROR: incomplete info for symbol 5481\nERROR: incomplete info for symbol 5612\nERROR: incomplete info for symbol 6497\nERROR: incomplete info for symbol 6746\nERROR: incomplete info for symbol 7289\nERROR: incomplete info for symbol 7564\nERROR: incomplete info for symbol 7658\nERROR: incomplete info for symbol 7703\nERROR: incomplete info for symbol 7755\nERROR: incomplete info for symbol 8056\nERROR: incomplete info for symbol 8450\nERROR: incomplete info for symbol 8776\nERROR: incomplete info for symbol 9060\nERROR: incomplete info for symbol 10210\nERROR: incomplete info for symbol 10312\nERROR: incomplete info for symbol 10987\nERROR: incomplete info for symbol 11019\nERROR: incomplete info for symbol 11489\nERROR: incomplete info for symbol 11890\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-tXFgM.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libanonymous.so.3.0.0-abi-laboratory-libanonymous-so-3-0-0-libanonymous-so-3-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 0.8194217681884766,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libanonymous.so.3.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libanonymous.so.3.0.0 libanonymous-so-3-0-0-libanonymous-so-3-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libanonymous.so.3.0.0-abi-laboratory-libanonymous-so-3-0-0-libanonymous-so-3-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libanonymous.so.3.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libanonymous.so.3.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libanonymous.so.3.0.0": 20376,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libanonymous.so.3.0.0": 24664
+            }
+        },
+        "experiment": "usr/lib64/sasl2/libanonymous-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libanonymous.so.3.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libanonymous.so.3.0.0",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsocket-blocking-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsocket-blocking-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsocket-blocking-samba4.so",
+                    "spliced_lib": "libsocket-blocking-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.1457672119140625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsocket-blocking-samba4.so",
+                    "spliced_lib": "libsocket-blocking-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.3909759521484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 2 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 Removed functions:\n\n  [D] 'function int set_blocking(int, bool)'    {set_blocking@@SAMBA_4.15.9}\n  [D] 'function bool smb_set_close_on_exec(int)'    {smb_set_close_on_exec@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.011212825775146484,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsocket-blocking-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsocket-blocking-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsocket-blocking-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsocket-blocking-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsocket-blocking-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsocket-blocking-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsocket-blocking-samba4.so-abi-laboratory-libsocket-blocking-samba4-so-libsocket-blocking-samba4-so.html\nFound link to libsocket-blocking-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libsocket-blocking-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-IBsZj.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsocket-blocking-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libsocket-blocking-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-RYc4E.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 2, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsocket-blocking-samba4.so-abi-laboratory-libsocket-blocking-samba4-so-libsocket-blocking-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 12.407247543334961,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsocket-blocking-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsocket-blocking-samba4.so libsocket-blocking-samba4-so-libsocket-blocking-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsocket-blocking-samba4.so-abi-laboratory-libsocket-blocking-samba4-so-libsocket-blocking-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsocket-blocking-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsocket-blocking-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsocket-blocking-samba4.so": 7824,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsocket-blocking-samba4.so": 15952
+            }
+        },
+        "experiment": "usr/lib64/samba/libsocket-blocking-samba4-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsocket-blocking-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsocket-blocking-samba4.so",
+        "different_libs": true
+    }
+]

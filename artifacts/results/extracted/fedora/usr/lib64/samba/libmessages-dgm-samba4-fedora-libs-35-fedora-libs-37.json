@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmessages-dgm-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmessages-dgm-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmessages-dgm-samba4.so",
+                    "spliced_lib": "libmessages-dgm-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__memcpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.175041198730469e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmessages-dgm-samba4.so",
+                    "spliced_lib": "libmessages-dgm-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.9311904907226562e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 27 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n27 Removed functions:\n\n  [D] 'function int messaging_dgm_cleanup(pid_t)'    {messaging_dgm_cleanup@@SAMBA_4.15.9}\n  [D] 'function void messaging_dgm_destroy()'    {messaging_dgm_destroy@@SAMBA_4.15.9}\n  [D] 'function bool messaging_dgm_fde_active(messaging_dgm_fde*)'    {messaging_dgm_fde_active@@SAMBA_4.15.9}\n  [D] 'function int messaging_dgm_forall(int (typedef pid_t, void*)*, void*)'    {messaging_dgm_forall@@SAMBA_4.15.9}\n  [D] 'function int messaging_dgm_get_unique(pid_t, uint64_t*)'    {messaging_dgm_get_unique@@SAMBA_4.15.9}\n  [D] 'function int messaging_dgm_init(tevent_context*, uint64_t*, const char*, const char*, void (tevent_context*, const uint8_t*, typedef size_t, int*, typedef size_t, void*)*, void*)'    {messaging_dgm_init@@SAMBA_4.15.9}\n  [D] 'function void* messaging_dgm_ref(TALLOC_CTX*, tevent_context*, uint64_t*, const char*, const char*, void (tevent_context*, const uint8_t*, typedef size_t, int*, typedef size_t, void*)*, void*, int*)'    {messaging_dgm_ref@@SAMBA_4.15.9}\n  [D] 'function messaging_dgm_fde* messaging_dgm_register_tevent_context(TALLOC_CTX*, tevent_context*)'    {messaging_dgm_register_tevent_context@@SAMBA_4.15.9}\n  [D] 'function int messaging_dgm_send(pid_t, const iovec*, int, const int*, size_t)'    {messaging_dgm_send@@SAMBA_4.15.9}\n  [D] 'function int messaging_dgm_wipe()'    {messaging_dgm_wipe@@SAMBA_4.15.9}\n  [D] 'function int pthreadpool_add_job(pthreadpool*, int, void (void*)*, void*)'    {pthreadpool_add_job@@SAMBA_4.15.9}\n  [D] 'function size_t pthreadpool_cancel_job(pthreadpool*, int, void (void*)*, void*)'    {pthreadpool_cancel_job@@SAMBA_4.15.9}\n  [D] 'function int pthreadpool_destroy(pthreadpool*)'    {pthreadpool_destroy@@SAMBA_4.15.9}\n  [D] 'function int pthreadpool_init(unsigned int, pthreadpool**, int (int, void (void*)*, void*, void*)*, void*)'    {pthreadpool_init@@SAMBA_4.15.9}\n  [D] 'function size_t pthreadpool_max_threads(pthreadpool*)'    {pthreadpool_max_threads@@SAMBA_4.15.9}\n  [D] 'function int pthreadpool_pipe_add_job(pthreadpool_pipe*, int, void (void*)*, void*)'    {pthreadpool_pipe_add_job@@SAMBA_4.15.9}\n  [D] 'function int pthreadpool_pipe_destroy(pthreadpool_pipe*)'    {pthreadpool_pipe_destroy@@SAMBA_4.15.9}\n  [D] 'function int pthreadpool_pipe_finished_jobs(pthreadpool_pipe*, int*, unsigned int)'    {pthreadpool_pipe_finished_jobs@@SAMBA_4.15.9}\n  [D] 'function int pthreadpool_pipe_init(unsigned int, pthreadpool_pipe**)'    {pthreadpool_pipe_init@@SAMBA_4.15.9}\n  [D] 'function int pthreadpool_pipe_signal_fd(pthreadpool_pipe*)'    {pthreadpool_pipe_signal_fd@@SAMBA_4.15.9}\n  [D] 'function size_t pthreadpool_queued_jobs(pthreadpool*)'    {pthreadpool_queued_jobs@@SAMBA_4.15.9}\n  [D] 'function int pthreadpool_stop(pthreadpool*)'    {pthreadpool_stop@@SAMBA_4.15.9}\n  [D] 'function int pthreadpool_tevent_init(TALLOC_CTX*, unsigned int, pthreadpool_tevent**)'    {pthreadpool_tevent_init@@SAMBA_4.15.9}\n  [D] 'function int pthreadpool_tevent_job_recv(tevent_req*)'    {pthreadpool_tevent_job_recv@@SAMBA_4.15.9}\n  [D] 'function tevent_req* pthreadpool_tevent_job_send(TALLOC_CTX*, tevent_context*, pthreadpool_tevent*, void (void*)*, void*)'    {pthreadpool_tevent_job_send@@SAMBA_4.15.9}\n  [D] 'function size_t pthreadpool_tevent_max_threads(pthreadpool_tevent*)'    {pthreadpool_tevent_max_threads@@SAMBA_4.15.9}\n  [D] 'function size_t pthreadpool_tevent_queued_jobs(pthreadpool_tevent*)'    {pthreadpool_tevent_queued_jobs@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.04577279090881348,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmessages-dgm-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmessages-dgm-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmessages-dgm-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmessages-dgm-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmessages-dgm-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmessages-dgm-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmessages-dgm-samba4.so-abi-laboratory-libmessages-dgm-samba4-so-libmessages-dgm-samba4-so.html\nFound link to libmessages-dgm-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libmessages-dgm-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 15599\nERROR: incomplete info for symbol 16101\nERROR: incomplete info for symbol 16127\nERROR: incomplete info for symbol 16455\nERROR: incomplete info for symbol 16752\nERROR: incomplete info for symbol 17407\nERROR: incomplete info for symbol 18649\nERROR: incomplete info for symbol 18999\nERROR: incomplete info for symbol 19275\nERROR: incomplete info for symbol 19419\nERROR: incomplete info for symbol 19806\nERROR: incomplete info for symbol 19832\nERROR: incomplete info for symbol 20152\nERROR: incomplete info for symbol 23576\nERROR: incomplete info for symbol 24599\nERROR: incomplete info for symbol 24642\nERROR: incomplete info for symbol 24685\nERROR: incomplete info for symbol 25812\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-JsS4E.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libmessages-dgm-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libmessages-dgm-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 15690\nERROR: incomplete info for symbol 16196\nERROR: incomplete info for symbol 16222\nERROR: incomplete info for symbol 16487\nERROR: incomplete info for symbol 16784\nERROR: incomplete info for symbol 17439\nERROR: incomplete info for symbol 18681\nERROR: incomplete info for symbol 19031\nERROR: incomplete info for symbol 19312\nERROR: incomplete info for symbol 19456\nERROR: incomplete info for symbol 19843\nERROR: incomplete info for symbol 19869\nERROR: incomplete info for symbol 20111\nERROR: incomplete info for symbol 23525\nERROR: incomplete info for symbol 24639\nERROR: incomplete info for symbol 24682\nERROR: incomplete info for symbol 24725\nERROR: incomplete info for symbol 25852\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-s4wei.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 40.7%\nTotal binary compatibility problems: 27, warnings: 0\nTotal source compatibility problems: 2, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmessages-dgm-samba4.so-abi-laboratory-libmessages-dgm-samba4-so-libmessages-dgm-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 15.215893030166626,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmessages-dgm-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmessages-dgm-samba4.so libmessages-dgm-samba4-so-libmessages-dgm-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmessages-dgm-samba4.so-abi-laboratory-libmessages-dgm-samba4-so-libmessages-dgm-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmessages-dgm-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmessages-dgm-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmessages-dgm-samba4.so": 53768,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmessages-dgm-samba4.so": 57792
+            }
+        },
+        "experiment": "usr/lib64/samba/libmessages-dgm-samba4-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmessages-dgm-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmessages-dgm-samba4.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libasn1util-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libasn1util-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libasn1util-samba4.so",
+                    "spliced_lib": "libasn1util-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.1021575927734375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libasn1util-samba4.so",
+                    "spliced_lib": "libasn1util-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.124641418457031e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 53 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n53 Removed functions:\n\n  [D] 'function bool asn1_blob(const asn1_data*, DATA_BLOB*)'    {asn1_blob@@SAMBA_4.15.9}\n  [D] 'function bool asn1_check_BOOLEAN(asn1_data*, bool)'    {asn1_check_BOOLEAN@@SAMBA_4.15.9}\n  [D] 'function bool asn1_check_OID(asn1_data*, const char*)'    {asn1_check_OID@@SAMBA_4.15.9}\n  [D] 'function off_t asn1_current_ofs(const asn1_data*)'    {asn1_current_ofs@@SAMBA_4.15.9}\n  [D] 'function bool asn1_end_tag(asn1_data*)'    {asn1_end_tag@@SAMBA_4.15.9}\n  [D] 'function bool asn1_extract_blob(asn1_data*, TALLOC_CTX*, DATA_BLOB*)'    {asn1_extract_blob@@SAMBA_4.15.9}\n  [D] 'function void asn1_free(asn1_data*)'    {asn1_free@@SAMBA_4.15.9}\n  [D] 'function size_t asn1_get_length(const asn1_data*)'    {asn1_get_length@@SAMBA_4.15.9}\n  [D] 'function bool asn1_has_error(const asn1_data*)'    {asn1_has_error@@SAMBA_4.15.9}\n  [D] 'function bool asn1_has_nesting(const asn1_data*)'    {asn1_has_nesting@@SAMBA_4.15.9}\n  [D] 'function asn1_data* asn1_init(TALLOC_CTX*, unsigned int)'    {asn1_init@@SAMBA_4.15.9}\n  [D] 'function bool asn1_load(asn1_data*, DATA_BLOB)'    {asn1_load@@SAMBA_4.15.9}\n  [D] 'function void asn1_load_nocopy(asn1_data*, uint8_t*, size_t)'    {asn1_load_nocopy@@SAMBA_4.15.9}\n  [D] 'function bool asn1_peek(asn1_data*, void*, int)'    {asn1_peek@@SAMBA_4.15.9}\n  [D] 'function int asn1_peek_full_tag(DATA_BLOB, uint8_t, size_t*)'    {asn1_peek_full_tag@@SAMBA_4.15.9}\n  [D] 'function bool asn1_peek_tag(asn1_data*, uint8_t)'    {asn1_peek_tag@@SAMBA_4.15.9}\n  [D] 'function bool asn1_peek_uint8(asn1_data*, uint8_t*)'    {asn1_peek_uint8@@SAMBA_4.15.9}\n  [D] 'function bool asn1_pop_tag(asn1_data*)'    {asn1_pop_tag@@SAMBA_4.15.9}\n  [D] 'function bool asn1_push_tag(asn1_data*, uint8_t)'    {asn1_push_tag@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read(asn1_data*, void*, int)'    {asn1_read@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read_BOOLEAN(asn1_data*, bool*)'    {asn1_read_BOOLEAN@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read_BOOLEAN_context(asn1_data*, bool*, int)'    {asn1_read_BOOLEAN_context@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read_BitString(asn1_data*, TALLOC_CTX*, DATA_BLOB*, uint8_t*)'    {asn1_read_BitString@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read_ContextSimple(asn1_data*, TALLOC_CTX*, uint8_t, DATA_BLOB*)'    {asn1_read_ContextSimple@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read_GeneralString(asn1_data*, TALLOC_CTX*, char**)'    {asn1_read_GeneralString@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read_Integer(asn1_data*, int*)'    {asn1_read_Integer@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read_LDAPString(asn1_data*, TALLOC_CTX*, char**)'    {asn1_read_LDAPString@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read_OID(asn1_data*, TALLOC_CTX*, char**)'    {asn1_read_OID@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read_OctetString(asn1_data*, TALLOC_CTX*, DATA_BLOB*)'    {asn1_read_OctetString@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read_enumerated(asn1_data*, int*)'    {asn1_read_enumerated@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read_implicit_Integer(asn1_data*, int*)'    {asn1_read_implicit_Integer@@SAMBA_4.15.9}\n  [D] 'function bool asn1_read_uint8(asn1_data*, uint8_t*)'    {asn1_read_uint8@@SAMBA_4.15.9}\n  [D] 'function void asn1_set_error(asn1_data*)'    {asn1_set_error@@SAMBA_4.15.9}\n  [D] 'function bool asn1_start_tag(asn1_data*, uint8_t)'    {asn1_start_tag@@SAMBA_4.15.9}\n  [D] 'function int asn1_tag_remaining(asn1_data*)'    {asn1_tag_remaining@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write(asn1_data*, void*, int)'    {asn1_write@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_BOOLEAN(asn1_data*, bool)'    {asn1_write_BOOLEAN@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_BOOLEAN_context(asn1_data*, bool, int)'    {asn1_write_BOOLEAN_context@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_BitString(asn1_data*, void*, size_t, uint8_t)'    {asn1_write_BitString@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_ContextSimple(asn1_data*, uint8_t, DATA_BLOB*)'    {asn1_write_ContextSimple@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_DATA_BLOB_LDAPString(asn1_data*, const DATA_BLOB*)'    {asn1_write_DATA_BLOB_LDAPString@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_GeneralString(asn1_data*, const char*)'    {asn1_write_GeneralString@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_Integer(asn1_data*, int)'    {asn1_write_Integer@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_LDAPString(asn1_data*, const char*)'    {asn1_write_LDAPString@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_OID(asn1_data*, const char*)'    {asn1_write_OID@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_OctetString(asn1_data*, void*, size_t)'    {asn1_write_OctetString@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_enumerated(asn1_data*, uint8_t)'    {asn1_write_enumerated@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_implicit_Integer(asn1_data*, int)'    {asn1_write_implicit_Integer@@SAMBA_4.15.9}\n  [D] 'function bool asn1_write_uint8(asn1_data*, uint8_t)'    {asn1_write_uint8@@SAMBA_4.15.9}\n  [D] 'function bool ber_read_OID_String(TALLOC_CTX*, DATA_BLOB, char**)'    {ber_read_OID_String@@SAMBA_4.15.9}\n  [D] 'function bool ber_read_partial_OID_String(TALLOC_CTX*, DATA_BLOB, char**)'    {ber_read_partial_OID_String@@SAMBA_4.15.9}\n  [D] 'function bool ber_write_OID_String(TALLOC_CTX*, DATA_BLOB*, const char*)'    {ber_write_OID_String@@SAMBA_4.15.9}\n  [D] 'function bool ber_write_partial_OID_String(TALLOC_CTX*, DATA_BLOB*, const char*)'    {ber_write_partial_OID_String@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.0365598201751709,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libasn1util-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libasn1util-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libasn1util-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libasn1util-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libasn1util-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libasn1util-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libasn1util-samba4.so-abi-laboratory-libasn1util-samba4-so-libasn1util-samba4-so.html\nFound link to libasn1util-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libasn1util-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-V6MhX.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libasn1util-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libasn1util-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-vhZRt.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 53, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libasn1util-samba4.so-abi-laboratory-libasn1util-samba4-so-libasn1util-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 14.781057596206665,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libasn1util-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libasn1util-samba4.so libasn1util-samba4-so-libasn1util-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libasn1util-samba4.so-abi-laboratory-libasn1util-samba4-so-libasn1util-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libasn1util-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libasn1util-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libasn1util-samba4.so": 28976,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libasn1util-samba4.so": 33048
+            }
+        },
+        "experiment": "usr/lib64/samba/libasn1util-samba4-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libasn1util-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libasn1util-samba4.so",
+        "different_libs": true
+    }
+]

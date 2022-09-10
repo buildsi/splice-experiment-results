@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libopenjp2.so.2.4.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libopenjp2.so.2.4.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libopenjp2.so.2.4.0",
+                    "spliced_lib": "libopenjp2.so.2.4.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.678436279296875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libopenjp2.so.2.4.0",
+                    "spliced_lib": "libopenjp2.so.2.4.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0006489753723144531
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (77 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
+                    "return_code": 0,
+                    "seconds": 0.199690580368042,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libopenjp2.so.2.4.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libopenjp2.so.2.4.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libopenjp2.so.2.4.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libopenjp2.so.2.4.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libopenjp2.so.2.4.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libopenjp2.so.2.4.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libopenjp2.so.2.4.0-abi-laboratory-libopenjp2-so-2-4-0-libopenjp2-so-2-4-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.21914029121398926,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libopenjp2.so.2.4.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libopenjp2.so.2.4.0 libopenjp2-so-2-4-0-libopenjp2-so-2-4-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libopenjp2.so.2.4.0-abi-laboratory-libopenjp2-so-2-4-0-libopenjp2-so-2-4-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libopenjp2.so.2.4.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libopenjp2.so.2.4.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libopenjp2.so.2.4.0": 367888,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libopenjp2.so.2.4.0": 372128
+            }
+        },
+        "experiment": "usr/lib64/libopenjp2-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libopenjp2.so.2.4.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libopenjp2.so.2.4.0",
+        "different_libs": true
+    }
+]

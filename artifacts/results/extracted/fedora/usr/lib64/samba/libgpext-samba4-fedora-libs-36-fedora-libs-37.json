@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpext-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpext-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgpext-samba4.so",
+                    "spliced_lib": "libgpext-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.075599670410156e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgpext-samba4.so",
+                    "spliced_lib": "libgpext-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.867813110351562e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 9 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 1 Removed, 0 Changed, 0 Added variable\n\n9 Removed functions:\n\n  [D] 'function void gpext_debug_header(int, const char*, uint32_t, const GROUP_POLICY_OBJECT*, const char*, const char*)'    {gpext_debug_header@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS gpext_free_gp_extensions()'    {gpext_free_gp_extensions@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function gp_extension* gpext_get_gp_extension_list()'    {gpext_get_gp_extension_list@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS gpext_info_add_entry(TALLOC_CTX*, const char*, const char*, gp_extension_reg_table*, gp_extension_reg_info*)'    {gpext_info_add_entry@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS gpext_init_gp_extensions(TALLOC_CTX*)'    {gpext_init_gp_extensions@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS gpext_process_extension(TALLOC_CTX*, uint32_t, const security_token*, registry_key*, const GROUP_POLICY_OBJECT*, const GROUP_POLICY_OBJECT*, const char*)'    {gpext_process_extension@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS gpext_register_gp_extension(TALLOC_CTX*, int, const char*, const char*, gp_extension_methods*)'    {gpext_register_gp_extension@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS gpext_shutdown_gp_extensions()'    {gpext_shutdown_gp_extensions@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS gpext_unregister_gp_extension(const char*)'    {gpext_unregister_gp_extension@@SAMBA_4.16.4_SAMBA4}\n\n1 Removed variable:\n\n  [D] 'gp_extension_reg_table gpext_reg_vals[17]'    {gpext_reg_vals@@SAMBA_4.16.4_SAMBA4}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.027594327926635742,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpext-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpext-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpext-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpext-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpext-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpext-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpext-samba4.so-abi-laboratory-libgpext-samba4-so-libgpext-samba4-so.html\nFound link to libgpext-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgpext-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-tgGdR.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgpext-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libgpext-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-g1K4P.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 10, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpext-samba4.so-abi-laboratory-libgpext-samba4-so-libgpext-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 11.669115781784058,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpext-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpext-samba4.so libgpext-samba4-so-libgpext-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpext-samba4.so-abi-laboratory-libgpext-samba4-so-libgpext-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpext-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpext-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpext-samba4.so": 24864,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpext-samba4.so": 24872
+            }
+        },
+        "experiment": "usr/lib64/samba/libgpext-samba4-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libgpext-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libgpext-samba4.so",
+        "different_libs": true
+    }
+]

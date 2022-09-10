@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libMESSAGING-SEND-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libMESSAGING-SEND-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libMESSAGING-SEND-samba4.so",
+                    "spliced_lib": "libMESSAGING-SEND-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.6226043701171875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libMESSAGING-SEND-samba4.so",
+                    "spliced_lib": "libMESSAGING-SEND-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.58306884765625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 5 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n5 Removed functions:\n\n  [D] 'function NTSTATUS imessaging_send(imessaging_context*, server_id, uint32_t, const DATA_BLOB*)'    {imessaging_send@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS imessaging_send_ptr(imessaging_context*, server_id, uint32_t, void*)'    {imessaging_send_ptr@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS irpc_servers_byname(imessaging_context*, TALLOC_CTX*, const char*, unsigned int*, server_id**)'    {irpc_servers_byname@@SAMBA_4.14.12}\n  [D] 'function void* root_privileges()'    {root_privileges@@SAMBA_4.14.12}\n  [D] 'function uid_t root_privileges_original_uid(void*)'    {root_privileges_original_uid@@SAMBA_4.14.12}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.022202014923095703,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libMESSAGING-SEND-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libMESSAGING-SEND-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libMESSAGING-SEND-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libMESSAGING-SEND-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libMESSAGING-SEND-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libMESSAGING-SEND-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libMESSAGING-SEND-samba4.so-abi-laboratory-libMESSAGING-SEND-samba4-so-libMESSAGING-SEND-samba4-so.html\nFound link to libMESSAGING-SEND-samba4.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libMESSAGING-SEND-samba4.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 484\nERROR: incomplete info for symbol 644\nERROR: incomplete info for symbol 995\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-87bqv.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libMESSAGING-SEND-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libMESSAGING-SEND-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 479\nERROR: incomplete info for symbol 639\nERROR: incomplete info for symbol 988\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-b811v.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 5, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libMESSAGING-SEND-samba4.so-abi-laboratory-libMESSAGING-SEND-samba4-so-libMESSAGING-SEND-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 12.077322483062744,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libMESSAGING-SEND-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libMESSAGING-SEND-samba4.so libMESSAGING-SEND-samba4-so-libMESSAGING-SEND-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libMESSAGING-SEND-samba4.so-abi-laboratory-libMESSAGING-SEND-samba4-so-libMESSAGING-SEND-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libMESSAGING-SEND-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libMESSAGING-SEND-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libMESSAGING-SEND-samba4.so": 11672,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libMESSAGING-SEND-samba4.so": 16104
+            }
+        },
+        "experiment": "usr/lib64/samba/libMESSAGING-SEND-samba4-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libMESSAGING-SEND-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libMESSAGING-SEND-samba4.so",
+        "different_libs": true
+    }
+]

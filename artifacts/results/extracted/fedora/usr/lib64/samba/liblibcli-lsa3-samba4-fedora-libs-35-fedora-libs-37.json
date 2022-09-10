@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/liblibcli-lsa3-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/liblibcli-lsa3-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "liblibcli-lsa3-samba4.so",
+                    "spliced_lib": "liblibcli-lsa3-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.600120544433594e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "liblibcli-lsa3-samba4.so",
+                    "spliced_lib": "liblibcli-lsa3-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.2636184692382812e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 16 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n16 Removed functions:\n\n  [D] 'function NTSTATUS dcerpc_lsa_lookup_names(dcerpc_binding_handle*, TALLOC_CTX*, policy_handle*, uint32_t, const char**, const char***, lsa_LookupNamesLevel, dom_sid**, lsa_SidType**, NTSTATUS*)'    {dcerpc_lsa_lookup_names@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS dcerpc_lsa_lookup_names4(dcerpc_binding_handle*, TALLOC_CTX*, policy_handle*, uint32_t, const char**, const char***, lsa_LookupNamesLevel, dom_sid**, lsa_SidType**, NTSTATUS*)'    {dcerpc_lsa_lookup_names4@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS dcerpc_lsa_lookup_names_generic(dcerpc_binding_handle*, TALLOC_CTX*, policy_handle*, uint32_t, const char**, const char***, lsa_LookupNamesLevel, dom_sid**, lsa_SidType**, bool, NTSTATUS*)'    {dcerpc_lsa_lookup_names_generic@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS dcerpc_lsa_lookup_sids(dcerpc_binding_handle*, TALLOC_CTX*, policy_handle*, int, const dom_sid*, char***, char***, lsa_SidType**, NTSTATUS*)'    {dcerpc_lsa_lookup_sids@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS dcerpc_lsa_lookup_sids3(dcerpc_binding_handle*, TALLOC_CTX*, policy_handle*, int, const dom_sid*, char***, char***, lsa_SidType**, NTSTATUS*)'    {dcerpc_lsa_lookup_sids3@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS dcerpc_lsa_lookup_sids_generic(dcerpc_binding_handle*, TALLOC_CTX*, policy_handle*, int, const dom_sid*, lsa_LookupNamesLevel, char***, char***, lsa_SidType**, bool, NTSTATUS*)'    {dcerpc_lsa_lookup_sids_generic@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS dcerpc_lsa_open_policy(dcerpc_binding_handle*, TALLOC_CTX*, bool, uint32_t, policy_handle*, NTSTATUS*)'    {dcerpc_lsa_open_policy@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS dcerpc_lsa_open_policy2(dcerpc_binding_handle*, TALLOC_CTX*, const char*, bool, uint32_t, policy_handle*, NTSTATUS*)'    {dcerpc_lsa_open_policy2@@SAMBA_4.15.9}\n  [D] 'function void init_lsa_AsciiString(lsa_AsciiString*, const char*)'    {init_lsa_AsciiString@@SAMBA_4.15.9}\n  [D] 'function void init_lsa_AsciiStringLarge(lsa_AsciiStringLarge*, const char*)'    {init_lsa_AsciiStringLarge@@SAMBA_4.15.9}\n  [D] 'function void init_lsa_String(lsa_String*, const char*)'    {init_lsa_String@@SAMBA_4.15.9}\n  [D] 'function void init_lsa_StringLarge(lsa_StringLarge*, const char*)'    {init_lsa_StringLarge@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS rpccli_lsa_lookup_names(rpc_pipe_client*, TALLOC_CTX*, policy_handle*, int, const char**, const char***, int, dom_sid**, lsa_SidType**)'    {rpccli_lsa_lookup_names@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS rpccli_lsa_lookup_sids(rpc_pipe_client*, TALLOC_CTX*, policy_handle*, int, const dom_sid*, char***, char***, lsa_SidType**)'    {rpccli_lsa_lookup_sids@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS rpccli_lsa_open_policy(rpc_pipe_client*, TALLOC_CTX*, bool, uint32_t, policy_handle*)'    {rpccli_lsa_open_policy@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS rpccli_lsa_open_policy2(rpc_pipe_client*, TALLOC_CTX*, bool, uint32_t, policy_handle*)'    {rpccli_lsa_open_policy2@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.041090965270996094,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/liblibcli-lsa3-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/liblibcli-lsa3-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/liblibcli-lsa3-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/liblibcli-lsa3-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/liblibcli-lsa3-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/liblibcli-lsa3-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/liblibcli-lsa3-samba4.so-abi-laboratory-liblibcli-lsa3-samba4-so-liblibcli-lsa3-samba4-so.html\nFound link to liblibcli-lsa3-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file liblibcli-lsa3-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3635\nERROR: incomplete info for symbol 5116\nERROR: incomplete info for symbol 5149\nERROR: incomplete info for symbol 5182\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-67h8L.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to liblibcli-lsa3-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file liblibcli-lsa3-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 343\nERROR: incomplete info for symbol 528\nERROR: incomplete info for symbol 697\nERROR: incomplete info for symbol 860\nERROR: incomplete info for symbol 1023\nERROR: incomplete info for symbol 3172\nERROR: incomplete info for symbol 3350\nERROR: incomplete info for symbol 3549\nERROR: incomplete info for symbol 3727\nERROR: incomplete info for symbol 4552\nERROR: incomplete info for symbol 4735\nERROR: incomplete info for symbol 4939\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-vxsFK.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 75%\nTotal binary compatibility problems: 16, warnings: 0\nTotal source compatibility problems: 1, warnings: 9\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/liblibcli-lsa3-samba4.so-abi-laboratory-liblibcli-lsa3-samba4-so-liblibcli-lsa3-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 15.67993950843811,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/liblibcli-lsa3-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/liblibcli-lsa3-samba4.so liblibcli-lsa3-samba4-so-liblibcli-lsa3-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/liblibcli-lsa3-samba4.so-abi-laboratory-liblibcli-lsa3-samba4-so-liblibcli-lsa3-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/liblibcli-lsa3-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/liblibcli-lsa3-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/liblibcli-lsa3-samba4.so": 20368,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/liblibcli-lsa3-samba4.so": 24384
+            }
+        },
+        "experiment": "usr/lib64/samba/liblibcli-lsa3-samba4-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/liblibcli-lsa3-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/liblibcli-lsa3-samba4.so",
+        "different_libs": true
+    }
+]

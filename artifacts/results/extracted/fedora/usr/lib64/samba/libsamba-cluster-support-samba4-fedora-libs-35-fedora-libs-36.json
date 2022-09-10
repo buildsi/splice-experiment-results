@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba-cluster-support-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba-cluster-support-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsamba-cluster-support-samba4.so",
+                    "spliced_lib": "libsamba-cluster-support-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.340576171875e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsamba-cluster-support-samba4.so",
+                    "spliced_lib": "libsamba-cluster-support-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5510787963867188e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 37 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 1 Removed, 0 Changed, 0 Added variable\n\n37 Removed functions:\n\n  [D] 'function bool cluster_support_available()'    {cluster_support_available@@SAMBA_4.15.9}\n  [D] 'function const char* cluster_support_features()'    {cluster_support_features@@SAMBA_4.15.9}\n  [D] 'function int ctdb_async_ctx_reinit(TALLOC_CTX*, tevent_context*)'    {ctdb_async_ctx_reinit@@SAMBA_4.15.9}\n  [D] 'function int ctdb_unwatch(ctdbd_connection*)'    {ctdb_unwatch@@SAMBA_4.15.9}\n  [D] 'function int ctdb_watch_us(ctdbd_connection*)'    {ctdb_watch_us@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_conn_get_fd(ctdbd_connection*)'    {ctdbd_conn_get_fd@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_control_local(ctdbd_connection*, uint32_t, uint64_t, uint32_t, TDB_DATA, TALLOC_CTX*, TDB_DATA*, int32_t*)'    {ctdbd_control_local@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_db_attach(ctdbd_connection*, const char*, uint32_t*, bool)'    {ctdbd_db_attach@@SAMBA_4.15.9}\n  [D] 'function char* ctdbd_dbpath(ctdbd_connection*, TALLOC_CTX*, uint32_t)'    {ctdbd_dbpath@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_init_async_connection(TALLOC_CTX*, const char*, int, ctdbd_connection**)'    {ctdbd_init_async_connection@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_init_connection(TALLOC_CTX*, const char*, int, ctdbd_connection**)'    {ctdbd_init_connection@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_messaging_send_iov(ctdbd_connection*, uint32_t, uint64_t, const iovec*, int)'    {ctdbd_messaging_send_iov@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_migrate(ctdbd_connection*, uint32_t, TDB_DATA)'    {ctdbd_migrate@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_parse(ctdbd_connection*, uint32_t, TDB_DATA, bool, void (typedef TDB_DATA, typedef TDB_DATA, void*)*, void*)'    {ctdbd_parse@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_parse_recv(tevent_req*)'    {ctdbd_parse_recv@@SAMBA_4.15.9}\n  [D] 'function tevent_req* ctdbd_parse_send(TALLOC_CTX*, tevent_context*, ctdbd_connection*, uint32_t, TDB_DATA, bool, void (typedef TDB_DATA, typedef TDB_DATA, void*)*, void*, dbwrap_req_state*)'    {ctdbd_parse_send@@SAMBA_4.15.9}\n  [D] 'function void ctdbd_prep_hdr_next_reqid(ctdbd_connection*, ctdb_req_header*)'    {ctdbd_prep_hdr_next_reqid@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_probe(const char*, int)'    {ctdbd_probe@@SAMBA_4.15.9}\n  [D] 'function bool ctdbd_process_exists(ctdbd_connection*, uint32_t, pid_t, uint64_t)'    {ctdbd_process_exists@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_public_ip_foreach(ctdbd_connection*, int (typedef uint32_t, const sockaddr_storage*, bool, void*)*, void*)'    {ctdbd_public_ip_foreach@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_register_ips(ctdbd_connection*, const sockaddr_storage*, const sockaddr_storage*, int (tevent_context*, typedef uint32_t, typedef uint32_t, typedef uint64_t, const uint8_t*, typedef size_t, void*)*, void*)'    {ctdbd_register_ips@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_reinit_connection(TALLOC_CTX*, const char*, int, ctdbd_connection*)'    {ctdbd_reinit_connection@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_req_recv(tevent_req*, TALLOC_CTX*, ctdb_req_header**)'    {ctdbd_req_recv@@SAMBA_4.15.9}\n  [D] 'function tevent_req* ctdbd_req_send(TALLOC_CTX*, tevent_context*, ctdbd_connection*, iovec*, size_t)'    {ctdbd_req_send@@SAMBA_4.15.9}\n  [D] 'function void ctdbd_socket_readable(tevent_context*, ctdbd_connection*)'    {ctdbd_socket_readable@@SAMBA_4.15.9}\n  [D] 'function int ctdbd_traverse(ctdbd_connection*, uint32_t, void (typedef TDB_DATA, typedef TDB_DATA, void*)*, void*)'    {ctdbd_traverse@@SAMBA_4.15.9}\n  [D] 'function uint32_t ctdbd_vnn(const ctdbd_connection*)'    {ctdbd_vnn@@SAMBA_4.15.9}\n  [D] 'function db_context* db_open_ctdb(TALLOC_CTX*, messaging_context*, const char*, int, int, int, mode_t, dbwrap_lock_order, uint64_t)'    {db_open_ctdb@@SAMBA_4.15.9}\n  [D] 'function const char* lp_ctdbd_socket()'    {lp_ctdbd_socket@@SAMBA_4.15.9}\n  [D] 'function ctdbd_connection* messaging_ctdb_connection()'    {messaging_ctdb_connection@@SAMBA_4.15.9}\n  [D] 'function void messaging_ctdb_destroy()'    {messaging_ctdb_destroy@@SAMBA_4.15.9}\n  [D] 'function bool messaging_ctdb_fde_active(messaging_ctdb_fde*)'    {messaging_ctdb_fde_active@@SAMBA_4.15.9}\n  [D] 'function int messaging_ctdb_init(const char*, int, uint64_t, void (tevent_context*, const uint8_t*, typedef size_t, int*, typedef size_t, void*)*, void*)'    {messaging_ctdb_init@@SAMBA_4.15.9}\n  [D] 'function void* messaging_ctdb_ref(TALLOC_CTX*, tevent_context*, const char*, int, uint64_t, void (tevent_context*, const uint8_t*, typedef size_t, int*, typedef size_t, void*)*, void*, int*)'    {messaging_ctdb_ref@@SAMBA_4.15.9}\n  [D] 'function messaging_ctdb_fde* messaging_ctdb_register_tevent_context(TALLOC_CTX*, tevent_context*)'    {messaging_ctdb_register_tevent_context@@SAMBA_4.15.9}\n  [D] 'function int messaging_ctdb_send(uint32_t, uint64_t, const iovec*, int)'    {messaging_ctdb_send@@SAMBA_4.15.9}\n  [D] 'function int register_with_ctdbd(ctdbd_connection*, uint64_t, int (tevent_context*, typedef uint32_t, typedef uint32_t, typedef uint64_t, const uint8_t*, typedef size_t, void*)*, void*)'    {register_with_ctdbd@@SAMBA_4.15.9}\n\n1 Removed variable:\n\n  [D] 'messaging_ctdb_context* global_ctdb_context'    {global_ctdb_context@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.05825972557067871,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba-cluster-support-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba-cluster-support-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba-cluster-support-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba-cluster-support-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba-cluster-support-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba-cluster-support-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba-cluster-support-samba4.so-abi-laboratory-libsamba-cluster-support-samba4-so-libsamba-cluster-support-samba4-so.html\nFound link to libsamba-cluster-support-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libsamba-cluster-support-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 16767\nERROR: incomplete info for symbol 17116\nERROR: incomplete info for symbol 17142\nERROR: incomplete info for symbol 17168\nERROR: incomplete info for symbol 17600\nERROR: incomplete info for symbol 18611\nERROR: incomplete info for symbol 19249\nERROR: incomplete info for symbol 19378\nERROR: incomplete info for symbol 19575\nERROR: incomplete info for symbol 24164\nERROR: incomplete info for symbol 25399\nERROR: incomplete info for symbol 27819\nERROR: incomplete info for symbol 28143\nERROR: incomplete info for symbol 28443\nERROR: incomplete info for symbol 28914\nERROR: incomplete info for symbol 30292\nERROR: incomplete info for symbol 30707\nERROR: incomplete info for symbol 33705\nERROR: incomplete info for symbol 35601\nERROR: incomplete info for symbol 36412\nERROR: incomplete info for symbol 37155\nERROR: incomplete info for symbol 37778\nERROR: incomplete info for symbol 41197\nERROR: incomplete info for symbol 41352\nERROR: incomplete info for symbol 41683\nERROR: incomplete info for symbol 41951\nERROR: incomplete info for symbol 42213\nERROR: incomplete info for symbol 42378\nERROR: incomplete info for symbol 42448\nERROR: incomplete info for symbol 43316\nERROR: incomplete info for symbol 44471\nERROR: incomplete info for symbol 45601\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-KdXB0.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsamba-cluster-support-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsamba-cluster-support-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 16729\nERROR: incomplete info for symbol 17074\nERROR: incomplete info for symbol 17100\nERROR: incomplete info for symbol 17126\nERROR: incomplete info for symbol 17564\nERROR: incomplete info for symbol 18581\nERROR: incomplete info for symbol 19223\nERROR: incomplete info for symbol 19352\nERROR: incomplete info for symbol 19679\nERROR: incomplete info for symbol 24221\nERROR: incomplete info for symbol 25567\nERROR: incomplete info for symbol 27989\nERROR: incomplete info for symbol 28313\nERROR: incomplete info for symbol 28613\nERROR: incomplete info for symbol 29084\nERROR: incomplete info for symbol 30465\nERROR: incomplete info for symbol 31000\nERROR: incomplete info for symbol 34003\nERROR: incomplete info for symbol 35903\nERROR: incomplete info for symbol 36714\nERROR: incomplete info for symbol 37469\nERROR: incomplete info for symbol 38114\nERROR: incomplete info for symbol 38190\nERROR: incomplete info for symbol 41628\nERROR: incomplete info for symbol 41959\nERROR: incomplete info for symbol 42227\nERROR: incomplete info for symbol 42489\nERROR: incomplete info for symbol 42654\nERROR: incomplete info for symbol 42724\nERROR: incomplete info for symbol 43499\nERROR: incomplete info for symbol 44654\nERROR: incomplete info for symbol 45800\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-xladX.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 38, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba-cluster-support-samba4.so-abi-laboratory-libsamba-cluster-support-samba4-so-libsamba-cluster-support-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 14.703910112380981,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba-cluster-support-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba-cluster-support-samba4.so libsamba-cluster-support-samba4-so-libsamba-cluster-support-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba-cluster-support-samba4.so-abi-laboratory-libsamba-cluster-support-samba4-so-libsamba-cluster-support-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba-cluster-support-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba-cluster-support-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba-cluster-support-samba4.so": 86960,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba-cluster-support-samba4.so": 90984
+            }
+        },
+        "experiment": "usr/lib64/samba/libsamba-cluster-support-samba4-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsamba-cluster-support-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsamba-cluster-support-samba4.so",
+        "different_libs": true
+    }
+]

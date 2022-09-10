@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmsghdr-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmsghdr-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmsghdr-samba4.so",
+                    "spliced_lib": "libmsghdr-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.315376281738281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmsghdr-samba4.so",
+                    "spliced_lib": "libmsghdr-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.059906005859375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 5 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n5 Removed functions:\n\n  [D] 'function msghdr* msghdr_buf_msghdr(msghdr_buf*)'    {msghdr_buf_msghdr@@SAMBA_4.14.12}\n  [D] 'function ssize_t msghdr_copy(msghdr_buf*, size_t, void*, socklen_t, const iovec*, int, const int*, size_t)'    {msghdr_copy@@SAMBA_4.14.12}\n  [D] 'function size_t msghdr_extract_fds(msghdr*, int*, size_t)'    {msghdr_extract_fds@@SAMBA_4.14.12}\n  [D] 'function ssize_t msghdr_prep_fds(msghdr*, uint8_t*, size_t, const int*, size_t)'    {msghdr_prep_fds@@SAMBA_4.14.12}\n  [D] 'function size_t msghdr_prep_recv_fds(msghdr*, uint8_t*, size_t, size_t)'    {msghdr_prep_recv_fds@@SAMBA_4.14.12}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.026987552642822266,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmsghdr-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmsghdr-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmsghdr-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmsghdr-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmsghdr-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmsghdr-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmsghdr-samba4.so-abi-laboratory-libmsghdr-samba4-so-libmsghdr-samba4-so.html\nFound link to libmsghdr-samba4.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libmsghdr-samba4.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-9rfVq.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libmsghdr-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libmsghdr-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-lYcPP.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 5, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmsghdr-samba4.so-abi-laboratory-libmsghdr-samba4-so-libmsghdr-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 16.828286170959473,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmsghdr-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmsghdr-samba4.so libmsghdr-samba4-so-libmsghdr-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmsghdr-samba4.so-abi-laboratory-libmsghdr-samba4-so-libmsghdr-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmsghdr-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmsghdr-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmsghdr-samba4.so": 11544,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmsghdr-samba4.so": 16064
+            }
+        },
+        "experiment": "usr/lib64/samba/libmsghdr-samba4-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmsghdr-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmsghdr-samba4.so",
+        "different_libs": true
+    }
+]

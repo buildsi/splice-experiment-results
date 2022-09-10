@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-spoolss-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-spoolss-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcli-spoolss-samba4.so",
+                    "spliced_lib": "libcli-spoolss-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.458427429199219e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libcli-spoolss-samba4.so",
+                    "spliced_lib": "libcli-spoolss-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.7404556274414062e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 29 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n29 Removed functions:\n\n  [D] 'function bool driver_info_ctr_to_info8(spoolss_AddDriverInfoCtr*, spoolss_DriverInfo8*)'    {driver_info_ctr_to_info8@@SAMBA_4.14.12}\n  [D] 'function bool init_systemtime(spoolss_Time*, tm*)'    {init_systemtime@@SAMBA_4.14.12}\n  [D] 'function WERROR pull_spoolss_PrinterData(TALLOC_CTX*, const DATA_BLOB*, spoolss_PrinterData*, winreg_Type)'    {pull_spoolss_PrinterData@@SAMBA_4.14.12}\n  [D] 'function WERROR push_spoolss_PrinterData(TALLOC_CTX*, DATA_BLOB*, winreg_Type, spoolss_PrinterData*)'    {push_spoolss_PrinterData@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_addprinterex(rpc_pipe_client*, TALLOC_CTX*, spoolss_SetPrinterInfoCtr*)'    {rpccli_spoolss_addprinterex@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_enumforms(rpc_pipe_client*, TALLOC_CTX*, policy_handle*, uint32_t, uint32_t, uint32_t*, spoolss_FormInfo**)'    {rpccli_spoolss_enumforms@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_enumjobs(rpc_pipe_client*, TALLOC_CTX*, policy_handle*, uint32_t, uint32_t, uint32_t, uint32_t, uint32_t*, spoolss_JobInfo**)'    {rpccli_spoolss_enumjobs@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_enummonitors(rpc_pipe_client*, TALLOC_CTX*, const char*, uint32_t, uint32_t, uint32_t*, spoolss_MonitorInfo**)'    {rpccli_spoolss_enummonitors@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_enumports(rpc_pipe_client*, TALLOC_CTX*, const char*, uint32_t, uint32_t, uint32_t*, spoolss_PortInfo**)'    {rpccli_spoolss_enumports@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_enumprinterdataex(rpc_pipe_client*, TALLOC_CTX*, policy_handle*, const char*, uint32_t, uint32_t*, spoolss_PrinterEnumValues**)'    {rpccli_spoolss_enumprinterdataex@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_enumprinterdrivers(rpc_pipe_client*, TALLOC_CTX*, const char*, const char*, uint32_t, uint32_t, uint32_t*, spoolss_DriverInfo**)'    {rpccli_spoolss_enumprinterdrivers@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_enumprinterkey(rpc_pipe_client*, TALLOC_CTX*, policy_handle*, const char*, const char***, uint32_t)'    {rpccli_spoolss_enumprinterkey@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_enumprinters(rpc_pipe_client*, TALLOC_CTX*, uint32_t, const char*, uint32_t, uint32_t, uint32_t*, spoolss_PrinterInfo**)'    {rpccli_spoolss_enumprinters@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_enumprintprocessordatatypes(rpc_pipe_client*, TALLOC_CTX*, const char*, const char*, uint32_t, uint32_t, uint32_t*, spoolss_PrintProcDataTypesInfo**)'    {rpccli_spoolss_enumprintprocessordatatypes@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_enumprintprocessors(rpc_pipe_client*, TALLOC_CTX*, const char*, const char*, uint32_t, uint32_t, uint32_t*, spoolss_PrintProcessorInfo**)'    {rpccli_spoolss_enumprintprocessors@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_getjob(rpc_pipe_client*, TALLOC_CTX*, policy_handle*, uint32_t, uint32_t, uint32_t, spoolss_JobInfo*)'    {rpccli_spoolss_getjob@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_getprinter(rpc_pipe_client*, TALLOC_CTX*, policy_handle*, uint32_t, uint32_t, spoolss_PrinterInfo*)'    {rpccli_spoolss_getprinter@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_getprinterdata(rpc_pipe_client*, TALLOC_CTX*, policy_handle*, const char*, uint32_t, winreg_Type*, uint32_t*, uint8_t**)'    {rpccli_spoolss_getprinterdata@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_getprinterdriver(rpc_pipe_client*, TALLOC_CTX*, policy_handle*, const char*, uint32_t, uint32_t, spoolss_DriverInfo*)'    {rpccli_spoolss_getprinterdriver@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_getprinterdriver2(rpc_pipe_client*, TALLOC_CTX*, policy_handle*, const char*, uint32_t, uint32_t, uint32_t, uint32_t, spoolss_DriverInfo*, uint32_t*, uint32_t*)'    {rpccli_spoolss_getprinterdriver2@@SAMBA_4.14.12}\n  [D] 'function WERROR rpccli_spoolss_openprinter_ex(rpc_pipe_client*, TALLOC_CTX*, const char*, uint32_t, policy_handle*)'    {rpccli_spoolss_openprinter_ex@@SAMBA_4.14.12}\n  [D] 'function time_t spoolss_Time_to_time_t(const spoolss_Time*)'    {spoolss_Time_to_time_t@@SAMBA_4.14.12}\n  [D] 'function WERROR spoolss_create_default_devmode(TALLOC_CTX*, const char*, spoolss_DeviceMode**)'    {spoolss_create_default_devmode@@SAMBA_4.14.12}\n  [D] 'function WERROR spoolss_create_default_secdesc(TALLOC_CTX*, security_descriptor**)'    {spoolss_create_default_secdesc@@SAMBA_4.14.12}\n  [D] 'function bool spoolss_driver_version_to_qword(const char*, uint64_t*)'    {spoolss_driver_version_to_qword@@SAMBA_4.14.12}\n  [D] 'function const char* spoolss_get_short_filesys_environment(const char*)'    {spoolss_get_short_filesys_environment@@SAMBA_4.14.12}\n  [D] 'function WERROR spoolss_init_spoolss_UserLevel1(TALLOC_CTX*, const char*, spoolss_UserLevel1*)'    {spoolss_init_spoolss_UserLevel1@@SAMBA_4.14.12}\n  [D] 'function void spoolss_printerinfo2_to_setprinterinfo2(const spoolss_PrinterInfo2*, spoolss_SetPrinterInfo2*)'    {spoolss_printerinfo2_to_setprinterinfo2@@SAMBA_4.14.12}\n  [D] 'function bool spoolss_timestr_to_NTTIME(const char*, NTTIME*)'    {spoolss_timestr_to_NTTIME@@SAMBA_4.14.12}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.05055880546569824,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-spoolss-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-spoolss-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-spoolss-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-spoolss-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-spoolss-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-spoolss-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-spoolss-samba4.so-abi-laboratory-libcli-spoolss-samba4-so-libcli-spoolss-samba4-so.html\nFound link to libcli-spoolss-samba4.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libcli-spoolss-samba4.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 9222\nERROR: incomplete info for symbol 9308\nERROR: incomplete info for symbol 9389\nERROR: incomplete info for symbol 9719\nERROR: incomplete info for symbol 9922\nERROR: incomplete info for symbol 10051\nERROR: incomplete info for symbol 10180\nERROR: incomplete info for symbol 10214\nERROR: incomplete info for symbol 10320\nERROR: incomplete info for symbol 10555\nERROR: incomplete info for symbol 11514\nERROR: incomplete info for symbol 11646\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-RcViP.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcli-spoolss-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcli-spoolss-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 9391\nERROR: incomplete info for symbol 9489\nERROR: incomplete info for symbol 9570\nERROR: incomplete info for symbol 9835\nERROR: incomplete info for symbol 10037\nERROR: incomplete info for symbol 10166\nERROR: incomplete info for symbol 10295\nERROR: incomplete info for symbol 10328\nERROR: incomplete info for symbol 10434\nERROR: incomplete info for symbol 10669\nERROR: incomplete info for symbol 11643\nERROR: incomplete info for symbol 11775\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-jypwK.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 41.4%\nTotal binary compatibility problems: 29, warnings: 0\nTotal source compatibility problems: 5, warnings: 21\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-spoolss-samba4.so-abi-laboratory-libcli-spoolss-samba4-so-libcli-spoolss-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 12.906957864761353,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-spoolss-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-spoolss-samba4.so libcli-spoolss-samba4-so-libcli-spoolss-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-spoolss-samba4.so-abi-laboratory-libcli-spoolss-samba4-so-libcli-spoolss-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-spoolss-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-spoolss-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-spoolss-samba4.so": 28384,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-spoolss-samba4.so": 32832
+            }
+        },
+        "experiment": "usr/lib64/samba/libcli-spoolss-samba4-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-spoolss-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-spoolss-samba4.so",
+        "different_libs": true
+    }
+]
