@@ -1,0 +1,86 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingVtkJS.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingVtkJS.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkRenderingVtkJS.so.9.0.3",
+                    "spliced_lib": "libvtkRenderingVtkJS.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "_ZN4Json17ValueIteratorBase5derefEv",
+                        "_ZNSt6vectorISt4pairIjP13vtkDataObjectESaIS3_EE17_M_realloc_insertIJS3_EEEvN9__gnu_cxx17__normal_iteratorIPS3_S5_EEDpOT_",
+                        "_ZN21vtkViewNodeCollection11GetNextItemEv",
+                        "printf",
+                        "_ZN11vtkViewNode11SetChildrenEP21vtkViewNodeCollection",
+                        "abort",
+                        "_ZNSt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEP12vtkDataArrayESaIS9_EE17_M_realloc_insertIJS9_EEEvN9__gnu_cxx17__normal_iteratorIPS9_SB_EEDpOT_"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00012731552124023438
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkRenderingVtkJS.so.9.0.3",
+                    "spliced_lib": "libvtkRenderingVtkJS.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZNSt6vectorISt4pairIjP13vtkDataObjectESaIS3_EE17_M_realloc_insertIJS3_EEEvN9__gnu_cxx17__normal_iteratorIPS3_S5_EEDpOT_",
+                        "_ZNSt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEP12vtkDataArrayESaIS9_EE17_M_realloc_insertIJS9_EEEvN9__gnu_cxx17__normal_iteratorIPS9_SB_EEDpOT_"
+                    ],
+                    "prediction": false,
+                    "seconds": 4.673004150390625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed (2 filtered out), 2 Changed (54 filtered out), 0 Added (2 filtered out) functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 functions with some indirect sub-type change:\n\n  [C] 'method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkRenderer*)' at vtkVtkJSSceneGraphSerializer.cxx:529:1 has some indirect sub-type changes:\n    the vtable offset of method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkRenderer*) changed from 26 to 25\n      note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n    implicit parameter 0 of type 'vtkVtkJSSceneGraphSerializer*' has sub-type changes:\n      in pointed to type 'class vtkVtkJSSceneGraphSerializer' at vtkVtkJSSceneGraphSerializer.h:68:1:\n        type size hasn't changed\n        23 member function changes (8 filtered):\n          'method virtual vtkObjectBase* vtkVtkJSSceneGraphSerializer::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkVtkJSSceneGraphSerializer::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkActor*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkActor*) changed from 21 to 20\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkCompositePolyDataMapper*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkCompositePolyDataMapper*) changed from 22 to 21\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkCompositePolyDataMapper2*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkCompositePolyDataMapper2*) changed from 23 to 22\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkGlyph3DMapper*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkGlyph3DMapper*) changed from 24 to 23\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkMapper*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkMapper*) changed from 25 to 24\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkRenderWindow*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkVtkJSSceneGraphSerializer::Add(vtkViewNode*, vtkRenderWindow*) changed from 27 to 26\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(vtkDataArray*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(vtkDataArray*) changed from 28 to 27\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkAlgorithm*, vtkDataObject*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkAlgorithm*, vtkDataObject*) changed from 29 to 28\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkActor*, bool)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkActor*, bool) changed from 30 to 29\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, Json::ArrayIndex, vtkGlyph3DMapper*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, Json::ArrayIndex, vtkGlyph3DMapper*) changed from 31 to 30\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkCamera*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkCamera*) changed from 32 to 31\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkAlgorithm*, vtkImageData*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkAlgorithm*, vtkImageData*) changed from 33 to 32\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkLight*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkLight*) changed from 34 to 33\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkLookupTable*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkLookupTable*) changed from 35 to 34\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, Json::ArrayIndex, vtkMapper*, bool)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, Json::ArrayIndex, vtkMapper*, bool) changed from 36 to 35\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkRenderer*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkRenderer*) changed from 37 to 36\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkAlgorithm*, vtkPolyData*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkAlgorithm*, vtkPolyData*) changed from 38 to 37\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkProperty*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkProperty*) changed from 39 to 38\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkTexture*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkTexture*) changed from 40 to 39\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkTransform*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(Json::Value&, vtkTransform*) changed from 41 to 40\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(vtkRenderWindow*)' has some sub-type changes:\n            the vtable offset of method virtual Json::Value vtkVtkJSSceneGraphSerializer::ToJson(vtkRenderWindow*) changed from 42 to 41\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n          'method virtual void vtkVtkJSSceneGraphSerializer::Add(Json::Value*, vtkAlgorithm*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkVtkJSSceneGraphSerializer::Add(Json::Value*, vtkAlgorithm*) changed from 43 to 42\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSSceneGraphSerializer\n        no data member change (1 filtered);\n\n  [C] 'method vtkVtkJSViewNodeFactory* vtkVtkJSViewNodeFactory::New()' at vtkVtkJSViewNodeFactory.cxx:97:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'class vtkVtkJSViewNodeFactory' at vtkVtkJSViewNodeFactory.h:39:1:\n        type size hasn't changed\n        2 member function changes (7 filtered):\n          'method virtual vtkObjectBase* vtkVtkJSViewNodeFactory::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkVtkJSViewNodeFactory::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSViewNodeFactory\n          'method virtual vtkVtkJSSceneGraphSerializer* vtkVtkJSViewNodeFactory::GetSerializer()' has some sub-type changes:\n            the vtable offset of method virtual vtkVtkJSSceneGraphSerializer* vtkVtkJSViewNodeFactory::GetSerializer() changed from 21 to 20\n              note that this is an ABI incompatible change to the vtable of class vtkVtkJSViewNodeFactory\n        no data member change (1 filtered);\n\n",
+                    "return_code": 12,
+                    "seconds": 23.545505046844482,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingVtkJS.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingVtkJS.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingVtkJS.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingVtkJS.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingVtkJS.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingVtkJS.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingVtkJS.so.9.0.3-abi-laboratory-libvtkRenderingVtkJS-so-9-0-3-libvtkRenderingVtkJS-so-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2564847469329834,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingVtkJS.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingVtkJS.so.9.1.0 libvtkRenderingVtkJS-so-9-0-3-libvtkRenderingVtkJS-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingVtkJS.so.9.0.3-abi-laboratory-libvtkRenderingVtkJS-so-9-0-3-libvtkRenderingVtkJS-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingVtkJS.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingVtkJS.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingVtkJS.so.9.0.3": 145544,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingVtkJS.so.9.1.0": 146168
+            }
+        },
+        "experiment": "usr/lib64/libvtkRenderingVtkJS-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingVtkJS.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingVtkJS.so.9.0.3",
+        "different_libs": true
+    }
+]

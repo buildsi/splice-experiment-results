@@ -1,0 +1,81 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr.so.1.0.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr.so.3.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libndr.so.1.0.1",
+                    "spliced_lib": "libndr.so.3.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "read_hex_bytes",
+                        "talloc_named_const",
+                        "ndr_check_array_length"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0001049041748046875
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libndr.so.1.0.1",
+                    "spliced_lib": "libndr.so.3.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "ndr_check_array_length"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0005354881286621094
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 1 Removed, 4 Changed, 6 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\nSONAME changed from 'libndr.so.1' to 'libndr.so.3'\n\n1 Removed function:\n\n  [D] 'function ndr_err_code ndr_check_array_length(ndr_pull*, void*, uint32_t)'    {ndr_check_array_length@@NDR_0.0.1}\n\n6 Added functions:\n\n  [A] 'function ndr_err_code ndr_check_steal_array_length(ndr_pull*, void*, uint32_t)'    {ndr_check_steal_array_length@@NDR_2.0.0}\n  [A] 'function ndr_err_code ndr_check_steal_array_size(ndr_pull*, void*, uint32_t)'    {ndr_check_steal_array_size@@NDR_2.0.0}\n  [A] 'function ndr_err_code ndr_steal_array_length(ndr_pull*, void*, uint32_t*)'    {ndr_steal_array_length@@NDR_2.0.0}\n  [A] 'function ndr_err_code ndr_steal_array_size(ndr_pull*, void*, uint32_t*)'    {ndr_steal_array_size@@NDR_2.0.0}\n  [A] 'function char* ndr_syntax_id_buf_string(const ndr_syntax_id*, ndr_syntax_id_buf*)'    {ndr_syntax_id_buf_string@@NDR_1.0.2}\n  [A] 'function size_t ndr_token_max_list_size()'    {ndr_token_max_list_size@@NDR_2.0.0}\n\n4 functions with some indirect sub-type change:\n\n  [C] 'function uint32_t ndr_get_array_length(ndr_pull*, void*)' at ndr.c:1172:1 has some indirect sub-type changes:\n    parameter 3 of type 'uint32_t*' was added\n\n  [C] 'function uint32_t ndr_get_array_size(ndr_pull*, void*)' at ndr.c:1101:1 has some indirect sub-type changes:\n    parameter 3 of type 'uint32_t*' was added\n\n  [C] 'function void ndr_print_debug(ndr_print_fn_t, const char*, void*)' at ndr.c:431:1 has some indirect sub-type changes:\n    return type changed:\n      type name changed from 'void' to 'bool'\n      type size changed from 0 to 8 (in bits)\n    parameter 1 of type 'typedef ndr_print_fn_t' changed:\n      entity changed from 'typedef ndr_print_fn_t' to 'int'\n      type size changed from 64 to 32 (in bits)\n    parameter 2 of type 'const char*' changed:\n      entity changed from 'const char*' to compatible type 'typedef ndr_print_fn_t' at libndr.h:487:1\n        in pointed to type 'const char':\n          entity changed from 'const char' to 'function type void (ndr_print*, const char*, void*)'\n          type size changed from 8 to 64 (in bits)\n    parameter 4 of type 'void*' was added\n    parameter 5 of type 'const char*' was added\n    parameter 6 of type 'const char*' was added\n\n  [C] 'function uint32_t ndr_token_peek(ndr_token_list*, void*)' at ndr.c:1075:1 has some indirect sub-type changes:\n    parameter 3 of type 'uint32_t*' was added\n\n",
+                    "return_code": 12,
+                    "seconds": 0.07523775100708008,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr.so.1.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr.so.3.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr.so.3.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr.so.1.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr.so.1.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr.so.3.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr.so.1.0.1-abi-laboratory-libndr-so-1-0-1-libndr-so-3-0-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.1855640411376953,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr.so.1.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr.so.3.0.0 libndr-so-1-0-1-libndr-so-3-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr.so.1.0.1-abi-laboratory-libndr-so-1-0-1-libndr-so-3-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr.so.3.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr.so.1.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr.so.1.0.1": 120688,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr.so.3.0.0": 125320
+            }
+        },
+        "experiment": "usr/lib64/libndr-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr.so.3.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr.so.1.0.1",
+        "different_libs": true
+    }
+]

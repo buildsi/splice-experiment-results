@@ -1,0 +1,79 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmtdev.so.1.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmtdev.so.1.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmtdev.so.1.0.0",
+                    "spliced_lib": "libmtdev.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "mtdev_set_slots"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.552436828613281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmtdev.so.1.0.0",
+                    "spliced_lib": "libmtdev.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "mtdev_set_slots"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.621246337890625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 1 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function int mtdev_set_slots(mtdev*, int)'    {mtdev_set_slots}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.01729559898376465,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmtdev.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmtdev.so.1.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmtdev.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmtdev.so.1.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmtdev.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmtdev.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmtdev.so.1.0.0-abi-laboratory-libmtdev-so-1-0-0-libmtdev-so-1-0-0.html\nFound link to libmtdev.so.1.0.0-1.1.5-20.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libmtdev.so.1.0.0-1.1.5-20.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/mtdev-1.1.5-20.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 8311\nERROR: incomplete info for symbol 8445\nERROR: incomplete info for symbol 8604\nERROR: incomplete info for symbol 8739\nERROR: incomplete info for symbol 8790\nERROR: incomplete info for symbol 8883\nERROR: incomplete info for symbol 8954\nERROR: incomplete info for symbol 9148\nERROR: incomplete info for symbol 9501\nERROR: incomplete info for symbol 9568\nERROR: incomplete info for symbol 9655\nERROR: incomplete info for symbol 11790\nERROR: incomplete info for symbol 12230\nERROR: incomplete info for symbol 12452\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-7sKfN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libmtdev.so.1.0.0-1.1.6-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libmtdev.so.1.0.0-1.1.6-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/mtdev-1.1.6-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 8384\nERROR: incomplete info for symbol 8518\nERROR: incomplete info for symbol 8677\nERROR: incomplete info for symbol 8812\nERROR: incomplete info for symbol 8863\nERROR: incomplete info for symbol 8963\nERROR: incomplete info for symbol 9034\nERROR: incomplete info for symbol 9228\nERROR: incomplete info for symbol 9581\nERROR: incomplete info for symbol 9648\nERROR: incomplete info for symbol 9735\nERROR: incomplete info for symbol 11847\nERROR: incomplete info for symbol 12291\nERROR: incomplete info for symbol 12513\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-53ENl.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 96.3%\nSource compatibility: 96.3%\nTotal binary compatibility problems: 1, warnings: 0\nTotal source compatibility problems: 1, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmtdev.so.1.0.0-abi-laboratory-libmtdev-so-1-0-0-libmtdev-so-1-0-0.html\n",
+                    "return_code": 1,
+                    "seconds": 0.47718071937561035,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmtdev.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmtdev.so.1.0.0 libmtdev-so-1-0-0-libmtdev-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmtdev.so.1.0.0-abi-laboratory-libmtdev-so-1-0-0-libmtdev-so-1-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmtdev.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmtdev.so.1.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmtdev.so.1.0.0": 24424,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmtdev.so.1.0.0": 24392
+            }
+        },
+        "experiment": "usr/lib64/libmtdev-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmtdev.so.1.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmtdev.so.1.0.0",
+        "different_libs": true
+    }
+]

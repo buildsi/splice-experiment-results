@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnghttp2.so.14.21.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnghttp2.so.14.21.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libnghttp2.so.14.21.0",
+                    "spliced_lib": "libnghttp2.so.14.21.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.841255187988281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libnghttp2.so.14.21.0",
+                    "spliced_lib": "libnghttp2.so.14.21.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0002048015594482422
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.08749532699584961,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnghttp2.so.14.21.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnghttp2.so.14.21.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnghttp2.so.14.21.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnghttp2.so.14.21.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnghttp2.so.14.21.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnghttp2.so.14.21.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnghttp2.so.14.21.0-abi-laboratory-libnghttp2-so-14-21-0-libnghttp2-so-14-21-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19766950607299805,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnghttp2.so.14.21.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnghttp2.so.14.21.1 libnghttp2-so-14-21-0-libnghttp2-so-14-21-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnghttp2.so.14.21.0-abi-laboratory-libnghttp2-so-14-21-0-libnghttp2-so-14-21-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnghttp2.so.14.21.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnghttp2.so.14.21.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnghttp2.so.14.21.0": 161248,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnghttp2.so.14.21.1": 161352
+            }
+        },
+        "experiment": "usr/lib64/libnghttp2-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnghttp2.so.14.21.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnghttp2.so.14.21.0",
+        "different_libs": true
+    }
+]

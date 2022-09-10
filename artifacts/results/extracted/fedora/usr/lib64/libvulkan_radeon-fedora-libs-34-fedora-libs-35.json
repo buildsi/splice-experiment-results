@@ -1,0 +1,84 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvulkan_radeon.so",
+                    "spliced_lib": "libvulkan_radeon.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "wl_proxy_marshal_constructor_versioned",
+                        "wl_proxy_marshal_constructor",
+                        "_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l",
+                        "_ZSt4cerr",
+                        "_ZN4llvm11raw_ostream5writeEPKcm",
+                        "_ZN4llvm9WithColor7warningEv",
+                        "LLVMGetAlignment",
+                        "wl_proxy_marshal"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0001735687255859375
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvulkan_radeon.so",
+                    "spliced_lib": "libvulkan_radeon.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.059906005859375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 17.005971908569336,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so-abi-laboratory-libvulkan_radeon-so-libvulkan_radeon-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.23568081855773926,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so libvulkan_radeon-so-libvulkan_radeon-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so-abi-laboratory-libvulkan_radeon-so-libvulkan_radeon-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so": 7987256,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so": 8848080
+            }
+        },
+        "experiment": "usr/lib64/libvulkan_radeon-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so",
+        "different_libs": true
+    }
+]

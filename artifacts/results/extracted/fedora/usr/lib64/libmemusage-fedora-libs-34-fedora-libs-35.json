@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmemusage.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmemusage.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmemusage.so",
+                    "spliced_lib": "libmemusage.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.267692565917969e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmemusage.so",
+                    "spliced_lib": "libmemusage.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.867813110351562e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.03366804122924805,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmemusage.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmemusage.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmemusage.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmemusage.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmemusage.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmemusage.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmemusage.so-abi-laboratory-libmemusage-so-libmemusage-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.1996595859527588,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmemusage.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmemusage.so libmemusage-so-libmemusage-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmemusage.so-abi-laboratory-libmemusage-so-libmemusage-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmemusage.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmemusage.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmemusage.so": 20400,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmemusage.so": 20624
+            }
+        },
+        "experiment": "usr/lib64/libmemusage-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmemusage.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmemusage.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxdg-shell.so",
+                    "spliced_lib": "libxdg-shell.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.128715515136719e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxdg-shell.so",
+                    "spliced_lib": "libxdg-shell.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001087188720703125
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 1.3765254020690918,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so-abi-laboratory-libxdg-shell-so-libxdg-shell-so.html\nFound link to libxdg-shell.so-5.15.2-22.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libxdg-shell.so-5.15.2-22.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/wayland-shell-integration/../../../../../.dwz/qt5-qtwayland-5.15.2-22.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2002\nERROR: incomplete info for symbol 2035\nERROR: incomplete info for symbol 2491\nERROR: incomplete info for symbol 2745\nERROR: incomplete info for symbol 2896\nERROR: incomplete info for symbol 2970\nERROR: incomplete info for symbol 3121\nERROR: incomplete info for symbol 3196\nERROR: incomplete info for symbol 3467\nERROR: incomplete info for symbol 3542\nERROR: incomplete info for symbol 3828\nERROR: incomplete info for symbol 3903\nERROR: incomplete info for symbol 4351\nERROR: incomplete info for symbol 4703\nERROR: incomplete info for symbol 4901\nERROR: incomplete info for symbol 8088\nERROR: incomplete info for symbol 8142\nERROR: incomplete info for symbol 8196\nERROR: incomplete info for symbol 8651\nERROR: incomplete info for symbol 8726\nERROR: incomplete info for symbol 9485\nERROR: incomplete info for symbol 10363\nERROR: incomplete info for symbol 11241\nERROR: incomplete info for symbol 11425\nERROR: incomplete info for symbol 12420\nERROR: incomplete info for symbol 12791\nERROR: incomplete info for symbol 13380\nERROR: incomplete info for symbol 13794\nERROR: incomplete info for symbol 14285\nERROR: incomplete info for symbol 14485\nERROR: incomplete info for symbol 14762\nERROR: incomplete info for symbol 14979\nERROR: incomplete info for symbol 15151\nERROR: incomplete info for symbol 15177\nERROR: incomplete info for symbol 15203\nERROR: incomplete info for symbol 18794\nERROR: incomplete info for symbol 19003\nERROR: incomplete info for symbol 19270\nERROR: incomplete info for symbol 19313\nERROR: incomplete info for symbol 19632\nERROR: incomplete info for symbol 19688\nERROR: incomplete info for symbol 21930\nERROR: incomplete info for symbol 23277\nERROR: incomplete info for symbol 24665\nERROR: incomplete info for symbol 25422\nERROR: incomplete info for symbol 25876\nERROR: incomplete info for symbol 26426\nERROR: incomplete info for symbol 26757\nERROR: incomplete info for symbol 27463\nERROR: incomplete info for symbol 27531\nERROR: incomplete info for symbol 27605\nERROR: incomplete info for symbol 29533\nERROR: incomplete info for symbol 36149\nERROR: incomplete info for symbol 37141\nERROR: incomplete info for symbol 37864\nERROR: incomplete info for symbol 45546\nERROR: incomplete info for symbol 45862\nERROR: incomplete info for symbol 46194\nERROR: incomplete info for symbol 46385\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-rrReU.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libxdg-shell.so-5.15.5-4.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libxdg-shell.so-5.15.5-4.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/wayland-shell-integration/../../../../../.dwz/qt5-qtwayland-5.15.5-4.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 1979\nERROR: incomplete info for symbol 2012\nERROR: incomplete info for symbol 2468\nERROR: incomplete info for symbol 2722\nERROR: incomplete info for symbol 2873\nERROR: incomplete info for symbol 2947\nERROR: incomplete info for symbol 3098\nERROR: incomplete info for symbol 3173\nERROR: incomplete info for symbol 3449\nERROR: incomplete info for symbol 3524\nERROR: incomplete info for symbol 3805\nERROR: incomplete info for symbol 3880\nERROR: incomplete info for symbol 4323\nERROR: incomplete info for symbol 4675\nERROR: incomplete info for symbol 4873\nERROR: incomplete info for symbol 8060\nERROR: incomplete info for symbol 8114\nERROR: incomplete info for symbol 8168\nERROR: incomplete info for symbol 8623\nERROR: incomplete info for symbol 8698\nERROR: incomplete info for symbol 9446\nERROR: incomplete info for symbol 10324\nERROR: incomplete info for symbol 11202\nERROR: incomplete info for symbol 11331\nERROR: incomplete info for symbol 12287\nERROR: incomplete info for symbol 12663\nERROR: incomplete info for symbol 13252\nERROR: incomplete info for symbol 13666\nERROR: incomplete info for symbol 14157\nERROR: incomplete info for symbol 14357\nERROR: incomplete info for symbol 14615\nERROR: incomplete info for symbol 14827\nERROR: incomplete info for symbol 14994\nERROR: incomplete info for symbol 15020\nERROR: incomplete info for symbol 15046\nERROR: incomplete info for symbol 18606\nERROR: incomplete info for symbol 18815\nERROR: incomplete info for symbol 19082\nERROR: incomplete info for symbol 19125\nERROR: incomplete info for symbol 19444\nERROR: incomplete info for symbol 19500\nERROR: incomplete info for symbol 21717\nERROR: incomplete info for symbol 23059\nERROR: incomplete info for symbol 24447\nERROR: incomplete info for symbol 25204\nERROR: incomplete info for symbol 25644\nERROR: incomplete info for symbol 26189\nERROR: incomplete info for symbol 26515\nERROR: incomplete info for symbol 27283\nERROR: incomplete info for symbol 27351\nERROR: incomplete info for symbol 27425\nERROR: incomplete info for symbol 30896\nERROR: incomplete info for symbol 37512\nERROR: incomplete info for symbol 38499\nERROR: incomplete info for symbol 39222\nERROR: incomplete info for symbol 46904\nERROR: incomplete info for symbol 47208\nERROR: incomplete info for symbol 47540\nERROR: incomplete info for symbol 47731\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-hoiOS.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so-abi-laboratory-libxdg-shell-so-libxdg-shell-so.html\n",
+                    "return_code": 0,
+                    "seconds": 24.105376958847046,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so libxdg-shell-so-libxdg-shell-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so-abi-laboratory-libxdg-shell-so-libxdg-shell-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so": 66328,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so": 70616
+            }
+        },
+        "experiment": "usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libxdg-shell.so",
+        "different_libs": true
+    }
+]

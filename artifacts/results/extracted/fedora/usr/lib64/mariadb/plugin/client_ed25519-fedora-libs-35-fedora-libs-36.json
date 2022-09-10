@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/client_ed25519.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/client_ed25519.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "client_ed25519.so",
+                    "spliced_lib": "client_ed25519.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.409385681152344e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "client_ed25519.so",
+                    "spliced_lib": "client_ed25519.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.765655517578125e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.04558277130126953,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/client_ed25519.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/client_ed25519.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/client_ed25519.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/client_ed25519.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/client_ed25519.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/client_ed25519.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/client_ed25519.so-abi-laboratory-client_ed25519-so-client_ed25519-so.html\nFound link to client_ed25519.so-3.2.7-1.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file client_ed25519.so-3.2.7-1.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/mariadb/plugin/../../../../.dwz/mariadb-connector-c-3.2.7-1.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2331\nERROR: incomplete info for symbol 2357\nERROR: incomplete info for symbol 2799\nERROR: incomplete info for symbol 2825\nERROR: incomplete info for symbol 3128\nERROR: incomplete info for symbol 3208\nERROR: incomplete info for symbol 6385\nERROR: incomplete info for symbol 6833\nERROR: incomplete info for symbol 8894\nERROR: incomplete info for symbol 9042\nERROR: incomplete info for symbol 9221\nERROR: incomplete info for symbol 9660\nERROR: incomplete info for symbol 9753\nERROR: incomplete info for symbol 9846\nERROR: incomplete info for symbol 11770\nERROR: incomplete info for symbol 12219\nERROR: incomplete info for symbol 12518\nERROR: incomplete info for symbol 12681\nERROR: incomplete info for symbol 12861\nERROR: incomplete info for symbol 15663\nERROR: incomplete info for symbol 15777\nERROR: incomplete info for symbol 16216\nERROR: incomplete info for symbol 16269\nERROR: incomplete info for symbol 16382\nERROR: incomplete info for symbol 17118\nERROR: incomplete info for symbol 18408\nERROR: incomplete info for symbol 18813\nERROR: incomplete info for symbol 20067\nERROR: incomplete info for symbol 20400\nERROR: incomplete info for symbol 20520\nERROR: incomplete info for symbol 21026\nERROR: incomplete info for symbol 21997\nERROR: incomplete info for symbol 22795\nERROR: incomplete info for symbol 23775\nERROR: incomplete info for symbol 23998\nERROR: incomplete info for symbol 24403\nERROR: incomplete info for symbol 25741\nERROR: incomplete info for symbol 26477\nERROR: incomplete info for symbol 27020\nERROR: incomplete info for symbol 28284\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-5e9wO.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to client_ed25519.so-3.2.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file client_ed25519.so-3.2.7-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/mariadb/plugin/../../../../.dwz/mariadb-connector-c-3.2.7-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2331\nERROR: incomplete info for symbol 2357\nERROR: incomplete info for symbol 2787\nERROR: incomplete info for symbol 2813\nERROR: incomplete info for symbol 3116\nERROR: incomplete info for symbol 3196\nERROR: incomplete info for symbol 6389\nERROR: incomplete info for symbol 6819\nERROR: incomplete info for symbol 8880\nERROR: incomplete info for symbol 9028\nERROR: incomplete info for symbol 9207\nERROR: incomplete info for symbol 9646\nERROR: incomplete info for symbol 9739\nERROR: incomplete info for symbol 9832\nERROR: incomplete info for symbol 11716\nERROR: incomplete info for symbol 12152\nERROR: incomplete info for symbol 12445\nERROR: incomplete info for symbol 12608\nERROR: incomplete info for symbol 12788\nERROR: incomplete info for symbol 15588\nERROR: incomplete info for symbol 15702\nERROR: incomplete info for symbol 16141\nERROR: incomplete info for symbol 16194\nERROR: incomplete info for symbol 16307\nERROR: incomplete info for symbol 17043\nERROR: incomplete info for symbol 18355\nERROR: incomplete info for symbol 18764\nERROR: incomplete info for symbol 20076\nERROR: incomplete info for symbol 20409\nERROR: incomplete info for symbol 20529\nERROR: incomplete info for symbol 21035\nERROR: incomplete info for symbol 22006\nERROR: incomplete info for symbol 22804\nERROR: incomplete info for symbol 23784\nERROR: incomplete info for symbol 24010\nERROR: incomplete info for symbol 24419\nERROR: incomplete info for symbol 25754\nERROR: incomplete info for symbol 26500\nERROR: incomplete info for symbol 27107\nERROR: incomplete info for symbol 28371\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-qdbDx.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/client_ed25519.so-abi-laboratory-client_ed25519-so-client_ed25519-so.html\n",
+                    "return_code": 0,
+                    "seconds": 1.9220025539398193,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/client_ed25519.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/client_ed25519.so client_ed25519-so-client_ed25519-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/client_ed25519.so-abi-laboratory-client_ed25519-so-client_ed25519-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/client_ed25519.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/client_ed25519.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/client_ed25519.so": 80512,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/client_ed25519.so": 80720
+            }
+        },
+        "experiment": "usr/lib64/mariadb/plugin/client_ed25519-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/client_ed25519.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/client_ed25519.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/dialog.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/dialog.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "dialog.so",
+                    "spliced_lib": "dialog.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.170967102050781e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "dialog.so",
+                    "spliced_lib": "dialog.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.821487426757812e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 1 Changed (1 filtered out), 0 Added variables\n\n1 Changed variable:\n\n  [C] 'st_mysql_client_plugin_AUTHENTICATION _mysql_client_plugin_declaration_' was changed at dialog.c:47:1:\n    type of variable changed:\n      type size hasn't changed\n      1 data member change:\n        type of 'int (MYSQL_PLUGIN_VIO*, st_mysql*)* authenticate_user' changed:\n          in pointed to type 'function type int (MYSQL_PLUGIN_VIO*, st_mysql*)':\n            parameter 2 of type 'st_mysql*' has sub-type changes:\n              in pointed to type 'struct st_mysql' at mysql.h:337:1:\n                type size hasn't changed\n                1 data member changes (2 filtered):\n                  type of 'const st_mariadb_methods* methods' changed:\n                    in pointed to type 'const st_mariadb_methods':\n                      in unqualified underlying type 'struct st_mariadb_methods' at mysql.h:853:1:\n                        type size changed from 1216 to 1344 (in bits)\n                        2 data member insertions:\n                          'int (MYSQL_STMT*)* db_read_execute_response', at offset 1216 (in bits) at mysql.h:876:1\n                          'unsigned char* (MYSQL_STMT*, size_t*, typedef my_bool)* db_execute_generate_request', at offset 1280 (in bits) at mysql.h:877:1\n                        1 data member changes (17 filtered):\n                          type of 'st_mariadb_api* api' changed:\n                            in pointed to type 'struct st_mariadb_api' at mysql.h:734:1:\n                              type size hasn't changed\n                              1 data member changes (102 filtered):\n                                type of 'int (MYSQL_STMT*, const char*, typedef size_t)* mariadb_stmt_execute_direct' changed:\n                                  in pointed to type 'function type int (MYSQL_STMT*, const char*, typedef size_t)':\n                                    parameter 1 of type 'MYSQL_STMT*' has sub-type changes:\n                                      in pointed to type 'typedef MYSQL_STMT' at mariadb_stmt.h:58:1:\n                                        underlying type 'struct st_mysql_stmt' at mariadb_stmt.h:208:1 changed:\n                                          type size changed from 7360 to 7424 (in bits)\n                                          1 data member insertion:\n                                            'size_t request_length', at offset 7360 (in bits) at mariadb_stmt.h:209:1\n                                          1 data member changes (6 filtered):\n                                            type of 'st_mysqlnd_stmt_methods* m' changed:\n                                              in pointed to type 'struct st_mysqlnd_stmt_methods':\n                                                entity changed from 'struct st_mysqlnd_stmt_methods' to 'unsigned char'\n                                                type size changed from 1856 to 8 (in bits)\n                                            and name of 'st_mysql_stmt::m' changed to 'st_mysql_stmt::request_buffer' at mariadb_stmt.h:202:1\n\n",
+                    "return_code": 4,
+                    "seconds": 0.07626652717590332,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/dialog.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/dialog.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/dialog.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/dialog.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/dialog.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/dialog.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/dialog.so-abi-laboratory-dialog-so-dialog-so.html\nFound link to dialog.so-3.1.13-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file dialog.so-3.1.13-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/mariadb/plugin/../../../../.dwz/mariadb-connector-c-3.1.13-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 557\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-t9oug.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to dialog.so-3.2.7-1.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file dialog.so-3.2.7-1.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/mariadb/plugin/../../../../.dwz/mariadb-connector-c-3.2.7-1.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 557\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-0Z9pR.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 33.3%\nTotal binary compatibility problems: 0, warnings: 8\nTotal source compatibility problems: 1, warnings: 4\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/dialog.so-abi-laboratory-dialog-so-dialog-so.html\n",
+                    "return_code": 1,
+                    "seconds": 1.8244144916534424,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/dialog.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/dialog.so dialog-so-dialog-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/dialog.so-abi-laboratory-dialog-so-dialog-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/dialog.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/dialog.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/dialog.so": 16056,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/dialog.so": 15944
+            }
+        },
+        "experiment": "usr/lib64/mariadb/plugin/dialog-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/mariadb/plugin/dialog.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/mariadb/plugin/dialog.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdevdlgplugin.so",
+                    "spliced_lib": "libkdevdlgplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.269050598144531e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libkdevdlgplugin.so",
+                    "spliced_lib": "libkdevdlgplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.62396240234375e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.3410816192626953,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so-abi-laboratory-libkdevdlgplugin-so-libkdevdlgplugin-so.html\nFound link to libkdevdlgplugin.so-3.3.8b-86.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdevdlgplugin.so-3.3.8b-86.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt-3.3/plugins/designer/../../../../../.dwz/qt3-3.3.8b-86.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6679\nERROR: incomplete info for symbol 6757\nERROR: incomplete info for symbol 6783\nERROR: incomplete info for symbol 6809\nERROR: incomplete info for symbol 7010\nERROR: incomplete info for symbol 7201\nERROR: incomplete info for symbol 7337\nERROR: incomplete info for symbol 7947\nERROR: incomplete info for symbol 8557\nERROR: incomplete info for symbol 9922\nERROR: incomplete info for symbol 10890\nERROR: incomplete info for symbol 11528\nERROR: incomplete info for symbol 12138\nERROR: incomplete info for symbol 12748\nERROR: incomplete info for symbol 13358\nERROR: incomplete info for symbol 13693\nERROR: incomplete info for symbol 14028\nERROR: incomplete info for symbol 22410\nERROR: incomplete info for symbol 71699\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-OTsvN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkdevdlgplugin.so-3.3.8b-88.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdevdlgplugin.so-3.3.8b-88.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt-3.3/plugins/designer/../../../../../.dwz/qt3-3.3.8b-88.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6644\nERROR: incomplete info for symbol 6722\nERROR: incomplete info for symbol 6748\nERROR: incomplete info for symbol 6774\nERROR: incomplete info for symbol 6975\nERROR: incomplete info for symbol 7166\nERROR: incomplete info for symbol 7302\nERROR: incomplete info for symbol 7912\nERROR: incomplete info for symbol 8522\nERROR: incomplete info for symbol 9887\nERROR: incomplete info for symbol 10855\nERROR: incomplete info for symbol 11493\nERROR: incomplete info for symbol 12103\nERROR: incomplete info for symbol 12713\nERROR: incomplete info for symbol 13323\nERROR: incomplete info for symbol 13658\nERROR: incomplete info for symbol 13993\nERROR: incomplete info for symbol 22375\nERROR: incomplete info for symbol 71666\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-5es6B.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so-abi-laboratory-libkdevdlgplugin-so-libkdevdlgplugin-so.html\n",
+                    "return_code": 0,
+                    "seconds": 14.120525360107422,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so libkdevdlgplugin-so-libkdevdlgplugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so-abi-laboratory-libkdevdlgplugin-so-libkdevdlgplugin-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so": 65768,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so": 65664
+            }
+        },
+        "experiment": "usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libkdevdlgplugin.so",
+        "different_libs": true
+    }
+]

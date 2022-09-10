@@ -1,0 +1,79 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libivi-shell.so",
+                    "spliced_lib": "libivi-shell.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "wl_proxy_marshal",
+                        "wl_proxy_destroy",
+                        "wl_proxy_marshal_constructor"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.4836273193359375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libivi-shell.so",
+                    "spliced_lib": "libivi-shell.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.3126602172851562e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.9856069087982178,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so-abi-laboratory-libivi-shell-so-libivi-shell-so.html\nFound link to libivi-shell.so-5.15.2-19.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libivi-shell.so-5.15.2-19.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/wayland-shell-integration/../../../../../.dwz/qt5-qtwayland-5.15.2-19.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2761\nERROR: incomplete info for symbol 3207\nERROR: incomplete info for symbol 3282\nERROR: incomplete info for symbol 3425\nERROR: incomplete info for symbol 3560\nERROR: incomplete info for symbol 3643\nERROR: incomplete info for symbol 11975\nERROR: incomplete info for symbol 13217\nERROR: incomplete info for symbol 13492\nERROR: incomplete info for symbol 13897\nERROR: incomplete info for symbol 14459\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-jnr6R.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libivi-shell.so-5.15.5-4.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libivi-shell.so-5.15.5-4.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/wayland-shell-integration/../../../../../.dwz/qt5-qtwayland-5.15.5-4.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2738\nERROR: incomplete info for symbol 3209\nERROR: incomplete info for symbol 3284\nERROR: incomplete info for symbol 3427\nERROR: incomplete info for symbol 3562\nERROR: incomplete info for symbol 3645\nERROR: incomplete info for symbol 11984\nERROR: incomplete info for symbol 13224\nERROR: incomplete info for symbol 13494\nERROR: incomplete info for symbol 13899\nERROR: incomplete info for symbol 14466\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-TiO0f.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so-abi-laboratory-libivi-shell-so-libivi-shell-so.html\n",
+                    "return_code": 0,
+                    "seconds": 16.366461277008057,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so libivi-shell-so-libivi-shell-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so-abi-laboratory-libivi-shell-so-libivi-shell-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so": 49808,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so": 50400
+            }
+        },
+        "experiment": "usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libivi-shell.so",
+        "different_libs": true
+    }
+]

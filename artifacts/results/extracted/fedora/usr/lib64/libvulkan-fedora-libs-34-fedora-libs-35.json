@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan.so.1.2.189"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan.so.1.3.204"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvulkan.so.1.2.189",
+                    "spliced_lib": "libvulkan.so.1.3.204",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__tls_get_addr"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00010061264038085938
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvulkan.so.1.2.189",
+                    "spliced_lib": "libvulkan.so.1.3.204",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00047278404235839844
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (78 filtered out), 38 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n38 Added functions:\n\n  [A] 'function void vkCmdBeginRendering(VkCommandBuffer, const VkRenderingInfo*)'    {vkCmdBeginRendering}\n  [A] 'function void vkCmdBindVertexBuffers2(VkCommandBuffer, uint32_t, uint32_t, const VkBuffer*, const VkDeviceSize*, const VkDeviceSize*, const VkDeviceSize*)'    {vkCmdBindVertexBuffers2}\n  [A] 'function void vkCmdBlitImage2(VkCommandBuffer, const VkBlitImageInfo2*)'    {vkCmdBlitImage2}\n  [A] 'function void vkCmdCopyBuffer2(VkCommandBuffer, const VkCopyBufferInfo2*)'    {vkCmdCopyBuffer2}\n  [A] 'function void vkCmdCopyBufferToImage2(VkCommandBuffer, const VkCopyBufferToImageInfo2*)'    {vkCmdCopyBufferToImage2}\n  [A] 'function void vkCmdCopyImage2(VkCommandBuffer, const VkCopyImageInfo2*)'    {vkCmdCopyImage2}\n  [A] 'function void vkCmdCopyImageToBuffer2(VkCommandBuffer, const VkCopyImageToBufferInfo2*)'    {vkCmdCopyImageToBuffer2}\n  [A] 'function void vkCmdEndRendering(VkCommandBuffer)'    {vkCmdEndRendering}\n  [A] 'function void vkCmdPipelineBarrier2(VkCommandBuffer, const VkDependencyInfo*)'    {vkCmdPipelineBarrier2}\n  [A] 'function void vkCmdResetEvent2(VkCommandBuffer, VkEvent, VkPipelineStageFlags2)'    {vkCmdResetEvent2}\n  [A] 'function void vkCmdResolveImage2(VkCommandBuffer, const VkResolveImageInfo2*)'    {vkCmdResolveImage2}\n  [A] 'function void vkCmdSetCullMode(VkCommandBuffer, VkCullModeFlags)'    {vkCmdSetCullMode}\n  [A] 'function void vkCmdSetDepthBiasEnable(VkCommandBuffer, VkBool32)'    {vkCmdSetDepthBiasEnable}\n  [A] 'function void vkCmdSetDepthBoundsTestEnable(VkCommandBuffer, VkBool32)'    {vkCmdSetDepthBoundsTestEnable}\n  [A] 'function void vkCmdSetDepthCompareOp(VkCommandBuffer, VkCompareOp)'    {vkCmdSetDepthCompareOp}\n  [A] 'function void vkCmdSetDepthTestEnable(VkCommandBuffer, VkBool32)'    {vkCmdSetDepthTestEnable}\n  [A] 'function void vkCmdSetDepthWriteEnable(VkCommandBuffer, VkBool32)'    {vkCmdSetDepthWriteEnable}\n  [A] 'function void vkCmdSetEvent2(VkCommandBuffer, VkEvent, const VkDependencyInfo*)'    {vkCmdSetEvent2}\n  [A] 'function void vkCmdSetFrontFace(VkCommandBuffer, VkFrontFace)'    {vkCmdSetFrontFace}\n  [A] 'function void vkCmdSetPrimitiveRestartEnable(VkCommandBuffer, VkBool32)'    {vkCmdSetPrimitiveRestartEnable}\n  [A] 'function void vkCmdSetPrimitiveTopology(VkCommandBuffer, VkPrimitiveTopology)'    {vkCmdSetPrimitiveTopology}\n  [A] 'function void vkCmdSetRasterizerDiscardEnable(VkCommandBuffer, VkBool32)'    {vkCmdSetRasterizerDiscardEnable}\n  [A] 'function void vkCmdSetScissorWithCount(VkCommandBuffer, uint32_t, const VkRect2D*)'    {vkCmdSetScissorWithCount}\n  [A] 'function void vkCmdSetStencilOp(VkCommandBuffer, VkStencilFaceFlags, VkStencilOp, VkStencilOp, VkStencilOp, VkCompareOp)'    {vkCmdSetStencilOp}\n  [A] 'function void vkCmdSetStencilTestEnable(VkCommandBuffer, VkBool32)'    {vkCmdSetStencilTestEnable}\n  [A] 'function void vkCmdSetViewportWithCount(VkCommandBuffer, uint32_t, const VkViewport*)'    {vkCmdSetViewportWithCount}\n  [A] 'function void vkCmdWaitEvents2(VkCommandBuffer, uint32_t, const VkEvent*, const VkDependencyInfo*)'    {vkCmdWaitEvents2}\n  [A] 'function void vkCmdWriteTimestamp2(VkCommandBuffer, VkPipelineStageFlags2, VkQueryPool, uint32_t)'    {vkCmdWriteTimestamp2}\n  [A] 'function VkResult vkCreateHeadlessSurfaceEXT(VkInstance, const VkHeadlessSurfaceCreateInfoEXT*, const VkAllocationCallbacks*, VkSurfaceKHR*)'    {vkCreateHeadlessSurfaceEXT}\n  [A] 'function VkResult vkCreatePrivateDataSlot(VkDevice, const VkPrivateDataSlotCreateInfo*, const VkAllocationCallbacks*, VkPrivateDataSlot*)'    {vkCreatePrivateDataSlot}\n  [A] 'function void vkDestroyPrivateDataSlot(VkDevice, VkPrivateDataSlot, const VkAllocationCallbacks*)'    {vkDestroyPrivateDataSlot}\n  [A] 'function void vkGetDeviceBufferMemoryRequirements(VkDevice, const VkDeviceBufferMemoryRequirements*, VkMemoryRequirements2*)'    {vkGetDeviceBufferMemoryRequirements}\n  [A] 'function void vkGetDeviceImageMemoryRequirements(VkDevice, const VkDeviceImageMemoryRequirements*, VkMemoryRequirements2*)'    {vkGetDeviceImageMemoryRequirements}\n  [A] 'function void vkGetDeviceImageSparseMemoryRequirements(VkDevice, const VkDeviceImageMemoryRequirements*, uint32_t*, VkSparseImageMemoryRequirements2*)'    {vkGetDeviceImageSparseMemoryRequirements}\n  [A] 'function VkResult vkGetPhysicalDeviceToolProperties(VkPhysicalDevice, uint32_t*, VkPhysicalDeviceToolProperties*)'    {vkGetPhysicalDeviceToolProperties}\n  [A] 'function void vkGetPrivateData(VkDevice, VkObjectType, uint64_t, VkPrivateDataSlot, uint64_t*)'    {vkGetPrivateData}\n  [A] 'function VkResult vkQueueSubmit2(VkQueue, uint32_t, const VkSubmitInfo2*, VkFence)'    {vkQueueSubmit2}\n  [A] 'function VkResult vkSetPrivateData(VkDevice, VkObjectType, uint64_t, VkPrivateDataSlot, uint64_t)'    {vkSetPrivateData}\n\n",
+                    "return_code": 4,
+                    "seconds": 1.751511573791504,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan.so.1.2.189 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan.so.1.3.204",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan.so.1.3.204",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan.so.1.2.189",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan.so.1.2.189\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan.so.1.3.204\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan.so.1.2.189-abi-laboratory-libvulkan-so-1-2-189-libvulkan-so-1-3-204.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.24009013175964355,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan.so.1.2.189 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan.so.1.3.204 libvulkan-so-1-2-189-libvulkan-so-1-3-204 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan.so.1.2.189-abi-laboratory-libvulkan-so-1-2-189-libvulkan-so-1-3-204.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan.so.1.3.204",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan.so.1.2.189",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan.so.1.2.189": 378880,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan.so.1.3.204": 465112
+            }
+        },
+        "experiment": "usr/lib64/libvulkan-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan.so.1.3.204",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan.so.1.2.189",
+        "different_libs": true
+    }
+]

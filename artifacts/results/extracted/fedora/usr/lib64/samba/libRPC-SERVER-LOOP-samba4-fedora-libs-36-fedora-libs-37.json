@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libRPC-SERVER-LOOP-samba4.so",
+                    "spliced_lib": "libRPC-SERVER-LOOP-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.0517578125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libRPC-SERVER-LOOP-samba4.so",
+                    "spliced_lib": "libRPC-SERVER-LOOP-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.0013580322265625e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 15 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n15 Removed functions:\n\n  [D] 'function void* _find_policy_by_hnd(pipes_struct*, const policy_handle*, uint8_t, NTSTATUS*)'    {_find_policy_by_hnd@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function bool check_open_pipes()'    {check_open_pipes@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function bool close_policy_hnd(pipes_struct*, policy_handle*)'    {close_policy_hnd@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function bool create_policy_hnd(pipes_struct*, policy_handle*, uint8_t, void*)'    {create_policy_hnd@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS dcesrv_assoc_group_find(dcesrv_call_state*, void*)'    {dcesrv_assoc_group_find@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS dcesrv_auth_gensec_prepare(TALLOC_CTX*, dcesrv_call_state*, gensec_security**, void*)'    {dcesrv_auth_gensec_prepare@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS dcesrv_endpoint_by_ncacn_np_name(dcesrv_context*, const char*, dcesrv_endpoint**)'    {dcesrv_endpoint_by_ncacn_np_name@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function pipes_struct* dcesrv_get_pipes_struct(dcesrv_connection*)'    {dcesrv_get_pipes_struct@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function void dcesrv_log_successful_authz(dcesrv_call_state*, void*)'    {dcesrv_log_successful_authz@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function void dcesrv_transport_terminate_connection(dcesrv_connection*, const char*)'    {dcesrv_transport_terminate_connection@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function npa_state* npa_state_init(TALLOC_CTX*)'    {npa_state_init@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function size_t num_pipe_handles()'    {num_pipe_handles@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function bool pipe_access_check(pipes_struct*)'    {pipe_access_check@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS rpc_pipe_open_interface(TALLOC_CTX*, const ndr_interface_table*, const auth_session_info*, const tsocket_address*, const tsocket_address*, messaging_context*, rpc_pipe_client**)'    {rpc_pipe_open_interface@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function NTSTATUS rpcint_binding_handle(TALLOC_CTX*, const ndr_interface_table*, const tsocket_address*, const tsocket_address*, const auth_session_info*, messaging_context*, dcerpc_binding_handle**)'    {rpcint_binding_handle@@SAMBA_4.16.4_SAMBA4}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.05110526084899902,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so-abi-laboratory-libRPC-SERVER-LOOP-samba4-so-libRPC-SERVER-LOOP-samba4-so.html\nFound link to libRPC-SERVER-LOOP-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libRPC-SERVER-LOOP-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 8029\nERROR: incomplete info for symbol 8362\nERROR: incomplete info for symbol 8756\nERROR: incomplete info for symbol 9207\nERROR: incomplete info for symbol 9489\nERROR: incomplete info for symbol 9734\nERROR: incomplete info for symbol 10113\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-pCgYk.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libRPC-SERVER-LOOP-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libRPC-SERVER-LOOP-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7009\nERROR: incomplete info for symbol 7291\nERROR: incomplete info for symbol 7536\nERROR: incomplete info for symbol 7915\nERROR: incomplete info for symbol 8132\nERROR: incomplete info for symbol 8440\nERROR: incomplete info for symbol 9081\nERROR: incomplete info for symbol 9752\nERROR: incomplete info for symbol 10052\nERROR: incomplete info for symbol 10261\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-QJlpB.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 20%\nTotal binary compatibility problems: 15, warnings: 0\nTotal source compatibility problems: 1, warnings: 6\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so-abi-laboratory-libRPC-SERVER-LOOP-samba4-so-libRPC-SERVER-LOOP-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 12.526782512664795,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so libRPC-SERVER-LOOP-samba4-so-libRPC-SERVER-LOOP-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so-abi-laboratory-libRPC-SERVER-LOOP-samba4-so-libRPC-SERVER-LOOP-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so": 28616,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so": 28632
+            }
+        },
+        "experiment": "usr/lib64/samba/libRPC-SERVER-LOOP-samba4-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-SERVER-LOOP-samba4.so",
+        "different_libs": true
+    }
+]

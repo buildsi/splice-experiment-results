@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libwacom.so.2.6.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libwacom.so.9.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libwacom.so.2.6.1",
+                    "spliced_lib": "libwacom.so.9.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.435943603515625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libwacom.so.2.6.1",
+                    "spliced_lib": "libwacom.so.9.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.57763671875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "ELF SONAME changed\nFunctions changes summary: 62 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\nSONAME changed from 'libwacom.so.2' to 'libwacom.so.9'\n\n62 Removed functions:\n\n  [D] 'function int libwacom_compare(const WacomDevice*, const WacomDevice*, WacomCompareFlags)'    {libwacom_compare@@LIBWACOM_0.33}\n  [D] 'function void libwacom_database_destroy(WacomDeviceDatabase*)'    {libwacom_database_destroy@@LIBWACOM_0.33}\n  [D] 'function WacomDeviceDatabase* libwacom_database_new()'    {libwacom_database_new@@LIBWACOM_0.33}\n  [D] 'function WacomDeviceDatabase* libwacom_database_new_for_path(const char*)'    {libwacom_database_new_for_path@@LIBWACOM_0.33}\n  [D] 'function void libwacom_destroy(WacomDevice*)'    {libwacom_destroy@@LIBWACOM_0.33}\n  [D] 'function void libwacom_error_free(WacomError**)'    {libwacom_error_free@@LIBWACOM_0.33}\n  [D] 'function WacomErrorCode libwacom_error_get_code(WacomError*)'    {libwacom_error_get_code@@LIBWACOM_0.33}\n  [D] 'function const char* libwacom_error_get_message(WacomError*)'    {libwacom_error_get_message@@LIBWACOM_0.33}\n  [D] 'function WacomError* libwacom_error_new()'    {libwacom_error_new@@LIBWACOM_0.33}\n  [D] 'function WacomBusType libwacom_get_bustype(const WacomDevice*)'    {libwacom_get_bustype@@LIBWACOM_0.33}\n  [D] 'function int libwacom_get_button_evdev_code(const WacomDevice*, char)'    {libwacom_get_button_evdev_code@@LIBWACOM_0.33}\n  [D] 'function WacomButtonFlags libwacom_get_button_flag(const WacomDevice*, char)'    {libwacom_get_button_flag@@LIBWACOM_0.33}\n  [D] 'function int libwacom_get_button_led_group(const WacomDevice*, char)'    {libwacom_get_button_led_group@@LIBWACOM_0.33}\n  [D] 'function WacomClass libwacom_get_class(const WacomDevice*)'    {libwacom_get_class@@LIBWACOM_0.33}\n  [D] 'function int libwacom_get_height(const WacomDevice*)'    {libwacom_get_height@@LIBWACOM_0.33}\n  [D] 'function WacomIntegrationFlags libwacom_get_integration_flags(const WacomDevice*)'    {libwacom_get_integration_flags@@LIBWACOM_0.33}\n  [D] 'function const char* libwacom_get_layout_filename(const WacomDevice*)'    {libwacom_get_layout_filename@@LIBWACOM_0.33}\n  [D] 'function const char* libwacom_get_match(const WacomDevice*)'    {libwacom_get_match@@LIBWACOM_0.33}\n  [D] 'function const WacomMatch** libwacom_get_matches(const WacomDevice*)'    {libwacom_get_matches@@LIBWACOM_0.33}\n  [D] 'function const char* libwacom_get_model_name(const WacomDevice*)'    {libwacom_get_model_name@@LIBWACOM_0.33}\n  [D] 'function const char* libwacom_get_name(const WacomDevice*)'    {libwacom_get_name@@LIBWACOM_0.33}\n  [D] 'function int libwacom_get_num_buttons(const WacomDevice*)'    {libwacom_get_num_buttons@@LIBWACOM_0.33}\n  [D] 'function int libwacom_get_num_strips(const WacomDevice*)'    {libwacom_get_num_strips@@LIBWACOM_0.33}\n  [D] 'function const WacomMatch* libwacom_get_paired_device(const WacomDevice*)'    {libwacom_get_paired_device@@LIBWACOM_0.33}\n  [D] 'function int libwacom_get_product_id(const WacomDevice*)'    {libwacom_get_product_id@@LIBWACOM_0.33}\n  [D] 'function int libwacom_get_ring2_num_modes(const WacomDevice*)'    {libwacom_get_ring2_num_modes@@LIBWACOM_0.33}\n  [D] 'function int libwacom_get_ring_num_modes(const WacomDevice*)'    {libwacom_get_ring_num_modes@@LIBWACOM_0.33}\n  [D] 'function const WacomStatusLEDs* libwacom_get_status_leds(const WacomDevice*, int*)'    {libwacom_get_status_leds@@LIBWACOM_0.33}\n  [D] 'function int libwacom_get_strips_num_modes(const WacomDevice*)'    {libwacom_get_strips_num_modes@@LIBWACOM_0.33}\n  [D] 'function const int* libwacom_get_supported_styli(const WacomDevice*, int*)'    {libwacom_get_supported_styli@@LIBWACOM_0.33}\n  [D] 'function int libwacom_get_vendor_id(const WacomDevice*)'    {libwacom_get_vendor_id@@LIBWACOM_0.33}\n  [D] 'function int libwacom_get_width(const WacomDevice*)'    {libwacom_get_width@@LIBWACOM_0.33}\n  [D] 'function int libwacom_has_ring(const WacomDevice*)'    {libwacom_has_ring@@LIBWACOM_0.33}\n  [D] 'function int libwacom_has_ring2(const WacomDevice*)'    {libwacom_has_ring2@@LIBWACOM_0.33}\n  [D] 'function int libwacom_has_stylus(const WacomDevice*)'    {libwacom_has_stylus@@LIBWACOM_0.33}\n  [D] 'function int libwacom_has_touch(const WacomDevice*)'    {libwacom_has_touch@@LIBWACOM_0.33}\n  [D] 'function int libwacom_has_touchswitch(const WacomDevice*)'    {libwacom_has_touchswitch@@LIBWACOM_0.33}\n  [D] 'function int libwacom_is_builtin(const WacomDevice*)'    {libwacom_is_builtin@@LIBWACOM_0.33}\n  [D] 'function int libwacom_is_reversible(const WacomDevice*)'    {libwacom_is_reversible@@LIBWACOM_0.33}\n  [D] 'function WacomDevice** libwacom_list_devices_from_database(const WacomDeviceDatabase*, WacomError*)'    {libwacom_list_devices_from_database@@LIBWACOM_0.33}\n  [D] 'function WacomBusType libwacom_match_get_bustype(const WacomMatch*)'    {libwacom_match_get_bustype@@LIBWACOM_0.33}\n  [D] 'function const char* libwacom_match_get_match_string(const WacomMatch*)'    {libwacom_match_get_match_string@@LIBWACOM_0.33}\n  [D] 'function const char* libwacom_match_get_name(const WacomMatch*)'    {libwacom_match_get_name@@LIBWACOM_0.33}\n  [D] 'function uint32_t libwacom_match_get_product_id(const WacomMatch*)'    {libwacom_match_get_product_id@@LIBWACOM_0.33}\n  [D] 'function uint32_t libwacom_match_get_vendor_id(const WacomMatch*)'    {libwacom_match_get_vendor_id@@LIBWACOM_0.33}\n  [D] 'function WacomDevice* libwacom_new_from_name(const WacomDeviceDatabase*, const char*, WacomError*)'    {libwacom_new_from_name@@LIBWACOM_0.33}\n  [D] 'function WacomDevice* libwacom_new_from_path(const WacomDeviceDatabase*, const char*, WacomFallbackFlags, WacomError*)'    {libwacom_new_from_path@@LIBWACOM_0.33}\n  [D] 'function WacomDevice* libwacom_new_from_usbid(const WacomDeviceDatabase*, int, int, WacomError*)'    {libwacom_new_from_usbid@@LIBWACOM_0.33}\n  [D] 'function void libwacom_print_device_description(int, const WacomDevice*)'    {libwacom_print_device_description@@LIBWACOM_0.33}\n  [D] 'function void libwacom_print_stylus_description(int, const WacomStylus*)'    {libwacom_print_stylus_description@@LIBWACOM_0.33}\n  [D] 'function WacomAxisTypeFlags libwacom_stylus_get_axes(const WacomStylus*)'    {libwacom_stylus_get_axes@@LIBWACOM_0.33}\n  [D] 'function WacomEraserType libwacom_stylus_get_eraser_type(const WacomStylus*)'    {libwacom_stylus_get_eraser_type@@LIBWACOM_1.4}\n  [D] 'function const WacomStylus* libwacom_stylus_get_for_id(const WacomDeviceDatabase*, int)'    {libwacom_stylus_get_for_id@@LIBWACOM_0.33}\n  [D] 'function int libwacom_stylus_get_id(const WacomStylus*)'    {libwacom_stylus_get_id@@LIBWACOM_0.33}\n  [D] 'function const char* libwacom_stylus_get_name(const WacomStylus*)'    {libwacom_stylus_get_name@@LIBWACOM_0.33}\n  [D] 'function int libwacom_stylus_get_num_buttons(const WacomStylus*)'    {libwacom_stylus_get_num_buttons@@LIBWACOM_0.33}\n  [D] 'function const int* libwacom_stylus_get_paired_ids(const WacomStylus*, int*)'    {libwacom_stylus_get_paired_ids@@LIBWACOM_1.4}\n  [D] 'function WacomStylusType libwacom_stylus_get_type(const WacomStylus*)'    {libwacom_stylus_get_type@@LIBWACOM_0.33}\n  [D] 'function int libwacom_stylus_has_eraser(const WacomStylus*)'    {libwacom_stylus_has_eraser@@LIBWACOM_0.33}\n  [D] 'function int libwacom_stylus_has_lens(const WacomStylus*)'    {libwacom_stylus_has_lens@@LIBWACOM_0.33}\n  [D] 'function int libwacom_stylus_has_wheel(const WacomStylus*)'    {libwacom_stylus_has_wheel@@LIBWACOM_0.33}\n  [D] 'function int libwacom_stylus_is_eraser(const WacomStylus*)'    {libwacom_stylus_is_eraser@@LIBWACOM_0.33}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.03958702087402344,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libwacom.so.2.6.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libwacom.so.9.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libwacom.so.9.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libwacom.so.2.6.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libwacom.so.2.6.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libwacom.so.9.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libwacom.so.2.6.1-abi-laboratory-libwacom-so-2-6-1-libwacom-so-9-0-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.2133166790008545,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libwacom.so.2.6.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libwacom.so.9.0.0 libwacom-so-2-6-1-libwacom-so-9-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libwacom.so.2.6.1-abi-laboratory-libwacom-so-2-6-1-libwacom-so-9-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libwacom.so.9.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libwacom.so.2.6.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libwacom.so.2.6.1": 53736,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libwacom.so.9.0.0": 57912
+            }
+        },
+        "experiment": "usr/lib64/libwacom-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libwacom.so.9.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libwacom.so.2.6.1",
+        "different_libs": true
+    }
+]

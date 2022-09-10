@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libnspr4.so",
+                    "spliced_lib": "libnspr4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00013208389282226562
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libnspr4.so",
+                    "spliced_lib": "libnspr4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0011363029479980469
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (91 filtered out), 1 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Added function:\n\n  [A] 'function PRStatus PR_GetPrefLoopbackAddrInfo(PRNetAddr*, PRUint16)'    {PR_GetPrefLoopbackAddrInfo}\n\n",
+                    "return_code": 4,
+                    "seconds": 0.20609164237976074,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so-abi-laboratory-libnspr4-so-libnspr4-so.html\n",
+                    "return_code": 139,
+                    "seconds": 0.1885833740234375,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so libnspr4-so-libnspr4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so-abi-laboratory-libnspr4-so-libnspr4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so": 269376,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so": 271072
+            }
+        },
+        "experiment": "usr/lib64/libnspr4-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so",
+        "different_libs": true
+    }
+]

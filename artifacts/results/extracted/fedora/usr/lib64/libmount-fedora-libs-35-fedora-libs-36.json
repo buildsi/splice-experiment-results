@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmount.so.1.1.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmount.so.1.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmount.so.1.1.0",
+                    "spliced_lib": "libmount.so.1.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "getgroups"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00012254714965820312
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmount.so.1.1.0",
+                    "spliced_lib": "libmount.so.1.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0006458759307861328
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (100 filtered out), 1 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Added function:\n\n  [A] 'function int mnt_fs_is_regularfs(libmnt_fs*)'    {mnt_fs_is_regularfs@@MOUNT_2_38}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function int mnt_context_append_options(libmnt_context*, const char*)' at context.c:1118:1 has some indirect sub-type changes:\n    parameter 1 of type 'libmnt_context*' has sub-type changes:\n      in pointed to type 'struct libmnt_context' at mountP.h:287:1:\n        type size changed from 2560 to 2624 (in bits)\n        1 data member insertion:\n          'char* subdir', at offset 192 (in bits) at mountP.h:295:1\n        37 data member changes:\n          'libmnt_fs* fs' offset changed from 192 to 256 (in bits) (by +64 bits)\n          'libmnt_fs* fs_template' offset changed from 256 to 320 (in bits) (by +64 bits)\n          'libmnt_table* fstab' offset changed from 320 to 384 (in bits) (by +64 bits)\n          'libmnt_table* mtab' offset changed from 384 to 448 (in bits) (by +64 bits)\n          'libmnt_table* utab' offset changed from 448 to 512 (in bits) (by +64 bits)\n          'int (libmnt_table*, const char*, int)* table_errcb' offset changed from 512 to 576 (in bits) (by +64 bits)\n          'int (libmnt_fs*, void*)* table_fltrcb' offset changed from 576 to 640 (in bits) (by +64 bits)\n          'void* table_fltrcb_data' offset changed from 640 to 704 (in bits) (by +64 bits)\n          'char* (libmnt_context*)* pwd_get_cb' offset changed from 704 to 768 (in bits) (by +64 bits)\n          'void (libmnt_context*, char*)* pwd_release_cb' offset changed from 768 to 832 (in bits) (by +64 bits)\n          'int optsmode' offset changed from 832 to 896 (in bits) (by +64 bits)\n          'int loopdev_fd' offset changed from 864 to 928 (in bits) (by +64 bits)\n          'unsigned long int mountflags' offset changed from 896 to 960 (in bits) (by +64 bits)\n          'void* mountdata' offset changed from 960 to 1024 (in bits) (by +64 bits)\n          'unsigned long int user_mountflags' offset changed from 1024 to 1088 (in bits) (by +64 bits)\n          'list_head addmounts' offset changed from 1088 to 1152 (in bits) (by +64 bits)\n          'libmnt_cache* cache' offset changed from 1216 to 1280 (in bits) (by +64 bits)\n          'libmnt_lock* lock' offset changed from 1280 to 1344 (in bits) (by +64 bits)\n          'libmnt_update* update' offset changed from 1344 to 1408 (in bits) (by +64 bits)\n          'const char* mtab_path' offset changed from 1408 to 1472 (in bits) (by +64 bits)\n          'int mtab_writable' offset changed from 1472 to 1536 (in bits) (by +64 bits)\n          'const char* utab_path' offset changed from 1536 to 1600 (in bits) (by +64 bits)\n          'int utab_writable' offset changed from 1600 to 1664 (in bits) (by +64 bits)\n          'char* tgt_prefix' offset changed from 1664 to 1728 (in bits) (by +64 bits)\n          'int flags' offset changed from 1728 to 1792 (in bits) (by +64 bits)\n          'char* helper' offset changed from 1792 to 1856 (in bits) (by +64 bits)\n          'int helper_status' offset changed from 1856 to 1920 (in bits) (by +64 bits)\n          'int helper_exec_status' offset changed from 1888 to 1952 (in bits) (by +64 bits)\n          'char* orig_user' offset changed from 1920 to 1984 (in bits) (by +64 bits)\n          'pid_t* children' offset changed from 1984 to 2048 (in bits) (by +64 bits)\n          'int nchildren' offset changed from 2048 to 2112 (in bits) (by +64 bits)\n          'pid_t pid' offset changed from 2080 to 2144 (in bits) (by +64 bits)\n          'int syscall_status' offset changed from 2112 to 2176 (in bits) (by +64 bits)\n          'libmnt_ns ns_orig' offset changed from 2176 to 2240 (in bits) (by +64 bits)\n          'libmnt_ns ns_tgt' offset changed from 2304 to 2368 (in bits) (by +64 bits)\n          'libmnt_ns* ns_cur' offset changed from 2432 to 2496 (in bits) (by +64 bits)\n          'unsigned int enabled_textdomain' offset changed from 2496 to 2560 (in bits) (by +64 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.2653384208679199,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmount.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmount.so.1.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmount.so.1.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmount.so.1.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmount.so.1.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmount.so.1.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmount.so.1.1.0-abi-laboratory-libmount-so-1-1-0-libmount-so-1-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.1909017562866211,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmount.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmount.so.1.1.0 libmount-so-1-1-0-libmount-so-1-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmount.so.1.1.0-abi-laboratory-libmount-so-1-1-0-libmount-so-1-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmount.so.1.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmount.so.1.1.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmount.so.1.1.0": 284176,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmount.so.1.1.0": 292608
+            }
+        },
+        "experiment": "usr/lib64/libmount-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmount.so.1.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmount.so.1.1.0",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdlgplugin.so",
+                    "spliced_lib": "libdlgplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.841255187988281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libdlgplugin.so",
+                    "spliced_lib": "libdlgplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.078315734863281e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.4324960708618164,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so-abi-laboratory-libdlgplugin-so-libdlgplugin-so.html\nFound link to libdlgplugin.so-3.3.8b-88.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libdlgplugin.so-3.3.8b-88.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt-3.3/plugins/designer/../../../../../.dwz/qt3-3.3.8b-88.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4265\nERROR: incomplete info for symbol 5492\nERROR: incomplete info for symbol 5518\nERROR: incomplete info for symbol 5544\nERROR: incomplete info for symbol 8787\nERROR: incomplete info for symbol 14499\nERROR: incomplete info for symbol 19696\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-VffRo.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdlgplugin.so-3.3.8b-90.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdlgplugin.so-3.3.8b-90.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt-3.3/plugins/designer/../../../../../.dwz/qt3-3.3.8b-90.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4265\nERROR: incomplete info for symbol 5492\nERROR: incomplete info for symbol 5518\nERROR: incomplete info for symbol 5544\nERROR: incomplete info for symbol 8787\nERROR: incomplete info for symbol 14510\nERROR: incomplete info for symbol 19837\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-S02lW.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so-abi-laboratory-libdlgplugin-so-libdlgplugin-so.html\n",
+                    "return_code": 0,
+                    "seconds": 11.251751184463501,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so libdlgplugin-so-libdlgplugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so-abi-laboratory-libdlgplugin-so-libdlgplugin-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so": 170176,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so": 170176
+            }
+        },
+        "experiment": "usr/lib64/qt-3.3/plugins/designer/libdlgplugin-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libdlgplugin.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnetapi.so.1.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnetapi.so.1.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libnetapi.so.1.0.0",
+                    "spliced_lib": "libnetapi.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "smb_xstrdup",
+                        "ads_destroy"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0002598762512207031
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libnetapi.so.1.0.0",
+                    "spliced_lib": "libnetapi.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0048944950103759766
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (6 filtered out), 2 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 Added functions:\n\n  [A] 'function NTSTATUS dcerpc_samr_chgpasswd_user4(dcerpc_binding_handle*, TALLOC_CTX*, const char*, const char*, const char*, const char*, NTSTATUS*)'    {dcerpc_samr_chgpasswd_user4@@NETAPI_1.0.0}\n  [A] 'function NTSTATUS init_samr_CryptPasswordAES(TALLOC_CTX*, const char*, DATA_BLOB*, samr_EncryptedPasswordAES*)'    {init_samr_CryptPasswordAES@@NETAPI_1.0.0}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function WERROR libnet_Join(TALLOC_CTX*, libnet_JoinCtx*)' at libnet_join.c:3013:1 has some indirect sub-type changes:\n    parameter 2 of type 'libnet_JoinCtx*' has sub-type changes:\n      in pointed to type 'struct libnet_JoinCtx' at libnet_join.h:34:1:\n        type size hasn't changed\n        1 data member change:\n          type of 'struct {const char* dc_name; const char* machine_name; const char* domain_name; libnetjoin_JoinDomNameType domain_name_type; const char* account_ou; const char* admin_account; const char* admin_domain; const char* admin_password; const char* machine_password; uint32_t join_flags; const char* os_version; const char* os_name; const char* os_servicepack; uint8_t create_upn; const char* upn; const char* dnshostname; uint8_t modify_config; ads_struct* ads; uint8_t debug; uint8_t use_kerberos; netr_SchannelType secure_channel_type; messaging_context* msg_ctx; uint32_t desired_encryption_types; uint8_t provision_computer_account_only; uint8_t request_offline_join; ODJ_PROVISION_DATA* odj_provision_data;} in' changed:\n            type size hasn't changed\n            1 data member change:\n              type of 'ads_struct* ads' changed:\n                in pointed to type 'struct ads_struct' at ads.h:58:1:\n                  type size changed from 3584 to 3520 (in bits)\n                  1 data member deletion:\n                    'int is_mine', at offset 0 (in bits) at ads.h:59:1\n                  5 data member changes:\n                    'struct {char* realm; char* workgroup; char* ldap_server; bool gc; bool no_fallback;} server' offset changed from 64 to 0 (in bits) (by -64 bits)\n                    'struct {char* realm; char* password; char* user_name; char* kdc_server; unsigned int flags; int time_offset; char* ccache_name; time_t tgt_expire; time_t tgs_expire; time_t renewable;} auth' offset changed from 320 to 256 (in bits) (by -64 bits)\n                    'struct {uint32_t flags; char* realm; char* bind_path; char* ldap_server_name; char* server_site_name; char* client_site_name; time_t current_time; char* schema_path; char* config_path; int ldap_page_size;} config' offset changed from 896 to 832 (in bits) (by -64 bits)\n                    'ads_saslwrap ldap_wrap_data' offset changed from 1536 to 1472 (in bits) (by -64 bits)\n                    'struct {LDAP* ld; sockaddr_storage ss; time_t last_attempt; int port;} ldap' offset changed from 2368 to 2304 (in bits) (by -64 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.39731740951538086,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnetapi.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnetapi.so.1.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnetapi.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnetapi.so.1.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnetapi.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnetapi.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnetapi.so.1.0.0-abi-laboratory-libnetapi-so-1-0-0-libnetapi-so-1-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2254021167755127,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnetapi.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnetapi.so.1.0.0 libnetapi-so-1-0-0-libnetapi-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnetapi.so.1.0.0-abi-laboratory-libnetapi-so-1-0-0-libnetapi-so-1-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnetapi.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnetapi.so.1.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnetapi.so.1.0.0": 501512,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnetapi.so.1.0.0": 507304
+            }
+        },
+        "experiment": "usr/lib64/libnetapi-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnetapi.so.1.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnetapi.so.1.0.0",
+        "different_libs": true
+    }
+]

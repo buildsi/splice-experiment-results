@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/lib/libqui.so.1.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/lib/libqui.so.1.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqui.so.1.0.0",
+                    "spliced_lib": "libqui.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00014519691467285156
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqui.so.1.0.0",
+                    "spliced_lib": "libqui.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001316070556640625
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.8517532348632812,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/lib/libqui.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/lib/libqui.so.1.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/lib/libqui.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/lib/libqui.so.1.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/lib/libqui.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/lib/libqui.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/lib/libqui.so.1.0.0-abi-laboratory-libqui-so-1-0-0-libqui-so-1-0-0.html\nFound link to libqui.so.1.0.0-3.3.8b-86.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libqui.so.1.0.0-3.3.8b-86.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt-3.3/lib/../../../../.dwz/qt3-3.3.8b-86.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 48913\nERROR: incomplete info for symbol 49164\nERROR: incomplete info for symbol 49410\nERROR: incomplete info for symbol 49720\nERROR: incomplete info for symbol 50176\nERROR: incomplete info for symbol 59660\nERROR: incomplete info for symbol 65609\nERROR: incomplete info for symbol 132143\nERROR: incomplete info for symbol 132291\nERROR: incomplete info for symbol 235471\nERROR: incomplete info for symbol 235497\nERROR: incomplete info for symbol 238998\nERROR: incomplete info for symbol 260449\nERROR: incomplete info for symbol 260595\nERROR: incomplete info for symbol 260737\nERROR: incomplete info for symbol 260785\nERROR: incomplete info for symbol 260926\nERROR: incomplete info for symbol 261068\nERROR: incomplete info for symbol 327676\nERROR: incomplete info for symbol 327894\nERROR: incomplete info for symbol 328196\nERROR: incomplete info for symbol 328294\nERROR: incomplete info for symbol 328392\nERROR: incomplete info for symbol 328510\nERROR: incomplete info for symbol 328812\nERROR: incomplete info for symbol 328910\nERROR: incomplete info for symbol 329008\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-AXNGp.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqui.so.1.0.0-3.3.8b-90.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqui.so.1.0.0-3.3.8b-90.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt-3.3/lib/../../../../.dwz/qt3-3.3.8b-90.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 49093\nERROR: incomplete info for symbol 49344\nERROR: incomplete info for symbol 49590\nERROR: incomplete info for symbol 49900\nERROR: incomplete info for symbol 50356\nERROR: incomplete info for symbol 59740\nERROR: incomplete info for symbol 65689\nERROR: incomplete info for symbol 132225\nERROR: incomplete info for symbol 132373\nERROR: incomplete info for symbol 235692\nERROR: incomplete info for symbol 235718\nERROR: incomplete info for symbol 239223\nERROR: incomplete info for symbol 260524\nERROR: incomplete info for symbol 260670\nERROR: incomplete info for symbol 260812\nERROR: incomplete info for symbol 260860\nERROR: incomplete info for symbol 261001\nERROR: incomplete info for symbol 261143\nERROR: incomplete info for symbol 327659\nERROR: incomplete info for symbol 327877\nERROR: incomplete info for symbol 328127\nERROR: incomplete info for symbol 328225\nERROR: incomplete info for symbol 328323\nERROR: incomplete info for symbol 328441\nERROR: incomplete info for symbol 328691\nERROR: incomplete info for symbol 328789\nERROR: incomplete info for symbol 328887\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-wwAGf.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/lib/libqui.so.1.0.0-abi-laboratory-libqui-so-1-0-0-libqui-so-1-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 15.046825408935547,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/lib/libqui.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/lib/libqui.so.1.0.0 libqui-so-1-0-0-libqui-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/lib/libqui.so.1.0.0-abi-laboratory-libqui-so-1-0-0-libqui-so-1-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/lib/libqui.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/lib/libqui.so.1.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/lib/libqui.so.1.0.0": 275848,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/lib/libqui.so.1.0.0": 271640
+            }
+        },
+        "experiment": "usr/lib64/qt-3.3/lib/libqui-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/lib/libqui.so.1.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/lib/libqui.so.1.0.0",
+        "different_libs": true
+    }
+]

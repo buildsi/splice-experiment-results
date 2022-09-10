@@ -26,7 +26,10 @@ export GITHUB_TOKEN=xxxxxxxxxxx
 $ python get_artifacts.py
 ```
 
-You can also ask for a specific run:
+You can also ask for a specific run. Here are results for:
+
+```bash
+```
 
 ```bash
 $ rm -rf artifacts/*
@@ -42,12 +45,18 @@ $ python get_artifacts.py 3023207569  # fedora results 450-500
 $ python get_artifacts.py 3019727038  # fedora results 550-650
 $ python get_artifacts.py 3019728826  # fedora results 650-750
 $ python get_artifacts.py 3020343625  # fedora results 750-850
-
-TODO need to do 850-900/900-950
+$ python get_artifacts.py 3027789022  # fedora results 850-900
 
 $ python get_artifacts.py 3023223782  # fedora results 950-1000 (34 vs all others had runner issues)
 $ python get_artifacts.py 3023226112  # fedora results 1000-1050 (36 vs 37 runner had issues)
 $ python get_artifacts.py 3025057440  # fedora results 1050-1100
+$ python get_artifacts.py 3026209175  # fedora results 1100-1150
+$ python get_artifacts.py 3026210109  # fedora results 1150-1200
+$ python get_artifacts.py 3027040794  # fedora results 1200-1250 
+$ python get_artifacts.py 3027334558  # fedora results 1300-1350 # this is where results start to peter out
+$ python get_artifacts.py 3027336141  # fedora results 1350-1400
+$ python get_artifacts.py 3027772125  # fedora results 1400-1450
+$ python get_artifacts.py 3027773113  # fedora results 1450-1500
 ```
 And then to open (and run/update the notebook)
 

@@ -1,0 +1,79 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkRenderingGL2PSOpenGL2.so.9.0.3",
+                    "spliced_lib": "libvtkRenderingGL2PSOpenGL2.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.316734313964844e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkRenderingGL2PSOpenGL2.so.9.0.3",
+                    "spliced_lib": "libvtkRenderingGL2PSOpenGL2.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.6927719116210938e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed (1 filtered out), 3 Changed (18 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n3 functions with some indirect sub-type change:\n\n  [C] 'method virtual void vtkOpenGLGL2PSHelperImpl::Draw3DPath(vtkPath*, vtkMatrix4x4*, double*, unsigned char*, vtkRenderer*, const char*)' at vtkOpenGLGL2PSHelperImpl.cxx:467:1 has some indirect sub-type changes:\n    the vtable offset of method virtual void vtkOpenGLGL2PSHelperImpl::Draw3DPath(vtkPath*, vtkMatrix4x4*, double*, unsigned char*, vtkRenderer*, const char*) changed from 34 to 33\n      note that this is an ABI incompatible change to the vtable of class vtkOpenGLGL2PSHelperImpl\n    implicit parameter 0 of type 'vtkOpenGLGL2PSHelperImpl*' has sub-type changes:\n      in pointed to type 'class vtkOpenGLGL2PSHelperImpl' at vtkOpenGLGL2PSHelperImpl.h:31:1:\n        type size hasn't changed\n        7 member function changes (8 filtered):\n          'method virtual vtkObjectBase* vtkOpenGLGL2PSHelperImpl::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkOpenGLGL2PSHelperImpl::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkOpenGLGL2PSHelperImpl\n          'method virtual void vtkOpenGLGL2PSHelperImpl::ProcessTransformFeedback(vtkTransformFeedback*, vtkRenderer*, vtkActor*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkOpenGLGL2PSHelperImpl::ProcessTransformFeedback(vtkTransformFeedback*, vtkRenderer*, vtkActor*) changed from 29 to 28\n              note that this is an ABI incompatible change to the vtable of class vtkOpenGLGL2PSHelperImpl\n          'method virtual void vtkOpenGLGL2PSHelperImpl::ProcessTransformFeedback(vtkTransformFeedback*, vtkRenderer*, unsigned char*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkOpenGLGL2PSHelperImpl::ProcessTransformFeedback(vtkTransformFeedback*, vtkRenderer*, unsigned char*) changed from 30 to 29\n              note that this is an ABI incompatible change to the vtable of class vtkOpenGLGL2PSHelperImpl\n          'method virtual void vtkOpenGLGL2PSHelperImpl::ProcessTransformFeedback(vtkTransformFeedback*, vtkRenderer*, float*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkOpenGLGL2PSHelperImpl::ProcessTransformFeedback(vtkTransformFeedback*, vtkRenderer*, float*) changed from 31 to 30\n              note that this is an ABI incompatible change to the vtable of class vtkOpenGLGL2PSHelperImpl\n          'method virtual void vtkOpenGLGL2PSHelperImpl::DrawString(const std::string&, vtkTextProperty*, double*, double, vtkRenderer*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkOpenGLGL2PSHelperImpl::DrawString(const std::string&, vtkTextProperty*, double*, double, vtkRenderer*) changed from 32 to 31\n              note that this is an ABI incompatible change to the vtable of class vtkOpenGLGL2PSHelperImpl\n          'method virtual void vtkOpenGLGL2PSHelperImpl::DrawPath(vtkPath*, double*, double*, unsigned char*, double*, double, float, const char*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkOpenGLGL2PSHelperImpl::DrawPath(vtkPath*, double*, double*, unsigned char*, double*, double, float, const char*) changed from 33 to 32\n              note that this is an ABI incompatible change to the vtable of class vtkOpenGLGL2PSHelperImpl\n          'method virtual void vtkOpenGLGL2PSHelperImpl::DrawImage(vtkImageData*, double*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkOpenGLGL2PSHelperImpl::DrawImage(vtkImageData*, double*) changed from 35 to 34\n              note that this is an ABI incompatible change to the vtable of class vtkOpenGLGL2PSHelperImpl\n\n  [C] 'method virtual const char* vtkRenderingGL2PSOpenGL2ObjectFactory::GetVTKSourceVersion()' at vtkRenderingGL2PSOpenGL2ObjectFactory.cxx:38:1 has some indirect sub-type changes:\n    the vtable offset of method virtual const char* vtkRenderingGL2PSOpenGL2ObjectFactory::GetVTKSourceVersion() changed from 21 to 20\n      note that this is an ABI incompatible change to the vtable of class vtkRenderingGL2PSOpenGL2ObjectFactory\n\n  [C] 'method vtkRenderingGL2PSOpenGL2ObjectFactory* vtkRenderingGL2PSOpenGL2ObjectFactory::New()' at vtkRenderingGL2PSOpenGL2ObjectFactory.cxx:26:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'class vtkRenderingGL2PSOpenGL2ObjectFactory' at vtkRenderingGL2PSOpenGL2ObjectFactory.h:22:1:\n        type size changed from 832 to 768 (in bits)\n        2 member function changes (5 filtered):\n          'method virtual vtkObjectBase* vtkRenderingGL2PSOpenGL2ObjectFactory::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkRenderingGL2PSOpenGL2ObjectFactory::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkRenderingGL2PSOpenGL2ObjectFactory\n          'method virtual const char* vtkRenderingGL2PSOpenGL2ObjectFactory::GetDescription()' has some sub-type changes:\n            the vtable offset of method virtual const char* vtkRenderingGL2PSOpenGL2ObjectFactory::GetDescription() changed from 22 to 21\n              note that this is an ABI incompatible change to the vtable of class vtkRenderingGL2PSOpenGL2ObjectFactory\n            implicit parameter 0 of type 'vtkRenderingGL2PSOpenGL2ObjectFactory*' has sub-type changes:\n              pointed to type 'class vtkRenderingGL2PSOpenGL2ObjectFactory' changed, as being reported\n\n",
+                    "return_code": 12,
+                    "seconds": 18.983213901519775,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.0.3-abi-laboratory-libvtkRenderingGL2PSOpenGL2-so-9-0-3-libvtkRenderingGL2PSOpenGL2-so-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.21515297889709473,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.1.0 libvtkRenderingGL2PSOpenGL2-so-9-0-3-libvtkRenderingGL2PSOpenGL2-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.0.3-abi-laboratory-libvtkRenderingGL2PSOpenGL2-so-9-0-3-libvtkRenderingGL2PSOpenGL2-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.0.3": 83096,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.1.0": 79712
+            }
+        },
+        "experiment": "usr/lib64/libvtkRenderingGL2PSOpenGL2-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingGL2PSOpenGL2.so.9.0.3",
+        "different_libs": true
+    }
+]

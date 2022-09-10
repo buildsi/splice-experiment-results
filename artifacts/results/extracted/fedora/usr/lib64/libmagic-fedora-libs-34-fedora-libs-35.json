@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmagic.so.1.0.0",
+                    "spliced_lib": "libmagic.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.127357482910156e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmagic.so.1.0.0",
+                    "spliced_lib": "libmagic.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00011897087097167969
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (57 filtered out), 1 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 1 Added variable\n\n1 Added function:\n\n  [A] 'function char* file_strtrim(char*)'    {file_strtrim}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function int buffer_apprentice(magic_set*, magic**, size_t*, size_t)' at apprentice.c:635:1 has some indirect sub-type changes:\n    parameter 1 of type 'magic_set*' has sub-type changes:\n      in pointed to type 'struct magic_set' at file.h:428:1:\n        type size changed from 2304 to 2368 (in bits)\n        1 data member insertion:\n          'size_t encoding_max', at offset 2304 (in bits) at file.h:465:1\n\n1 Added variable:\n\n  [A] 'accept_range accept_ranges[16]'    {accept_ranges}\n\n",
+                    "return_code": 4,
+                    "seconds": 0.08064413070678711,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0-abi-laboratory-libmagic-so-1-0-0-libmagic-so-1-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.21053171157836914,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0 libmagic-so-1-0-0-libmagic-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0-abi-laboratory-libmagic-so-1-0-0-libmagic-so-1-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0": 186576,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0": 186528
+            }
+        },
+        "experiment": "usr/lib64/libmagic-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmariadb.so.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmariadb.so.3"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmariadb.so.3",
+                    "spliced_lib": "libmariadb.so.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "SSL_get_peer_certificate"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00010013580322265625
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libmariadb.so.3",
+                    "spliced_lib": "libmariadb.so.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00040793418884277344
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 2 Changed (138 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 functions with some indirect sub-type change:\n\n  [C] 'function int ma_pvio_register_callback(my_bool, void (int, MYSQL*, const uchar*, typedef size_t)*)' at ma_pvio.c:563:1 has some indirect sub-type changes:\n    parameter 2 of type 'void (int, MYSQL*, const uchar*, typedef size_t)*' has sub-type changes:\n      in pointed to type 'function type void (int, MYSQL*, const uchar*, typedef size_t)':\n        parameter 2 of type 'MYSQL*' has sub-type changes:\n          in pointed to type 'typedef MYSQL' at mysql.h:372:1:\n            underlying type 'struct st_mysql' at mysql.h:336:1 changed:\n              type size hasn't changed\n              2 data member changes (2 filtered):\n                type of 'st_mysql_options options' changed:\n                  type size hasn't changed\n                  1 data member changes (1 filtered):\n                    type of 'st_mysql_options_extension* extension' changed:\n                      in pointed to type 'struct st_mysql_options_extension' at ma_common.h:50:1:\n                        type size changed from 2624 to 2688 (in bits)\n                        1 data member insertion:\n                          'my_bool skip_read_response', at offset 2624 (in bits) at ma_common.h:82:1\n                        no data member changes (3 filtered);\n                type of 'const st_mariadb_methods* methods' changed:\n                  in pointed to type 'const st_mariadb_methods':\n                    in unqualified underlying type 'struct st_mariadb_methods' at mysql.h:853:1:\n                      type size changed from 1216 to 1344 (in bits)\n                      2 data member insertions:\n                        'int (MYSQL_STMT*)* db_read_execute_response', at offset 1216 (in bits) at mysql.h:876:1\n                        'unsigned char* (MYSQL_STMT*, size_t*, typedef my_bool)* db_execute_generate_request', at offset 1280 (in bits) at mysql.h:877:1\n                      1 data member changes (17 filtered):\n                        type of 'st_mariadb_api* api' changed:\n                          in pointed to type 'struct st_mariadb_api' at mysql.h:734:1:\n                            type size hasn't changed\n                            1 data member changes (102 filtered):\n                              type of 'int (MYSQL_STMT*, const char*, typedef size_t)* mariadb_stmt_execute_direct' changed:\n                                in pointed to type 'function type int (MYSQL_STMT*, const char*, typedef size_t)':\n                                  parameter 1 of type 'MYSQL_STMT*' has sub-type changes:\n                                    in pointed to type 'typedef MYSQL_STMT' at mariadb_stmt.h:58:1:\n                                      underlying type 'struct st_mysql_stmt' at mariadb_stmt.h:208:1 changed:\n                                        type size changed from 7360 to 7424 (in bits)\n                                        1 data member insertion:\n                                          'size_t request_length', at offset 7360 (in bits) at mariadb_stmt.h:209:1\n                                        1 data member changes (6 filtered):\n                                          type of 'st_mysqlnd_stmt_methods* m' changed:\n                                            in pointed to type 'struct st_mysqlnd_stmt_methods':\n                                              entity changed from 'struct st_mysqlnd_stmt_methods' to 'unsigned char'\n                                              type size changed from 1856 to 8 (in bits)\n                                          and name of 'st_mysql_stmt::m' changed to 'st_mysql_stmt::request_buffer' at mariadb_stmt.h:202:1\n\n  [C] 'function void mariadb_free_rpl_event(MARIADB_RPL_EVENT*)' at mariadb_rpl.c:68:1 has some indirect sub-type changes:\n    parameter 1 of type 'MARIADB_RPL_EVENT*' has sub-type changes:\n      in pointed to type 'typedef MARIADB_RPL_EVENT' at mariadb_rpl.h:289:1:\n        underlying type 'struct st_mariadb_rpl_event' at mariadb_rpl.h:257:1 changed:\n          type size hasn't changed\n          1 data member change:\n            type of 'union {st_mariadb_rpl_rotate_event rotate; st_mariadb_rpl_query_event query; st_mariadb_rpl_format_description_event format_description; st_mariadb_rpl_gtid_list_event gtid_list; st_mariadb_rpl_checkpoint_event checkpoint; st_mariadb_rpl_xid_event xid; st_mariadb_rpl_gtid_event gtid; st_mariadb_rpl_annotate_rows_event annotate_rows; st_mariadb_rpl_table_map_event table_map; st_mariadb_rpl_rand_event rand; st_mariadb_rpl_encryption_event encryption; st_mariadb_rpl_intvar_event intvar; st_mariadb_rpl_uservar_event uservar; st_mariadb_rpl_rows_event rows; st_mariadb_rpl_heartbeat_event heartbeat;} event' changed:\n              type size hasn't changed\n              1 data member change:\n                type of 'st_mariadb_rpl_rows_event rows' changed:\n                  type size changed from 448 to 576 (in bits)\n                  2 data member insertions:\n                    'size_t extra_data_size', at offset 448 (in bits) at mariadb_rpl.h:248:1\n                    'void* extra_data', at offset 512 (in bits) at mariadb_rpl.h:249:1\n\n",
+                    "return_code": 4,
+                    "seconds": 0.9224133491516113,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmariadb.so.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmariadb.so.3",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmariadb.so.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmariadb.so.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmariadb.so.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmariadb.so.3\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmariadb.so.3-abi-laboratory-libmariadb-so-3-libmariadb-so-3.html\n",
+                    "return_code": 139,
+                    "seconds": 0.18352127075195312,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmariadb.so.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmariadb.so.3 libmariadb-so-3-libmariadb-so-3 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmariadb.so.3-abi-laboratory-libmariadb-so-3-libmariadb-so-3.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmariadb.so.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmariadb.so.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmariadb.so.3": 348096,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmariadb.so.3": 344264
+            }
+        },
+        "experiment": "usr/lib64/libmariadb-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmariadb.so.3",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmariadb.so.3",
+        "different_libs": true
+    }
+]

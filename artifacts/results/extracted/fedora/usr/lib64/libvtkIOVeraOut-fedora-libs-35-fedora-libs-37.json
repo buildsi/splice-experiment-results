@@ -1,0 +1,82 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOVeraOut.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOVeraOut.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkIOVeraOut.so.9.0.3",
+                    "spliced_lib": "libvtkIOVeraOut.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "abort",
+                        "_ZSt19__throw_logic_errorPKc",
+                        "_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE12emplace_backIJS5_EEEvDpOT_",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.772445678710938e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkIOVeraOut.so.9.0.3",
+                    "spliced_lib": "libvtkIOVeraOut.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE12emplace_backIJS5_EEEvDpOT_"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.7404556274414062e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed (1 filtered out), 1 Changed (13 filtered out), 0 Added (2 filtered out) functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'method vtkDataArraySelection* vtkVeraOutReader::GetCellDataArraySelection() const' at vtkVeraOutReader.cxx:943:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'const vtkVeraOutReader* const' has sub-type changes:\n      in unqualified underlying type 'const vtkVeraOutReader*':\n        in pointed to type 'const vtkVeraOutReader':\n          in unqualified underlying type 'class vtkVeraOutReader' at vtkVeraOutReader.h:28:1:\n            type size hasn't changed\n            6 member function changes (7 filtered):\n              'method virtual vtkObjectBase* vtkVeraOutReader::NewInstanceInternal() const' has some sub-type changes:\n                the vtable offset of method virtual vtkObjectBase* vtkVeraOutReader::NewInstanceInternal() const changed from 16 to 15\n                  note that this is an ABI incompatible change to the vtable of class vtkVeraOutReader\n              'method virtual vtkMTimeType vtkVeraOutReader::GetMTime()' has some sub-type changes:\n                the vtable offset of method virtual vtkMTimeType vtkVeraOutReader::GetMTime() changed from 20 to 19\n                  note that this is an ABI incompatible change to the vtable of class vtkVeraOutReader\n              'method virtual int vtkVeraOutReader::RequestInformation(vtkInformation*, vtkInformationVector**, vtkInformationVector*)' has some sub-type changes:\n                the vtable offset of method virtual int vtkVeraOutReader::RequestInformation(vtkInformation*, vtkInformationVector**, vtkInformationVector*) changed from 74 to 73\n                  note that this is an ABI incompatible change to the vtable of class vtkVeraOutReader\n              'method virtual int vtkVeraOutReader::RequestData(vtkInformation*, vtkInformationVector**, vtkInformationVector*)' has some sub-type changes:\n                the vtable offset of method virtual int vtkVeraOutReader::RequestData(vtkInformation*, vtkInformationVector**, vtkInformationVector*) changed from 75 to 74\n                  note that this is an ABI incompatible change to the vtable of class vtkVeraOutReader\n              'method virtual void vtkVeraOutReader::SetFileName(const char*)' has some sub-type changes:\n                the vtable offset of method virtual void vtkVeraOutReader::SetFileName(const char*) changed from 77 to 76\n                  note that this is an ABI incompatible change to the vtable of class vtkVeraOutReader\n              'method virtual char* vtkVeraOutReader::GetFileName()' has some sub-type changes:\n                the vtable offset of method virtual char* vtkVeraOutReader::GetFileName() changed from 78 to 77\n                  note that this is an ABI incompatible change to the vtable of class vtkVeraOutReader\n            no data member changes (2 filtered);\n\n",
+                    "return_code": 12,
+                    "seconds": 20.01770329475403,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOVeraOut.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOVeraOut.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOVeraOut.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOVeraOut.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOVeraOut.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOVeraOut.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOVeraOut.so.9.0.3-abi-laboratory-libvtkIOVeraOut-so-9-0-3-libvtkIOVeraOut-so-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.24488019943237305,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOVeraOut.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOVeraOut.so.9.1.0 libvtkIOVeraOut-so-9-0-3-libvtkIOVeraOut-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOVeraOut.so.9.0.3-abi-laboratory-libvtkIOVeraOut-so-9-0-3-libvtkIOVeraOut-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOVeraOut.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOVeraOut.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOVeraOut.so.9.0.3": 79096,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOVeraOut.so.9.1.0": 79792
+            }
+        },
+        "experiment": "usr/lib64/libvtkIOVeraOut-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOVeraOut.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOVeraOut.so.9.0.3",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOCityGML.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOCityGML.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkIOCityGML.so.9.0.3",
+                    "spliced_lib": "libvtkIOCityGML.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "abort",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 8.20159912109375e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkIOCityGML.so.9.0.3",
+                    "spliced_lib": "libvtkIOCityGML.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.5033950805664062e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (28 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'method vtkCityGMLReader* vtkCityGMLReader::New()' at vtkCityGMLReader.cxx:1027:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'class vtkCityGMLReader' at vtkCityGMLReader.h:53:1:\n        type size changed from 1408 to 1472 (in bits)\n        4 member function insertions:\n          'method virtual int vtkCityGMLReader::GetBeginBuildingIndex()' at vtkCityGMLReader.h:107:1, virtual at voffset 89/91\n          'method virtual int vtkCityGMLReader::GetEndBuildingIndex()' at vtkCityGMLReader.h:109:1, virtual at voffset 91/91\n          'method virtual void vtkCityGMLReader::SetBeginBuildingIndex(int)' at vtkCityGMLReader.h:106:1, virtual at voffset 88/91\n          'method virtual void vtkCityGMLReader::SetEndBuildingIndex(int)' at vtkCityGMLReader.h:108:1, virtual at voffset 90/91\n        14 member function changes (7 filtered):\n          'method virtual vtkObjectBase* vtkCityGMLReader::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkCityGMLReader::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual int vtkCityGMLReader::RequestData(vtkInformation*, vtkInformationVector**, vtkInformationVector*)' has some sub-type changes:\n            the vtable offset of method virtual int vtkCityGMLReader::RequestData(vtkInformation*, vtkInformationVector**, vtkInformationVector*) changed from 75 to 74\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual void vtkCityGMLReader::SetFileName(const char*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkCityGMLReader::SetFileName(const char*) changed from 77 to 76\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual char* vtkCityGMLReader::GetFileName()' has some sub-type changes:\n            the vtable offset of method virtual char* vtkCityGMLReader::GetFileName() changed from 78 to 77\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual void vtkCityGMLReader::SetLOD(int)' has some sub-type changes:\n            the vtable offset of method virtual void vtkCityGMLReader::SetLOD(int) changed from 79 to 78\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual int vtkCityGMLReader::GetLODMinValue()' has some sub-type changes:\n            the vtable offset of method virtual int vtkCityGMLReader::GetLODMinValue() changed from 80 to 79\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual int vtkCityGMLReader::GetLODMaxValue()' has some sub-type changes:\n            the vtable offset of method virtual int vtkCityGMLReader::GetLODMaxValue() changed from 81 to 80\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual int vtkCityGMLReader::GetLOD()' has some sub-type changes:\n            the vtable offset of method virtual int vtkCityGMLReader::GetLOD() changed from 82 to 81\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual void vtkCityGMLReader::SetUseTransparencyAsOpacity(int)' has some sub-type changes:\n            the vtable offset of method virtual void vtkCityGMLReader::SetUseTransparencyAsOpacity(int) changed from 83 to 82\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual int vtkCityGMLReader::GetUseTransparencyAsOpacity()' has some sub-type changes:\n            the vtable offset of method virtual int vtkCityGMLReader::GetUseTransparencyAsOpacity() changed from 84 to 83\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual void vtkCityGMLReader::UseTransparencyAsOpacityOn()' has some sub-type changes:\n            the vtable offset of method virtual void vtkCityGMLReader::UseTransparencyAsOpacityOn() changed from 85 to 84\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual void vtkCityGMLReader::UseTransparencyAsOpacityOff()' has some sub-type changes:\n            the vtable offset of method virtual void vtkCityGMLReader::UseTransparencyAsOpacityOff() changed from 86 to 85\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual void vtkCityGMLReader::SetNumberOfBuildings(int)' has some sub-type changes:\n            the vtable offset of method virtual void vtkCityGMLReader::SetNumberOfBuildings(int) changed from 87 to 86\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n          'method virtual int vtkCityGMLReader::GetNumberOfBuildings()' has some sub-type changes:\n            the vtable offset of method virtual int vtkCityGMLReader::GetNumberOfBuildings() changed from 88 to 87\n              note that this is an ABI incompatible change to the vtable of class vtkCityGMLReader\n        2 data member insertions:\n          'int BeginBuildingIndex', at offset 1312 (in bits) at vtkCityGMLReader.h:122:1\n          'int EndBuildingIndex', at offset 1344 (in bits) at vtkCityGMLReader.h:123:1\n        1 data member change:\n          'vtkCityGMLReader::Implementation* Impl' offset changed from 1344 to 1408 (in bits) (by +64 bits)\n\n",
+                    "return_code": 12,
+                    "seconds": 21.042943239212036,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOCityGML.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOCityGML.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOCityGML.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOCityGML.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOCityGML.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOCityGML.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOCityGML.so.9.0.3-abi-laboratory-libvtkIOCityGML-so-9-0-3-libvtkIOCityGML-so-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.23402881622314453,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOCityGML.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOCityGML.so.9.1.0 libvtkIOCityGML-so-9-0-3-libvtkIOCityGML-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOCityGML.so.9.0.3-abi-laboratory-libvtkIOCityGML-so-9-0-3-libvtkIOCityGML-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOCityGML.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOCityGML.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOCityGML.so.9.0.3": 136824,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOCityGML.so.9.1.0": 141632
+            }
+        },
+        "experiment": "usr/lib64/libvtkIOCityGML-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOCityGML.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOCityGML.so.9.0.3",
+        "different_libs": true
+    }
+]

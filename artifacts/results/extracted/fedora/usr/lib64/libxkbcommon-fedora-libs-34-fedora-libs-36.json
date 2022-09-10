@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxkbcommon.so.0.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxkbcommon.so.0.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxkbcommon.so.0.0.0",
+                    "spliced_lib": "libxkbcommon.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 4.506111145019531e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libxkbcommon.so.0.0.0",
+                    "spliced_lib": "libxkbcommon.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.462501525878906e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.07069182395935059,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxkbcommon.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxkbcommon.so.0.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxkbcommon.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxkbcommon.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxkbcommon.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxkbcommon.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxkbcommon.so.0.0.0-abi-laboratory-libxkbcommon-so-0-0-0-libxkbcommon-so-0-0-0.html\nFound link to libxkbcommon.so.0.0.0-1.3.0-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libxkbcommon.so.0.0.0-1.3.0-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libxkbcommon-1.3.0-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 24723\nERROR: incomplete info for symbol 24749\nERROR: incomplete info for symbol 24775\nERROR: incomplete info for symbol 24944\nERROR: incomplete info for symbol 24970\nERROR: incomplete info for symbol 25022\nERROR: incomplete info for symbol 25061\nERROR: incomplete info for symbol 25087\nERROR: incomplete info for symbol 58067\nERROR: incomplete info for symbol 58459\nERROR: incomplete info for symbol 58605\nERROR: incomplete info for symbol 58707\nERROR: incomplete info for symbol 59035\nERROR: incomplete info for symbol 59290\nERROR: incomplete info for symbol 149116\nERROR: incomplete info for symbol 149214\nERROR: incomplete info for symbol 149240\nERROR: incomplete info for symbol 149303\nERROR: incomplete info for symbol 149596\nERROR: incomplete info for symbol 149835\nERROR: incomplete info for symbol 149874\nERROR: incomplete info for symbol 149900\nERROR: incomplete info for symbol 149933\nERROR: incomplete info for symbol 149959\nERROR: incomplete info for symbol 149992\nERROR: incomplete info for symbol 150018\nERROR: incomplete info for symbol 150172\nERROR: incomplete info for symbol 150767\nERROR: incomplete info for symbol 151384\nERROR: incomplete info for symbol 151455\nERROR: incomplete info for symbol 153107\nERROR: incomplete info for symbol 154026\nERROR: incomplete info for symbol 155789\nERROR: incomplete info for symbol 155883\nERROR: incomplete info for symbol 155977\nERROR: incomplete info for symbol 156128\nERROR: incomplete info for symbol 156226\nERROR: incomplete info for symbol 156419\nERROR: incomplete info for symbol 156445\nERROR: incomplete info for symbol 156879\nERROR: incomplete info for symbol 159839\nERROR: incomplete info for symbol 160153\nERROR: incomplete info for symbol 160286\nERROR: incomplete info for symbol 160581\nERROR: incomplete info for symbol 160747\nERROR: incomplete info for symbol 160773\nERROR: incomplete info for symbol 161011\nERROR: incomplete info for symbol 161265\nERROR: incomplete info for symbol 161291\nERROR: incomplete info for symbol 161529\nERROR: incomplete info for symbol 161701\nERROR: incomplete info for symbol 161808\nERROR: incomplete info for symbol 162012\nERROR: incomplete info for symbol 162038\nERROR: incomplete info for symbol 162276\nERROR: incomplete info for symbol 162460\nERROR: incomplete info for symbol 162881\nERROR: incomplete info for symbol 165750\nERROR: incomplete info for symbol 165776\nERROR: incomplete info for symbol 165802\nERROR: incomplete info for symbol 165895\nERROR: incomplete info for symbol 166203\nERROR: incomplete info for symbol 166462\nERROR: incomplete info for symbol 166782\nERROR: incomplete info for symbol 167135\nERROR: incomplete info for symbol 168274\nERROR: incomplete info for symbol 168364\nERROR: incomplete info for symbol 168390\nERROR: incomplete info for symbol 168504\nERROR: incomplete info for symbol 168530\nERROR: incomplete info for symbol 169269\nERROR: incomplete info for symbol 169759\nERROR: incomplete info for symbol 169940\nERROR: incomplete info for symbol 170060\nERROR: incomplete info for symbol 170180\nERROR: incomplete info for symbol 170343\nERROR: incomplete info for symbol 170615\nERROR: incomplete info for symbol 170733\nERROR: incomplete info for symbol 171005\nERROR: incomplete info for symbol 171064\nERROR: incomplete info for symbol 171182\nERROR: incomplete info for symbol 171221\nERROR: incomplete info for symbol 171319\nERROR: incomplete info for symbol 171501\nERROR: incomplete info for symbol 171743\nERROR: incomplete info for symbol 172467\nERROR: incomplete info for symbol 172706\nERROR: incomplete info for symbol 172853\nERROR: incomplete info for symbol 173140\nERROR: incomplete info for symbol 175445\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-QtGSy.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libxkbcommon.so.0.0.0-1.4.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxkbcommon.so.0.0.0-1.4.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libxkbcommon-1.4.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 24677\nERROR: incomplete info for symbol 24703\nERROR: incomplete info for symbol 24729\nERROR: incomplete info for symbol 24898\nERROR: incomplete info for symbol 24924\nERROR: incomplete info for symbol 24976\nERROR: incomplete info for symbol 25015\nERROR: incomplete info for symbol 25041\nERROR: incomplete info for symbol 57159\nERROR: incomplete info for symbol 57544\nERROR: incomplete info for symbol 57688\nERROR: incomplete info for symbol 57788\nERROR: incomplete info for symbol 58107\nERROR: incomplete info for symbol 58438\nERROR: incomplete info for symbol 85111\nERROR: incomplete info for symbol 85209\nERROR: incomplete info for symbol 85235\nERROR: incomplete info for symbol 85298\nERROR: incomplete info for symbol 85324\nERROR: incomplete info for symbol 85563\nERROR: incomplete info for symbol 85602\nERROR: incomplete info for symbol 85628\nERROR: incomplete info for symbol 85661\nERROR: incomplete info for symbol 85687\nERROR: incomplete info for symbol 85720\nERROR: incomplete info for symbol 85746\nERROR: incomplete info for symbol 131913\nERROR: incomplete info for symbol 132526\nERROR: incomplete info for symbol 133166\nERROR: incomplete info for symbol 133240\nERROR: incomplete info for symbol 154645\nERROR: incomplete info for symbol 155564\nERROR: incomplete info for symbol 157335\nERROR: incomplete info for symbol 157429\nERROR: incomplete info for symbol 157523\nERROR: incomplete info for symbol 157671\nERROR: incomplete info for symbol 157769\nERROR: incomplete info for symbol 157956\nERROR: incomplete info for symbol 157982\nERROR: incomplete info for symbol 158153\nERROR: incomplete info for symbol 158179\nERROR: incomplete info for symbol 158407\nERROR: incomplete info for symbol 158661\nERROR: incomplete info for symbol 158687\nERROR: incomplete info for symbol 158915\nERROR: incomplete info for symbol 159081\nERROR: incomplete info for symbol 159188\nERROR: incomplete info for symbol 159393\nERROR: incomplete info for symbol 159419\nERROR: incomplete info for symbol 159647\nERROR: incomplete info for symbol 159826\nERROR: incomplete info for symbol 160242\nERROR: incomplete info for symbol 160489\nERROR: incomplete info for symbol 160515\nERROR: incomplete info for symbol 160541\nERROR: incomplete info for symbol 160634\nERROR: incomplete info for symbol 160932\nERROR: incomplete info for symbol 161176\nERROR: incomplete info for symbol 161495\nERROR: incomplete info for symbol 161843\nERROR: incomplete info for symbol 162972\nERROR: incomplete info for symbol 163062\nERROR: incomplete info for symbol 163088\nERROR: incomplete info for symbol 163114\nERROR: incomplete info for symbol 163852\nERROR: incomplete info for symbol 164341\nERROR: incomplete info for symbol 164522\nERROR: incomplete info for symbol 164642\nERROR: incomplete info for symbol 164762\nERROR: incomplete info for symbol 164925\nERROR: incomplete info for symbol 165197\nERROR: incomplete info for symbol 165315\nERROR: incomplete info for symbol 165587\nERROR: incomplete info for symbol 165646\nERROR: incomplete info for symbol 165764\nERROR: incomplete info for symbol 165803\nERROR: incomplete info for symbol 165901\nERROR: incomplete info for symbol 166083\nERROR: incomplete info for symbol 166325\nERROR: incomplete info for symbol 167048\nERROR: incomplete info for symbol 167287\nERROR: incomplete info for symbol 167434\nERROR: incomplete info for symbol 167662\nERROR: incomplete info for symbol 169945\nERROR: incomplete info for symbol 179161\nERROR: incomplete info for symbol 179600\nERROR: incomplete info for symbol 179968\nERROR: incomplete info for symbol 180940\nERROR: incomplete info for symbol 181344\nERROR: incomplete info for symbol 181477\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-4Hkcn.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxkbcommon.so.0.0.0-abi-laboratory-libxkbcommon-so-0-0-0-libxkbcommon-so-0-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 1.454728126525879,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxkbcommon.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxkbcommon.so.0.0.0 libxkbcommon-so-0-0-0-libxkbcommon-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxkbcommon.so.0.0.0-abi-laboratory-libxkbcommon-so-0-0-0-libxkbcommon-so-0-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxkbcommon.so.0.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxkbcommon.so.0.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxkbcommon.so.0.0.0": 297096,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxkbcommon.so.0.0.0": 297880
+            }
+        },
+        "experiment": "usr/lib64/libxkbcommon-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxkbcommon.so.0.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxkbcommon.so.0.0.0",
+        "different_libs": true
+    }
+]

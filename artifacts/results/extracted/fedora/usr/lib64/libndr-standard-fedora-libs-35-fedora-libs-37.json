@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr-standard.so.0.0.1"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr-standard.so.0.0.1"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libndr-standard.so.0.0.1",
+                    "spliced_lib": "libndr-standard.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0005996227264404297
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libndr-standard.so.0.0.1",
+                    "spliced_lib": "libndr-standard.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.03718423843383789
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (17 filtered out), 21 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n21 Added functions:\n\n  [A] 'function void ndr_print_netlogon_server_pipe_state(ndr_print*, const char*, const netlogon_server_pipe_state*)'    {ndr_print_netlogon_server_pipe_state@@NDR_STANDARD_0.0.1}\n  [A] 'function void ndr_print_samr_ChangePasswordUser4(ndr_print*, const char*, int, const samr_ChangePasswordUser4*)'    {ndr_print_samr_ChangePasswordUser4@@NDR_STANDARD_0.0.1}\n  [A] 'function void ndr_print_samr_EncryptedPasswordAES(ndr_print*, const char*, const samr_EncryptedPasswordAES*)'    {ndr_print_samr_EncryptedPasswordAES@@NDR_STANDARD_0.0.1}\n  [A] 'function void ndr_print_samr_Opnum68NotUsedOnWire(ndr_print*, const char*, int, const samr_Opnum68NotUsedOnWire*)'    {ndr_print_samr_Opnum68NotUsedOnWire@@NDR_STANDARD_0.0.1}\n  [A] 'function void ndr_print_samr_Opnum69NotUsedOnWire(ndr_print*, const char*, int, const samr_Opnum69NotUsedOnWire*)'    {ndr_print_samr_Opnum69NotUsedOnWire@@NDR_STANDARD_0.0.1}\n  [A] 'function void ndr_print_samr_Opnum70NotUsedOnWire(ndr_print*, const char*, int, const samr_Opnum70NotUsedOnWire*)'    {ndr_print_samr_Opnum70NotUsedOnWire@@NDR_STANDARD_0.0.1}\n  [A] 'function void ndr_print_samr_Opnum71NotUsedOnWire(ndr_print*, const char*, int, const samr_Opnum71NotUsedOnWire*)'    {ndr_print_samr_Opnum71NotUsedOnWire@@NDR_STANDARD_0.0.1}\n  [A] 'function void ndr_print_samr_Opnum72NotUsedOnWire(ndr_print*, const char*, int, const samr_Opnum72NotUsedOnWire*)'    {ndr_print_samr_Opnum72NotUsedOnWire@@NDR_STANDARD_0.0.1}\n  [A] 'function void ndr_print_samr_SupportedFeatures(ndr_print*, const char*, samr_SupportedFeatures)'    {ndr_print_samr_SupportedFeatures@@NDR_STANDARD_0.0.1}\n  [A] 'function void ndr_print_samr_UserInfo31(ndr_print*, const char*, const samr_UserInfo31*)'    {ndr_print_samr_UserInfo31@@NDR_STANDARD_0.0.1}\n  [A] 'function void ndr_print_samr_UserInfo32(ndr_print*, const char*, const samr_UserInfo32*)'    {ndr_print_samr_UserInfo32@@NDR_STANDARD_0.0.1}\n  [A] 'function ndr_err_code ndr_pull_netlogon_server_pipe_state(ndr_pull*, int, netlogon_server_pipe_state*)'    {ndr_pull_netlogon_server_pipe_state@@NDR_STANDARD_0.0.1}\n  [A] 'function ndr_err_code ndr_pull_netr_DomainTrust(ndr_pull*, int, netr_DomainTrust*)'    {ndr_pull_netr_DomainTrust@@NDR_STANDARD_0.0.1}\n  [A] 'function ndr_err_code ndr_pull_netr_DomainTrustList(ndr_pull*, int, netr_DomainTrustList*)'    {ndr_pull_netr_DomainTrustList@@NDR_STANDARD_0.0.1}\n  [A] 'function ndr_err_code ndr_pull_samr_ChangePasswordUser4(ndr_pull*, int, samr_ChangePasswordUser4*)'    {ndr_pull_samr_ChangePasswordUser4@@NDR_STANDARD_0.0.1}\n  [A] 'function ndr_err_code ndr_pull_samr_DomInfo1(ndr_pull*, int, samr_DomInfo1*)'    {ndr_pull_samr_DomInfo1@@NDR_STANDARD_0.0.1}\n  [A] 'function ndr_err_code ndr_push_netlogon_server_pipe_state(ndr_push*, int, const netlogon_server_pipe_state*)'    {ndr_push_netlogon_server_pipe_state@@NDR_STANDARD_0.0.1}\n  [A] 'function ndr_err_code ndr_push_netr_DomainTrust(ndr_push*, int, const netr_DomainTrust*)'    {ndr_push_netr_DomainTrust@@NDR_STANDARD_0.0.1}\n  [A] 'function ndr_err_code ndr_push_netr_DomainTrustList(ndr_push*, int, const netr_DomainTrustList*)'    {ndr_push_netr_DomainTrustList@@NDR_STANDARD_0.0.1}\n  [A] 'function ndr_err_code ndr_push_samr_ChangePasswordUser4(ndr_push*, int, const samr_ChangePasswordUser4*)'    {ndr_push_samr_ChangePasswordUser4@@NDR_STANDARD_0.0.1}\n  [A] 'function ndr_err_code ndr_push_samr_DomInfo1(ndr_push*, int, const samr_DomInfo1*)'    {ndr_push_samr_DomInfo1@@NDR_STANDARD_0.0.1}\n\n",
+                    "return_code": 4,
+                    "seconds": 1.7024774551391602,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr-standard.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr-standard.so.0.0.1",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr-standard.so.0.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr-standard.so.0.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr-standard.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr-standard.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr-standard.so.0.0.1-abi-laboratory-libndr-standard-so-0-0-1-libndr-standard-so-0-0-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.23972058296203613,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr-standard.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr-standard.so.0.0.1 libndr-standard-so-0-0-1-libndr-standard-so-0-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr-standard.so.0.0.1-abi-laboratory-libndr-standard-so-0-0-1-libndr-standard-so-0-0-1.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr-standard.so.0.0.1",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr-standard.so.0.0.1",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr-standard.so.0.0.1": 3795816,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr-standard.so.0.0.1": 3733872
+            }
+        },
+        "experiment": "usr/lib64/libndr-standard-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libndr-standard.so.0.0.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libndr-standard.so.0.0.1",
+        "different_libs": true
+    }
+]

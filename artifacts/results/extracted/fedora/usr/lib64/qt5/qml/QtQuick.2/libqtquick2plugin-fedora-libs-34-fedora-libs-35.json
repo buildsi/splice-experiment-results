@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqtquick2plugin.so",
+                    "spliced_lib": "libqtquick2plugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.528594970703125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libqtquick2plugin.so",
+                    "spliced_lib": "libqtquick2plugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.574920654296875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 1.562021255493164,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so-abi-laboratory-libqtquick2plugin-so-libqtquick2plugin-so.html\nFound link to libqtquick2plugin.so-5.15.2-7.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libqtquick2plugin.so-5.15.2-7.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/qml/QtQuick.2/../../../../../.dwz/qt5-qtdeclarative-5.15.2-7.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Quick.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-WJKq5.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqtquick2plugin.so-5.15.2-8.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libqtquick2plugin.so-5.15.2-8.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/qml/QtQuick.2/../../../../../.dwz/qt5-qtdeclarative-5.15.2-8.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Quick.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-a27F7.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so-abi-laboratory-libqtquick2plugin-so-libqtquick2plugin-so.html\n",
+                    "return_code": 0,
+                    "seconds": 56.7627809047699,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so libqtquick2plugin-so-libqtquick2plugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so-abi-laboratory-libqtquick2plugin-so-libqtquick2plugin-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so": 19800,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so": 20216
+            }
+        },
+        "experiment": "usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick.2/libqtquick2plugin.so",
+        "different_libs": true
+    }
+]

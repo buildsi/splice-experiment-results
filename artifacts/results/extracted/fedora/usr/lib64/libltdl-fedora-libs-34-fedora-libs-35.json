@@ -22,7 +22,7 @@
                         "stpcpy"
                     ],
                     "prediction": false,
-                    "seconds": 5.125999450683594e-05
+                    "seconds": 3.886222839355469e-05
                 },
                 {
                     "splice_type": "different_lib",
@@ -33,14 +33,14 @@
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.935264587402344e-05
+                    "seconds": 6.0558319091796875e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "Functions changes summary: 0 Removed, 1 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function int dlopen_LTX_get_vtable(...)' at dlopen.c:61:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'int' to 'lt_dlvtable*'\n      type size changed from 32 to 64 (in bits)\n    parameter 1 of type '...' changed:\n      entity changed from 'variadic parameter type' to 'typedef lt_user_data' at lt_dlloader.h:41:1\n      type size changed from 0 to 64 (in bits)\n\n",
                     "return_code": 4,
-                    "seconds": 0.029669523239135742,
+                    "seconds": 0.06688523292541504,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.1",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.1",
@@ -52,7 +52,7 @@
                 {
                     "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.1-abi-laboratory-libltdl-so-7-3-1-libltdl-so-7-3-1.html\n*** stack smashing detected ***: terminated\n",
                     "return_code": 134,
-                    "seconds": 0.189772367477417,
+                    "seconds": 0.3693709373474121,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.1 libltdl-so-7-3-1-libltdl-so-7-3-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.1-abi-laboratory-libltdl-so-7-3-1-libltdl-so-7-3-1.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libltdl.so.7.3.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libltdl.so.7.3.1",

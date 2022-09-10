@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libwizards.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libwizards.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libwizards.so",
+                    "spliced_lib": "libwizards.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00011324882507324219
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libwizards.so",
+                    "spliced_lib": "libwizards.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001380443572998047
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.5611903667449951,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libwizards.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libwizards.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libwizards.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libwizards.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libwizards.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libwizards.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libwizards.so-abi-laboratory-libwizards-so-libwizards-so.html\nFound link to libwizards.so-3.3.8b-90.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libwizards.so-3.3.8b-90.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt-3.3/plugins/designer/../../../../../.dwz/qt3-3.3.8b-90.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 58700\nERROR: incomplete info for symbol 58726\nERROR: incomplete info for symbol 58752\nERROR: incomplete info for symbol 58778\nERROR: incomplete info for symbol 58804\nERROR: incomplete info for symbol 60424\nERROR: incomplete info for symbol 62093\nERROR: incomplete info for symbol 62149\nERROR: incomplete info for symbol 62227\nERROR: incomplete info for symbol 62640\nERROR: incomplete info for symbol 62865\nERROR: incomplete info for symbol 63103\nERROR: incomplete info for symbol 63341\nERROR: incomplete info for symbol 63551\nERROR: incomplete info for symbol 67755\nERROR: incomplete info for symbol 77004\nERROR: incomplete info for symbol 112192\nERROR: incomplete info for symbol 112527\nERROR: incomplete info for symbol 112553\nERROR: incomplete info for symbol 112579\nERROR: incomplete info for symbol 112702\nERROR: incomplete info for symbol 112734\nERROR: incomplete info for symbol 113092\nERROR: incomplete info for symbol 113165\nERROR: incomplete info for symbol 113243\nERROR: incomplete info for symbol 113305\nERROR: incomplete info for symbol 113362\nERROR: incomplete info for symbol 113419\nERROR: incomplete info for symbol 113476\nERROR: incomplete info for symbol 113533\nERROR: incomplete info for symbol 113590\nERROR: incomplete info for symbol 113647\nERROR: incomplete info for symbol 113704\nERROR: incomplete info for symbol 113761\nERROR: incomplete info for symbol 113818\nERROR: incomplete info for symbol 113882\nERROR: incomplete info for symbol 113946\nERROR: incomplete info for symbol 175802\nERROR: incomplete info for symbol 176546\nERROR: incomplete info for symbol 176572\nERROR: incomplete info for symbol 176598\nERROR: incomplete info for symbol 179200\nERROR: incomplete info for symbol 179278\nERROR: incomplete info for symbol 179782\nERROR: incomplete info for symbol 179929\nERROR: incomplete info for symbol 180071\nERROR: incomplete info for symbol 180118\nERROR: incomplete info for symbol 180255\nERROR: incomplete info for symbol 180392\nERROR: incomplete info for symbol 180439\nERROR: incomplete info for symbol 190576\nERROR: incomplete info for symbol 190713\nERROR: incomplete info for symbol 241346\nERROR: incomplete info for symbol 241513\nERROR: incomplete info for symbol 241670\nERROR: incomplete info for symbol 241827\nERROR: incomplete info for symbol 242345\nERROR: incomplete info for symbol 242976\nERROR: incomplete info for symbol 243650\nERROR: incomplete info for symbol 243748\nERROR: incomplete info for symbol 243841\nERROR: incomplete info for symbol 243934\nERROR: incomplete info for symbol 244052\nERROR: incomplete info for symbol 244165\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-zYLLY.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libwizards.so-3.3.8b-91.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libwizards.so-3.3.8b-91.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt-3.3/plugins/designer/../../../../../.dwz/qt3-3.3.8b-91.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 58705\nERROR: incomplete info for symbol 58731\nERROR: incomplete info for symbol 58757\nERROR: incomplete info for symbol 58783\nERROR: incomplete info for symbol 58809\nERROR: incomplete info for symbol 60429\nERROR: incomplete info for symbol 62098\nERROR: incomplete info for symbol 62154\nERROR: incomplete info for symbol 62232\nERROR: incomplete info for symbol 62645\nERROR: incomplete info for symbol 62870\nERROR: incomplete info for symbol 63108\nERROR: incomplete info for symbol 63346\nERROR: incomplete info for symbol 63556\nERROR: incomplete info for symbol 67760\nERROR: incomplete info for symbol 77009\nERROR: incomplete info for symbol 112197\nERROR: incomplete info for symbol 112532\nERROR: incomplete info for symbol 112558\nERROR: incomplete info for symbol 112584\nERROR: incomplete info for symbol 112707\nERROR: incomplete info for symbol 112739\nERROR: incomplete info for symbol 113097\nERROR: incomplete info for symbol 113170\nERROR: incomplete info for symbol 113248\nERROR: incomplete info for symbol 113310\nERROR: incomplete info for symbol 113367\nERROR: incomplete info for symbol 113424\nERROR: incomplete info for symbol 113481\nERROR: incomplete info for symbol 113538\nERROR: incomplete info for symbol 113595\nERROR: incomplete info for symbol 113652\nERROR: incomplete info for symbol 113709\nERROR: incomplete info for symbol 113766\nERROR: incomplete info for symbol 113823\nERROR: incomplete info for symbol 113887\nERROR: incomplete info for symbol 113951\nERROR: incomplete info for symbol 175881\nERROR: incomplete info for symbol 176625\nERROR: incomplete info for symbol 176651\nERROR: incomplete info for symbol 176677\nERROR: incomplete info for symbol 179279\nERROR: incomplete info for symbol 179357\nERROR: incomplete info for symbol 179861\nERROR: incomplete info for symbol 180008\nERROR: incomplete info for symbol 180150\nERROR: incomplete info for symbol 180197\nERROR: incomplete info for symbol 180334\nERROR: incomplete info for symbol 180471\nERROR: incomplete info for symbol 180518\nERROR: incomplete info for symbol 190655\nERROR: incomplete info for symbol 190792\nERROR: incomplete info for symbol 241469\nERROR: incomplete info for symbol 241636\nERROR: incomplete info for symbol 241793\nERROR: incomplete info for symbol 241950\nERROR: incomplete info for symbol 242468\nERROR: incomplete info for symbol 243099\nERROR: incomplete info for symbol 243773\nERROR: incomplete info for symbol 243871\nERROR: incomplete info for symbol 243964\nERROR: incomplete info for symbol 244057\nERROR: incomplete info for symbol 244175\nERROR: incomplete info for symbol 244288\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-dORtW.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libwizards.so-abi-laboratory-libwizards-so-libwizards-so.html\n",
+                    "return_code": 0,
+                    "seconds": 13.124141454696655,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libwizards.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libwizards.so libwizards-so-libwizards-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libwizards.so-abi-laboratory-libwizards-so-libwizards-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libwizards.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libwizards.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libwizards.so": 292928,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libwizards.so": 292936
+            }
+        },
+        "experiment": "usr/lib64/qt-3.3/plugins/designer/libwizards-fedora-libs-36-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libwizards.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libwizards.so",
+        "different_libs": true
+    }
+]
