@@ -15,50 +15,54 @@
                     "splice_type": "different_lib",
                     "original_lib": "libcmdline-contexts-samba4.so",
                     "spliced_lib": "libcmdline-contexts-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.2649765014648438e-05
+                    "seconds": 2.5033950805664062e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libcmdline-contexts-samba4.so",
                     "spliced_lib": "libcmdline-contexts-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.62939453125e-06
+                    "seconds": 6.4373016357421875e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.02017354965209961,
+                    "message": "Functions changes summary: 2 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 Removed functions:\n\n  [D] 'function messaging_context* cmdline_messaging_context(const char*)'    {cmdline_messaging_context@@SAMBA_4.14.12}\n  [D] 'function void cmdline_messaging_context_free()'    {cmdline_messaging_context_free@@SAMBA_4.14.12}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.0170285701751709,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcmdline-contexts-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcmdline-contexts-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcmdline-contexts-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so-abi-laboratory-libcmdline-contexts-samba4-so-libcmdline-contexts-samba4-so.html\nFound link to libcmdline-contexts-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcmdline-contexts-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Snxyt.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcmdline-contexts-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcmdline-contexts-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-dvp1t.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so-abi-laboratory-libcmdline-contexts-samba4-so-libcmdline-contexts-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 12.547933101654053,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcmdline-contexts-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so-abi-laboratory-libcmdline-contexts-samba4-so-libcmdline-contexts-samba4-so.html\nFound link to libcmdline-contexts-samba4.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libcmdline-contexts-samba4.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-x2sk7.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcmdline-contexts-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libcmdline-contexts-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-4uM4D.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 2, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so-abi-laboratory-libcmdline-contexts-samba4-so-libcmdline-contexts-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 11.378330945968628,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcmdline-contexts-samba4.so libcmdline-contexts-samba4-so-libcmdline-contexts-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so-abi-laboratory-libcmdline-contexts-samba4-so-libcmdline-contexts-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcmdline-contexts-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so": 16032,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcmdline-contexts-samba4.so": 16032
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcmdline-contexts-samba4.so": 11616,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcmdline-contexts-samba4.so": 16040
             }
         },
         "experiment": "usr/lib64/samba/libcmdline-contexts-samba4-fedora-libs-34-fedora-libs-37",

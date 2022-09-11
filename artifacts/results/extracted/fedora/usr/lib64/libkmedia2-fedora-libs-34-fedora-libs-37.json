@@ -15,50 +15,58 @@
                     "splice_type": "different_lib",
                     "original_lib": "libkmedia2.so.1.0.0",
                     "spliced_lib": "libkmedia2.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 5.91278076171875e-05
+                    "message": [
+                        "abort",
+                        "_ZSt19__throw_logic_errorPKc",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.009506225585938e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libkmedia2.so.1.0.0",
                     "spliced_lib": "libkmedia2.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.867813110351562e-06
+                    "seconds": 9.059906005859375e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed (2 filtered out), 0 Added variables\n\n",
                     "return_code": 0,
-                    "seconds": 0.24674201011657715,
+                    "seconds": 0.26307201385498047,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkmedia2.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkmedia2.so.1.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkmedia2.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkmedia2.so.1.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkmedia2.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkmedia2.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkmedia2.so.1.0.0-abi-laboratory-libkmedia2-so-1-0-0-libkmedia2-so-1-0-0.html\nFound link to libkmedia2.so.1.0.0-1.5.10-52.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkmedia2.so.1.0.0-1.5.10-52.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/arts-1.5.10-52.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkmedia2_idl.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-peZxF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkmedia2.so.1.0.0-1.5.10-52.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkmedia2.so.1.0.0-1.5.10-52.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/arts-1.5.10-52.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkmedia2_idl.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-046ol.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkmedia2.so.1.0.0-abi-laboratory-libkmedia2-so-1-0-0-libkmedia2-so-1-0-0.html\n",
-                    "return_code": 0,
-                    "seconds": 3.0179877281188965,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkmedia2.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkmedia2.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkmedia2.so.1.0.0-abi-laboratory-libkmedia2-so-1-0-0-libkmedia2-so-1-0-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.19144558906555176,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkmedia2.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkmedia2.so.1.0.0 libkmedia2-so-1-0-0-libkmedia2-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkmedia2.so.1.0.0-abi-laboratory-libkmedia2-so-1-0-0-libkmedia2-so-1-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkmedia2.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkmedia2.so.1.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkmedia2.so.1.0.0": 82024,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkmedia2.so.1.0.0": 82024
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkmedia2.so.1.0.0": 82016,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkmedia2.so.1.0.0": 82040
             }
         },
         "experiment": "usr/lib64/libkmedia2-fedora-libs-34-fedora-libs-37",

@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "pam_permit.so",
                     "spliced_lib": "pam_permit.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.9311904907226562e-05
+                    "seconds": 2.6702880859375e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "pam_permit.so",
                     "spliced_lib": "pam_permit.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.198883056640625e-06
+                    "seconds": 8.344650268554688e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.010280847549438477,
+                    "seconds": 0.009596109390258789,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_permit.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_permit.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_permit.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_permit.so",
@@ -44,13 +48,13 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_permit.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_permit.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_permit.so-abi-laboratory-pam_permit-so-pam_permit-so.html\nFound link to pam_permit.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_permit.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-V6It0.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_permit.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_permit.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-aO0US.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_permit.so-abi-laboratory-pam_permit-so-pam_permit-so.html\n",
-                    "return_code": 0,
-                    "seconds": 0.5095806121826172,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_permit.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_permit.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_permit.so-abi-laboratory-pam_permit-so-pam_permit-so.html\nFound link to pam_permit.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_permit.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-6GVPb.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_permit.so-1.5.2-12.fc37.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file pam_permit.so-1.5.2-12.fc37.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.3476235866546631,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_permit.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_permit.so pam_permit-so-pam_permit-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_permit.so-abi-laboratory-pam_permit-so-pam_permit-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_permit.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_permit.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]

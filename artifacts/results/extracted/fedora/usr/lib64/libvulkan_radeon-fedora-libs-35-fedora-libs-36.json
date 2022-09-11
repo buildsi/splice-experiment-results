@@ -1,0 +1,105 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvulkan_radeon.so",
+                    "spliced_lib": "libvulkan_radeon.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "LLVMIsAConstantFP",
+                        "amdgpu_cs_syncobj_timeline_signal",
+                        "LLVMGetNextBasicBlock",
+                        "amdgpu_cs_create_syncobj",
+                        "amdgpu_cs_syncobj_timeline_wait",
+                        "LLVMGetFirstBasicBlock",
+                        "LLVMConstRealGetDouble",
+                        "LLVMGetValueName",
+                        "LLVMInstructionEraseFromParent",
+                        "LLVMBuildPointerCast",
+                        "LLVMGetCalledValue",
+                        "LLVMIsUndef",
+                        "LLVMGetNextInstruction",
+                        "amdgpu_cs_syncobj_query",
+                        "amdgpu_cs_syncobj_reset",
+                        "LLVMGetTypeContext",
+                        "LLVMGetInstructionOpcode",
+                        "__tls_get_addr",
+                        "printf",
+                        "amdgpu_cs_export_syncobj",
+                        "amdgpu_cs_syncobj_signal",
+                        "amdgpu_cs_import_syncobj",
+                        "LLVMCountParams",
+                        "_ZNK4llvm10DataLayout14getPointerSizeEj",
+                        "LLVMGetValueKind",
+                        "amdgpu_cs_syncobj_wait",
+                        "LLVMGetOperand",
+                        "LLVMSetOperand",
+                        "LLVMBuildCall"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00019669532775878906
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvulkan_radeon.so",
+                    "spliced_lib": "libvulkan_radeon.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.0728836059570312e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 20.301256895065308,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so-abi-laboratory-libvulkan_radeon-so-libvulkan_radeon-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2515714168548584,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so libvulkan_radeon-so-libvulkan_radeon-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so-abi-laboratory-libvulkan_radeon-so-libvulkan_radeon-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so": 8848080,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so": 7202736
+            }
+        },
+        "experiment": "usr/lib64/libvulkan_radeon-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvulkan_radeon.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvulkan_radeon.so",
+        "different_libs": true
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkexodusII.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkexodusII.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkexodusII.so.9.0.3",
+                    "spliced_lib": "libvtkexodusII.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "fputc",
+                        "exodus_unused_symbol_dummy_ex_create_par",
+                        "exodus_unused_symbol_dummy_ex_open_par",
+                        "EX_first_init_g",
+                        "EX_errval_key_g",
+                        "ex_errval",
+                        "ne_ret_string",
+                        "EX_g"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0001544952392578125
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkexodusII.so.9.0.3",
+                    "spliced_lib": "libvtkexodusII.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "EX_first_init_g",
+                        "exodus_unused_symbol_dummy_ex_open_par",
+                        "ne_ret_string",
+                        "EX_errval_key_g",
+                        "EX_g",
+                        "ex_errval",
+                        "exodus_unused_symbol_dummy_ex_create_par"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0010128021240234375
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 6 Changed (95 filtered out), 26 Added functions\nVariables changes summary: 4 Removed, 0 Changed, 5 Added variables\nFunction symbols changes summary: 0 Removed, 0 Added function symbol not referenced by debug info\nVariable symbols changes summary: 3 Removed, 3 Added variable symbols not referenced by debug info\n\n26 Added functions:\n\n  [A] 'function int vtkexodusII_ex__check_multiple_open(const char*, int, const char*)'    {vtkexodusII_ex__check_multiple_open}\n  [A] 'function char* vtkexodusII_ex__name_red_var_of_object(ex_entity_type, int)'    {vtkexodusII_ex__name_red_var_of_object}\n  [A] 'function int vtkexodusII_ex__put_homogenous_block_params(int, size_t, const ex_block*)'    {vtkexodusII_ex__put_homogenous_block_params}\n  [A] 'function void vtkexodusII_ex__set_compact_storage(int, int)'    {vtkexodusII_ex__set_compact_storage}\n  [A] 'function const char* vtkexodusII_ex_config()'    {vtkexodusII_ex_config}\n  [A] 'function int vtkexodusII_ex_get_assemblies(int, ex_assembly*)'    {vtkexodusII_ex_get_assemblies}\n  [A] 'function int vtkexodusII_ex_get_assembly(int, ex_assembly*)'    {vtkexodusII_ex_get_assembly}\n  [A] 'function int vtkexodusII_ex_get_attribute(int, ex_attribute*)'    {vtkexodusII_ex_get_attribute}\n  [A] 'function int vtkexodusII_ex_get_attribute_count(int, ex_entity_type, ex_entity_id)'    {vtkexodusII_ex_get_attribute_count}\n  [A] 'function int vtkexodusII_ex_get_attribute_param(int, ex_entity_type, ex_entity_id, ex_attribute*)'    {vtkexodusII_ex_get_attribute_param}\n  [A] 'function int vtkexodusII_ex_get_attributes(int, size_t, ex_attribute*)'    {vtkexodusII_ex_get_attributes}\n  [A] 'function int vtkexodusII_ex_get_blob(int, ex_blob*)'    {vtkexodusII_ex_get_blob}\n  [A] 'function int vtkexodusII_ex_get_blobs(int, ex_blob*)'    {vtkexodusII_ex_get_blobs}\n  [A] 'function int vtkexodusII_ex_get_reduction_variable_names(int, ex_entity_type, int, char**)'    {vtkexodusII_ex_get_reduction_variable_names}\n  [A] 'function int vtkexodusII_ex_get_reduction_variable_param(int, ex_entity_type, int*)'    {vtkexodusII_ex_get_reduction_variable_param}\n  [A] 'function int vtkexodusII_ex_get_reduction_vars(int, int, ex_entity_type, ex_entity_id, int64_t, void*)'    {vtkexodusII_ex_get_reduction_vars}\n  [A] 'function int vtkexodusII_ex_put_assemblies(int, size_t, const ex_assembly*)'    {vtkexodusII_ex_put_assemblies}\n  [A] 'function int vtkexodusII_ex_put_attribute(int, ex_attribute)'    {vtkexodusII_ex_put_attribute}\n  [A] 'function int vtkexodusII_ex_put_attributes(int, size_t, ex_attribute*)'    {vtkexodusII_ex_put_attributes}\n  [A] 'function int vtkexodusII_ex_put_blobs(int, size_t, const ex_blob*)'    {vtkexodusII_ex_put_blobs}\n  [A] 'function int vtkexodusII_ex_put_double_attribute(int, ex_entity_type, ex_entity_id, const char*, int, double*)'    {vtkexodusII_ex_put_double_attribute}\n  [A] 'function int vtkexodusII_ex_put_integer_attribute(int, ex_entity_type, ex_entity_id, const char*, int, void_int*)'    {vtkexodusII_ex_put_integer_attribute}\n  [A] 'function int vtkexodusII_ex_put_reduction_variable_names(int, ex_entity_type, int, char**)'    {vtkexodusII_ex_put_reduction_variable_names}\n  [A] 'function int vtkexodusII_ex_put_reduction_variable_param(int, ex_entity_type, int)'    {vtkexodusII_ex_put_reduction_variable_param}\n  [A] 'function int vtkexodusII_ex_put_reduction_vars(int, int, ex_entity_type, ex_entity_id, int64_t, void*)'    {vtkexodusII_ex_put_reduction_vars}\n  [A] 'function int vtkexodusII_ex_put_text_attribute(int, ex_entity_type, ex_entity_id, const char*, const char*)'    {vtkexodusII_ex_put_text_attribute}\n\n6 functions with some indirect sub-type change:\n\n  [C] 'function void vtkexodusII_ex__check_valid_file_id(int, const char*)' at ex_conv.c:75:1 has some indirect sub-type changes:\n    return type changed:\n      type name changed from 'void' to 'int'\n      type size changed from 0 to 32 (in bits)\n\n  [C] 'function int vtkexodusII_ex__conv_init(int, int*, int*, int, int, int, int, int)' at ex_conv.c:110:1 has some indirect sub-type changes:\n    parameter 6 of type 'int' changed:\n      type name changed from 'int' to 'bool'\n      type size changed from 32 to 8 (in bits)\n    parameter 7 of type 'int' changed:\n      type name changed from 'int' to 'bool'\n      type size changed from 32 to 8 (in bits)\n    parameter 8 of type 'int' changed:\n      type name changed from 'int' to 'bool'\n      type size changed from 32 to 8 (in bits)\n    parameter 9 of type 'bool' was added\n\n  [C] 'function ex__file_item* vtkexodusII_ex__find_file_item(int)' at ex_conv.c:29:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'struct ex__file_item' at exodusII_int.h:683:1:\n        type size changed from 256 to 320 (in bits)\n        4 data member insertions:\n          'unsigned int assembly_count', at offset 160 (in bits) at exodusII_int.h:690:1\n          'unsigned int blob_count', at offset 192 (in bits) at exodusII_int.h:691:1\n          'unsigned int compression_algorithm', at offset 224 (in bits) at exodusII_int.h:693:1\n          'unsigned int is_write', at offset 236 (in bits) at exodusII_int.h:700:1\n        12 data member changes:\n          'unsigned int compression_level' offset changed from 160 to 226 (in bits) (by +66 bits)\n          'unsigned int user_compute_wordsize' offset changed from 164 to 232 (in bits) (by +68 bits)\n          'unsigned int shuffle' offset changed from 165 to 233 (in bits) (by +68 bits)\n          'unsigned int file_type' offset changed from 166 to 234 (in bits) (by +68 bits)\n          'unsigned int is_parallel' offset changed from 168 to 237 (in bits) (by +69 bits)\n          'unsigned int is_hdf5' offset changed from 169 to 238 (in bits) (by +69 bits)\n          'unsigned int is_pnetcdf' offset changed from 170 to 239 (in bits) (by +69 bits)\n          'unsigned int has_nodes' offset changed from 171 to 240 (in bits) (by +69 bits)\n          'unsigned int has_edges' offset changed from 172 to 241 (in bits) (by +69 bits)\n          'unsigned int has_faces' offset changed from 173 to 242 (in bits) (by +69 bits)\n          'unsigned int has_elems' offset changed from 174 to 243 (in bits) (by +69 bits)\n          'ex__file_item* next' offset changed from 192 to 256 (in bits) (by +64 bits)\n\n  [C] 'function int vtkexodusII_ex__mutex_unlock(EX_mutex_t*)' at ex_threadsafe.c:72:1 has some indirect sub-type changes:\n    parameter 2 of type 'const char*' was added\n    parameter 3 of type 'int' was added\n\n  [C] 'function int vtkexodusII_ex_get_init_ext(int, ex_init_params*)' at ex_get_init_ext.c:77:1 has some indirect sub-type changes:\n    parameter 2 of type 'ex_init_params*' has sub-type changes:\n      in pointed to type 'typedef ex_init_params' at exodusII.h:368:1:\n        underlying type 'struct ex_init_params' at exodusII.h:332:1 changed:\n          type size changed from 1792 to 1920 (in bits)\n          2 data member insertions:\n            'int64_t num_assembly', at offset 1792 (in bits) at exodusII.h:366:1\n            'int64_t num_blob', at offset 1856 (in bits) at exodusII.h:367:1\n\n  [C] 'function EX_errval_t* vtkexodusII_exerrval_get()' at ex_threadsafe.c:84:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'typedef EX_errval_t' at exodusII.h:1775:1:\n        underlying type 'struct EX_errval' at exodusII.h:1657:1 changed:\n          type size changed from 4160 to 8256 (in bits)\n          3 data member changes:\n            'char last_pname[256]' size changed from 2048 to 4096 (in bits) (by +2048 bits)\n            type of 'char last_errmsg[256]' changed:\n              type name changed from 'char[256]' to 'char[512]'\n              array type size changed from 2048 to 4096\n              array type subrange 1 changed length from 256 to 512\n            and offset changed from 2080 to 4128 (in bits) (by +2048 bits)\n            'int last_err_num' offset changed from 4128 to 8224 (in bits) (by +4096 bits)\n\n4 Removed variables:\n\n  [D] 'pthread_key_t EX_errval_key_g'    {EX_errval_key_g}\n  [D] 'const char exodus_unused_symbol_dummy_ex_create_par'    {exodus_unused_symbol_dummy_ex_create_par}\n  [D] 'const char exodus_unused_symbol_dummy_ex_open_par'    {exodus_unused_symbol_dummy_ex_open_par}\n  [D] 'char* ne_ret_string'    {ne_ret_string}\n\n5 Added variables:\n\n  [A] 'pthread_key_t vtkexodusII_EX_errval_key_g'    {vtkexodusII_EX_errval_key_g}\n  [A] 'ex__obj_stats* vtkexodusII_exoII_ass'    {vtkexodusII_exoII_ass}\n  [A] 'const char vtkexodusII_exodus_unused_symbol_dummy_ex_create_par'    {vtkexodusII_exodus_unused_symbol_dummy_ex_create_par}\n  [A] 'const char vtkexodusII_exodus_unused_symbol_dummy_ex_open_par'    {vtkexodusII_exodus_unused_symbol_dummy_ex_open_par}\n  [A] 'char* vtkexodusII_ne_ret_string'    {vtkexodusII_ne_ret_string}\n\n3 Removed variable symbols not referenced by debug info:\n\n  [D] EX_first_init_g\n  [D] EX_g\n  [D] ex_errval\n\n3 Added variable symbols not referenced by debug info:\n\n  [A] vtkexodusII_EX_first_init_g\n  [A] vtkexodusII_EX_g\n  [A] vtkexodusII_ex_errval\n\n",
+                    "return_code": 12,
+                    "seconds": 0.25754880905151367,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkexodusII.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkexodusII.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkexodusII.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkexodusII.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkexodusII.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkexodusII.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkexodusII.so.9.0.3-abi-laboratory-libvtkexodusII-so-9-0-3-libvtkexodusII-so-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.25963282585144043,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkexodusII.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkexodusII.so.9.1.0 libvtkexodusII-so-9-0-3-libvtkexodusII-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkexodusII.so.9.0.3-abi-laboratory-libvtkexodusII-so-9-0-3-libvtkexodusII-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkexodusII.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkexodusII.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkexodusII.so.9.0.3": 438736,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkexodusII.so.9.1.0": 545536
+            }
+        },
+        "experiment": "usr/lib64/libvtkexodusII-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkexodusII.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkexodusII.so.9.0.3",
+        "different_libs": true
+    }
+]

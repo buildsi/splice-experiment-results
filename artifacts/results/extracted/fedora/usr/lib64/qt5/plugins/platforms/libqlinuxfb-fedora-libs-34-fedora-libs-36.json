@@ -15,38 +15,45 @@
                     "splice_type": "different_lib",
                     "original_lib": "libqlinuxfb.so",
                     "spliced_lib": "libqlinuxfb.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 0.00017023086547851562
+                    "message": [
+                        "printf",
+                        "abort"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00024271011352539062
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libqlinuxfb.so",
                     "spliced_lib": "libqlinuxfb.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.152557373046875e-06
+                    "seconds": 9.775161743164062e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (1 filtered out), 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
                     "return_code": 0,
-                    "seconds": 8.003321886062622,
+                    "seconds": 9.589176893234253,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so-abi-laboratory-libqlinuxfb-so-libqlinuxfb-so.html\nFound link to libqlinuxfb.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqlinuxfb.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibinput.so.10: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-0aN96.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqlinuxfb.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqlinuxfb.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibinput.so.10: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Bg3QF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so-abi-laboratory-libqlinuxfb-so-libqlinuxfb-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so-abi-laboratory-libqlinuxfb-so-libqlinuxfb-so.html\nFound link to libqlinuxfb.so-5.15.2-30.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libqlinuxfb.so-5.15.2-30.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtbase-5.15.2-30.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibinput.so.10: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-t8llX.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqlinuxfb.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqlinuxfb.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibinput.so.10: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-fSVyB.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so-abi-laboratory-libqlinuxfb-so-libqlinuxfb-so.html\n",
                     "return_code": 0,
-                    "seconds": 206.39836883544922,
+                    "seconds": 227.79102039337158,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so libqlinuxfb-so-libqlinuxfb-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so-abi-laboratory-libqlinuxfb-so-libqlinuxfb-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so",
@@ -57,7 +64,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so": 505920,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so": 509784,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqlinuxfb.so": 505920
             }
         },

@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libmodelsplugin.so",
                     "spliced_lib": "libmodelsplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.6464462280273438e-05
+                    "seconds": 2.7179718017578125e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libmodelsplugin.so",
                     "spliced_lib": "libmodelsplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.76837158203125e-06
+                    "seconds": 6.67572021484375e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.9760921001434326,
+                    "seconds": 0.88858962059021,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so-abi-laboratory-libmodelsplugin-so-libmodelsplugin-so.html\nFound link to libmodelsplugin.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libmodelsplugin.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/qml/QtQml/Models.2/../../../../../../.dwz/qt5-qtdeclarative-5.15.5-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5QmlModels.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-X6X1z.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libmodelsplugin.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libmodelsplugin.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/qml/QtQml/Models.2/../../../../../../.dwz/qt5-qtdeclarative-5.15.5-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5QmlModels.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-nCTH0.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so-abi-laboratory-libmodelsplugin-so-libmodelsplugin-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so-abi-laboratory-libmodelsplugin-so-libmodelsplugin-so.html\nFound link to libmodelsplugin.so-5.15.2-7.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libmodelsplugin.so-5.15.2-7.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/qml/QtQml/Models.2/../../../../../../.dwz/qt5-qtdeclarative-5.15.2-7.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5QmlModels.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-6i3OE.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libmodelsplugin.so-5.15.5-2.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libmodelsplugin.so-5.15.5-2.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/qml/QtQml/Models.2/../../../../../../.dwz/qt5-qtdeclarative-5.15.5-2.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5QmlModels.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-zo9AN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so-abi-laboratory-libmodelsplugin-so-libmodelsplugin-so.html\n",
                     "return_code": 0,
-                    "seconds": 42.58818817138672,
+                    "seconds": 42.23425912857056,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so libmodelsplugin-so-libmodelsplugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so-abi-laboratory-libmodelsplugin-so-libmodelsplugin-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so": 20952,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so": 19744,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/Models.2/libmodelsplugin.so": 20952
             }
         },

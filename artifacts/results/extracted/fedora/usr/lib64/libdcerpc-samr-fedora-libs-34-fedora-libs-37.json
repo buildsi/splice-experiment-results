@@ -15,15 +15,21 @@
                     "splice_type": "different_lib",
                     "original_lib": "libdcerpc-samr.so.0.0.1",
                     "spliced_lib": "libdcerpc-samr.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": true,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 1.621246337890625e-05
+                    "message": [
+                        "__cxa_finalize"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.8596649169921875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libdcerpc-samr.so.0.0.1",
                     "spliced_lib": "libdcerpc-samr.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": true,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
@@ -34,7 +40,7 @@
                 {
                     "message": "/usr/local/bin/abidiff: failed to read input file /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1\n/usr/local/bin/abidiff: could not find the ELF symbols in the file '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1'\n",
                     "return_code": 1,
-                    "seconds": 0.007936477661132812,
+                    "seconds": 0.007071495056152344,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-samr.so.0.0.1",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-samr.so.0.0.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1",
@@ -44,9 +50,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-samr.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1-abi-laboratory-libdcerpc-samr-so-0-0-1-libdcerpc-samr-so-0-0-1.html\nFound link to libdcerpc-samr.so.0.0.1-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdcerpc-samr.so.0.0.1-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
-                    "return_code": 12,
-                    "seconds": 5.845297336578369,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-samr.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1-abi-laboratory-libdcerpc-samr-so-0-0-1-libdcerpc-samr-so-0-0-1.html\n/usr/bin/perl: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_ABI_DT_RELR' not found (required by /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6)\n",
+                    "return_code": 1,
+                    "seconds": 0.008624076843261719,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-samr.so.0.0.1 libdcerpc-samr-so-0-0-1-libdcerpc-samr-so-0-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1-abi-laboratory-libdcerpc-samr-so-0-0-1-libdcerpc-samr-so-0-0-1.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-samr.so.0.0.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1",
@@ -57,8 +63,8 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1": 15232,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-samr.so.0.0.1": 15232
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-samr.so.0.0.1": 7304,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-samr.so.0.0.1": 15248
             }
         },
         "experiment": "usr/lib64/libdcerpc-samr-fedora-libs-34-fedora-libs-37",

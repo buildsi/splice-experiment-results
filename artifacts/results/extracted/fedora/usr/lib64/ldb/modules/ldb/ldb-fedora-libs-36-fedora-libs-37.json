@@ -15,42 +15,46 @@
                     "splice_type": "different_lib",
                     "original_lib": "ldb.so",
                     "spliced_lib": "ldb.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.0503997802734375e-05
+                    "seconds": 2.574920654296875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "ldb.so",
                     "spliced_lib": "ldb.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.62939453125e-06
+                    "seconds": 6.9141387939453125e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.01573491096496582,
+                    "message": "Functions changes summary: 1 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function int ldb_init_module(const char*)'    {ldb_init_module@@LDB_2.5.2_LDB}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.018945693969726562,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/ldb.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/ldb.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/ldb.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/ldb.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/ldb.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/ldb.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/ldb.so-abi-laboratory-ldb-so-ldb-so.html\nFound link to ldb.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file ldb.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Yx1nV.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to ldb.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file ldb.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-OKnVY.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/ldb.so-abi-laboratory-ldb-so-ldb-so.html\n",
-                    "return_code": 0,
-                    "seconds": 0.5002119541168213,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/ldb.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/ldb.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/ldb.so-abi-laboratory-ldb-so-ldb-so.html\nFound link to ldb.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file ldb.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-zaJ4Y.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to ldb.so-2.6.1-1.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file ldb.so-2.6.1-1.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.6.1-1.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-p5uoh.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 1, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/ldb.so-abi-laboratory-ldb-so-ldb-so.html\n",
+                    "return_code": 1,
+                    "seconds": 0.4990379810333252,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/ldb.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/ldb.so ldb-so-ldb-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/ldb.so-abi-laboratory-ldb-so-ldb-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/ldb.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/ldb.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
@@ -58,7 +62,7 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/ldb.so": 16016,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/ldb.so": 16016
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/ldb.so": 16008
             }
         },
         "experiment": "usr/lib64/ldb/modules/ldb/ldb-fedora-libs-36-fedora-libs-37",

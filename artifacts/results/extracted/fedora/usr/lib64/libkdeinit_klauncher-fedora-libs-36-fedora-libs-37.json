@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libkdeinit_klauncher.so",
                     "spliced_lib": "libkdeinit_klauncher.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00010919570922851562
+                    "seconds": 0.00015282630920410156
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libkdeinit_klauncher.so",
                     "spliced_lib": "libkdeinit_klauncher.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00025844573974609375
+                    "seconds": 0.00039196014404296875
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.5642871856689453,
+                    "seconds": 0.9158122539520264,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so-abi-laboratory-libkdeinit_klauncher-so-libkdeinit_klauncher-so.html\nFound link to libkdeinit_klauncher.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdeinit_klauncher.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 48500\nERROR: incomplete info for symbol 55434\nERROR: incomplete info for symbol 59121\nERROR: incomplete info for symbol 59767\nERROR: incomplete info for symbol 59801\nERROR: incomplete info for symbol 59828\nERROR: incomplete info for symbol 115324\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-HB3Ir.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkdeinit_klauncher.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdeinit_klauncher.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 48500\nERROR: incomplete info for symbol 55434\nERROR: incomplete info for symbol 59121\nERROR: incomplete info for symbol 59767\nERROR: incomplete info for symbol 59801\nERROR: incomplete info for symbol 59828\nERROR: incomplete info for symbol 115324\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-o9THL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so-abi-laboratory-libkdeinit_klauncher-so-libkdeinit_klauncher-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so-abi-laboratory-libkdeinit_klauncher-so-libkdeinit_klauncher-so.html\nFound link to libkdeinit_klauncher.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdeinit_klauncher.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 48500\nERROR: incomplete info for symbol 55434\nERROR: incomplete info for symbol 59121\nERROR: incomplete info for symbol 59767\nERROR: incomplete info for symbol 59801\nERROR: incomplete info for symbol 59828\nERROR: incomplete info for symbol 115324\nReading v-tables\nlibkio.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-8vOlE.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkdeinit_klauncher.so-3.5.10-117.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdeinit_klauncher.so-3.5.10-117.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-117.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 48495\nERROR: incomplete info for symbol 55429\nERROR: incomplete info for symbol 59116\nERROR: incomplete info for symbol 59762\nERROR: incomplete info for symbol 59796\nERROR: incomplete info for symbol 59823\nERROR: incomplete info for symbol 115311\nReading v-tables\nSegmentation fault (core dumped)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-eKllc.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so-abi-laboratory-libkdeinit_klauncher-so-libkdeinit_klauncher-so.html\n",
                     "return_code": 0,
-                    "seconds": 15.556523084640503,
+                    "seconds": 25.2601637840271,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so libkdeinit_klauncher-so-libkdeinit_klauncher-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so-abi-laboratory-libkdeinit_klauncher-so-libkdeinit_klauncher-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so",
@@ -58,7 +62,7 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_klauncher.so": 127408,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so": 127408
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_klauncher.so": 127416
             }
         },
         "experiment": "usr/lib64/libkdeinit_klauncher-fedora-libs-36-fedora-libs-37",

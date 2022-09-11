@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "pam_succeed_if.so",
                     "spliced_lib": "pam_succeed_if.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.6702880859375e-05
+                    "seconds": 2.9087066650390625e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "pam_succeed_if.so",
                     "spliced_lib": "pam_succeed_if.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.4373016357421875e-06
+                    "seconds": 8.58306884765625e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.012855291366577148,
+                    "seconds": 0.010869741439819336,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_succeed_if.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_succeed_if.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_succeed_if.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_succeed_if.so",
@@ -44,13 +48,13 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_succeed_if.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_succeed_if.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_succeed_if.so-abi-laboratory-pam_succeed_if-so-pam_succeed_if-so.html\nFound link to pam_succeed_if.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_succeed_if.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-pVSJ9.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_succeed_if.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_succeed_if.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-KZVVV.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_succeed_if.so-abi-laboratory-pam_succeed_if-so-pam_succeed_if-so.html\n",
-                    "return_code": 0,
-                    "seconds": 0.5440566539764404,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_succeed_if.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_succeed_if.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_succeed_if.so-abi-laboratory-pam_succeed_if-so-pam_succeed_if-so.html\nFound link to pam_succeed_if.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_succeed_if.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Dz2uK.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_succeed_if.so-1.5.2-12.fc37.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file pam_succeed_if.so-1.5.2-12.fc37.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.33741021156311035,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_succeed_if.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_succeed_if.so pam_succeed_if-so-pam_succeed_if-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_succeed_if.so-abi-laboratory-pam_succeed_if-so-pam_succeed_if-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_succeed_if.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_succeed_if.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]

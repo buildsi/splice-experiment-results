@@ -15,42 +15,46 @@
                     "splice_type": "different_lib",
                     "original_lib": "libnpa-tstream-samba4.so",
                     "spliced_lib": "libnpa-tstream-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.792213439941406e-05
+                    "seconds": 4.744529724121094e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libnpa-tstream-samba4.so",
                     "spliced_lib": "libnpa-tstream-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.5367431640625e-06
+                    "seconds": 7.62939453125e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.04032325744628906,
+                    "message": "Functions changes summary: 8 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n8 Removed functions:\n\n  [D] 'function int _tstream_npa_accept_existing_recv(tevent_req*, int*, TALLOC_CTX*, tstream_context**, named_pipe_auth_req_info5**, dcerpc_transport_t*, tsocket_address**, char**, tsocket_address**, char**, auth_session_info_transport**, const char*)'    {_tstream_npa_accept_existing_recv@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function int _tstream_npa_connect_recv(tevent_req*, int*, TALLOC_CTX*, tstream_context**, uint16_t*, uint16_t*, uint64_t*, const char*)'    {_tstream_npa_connect_recv@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function int _tstream_npa_existing_socket(TALLOC_CTX*, int, uint16_t, tstream_context**, const char*)'    {_tstream_npa_existing_socket@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function int _tstream_npa_existing_stream(TALLOC_CTX*, tstream_context**, uint16_t, tstream_context**, const char*)'    {_tstream_npa_existing_stream@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function tevent_req* tstream_npa_accept_existing_send(TALLOC_CTX*, tevent_context*, tstream_context*, uint16_t, uint16_t, uint64_t)'    {tstream_npa_accept_existing_send@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function tevent_req* tstream_npa_connect_send(TALLOC_CTX*, tevent_context*, const char*, const char*, dcerpc_transport_t, const tsocket_address*, const char*, const tsocket_address*, const char*, const auth_session_info_transport*)'    {tstream_npa_connect_send@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function int tstream_u32_read_recv(tevent_req*, TALLOC_CTX*, uint8_t**, size_t*)'    {tstream_u32_read_recv@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function tevent_req* tstream_u32_read_send(TALLOC_CTX*, tevent_context*, uint32_t, tstream_context*)'    {tstream_u32_read_send@@SAMBA_4.16.4_SAMBA4}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.031592607498168945,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnpa-tstream-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnpa-tstream-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnpa-tstream-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnpa-tstream-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnpa-tstream-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnpa-tstream-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnpa-tstream-samba4.so-abi-laboratory-libnpa-tstream-samba4-so-libnpa-tstream-samba4-so.html\nFound link to libnpa-tstream-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnpa-tstream-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 10349\nERROR: incomplete info for symbol 11477\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-EXXCr.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libnpa-tstream-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnpa-tstream-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 10349\nERROR: incomplete info for symbol 11477\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-9eIzd.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnpa-tstream-samba4.so-abi-laboratory-libnpa-tstream-samba4-so-libnpa-tstream-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 14.834283113479614,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnpa-tstream-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnpa-tstream-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnpa-tstream-samba4.so-abi-laboratory-libnpa-tstream-samba4-so-libnpa-tstream-samba4-so.html\nFound link to libnpa-tstream-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnpa-tstream-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 10349\nERROR: incomplete info for symbol 11477\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-omvGs.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libnpa-tstream-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libnpa-tstream-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 10395\nERROR: incomplete info for symbol 11523\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-DEEDr.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 75%\nTotal binary compatibility problems: 8, warnings: 0\nTotal source compatibility problems: 1, warnings: 5\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnpa-tstream-samba4.so-abi-laboratory-libnpa-tstream-samba4-so-libnpa-tstream-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 12.297571420669556,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnpa-tstream-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnpa-tstream-samba4.so libnpa-tstream-samba4-so-libnpa-tstream-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnpa-tstream-samba4.so-abi-laboratory-libnpa-tstream-samba4-so-libnpa-tstream-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnpa-tstream-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnpa-tstream-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
@@ -58,7 +62,7 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnpa-tstream-samba4.so": 40920,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnpa-tstream-samba4.so": 40920
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnpa-tstream-samba4.so": 40928
             }
         },
         "experiment": "usr/lib64/samba/libnpa-tstream-samba4-fedora-libs-36-fedora-libs-37",

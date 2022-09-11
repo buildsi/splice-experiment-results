@@ -15,50 +15,54 @@
                     "splice_type": "different_lib",
                     "original_lib": "libnss3.so",
                     "spliced_lib": "libnss3.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00032973289489746094
+                    "seconds": 0.0002512931823730469
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libnss3.so",
                     "spliced_lib": "libnss3.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0063457489013671875
+                    "seconds": 0.006325960159301758
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.7279233932495117,
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 1 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Added function:\n\n  [A] 'function PRBool SECMOD_LockedModuleHasRemovableSlots(SECMODModule*)'    {SECMOD_LockedModuleHasRemovableSlots@@NSS_3.79}\n\n",
+                    "return_code": 4,
+                    "seconds": 0.6825590133666992,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnss3.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnss3.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnss3.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnss3.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnss3.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnss3.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnss3.so-abi-laboratory-libnss3-so-libnss3-so.html\nFound link to libnss3.so-3.81.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnss3.so-3.81.0-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ooU7K.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libnss3.so-3.81.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnss3.so-3.81.0-1.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-jjxXd.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnss3.so-abi-laboratory-libnss3-so-libnss3-so.html\n",
-                    "return_code": 0,
-                    "seconds": 13.552887439727783,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnss3.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnss3.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnss3.so-abi-laboratory-libnss3-so-libnss3-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.215256929397583,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnss3.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnss3.so libnss3-so-libnss3-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnss3.so-abi-laboratory-libnss3-so-libnss3-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnss3.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnss3.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnss3.so": 1323032,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnss3.so": 1323032
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnss3.so": 1323096,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnss3.so": 1322992
             }
         },
         "experiment": "usr/lib64/libnss3-fedora-libs-34-fedora-libs-35",

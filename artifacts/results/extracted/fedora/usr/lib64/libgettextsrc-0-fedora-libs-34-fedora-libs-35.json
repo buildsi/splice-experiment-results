@@ -1,0 +1,91 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgettextsrc-0.21.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgettextsrc-0.21.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgettextsrc-0.21.so",
+                    "spliced_lib": "libgettextsrc-0.21.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "open",
+                        "style_file_prepare",
+                        "ostream_write_str",
+                        "styled_ostream_begin_use_class",
+                        "file_ostream_create",
+                        "color_mode",
+                        "close",
+                        "ostream_write_mem",
+                        "style_file_name",
+                        "isatty",
+                        "noop_styled_ostream_create",
+                        "html_styled_ostream_create",
+                        "ostream_free",
+                        "styled_ostream_create",
+                        "styled_ostream_end_use_class"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00011706352233886719
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libgettextsrc-0.21.so",
+                    "spliced_lib": "libgettextsrc-0.21.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00044536590576171875
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 5 Changed (6 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 3 Changed, 0 Added variables\n\n5 functions with some indirect sub-type change:\n\n  [C] 'function void message_print_comment(const message_ty*, ostream_t)' at write-po.c:243:1 has some indirect sub-type changes:\n    parameter 2 of type 'typedef ostream_t' changed:\n      underlying type 'any_ostream_representation*' changed:\n        in pointed to type 'struct any_ostream_representation' at FILE.h:7:1:\n          entity changed from 'struct any_ostream_representation' to compatible type 'typedef FILE' at FILE.h:7:1\n            type name changed from 'any_ostream_representation' to '_IO_FILE'\n            type size changed from 0 to 1728 (in bits)\n            29 data member insertions:\n              'int _flags', at offset 0 (in bits) at struct_FILE.h:51:1\n              'char* _IO_read_ptr', at offset 64 (in bits) at struct_FILE.h:54:1\n              'char* _IO_read_end', at offset 128 (in bits) at struct_FILE.h:55:1\n              'char* _IO_read_base', at offset 192 (in bits) at struct_FILE.h:56:1\n              'char* _IO_write_base', at offset 256 (in bits) at struct_FILE.h:57:1\n              'char* _IO_write_ptr', at offset 320 (in bits) at struct_FILE.h:58:1\n              'char* _IO_write_end', at offset 384 (in bits) at struct_FILE.h:59:1\n              'char* _IO_buf_base', at offset 448 (in bits) at struct_FILE.h:60:1\n              'char* _IO_buf_end', at offset 512 (in bits) at struct_FILE.h:61:1\n              'char* _IO_save_base', at offset 576 (in bits) at struct_FILE.h:64:1\n              'char* _IO_backup_base', at offset 640 (in bits) at struct_FILE.h:65:1\n              'char* _IO_save_end', at offset 704 (in bits) at struct_FILE.h:66:1\n              '_IO_marker* _markers', at offset 768 (in bits) at struct_FILE.h:68:1\n              '_IO_FILE* _chain', at offset 832 (in bits) at struct_FILE.h:70:1\n              'int _fileno', at offset 896 (in bits) at struct_FILE.h:72:1\n              'int _flags2', at offset 928 (in bits) at struct_FILE.h:73:1\n              '__off_t _old_offset', at offset 960 (in bits) at struct_FILE.h:74:1\n              'unsigned short int _cur_column', at offset 1024 (in bits) at struct_FILE.h:77:1\n              'signed char _vtable_offset', at offset 1040 (in bits) at struct_FILE.h:78:1\n              'char _shortbuf[1]', at offset 1048 (in bits) at struct_FILE.h:79:1\n              '_IO_lock_t* _lock', at offset 1088 (in bits) at struct_FILE.h:81:1\n              '__off64_t _offset', at offset 1152 (in bits) at struct_FILE.h:89:1\n              '_IO_codecvt* _codecvt', at offset 1216 (in bits) at struct_FILE.h:91:1\n              '_IO_wide_data* _wide_data', at offset 1280 (in bits) at struct_FILE.h:92:1\n              '_IO_FILE* _freeres_list', at offset 1344 (in bits) at struct_FILE.h:93:1\n              'void* _freeres_buf', at offset 1408 (in bits) at struct_FILE.h:94:1\n              'size_t __pad5', at offset 1472 (in bits) at struct_FILE.h:95:1\n              'int _mode', at offset 1536 (in bits) at struct_FILE.h:96:1\n              'char _unused2[20]', at offset 1568 (in bits) at struct_FILE.h:98:1\n\n  [C] 'function void message_print_comment_dot(const message_ty*, ostream_t)' at write-po.c:284:1 has some indirect sub-type changes:\n\n  [C] 'function void message_print_comment_filepos(const message_ty*, ostream_t, bool, size_t)' at write-po.c:312:1 has some indirect sub-type changes:\n\n  [C] 'function void message_print_comment_flags(const message_ty*, ostream_t, bool)' at write-po.c:430:1 has some indirect sub-type changes:\n\n  [C] 'function void msgdomain_list_print(msgdomain_list_ty*, const char*, catalog_output_format_ty, bool, bool)' at write-catalog.c:91:1 has some indirect sub-type changes:\n    parameter 3 of type 'typedef catalog_output_format_ty' has sub-type changes:\n      underlying type 'const catalog_output_format*' changed:\n        in pointed to type 'const catalog_output_format':\n          in unqualified underlying type 'struct catalog_output_format' at write-catalog.h:33:1:\n            type size hasn't changed\n            1 data member change:\n              type of 'void (msgdomain_list_ty*, typedef ostream_t, typedef size_t, bool)* print' changed:\n                in pointed to type 'function type void (msgdomain_list_ty*, typedef ostream_t, typedef size_t, bool)':\n\n3 Changed variables:\n\n  [C] 'const catalog_output_format output_format_po' was changed at write-po.h:83:1:\n\n  [C] 'const catalog_output_format output_format_properties' was changed at write-properties.h:30:1:\n\n  [C] 'const catalog_output_format output_format_stringtable' was changed at write-stringtable.h:30:1:\n\n",
+                    "return_code": 4,
+                    "seconds": 0.10582637786865234,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgettextsrc-0.21.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgettextsrc-0.21.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgettextsrc-0.21.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgettextsrc-0.21.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgettextsrc-0.21.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgettextsrc-0.21.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgettextsrc-0.21.so-abi-laboratory-libgettextsrc-0-21-so-libgettextsrc-0-21-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19563031196594238,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgettextsrc-0.21.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgettextsrc-0.21.so libgettextsrc-0-21-so-libgettextsrc-0-21-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgettextsrc-0.21.so-abi-laboratory-libgettextsrc-0-21-so-libgettextsrc-0-21-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgettextsrc-0.21.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgettextsrc-0.21.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgettextsrc-0.21.so": 342552,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgettextsrc-0.21.so": 342448
+            }
+        },
+        "experiment": "usr/lib64/libgettextsrc-0-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgettextsrc-0.21.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgettextsrc-0.21.so",
+        "different_libs": true
+    }
+]

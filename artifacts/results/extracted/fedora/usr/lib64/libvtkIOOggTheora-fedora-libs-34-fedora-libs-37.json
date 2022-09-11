@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOOggTheora.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOOggTheora.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkIOOggTheora.so.9.0.3",
+                    "spliced_lib": "libvtkIOOggTheora.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.270408630371094e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkIOOggTheora.so.9.0.3",
+                    "spliced_lib": "libvtkIOOggTheora.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.1205673217773438e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (7 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'method virtual void vtkOggTheoraWriter::End()' at vtkOggTheoraWriter.cxx:573:1 has some indirect sub-type changes:\n    the vtable offset of method virtual void vtkOggTheoraWriter::End() changed from 90 to 89\n      note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n    implicit parameter 0 of type 'vtkOggTheoraWriter*' has sub-type changes:\n      in pointed to type 'class vtkOggTheoraWriter' at vtkOggTheoraWriter.h:37:1:\n        type size hasn't changed\n        15 member function changes (8 filtered):\n          'method virtual vtkObjectBase* vtkOggTheoraWriter::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkOggTheoraWriter::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual void vtkOggTheoraWriter::Start()' has some sub-type changes:\n            the vtable offset of method virtual void vtkOggTheoraWriter::Start() changed from 88 to 87\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual void vtkOggTheoraWriter::Write()' has some sub-type changes:\n            the vtable offset of method virtual void vtkOggTheoraWriter::Write() changed from 89 to 88\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual void vtkOggTheoraWriter::SetQuality(int)' has some sub-type changes:\n            the vtable offset of method virtual void vtkOggTheoraWriter::SetQuality(int) changed from 92 to 91\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual int vtkOggTheoraWriter::GetQualityMinValue()' has some sub-type changes:\n            the vtable offset of method virtual int vtkOggTheoraWriter::GetQualityMinValue() changed from 93 to 92\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual int vtkOggTheoraWriter::GetQualityMaxValue()' has some sub-type changes:\n            the vtable offset of method virtual int vtkOggTheoraWriter::GetQualityMaxValue() changed from 94 to 93\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual int vtkOggTheoraWriter::GetQuality()' has some sub-type changes:\n            the vtable offset of method virtual int vtkOggTheoraWriter::GetQuality() changed from 95 to 94\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual void vtkOggTheoraWriter::SetRate(int)' has some sub-type changes:\n            the vtable offset of method virtual void vtkOggTheoraWriter::SetRate(int) changed from 96 to 95\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual int vtkOggTheoraWriter::GetRateMinValue()' has some sub-type changes:\n            the vtable offset of method virtual int vtkOggTheoraWriter::GetRateMinValue() changed from 97 to 96\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual int vtkOggTheoraWriter::GetRateMaxValue()' has some sub-type changes:\n            the vtable offset of method virtual int vtkOggTheoraWriter::GetRateMaxValue() changed from 98 to 97\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual int vtkOggTheoraWriter::GetRate()' has some sub-type changes:\n            the vtable offset of method virtual int vtkOggTheoraWriter::GetRate() changed from 99 to 98\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual void vtkOggTheoraWriter::SetSubsampling(vtkTypeBool)' has some sub-type changes:\n            the vtable offset of method virtual void vtkOggTheoraWriter::SetSubsampling(vtkTypeBool) changed from 100 to 99\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual vtkTypeBool vtkOggTheoraWriter::GetSubsampling()' has some sub-type changes:\n            the vtable offset of method virtual vtkTypeBool vtkOggTheoraWriter::GetSubsampling() changed from 101 to 100\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual void vtkOggTheoraWriter::SubsamplingOn()' has some sub-type changes:\n            the vtable offset of method virtual void vtkOggTheoraWriter::SubsamplingOn() changed from 102 to 101\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n          'method virtual void vtkOggTheoraWriter::SubsamplingOff()' has some sub-type changes:\n            the vtable offset of method virtual void vtkOggTheoraWriter::SubsamplingOff() changed from 103 to 102\n              note that this is an ABI incompatible change to the vtable of class vtkOggTheoraWriter\n\n",
+                    "return_code": 12,
+                    "seconds": 19.337677717208862,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOOggTheora.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOOggTheora.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOOggTheora.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOOggTheora.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOOggTheora.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOOggTheora.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOOggTheora.so.9.0.3-abi-laboratory-libvtkIOOggTheora-so-9-0-3-libvtkIOOggTheora-so-9-1-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.22817468643188477,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOOggTheora.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOOggTheora.so.9.1.0 libvtkIOOggTheora-so-9-0-3-libvtkIOOggTheora-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOOggTheora.so.9.0.3-abi-laboratory-libvtkIOOggTheora-so-9-0-3-libvtkIOOggTheora-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOOggTheora.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOOggTheora.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOOggTheora.so.9.0.3": 50248,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOOggTheora.so.9.1.0": 50792
+            }
+        },
+        "experiment": "usr/lib64/libvtkIOOggTheora-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOOggTheora.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOOggTheora.so.9.0.3",
+        "different_libs": true
+    }
+]

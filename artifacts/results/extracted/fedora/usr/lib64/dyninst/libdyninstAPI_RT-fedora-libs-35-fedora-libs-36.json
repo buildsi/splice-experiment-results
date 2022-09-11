@@ -3,7 +3,7 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.11.0.1"
         ],
         "spliced": [
             "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1"
@@ -13,51 +13,66 @@
             "symbols": [
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libdyninstAPI_RT.so.12.0.1",
+                    "original_lib": "libdyninstAPI_RT.so.11.0.1",
                     "spliced_lib": "libdyninstAPI_RT.so.12.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 3.409385681152344e-05
+                    "message": [
+                        "RTtranslateMemoryShift",
+                        "RTmemoryMapper",
+                        "RThandleShadow",
+                        "RTtranslateMemory"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.556510925292969e-05
                 },
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libdyninstAPI_RT.so.12.0.1",
+                    "original_lib": "libdyninstAPI_RT.so.11.0.1",
                     "spliced_lib": "libdyninstAPI_RT.so.12.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 3.504753112792969e-05
+                    "message": [
+                        "_r_debug",
+                        "RTmemoryMapper",
+                        "RTtranslateMemory",
+                        "RThandleShadow",
+                        "RTtranslateMemoryShift"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.457069396972656e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.02985835075378418,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1",
+                    "message": "ELF SONAME changed\nFunctions changes summary: 3 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 2 Removed, 0 Changed, 0 Added variables\n\nSONAME changed from 'libdyninstAPI_RT.so.11.0' to 'libdyninstAPI_RT.so.12.0'\n\n3 Removed functions:\n\n  [D] 'function void RThandleShadow(void*, void*, void*, void*, void*)'    {RThandleShadow}\n  [D] 'function unsigned long int RTtranslateMemory(unsigned long int, unsigned long int, unsigned long int)'    {RTtranslateMemory}\n  [D] 'function unsigned long int RTtranslateMemoryShift(unsigned long int, unsigned long int, unsigned long int)'    {RTtranslateMemoryShift}\n\n2 Removed variables:\n\n  [D] 'MemoryMapper RTmemoryMapper'    {RTmemoryMapper}\n  [D] 'r_debug _r_debug'    {_r_debug}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.03154945373535156,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.11.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1",
-                    "prediction": true,
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.11.0.1",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1-abi-laboratory-libdyninstAPI_RT-so-12-0-1-libdyninstAPI_RT-so-12-0-1.html\nFound link to libdyninstAPI_RT.so.12.0.1-12.0.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdyninstAPI_RT.so.12.0.1-12.0.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-12.0.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3207\nERROR: incomplete info for symbol 8228\nERROR: incomplete info for symbol 8897\nERROR: incomplete info for symbol 8971\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-BtyiE.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdyninstAPI_RT.so.12.0.1-12.0.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdyninstAPI_RT.so.12.0.1-12.0.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-12.0.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3207\nERROR: incomplete info for symbol 8228\nERROR: incomplete info for symbol 8897\nERROR: incomplete info for symbol 8971\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-gXSQB.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1-abi-laboratory-libdyninstAPI_RT-so-12-0-1-libdyninstAPI_RT-so-12-0-1.html\n",
-                    "return_code": 0,
-                    "seconds": 11.769277572631836,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1 libdyninstAPI_RT-so-12-0-1-libdyninstAPI_RT-so-12-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1-abi-laboratory-libdyninstAPI_RT-so-12-0-1-libdyninstAPI_RT-so-12-0-1.html",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.11.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.11.0.1-abi-laboratory-libdyninstAPI_RT-so-11-0-1-libdyninstAPI_RT-so-12-0-1.html\nFound link to libdyninstAPI_RT.so.11.0.1-11.0.1-3.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libdyninstAPI_RT.so.11.0.1-11.0.1-3.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-11.0.1-3.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3324\nERROR: incomplete info for symbol 3430\nERROR: incomplete info for symbol 3777\nERROR: incomplete info for symbol 7826\nERROR: incomplete info for symbol 8718\nERROR: incomplete info for symbol 9362\nERROR: incomplete info for symbol 9436\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-aDRP5.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdyninstAPI_RT.so.12.0.1-12.0.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdyninstAPI_RT.so.12.0.1-12.0.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-12.0.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3207\nERROR: incomplete info for symbol 8228\nERROR: incomplete info for symbol 8897\nERROR: incomplete info for symbol 8971\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-g2SGB.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 91.5%\nSource compatibility: 90%\nTotal binary compatibility problems: 5, warnings: 0\nTotal source compatibility problems: 6, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.11.0.1-abi-laboratory-libdyninstAPI_RT-so-11-0-1-libdyninstAPI_RT-so-12-0-1.html\n",
+                    "return_code": 1,
+                    "seconds": 12.99558687210083,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.11.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1 libdyninstAPI_RT-so-11-0-1-libdyninstAPI_RT-so-12-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.11.0.1-abi-laboratory-libdyninstAPI_RT-so-11-0-1-libdyninstAPI_RT-so-12-0-1.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1",
-                    "prediction": true,
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.11.0.1",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1": 24600,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.11.0.1": 24488,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1": 24600
             }
         },
@@ -65,7 +80,7 @@
         "result": "diff-libraries-present",
         "success": true,
         "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.12.0.1",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdyninstAPI_RT.so.11.0.1",
         "different_libs": true
     }
 ]

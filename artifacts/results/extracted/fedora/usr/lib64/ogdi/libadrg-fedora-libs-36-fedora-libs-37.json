@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libadrg.so",
                     "spliced_lib": "libadrg.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.1961669921875e-05
+                    "seconds": 4.363059997558594e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libadrg.so",
                     "spliced_lib": "libadrg.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.5272369384765625e-05
+                    "seconds": 2.1696090698242188e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.030848979949951172,
+                    "seconds": 0.0244903564453125,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libadrg.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libadrg.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libadrg.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libadrg.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libadrg.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libadrg.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libadrg.so-abi-laboratory-libadrg-so-libadrg-so.html\nFound link to libadrg.so-4.1.0-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libadrg.so-4.1.0-7.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ogdi/../../../.dwz/ogdi-4.1.0-7.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 856\nERROR: incomplete info for symbol 889\nERROR: incomplete info for symbol 922\nERROR: incomplete info for symbol 1007\nERROR: incomplete info for symbol 3164\nERROR: incomplete info for symbol 3244\nERROR: incomplete info for symbol 3590\nERROR: incomplete info for symbol 3931\nERROR: incomplete info for symbol 11973\nERROR: incomplete info for symbol 15925\nERROR: incomplete info for symbol 16138\nERROR: incomplete info for symbol 19764\nERROR: incomplete info for symbol 19824\nERROR: incomplete info for symbol 20227\nERROR: incomplete info for symbol 21405\nERROR: incomplete info for symbol 21878\nERROR: incomplete info for symbol 22306\nERROR: incomplete info for symbol 22788\nERROR: incomplete info for symbol 23323\nERROR: incomplete info for symbol 23747\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-HDBzS.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libadrg.so-4.1.0-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libadrg.so-4.1.0-7.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ogdi/../../../.dwz/ogdi-4.1.0-7.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 856\nERROR: incomplete info for symbol 889\nERROR: incomplete info for symbol 922\nERROR: incomplete info for symbol 1007\nERROR: incomplete info for symbol 3164\nERROR: incomplete info for symbol 3244\nERROR: incomplete info for symbol 3590\nERROR: incomplete info for symbol 3931\nERROR: incomplete info for symbol 11973\nERROR: incomplete info for symbol 15925\nERROR: incomplete info for symbol 16138\nERROR: incomplete info for symbol 19764\nERROR: incomplete info for symbol 19824\nERROR: incomplete info for symbol 20227\nERROR: incomplete info for symbol 21405\nERROR: incomplete info for symbol 21878\nERROR: incomplete info for symbol 22306\nERROR: incomplete info for symbol 22788\nERROR: incomplete info for symbol 23323\nERROR: incomplete info for symbol 23747\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-zWknB.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libadrg.so-abi-laboratory-libadrg-so-libadrg-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libadrg.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libadrg.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libadrg.so-abi-laboratory-libadrg-so-libadrg-so.html\nFound link to libadrg.so-4.1.0-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libadrg.so-4.1.0-7.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ogdi/../../../.dwz/ogdi-4.1.0-7.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 856\nERROR: incomplete info for symbol 889\nERROR: incomplete info for symbol 922\nERROR: incomplete info for symbol 1007\nERROR: incomplete info for symbol 3164\nERROR: incomplete info for symbol 3244\nERROR: incomplete info for symbol 3590\nERROR: incomplete info for symbol 3931\nERROR: incomplete info for symbol 11973\nERROR: incomplete info for symbol 15925\nERROR: incomplete info for symbol 16138\nERROR: incomplete info for symbol 19764\nERROR: incomplete info for symbol 19824\nERROR: incomplete info for symbol 20227\nERROR: incomplete info for symbol 21405\nERROR: incomplete info for symbol 21878\nERROR: incomplete info for symbol 22306\nERROR: incomplete info for symbol 22788\nERROR: incomplete info for symbol 23323\nERROR: incomplete info for symbol 23747\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-8NunZ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libadrg.so-4.1.0-8.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libadrg.so-4.1.0-8.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ogdi/../../../.dwz/ogdi-4.1.0-8.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 856\nERROR: incomplete info for symbol 889\nERROR: incomplete info for symbol 922\nERROR: incomplete info for symbol 1007\nERROR: incomplete info for symbol 3216\nERROR: incomplete info for symbol 3296\nERROR: incomplete info for symbol 3642\nERROR: incomplete info for symbol 3983\nERROR: incomplete info for symbol 12025\nERROR: incomplete info for symbol 15977\nERROR: incomplete info for symbol 16190\nERROR: incomplete info for symbol 19777\nERROR: incomplete info for symbol 19837\nERROR: incomplete info for symbol 20240\nERROR: incomplete info for symbol 21418\nERROR: incomplete info for symbol 21891\nERROR: incomplete info for symbol 22319\nERROR: incomplete info for symbol 22801\nERROR: incomplete info for symbol 23336\nERROR: incomplete info for symbol 23760\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-CCGr4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libadrg.so-abi-laboratory-libadrg-so-libadrg-so.html\n",
                     "return_code": 0,
-                    "seconds": 0.6367156505584717,
+                    "seconds": 0.6066503524780273,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libadrg.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libadrg.so libadrg-so-libadrg-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libadrg.so-abi-laboratory-libadrg-so-libadrg-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libadrg.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libadrg.so",
@@ -58,7 +62,7 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libadrg.so": 42496,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libadrg.so": 42496
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libadrg.so": 42512
             }
         },
         "experiment": "usr/lib64/ogdi/libadrg-fedora-libs-36-fedora-libs-37",

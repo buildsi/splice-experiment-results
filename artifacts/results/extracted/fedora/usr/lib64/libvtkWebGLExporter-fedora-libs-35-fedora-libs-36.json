@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkWebGLExporter.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkWebGLExporter.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkWebGLExporter.so.9.0.3",
+                    "spliced_lib": "libvtkWebGLExporter.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "printf",
+                        "abort"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0001163482666015625
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkWebGLExporter.so.9.0.3",
+                    "spliced_lib": "libvtkWebGLExporter.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.00018453598022460938
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 8 Changed (114 filtered out), 0 Added (2 filtered out) functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n8 functions with some indirect sub-type change:\n\n  [C] 'method vtkPVWebGLExporter* vtkPVWebGLExporter::New()' at vtkPVWebGLExporter.cxx:34:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'class vtkPVWebGLExporter' at vtkPVWebGLExporter.h:21:1:\n        type size hasn't changed\n        4 member function changes (7 filtered):\n          'method virtual vtkObjectBase* vtkPVWebGLExporter::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkPVWebGLExporter::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkPVWebGLExporter\n          'method virtual void vtkPVWebGLExporter::WriteData()' has some sub-type changes:\n            the vtable offset of method virtual void vtkPVWebGLExporter::WriteData() changed from 26 to 25\n              note that this is an ABI incompatible change to the vtable of class vtkPVWebGLExporter\n          'method virtual void vtkPVWebGLExporter::SetFileName(const char*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkPVWebGLExporter::SetFileName(const char*) changed from 27 to 26\n              note that this is an ABI incompatible change to the vtable of class vtkPVWebGLExporter\n          'method virtual char* vtkPVWebGLExporter::GetFileName()' has some sub-type changes:\n            the vtable offset of method virtual char* vtkPVWebGLExporter::GetFileName() changed from 28 to 27\n              note that this is an ABI incompatible change to the vtable of class vtkPVWebGLExporter\n\n  [C] 'method virtual vtkIdType vtkPointSet::GetNumberOfPoints()' at vtkPointSet.h:280:1 has some indirect sub-type changes:\n    the vtable offset of method virtual vtkIdType vtkPointSet::GetNumberOfPoints() changed from 43 to 42\n      note that this is an ABI incompatible change to the vtable of class vtkPointSet\n\n  [C] 'method virtual vtkIdType vtkPolyData::GetNumberOfCells()' at vtkPolyData.h:749:1 has some indirect sub-type changes:\n    the vtable offset of method virtual vtkIdType vtkPolyData::GetNumberOfCells() changed from 44 to 43\n      note that this is an ABI incompatible change to the vtable of class vtkPolyData\n\n  [C] 'method void vtkWebGLDataSet::GenerateBinaryData()' at vtkWebGLDataSet.cxx:119:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'vtkWebGLDataSet* const' has sub-type changes:\n      in unqualified underlying type 'vtkWebGLDataSet*':\n        in pointed to type 'class vtkWebGLDataSet' at vtkWebGLDataSet.h:29:1:\n          type size hasn't changed\n          1 member function changes (7 filtered):\n            'method virtual vtkObjectBase* vtkWebGLDataSet::NewInstanceInternal() const' has some sub-type changes:\n              the vtable offset of method virtual vtkObjectBase* vtkWebGLDataSet::NewInstanceInternal() const changed from 16 to 15\n                note that this is an ABI incompatible change to the vtable of class vtkWebGLDataSet\n          no data member change (1 filtered);\n\n  [C] 'method const char* vtkWebGLExporter::GenerateExportMetadata()' at vtkWebGLExporter.cxx:617:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'vtkWebGLExporter* const' has sub-type changes:\n      in unqualified underlying type 'vtkWebGLExporter*':\n        in pointed to type 'class vtkWebGLExporter' at vtkWebGLExporter.h:47:1:\n          type size hasn't changed\n          1 member function changes (7 filtered):\n            'method virtual vtkObjectBase* vtkWebGLExporter::NewInstanceInternal() const' has some sub-type changes:\n              the vtable offset of method virtual vtkObjectBase* vtkWebGLExporter::NewInstanceInternal() const changed from 16 to 15\n                note that this is an ABI incompatible change to the vtable of class vtkWebGLExporter\n          no data member changes (3 filtered);\n\n  [C] 'method vtkWebGLObject* vtkWebGLExporter::GetWebGLObject(int)' at vtkWebGLExporter.cxx:658:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'class vtkWebGLObject' at vtkWebGLObject.h:38:1:\n        type size hasn't changed\n        5 member function changes (7 filtered):\n          'method virtual vtkObjectBase* vtkWebGLObject::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkWebGLObject::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLObject\n          'method virtual void vtkWebGLObject::GenerateBinaryData()' has some sub-type changes:\n            the vtable offset of method virtual void vtkWebGLObject::GenerateBinaryData() changed from 21 to 20\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLObject\n          'method virtual unsigned char* vtkWebGLObject::GetBinaryData(int)' has some sub-type changes:\n            the vtable offset of method virtual unsigned char* vtkWebGLObject::GetBinaryData(int) changed from 22 to 21\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLObject\n          'method virtual int vtkWebGLObject::GetBinarySize(int)' has some sub-type changes:\n            the vtable offset of method virtual int vtkWebGLObject::GetBinarySize(int) changed from 23 to 22\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLObject\n          'method virtual int vtkWebGLObject::GetNumberOfParts()' has some sub-type changes:\n            the vtable offset of method virtual int vtkWebGLObject::GetNumberOfParts() changed from 24 to 23\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLObject\n        no data member changes (2 filtered);\n\n  [C] 'method virtual void vtkWebGLPolyData::GenerateBinaryData()' at vtkWebGLPolyData.cxx:285:1 has some indirect sub-type changes:\n    the vtable offset of method virtual void vtkWebGLPolyData::GenerateBinaryData() changed from 21 to 20\n      note that this is an ABI incompatible change to the vtable of class vtkWebGLPolyData\n    implicit parameter 0 of type 'vtkWebGLPolyData*' has sub-type changes:\n      in pointed to type 'class vtkWebGLPolyData' at vtkWebGLPolyData.h:33:1:\n        type size hasn't changed\n        1 base class change:\n          'class vtkWebGLObject' at vtkWebGLObject.h:39:1 changed:\n            details were reported earlier\n        4 member function changes (8 filtered):\n          'method virtual vtkObjectBase* vtkWebGLPolyData::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkWebGLPolyData::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLPolyData\n          'method virtual unsigned char* vtkWebGLPolyData::GetBinaryData(int)' has some sub-type changes:\n            the vtable offset of method virtual unsigned char* vtkWebGLPolyData::GetBinaryData(int) changed from 22 to 21\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLPolyData\n          'method virtual int vtkWebGLPolyData::GetBinarySize(int)' has some sub-type changes:\n            the vtable offset of method virtual int vtkWebGLPolyData::GetBinarySize(int) changed from 23 to 22\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLPolyData\n          'method virtual int vtkWebGLPolyData::GetNumberOfParts()' has some sub-type changes:\n            the vtable offset of method virtual int vtkWebGLPolyData::GetNumberOfParts() changed from 24 to 23\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLPolyData\n        no data member change (1 filtered);\n\n  [C] 'method virtual void vtkWebGLWidget::GenerateBinaryData()' at vtkWebGLWidget.cxx:62:1 has some indirect sub-type changes:\n    the vtable offset of method virtual void vtkWebGLWidget::GenerateBinaryData() changed from 21 to 20\n      note that this is an ABI incompatible change to the vtable of class vtkWebGLWidget\n    implicit parameter 0 of type 'vtkWebGLWidget*' has sub-type changes:\n      in pointed to type 'class vtkWebGLWidget' at vtkWebGLWidget.h:30:1:\n        type size hasn't changed\n        no base class change (1 filtered);\n        4 member function changes (8 filtered):\n          'method virtual vtkObjectBase* vtkWebGLWidget::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkWebGLWidget::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLWidget\n          'method virtual unsigned char* vtkWebGLWidget::GetBinaryData(int)' has some sub-type changes:\n            the vtable offset of method virtual unsigned char* vtkWebGLWidget::GetBinaryData(int) changed from 22 to 21\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLWidget\n          'method virtual int vtkWebGLWidget::GetBinarySize(int)' has some sub-type changes:\n            the vtable offset of method virtual int vtkWebGLWidget::GetBinarySize(int) changed from 23 to 22\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLWidget\n          'method virtual int vtkWebGLWidget::GetNumberOfParts()' has some sub-type changes:\n            the vtable offset of method virtual int vtkWebGLWidget::GetNumberOfParts() changed from 24 to 23\n              note that this is an ABI incompatible change to the vtable of class vtkWebGLWidget\n        no data member change (1 filtered);\n\n",
+                    "return_code": 12,
+                    "seconds": 23.6863534450531,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkWebGLExporter.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkWebGLExporter.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkWebGLExporter.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkWebGLExporter.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkWebGLExporter.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkWebGLExporter.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkWebGLExporter.so.9.0.3-abi-laboratory-libvtkWebGLExporter-so-9-0-3-libvtkWebGLExporter-so-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.255051851272583,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkWebGLExporter.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkWebGLExporter.so.9.1.0 libvtkWebGLExporter-so-9-0-3-libvtkWebGLExporter-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkWebGLExporter.so.9.0.3-abi-laboratory-libvtkWebGLExporter-so-9-0-3-libvtkWebGLExporter-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkWebGLExporter.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkWebGLExporter.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkWebGLExporter.so.9.0.3": 223296,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkWebGLExporter.so.9.1.0": 232040
+            }
+        },
+        "experiment": "usr/lib64/libvtkWebGLExporter-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkWebGLExporter.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkWebGLExporter.so.9.0.3",
+        "different_libs": true
+    }
+]

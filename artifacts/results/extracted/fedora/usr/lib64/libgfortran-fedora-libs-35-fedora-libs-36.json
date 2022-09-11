@@ -15,38 +15,44 @@
                     "splice_type": "different_lib",
                     "original_lib": "libgfortran.so.5.0.0",
                     "spliced_lib": "libgfortran.so.5.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 0.0004444122314453125
+                    "message": [
+                        "gettimeofday"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0005555152893066406
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libgfortran.so.5.0.0",
                     "spliced_lib": "libgfortran.so.5.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.015764236450195312
+                    "seconds": 0.014250755310058594
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (27 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
                     "return_code": 0,
-                    "seconds": 0.017848968505859375,
+                    "seconds": 1.0828871726989746,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0-abi-laboratory-libgfortran-so-5-0-0-libgfortran-so-5-0-0.html\nFound link to libgfortran.so.5.0.0-12.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file libgfortran.so.5.0.0-12.2.1-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
-                    "return_code": 10,
-                    "seconds": 0.15758633613586426,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0-abi-laboratory-libgfortran-so-5-0-0-libgfortran-so-5-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22666692733764648,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0 libgfortran-so-5-0-0-libgfortran-so-5-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0-abi-laboratory-libgfortran-so-5-0-0-libgfortran-so-5-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0",
@@ -57,7 +63,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0": 2953608,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgfortran.so.5.0.0": 2822360,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgfortran.so.5.0.0": 2953608
             }
         },

@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "loader_attic.so",
                     "spliced_lib": "loader_attic.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.817413330078125e-05
+                    "seconds": 4.9114227294921875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "loader_attic.so",
                     "spliced_lib": "loader_attic.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.0967254638671875e-05
+                    "seconds": 6.4373016357421875e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.04964017868041992,
+                    "seconds": 0.047042131423950195,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/engines-3/loader_attic.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/engines-3/loader_attic.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/engines-3/loader_attic.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/engines-3/loader_attic.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/engines-3/loader_attic.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/engines-3/loader_attic.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/engines-3/loader_attic.so-abi-laboratory-loader_attic-so-loader_attic-so.html\nFound link to loader_attic.so-3.0.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file loader_attic.so-3.0.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/engines-3/../../../.dwz/openssl-3.0.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 24805\nERROR: incomplete info for symbol 24831\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-FJCFI.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to loader_attic.so-3.0.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file loader_attic.so-3.0.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/engines-3/../../../.dwz/openssl-3.0.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 24805\nERROR: incomplete info for symbol 24831\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-LCCc4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/engines-3/loader_attic.so-abi-laboratory-loader_attic-so-loader_attic-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/engines-3/loader_attic.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/engines-3/loader_attic.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/engines-3/loader_attic.so-abi-laboratory-loader_attic-so-loader_attic-so.html\nFound link to loader_attic.so-3.0.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file loader_attic.so-3.0.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/engines-3/../../../.dwz/openssl-3.0.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 24805\nERROR: incomplete info for symbol 24831\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-qa78p.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to loader_attic.so-3.0.5-3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file loader_attic.so-3.0.5-3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/engines-3/../../../.dwz/openssl-3.0.5-3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 24805\nERROR: incomplete info for symbol 24831\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-oHi4R.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/engines-3/loader_attic.so-abi-laboratory-loader_attic-so-loader_attic-so.html\n",
                     "return_code": 0,
-                    "seconds": 2.426860809326172,
+                    "seconds": 2.300567388534546,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/engines-3/loader_attic.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/engines-3/loader_attic.so loader_attic-so-loader_attic-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/engines-3/loader_attic.so-abi-laboratory-loader_attic-so-loader_attic-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/engines-3/loader_attic.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/engines-3/loader_attic.so",

@@ -3,69 +3,73 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.4"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.3"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.4"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.3"
         ],
         "paths": {},
         "predictions": {
             "symbols": [
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libXft.so.2.3.4",
-                    "spliced_lib": "libXft.so.2.3.4",
+                    "original_lib": "libXft.so.2.3.3",
+                    "spliced_lib": "libXft.so.2.3.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.8160552978515625e-05
+                    "seconds": 6.67572021484375e-05
                 },
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libXft.so.2.3.4",
-                    "spliced_lib": "libXft.so.2.3.4",
+                    "original_lib": "libXft.so.2.3.3",
+                    "spliced_lib": "libXft.so.2.3.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.078315734863281e-05
+                    "seconds": 6.699562072753906e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.08579325675964355,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.4",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.4",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.4",
+                    "seconds": 0.1459040641784668,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.3",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.3",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.4\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.4\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.4-abi-laboratory-libXft-so-2-3-4-libXft-so-2-3-4.html\nFound link to libXft.so.2.3.4-2.3.4-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libXft.so.2.3.4-2.3.4-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 45237\nERROR: incomplete info for symbol 45411\nERROR: incomplete info for symbol 45925\nERROR: incomplete info for symbol 48639\nERROR: incomplete info for symbol 48864\nERROR: incomplete info for symbol 49062\nERROR: incomplete info for symbol 49273\nERROR: incomplete info for symbol 49350\nERROR: incomplete info for symbol 49376\nERROR: incomplete info for symbol 49402\nERROR: incomplete info for symbol 49428\nERROR: incomplete info for symbol 49454\nERROR: incomplete info for symbol 49647\nERROR: incomplete info for symbol 50145\nERROR: incomplete info for symbol 50195\nERROR: incomplete info for symbol 50524\nERROR: incomplete info for symbol 50887\nERROR: incomplete info for symbol 51255\nERROR: incomplete info for symbol 51390\nERROR: incomplete info for symbol 51687\nERROR: incomplete info for symbol 51941\nERROR: incomplete info for symbol 52206\nERROR: incomplete info for symbol 52232\nERROR: incomplete info for symbol 52309\nERROR: incomplete info for symbol 54193\nERROR: incomplete info for symbol 54239\nERROR: incomplete info for symbol 56871\nERROR: incomplete info for symbol 57083\nERROR: incomplete info for symbol 57341\nERROR: incomplete info for symbol 60348\nERROR: incomplete info for symbol 62101\nERROR: incomplete info for symbol 62574\nERROR: incomplete info for symbol 69332\nERROR: incomplete info for symbol 69414\nERROR: incomplete info for symbol 69621\nERROR: incomplete info for symbol 69970\nERROR: incomplete info for symbol 70319\nERROR: incomplete info for symbol 70668\nERROR: incomplete info for symbol 71229\nERROR: incomplete info for symbol 71846\nERROR: incomplete info for symbol 71894\nERROR: incomplete info for symbol 72578\nERROR: incomplete info for symbol 73318\nERROR: incomplete info for symbol 74572\nERROR: incomplete info for symbol 74623\nERROR: incomplete info for symbol 75146\nERROR: incomplete info for symbol 75817\nERROR: incomplete info for symbol 76154\nERROR: incomplete info for symbol 76594\nERROR: incomplete info for symbol 76919\nERROR: incomplete info for symbol 77244\nERROR: incomplete info for symbol 77753\nERROR: incomplete info for symbol 78278\nERROR: incomplete info for symbol 78612\nERROR: incomplete info for symbol 78914\nERROR: incomplete info for symbol 79192\nERROR: incomplete info for symbol 79551\nERROR: incomplete info for symbol 79870\nERROR: incomplete info for symbol 80223\nERROR: incomplete info for symbol 80473\nERROR: incomplete info for symbol 80832\nERROR: incomplete info for symbol 81198\nERROR: incomplete info for symbol 81564\nERROR: incomplete info for symbol 81930\nERROR: incomplete info for symbol 82296\nERROR: incomplete info for symbol 82662\nERROR: incomplete info for symbol 83028\nERROR: incomplete info for symbol 83394\nERROR: incomplete info for symbol 83923\nERROR: incomplete info for symbol 84462\nERROR: incomplete info for symbol 86050\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-bPfAe.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libXft.so.2.3.4-2.3.4-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libXft.so.2.3.4-2.3.4-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 45237\nERROR: incomplete info for symbol 45411\nERROR: incomplete info for symbol 45925\nERROR: incomplete info for symbol 48639\nERROR: incomplete info for symbol 48864\nERROR: incomplete info for symbol 49062\nERROR: incomplete info for symbol 49273\nERROR: incomplete info for symbol 49350\nERROR: incomplete info for symbol 49376\nERROR: incomplete info for symbol 49402\nERROR: incomplete info for symbol 49428\nERROR: incomplete info for symbol 49454\nERROR: incomplete info for symbol 49647\nERROR: incomplete info for symbol 50145\nERROR: incomplete info for symbol 50195\nERROR: incomplete info for symbol 50524\nERROR: incomplete info for symbol 50887\nERROR: incomplete info for symbol 51255\nERROR: incomplete info for symbol 51390\nERROR: incomplete info for symbol 51687\nERROR: incomplete info for symbol 51941\nERROR: incomplete info for symbol 52206\nERROR: incomplete info for symbol 52232\nERROR: incomplete info for symbol 52309\nERROR: incomplete info for symbol 54193\nERROR: incomplete info for symbol 54239\nERROR: incomplete info for symbol 56871\nERROR: incomplete info for symbol 57083\nERROR: incomplete info for symbol 57341\nERROR: incomplete info for symbol 60348\nERROR: incomplete info for symbol 62101\nERROR: incomplete info for symbol 62574\nERROR: incomplete info for symbol 69332\nERROR: incomplete info for symbol 69414\nERROR: incomplete info for symbol 69621\nERROR: incomplete info for symbol 69970\nERROR: incomplete info for symbol 70319\nERROR: incomplete info for symbol 70668\nERROR: incomplete info for symbol 71229\nERROR: incomplete info for symbol 71846\nERROR: incomplete info for symbol 71894\nERROR: incomplete info for symbol 72578\nERROR: incomplete info for symbol 73318\nERROR: incomplete info for symbol 74572\nERROR: incomplete info for symbol 74623\nERROR: incomplete info for symbol 75146\nERROR: incomplete info for symbol 75817\nERROR: incomplete info for symbol 76154\nERROR: incomplete info for symbol 76594\nERROR: incomplete info for symbol 76919\nERROR: incomplete info for symbol 77244\nERROR: incomplete info for symbol 77753\nERROR: incomplete info for symbol 78278\nERROR: incomplete info for symbol 78612\nERROR: incomplete info for symbol 78914\nERROR: incomplete info for symbol 79192\nERROR: incomplete info for symbol 79551\nERROR: incomplete info for symbol 79870\nERROR: incomplete info for symbol 80223\nERROR: incomplete info for symbol 80473\nERROR: incomplete info for symbol 80832\nERROR: incomplete info for symbol 81198\nERROR: incomplete info for symbol 81564\nERROR: incomplete info for symbol 81930\nERROR: incomplete info for symbol 82296\nERROR: incomplete info for symbol 82662\nERROR: incomplete info for symbol 83028\nERROR: incomplete info for symbol 83394\nERROR: incomplete info for symbol 83923\nERROR: incomplete info for symbol 84462\nERROR: incomplete info for symbol 86050\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-u1yyP.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.4-abi-laboratory-libXft-so-2-3-4-libXft-so-2-3-4.html\n",
-                    "return_code": 0,
-                    "seconds": 1.290717601776123,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.4 libXft-so-2-3-4-libXft-so-2-3-4 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.4-abi-laboratory-libXft-so-2-3-4-libXft-so-2-3-4.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.4",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.4",
-                    "prediction": true,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.3\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.3-abi-laboratory-libXft-so-2-3-3-libXft-so-2-3-3.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2693634033203125,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.3 libXft-so-2-3-3-libXft-so-2-3-3 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.3-abi-laboratory-libXft-so-2-3-3-libXft-so-2-3-3.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.3",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.4": 99480,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.4": 99480
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.3": 99592,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.3": 99304
             }
         },
         "experiment": "usr/lib64/libXft-fedora-libs-34-fedora-libs-35",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.4",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.4",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXft.so.2.3.3",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXft.so.2.3.3",
         "different_libs": true
     }
 ]

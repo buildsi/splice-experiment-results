@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "_uuid.cpython-310-x86_64-linux-gnu.so",
                     "spliced_lib": "_uuid.cpython-310-x86_64-linux-gnu.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.1219253540039062e-05
+                    "seconds": 2.5272369384765625e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "_uuid.cpython-310-x86_64-linux-gnu.so",
                     "spliced_lib": "_uuid.cpython-310-x86_64-linux-gnu.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.775161743164062e-06
+                    "seconds": 7.62939453125e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.02290201187133789,
+                    "seconds": 0.016398191452026367,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so-abi-laboratory-_uuid-cpython-310-x86_64-linux-gnu-so-_uuid-cpython-310-x86_64-linux-gnu-so.html\nFound link to _uuid.cpython-310-x86_64-linux-gnu.so-3.10.4-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file _uuid.cpython-310-x86_64-linux-gnu.so-3.10.4-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/python3.10/lib-dynload/../../../../.dwz/python3.10-3.10.4-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Y11Xb.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to _uuid.cpython-310-x86_64-linux-gnu.so-3.10.4-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file _uuid.cpython-310-x86_64-linux-gnu.so-3.10.4-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/python3.10/lib-dynload/../../../../.dwz/python3.10-3.10.4-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-4RmgW.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so-abi-laboratory-_uuid-cpython-310-x86_64-linux-gnu-so-_uuid-cpython-310-x86_64-linux-gnu-so.html\n",
-                    "return_code": 0,
-                    "seconds": 6.583836317062378,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so-abi-laboratory-_uuid-cpython-310-x86_64-linux-gnu-so-_uuid-cpython-310-x86_64-linux-gnu-so.html\nFound link to _uuid.cpython-310-x86_64-linux-gnu.so-3.10.2-1.fc35.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file _uuid.cpython-310-x86_64-linux-gnu.so-3.10.2-1.fc35.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.12653112411499023,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so _uuid-cpython-310-x86_64-linux-gnu-so-_uuid-cpython-310-x86_64-linux-gnu-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so-abi-laboratory-_uuid-cpython-310-x86_64-linux-gnu-so-_uuid-cpython-310-x86_64-linux-gnu-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so": 16224,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so": 16048,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so": 16224
             }
         },

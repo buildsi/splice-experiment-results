@@ -15,26 +15,34 @@
                     "splice_type": "different_lib",
                     "original_lib": "libirml.so.1",
                     "spliced_lib": "libirml.so.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 7.343292236328125e-05
+                    "message": [
+                        "memcpy",
+                        "__cxa_guard_release",
+                        "__cxa_guard_acquire"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0001323223114013672
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libirml.so.1",
                     "spliced_lib": "libirml.so.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00010204315185546875
+                    "seconds": 0.00010418891906738281
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.18999600410461426,
+                    "seconds": 0.1673414707183838,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libirml.so.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libirml.so.1",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libirml.so.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libirml.so.1",
@@ -44,13 +52,13 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libirml.so.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libirml.so.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libirml.so.1-abi-laboratory-libirml-so-1-libirml-so-1.html\nFound link to libirml.so.1-2020.3-9.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libirml.so.1-2020.3-9.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/tbb-2020.3-9.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12686\nERROR: incomplete info for symbol 13127\nERROR: incomplete info for symbol 13378\nERROR: incomplete info for symbol 15693\nERROR: incomplete info for symbol 15848\nERROR: incomplete info for symbol 88008\nERROR: incomplete info for symbol 88058\nERROR: incomplete info for symbol 88217\nERROR: incomplete info for symbol 88904\nERROR: incomplete info for symbol 89204\nERROR: incomplete info for symbol 89807\nERROR: incomplete info for symbol 91210\nERROR: incomplete info for symbol 94428\nERROR: incomplete info for symbol 94664\nERROR: incomplete info for symbol 94909\nERROR: incomplete info for symbol 95291\nERROR: incomplete info for symbol 95461\nERROR: incomplete info for symbol 96036\nERROR: incomplete info for symbol 97367\nERROR: incomplete info for symbol 97394\nERROR: incomplete info for symbol 97421\nERROR: incomplete info for symbol 97448\nERROR: incomplete info for symbol 97475\nERROR: incomplete info for symbol 98374\nERROR: incomplete info for symbol 98414\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-BcTzu.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libirml.so.1-2020.3-9.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libirml.so.1-2020.3-9.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/tbb-2020.3-9.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12686\nERROR: incomplete info for symbol 13127\nERROR: incomplete info for symbol 13378\nERROR: incomplete info for symbol 15693\nERROR: incomplete info for symbol 15848\nERROR: incomplete info for symbol 88008\nERROR: incomplete info for symbol 88058\nERROR: incomplete info for symbol 88217\nERROR: incomplete info for symbol 88904\nERROR: incomplete info for symbol 89204\nERROR: incomplete info for symbol 89807\nERROR: incomplete info for symbol 91210\nERROR: incomplete info for symbol 94428\nERROR: incomplete info for symbol 94664\nERROR: incomplete info for symbol 94909\nERROR: incomplete info for symbol 95291\nERROR: incomplete info for symbol 95461\nERROR: incomplete info for symbol 96036\nERROR: incomplete info for symbol 97367\nERROR: incomplete info for symbol 97394\nERROR: incomplete info for symbol 97421\nERROR: incomplete info for symbol 97448\nERROR: incomplete info for symbol 97475\nERROR: incomplete info for symbol 98374\nERROR: incomplete info for symbol 98414\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-1jxMX.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libirml.so.1-abi-laboratory-libirml-so-1-libirml-so-1.html\n",
-                    "return_code": 0,
-                    "seconds": 1.9953842163085938,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libirml.so.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libirml.so.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libirml.so.1-abi-laboratory-libirml-so-1-libirml-so-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.23994755744934082,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libirml.so.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libirml.so.1 libirml-so-1-libirml-so-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libirml.so.1-abi-laboratory-libirml-so-1-libirml-so-1.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libirml.so.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libirml.so.1",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
@@ -58,7 +66,7 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libirml.so.1": 57328,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libirml.so.1": 57328
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libirml.so.1": 58440
             }
         },
         "experiment": "usr/lib64/libirml-fedora-libs-35-fedora-libs-37",

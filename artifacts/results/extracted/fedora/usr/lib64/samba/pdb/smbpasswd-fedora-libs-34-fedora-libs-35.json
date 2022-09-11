@@ -15,15 +15,21 @@
                     "splice_type": "different_lib",
                     "original_lib": "smbpasswd.so",
                     "spliced_lib": "smbpasswd.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 4.482269287109375e-05
+                    "message": [
+                        "__read_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.91278076171875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "smbpasswd.so",
                     "spliced_lib": "smbpasswd.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
@@ -34,7 +40,7 @@
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.04698753356933594,
+                    "seconds": 0.06949281692504883,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/smbpasswd.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/smbpasswd.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so",
@@ -44,9 +50,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/smbpasswd.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so-abi-laboratory-smbpasswd-so-smbpasswd-so.html\nFound link to smbpasswd.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file smbpasswd.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/pdb/../../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-BjnKN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to smbpasswd.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file smbpasswd.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/pdb/../../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-qXycA.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so-abi-laboratory-smbpasswd-so-smbpasswd-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/smbpasswd.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so-abi-laboratory-smbpasswd-so-smbpasswd-so.html\nFound link to smbpasswd.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file smbpasswd.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/pdb/../../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-6Cn24.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to smbpasswd.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file smbpasswd.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/pdb/../../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-PKAXg.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so-abi-laboratory-smbpasswd-so-smbpasswd-so.html\n",
                     "return_code": 0,
-                    "seconds": 13.880636215209961,
+                    "seconds": 15.08933711051941,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/smbpasswd.so smbpasswd-so-smbpasswd-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so-abi-laboratory-smbpasswd-so-smbpasswd-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/smbpasswd.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so",
@@ -57,8 +63,8 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so": 53232,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/smbpasswd.so": 53232
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/smbpasswd.so": 44712,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/smbpasswd.so": 45120
             }
         },
         "experiment": "usr/lib64/samba/pdb/smbpasswd-fedora-libs-34-fedora-libs-35",

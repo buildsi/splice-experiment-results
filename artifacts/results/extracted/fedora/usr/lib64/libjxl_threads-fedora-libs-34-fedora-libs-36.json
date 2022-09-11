@@ -15,26 +15,33 @@
                     "splice_type": "different_lib",
                     "original_lib": "libjxl_threads.so.0.6.1",
                     "spliced_lib": "libjxl_threads.so.0.6.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 3.147125244140625e-05
+                    "message": [
+                        "__pthread_key_create",
+                        "pthread_create"
+                    ],
+                    "prediction": false,
+                    "seconds": 4.267692565917969e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libjxl_threads.so.0.6.1",
                     "spliced_lib": "libjxl_threads.so.0.6.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.775161743164062e-06
+                    "seconds": 1.0251998901367188e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 1.0042076110839844,
+                    "seconds": 1.5577540397644043,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.6.1",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.6.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1",
@@ -44,9 +51,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.6.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1-abi-laboratory-libjxl_threads-so-0-6-1-libjxl_threads-so-0-6-1.html\nFound link to libjxl_threads.so.0.6.1-0.6.1-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjxl_threads.so.0.6.1-0.6.1-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/jpegxl-0.6.1-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 16099\nERROR: incomplete info for symbol 17501\nERROR: incomplete info for symbol 24555\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-SzGgI.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libjxl_threads.so.0.6.1-0.6.1-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjxl_threads.so.0.6.1-0.6.1-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/jpegxl-0.6.1-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 16099\nERROR: incomplete info for symbol 17501\nERROR: incomplete info for symbol 24555\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-bXC9e.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1-abi-laboratory-libjxl_threads-so-0-6-1-libjxl_threads-so-0-6-1.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.6.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1-abi-laboratory-libjxl_threads-so-0-6-1-libjxl_threads-so-0-6-1.html\nFound link to libjxl_threads.so.0.6.1-0.6.1-6.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libjxl_threads.so.0.6.1-0.6.1-6.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/jpegxl-0.6.1-6.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 16272\nERROR: incomplete info for symbol 17765\nERROR: incomplete info for symbol 24883\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-uY5rx.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libjxl_threads.so.0.6.1-0.6.1-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjxl_threads.so.0.6.1-0.6.1-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/jpegxl-0.6.1-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 16099\nERROR: incomplete info for symbol 17501\nERROR: incomplete info for symbol 24555\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-NdLTz.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1-abi-laboratory-libjxl_threads-so-0-6-1-libjxl_threads-so-0-6-1.html\n",
                     "return_code": 0,
-                    "seconds": 74.72898769378662,
+                    "seconds": 99.57244992256165,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.6.1 libjxl_threads-so-0-6-1-libjxl_threads-so-0-6-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1-abi-laboratory-libjxl_threads-so-0-6-1-libjxl_threads-so-0-6-1.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.6.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1",
@@ -57,7 +64,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1": 24400,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjxl_threads.so.0.6.1": 24320,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjxl_threads.so.0.6.1": 24400
             }
         },

@@ -3,7 +3,7 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.7.0"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.6.0"
         ],
         "spliced": [
             "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbpf.so.0.7.0"
@@ -13,51 +13,58 @@
             "symbols": [
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libbpf.so.0.7.0",
+                    "original_lib": "libbpf.so.0.6.0",
                     "spliced_lib": "libbpf.so.0.7.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 0.0001342296600341797
+                    "message": [
+                        "__strncat_chk",
+                        "strncpy"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00014543533325195312
                 },
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libbpf.so.0.7.0",
+                    "original_lib": "libbpf.so.0.6.0",
                     "spliced_lib": "libbpf.so.0.7.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0009655952453613281
+                    "seconds": 0.001062154769897461
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.16517424583435059,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.7.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbpf.so.0.7.0",
+                    "message": "Functions changes summary: 0 Removed, 5 Changed (141 filtered out), 14 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n14 Added functions:\n\n  [A] 'function int bpf_btf_load(void*, size_t, const bpf_btf_load_opts*)'    {bpf_btf_load@@LIBBPF_0.7.0}\n  [A] 'function bpf_attach_type bpf_program__expected_attach_type(const bpf_program*)'    {bpf_program__expected_attach_type@@LIBBPF_0.7.0, aliases bpf_program__get_expected_attach_type@@LIBBPF_0.0.6}\n  [A] 'function const char* bpf_program__log_buf(const bpf_program*, size_t*)'    {bpf_program__log_buf@@LIBBPF_0.7.0}\n  [A] 'function __u32 bpf_program__log_level(const bpf_program*)'    {bpf_program__log_level@@LIBBPF_0.7.0}\n  [A] 'function int bpf_program__set_log_buf(bpf_program*, char*, size_t)'    {bpf_program__set_log_buf@@LIBBPF_0.7.0}\n  [A] 'function int bpf_program__set_log_level(bpf_program*, __u32)'    {bpf_program__set_log_level@@LIBBPF_0.7.0}\n  [A] 'function bpf_prog_type bpf_program__type(const bpf_program*)'    {bpf_program__type@@LIBBPF_0.7.0, aliases bpf_program__get_type@@LIBBPF_0.0.6}\n  [A] 'function int bpf_xdp_attach(int, int, __u32, const bpf_xdp_attach_opts*)'    {bpf_xdp_attach@@LIBBPF_0.7.0}\n  [A] 'function int bpf_xdp_detach(int, __u32, const bpf_xdp_attach_opts*)'    {bpf_xdp_detach@@LIBBPF_0.7.0}\n  [A] 'function int bpf_xdp_query(int, int, bpf_xdp_query_opts*)'    {bpf_xdp_query@@LIBBPF_0.7.0}\n  [A] 'function int bpf_xdp_query_id(int, int, __u32*)'    {bpf_xdp_query_id@@LIBBPF_0.7.0}\n  [A] 'function int libbpf_probe_bpf_helper(bpf_prog_type, bpf_func_id, void*)'    {libbpf_probe_bpf_helper@@LIBBPF_0.7.0}\n  [A] 'function int libbpf_probe_bpf_map_type(bpf_map_type, void*)'    {libbpf_probe_bpf_map_type@@LIBBPF_0.7.0}\n  [A] 'function int libbpf_probe_bpf_prog_type(bpf_prog_type, void*)'    {libbpf_probe_bpf_prog_type@@LIBBPF_0.7.0}\n\n5 functions with some indirect sub-type change:\n\n  [C] 'function int bpf_link__update_program(bpf_link*, bpf_program*)' at libbpf.c:9547:1 has some indirect sub-type changes:\n    parameter 2 of type 'bpf_program*' has sub-type changes:\n      in pointed to type 'struct bpf_program' at libbpf.c:251:1:\n        type size changed from 1728 to 1920 (in bits)\n        2 data member insertions:\n          'char* log_buf', at offset 768 (in bits) at libbpf.c:296:1\n          'size_t log_size', at offset 832 (in bits) at libbpf.c:297:1\n        21 data member changes (2 filtered):\n          type of 'int log_level' changed:\n            entity changed from 'int' to compatible type 'typedef __u32' at int-ll64.h:27:1\n              type name changed from 'int' to 'unsigned int'\n              type size hasn't changed\n          and offset changed from 736 to 896 (in bits) (by +160 bits)\n          'struct {int nr; int* fds;} instances' offset changed from 768 to 960 (in bits) (by +192 bits)\n          'bpf_program_prep_t preprocessor' offset changed from 896 to 1088 (in bits) (by +192 bits)\n          type of 'bpf_object* obj' changed:\n            in pointed to type 'struct bpf_object' at libbpf.c:491:1:\n              type size changed from 3264 to 3456 (in bits)\n              3 data member insertions:\n                'char* log_buf', at offset 2944 (in bits) at libbpf.c:542:1\n                'size_t log_size', at offset 3008 (in bits) at libbpf.c:543:1\n                '__u32 log_level', at offset 3072 (in bits) at libbpf.c:544:1\n              7 data member changes (2 filtered):\n                type of 'bpf_gen* gen_loader' changed:\n                  in pointed to type 'struct bpf_gen' at bpf_gen_internal.h:29:1:\n                    type size changed from 1856 to 1984 (in bits)\n                    2 data member insertions:\n                      'bpf_core_relo* core_relos', at offset 640 (in bits) at bpf_gen_internal.h:42:1\n                      'int core_relo_cnt', at offset 704 (in bits) at bpf_gen_internal.h:43:1\n                    6 data member changes:\n                      'char attach_target[128]' offset changed from 608 to 736 (in bits) (by +128 bits)\n                      'int attach_kind' offset changed from 1632 to 1760 (in bits) (by +128 bits)\n                      'ksym_desc* ksyms' offset changed from 1664 to 1792 (in bits) (by +128 bits)\n                      '__u32 nr_ksyms' offset changed from 1728 to 1856 (in bits) (by +128 bits)\n                      'int fd_array' offset changed from 1760 to 1888 (in bits) (by +128 bits)\n                      'int nr_fd_array' offset changed from 1792 to 1920 (in bits) (by +128 bits)\n                'void* priv' offset changed from 2944 to 3136 (in bits) (by +192 bits)\n                'bpf_object_clear_priv_t clear_priv' offset changed from 3008 to 3200 (in bits) (by +192 bits)\n                'int* fd_array' offset changed from 3072 to 3264 (in bits) (by +192 bits)\n                'size_t fd_array_cap' offset changed from 3136 to 3328 (in bits) (by +192 bits)\n                'size_t fd_array_cnt' offset changed from 3200 to 3392 (in bits) (by +192 bits)\n                'char path[]' offset changed from 3264 to 3456 (in bits) (by +192 bits)\n          and offset changed from 960 to 1152 (in bits) (by +192 bits)\n          'void* priv' offset changed from 1024 to 1216 (in bits) (by +192 bits)\n          'bpf_program_clear_priv_t clear_priv' offset changed from 1088 to 1280 (in bits) (by +192 bits)\n          'bool load' offset changed from 1152 to 1344 (in bits) (by +192 bits)\n          'bool mark_btf_static' offset changed from 1160 to 1352 (in bits) (by +192 bits)\n          'bpf_prog_type type' offset changed from 1184 to 1376 (in bits) (by +192 bits)\n          'bpf_attach_type expected_attach_type' offset changed from 1216 to 1408 (in bits) (by +192 bits)\n          'int prog_ifindex' offset changed from 1248 to 1440 (in bits) (by +192 bits)\n          '__u32 attach_btf_obj_fd' offset changed from 1280 to 1472 (in bits) (by +192 bits)\n          '__u32 attach_btf_id' offset changed from 1312 to 1504 (in bits) (by +192 bits)\n          '__u32 attach_prog_fd' offset changed from 1344 to 1536 (in bits) (by +192 bits)\n          'void* func_info' offset changed from 1408 to 1600 (in bits) (by +192 bits)\n          '__u32 func_info_rec_size' offset changed from 1472 to 1664 (in bits) (by +192 bits)\n          '__u32 func_info_cnt' offset changed from 1504 to 1696 (in bits) (by +192 bits)\n          'void* line_info' offset changed from 1536 to 1728 (in bits) (by +192 bits)\n          '__u32 line_info_rec_size' offset changed from 1600 to 1792 (in bits) (by +192 bits)\n          '__u32 line_info_cnt' offset changed from 1632 to 1824 (in bits) (by +192 bits)\n          '__u32 prog_flags' offset changed from 1664 to 1856 (in bits) (by +192 bits)\n\n  [C] 'function int bpf_map_create(bpf_map_type, const char*, __u32, __u32, __u32, const bpf_map_create_opts*)' at bpf.c:170:1 has some indirect sub-type changes:\n    parameter 6 of type 'const bpf_map_create_opts*' has sub-type changes:\n      in pointed to type 'const bpf_map_create_opts':\n        in unqualified underlying type 'struct bpf_map_create_opts' at bpf.h:40:1:\n          type size hasn't changed\n          4 data member changes:\n            type of 'int inner_map_fd' changed:\n              entity changed from 'int' to compatible type 'typedef __u32' at int-ll64.h:27:1\n                type name changed from 'int' to 'unsigned int'\n                type size hasn't changed\n            type of 'int map_flags' changed:\n              entity changed from 'int' to compatible type 'typedef __u32' at int-ll64.h:27:1\n                type name changed from 'int' to 'unsigned int'\n                type size hasn't changed\n            type of 'int numa_node' changed:\n              entity changed from 'int' to compatible type 'typedef __u32' at int-ll64.h:27:1\n                type name changed from 'int' to 'unsigned int'\n                type size hasn't changed\n            type of 'int map_ifindex' changed:\n              entity changed from 'int' to compatible type 'typedef __u32' at int-ll64.h:27:1\n                type name changed from 'int' to 'unsigned int'\n                type size hasn't changed\n\n  [C] 'function bpf_object* bpf_object__open_file(const char*, const bpf_object_open_opts*)' at libbpf.c:7091:1 has some indirect sub-type changes:\n    parameter 2 of type 'const bpf_object_open_opts*' has sub-type changes:\n      in pointed to type 'const bpf_object_open_opts':\n        in unqualified underlying type 'struct bpf_object_open_opts' at libbpf.h:73:1:\n          type size changed from 448 to 640 (in bits)\n          3 data member insertions:\n            'char* kernel_log_buf', at offset 448 (in bits) at libbpf.h:132:1\n            'size_t kernel_log_size', at offset 512 (in bits) at libbpf.h:133:1\n            '__u32 kernel_log_level', at offset 576 (in bits) at libbpf.h:147:1\n\n  [C] 'function bool bpf_probe_helper(bpf_func_id, bpf_prog_type, __u32)' at libbpf_probes.c:431:1 has some indirect sub-type changes:\n    parameter 1 of type 'enum bpf_func_id' has sub-type changes:\n      type size hasn't changed\n      11 enumerator insertions:\n        'bpf_func_id::BPF_FUNC_loop' value '181'\n        'bpf_func_id::BPF_FUNC_strncmp' value '182'\n        'bpf_func_id::BPF_FUNC_get_func_arg' value '183'\n        'bpf_func_id::BPF_FUNC_get_func_ret' value '184'\n        'bpf_func_id::BPF_FUNC_get_func_arg_cnt' value '185'\n        'bpf_func_id::BPF_FUNC_get_retval' value '186'\n        'bpf_func_id::BPF_FUNC_set_retval' value '187'\n        'bpf_func_id::BPF_FUNC_xdp_get_buff_len' value '188'\n        'bpf_func_id::BPF_FUNC_xdp_load_bytes' value '189'\n        'bpf_func_id::BPF_FUNC_xdp_store_bytes' value '190'\n        'bpf_func_id::BPF_FUNC_copy_from_user_task' value '191'\n      1 enumerator change:\n        'bpf_func_id::__BPF_FUNC_MAX_ID' from value '181' to '192' at bpf.h:5289:1\n\n  [C] 'function int libbpf_set_strict_mode(libbpf_strict_mode)' at libbpf.c:157:1 has some indirect sub-type changes:\n    parameter 1 of type 'enum libbpf_strict_mode' has sub-type changes:\n      type size hasn't changed\n      2 enumerator insertions:\n        'libbpf_strict_mode::LIBBPF_STRICT_AUTO_RLIMIT_MEMLOCK' value '16'\n        'libbpf_strict_mode::LIBBPF_STRICT_MAP_DEFINITIONS' value '32'\n      1 enumerator change:\n        'libbpf_strict_mode::__LIBBPF_STRICT_LAST' from value '9' to '33' at libbpf_legacy.h:23:1\n\n",
+                    "return_code": 4,
+                    "seconds": 0.33484411239624023,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.6.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbpf.so.0.7.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbpf.so.0.7.0",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.7.0",
-                    "prediction": true,
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.6.0",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.7.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbpf.so.0.7.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.7.0-abi-laboratory-libbpf-so-0-7-0-libbpf-so-0-7-0.html\nFound link to libbpf.so.0.7.0-0.7.0-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libbpf.so.0.7.0-0.7.0-3.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-vIdkF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libbpf.so.0.7.0-0.7.0-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libbpf.so.0.7.0-0.7.0-3.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-bVuRw.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.7.0-abi-laboratory-libbpf-so-0-7-0-libbpf-so-0-7-0.html\n",
-                    "return_code": 0,
-                    "seconds": 3.773134231567383,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.7.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbpf.so.0.7.0 libbpf-so-0-7-0-libbpf-so-0-7-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.7.0-abi-laboratory-libbpf-so-0-7-0-libbpf-so-0-7-0.html",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.6.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbpf.so.0.7.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.6.0-abi-laboratory-libbpf-so-0-6-0-libbpf-so-0-7-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.21693778038024902,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.6.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbpf.so.0.7.0 libbpf-so-0-6-0-libbpf-so-0-7-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.6.0-abi-laboratory-libbpf-so-0-6-0-libbpf-so-0-7-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbpf.so.0.7.0",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.7.0",
-                    "prediction": true,
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.6.0",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.7.0": 364200,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.6.0": 351328,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbpf.so.0.7.0": 364200
             }
         },
@@ -65,7 +72,7 @@
         "result": "diff-libraries-present",
         "success": true,
         "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbpf.so.0.7.0",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.7.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbpf.so.0.6.0",
         "different_libs": true
     }
 ]

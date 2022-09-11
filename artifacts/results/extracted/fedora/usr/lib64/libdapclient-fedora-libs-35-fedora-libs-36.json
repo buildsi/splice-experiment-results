@@ -15,49 +15,67 @@
                     "splice_type": "different_lib",
                     "original_lib": "libdapclient.so.6.1.11",
                     "spliced_lib": "libdapclient.so.6.1.11",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 0.00010776519775390625
+                    "message": [
+                        "printf",
+                        "_ZN6libdap5Regex5matchEPKcii",
+                        "_ZN6libdap5ErrorC1EiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE",
+                        "_ZN6libdap5RegexC1EPKc",
+                        "_ZN6libdap5ErrorC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE",
+                        "_ZN6libdap5ErrorC2Ev",
+                        "_ZN6libdap5Regex6searchEPKciRii",
+                        "_ZN6libdap5ErrorC1ERKS0_",
+                        "_ZN6libdap5ErrorD1Ev",
+                        "abort",
+                        "_ZSt17__throw_bad_allocv",
+                        "_ZN6libdap5ErrorC1Ev",
+                        "_ZN6libdap5ErrorD2Ev"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00013637542724609375
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libdapclient.so.6.1.11",
                     "spliced_lib": "libdapclient.so.6.1.11",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00024318695068359375
+                    "seconds": 0.0003075599670410156
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 1.4036173820495605,
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (35 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 0 Added function symbol not referenced by debug info\nVariable symbols changes summary: 0 Removed, 2 Added variable symbols not referenced by debug info\n\n2 Added variable symbols not referenced by debug info:\n\n  [A] _ZTIN6libdap5ErrorE\n  [A] _ZTSN6libdap5ErrorE\n\n",
+                    "return_code": 4,
+                    "seconds": 1.5163207054138184,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdapclient.so.6.1.11 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdapclient.so.6.1.11",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdapclient.so.6.1.11",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdapclient.so.6.1.11",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdapclient.so.6.1.11\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdapclient.so.6.1.11\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdapclient.so.6.1.11-abi-laboratory-libdapclient-so-6-1-11-libdapclient-so-6-1-11.html\nFound link to libdapclient.so.6.1.11-3.20.9-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdapclient.so.6.1.11-3.20.9-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libdap-3.20.9-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 41662\nERROR: incomplete info for symbol 44184\nERROR: incomplete info for symbol 44257\nERROR: incomplete info for symbol 134507\nERROR: incomplete info for symbol 423246\nERROR: incomplete info for symbol 426825\nERROR: incomplete info for symbol 470356\nERROR: incomplete info for symbol 518567\nERROR: incomplete info for symbol 527770\nERROR: incomplete info for symbol 552471\nERROR: incomplete info for symbol 552540\nERROR: incomplete info for symbol 556254\nERROR: incomplete info for symbol 565289\nERROR: incomplete info for symbol 570409\nERROR: incomplete info for symbol 570528\nERROR: incomplete info for symbol 570555\nERROR: incomplete info for symbol 572878\nERROR: incomplete info for symbol 575136\nERROR: incomplete info for symbol 575163\nERROR: incomplete info for symbol 575190\nERROR: incomplete info for symbol 577448\nERROR: incomplete info for symbol 577475\nERROR: incomplete info for symbol 577509\nERROR: incomplete info for symbol 605032\nERROR: incomplete info for symbol 605122\nERROR: incomplete info for symbol 605266\nERROR: incomplete info for symbol 605367\nERROR: incomplete info for symbol 690194\nERROR: incomplete info for symbol 733158\nERROR: incomplete info for symbol 752456\nERROR: incomplete info for symbol 770430\nERROR: incomplete info for symbol 771022\nERROR: incomplete info for symbol 779518\nERROR: incomplete info for symbol 779670\nERROR: incomplete info for symbol 783878\nERROR: incomplete info for symbol 839634\nERROR: incomplete info for symbol 856179\nERROR: incomplete info for symbol 856274\nERROR: incomplete info for symbol 871933\nERROR: incomplete info for symbol 878683\nERROR: incomplete info for symbol 881772\nERROR: incomplete info for symbol 884821\nERROR: incomplete info for symbol 895521\nERROR: incomplete info for symbol 898633\nERROR: incomplete info for symbol 922832\nERROR: incomplete info for symbol 943326\nERROR: incomplete info for symbol 1000635\nERROR: incomplete info for symbol 1002655\nERROR: incomplete info for symbol 1046822\nERROR: incomplete info for symbol 1046913\nERROR: incomplete info for symbol 1046987\nERROR: incomplete info for symbol 1047078\nERROR: incomplete info for symbol 1047202\nReading v-tables\nlibdap.so.27: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-SkmWu.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdapclient.so.6.1.11-3.20.9-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdapclient.so.6.1.11-3.20.9-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libdap-3.20.9-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 41662\nERROR: incomplete info for symbol 44184\nERROR: incomplete info for symbol 44257\nERROR: incomplete info for symbol 134507\nERROR: incomplete info for symbol 423246\nERROR: incomplete info for symbol 426825\nERROR: incomplete info for symbol 470356\nERROR: incomplete info for symbol 518567\nERROR: incomplete info for symbol 527770\nERROR: incomplete info for symbol 552471\nERROR: incomplete info for symbol 552540\nERROR: incomplete info for symbol 556254\nERROR: incomplete info for symbol 565289\nERROR: incomplete info for symbol 570409\nERROR: incomplete info for symbol 570528\nERROR: incomplete info for symbol 570555\nERROR: incomplete info for symbol 572878\nERROR: incomplete info for symbol 575136\nERROR: incomplete info for symbol 575163\nERROR: incomplete info for symbol 575190\nERROR: incomplete info for symbol 577448\nERROR: incomplete info for symbol 577475\nERROR: incomplete info for symbol 577509\nERROR: incomplete info for symbol 605032\nERROR: incomplete info for symbol 605122\nERROR: incomplete info for symbol 605266\nERROR: incomplete info for symbol 605367\nERROR: incomplete info for symbol 690194\nERROR: incomplete info for symbol 733158\nERROR: incomplete info for symbol 752456\nERROR: incomplete info for symbol 770430\nERROR: incomplete info for symbol 771022\nERROR: incomplete info for symbol 779518\nERROR: incomplete info for symbol 779670\nERROR: incomplete info for symbol 783878\nERROR: incomplete info for symbol 839634\nERROR: incomplete info for symbol 856179\nERROR: incomplete info for symbol 856274\nERROR: incomplete info for symbol 871933\nERROR: incomplete info for symbol 878683\nERROR: incomplete info for symbol 881772\nERROR: incomplete info for symbol 884821\nERROR: incomplete info for symbol 895521\nERROR: incomplete info for symbol 898633\nERROR: incomplete info for symbol 922832\nERROR: incomplete info for symbol 943326\nERROR: incomplete info for symbol 1000635\nERROR: incomplete info for symbol 1002655\nERROR: incomplete info for symbol 1046822\nERROR: incomplete info for symbol 1046913\nERROR: incomplete info for symbol 1046987\nERROR: incomplete info for symbol 1047078\nERROR: incomplete info for symbol 1047202\nReading v-tables\nlibdap.so.27: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Ul07H.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdapclient.so.6.1.11-abi-laboratory-libdapclient-so-6-1-11-libdapclient-so-6-1-11.html\n",
-                    "return_code": 0,
-                    "seconds": 7.277264833450317,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdapclient.so.6.1.11\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdapclient.so.6.1.11\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdapclient.so.6.1.11-abi-laboratory-libdapclient-so-6-1-11-libdapclient-so-6-1-11.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22167754173278809,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdapclient.so.6.1.11 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdapclient.so.6.1.11 libdapclient-so-6-1-11-libdapclient-so-6-1-11 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdapclient.so.6.1.11-abi-laboratory-libdapclient-so-6-1-11-libdapclient-so-6-1-11.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdapclient.so.6.1.11",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdapclient.so.6.1.11",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdapclient.so.6.1.11": 274704,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdapclient.so.6.1.11": 266520,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdapclient.so.6.1.11": 274704
             }
         },

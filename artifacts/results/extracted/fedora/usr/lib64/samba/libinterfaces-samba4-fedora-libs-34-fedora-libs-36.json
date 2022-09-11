@@ -15,49 +15,53 @@
                     "splice_type": "different_lib",
                     "original_lib": "libinterfaces-samba4.so",
                     "spliced_lib": "libinterfaces-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.600120544433594e-05
+                    "seconds": 2.9802322387695312e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libinterfaces-samba4.so",
                     "spliced_lib": "libinterfaces-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.298324584960938e-06
+                    "seconds": 7.867813110351562e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.021813631057739258,
+                    "message": "Functions changes summary: 4 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n4 Removed functions:\n\n  [D] 'function int get_interfaces(TALLOC_CTX*, iface_struct**)'    {get_interfaces@@SAMBA_4.14.12}\n  [D] 'function void make_bcast(sockaddr_storage*, const sockaddr_storage*, const sockaddr_storage*)'    {make_bcast@@SAMBA_4.14.12}\n  [D] 'function void make_net(sockaddr_storage*, const sockaddr_storage*, const sockaddr_storage*)'    {make_net@@SAMBA_4.14.12}\n  [D] 'function bool make_netmask(sockaddr_storage*, const sockaddr_storage*, unsigned long int)'    {make_netmask@@SAMBA_4.14.12}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.021062135696411133,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libinterfaces-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libinterfaces-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libinterfaces-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so-abi-laboratory-libinterfaces-samba4-so-libinterfaces-samba4-so.html\nFound link to libinterfaces-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libinterfaces-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-R0Xka.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libinterfaces-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libinterfaces-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-MHhUG.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so-abi-laboratory-libinterfaces-samba4-so-libinterfaces-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 14.873741388320923,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libinterfaces-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so-abi-laboratory-libinterfaces-samba4-so-libinterfaces-samba4-so.html\nFound link to libinterfaces-samba4.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libinterfaces-samba4.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ElkQq.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libinterfaces-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libinterfaces-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-KfjXs.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 4, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so-abi-laboratory-libinterfaces-samba4-so-libinterfaces-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 11.833686113357544,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libinterfaces-samba4.so libinterfaces-samba4-so-libinterfaces-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so-abi-laboratory-libinterfaces-samba4-so-libinterfaces-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libinterfaces-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so": 20184,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libinterfaces-samba4.so": 15760,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libinterfaces-samba4.so": 20184
             }
         },

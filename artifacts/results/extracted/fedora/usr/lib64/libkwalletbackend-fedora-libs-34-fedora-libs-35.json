@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libkwalletbackend.so.1.0.0",
                     "spliced_lib": "libkwalletbackend.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.175041198730469e-05
+                    "seconds": 6.031990051269531e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libkwalletbackend.so.1.0.0",
                     "spliced_lib": "libkwalletbackend.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00010418891906738281
+                    "seconds": 8.606910705566406e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.47831034660339355,
+                    "seconds": 0.41895389556884766,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkwalletbackend.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkwalletbackend.so.1.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkwalletbackend.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkwalletbackend.so.1.0.0",
@@ -44,21 +48,21 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkwalletbackend.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkwalletbackend.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkwalletbackend.so.1.0.0-abi-laboratory-libkwalletbackend-so-1-0-0-libkwalletbackend-so-1-0-0.html\nFound link to libkwalletbackend.so.1.0.0-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkwalletbackend.so.1.0.0-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 608\nERROR: incomplete info for symbol 633\nERROR: incomplete info for symbol 658\nERROR: incomplete info for symbol 684\nERROR: incomplete info for symbol 766\nERROR: incomplete info for symbol 798\nERROR: incomplete info for symbol 830\nERROR: incomplete info for symbol 862\nERROR: incomplete info for symbol 888\nERROR: incomplete info for symbol 914\nERROR: incomplete info for symbol 1089\nERROR: incomplete info for symbol 1160\nERROR: incomplete info for symbol 1504\nERROR: incomplete info for symbol 1884\nERROR: incomplete info for symbol 2382\nERROR: incomplete info for symbol 2558\nERROR: incomplete info for symbol 2851\nERROR: incomplete info for symbol 2877\nERROR: incomplete info for symbol 2903\nERROR: incomplete info for symbol 3133\nERROR: incomplete info for symbol 3205\nERROR: incomplete info for symbol 3231\nERROR: incomplete info for symbol 3264\nERROR: incomplete info for symbol 3523\nERROR: incomplete info for symbol 5282\nERROR: incomplete info for symbol 6558\nERROR: incomplete info for symbol 8745\nERROR: incomplete info for symbol 10156\nERROR: incomplete info for symbol 10475\nERROR: incomplete info for symbol 10501\nERROR: incomplete info for symbol 10527\nERROR: incomplete info for symbol 12685\nERROR: incomplete info for symbol 14962\nERROR: incomplete info for symbol 15790\nERROR: incomplete info for symbol 16314\nERROR: incomplete info for symbol 16512\nERROR: incomplete info for symbol 16854\nERROR: incomplete info for symbol 17241\nERROR: incomplete info for symbol 27333\nERROR: incomplete info for symbol 36699\nERROR: incomplete info for symbol 36806\nERROR: incomplete info for symbol 40416\nERROR: incomplete info for symbol 44516\nERROR: incomplete info for symbol 47386\nERROR: incomplete info for symbol 51285\nERROR: incomplete info for symbol 51948\nERROR: incomplete info for symbol 53375\nERROR: incomplete info for symbol 73850\nERROR: incomplete info for symbol 73912\nERROR: incomplete info for symbol 73985\nERROR: incomplete info for symbol 74056\nERROR: incomplete info for symbol 74229\nERROR: incomplete info for symbol 74281\nERROR: incomplete info for symbol 74386\nERROR: incomplete info for symbol 74532\nERROR: incomplete info for symbol 74909\nERROR: incomplete info for symbol 75146\nERROR: incomplete info for symbol 75323\nERROR: incomplete info for symbol 75469\nERROR: incomplete info for symbol 75646\nERROR: incomplete info for symbol 75787\nERROR: incomplete info for symbol 75839\nERROR: incomplete info for symbol 76008\nERROR: incomplete info for symbol 76300\nReading v-tables\nlibkdecore.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-w9IXf.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkwalletbackend.so.1.0.0-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkwalletbackend.so.1.0.0-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 608\nERROR: incomplete info for symbol 633\nERROR: incomplete info for symbol 658\nERROR: incomplete info for symbol 684\nERROR: incomplete info for symbol 766\nERROR: incomplete info for symbol 798\nERROR: incomplete info for symbol 830\nERROR: incomplete info for symbol 862\nERROR: incomplete info for symbol 888\nERROR: incomplete info for symbol 914\nERROR: incomplete info for symbol 1089\nERROR: incomplete info for symbol 1160\nERROR: incomplete info for symbol 1504\nERROR: incomplete info for symbol 1884\nERROR: incomplete info for symbol 2382\nERROR: incomplete info for symbol 2558\nERROR: incomplete info for symbol 2851\nERROR: incomplete info for symbol 2877\nERROR: incomplete info for symbol 2903\nERROR: incomplete info for symbol 3133\nERROR: incomplete info for symbol 3205\nERROR: incomplete info for symbol 3231\nERROR: incomplete info for symbol 3264\nERROR: incomplete info for symbol 3523\nERROR: incomplete info for symbol 5282\nERROR: incomplete info for symbol 6558\nERROR: incomplete info for symbol 8745\nERROR: incomplete info for symbol 10156\nERROR: incomplete info for symbol 10475\nERROR: incomplete info for symbol 10501\nERROR: incomplete info for symbol 10527\nERROR: incomplete info for symbol 12685\nERROR: incomplete info for symbol 14962\nERROR: incomplete info for symbol 15790\nERROR: incomplete info for symbol 16314\nERROR: incomplete info for symbol 16512\nERROR: incomplete info for symbol 16854\nERROR: incomplete info for symbol 17241\nERROR: incomplete info for symbol 27333\nERROR: incomplete info for symbol 36699\nERROR: incomplete info for symbol 36806\nERROR: incomplete info for symbol 40416\nERROR: incomplete info for symbol 44516\nERROR: incomplete info for symbol 47386\nERROR: incomplete info for symbol 51285\nERROR: incomplete info for symbol 51948\nERROR: incomplete info for symbol 53375\nERROR: incomplete info for symbol 73850\nERROR: incomplete info for symbol 73912\nERROR: incomplete info for symbol 73985\nERROR: incomplete info for symbol 74056\nERROR: incomplete info for symbol 74229\nERROR: incomplete info for symbol 74281\nERROR: incomplete info for symbol 74386\nERROR: incomplete info for symbol 74532\nERROR: incomplete info for symbol 74909\nERROR: incomplete info for symbol 75146\nERROR: incomplete info for symbol 75323\nERROR: incomplete info for symbol 75469\nERROR: incomplete info for symbol 75646\nERROR: incomplete info for symbol 75787\nERROR: incomplete info for symbol 75839\nERROR: incomplete info for symbol 76008\nERROR: incomplete info for symbol 76300\nReading v-tables\nlibkdecore.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-QovSg.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkwalletbackend.so.1.0.0-abi-laboratory-libkwalletbackend-so-1-0-0-libkwalletbackend-so-1-0-0.html\n",
-                    "return_code": 0,
-                    "seconds": 18.670254707336426,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkwalletbackend.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkwalletbackend.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkwalletbackend.so.1.0.0-abi-laboratory-libkwalletbackend-so-1-0-0-libkwalletbackend-so-1-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.1935896873474121,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkwalletbackend.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkwalletbackend.so.1.0.0 libkwalletbackend-so-1-0-0-libkwalletbackend-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkwalletbackend.so.1.0.0-abi-laboratory-libkwalletbackend-so-1-0-0-libkwalletbackend-so-1-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkwalletbackend.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkwalletbackend.so.1.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkwalletbackend.so.1.0.0": 90496,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkwalletbackend.so.1.0.0": 90496
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkwalletbackend.so.1.0.0": 86360,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkwalletbackend.so.1.0.0": 86240
             }
         },
         "experiment": "usr/lib64/libkwalletbackend-fedora-libs-34-fedora-libs-35",

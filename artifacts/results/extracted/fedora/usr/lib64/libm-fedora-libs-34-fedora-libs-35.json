@@ -18,7 +18,7 @@
                     "command": "missing-previously-found-symbols",
                     "message": "Cannot derive decision, symbols not found.",
                     "prediction": "Unknown",
-                    "seconds": 7.3909759521484375e-06
+                    "seconds": 8.821487426757812e-06
                 },
                 {
                     "splice_type": "different_lib",
@@ -27,14 +27,14 @@
                     "command": "missing-previously-found-exports",
                     "message": "Cannot derive decision, symbols not found.",
                     "prediction": "Unknown",
-                    "seconds": 1.1920928955078125e-06
+                    "seconds": 1.6689300537109375e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "/usr/local/bin/abidiff: Unknown content type for file /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so\n",
                     "return_code": 1,
-                    "seconds": 0.008015155792236328,
+                    "seconds": 0.007329463958740234,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so",
@@ -44,9 +44,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so-abi-laboratory-libm-so-libm-so-6.html\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
-                    "return_code": 12,
-                    "seconds": 0.09839582443237305,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so-abi-laboratory-libm-so-libm-so-6.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.20209455490112305,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6 libm-so-libm-so-6 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so-abi-laboratory-libm-so-libm-so-6.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so",
@@ -58,7 +58,7 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libm.so": 110,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6": 919640
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6": 910120
             }
         },
         "experiment": "usr/lib64/libm-fedora-libs-34-fedora-libs-35",

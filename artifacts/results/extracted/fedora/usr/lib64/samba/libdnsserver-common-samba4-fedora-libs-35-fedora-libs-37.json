@@ -15,50 +15,54 @@
                     "splice_type": "different_lib",
                     "original_lib": "libdnsserver-common-samba4.so",
                     "spliced_lib": "libdnsserver-common-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.2438507080078125e-05
+                    "seconds": 4.76837158203125e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libdnsserver-common-samba4.so",
                     "spliced_lib": "libdnsserver-common-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.821487426757812e-06
+                    "seconds": 1.2636184692382812e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.03538370132446289,
+                    "message": "Functions changes summary: 16 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n16 Removed functions:\n\n  [D] 'function WERROR dns_common_extract(ldb_context*, const ldb_message_element*, TALLOC_CTX*, dnsp_DnssrvRpcRecord**, uint16_t*)'    {dns_common_extract@@SAMBA_4.15.9}\n  [D] 'function WERROR dns_common_lookup(ldb_context*, TALLOC_CTX*, ldb_dn*, dnsp_DnssrvRpcRecord**, uint16_t*, bool*)'    {dns_common_lookup@@SAMBA_4.15.9}\n  [D] 'function WERROR dns_common_name2dn(ldb_context*, dns_server_zone*, TALLOC_CTX*, const char*, ldb_dn**)'    {dns_common_name2dn@@SAMBA_4.15.9}\n  [D] 'function WERROR dns_common_replace(ldb_context*, TALLOC_CTX*, ldb_dn*, bool, uint32_t, dnsp_DnssrvRpcRecord*, uint16_t)'    {dns_common_replace@@SAMBA_4.15.9}\n  [D] 'function WERROR dns_common_wildcard_lookup(ldb_context*, TALLOC_CTX*, ldb_dn*, dnsp_DnssrvRpcRecord**, uint16_t*)'    {dns_common_wildcard_lookup@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS dns_common_zones(ldb_context*, TALLOC_CTX*, ldb_dn*, dns_server_zone**)'    {dns_common_zones@@SAMBA_4.15.9}\n  [D] 'function WERROR dns_get_zone_properties(ldb_context*, TALLOC_CTX*, ldb_dn*, dnsserver_zoneinfo*)'    {dns_get_zone_properties@@SAMBA_4.15.9}\n  [D] 'function WERROR dns_name_check(TALLOC_CTX*, size_t, const char*)'    {dns_name_check@@SAMBA_4.15.9}\n  [D] 'function bool dns_name_equal(const char*, const char*)'    {dns_name_equal@@SAMBA_4.15.9}\n  [D] 'function bool dns_name_is_static(dnsp_DnssrvRpcRecord*, uint16_t)'    {dns_name_is_static@@SAMBA_4.15.9}\n  [D] 'function bool dns_name_match(const char*, const char*, size_t*)'    {dns_name_match@@SAMBA_4.15.9}\n  [D] 'function bool dns_record_match(dnsp_DnssrvRpcRecord*, dnsp_DnssrvRpcRecord*)'    {dns_record_match@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS dns_timestamp_to_nt_time(NTTIME*, uint32_t)'    {dns_timestamp_to_nt_time@@SAMBA_4.15.9}\n  [D] 'function bool dns_zoneinfo_load_zone_property(dnsserver_zoneinfo*, dnsp_DnsProperty*)'    {dns_zoneinfo_load_zone_property@@SAMBA_4.15.9}\n  [D] 'function uint32_t unix_to_dns_timestamp(time_t)'    {unix_to_dns_timestamp@@SAMBA_4.15.9}\n  [D] 'function uint8_t werr_to_dns_err(WERROR)'    {werr_to_dns_err@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.04433751106262207,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdnsserver-common-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdnsserver-common-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdnsserver-common-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so-abi-laboratory-libdnsserver-common-samba4-so-libdnsserver-common-samba4-so.html\nFound link to libdnsserver-common-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdnsserver-common-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-nvgce.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdnsserver-common-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdnsserver-common-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-SAXPN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so-abi-laboratory-libdnsserver-common-samba4-so-libdnsserver-common-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 12.439879655838013,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdnsserver-common-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so-abi-laboratory-libdnsserver-common-samba4-so-libdnsserver-common-samba4-so.html\nFound link to libdnsserver-common-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libdnsserver-common-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-kKeRD.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdnsserver-common-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libdnsserver-common-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-8gnBE.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 16, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so-abi-laboratory-libdnsserver-common-samba4-so-libdnsserver-common-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 14.934514999389648,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdnsserver-common-samba4.so libdnsserver-common-samba4-so-libdnsserver-common-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so-abi-laboratory-libdnsserver-common-samba4-so-libdnsserver-common-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdnsserver-common-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so": 36808,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdnsserver-common-samba4.so": 36808
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdnsserver-common-samba4.so": 32800,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdnsserver-common-samba4.so": 36824
             }
         },
         "experiment": "usr/lib64/samba/libdnsserver-common-samba4-fedora-libs-35-fedora-libs-37",

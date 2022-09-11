@@ -15,49 +15,53 @@
                     "splice_type": "different_lib",
                     "original_lib": "libcli-cldap-samba4.so",
                     "spliced_lib": "libcli-cldap-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.033348083496094e-05
+                    "seconds": 4.124641418457031e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libcli-cldap-samba4.so",
                     "spliced_lib": "libcli-cldap-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.4781951904296875e-05
+                    "seconds": 1.049041748046875e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.06088447570800781,
+                    "message": "Functions changes summary: 18 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n18 Removed functions:\n\n  [D] 'function NTSTATUS cldap_empty_reply(cldap_socket*, uint32_t, tsocket_address*)'    {cldap_empty_reply@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS cldap_error_reply(cldap_socket*, uint32_t, tsocket_address*, int, const char*)'    {cldap_error_reply@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS cldap_netlogon(cldap_socket*, TALLOC_CTX*, cldap_netlogon*)'    {cldap_netlogon@@SAMBA_4.15.9}\n  [D] 'function char* cldap_netlogon_create_filter(TALLOC_CTX*, const cldap_netlogon*)'    {cldap_netlogon_create_filter@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS cldap_netlogon_recv(tevent_req*, TALLOC_CTX*, cldap_netlogon*)'    {cldap_netlogon_recv@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS cldap_netlogon_reply(cldap_socket*, uint32_t, tsocket_address*, uint32_t, netlogon_samlogon_response*)'    {cldap_netlogon_reply@@SAMBA_4.15.9}\n  [D] 'function tevent_req* cldap_netlogon_send(TALLOC_CTX*, tevent_context*, cldap_socket*, const cldap_netlogon*)'    {cldap_netlogon_send@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS cldap_reply_send(cldap_socket*, cldap_reply*)'    {cldap_reply_send@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS cldap_search(cldap_socket*, TALLOC_CTX*, cldap_search*)'    {cldap_search@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS cldap_search_recv(tevent_req*, TALLOC_CTX*, cldap_search*)'    {cldap_search_recv@@SAMBA_4.15.9}\n  [D] 'function tevent_req* cldap_search_send(TALLOC_CTX*, tevent_context*, cldap_socket*, const cldap_search*)'    {cldap_search_send@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS cldap_set_incoming_handler(cldap_socket*, tevent_context*, void (cldap_socket*, void*, cldap_incoming*)*, void*)'    {cldap_set_incoming_handler@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS cldap_socket_init(TALLOC_CTX*, const tsocket_address*, const tsocket_address*, cldap_socket**)'    {cldap_socket_init@@SAMBA_4.15.9}\n  [D] 'function void map_netlogon_samlogon_response(netlogon_samlogon_response*)'    {map_netlogon_samlogon_response@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS pull_nbt_netlogon_response(DATA_BLOB*, TALLOC_CTX*, nbt_netlogon_response*)'    {pull_nbt_netlogon_response@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS pull_netlogon_samlogon_response(DATA_BLOB*, TALLOC_CTX*, netlogon_samlogon_response*)'    {pull_netlogon_samlogon_response@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS push_nbt_netlogon_response(DATA_BLOB*, TALLOC_CTX*, nbt_netlogon_response*)'    {push_nbt_netlogon_response@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS push_netlogon_samlogon_response(DATA_BLOB*, TALLOC_CTX*, netlogon_samlogon_response*)'    {push_netlogon_samlogon_response@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.04170560836791992,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-cldap-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-cldap-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-cldap-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so-abi-laboratory-libcli-cldap-samba4-so-libcli-cldap-samba4-so.html\nFound link to libcli-cldap-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcli-cldap-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 8512\nERROR: incomplete info for symbol 9301\nERROR: incomplete info for symbol 10030\nERROR: incomplete info for symbol 10987\nERROR: incomplete info for symbol 11400\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-t99J1.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcli-cldap-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcli-cldap-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 8512\nERROR: incomplete info for symbol 9301\nERROR: incomplete info for symbol 10030\nERROR: incomplete info for symbol 10987\nERROR: incomplete info for symbol 11400\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-KfiQ4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so-abi-laboratory-libcli-cldap-samba4-so-libcli-cldap-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 15.315236568450928,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-cldap-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so-abi-laboratory-libcli-cldap-samba4-so-libcli-cldap-samba4-so.html\nFound link to libcli-cldap-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libcli-cldap-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 8608\nERROR: incomplete info for symbol 9397\nERROR: incomplete info for symbol 10126\nERROR: incomplete info for symbol 11083\nERROR: incomplete info for symbol 11496\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-YKFDf.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcli-cldap-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcli-cldap-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 8512\nERROR: incomplete info for symbol 9301\nERROR: incomplete info for symbol 10030\nERROR: incomplete info for symbol 10987\nERROR: incomplete info for symbol 11400\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-qP0ED.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 18, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so-abi-laboratory-libcli-cldap-samba4-so-libcli-cldap-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 12.022640466690063,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-cldap-samba4.so libcli-cldap-samba4-so-libcli-cldap-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so-abi-laboratory-libcli-cldap-samba4-so-libcli-cldap-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-cldap-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so": 40936,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libcli-cldap-samba4.so": 36912,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libcli-cldap-samba4.so": 40936
             }
         },

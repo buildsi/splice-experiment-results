@@ -15,26 +15,33 @@
                     "splice_type": "different_lib",
                     "original_lib": "tex-filter.so",
                     "spliced_lib": "tex-filter.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 3.218650817871094e-05
+                    "message": [
+                        "printf",
+                        "abort"
+                    ],
+                    "prediction": false,
+                    "seconds": 4.100799560546875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "tex-filter.so",
                     "spliced_lib": "tex-filter.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.1920928955078125e-05
+                    "seconds": 1.0728836059570312e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.06445121765136719,
+                    "seconds": 0.06831645965576172,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/tex-filter.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/tex-filter.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so",
@@ -44,9 +51,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/tex-filter.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so-abi-laboratory-tex-filter-so-tex-filter-so.html\nFound link to tex-filter.so-0.60.8-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file tex-filter.so-0.60.8-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/aspell-0.60/../../../.dwz/aspell-0.60.8-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Rhzna.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to tex-filter.so-0.60.8-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file tex-filter.so-0.60.8-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/aspell-0.60/../../../.dwz/aspell-0.60.8-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Mn2v6.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so-abi-laboratory-tex-filter-so-tex-filter-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/tex-filter.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so-abi-laboratory-tex-filter-so-tex-filter-so.html\nFound link to tex-filter.so-0.60.8-7.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file tex-filter.so-0.60.8-7.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/aspell-0.60/../../../.dwz/aspell-0.60.8-7.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-5fj4B.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to tex-filter.so-0.60.8-10.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file tex-filter.so-0.60.8-10.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/aspell-0.60/../../../.dwz/aspell-0.60.8-10.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-bvRiy.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so-abi-laboratory-tex-filter-so-tex-filter-so.html\n",
                     "return_code": 0,
-                    "seconds": 1.0339384078979492,
+                    "seconds": 1.1278023719787598,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/tex-filter.so tex-filter-so-tex-filter-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so-abi-laboratory-tex-filter-so-tex-filter-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/tex-filter.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so",
@@ -57,8 +64,8 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so": 28136,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/tex-filter.so": 28136
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/tex-filter.so": 28008,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/tex-filter.so": 28144
             }
         },
         "experiment": "usr/lib64/aspell-0.60/tex-filter-fedora-libs-34-fedora-libs-37",

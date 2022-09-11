@@ -15,42 +15,46 @@
                     "splice_type": "different_lib",
                     "original_lib": "libkrad.so.0.0",
                     "spliced_lib": "libkrad.so.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.24249267578125e-05
+                    "seconds": 3.9577484130859375e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libkrad.so.0.0",
                     "spliced_lib": "libkrad.so.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.1205673217773438e-05
+                    "seconds": 1.5735626220703125e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.02349400520324707,
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (2 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function void krad_client_free(krad_client*)' at client.c:221:1 has some indirect sub-type changes:\n    parameter 1 of type 'krad_client*' has sub-type changes:\n      in pointed to type 'typedef krad_client' at krad.h:62:1:\n        underlying type 'struct krad_client_st' at client.c:71:1 changed:\n          type size hasn't changed\n          1 data member change:\n            type of 'server_head servers' changed:\n              type size hasn't changed\n              1 data member change:\n                type of 'server_st* lh_first' changed:\n                  in pointed to type 'struct server_st' at client.c:65:1:\n                    type size changed from 256 to 192 (in bits)\n                    1 data member deletion:\n                      'time_t last', at offset 64 (in bits) at client.c:67:1\n                    1 data member change:\n                      'struct {server_st* le_next; server_st** le_prev;} list' offset changed from 128 to 64 (in bits) (by -64 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.03740358352661133,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkrad.so.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkrad.so.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkrad.so.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkrad.so.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkrad.so.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkrad.so.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkrad.so.0.0-abi-laboratory-libkrad-so-0-0-libkrad-so-0-0.html\nFound link to libkrad.so.0.0-1.19.2-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkrad.so.0.0-1.19.2-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/krb5-1.19.2-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6622\nERROR: incomplete info for symbol 6717\nERROR: incomplete info for symbol 6926\nERROR: incomplete info for symbol 7892\nERROR: incomplete info for symbol 8046\nERROR: incomplete info for symbol 8223\nERROR: incomplete info for symbol 8307\nERROR: incomplete info for symbol 8451\nERROR: incomplete info for symbol 8559\nERROR: incomplete info for symbol 8649\nERROR: incomplete info for symbol 8694\nERROR: incomplete info for symbol 8845\nERROR: incomplete info for symbol 12528\nERROR: incomplete info for symbol 12656\nERROR: incomplete info for symbol 15097\nERROR: incomplete info for symbol 16169\nERROR: incomplete info for symbol 16720\nERROR: incomplete info for symbol 16952\nERROR: incomplete info for symbol 18504\nERROR: incomplete info for symbol 18549\nERROR: incomplete info for symbol 18594\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-JSwqr.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkrad.so.0.0-1.19.2-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkrad.so.0.0-1.19.2-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/krb5-1.19.2-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6622\nERROR: incomplete info for symbol 6717\nERROR: incomplete info for symbol 6926\nERROR: incomplete info for symbol 7892\nERROR: incomplete info for symbol 8046\nERROR: incomplete info for symbol 8223\nERROR: incomplete info for symbol 8307\nERROR: incomplete info for symbol 8451\nERROR: incomplete info for symbol 8559\nERROR: incomplete info for symbol 8649\nERROR: incomplete info for symbol 8694\nERROR: incomplete info for symbol 8845\nERROR: incomplete info for symbol 12528\nERROR: incomplete info for symbol 12656\nERROR: incomplete info for symbol 15097\nERROR: incomplete info for symbol 16169\nERROR: incomplete info for symbol 16720\nERROR: incomplete info for symbol 16952\nERROR: incomplete info for symbol 18504\nERROR: incomplete info for symbol 18549\nERROR: incomplete info for symbol 18594\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-mVDdR.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkrad.so.0.0-abi-laboratory-libkrad-so-0-0-libkrad-so-0-0.html\n",
-                    "return_code": 0,
-                    "seconds": 1.2037785053253174,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkrad.so.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkrad.so.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkrad.so.0.0-abi-laboratory-libkrad-so-0-0-libkrad-so-0-0.html\nFound link to libkrad.so.0.0-1.19.2-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkrad.so.0.0-1.19.2-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/krb5-1.19.2-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6622\nERROR: incomplete info for symbol 6717\nERROR: incomplete info for symbol 6926\nERROR: incomplete info for symbol 7892\nERROR: incomplete info for symbol 8046\nERROR: incomplete info for symbol 8223\nERROR: incomplete info for symbol 8307\nERROR: incomplete info for symbol 8451\nERROR: incomplete info for symbol 8559\nERROR: incomplete info for symbol 8649\nERROR: incomplete info for symbol 8694\nERROR: incomplete info for symbol 8845\nERROR: incomplete info for symbol 12528\nERROR: incomplete info for symbol 12656\nERROR: incomplete info for symbol 15097\nERROR: incomplete info for symbol 16169\nERROR: incomplete info for symbol 16720\nERROR: incomplete info for symbol 16952\nERROR: incomplete info for symbol 18504\nERROR: incomplete info for symbol 18549\nERROR: incomplete info for symbol 18594\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-i2kdM.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkrad.so.0.0-1.19.2-11.fc37.1.x86_64.debug (gnu_debuglink)\nReading debug-info file libkrad.so.0.0-1.19.2-11.fc37.1.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/krb5-1.19.2-11.fc37.1.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6567\nERROR: incomplete info for symbol 6662\nERROR: incomplete info for symbol 6872\nERROR: incomplete info for symbol 7839\nERROR: incomplete info for symbol 7993\nERROR: incomplete info for symbol 8170\nERROR: incomplete info for symbol 8254\nERROR: incomplete info for symbol 8398\nERROR: incomplete info for symbol 8506\nERROR: incomplete info for symbol 8596\nERROR: incomplete info for symbol 8641\nERROR: incomplete info for symbol 8792\nERROR: incomplete info for symbol 12272\nERROR: incomplete info for symbol 12683\nERROR: incomplete info for symbol 15207\nERROR: incomplete info for symbol 16279\nERROR: incomplete info for symbol 16831\nERROR: incomplete info for symbol 17063\nERROR: incomplete info for symbol 18615\nERROR: incomplete info for symbol 18660\nERROR: incomplete info for symbol 18705\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-wWAfQ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 87%\nSource compatibility: 87%\nTotal binary compatibility problems: 1, warnings: 1\nTotal source compatibility problems: 1, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkrad.so.0.0-abi-laboratory-libkrad-so-0-0-libkrad-so-0-0.html\n",
+                    "return_code": 1,
+                    "seconds": 1.7958309650421143,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkrad.so.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkrad.so.0.0 libkrad-so-0-0-libkrad-so-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkrad.so.0.0-abi-laboratory-libkrad-so-0-0-libkrad-so-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkrad.so.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkrad.so.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
@@ -58,7 +62,7 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkrad.so.0.0": 45120,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkrad.so.0.0": 45120
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkrad.so.0.0": 45152
             }
         },
         "experiment": "usr/lib64/libkrad-fedora-libs-36-fedora-libs-37",

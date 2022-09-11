@@ -15,49 +15,55 @@
                     "splice_type": "different_lib",
                     "original_lib": "libnetif-samba4.so",
                     "spliced_lib": "libnetif-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 2.86102294921875e-05
+                    "message": [
+                        "talloc_named_const"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.075599670410156e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libnetif-samba4.so",
                     "spliced_lib": "libnetif-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.049041748046875e-05
+                    "seconds": 9.775161743164062e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.023957014083862305,
+                    "message": "Functions changes summary: 11 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n11 Removed functions:\n\n  [D] 'function const char* iface_list_best_ip(interface*, const char*)'    {iface_list_best_ip@@SAMBA_4.15.9}\n  [D] 'function int iface_list_count(interface*)'    {iface_list_count@@SAMBA_4.15.9}\n  [D] 'function const char* iface_list_first_v4(interface*)'    {iface_list_first_v4@@SAMBA_4.15.9}\n  [D] 'function bool iface_list_is_local(interface*, const char*)'    {iface_list_is_local@@SAMBA_4.15.9}\n  [D] 'function const char* iface_list_n_bcast(interface*, int)'    {iface_list_n_bcast@@SAMBA_4.15.9}\n  [D] 'function const char* iface_list_n_ip(interface*, int)'    {iface_list_n_ip@@SAMBA_4.15.9}\n  [D] 'function bool iface_list_n_is_v4(interface*, int)'    {iface_list_n_is_v4@@SAMBA_4.15.9}\n  [D] 'function const char* iface_list_n_netmask(interface*, int)'    {iface_list_n_netmask@@SAMBA_4.15.9}\n  [D] 'function bool iface_list_same_net(const char*, const char*, const char*)'    {iface_list_same_net@@SAMBA_4.15.9}\n  [D] 'function char** iface_list_wildcard(TALLOC_CTX*)'    {iface_list_wildcard@@SAMBA_4.15.9}\n  [D] 'function void load_interface_list(TALLOC_CTX*, loadparm_context*, interface**)'    {load_interface_list@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.024663686752319336,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnetif-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnetif-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnetif-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so-abi-laboratory-libnetif-samba4-so-libnetif-samba4-so.html\nFound link to libnetif-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnetif-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-T8U4e.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libnetif-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnetif-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-94dt9.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so-abi-laboratory-libnetif-samba4-so-libnetif-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 12.46921443939209,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnetif-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so-abi-laboratory-libnetif-samba4-so-libnetif-samba4-so.html\nFound link to libnetif-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libnetif-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-iFcX4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libnetif-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libnetif-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-HkWdD.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 90.9%\nTotal binary compatibility problems: 11, warnings: 0\nTotal source compatibility problems: 1, warnings: 8\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so-abi-laboratory-libnetif-samba4-so-libnetif-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 12.867156028747559,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnetif-samba4.so libnetif-samba4-so-libnetif-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so-abi-laboratory-libnetif-samba4-so-libnetif-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnetif-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so": 24376,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libnetif-samba4.so": 20344,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libnetif-samba4.so": 24376
             }
         },

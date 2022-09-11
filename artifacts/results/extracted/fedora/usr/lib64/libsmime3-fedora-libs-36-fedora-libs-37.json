@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libsmime3.so",
                     "spliced_lib": "libsmime3.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00011610984802246094
+                    "seconds": 0.00013184547424316406
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libsmime3.so",
                     "spliced_lib": "libsmime3.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00022602081298828125
+                    "seconds": 0.00022459030151367188
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.13482284545898438,
+                    "seconds": 0.17212963104248047,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmime3.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmime3.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmime3.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmime3.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmime3.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmime3.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmime3.so-abi-laboratory-libsmime3-so-libsmime3-so.html\nFound link to libsmime3.so-3.81.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmime3.so-3.81.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/nss-3.81.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-AhYTV.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsmime3.so-3.81.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmime3.so-3.81.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/nss-3.81.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-s3jNd.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmime3.so-abi-laboratory-libsmime3-so-libsmime3-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmime3.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmime3.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmime3.so-abi-laboratory-libsmime3-so-libsmime3-so.html\nFound link to libsmime3.so-3.81.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmime3.so-3.81.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/nss-3.81.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-xeQX0.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsmime3.so-3.81.0-1.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmime3.so-3.81.0-1.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/nss-3.81.0-1.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-FbTUd.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmime3.so-abi-laboratory-libsmime3-so-libsmime3-so.html\n",
                     "return_code": 0,
-                    "seconds": 3.4002842903137207,
+                    "seconds": 4.279930114746094,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmime3.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmime3.so libsmime3-so-libsmime3-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmime3.so-abi-laboratory-libsmime3-so-libsmime3-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsmime3.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsmime3.so",

@@ -3,69 +3,96 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.12.0.1"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.11.0.1"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.0.1"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.1.0"
         ],
         "paths": {},
         "predictions": {
             "symbols": [
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libdynDwarf.so.12.0.1",
-                    "spliced_lib": "libdynDwarf.so.12.0.1",
+                    "original_lib": "libdynDwarf.so.11.0.1",
+                    "spliced_lib": "libdynDwarf.so.12.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 7.748603820800781e-05
+                    "message": [
+                        "_ZSt20__throw_system_errori",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance",
+                        "_ZTVN5boost6system12system_errorE",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_",
+                        "abort",
+                        "_ZNSt13runtime_errorC2EPKc",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE7map_mx_",
+                        "printf",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance",
+                        "__pthread_key_create"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.462501525878906e-05
                 },
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libdynDwarf.so.12.0.1",
-                    "spliced_lib": "libdynDwarf.so.12.0.1",
+                    "original_lib": "libdynDwarf.so.11.0.1",
+                    "spliced_lib": "libdynDwarf.so.12.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 0.00011396408081054688
+                    "message": [
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance",
+                        "_ZTVN5boost6system12system_errorE",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE7map_mx_"
+                    ],
+                    "prediction": false,
+                    "seconds": 8.511543273925781e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 1.1425940990447998,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.12.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.0.1",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.0.1",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.12.0.1",
-                    "prediction": true,
+                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 1 Changed (1 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 0 Added function symbol not referenced by debug info\nVariable symbols changes summary: 8 Removed, 3 Added variable symbols not referenced by debug info\n\nSONAME changed from 'libdynDwarf.so.11.0' to 'libdynDwarf.so.12.1'\n\n1 function with some indirect sub-type change:\n\n  [C] 'function bool Dyninst::DwarfDyninst::decodeDwarfExpression(Dwarf_Op*, Dwarf_Sword, long int*, Dyninst::DwarfDyninst::DwarfResult&, Dyninst::Architecture)' at dwarfExprParser.C:59:1 has some indirect sub-type changes:\n    parameter 4 of type 'Dyninst::DwarfDyninst::DwarfResult&' has sub-type changes:\n      in referenced type 'class Dyninst::DwarfDyninst::DwarfResult' at dwarfResult.h:46:1:\n        type size hasn't changed\n        2 member function insertions:\n          'method virtual Dyninst::DwarfDyninst::DwarfResult::~DwarfResult(int)' at dwarfResult.h:81:1\n          'method virtual Dyninst::DwarfDyninst::DwarfResult::~DwarfResult(int)' at dwarfResult.h:81:1\n        no member function changes (12 filtered);\n        1 data member change:\n          type of 'Dyninst::Architecture arch' changed:\n            underlying type 'enum Dyninst::Architecture' at dyn_regs.h:52:1 changed:\n              type size hasn't changed\n              1 enumerator deletion:\n                'Dyninst::Architecture::Arch_amdgpu_rdna' value '2348810240'\n              1 enumerator insertion:\n                'Dyninst::Architecture::Arch_amdgpu_cdna2' value '2483027968'\n\n8 Removed variable symbols not referenced by debug info:\n\n  [D] _ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance\n  [D] _ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance\n  [D] _ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_\n  [D] _ZTVN5boost6system12system_errorE\n  [D] _ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance\n  [D] _ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance\n  [D] _ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_\n  [D] _ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE7map_mx_\n\n3 Added variable symbols not referenced by debug info:\n\n  [A] _ZTIN5boost6system6detail22interop_error_categoryE\n  [A] _ZTSN5boost6system6detail22interop_error_categoryE\n  [A] _ZTVN5boost6system6detail22interop_error_categoryE\n\n",
+                    "return_code": 12,
+                    "seconds": 1.1173548698425293,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.11.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.11.0.1",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.12.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.12.0.1-abi-laboratory-libdynDwarf-so-12-0-1-libdynDwarf-so-12-0-1.html\nFound link to libdynDwarf.so.12.0.1-12.0.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdynDwarf.so.12.0.1-12.0.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-12.0.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 71904\nERROR: incomplete info for symbol 79241\nERROR: incomplete info for symbol 114287\nERROR: incomplete info for symbol 114759\nERROR: incomplete info for symbol 117277\nERROR: incomplete info for symbol 117304\nERROR: incomplete info for symbol 117331\nERROR: incomplete info for symbol 117383\nERROR: incomplete info for symbol 117435\nERROR: incomplete info for symbol 117487\nERROR: incomplete info for symbol 130976\nReading v-tables\nlibdynElf.so.12.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-QOCg0.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdynDwarf.so.12.0.1-12.0.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdynDwarf.so.12.0.1-12.0.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-12.0.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 71904\nERROR: incomplete info for symbol 79241\nERROR: incomplete info for symbol 114287\nERROR: incomplete info for symbol 114759\nERROR: incomplete info for symbol 117277\nERROR: incomplete info for symbol 117304\nERROR: incomplete info for symbol 117331\nERROR: incomplete info for symbol 117383\nERROR: incomplete info for symbol 117435\nERROR: incomplete info for symbol 117487\nERROR: incomplete info for symbol 130976\nReading v-tables\nlibdynElf.so.12.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-eNcRm.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.12.0.1-abi-laboratory-libdynDwarf-so-12-0-1-libdynDwarf-so-12-0-1.html\n",
-                    "return_code": 0,
-                    "seconds": 17.757831811904907,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.12.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.0.1 libdynDwarf-so-12-0-1-libdynDwarf-so-12-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.12.0.1-abi-laboratory-libdynDwarf-so-12-0-1-libdynDwarf-so-12-0-1.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.0.1",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.12.0.1",
-                    "prediction": true,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.11.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.11.0.1-abi-laboratory-libdynDwarf-so-11-0-1-libdynDwarf-so-12-1-0.html\nFound link to libdynDwarf.so.11.0.1-11.0.1-3.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libdynDwarf.so.11.0.1-11.0.1-3.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-11.0.1-3.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 66805\nERROR: incomplete info for symbol 73969\nERROR: incomplete info for symbol 106256\nERROR: incomplete info for symbol 106740\nERROR: incomplete info for symbol 109315\nERROR: incomplete info for symbol 109342\nERROR: incomplete info for symbol 109369\nERROR: incomplete info for symbol 109421\nERROR: incomplete info for symbol 109473\nERROR: incomplete info for symbol 109525\nERROR: incomplete info for symbol 120875\nReading v-tables\nlibdynElf.so.11.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-2Ygn4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdynDwarf.so.12.1.0-12.1.0-4.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libdynDwarf.so.12.1.0-12.1.0-4.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-12.1.0-4.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 63437\nERROR: incomplete info for symbol 70742\nERROR: incomplete info for symbol 105704\nERROR: incomplete info for symbol 106176\nERROR: incomplete info for symbol 108694\nERROR: incomplete info for symbol 108721\nERROR: incomplete info for symbol 108748\nERROR: incomplete info for symbol 108800\nERROR: incomplete info for symbol 108852\nERROR: incomplete info for symbol 108904\nERROR: incomplete info for symbol 122142\nReading v-tables\nlibdynElf.so.12.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-xha8S.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 80%\nTotal binary compatibility problems: 0, warnings: 1\nTotal source compatibility problems: 1, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.11.0.1-abi-laboratory-libdynDwarf-so-11-0-1-libdynDwarf-so-12-1-0.html\n",
+                    "return_code": 1,
+                    "seconds": 18.459194898605347,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.11.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.1.0 libdynDwarf-so-11-0-1-libdynDwarf-so-12-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.11.0.1-abi-laboratory-libdynDwarf-so-11-0-1-libdynDwarf-so-12-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.11.0.1",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.12.0.1": 92456,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.0.1": 92456
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.11.0.1": 96152,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.1.0": 92600
             }
         },
         "experiment": "usr/lib64/dyninst/libdynDwarf-fedora-libs-35-fedora-libs-37",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.0.1",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.12.0.1",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynDwarf.so.12.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynDwarf.so.11.0.1",
         "different_libs": true
     }
 ]

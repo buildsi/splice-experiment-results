@@ -110,18 +110,18 @@ def create_fedora_results_table(experiments, filename=False):
         columns.append("file")
     df = pandas.DataFrame(columns=columns)
 
-    def add_prediction_row(before, after, original, changed, res, p, predictor, e):
+    def add_prediction_row(before, after, original, changed, p, predictor, e):
         """
         Given a result, add a row to the data frame.
         """
         # Different predictors use different data
         prediction = p.get("prediction", False)
-        seconds = p.get("seconds") or "unknown"
+        seconds = p.get("seconds") or p.get('time') or "unknown"
 
         # symbols has two diff cases
         analysis = "abi-compliance-tester"
         if predictor == "symbols":
-            analysis = p["command"]
+            analysis = p['command']
         elif predictor == "libabigail":
             analysis = "abidiff"
 
@@ -148,21 +148,39 @@ def create_fedora_results_table(experiments, filename=False):
         before = comparison[-2]
         after = comparison[-1]
         data = read_json(e)
-        for res in data:
-            # Split on right repo name to get relative path
-            original = (
-                res["original"][0].rsplit("splice-experiment-runs")[-1].strip("/")
-            )
-            changed = res["spliced"][0].rsplit("splice-experiment-runs")[-1].strip("/")
 
-            for predictor, listing in res["predictions"].items():
-                for p in listing:
-                    add_prediction_row(before, after, original, changed, res, p, predictor, e)
+        # Symbols libs have one result per file - flattened
+        if "fedora/symbols" in e:
+            data = [data]
+
+        for res in data:
+
+            # If we don't have predictions, it's a full (non symbols) result
+            if "predictions" not in res:
+                
+                continue
+                original = res['original_lib'].rsplit("splice-experiment-runs")[-1].strip("/")
+                changed = res['spliced_lib'].rsplit("splice-experiment-runs")[-1].strip("/")
+                add_prediction_row(before, after, original, changed, res, "symbols", e)            
+            else:
+                # Split on right repo name to get relative path
+                original = (
+                    res["original"][0].rsplit("splice-experiment-runs")[-1].strip("/")
+                )
+                changed = res["spliced"][0].rsplit("splice-experiment-runs")[-1].strip("/")
+                for predictor, listing in res["predictions"].items():
+                    # We aren't including symbols from these runs
+                    #if predictor == "symbols":
+                    #    continue
+                    for p in listing:
+                        add_prediction_row(before, after, original, changed, p, predictor, e)
     return df
 
 def create_sizes_table(experiments):
     """
     Keep track of all binary sizes
+
+    (this is currently not used)
     """
     sizes = pandas.DataFrame(columns=["name", "size_bytes"])
     for e in experiments:

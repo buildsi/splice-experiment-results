@@ -15,15 +15,19 @@
                     "splice_type": "different_lib",
                     "original_lib": "mdb.so",
                     "spliced_lib": "mdb.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.0503997802734375e-05
+                    "seconds": 2.4080276489257812e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "mdb.so",
                     "spliced_lib": "mdb.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
@@ -34,7 +38,7 @@
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.015253305435180664,
+                    "seconds": 0.017151355743408203,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/mdb.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/mdb.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/mdb.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so-abi-laboratory-mdb-so-mdb-so.html\nFound link to mdb.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file mdb.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-k9Spl.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to mdb.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file mdb.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-BN8k4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so-abi-laboratory-mdb-so-mdb-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/mdb.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so-abi-laboratory-mdb-so-mdb-so.html\nFound link to mdb.so-2.4.4-1.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file mdb.so-2.4.4-1.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.4.4-1.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-zkpfE.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to mdb.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file mdb.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-mPg6z.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so-abi-laboratory-mdb-so-mdb-so.html\n",
                     "return_code": 0,
-                    "seconds": 0.4964585304260254,
+                    "seconds": 0.5115945339202881,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/mdb.so mdb-so-mdb-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so-abi-laboratory-mdb-so-mdb-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/mdb.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so": 15904,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/mdb.so": 15624,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/mdb.so": 15904
             }
         },

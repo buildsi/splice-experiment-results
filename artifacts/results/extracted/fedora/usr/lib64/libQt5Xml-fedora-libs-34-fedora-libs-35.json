@@ -3,69 +3,73 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.5"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.2"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.5"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.2"
         ],
         "paths": {},
         "predictions": {
             "symbols": [
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libQt5Xml.so.5.15.5",
-                    "spliced_lib": "libQt5Xml.so.5.15.5",
+                    "original_lib": "libQt5Xml.so.5.15.2",
+                    "spliced_lib": "libQt5Xml.so.5.15.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00013017654418945312
+                    "seconds": 0.0001404285430908203
                 },
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libQt5Xml.so.5.15.5",
-                    "spliced_lib": "libQt5Xml.so.5.15.5",
+                    "original_lib": "libQt5Xml.so.5.15.2",
+                    "spliced_lib": "libQt5Xml.so.5.15.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0013728141784667969
+                    "seconds": 0.0018956661224365234
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (1 filtered out), 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
                     "return_code": 0,
-                    "seconds": 3.2998621463775635,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.5",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.5",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.5",
-                    "prediction": true,
+                    "seconds": 5.910453796386719,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.2",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.2",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.5\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.5\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.5-abi-laboratory-libQt5Xml-so-5-15-5-libQt5Xml-so-5-15-5.html\nFound link to libQt5Xml.so.5.15.5-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libQt5Xml.so.5.15.5-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Core.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-vknJZ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libQt5Xml.so.5.15.5-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libQt5Xml.so.5.15.5-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Core.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-uS8mn.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.5-abi-laboratory-libQt5Xml-so-5-15-5-libQt5Xml-so-5-15-5.html\n",
-                    "return_code": 0,
-                    "seconds": 161.05110812187195,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.5 libQt5Xml-so-5-15-5-libQt5Xml-so-5-15-5 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.5-abi-laboratory-libQt5Xml-so-5-15-5-libQt5Xml-so-5-15-5.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.5",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.5",
-                    "prediction": true,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.2-abi-laboratory-libQt5Xml-so-5-15-2-libQt5Xml-so-5-15-2.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.4142951965332031,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.2 libQt5Xml-so-5-15-2-libQt5Xml-so-5-15-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.2-abi-laboratory-libQt5Xml-so-5-15-2-libQt5Xml-so-5-15-2.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.2",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.2",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.5": 297776,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.5": 297776
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.2": 297760,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.2": 297672
             }
         },
         "experiment": "usr/lib64/libQt5Xml-fedora-libs-34-fedora-libs-35",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.5",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.5",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libQt5Xml.so.5.15.2",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libQt5Xml.so.5.15.2",
         "different_libs": true
     }
 ]

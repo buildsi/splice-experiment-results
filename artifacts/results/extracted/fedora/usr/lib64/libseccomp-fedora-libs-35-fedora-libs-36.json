@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libseccomp.so.2.5.3",
                     "spliced_lib": "libseccomp.so.2.5.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.147125244140625e-05
+                    "seconds": 3.409385681152344e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libseccomp.so.2.5.3",
                     "spliced_lib": "libseccomp.so.2.5.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.8358230590820312e-05
+                    "seconds": 1.621246337890625e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.03296208381652832,
+                    "seconds": 0.034442901611328125,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libseccomp.so.2.5.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libseccomp.so.2.5.3",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libseccomp.so.2.5.3",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libseccomp.so.2.5.3",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libseccomp.so.2.5.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libseccomp.so.2.5.3\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libseccomp.so.2.5.3-abi-laboratory-libseccomp-so-2-5-3-libseccomp-so-2-5-3.html\nFound link to libseccomp.so.2.5.3-2.5.3-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libseccomp.so.2.5.3-2.5.3-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-59ZUQ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libseccomp.so.2.5.3-2.5.3-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libseccomp.so.2.5.3-2.5.3-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-m28MJ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libseccomp.so.2.5.3-abi-laboratory-libseccomp-so-2-5-3-libseccomp-so-2-5-3.html\n",
-                    "return_code": 0,
-                    "seconds": 0.8091130256652832,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libseccomp.so.2.5.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libseccomp.so.2.5.3\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libseccomp.so.2.5.3-abi-laboratory-libseccomp-so-2-5-3-libseccomp-so-2-5-3.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.17071914672851562,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libseccomp.so.2.5.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libseccomp.so.2.5.3 libseccomp-so-2-5-3-libseccomp-so-2-5-3 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libseccomp.so.2.5.3-abi-laboratory-libseccomp-so-2-5-3-libseccomp-so-2-5-3.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libseccomp.so.2.5.3",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libseccomp.so.2.5.3",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libseccomp.so.2.5.3": 127728,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libseccomp.so.2.5.3": 127552,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libseccomp.so.2.5.3": 127728
             }
         },

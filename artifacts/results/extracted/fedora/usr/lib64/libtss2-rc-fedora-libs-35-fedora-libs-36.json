@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libtss2-rc.so.0.0.0",
                     "spliced_lib": "libtss2-rc.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.2172927856445312e-05
+                    "seconds": 2.1219253540039062e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libtss2-rc.so.0.0.0",
                     "spliced_lib": "libtss2-rc.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.867813110351562e-06
+                    "seconds": 5.9604644775390625e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.010648727416992188,
+                    "seconds": 0.011560440063476562,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtss2-rc.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtss2-rc.so.0.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtss2-rc.so.0.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtss2-rc.so.0.0.0",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtss2-rc.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtss2-rc.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtss2-rc.so.0.0.0-abi-laboratory-libtss2-rc-so-0-0-0-libtss2-rc-so-0-0-0.html\nFound link to libtss2-rc.so.0.0.0-3.2.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libtss2-rc.so.0.0.0-3.2.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/tpm2-tss-3.2.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-mqXlT.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libtss2-rc.so.0.0.0-3.2.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libtss2-rc.so.0.0.0-3.2.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/tpm2-tss-3.2.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-1U7PF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtss2-rc.so.0.0.0-abi-laboratory-libtss2-rc-so-0-0-0-libtss2-rc-so-0-0-0.html\n",
-                    "return_code": 0,
-                    "seconds": 0.5589509010314941,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtss2-rc.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtss2-rc.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtss2-rc.so.0.0.0-abi-laboratory-libtss2-rc-so-0-0-0-libtss2-rc-so-0-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19464397430419922,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtss2-rc.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtss2-rc.so.0.0.0 libtss2-rc-so-0-0-0-libtss2-rc-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtss2-rc.so.0.0.0-abi-laboratory-libtss2-rc-so-0-0-0-libtss2-rc-so-0-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtss2-rc.so.0.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtss2-rc.so.0.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtss2-rc.so.0.0.0": 37608,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtss2-rc.so.0.0.0": 37424,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtss2-rc.so.0.0.0": 37608
             }
         },

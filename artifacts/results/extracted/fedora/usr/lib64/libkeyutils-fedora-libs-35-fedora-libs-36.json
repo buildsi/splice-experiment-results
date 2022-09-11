@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libkeyutils.so.1.9",
                     "spliced_lib": "libkeyutils.so.1.9",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.314018249511719e-05
+                    "seconds": 4.57763671875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libkeyutils.so.1.9",
                     "spliced_lib": "libkeyutils.so.1.9",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.7894973754882812e-05
+                    "seconds": 2.4318695068359375e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.028362035751342773,
+                    "seconds": 0.023913145065307617,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkeyutils.so.1.9 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkeyutils.so.1.9",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkeyutils.so.1.9",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkeyutils.so.1.9",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkeyutils.so.1.9\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkeyutils.so.1.9\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkeyutils.so.1.9-abi-laboratory-libkeyutils-so-1-9-libkeyutils-so-1-9.html\nFound link to libkeyutils.so.1.9-1.6.1-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkeyutils.so.1.9-1.6.1-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/keyutils-1.6.1-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-YxKIh.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkeyutils.so.1.9-1.6.1-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkeyutils.so.1.9-1.6.1-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/keyutils-1.6.1-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-WIZAD.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkeyutils.so.1.9-abi-laboratory-libkeyutils-so-1-9-libkeyutils-so-1-9.html\n",
-                    "return_code": 0,
-                    "seconds": 0.47927117347717285,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkeyutils.so.1.9\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkeyutils.so.1.9\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkeyutils.so.1.9-abi-laboratory-libkeyutils-so-1-9-libkeyutils-so-1-9.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.23128890991210938,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkeyutils.so.1.9 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkeyutils.so.1.9 libkeyutils-so-1-9-libkeyutils-so-1-9 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkeyutils.so.1.9-abi-laboratory-libkeyutils-so-1-9-libkeyutils-so-1-9.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkeyutils.so.1.9",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkeyutils.so.1.9",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkeyutils.so.1.9": 24688,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkeyutils.so.1.9": 24528,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkeyutils.so.1.9": 24688
             }
         },

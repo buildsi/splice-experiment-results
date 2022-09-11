@@ -15,50 +15,54 @@
                     "splice_type": "different_lib",
                     "original_lib": "libdcerpc-pkt-auth-samba4.so",
                     "spliced_lib": "libdcerpc-pkt-auth-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.9087066650390625e-05
+                    "seconds": 3.0994415283203125e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libdcerpc-pkt-auth-samba4.so",
                     "spliced_lib": "libdcerpc-pkt-auth-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.344650268554688e-06
+                    "seconds": 7.62939453125e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.02702951431274414,
+                    "message": "Functions changes summary: 2 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 Removed functions:\n\n  [D] 'function NTSTATUS dcerpc_ncacn_pull_pkt_auth(const dcerpc_auth*, gensec_security*, bool, TALLOC_CTX*, dcerpc_pkt_type, uint8_t, uint8_t, uint8_t, DATA_BLOB*, DATA_BLOB*, const ncacn_packet*)'    {dcerpc_ncacn_pull_pkt_auth@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS dcerpc_ncacn_push_pkt_auth(const dcerpc_auth*, gensec_security*, TALLOC_CTX*, DATA_BLOB*, size_t, uint8_t, const DATA_BLOB*, const ncacn_packet*)'    {dcerpc_ncacn_push_pkt_auth@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.03295588493347168,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so-abi-laboratory-libdcerpc-pkt-auth-samba4-so-libdcerpc-pkt-auth-samba4-so.html\nFound link to libdcerpc-pkt-auth-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdcerpc-pkt-auth-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-u645z.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdcerpc-pkt-auth-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdcerpc-pkt-auth-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Ux8BH.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so-abi-laboratory-libdcerpc-pkt-auth-samba4-so-libdcerpc-pkt-auth-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 12.606119871139526,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so-abi-laboratory-libdcerpc-pkt-auth-samba4-so-libdcerpc-pkt-auth-samba4-so.html\nFound link to libdcerpc-pkt-auth-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libdcerpc-pkt-auth-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-djN6P.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdcerpc-pkt-auth-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libdcerpc-pkt-auth-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-EL1JV.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 0%\nTotal binary compatibility problems: 2, warnings: 0\nTotal source compatibility problems: 1, warnings: 9\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so-abi-laboratory-libdcerpc-pkt-auth-samba4-so-libdcerpc-pkt-auth-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 15.429657936096191,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so libdcerpc-pkt-auth-samba4-so-libdcerpc-pkt-auth-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so-abi-laboratory-libdcerpc-pkt-auth-samba4-so-libdcerpc-pkt-auth-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so": 16040,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so": 16040
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so": 12032,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libdcerpc-pkt-auth-samba4.so": 16056
             }
         },
         "experiment": "usr/lib64/samba/libdcerpc-pkt-auth-samba4-fedora-libs-35-fedora-libs-37",

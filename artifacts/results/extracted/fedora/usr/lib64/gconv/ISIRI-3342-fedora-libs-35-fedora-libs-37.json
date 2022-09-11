@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/ISIRI-3342.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/ISIRI-3342.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "ISIRI-3342.so",
+                    "spliced_lib": "ISIRI-3342.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.2649765014648438e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "ISIRI-3342.so",
+                    "spliced_lib": "ISIRI-3342.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.152557373046875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.01542520523071289,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/ISIRI-3342.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/ISIRI-3342.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/ISIRI-3342.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/ISIRI-3342.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/ISIRI-3342.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/ISIRI-3342.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/ISIRI-3342.so-abi-laboratory-ISIRI-3342-so-ISIRI-3342-so.html\nFound link to ISIRI-3342.so-2.34-40.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file ISIRI-3342.so-2.34-40.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gconv/../../../.dwz/glibc-2.34-40.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Q6Gff.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to ISIRI-3342.so-2.36.9000-5.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file ISIRI-3342.so-2.36.9000-5.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gconv/../../../.dwz/glibc-2.36.9000-5.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-FEApF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/ISIRI-3342.so-abi-laboratory-ISIRI-3342-so-ISIRI-3342-so.html\n",
+                    "return_code": 0,
+                    "seconds": 2.4073657989501953,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/ISIRI-3342.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/ISIRI-3342.so ISIRI-3342-so-ISIRI-3342-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/ISIRI-3342.so-abi-laboratory-ISIRI-3342-so-ISIRI-3342-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/ISIRI-3342.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/ISIRI-3342.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/ISIRI-3342.so": 20200,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/ISIRI-3342.so": 20176
+            }
+        },
+        "experiment": "usr/lib64/gconv/ISIRI-3342-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/ISIRI-3342.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/ISIRI-3342.so",
+        "different_libs": true
+    }
+]

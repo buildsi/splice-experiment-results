@@ -15,49 +15,59 @@
                     "splice_type": "different_lib",
                     "original_lib": "libglibmm_generate_extra_defs-2.4.so.1.3.0",
                     "spliced_lib": "libglibmm_generate_extra_defs-2.4.so.1.3.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 7.557868957519531e-05
+                    "message": [
+                        "abort",
+                        "_ZTSSt23_Sp_counted_ptr_inplaceINSt8__detail4_NFAINSt7__cxx1112regex_traitsIcEEEESaIS5_ELN9__gnu_cxx12_Lock_policyE2EE",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 9.059906005859375e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libglibmm_generate_extra_defs-2.4.so.1.3.0",
                     "spliced_lib": "libglibmm_generate_extra_defs-2.4.so.1.3.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 8.797645568847656e-05
+                    "message": [
+                        "_ZTSSt23_Sp_counted_ptr_inplaceINSt8__detail4_NFAINSt7__cxx1112regex_traitsIcEEEESaIS5_ELN9__gnu_cxx12_Lock_policyE2EE"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.915496826171875e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 1.1794581413269043,
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (7 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 0 Added function symbol not referenced by debug info\nVariable symbols changes summary: 1 Removed, 1 Added variable symbols not referenced by debug info\n\n1 Removed variable symbol not referenced by debug info:\n\n  [D] _ZTSSt23_Sp_counted_ptr_inplaceINSt8__detail4_NFAINSt7__cxx1112regex_traitsIcEEEESaIS5_ELN9__gnu_cxx12_Lock_policyE2EE\n\n1 Added variable symbol not referenced by debug info:\n\n  [A] _ZTSSt23_Sp_counted_ptr_inplaceINSt8__detail4_NFAINSt7__cxx1112regex_traitsIcEEEESaIvELN9__gnu_cxx12_Lock_policyE2EE\n\n",
+                    "return_code": 12,
+                    "seconds": 1.174623727798462,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0-abi-laboratory-libglibmm_generate_extra_defs-2-4-so-1-3-0-libglibmm_generate_extra_defs-2-4-so-1-3-0.html\nFound link to libglibmm_generate_extra_defs-2.4.so.1.3.0-2.66.4-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libglibmm_generate_extra_defs-2.4.so.1.3.0-2.66.4-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/glibmm24-2.66.4-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 29210\nERROR: incomplete info for symbol 130752\nERROR: incomplete info for symbol 133602\nERROR: incomplete info for symbol 275749\nERROR: incomplete info for symbol 276275\nERROR: incomplete info for symbol 276801\nERROR: incomplete info for symbol 277327\nERROR: incomplete info for symbol 277853\nERROR: incomplete info for symbol 278045\nERROR: incomplete info for symbol 278395\nERROR: incomplete info for symbol 278745\nERROR: incomplete info for symbol 279095\nERROR: incomplete info for symbol 279381\nERROR: incomplete info for symbol 279573\nERROR: incomplete info for symbol 279923\nERROR: incomplete info for symbol 280273\nERROR: incomplete info for symbol 280623\nERROR: incomplete info for symbol 280824\nERROR: incomplete info for symbol 281174\nERROR: incomplete info for symbol 281375\nERROR: incomplete info for symbol 281709\nERROR: incomplete info for symbol 282043\nERROR: incomplete info for symbol 440150\nERROR: incomplete info for symbol 440390\nERROR: incomplete info for symbol 441975\nERROR: incomplete info for symbol 442834\nERROR: incomplete info for symbol 443693\nERROR: incomplete info for symbol 444087\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Ny0FB.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libglibmm_generate_extra_defs-2.4.so.1.3.0-2.66.4-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libglibmm_generate_extra_defs-2.4.so.1.3.0-2.66.4-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/glibmm24-2.66.4-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 29210\nERROR: incomplete info for symbol 130752\nERROR: incomplete info for symbol 133602\nERROR: incomplete info for symbol 275749\nERROR: incomplete info for symbol 276275\nERROR: incomplete info for symbol 276801\nERROR: incomplete info for symbol 277327\nERROR: incomplete info for symbol 277853\nERROR: incomplete info for symbol 278045\nERROR: incomplete info for symbol 278395\nERROR: incomplete info for symbol 278745\nERROR: incomplete info for symbol 279095\nERROR: incomplete info for symbol 279381\nERROR: incomplete info for symbol 279573\nERROR: incomplete info for symbol 279923\nERROR: incomplete info for symbol 280273\nERROR: incomplete info for symbol 280623\nERROR: incomplete info for symbol 280824\nERROR: incomplete info for symbol 281174\nERROR: incomplete info for symbol 281375\nERROR: incomplete info for symbol 281709\nERROR: incomplete info for symbol 282043\nERROR: incomplete info for symbol 440150\nERROR: incomplete info for symbol 440390\nERROR: incomplete info for symbol 441975\nERROR: incomplete info for symbol 442834\nERROR: incomplete info for symbol 443693\nERROR: incomplete info for symbol 444087\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-OisOX.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0-abi-laboratory-libglibmm_generate_extra_defs-2-4-so-1-3-0-libglibmm_generate_extra_defs-2-4-so-1-3-0.html\n",
-                    "return_code": 0,
-                    "seconds": 7.0949931144714355,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0-abi-laboratory-libglibmm_generate_extra_defs-2-4-so-1-3-0-libglibmm_generate_extra_defs-2-4-so-1-3-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.25183844566345215,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0 libglibmm_generate_extra_defs-2-4-so-1-3-0-libglibmm_generate_extra_defs-2-4-so-1-3-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0-abi-laboratory-libglibmm_generate_extra_defs-2-4-so-1-3-0-libglibmm_generate_extra_defs-2-4-so-1-3-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0": 172968,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0": 176864,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libglibmm_generate_extra_defs-2.4.so.1.3.0": 172968
             }
         },

@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "pipe_i915.so",
                     "spliced_lib": "pipe_i915.so",
+                    "is_stripped_original": true,
+                    "is_stripped_splice": true,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.3113021850585938e-05
+                    "seconds": 1.5735626220703125e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "pipe_i915.so",
                     "spliced_lib": "pipe_i915.so",
+                    "is_stripped_original": true,
+                    "is_stripped_splice": true,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.0013580322265625e-05
+                    "seconds": 6.198883056640625e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "/usr/local/bin/abidiff: failed to read input file /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_i915.so\n/usr/local/bin/abidiff: could not find the debug info\n/usr/local/bin/abidiff: Maybe you should consider using the --debug-info-dir1 option to tell me about the root directory of the debuginfo? (e.g, --debug-info-dir1 /usr/lib/debug)\n/usr/local/bin/abidiff: Maybe the root path to the debug information ', /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug' is wrong?\n/usr/local/bin/abidiff: could not find the ELF symbols in the file '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_i915.so'\n",
                     "return_code": 1,
-                    "seconds": 0.00783991813659668,
+                    "seconds": 0.007322549819946289,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_i915.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_i915.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_i915.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_i915.so",
@@ -46,7 +50,7 @@
                 {
                     "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_i915.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_i915.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_i915.so-abi-laboratory-pipe_i915-so-pipe_i915-so.html\nFound link to pipe_i915.so-22.1.7-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pipe_i915.so-22.1.7-1.fc36.x86_64.debug linked from gnu_debuglink\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
                     "return_code": 12,
-                    "seconds": 0.11156749725341797,
+                    "seconds": 0.12320470809936523,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_i915.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_i915.so pipe_i915-so-pipe_i915-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_i915.so-abi-laboratory-pipe_i915-so-pipe_i915-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gallium-pipe/pipe_i915.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gallium-pipe/pipe_i915.so",

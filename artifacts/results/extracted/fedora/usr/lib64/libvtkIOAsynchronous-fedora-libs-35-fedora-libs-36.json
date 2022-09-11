@@ -1,0 +1,81 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOAsynchronous.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOAsynchronous.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkIOAsynchronous.so.9.0.3",
+                    "spliced_lib": "libvtkIOAsynchronous.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__pthread_key_create",
+                        "pthread_create",
+                        "_ZN12vtkXMLWriter5WriteEv",
+                        "abort",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.222724914550781e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkIOAsynchronous.so.9.0.3",
+                    "spliced_lib": "libvtkIOAsynchronous.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.3113021850585938e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 2 Changed (10 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 functions with some indirect sub-type change:\n\n  [C] 'method virtual vtkIdType vtkImageData::GetNumberOfPoints()' at vtkImageData.h:680:1 has some indirect sub-type changes:\n    the vtable offset of method virtual vtkIdType vtkImageData::GetNumberOfPoints() changed from 43 to 42\n      note that this is an ABI incompatible change to the vtable of class vtkImageData\n\n  [C] 'method void vtkThreadedImageWriter::EncodeAndWrite(vtkImageData*, const char*)' at vtkThreadedImageWriter.cxx:200:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'vtkThreadedImageWriter* const' has sub-type changes:\n      in unqualified underlying type 'vtkThreadedImageWriter*':\n        in pointed to type 'class vtkThreadedImageWriter' at vtkThreadedImageWriter.h:34:1:\n          type size hasn't changed\n          2 member function changes (7 filtered):\n            'method virtual vtkObjectBase* vtkThreadedImageWriter::NewInstanceInternal() const' has some sub-type changes:\n              the vtable offset of method virtual vtkObjectBase* vtkThreadedImageWriter::NewInstanceInternal() const changed from 16 to 15\n                note that this is an ABI incompatible change to the vtable of class vtkThreadedImageWriter\n            'method virtual vtkTypeUInt32 vtkThreadedImageWriter::GetMaxThreads()' has some sub-type changes:\n              the vtable offset of method virtual vtkTypeUInt32 vtkThreadedImageWriter::GetMaxThreads() changed from 21 to 20\n                note that this is an ABI incompatible change to the vtable of class vtkThreadedImageWriter\n          no data member change (1 filtered);\n\n",
+                    "return_code": 12,
+                    "seconds": 18.575078010559082,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOAsynchronous.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOAsynchronous.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOAsynchronous.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOAsynchronous.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOAsynchronous.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOAsynchronous.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOAsynchronous.so.9.0.3-abi-laboratory-libvtkIOAsynchronous-so-9-0-3-libvtkIOAsynchronous-so-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19694948196411133,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOAsynchronous.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOAsynchronous.so.9.1.0 libvtkIOAsynchronous-so-9-0-3-libvtkIOAsynchronous-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOAsynchronous.so.9.0.3-abi-laboratory-libvtkIOAsynchronous-so-9-0-3-libvtkIOAsynchronous-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOAsynchronous.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOAsynchronous.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOAsynchronous.so.9.0.3": 54392,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOAsynchronous.so.9.1.0": 54992
+            }
+        },
+        "experiment": "usr/lib64/libvtkIOAsynchronous-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOAsynchronous.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOAsynchronous.so.9.0.3",
+        "different_libs": true
+    }
+]

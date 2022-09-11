@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libicuio.so.69.1",
                     "spliced_lib": "libicuio.so.69.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.246566772460938e-05
+                    "seconds": 8.249282836914062e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libicuio.so.69.1",
                     "spliced_lib": "libicuio.so.69.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.316734313964844e-05
+                    "seconds": 6.437301635742188e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.10781216621398926,
+                    "seconds": 0.15445709228515625,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicuio.so.69.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicuio.so.69.1",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicuio.so.69.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicuio.so.69.1",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicuio.so.69.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicuio.so.69.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicuio.so.69.1-abi-laboratory-libicuio-so-69-1-libicuio-so-69-1.html\nFound link to libicuio.so.69.1-69.1-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libicuio.so.69.1-69.1-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/icu-69.1-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 10553\nERROR: incomplete info for symbol 11216\nERROR: incomplete info for symbol 18240\nERROR: incomplete info for symbol 18336\nERROR: incomplete info for symbol 18432\nERROR: incomplete info for symbol 18622\nERROR: incomplete info for symbol 18823\nERROR: incomplete info for symbol 18884\nERROR: incomplete info for symbol 18910\nERROR: incomplete info for symbol 18936\nERROR: incomplete info for symbol 19025\nERROR: incomplete info for symbol 19116\nERROR: incomplete info for symbol 19231\nERROR: incomplete info for symbol 19257\nERROR: incomplete info for symbol 19315\nERROR: incomplete info for symbol 19341\nERROR: incomplete info for symbol 19422\nERROR: incomplete info for symbol 20200\nERROR: incomplete info for symbol 20538\nERROR: incomplete info for symbol 20664\nERROR: incomplete info for symbol 20866\nERROR: incomplete info for symbol 22060\nERROR: incomplete info for symbol 22920\nERROR: incomplete info for symbol 23147\nERROR: incomplete info for symbol 23266\nERROR: incomplete info for symbol 23382\nERROR: incomplete info for symbol 23728\nERROR: incomplete info for symbol 23847\nERROR: incomplete info for symbol 23947\nERROR: incomplete info for symbol 24063\nERROR: incomplete info for symbol 24163\nERROR: incomplete info for symbol 24303\nERROR: incomplete info for symbol 24406\nERROR: incomplete info for symbol 24513\nERROR: incomplete info for symbol 24823\nERROR: incomplete info for symbol 24926\nERROR: incomplete info for symbol 25033\nERROR: incomplete info for symbol 25797\nERROR: incomplete info for symbol 25909\nERROR: incomplete info for symbol 26056\nERROR: incomplete info for symbol 26190\nERROR: incomplete info for symbol 26302\nERROR: incomplete info for symbol 26434\nERROR: incomplete info for symbol 26518\nERROR: incomplete info for symbol 26889\nERROR: incomplete info for symbol 27454\nERROR: incomplete info for symbol 27594\nERROR: incomplete info for symbol 27746\nERROR: incomplete info for symbol 28347\nERROR: incomplete info for symbol 28535\nERROR: incomplete info for symbol 28604\nERROR: incomplete info for symbol 28800\nERROR: incomplete info for symbol 29237\nERROR: incomplete info for symbol 29436\nERROR: incomplete info for symbol 29539\nERROR: incomplete info for symbol 29855\nERROR: incomplete info for symbol 29958\nERROR: incomplete info for symbol 30049\nERROR: incomplete info for symbol 30152\nERROR: incomplete info for symbol 30468\nERROR: incomplete info for symbol 30571\nERROR: incomplete info for symbol 30684\nERROR: incomplete info for symbol 30764\nERROR: incomplete info for symbol 35701\nReading v-tables\nlibicuuc.so.69: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-FMK2Q.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libicuio.so.69.1-69.1-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libicuio.so.69.1-69.1-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/icu-69.1-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 10553\nERROR: incomplete info for symbol 11216\nERROR: incomplete info for symbol 18240\nERROR: incomplete info for symbol 18336\nERROR: incomplete info for symbol 18432\nERROR: incomplete info for symbol 18622\nERROR: incomplete info for symbol 18823\nERROR: incomplete info for symbol 18884\nERROR: incomplete info for symbol 18910\nERROR: incomplete info for symbol 18936\nERROR: incomplete info for symbol 19025\nERROR: incomplete info for symbol 19116\nERROR: incomplete info for symbol 19231\nERROR: incomplete info for symbol 19257\nERROR: incomplete info for symbol 19315\nERROR: incomplete info for symbol 19341\nERROR: incomplete info for symbol 19422\nERROR: incomplete info for symbol 20200\nERROR: incomplete info for symbol 20538\nERROR: incomplete info for symbol 20664\nERROR: incomplete info for symbol 20866\nERROR: incomplete info for symbol 22060\nERROR: incomplete info for symbol 22920\nERROR: incomplete info for symbol 23147\nERROR: incomplete info for symbol 23266\nERROR: incomplete info for symbol 23382\nERROR: incomplete info for symbol 23728\nERROR: incomplete info for symbol 23847\nERROR: incomplete info for symbol 23947\nERROR: incomplete info for symbol 24063\nERROR: incomplete info for symbol 24163\nERROR: incomplete info for symbol 24303\nERROR: incomplete info for symbol 24406\nERROR: incomplete info for symbol 24513\nERROR: incomplete info for symbol 24823\nERROR: incomplete info for symbol 24926\nERROR: incomplete info for symbol 25033\nERROR: incomplete info for symbol 25797\nERROR: incomplete info for symbol 25909\nERROR: incomplete info for symbol 26056\nERROR: incomplete info for symbol 26190\nERROR: incomplete info for symbol 26302\nERROR: incomplete info for symbol 26434\nERROR: incomplete info for symbol 26518\nERROR: incomplete info for symbol 26889\nERROR: incomplete info for symbol 27454\nERROR: incomplete info for symbol 27594\nERROR: incomplete info for symbol 27746\nERROR: incomplete info for symbol 28347\nERROR: incomplete info for symbol 28535\nERROR: incomplete info for symbol 28604\nERROR: incomplete info for symbol 28800\nERROR: incomplete info for symbol 29237\nERROR: incomplete info for symbol 29436\nERROR: incomplete info for symbol 29539\nERROR: incomplete info for symbol 29855\nERROR: incomplete info for symbol 29958\nERROR: incomplete info for symbol 30049\nERROR: incomplete info for symbol 30152\nERROR: incomplete info for symbol 30468\nERROR: incomplete info for symbol 30571\nERROR: incomplete info for symbol 30684\nERROR: incomplete info for symbol 30764\nERROR: incomplete info for symbol 35701\nReading v-tables\nlibicuuc.so.69: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-m0cMq.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicuio.so.69.1-abi-laboratory-libicuio-so-69-1-libicuio-so-69-1.html\n",
-                    "return_code": 0,
-                    "seconds": 2.0216734409332275,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicuio.so.69.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicuio.so.69.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicuio.so.69.1-abi-laboratory-libicuio-so-69-1-libicuio-so-69-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.4358234405517578,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicuio.so.69.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicuio.so.69.1 libicuio-so-69-1-libicuio-so-69-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicuio.so.69.1-abi-laboratory-libicuio-so-69-1-libicuio-so-69-1.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicuio.so.69.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicuio.so.69.1",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicuio.so.69.1": 62904,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libicuio.so.69.1": 66384,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libicuio.so.69.1": 62904
             }
         },

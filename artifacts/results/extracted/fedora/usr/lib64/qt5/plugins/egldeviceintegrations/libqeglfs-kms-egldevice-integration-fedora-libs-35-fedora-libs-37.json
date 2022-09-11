@@ -15,26 +15,34 @@
                     "splice_type": "different_lib",
                     "original_lib": "libqeglfs-kms-egldevice-integration.so",
                     "spliced_lib": "libqeglfs-kms-egldevice-integration.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 0.00011730194091796875
+                    "message": [
+                        "close",
+                        "abort",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00011801719665527344
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libqeglfs-kms-egldevice-integration.so",
                     "spliced_lib": "libqeglfs-kms-egldevice-integration.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.867813110351562e-06
+                    "seconds": 6.67572021484375e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 3.5689892768859863,
+                    "seconds": 4.127987623214722,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so",
@@ -44,9 +52,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so-abi-laboratory-libqeglfs-kms-egldevice-integration-so-libqeglfs-kms-egldevice-integration-so.html\nFound link to libqeglfs-kms-egldevice-integration.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqeglfs-kms-egldevice-integration.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/egldeviceintegrations/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5EglFSDeviceIntegration.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-5R40h.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqeglfs-kms-egldevice-integration.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqeglfs-kms-egldevice-integration.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/egldeviceintegrations/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5EglFSDeviceIntegration.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-lspae.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so-abi-laboratory-libqeglfs-kms-egldevice-integration-so-libqeglfs-kms-egldevice-integration-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so-abi-laboratory-libqeglfs-kms-egldevice-integration-so-libqeglfs-kms-egldevice-integration-so.html\nFound link to libqeglfs-kms-egldevice-integration.so-5.15.2-31.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libqeglfs-kms-egldevice-integration.so-5.15.2-31.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/egldeviceintegrations/../../../../../.dwz/qt5-qtbase-5.15.2-31.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 735032\nERROR: incomplete info for symbol 1181574\nReading v-tables\nlibQt5EglFSDeviceIntegration.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-GExVW.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqeglfs-kms-egldevice-integration.so-5.15.5-4.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libqeglfs-kms-egldevice-integration.so-5.15.5-4.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/egldeviceintegrations/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5EglFSDeviceIntegration.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-WcVK2.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so-abi-laboratory-libqeglfs-kms-egldevice-integration-so-libqeglfs-kms-egldevice-integration-so.html\n",
                     "return_code": 0,
-                    "seconds": 162.3184335231781,
+                    "seconds": 161.3113100528717,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so libqeglfs-kms-egldevice-integration-so-libqeglfs-kms-egldevice-integration-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so-abi-laboratory-libqeglfs-kms-egldevice-integration-so-libqeglfs-kms-egldevice-integration-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so",
@@ -57,7 +65,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so": 164376,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so": 163776,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so": 164376
             }
         },

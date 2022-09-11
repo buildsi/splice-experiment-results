@@ -15,50 +15,54 @@
                     "splice_type": "different_lib",
                     "original_lib": "lib30_imap_zlib_plugin.so",
                     "spliced_lib": "lib30_imap_zlib_plugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.8160552978515625e-05
+                    "seconds": 3.5762786865234375e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "lib30_imap_zlib_plugin.so",
                     "spliced_lib": "lib30_imap_zlib_plugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.9550323486328125e-05
+                    "seconds": 1.9311904907226562e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.07282137870788574,
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (14 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed (1 filtered out), 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function const compression_handler* compression_detect_handler(istream*)' at compression.c:131:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'const compression_handler':\n        in unqualified underlying type 'struct compression_handler' at compression.h:15:1:\n          type size hasn't changed\n          1 data member changes (2 filtered):\n            type of 'istream* (istream*)* create_istream' changed:\n              in pointed to type 'function type istream* (istream*)':\n                parameter 1 of type 'istream*' has sub-type changes:\n                  in pointed to type 'struct istream' at istream.h:9:1:\n                    type size hasn't changed\n                    1 data member change:\n                      type of 'istream_private* real_stream' changed:\n                        in pointed to type 'struct istream_private' at istream-private.h:11:1:\n                          type size hasn't changed\n                          1 data member deletion:\n                            'size_t try_alloc_limit', at offset 3008 (in bits) at istream-private.h:41:1\n                          1 data member insertion:\n                            'size_t data_limit', at offset 2880 (in bits) at istream-private.h:40:1\n                          3 data member changes (9 filtered):\n                            'size_t skip' offset changed from 2880 to 2944 (in bits) (by +64 bits)\n                            'size_t pos' offset changed from 2944 to 3008 (in bits) (by +64 bits)\n                            type of 'istream_snapshot* prev_snapshot' changed:\n                              in pointed to type 'struct istream_snapshot' at istream-private.h:73:1:\n                                type size changed from 192 to 256 (in bits)\n                                1 data member insertion:\n                                  'istream* istream', at offset 128 (in bits) at istream-private.h:76:1\n                                1 data member changes (1 filtered):\n                                  'void (istream_snapshot*)* free' offset changed from 128 to 192 (in bits) (by +64 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.07356834411621094,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib30_imap_zlib_plugin.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib30_imap_zlib_plugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib30_imap_zlib_plugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so-abi-laboratory-lib30_imap_zlib_plugin-so-lib30_imap_zlib_plugin-so.html\nFound link to lib30_imap_zlib_plugin.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file lib30_imap_zlib_plugin.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12399\nERROR: incomplete info for symbol 15493\nERROR: incomplete info for symbol 18803\nERROR: incomplete info for symbol 18859\nERROR: incomplete info for symbol 20890\nERROR: incomplete info for symbol 23235\nERROR: incomplete info for symbol 28688\nERROR: incomplete info for symbol 28764\nERROR: incomplete info for symbol 32500\nERROR: incomplete info for symbol 33936\nERROR: incomplete info for symbol 34604\nERROR: incomplete info for symbol 34752\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-8l571.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to lib30_imap_zlib_plugin.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file lib30_imap_zlib_plugin.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12399\nERROR: incomplete info for symbol 15493\nERROR: incomplete info for symbol 18803\nERROR: incomplete info for symbol 18859\nERROR: incomplete info for symbol 20890\nERROR: incomplete info for symbol 23235\nERROR: incomplete info for symbol 28688\nERROR: incomplete info for symbol 28764\nERROR: incomplete info for symbol 32500\nERROR: incomplete info for symbol 33936\nERROR: incomplete info for symbol 34604\nERROR: incomplete info for symbol 34752\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-TgeRx.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so-abi-laboratory-lib30_imap_zlib_plugin-so-lib30_imap_zlib_plugin-so.html\n",
-                    "return_code": 0,
-                    "seconds": 6.806817054748535,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib30_imap_zlib_plugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so-abi-laboratory-lib30_imap_zlib_plugin-so-lib30_imap_zlib_plugin-so.html\nFound link to lib30_imap_zlib_plugin.so-2.3.17.1-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file lib30_imap_zlib_plugin.so-2.3.17.1-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.17.1-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12257\nERROR: incomplete info for symbol 15248\nERROR: incomplete info for symbol 18571\nERROR: incomplete info for symbol 18627\nERROR: incomplete info for symbol 20611\nERROR: incomplete info for symbol 22957\nERROR: incomplete info for symbol 28378\nERROR: incomplete info for symbol 28454\nERROR: incomplete info for symbol 32116\nERROR: incomplete info for symbol 33565\nERROR: incomplete info for symbol 34228\nERROR: incomplete info for symbol 34376\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-FCATq.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to lib30_imap_zlib_plugin.so-2.3.19.1-4.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file lib30_imap_zlib_plugin.so-2.3.19.1-4.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-4.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 12399\nERROR: incomplete info for symbol 15493\nERROR: incomplete info for symbol 18803\nERROR: incomplete info for symbol 18859\nERROR: incomplete info for symbol 20890\nERROR: incomplete info for symbol 23235\nERROR: incomplete info for symbol 28688\nERROR: incomplete info for symbol 28764\nERROR: incomplete info for symbol 32500\nERROR: incomplete info for symbol 33936\nERROR: incomplete info for symbol 34604\nERROR: incomplete info for symbol 34752\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-55hQc.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 60%\nSource compatibility: 20%\nTotal binary compatibility problems: 3, warnings: 4\nTotal source compatibility problems: 1, warnings: 4\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so-abi-laboratory-lib30_imap_zlib_plugin-so-lib30_imap_zlib_plugin-so.html\n",
+                    "return_code": 1,
+                    "seconds": 6.232155084609985,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib30_imap_zlib_plugin.so lib30_imap_zlib_plugin-so-lib30_imap_zlib_plugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so-abi-laboratory-lib30_imap_zlib_plugin-so-lib30_imap_zlib_plugin-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib30_imap_zlib_plugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so": 70680,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib30_imap_zlib_plugin.so": 70680
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib30_imap_zlib_plugin.so": 66424,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib30_imap_zlib_plugin.so": 70672
             }
         },
         "experiment": "usr/lib64/dovecot/lib30_imap_zlib_plugin-fedora-libs-34-fedora-libs-37",

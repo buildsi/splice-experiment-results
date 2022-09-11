@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libgladeplugin.so",
                     "spliced_lib": "libgladeplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.771087646484375e-05
+                    "seconds": 6.341934204101562e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libgladeplugin.so",
                     "spliced_lib": "libgladeplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.103515625e-05
+                    "seconds": 5.269050598144531e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.6630575656890869,
+                    "seconds": 0.5184483528137207,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so-abi-laboratory-libgladeplugin-so-libgladeplugin-so.html\nFound link to libgladeplugin.so-3.3.8b-90.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgladeplugin.so-3.3.8b-90.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt-3.3/plugins/designer/../../../../../.dwz/qt3-3.3.8b-90.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nERROR: incomplete info for symbol 214\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5538\nERROR: incomplete info for symbol 6777\nERROR: incomplete info for symbol 6803\nERROR: incomplete info for symbol 6829\nERROR: incomplete info for symbol 10151\nERROR: incomplete info for symbol 23686\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-cZ9W6.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgladeplugin.so-3.3.8b-90.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgladeplugin.so-3.3.8b-90.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt-3.3/plugins/designer/../../../../../.dwz/qt3-3.3.8b-90.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nERROR: incomplete info for symbol 214\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5538\nERROR: incomplete info for symbol 6777\nERROR: incomplete info for symbol 6803\nERROR: incomplete info for symbol 6829\nERROR: incomplete info for symbol 10151\nERROR: incomplete info for symbol 23686\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-DFG0p.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so-abi-laboratory-libgladeplugin-so-libgladeplugin-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so-abi-laboratory-libgladeplugin-so-libgladeplugin-so.html\nFound link to libgladeplugin.so-3.3.8b-86.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libgladeplugin.so-3.3.8b-86.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt-3.3/plugins/designer/../../../../../.dwz/qt3-3.3.8b-86.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nERROR: incomplete info for symbol 203\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5563\nERROR: incomplete info for symbol 6802\nERROR: incomplete info for symbol 6828\nERROR: incomplete info for symbol 6854\nERROR: incomplete info for symbol 10176\nERROR: incomplete info for symbol 23417\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-JH5Nj.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgladeplugin.so-3.3.8b-91.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libgladeplugin.so-3.3.8b-91.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt-3.3/plugins/designer/../../../../../.dwz/qt3-3.3.8b-91.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nERROR: incomplete info for symbol 214\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5543\nERROR: incomplete info for symbol 6782\nERROR: incomplete info for symbol 6808\nERROR: incomplete info for symbol 6834\nERROR: incomplete info for symbol 10156\nERROR: incomplete info for symbol 23691\nReading v-tables\nlibqt-mt.so.3: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-P5mGA.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so-abi-laboratory-libgladeplugin-so-libgladeplugin-so.html\n",
                     "return_code": 0,
-                    "seconds": 14.898743629455566,
+                    "seconds": 12.527273654937744,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so libgladeplugin-so-libgladeplugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so-abi-laboratory-libgladeplugin-so-libgladeplugin-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so",
@@ -57,8 +61,8 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so": 211256,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so": 211256
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so": 211344,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt-3.3/plugins/designer/libgladeplugin.so": 207152
             }
         },
         "experiment": "usr/lib64/qt-3.3/plugins/designer/libgladeplugin-fedora-libs-34-fedora-libs-37",

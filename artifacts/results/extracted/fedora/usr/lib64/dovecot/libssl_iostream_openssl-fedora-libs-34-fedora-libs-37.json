@@ -15,49 +15,59 @@
                     "splice_type": "different_lib",
                     "original_lib": "libssl_iostream_openssl.so",
                     "spliced_lib": "libssl_iostream_openssl.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 6.67572021484375e-05
+                    "message": [
+                        "memcpy",
+                        "SSL_get_peer_certificate",
+                        "openssl_iostream_more"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.532669067382812e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libssl_iostream_openssl.so",
                     "spliced_lib": "libssl_iostream_openssl.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 1.6927719116210938e-05
+                    "message": [
+                        "openssl_iostream_more"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.6689300537109375e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.062252044677734375,
+                    "message": "Functions changes summary: 1 Removed, 3 Changed (3 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function int openssl_iostream_more(ssl_iostream*, openssl_iostream_sync_type)'    {openssl_iostream_more}\n\n3 functions with some indirect sub-type change:\n\n  [C] 'function istream* openssl_i_stream_create_ssl(ssl_iostream*)' at istream-openssl.c:113:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'struct istream' at istream.h:9:1:\n        type size hasn't changed\n        1 data member change:\n          type of 'istream_private* real_stream' changed:\n            in pointed to type 'struct istream_private' at istream-private.h:11:1:\n              type size hasn't changed\n              1 data member deletion:\n                'size_t try_alloc_limit', at offset 3008 (in bits) at istream-private.h:41:1\n              1 data member insertion:\n                'size_t data_limit', at offset 2880 (in bits) at istream-private.h:40:1\n              3 data member changes (9 filtered):\n                'size_t skip' offset changed from 2880 to 2944 (in bits) (by +64 bits)\n                'size_t pos' offset changed from 2944 to 3008 (in bits) (by +64 bits)\n                type of 'istream_snapshot* prev_snapshot' changed:\n                  in pointed to type 'struct istream_snapshot' at istream-private.h:73:1:\n                    type size changed from 192 to 256 (in bits)\n                    1 data member insertion:\n                      'istream* istream', at offset 128 (in bits) at istream-private.h:76:1\n                    1 data member changes (1 filtered):\n                      'void (istream_snapshot*)* free' offset changed from 128 to 192 (in bits) (by +64 bits)\n\n  [C] 'function int openssl_iostream_bio_sync(ssl_iostream*, openssl_iostream_sync_type)' at iostream-openssl.c:543:1 has some indirect sub-type changes:\n    parameter 2 of type 'enum openssl_iostream_sync_type' has sub-type changes:\n      type size hasn't changed\n      1 enumerator insertion:\n        'openssl_iostream_sync_type::OPENSSL_IOSTREAM_SYNC_TYPE_NONE' value '0'\n      4 enumerator changes:\n        'openssl_iostream_sync_type::OPENSSL_IOSTREAM_SYNC_TYPE_FIRST_READ' from value '0' to '1' at iostream-openssl.h:11:1\n        'openssl_iostream_sync_type::OPENSSL_IOSTREAM_SYNC_TYPE_CONTINUE_READ' from value '1' to '2' at iostream-openssl.h:11:1\n        'openssl_iostream_sync_type::OPENSSL_IOSTREAM_SYNC_TYPE_WRITE' from value '2' to '3' at iostream-openssl.h:11:1\n        'openssl_iostream_sync_type::OPENSSL_IOSTREAM_SYNC_TYPE_HANDSHAKE' from value '3' to '4' at iostream-openssl.h:11:1\n\n  [C] 'function int openssl_iostream_handle_error(ssl_iostream*, int, openssl_iostream_sync_type, const char*)' at iostream-openssl.c:568:1 has some indirect sub-type changes:\n    parameter 3 of type 'enum openssl_iostream_sync_type' has sub-type changes:\n      enum type 'enum openssl_iostream_sync_type' changed at iostream-openssl.h:11:1, as reported earlier\n\n",
+                    "return_code": 12,
+                    "seconds": 0.06415581703186035,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libssl_iostream_openssl.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libssl_iostream_openssl.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libssl_iostream_openssl.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so-abi-laboratory-libssl_iostream_openssl-so-libssl_iostream_openssl-so.html\nFound link to libssl_iostream_openssl.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libssl_iostream_openssl.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 10078\nERROR: incomplete info for symbol 10275\nERROR: incomplete info for symbol 12550\nERROR: incomplete info for symbol 17424\nERROR: incomplete info for symbol 18811\nERROR: incomplete info for symbol 22441\nERROR: incomplete info for symbol 22754\nERROR: incomplete info for symbol 23086\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-3dtvQ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libssl_iostream_openssl.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libssl_iostream_openssl.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 10078\nERROR: incomplete info for symbol 10275\nERROR: incomplete info for symbol 12550\nERROR: incomplete info for symbol 17424\nERROR: incomplete info for symbol 18811\nERROR: incomplete info for symbol 22441\nERROR: incomplete info for symbol 22754\nERROR: incomplete info for symbol 23086\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-dA2Z6.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so-abi-laboratory-libssl_iostream_openssl-so-libssl_iostream_openssl-so.html\n",
-                    "return_code": 0,
-                    "seconds": 7.066588640213013,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libssl_iostream_openssl.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so-abi-laboratory-libssl_iostream_openssl-so-libssl_iostream_openssl-so.html\nFound link to libssl_iostream_openssl.so-2.3.17.1-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libssl_iostream_openssl.so-2.3.17.1-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.17.1-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 9950\nERROR: incomplete info for symbol 10205\nERROR: incomplete info for symbol 12223\nERROR: incomplete info for symbol 12452\nERROR: incomplete info for symbol 16783\nERROR: incomplete info for symbol 18087\nERROR: incomplete info for symbol 21981\nERROR: incomplete info for symbol 22294\nERROR: incomplete info for symbol 22626\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-xBfbN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libssl_iostream_openssl.so-2.3.19.1-4.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libssl_iostream_openssl.so-2.3.19.1-4.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-4.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 10078\nERROR: incomplete info for symbol 10275\nERROR: incomplete info for symbol 12550\nERROR: incomplete info for symbol 17424\nERROR: incomplete info for symbol 18811\nERROR: incomplete info for symbol 22441\nERROR: incomplete info for symbol 22754\nERROR: incomplete info for symbol 23086\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-ipojH.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 84.6%\nSource compatibility: 73.1%\nTotal binary compatibility problems: 8, warnings: 4\nTotal source compatibility problems: 2, warnings: 4\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so-abi-laboratory-libssl_iostream_openssl-so-libssl_iostream_openssl-so.html\n",
+                    "return_code": 1,
+                    "seconds": 6.058193683624268,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libssl_iostream_openssl.so libssl_iostream_openssl-so-libssl_iostream_openssl-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so-abi-laboratory-libssl_iostream_openssl-so-libssl_iostream_openssl-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libssl_iostream_openssl.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so": 62000,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libssl_iostream_openssl.so": 66184,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libssl_iostream_openssl.so": 62000
             }
         },

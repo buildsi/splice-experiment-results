@@ -15,50 +15,56 @@
                     "splice_type": "different_lib",
                     "original_lib": "libsmb-transport-samba4.so",
                     "spliced_lib": "libsmb-transport-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 2.9087066650390625e-05
+                    "message": [
+                        "memcpy"
+                    ],
+                    "prediction": false,
+                    "seconds": 4.315376281738281e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libsmb-transport-samba4.so",
                     "spliced_lib": "libsmb-transport-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.0967254638671875e-05
+                    "seconds": 1.239776611328125e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.02373957633972168,
+                    "message": "Functions changes summary: 12 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n12 Removed functions:\n\n  [D] 'function int accept_recv(tevent_req*, sockaddr_storage*, socklen_t*, int*)'    {accept_recv@@SAMBA_4.14.12}\n  [D] 'function tevent_req* accept_send(TALLOC_CTX*, tevent_context*, int)'    {accept_send@@SAMBA_4.14.12}\n  [D] 'function int async_connect_recv(tevent_req*, int*)'    {async_connect_recv@@SAMBA_4.14.12}\n  [D] 'function tevent_req* async_connect_send(TALLOC_CTX*, tevent_context*, int, const sockaddr*, socklen_t, void (void*)*, void (void*)*, void*)'    {async_connect_send@@SAMBA_4.14.12}\n  [D] 'function ssize_t read_packet_recv(tevent_req*, TALLOC_CTX*, uint8_t**, int*)'    {read_packet_recv@@SAMBA_4.14.12}\n  [D] 'function tevent_req* read_packet_send(TALLOC_CTX*, tevent_context*, int, size_t, typedef ssize_t (uint8_t*, typedef size_t, void*)*, void*)'    {read_packet_send@@SAMBA_4.14.12}\n  [D] 'function ssize_t read_smb_recv(tevent_req*, TALLOC_CTX*, uint8_t**, int*)'    {read_smb_recv@@SAMBA_4.14.12}\n  [D] 'function tevent_req* read_smb_send(TALLOC_CTX*, tevent_context*, int)'    {read_smb_send@@SAMBA_4.14.12}\n  [D] 'function bool wait_for_read_recv(tevent_req*, int*)'    {wait_for_read_recv@@SAMBA_4.14.12}\n  [D] 'function tevent_req* wait_for_read_send(TALLOC_CTX*, tevent_context*, int, bool)'    {wait_for_read_send@@SAMBA_4.14.12}\n  [D] 'function ssize_t writev_recv(tevent_req*, int*)'    {writev_recv@@SAMBA_4.14.12}\n  [D] 'function tevent_req* writev_send(TALLOC_CTX*, tevent_context*, tevent_queue*, int, bool, iovec*, int)'    {writev_send@@SAMBA_4.14.12}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.032961130142211914,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmb-transport-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmb-transport-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmb-transport-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so-abi-laboratory-libsmb-transport-samba4-so-libsmb-transport-samba4-so.html\nFound link to libsmb-transport-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmb-transport-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7514\nERROR: incomplete info for symbol 7806\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-PPHTa.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsmb-transport-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmb-transport-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7514\nERROR: incomplete info for symbol 7806\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-iTuxl.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so-abi-laboratory-libsmb-transport-samba4-so-libsmb-transport-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 11.761637210845947,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmb-transport-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so-abi-laboratory-libsmb-transport-samba4-so-libsmb-transport-samba4-so.html\nFound link to libsmb-transport-samba4.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmb-transport-samba4.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7680\nERROR: incomplete info for symbol 7966\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-qR8Bp.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsmb-transport-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmb-transport-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4193\nERROR: incomplete info for symbol 4833\nERROR: incomplete info for symbol 4915\nERROR: incomplete info for symbol 5512\nERROR: incomplete info for symbol 5707\nERROR: incomplete info for symbol 6427\nERROR: incomplete info for symbol 7149\nERROR: incomplete info for symbol 7461\nERROR: incomplete info for symbol 7538\nERROR: incomplete info for symbol 7805\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-0Rcgq.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 95.8%\nTotal binary compatibility problems: 12, warnings: 0\nTotal source compatibility problems: 2, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so-abi-laboratory-libsmb-transport-samba4-so-libsmb-transport-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 17.241520404815674,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmb-transport-samba4.so libsmb-transport-samba4-so-libsmb-transport-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so-abi-laboratory-libsmb-transport-samba4-so-libsmb-transport-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmb-transport-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so": 28592,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmb-transport-samba4.so": 28592
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmb-transport-samba4.so": 24160,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmb-transport-samba4.so": 28600
             }
         },
         "experiment": "usr/lib64/samba/libsmb-transport-samba4-fedora-libs-34-fedora-libs-37",

@@ -15,6 +15,8 @@
                     "splice_type": "different_lib",
                     "original_lib": "libquadmath.so.0.0.0",
                     "spliced_lib": "libquadmath.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
@@ -24,17 +26,19 @@
                     "splice_type": "different_lib",
                     "original_lib": "libquadmath.so.0.0.0",
                     "spliced_lib": "libquadmath.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.870529174804688e-05
+                    "seconds": 8.988380432128906e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.010652303695678711,
+                    "seconds": 0.47528886795043945,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libquadmath.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libquadmath.so.0.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libquadmath.so.0.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libquadmath.so.0.0.0",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libquadmath.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libquadmath.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libquadmath.so.0.0.0-abi-laboratory-libquadmath-so-0-0-0-libquadmath-so-0-0-0.html\nFound link to libquadmath.so.0.0.0-12.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file libquadmath.so.0.0.0-12.2.1-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
-                    "return_code": 10,
-                    "seconds": 0.1281599998474121,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libquadmath.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libquadmath.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libquadmath.so.0.0.0-abi-laboratory-libquadmath-so-0-0-0-libquadmath-so-0-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.1868152618408203,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libquadmath.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libquadmath.so.0.0.0 libquadmath-so-0-0-0-libquadmath-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libquadmath.so.0.0.0-abi-laboratory-libquadmath-so-0-0-0-libquadmath-so-0-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libquadmath.so.0.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libquadmath.so.0.0.0",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libquadmath.so.0.0.0": 291600,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libquadmath.so.0.0.0": 299800,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libquadmath.so.0.0.0": 291600
             }
         },

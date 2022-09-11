@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libqmlshapesplugin.so",
                     "spliced_lib": "libqmlshapesplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.2928924560546875e-05
+                    "seconds": 2.86102294921875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libqmlshapesplugin.so",
                     "spliced_lib": "libqmlshapesplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.245208740234375e-06
+                    "seconds": 6.67572021484375e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 1.3976826667785645,
+                    "seconds": 1.188854694366455,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so-abi-laboratory-libqmlshapesplugin-so-libqmlshapesplugin-so.html\nFound link to libqmlshapesplugin.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqmlshapesplugin.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/qml/QtQuick/Shapes/../../../../../../.dwz/qt5-qtdeclarative-5.15.5-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5QuickShapes.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-TaRcQ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqmlshapesplugin.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqmlshapesplugin.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/qml/QtQuick/Shapes/../../../../../../.dwz/qt5-qtdeclarative-5.15.5-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5QuickShapes.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-wB9D9.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so-abi-laboratory-libqmlshapesplugin-so-libqmlshapesplugin-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so-abi-laboratory-libqmlshapesplugin-so-libqmlshapesplugin-so.html\nFound link to libqmlshapesplugin.so-5.15.2-7.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libqmlshapesplugin.so-5.15.2-7.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/qml/QtQuick/Shapes/../../../../../../.dwz/qt5-qtdeclarative-5.15.2-7.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5QuickShapes.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-LYVe0.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqmlshapesplugin.so-5.15.5-2.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libqmlshapesplugin.so-5.15.5-2.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/qml/QtQuick/Shapes/../../../../../../.dwz/qt5-qtdeclarative-5.15.5-2.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5QuickShapes.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-9Moxl.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so-abi-laboratory-libqmlshapesplugin-so-libqmlshapesplugin-so.html\n",
                     "return_code": 0,
-                    "seconds": 43.75258111953735,
+                    "seconds": 43.789897203445435,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so libqmlshapesplugin-so-libqmlshapesplugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so-abi-laboratory-libqmlshapesplugin-so-libqmlshapesplugin-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so": 20992,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so": 19784,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/Shapes/libqmlshapesplugin.so": 20992
             }
         },

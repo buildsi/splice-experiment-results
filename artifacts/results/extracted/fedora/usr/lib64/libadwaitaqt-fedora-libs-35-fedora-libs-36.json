@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libadwaitaqt.so.1.4.1",
                     "spliced_lib": "libadwaitaqt.so.1.4.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00012445449829101562
+                    "seconds": 0.00010013580322265625
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libadwaitaqt.so.1.4.1",
                     "spliced_lib": "libadwaitaqt.so.1.4.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00016880035400390625
+                    "seconds": 0.00015354156494140625
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 2.0078513622283936,
+                    "seconds": 1.5716960430145264,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libadwaitaqt.so.1.4.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libadwaitaqt.so.1.4.1",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libadwaitaqt.so.1.4.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libadwaitaqt.so.1.4.1",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libadwaitaqt.so.1.4.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libadwaitaqt.so.1.4.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libadwaitaqt.so.1.4.1-abi-laboratory-libadwaitaqt-so-1-4-1-libadwaitaqt-so-1-4-1.html\nFound link to libadwaitaqt.so.1.4.1-1.4.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libadwaitaqt.so.1.4.1-1.4.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/adwaita-qt-1.4.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3604\nERROR: incomplete info for symbol 3854\nERROR: incomplete info for symbol 4051\nERROR: incomplete info for symbol 9213\nERROR: incomplete info for symbol 11185\nERROR: incomplete info for symbol 13066\nERROR: incomplete info for symbol 13271\nERROR: incomplete info for symbol 13462\nERROR: incomplete info for symbol 13633\nERROR: incomplete info for symbol 13797\nERROR: incomplete info for symbol 13968\nERROR: incomplete info for symbol 14132\nERROR: incomplete info for symbol 14303\nERROR: incomplete info for symbol 14467\nERROR: incomplete info for symbol 14638\nERROR: incomplete info for symbol 14802\nERROR: incomplete info for symbol 14973\nERROR: incomplete info for symbol 15144\nERROR: incomplete info for symbol 15308\nERROR: incomplete info for symbol 15479\nERROR: incomplete info for symbol 15643\nERROR: incomplete info for symbol 15814\nERROR: incomplete info for symbol 15978\nERROR: incomplete info for symbol 16149\nERROR: incomplete info for symbol 16313\nERROR: incomplete info for symbol 16484\nERROR: incomplete info for symbol 16648\nERROR: incomplete info for symbol 16819\nERROR: incomplete info for symbol 16983\nERROR: incomplete info for symbol 17155\nERROR: incomplete info for symbol 17320\nERROR: incomplete info for symbol 17492\nERROR: incomplete info for symbol 17657\nERROR: incomplete info for symbol 17829\nERROR: incomplete info for symbol 17994\nERROR: incomplete info for symbol 18166\nERROR: incomplete info for symbol 23864\nERROR: incomplete info for symbol 24072\nERROR: incomplete info for symbol 24291\nERROR: incomplete info for symbol 24499\nERROR: incomplete info for symbol 24718\nERROR: incomplete info for symbol 24862\nERROR: incomplete info for symbol 25036\nERROR: incomplete info for symbol 25210\nERROR: incomplete info for symbol 25384\nERROR: incomplete info for symbol 26167\nERROR: incomplete info for symbol 26341\nERROR: incomplete info for symbol 36213\nERROR: incomplete info for symbol 42952\nERROR: incomplete info for symbol 53235\nERROR: incomplete info for symbol 58879\nERROR: incomplete info for symbol 62652\nERROR: incomplete info for symbol 62760\nERROR: incomplete info for symbol 144797\nERROR: incomplete info for symbol 145149\nERROR: incomplete info for symbol 145224\nERROR: incomplete info for symbol 158283\nERROR: incomplete info for symbol 169678\nERROR: incomplete info for symbol 169705\nERROR: incomplete info for symbol 171849\nERROR: incomplete info for symbol 172913\nERROR: incomplete info for symbol 174835\nERROR: incomplete info for symbol 191073\nERROR: incomplete info for symbol 204861\nERROR: incomplete info for symbol 220534\nERROR: incomplete info for symbol 220587\nERROR: incomplete info for symbol 222699\nReading v-tables\nlibadwaitaqtpriv.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-P3rcf.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libadwaitaqt.so.1.4.1-1.4.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libadwaitaqt.so.1.4.1-1.4.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/adwaita-qt-1.4.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3604\nERROR: incomplete info for symbol 3854\nERROR: incomplete info for symbol 4051\nERROR: incomplete info for symbol 9213\nERROR: incomplete info for symbol 11185\nERROR: incomplete info for symbol 13066\nERROR: incomplete info for symbol 13271\nERROR: incomplete info for symbol 13462\nERROR: incomplete info for symbol 13633\nERROR: incomplete info for symbol 13797\nERROR: incomplete info for symbol 13968\nERROR: incomplete info for symbol 14132\nERROR: incomplete info for symbol 14303\nERROR: incomplete info for symbol 14467\nERROR: incomplete info for symbol 14638\nERROR: incomplete info for symbol 14802\nERROR: incomplete info for symbol 14973\nERROR: incomplete info for symbol 15144\nERROR: incomplete info for symbol 15308\nERROR: incomplete info for symbol 15479\nERROR: incomplete info for symbol 15643\nERROR: incomplete info for symbol 15814\nERROR: incomplete info for symbol 15978\nERROR: incomplete info for symbol 16149\nERROR: incomplete info for symbol 16313\nERROR: incomplete info for symbol 16484\nERROR: incomplete info for symbol 16648\nERROR: incomplete info for symbol 16819\nERROR: incomplete info for symbol 16983\nERROR: incomplete info for symbol 17155\nERROR: incomplete info for symbol 17320\nERROR: incomplete info for symbol 17492\nERROR: incomplete info for symbol 17657\nERROR: incomplete info for symbol 17829\nERROR: incomplete info for symbol 17994\nERROR: incomplete info for symbol 18166\nERROR: incomplete info for symbol 23864\nERROR: incomplete info for symbol 24072\nERROR: incomplete info for symbol 24291\nERROR: incomplete info for symbol 24499\nERROR: incomplete info for symbol 24718\nERROR: incomplete info for symbol 24862\nERROR: incomplete info for symbol 25036\nERROR: incomplete info for symbol 25210\nERROR: incomplete info for symbol 25384\nERROR: incomplete info for symbol 26167\nERROR: incomplete info for symbol 26341\nERROR: incomplete info for symbol 36213\nERROR: incomplete info for symbol 42952\nERROR: incomplete info for symbol 53235\nERROR: incomplete info for symbol 58879\nERROR: incomplete info for symbol 62652\nERROR: incomplete info for symbol 62760\nERROR: incomplete info for symbol 144797\nERROR: incomplete info for symbol 145149\nERROR: incomplete info for symbol 145224\nERROR: incomplete info for symbol 158283\nERROR: incomplete info for symbol 169678\nERROR: incomplete info for symbol 169705\nERROR: incomplete info for symbol 171849\nERROR: incomplete info for symbol 172913\nERROR: incomplete info for symbol 174835\nERROR: incomplete info for symbol 191073\nERROR: incomplete info for symbol 204861\nERROR: incomplete info for symbol 220534\nERROR: incomplete info for symbol 220587\nERROR: incomplete info for symbol 222699\nReading v-tables\nlibadwaitaqtpriv.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-P2lEF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libadwaitaqt.so.1.4.1-abi-laboratory-libadwaitaqt-so-1-4-1-libadwaitaqt-so-1-4-1.html\n",
-                    "return_code": 0,
-                    "seconds": 14.74220061302185,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libadwaitaqt.so.1.4.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libadwaitaqt.so.1.4.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libadwaitaqt.so.1.4.1-abi-laboratory-libadwaitaqt-so-1-4-1-libadwaitaqt-so-1-4-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2292187213897705,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libadwaitaqt.so.1.4.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libadwaitaqt.so.1.4.1 libadwaitaqt-so-1-4-1-libadwaitaqt-so-1-4-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libadwaitaqt.so.1.4.1-abi-laboratory-libadwaitaqt-so-1-4-1-libadwaitaqt-so-1-4-1.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libadwaitaqt.so.1.4.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libadwaitaqt.so.1.4.1",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libadwaitaqt.so.1.4.1": 153456,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libadwaitaqt.so.1.4.1": 153288,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libadwaitaqt.so.1.4.1": 153456
             }
         },

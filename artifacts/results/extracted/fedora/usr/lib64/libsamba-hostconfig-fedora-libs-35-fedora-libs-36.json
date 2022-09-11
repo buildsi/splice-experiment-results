@@ -15,49 +15,53 @@
                     "splice_type": "different_lib",
                     "original_lib": "libsamba-hostconfig.so.0.0.1",
                     "spliced_lib": "libsamba-hostconfig.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0001418590545654297
+                    "seconds": 0.00016236305236816406
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libsamba-hostconfig.so.0.0.1",
                     "spliced_lib": "libsamba-hostconfig.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0023908615112304688
+                    "seconds": 0.0023839473724365234
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.18224120140075684,
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (416 filtered out), 3 Added functions\nVariables changes summary: 0 Removed, 1 Changed, 0 Added variable\n\n3 Added functions:\n\n  [A] 'function bool lpcfg_debug_syslog_format(loadparm_context*)'    {lpcfg_debug_syslog_format@@SAMBA_HOSTCONFIG_0.0.1}\n  [A] 'function bool lpcfg_kdc_enable_fast(loadparm_context*)'    {lpcfg_kdc_enable_fast@@SAMBA_HOSTCONFIG_0.0.1}\n  [A] 'function bool lpcfg_rpc_start_on_demand_helpers(loadparm_context*)'    {lpcfg_rpc_start_on_demand_helpers@@SAMBA_HOSTCONFIG_0.0.1}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function bool handle_charset(loadparm_context*, loadparm_service*, const char*, char**)' at loadparm.c:1203:1 has some indirect sub-type changes:\n    parameter 1 of type 'loadparm_context*' has sub-type changes:\n      in pointed to type 'struct loadparm_context' at loadparm.h:63:1:\n        type size hasn't changed\n        1 data member changes (1 filtered):\n          type of 'loadparm_global* globals' changed:\n            in pointed to type 'struct loadparm_global' at param_global.h:9:1:\n              type size hasn't changed\n              3 data member insertions:\n                'bool debug_syslog_format', at offset 2760 (in bits) at param_global.h:80:1\n                'bool kdc_enable_fast', at offset 4992 (in bits) at param_global.h:128:1\n                'bool rpc_start_on_demand_helpers', at offset 10592 (in bits) at param_global.h:253:1\n              9 data member changes:\n                'bool debug_uid' offset changed from 2760 to 2768 (in bits) (by +8 bits)\n                'int keepalive' offset changed from 4992 to 5024 (in bits) (by +32 bits)\n                'int kerberos_encryption_types' offset changed from 5024 to 5056 (in bits) (by +32 bits)\n                'int kerberos_method' offset changed from 5056 to 5088 (in bits) (by +32 bits)\n                'bool kernel_change_notify' offset changed from 5088 to 5120 (in bits) (by +32 bits)\n                'int kpasswd_port' offset changed from 5120 to 5152 (in bits) (by +32 bits)\n                'int krb5_port' offset changed from 5152 to 5184 (in bits) (by +32 bits)\n                'bool _lanman_auth' offset changed from 5184 to 5216 (in bits) (by +32 bits)\n                'bool large_readwrite' offset changed from 5192 to 5224 (in bits) (by +32 bits)\n\n1 Changed variable:\n\n  [C] 'parm_struct parm_table[]' was changed at loadparm.h:99:1:\n    size of symbol changed from 28224 to 28392\n\n",
+                    "return_code": 4,
+                    "seconds": 0.3664510250091553,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-hostconfig.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-hostconfig.so.0.0.1",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-hostconfig.so.0.0.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-hostconfig.so.0.0.1",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-hostconfig.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-hostconfig.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-hostconfig.so.0.0.1-abi-laboratory-libsamba-hostconfig-so-0-0-1-libsamba-hostconfig-so-0-0-1.html\nFound link to libsamba-hostconfig.so.0.0.1-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsamba-hostconfig.so.0.0.1-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 39879\nERROR: incomplete info for symbol 39964\nERROR: incomplete info for symbol 40088\nERROR: incomplete info for symbol 40242\nERROR: incomplete info for symbol 40347\nERROR: incomplete info for symbol 40452\nERROR: incomplete info for symbol 40557\nERROR: incomplete info for symbol 40900\nERROR: incomplete info for symbol 41611\nERROR: incomplete info for symbol 41729\nERROR: incomplete info for symbol 41970\nERROR: incomplete info for symbol 42054\nERROR: incomplete info for symbol 42138\nERROR: incomplete info for symbol 42209\nERROR: incomplete info for symbol 42774\nERROR: incomplete info for symbol 60259\nERROR: incomplete info for symbol 60523\nERROR: incomplete info for symbol 60782\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Grxuj.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsamba-hostconfig.so.0.0.1-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsamba-hostconfig.so.0.0.1-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 39879\nERROR: incomplete info for symbol 39964\nERROR: incomplete info for symbol 40088\nERROR: incomplete info for symbol 40242\nERROR: incomplete info for symbol 40347\nERROR: incomplete info for symbol 40452\nERROR: incomplete info for symbol 40557\nERROR: incomplete info for symbol 40900\nERROR: incomplete info for symbol 41611\nERROR: incomplete info for symbol 41729\nERROR: incomplete info for symbol 41970\nERROR: incomplete info for symbol 42054\nERROR: incomplete info for symbol 42138\nERROR: incomplete info for symbol 42209\nERROR: incomplete info for symbol 42774\nERROR: incomplete info for symbol 60259\nERROR: incomplete info for symbol 60523\nERROR: incomplete info for symbol 60782\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-l8MTs.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-hostconfig.so.0.0.1-abi-laboratory-libsamba-hostconfig-so-0-0-1-libsamba-hostconfig-so-0-0-1.html\n",
-                    "return_code": 0,
-                    "seconds": 13.941711902618408,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-hostconfig.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-hostconfig.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-hostconfig.so.0.0.1-abi-laboratory-libsamba-hostconfig-so-0-0-1-libsamba-hostconfig-so-0-0-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.1860051155090332,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-hostconfig.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-hostconfig.so.0.0.1 libsamba-hostconfig-so-0-0-1-libsamba-hostconfig-so-0-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-hostconfig.so.0.0.1-abi-laboratory-libsamba-hostconfig-so-0-0-1-libsamba-hostconfig-so-0-0-1.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-hostconfig.so.0.0.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-hostconfig.so.0.0.1",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-hostconfig.so.0.0.1": 202568,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-hostconfig.so.0.0.1": 201584,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-hostconfig.so.0.0.1": 202568
             }
         },

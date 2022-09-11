@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "ldapsam.so",
                     "spliced_lib": "ldapsam.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.580352783203125e-05
+                    "seconds": 6.222724914550781e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "ldapsam.so",
                     "spliced_lib": "ldapsam.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.67572021484375e-06
+                    "seconds": 8.821487426757812e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.07002401351928711,
+                    "seconds": 0.06585860252380371,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so",
@@ -44,21 +48,21 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so-abi-laboratory-ldapsam-so-ldapsam-so.html\nFound link to ldapsam.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file ldapsam.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/pdb/../../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 21466\nERROR: incomplete info for symbol 50901\nERROR: incomplete info for symbol 51931\nERROR: incomplete info for symbol 75479\nERROR: incomplete info for symbol 79607\nERROR: incomplete info for symbol 82093\nERROR: incomplete info for symbol 83005\nERROR: incomplete info for symbol 83092\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-xJ0LS.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to ldapsam.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file ldapsam.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/pdb/../../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 21466\nERROR: incomplete info for symbol 50901\nERROR: incomplete info for symbol 51931\nERROR: incomplete info for symbol 75479\nERROR: incomplete info for symbol 79607\nERROR: incomplete info for symbol 82093\nERROR: incomplete info for symbol 83005\nERROR: incomplete info for symbol 83092\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-erzaF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so-abi-laboratory-ldapsam-so-ldapsam-so.html\n",
-                    "return_code": 0,
-                    "seconds": 14.388346195220947,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so-abi-laboratory-ldapsam-so-ldapsam-so.html\nFound link to ldapsam.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file ldapsam.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/pdb/../../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 21359\nERROR: incomplete info for symbol 50760\nERROR: incomplete info for symbol 51821\nERROR: incomplete info for symbol 75668\nERROR: incomplete info for symbol 79741\nERROR: incomplete info for symbol 82278\nERROR: incomplete info for symbol 83185\nERROR: incomplete info for symbol 83272\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-oKIPW.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to ldapsam.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file ldapsam.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/pdb/../../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 21330\nERROR: incomplete info for symbol 50721\nERROR: incomplete info for symbol 51781\nERROR: incomplete info for symbol 75623\nERROR: incomplete info for symbol 79694\nERROR: incomplete info for symbol 82230\nERROR: incomplete info for symbol 83137\nERROR: incomplete info for symbol 83224\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-nXIbe.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 87.5%\nSource compatibility: 87.5%\nTotal binary compatibility problems: 19, warnings: 3\nTotal source compatibility problems: 4, warnings: 15\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so-abi-laboratory-ldapsam-so-ldapsam-so.html\n",
+                    "return_code": 1,
+                    "seconds": 17.363048315048218,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so ldapsam-so-ldapsam-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so-abi-laboratory-ldapsam-so-ldapsam-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so": 156448,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so": 156448
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/pdb/ldapsam.so": 151936,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/pdb/ldapsam.so": 152352
             }
         },
         "experiment": "usr/lib64/samba/pdb/ldapsam-fedora-libs-34-fedora-libs-35",

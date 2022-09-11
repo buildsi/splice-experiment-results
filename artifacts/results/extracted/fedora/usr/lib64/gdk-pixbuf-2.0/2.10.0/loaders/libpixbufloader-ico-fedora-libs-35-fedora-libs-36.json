@@ -15,15 +15,19 @@
                     "splice_type": "different_lib",
                     "original_lib": "libpixbufloader-ico.so",
                     "spliced_lib": "libpixbufloader-ico.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.765655517578125e-05
+                    "seconds": 3.218650817871094e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libpixbufloader-ico.so",
                     "spliced_lib": "libpixbufloader-ico.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
@@ -32,21 +36,21 @@
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.019385576248168945,
+                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed (1 filtered out), 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\nSONAME changed from 'libpixbufloader-ico.so' to ''\n\n",
+                    "return_code": 12,
+                    "seconds": 0.027985811233520508,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so-abi-laboratory-libpixbufloader-ico-so-libpixbufloader-ico-so.html\nFound link to libpixbufloader-ico.so-2.42.9-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libpixbufloader-ico.so-2.42.9-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/../../../../../.dwz/gdk-pixbuf2-2.42.9-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-PUZwP.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libpixbufloader-ico.so-2.42.9-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libpixbufloader-ico.so-2.42.9-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/../../../../../.dwz/gdk-pixbuf2-2.42.9-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-2kmV3.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so-abi-laboratory-libpixbufloader-ico-so-libpixbufloader-ico-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so-abi-laboratory-libpixbufloader-ico-so-libpixbufloader-ico-so.html\nFound link to libpixbufloader-ico.so-2.42.6-2.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libpixbufloader-ico.so-2.42.6-2.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/../../../../../.dwz/gdk-pixbuf2-2.42.6-2.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-IniNH.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libpixbufloader-ico.so-2.42.9-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libpixbufloader-ico.so-2.42.9-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/../../../../../.dwz/gdk-pixbuf2-2.42.9-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-CHx1a.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 1\nTotal source compatibility problems: 0, warnings: 1\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so-abi-laboratory-libpixbufloader-ico-so-libpixbufloader-ico-so.html\n",
                     "return_code": 0,
-                    "seconds": 0.5760185718536377,
+                    "seconds": 0.7820148468017578,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so libpixbufloader-ico-so-libpixbufloader-ico-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so-abi-laboratory-libpixbufloader-ico-so-libpixbufloader-ico-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so": 28568,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so": 28368,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.so": 28568
             }
         },

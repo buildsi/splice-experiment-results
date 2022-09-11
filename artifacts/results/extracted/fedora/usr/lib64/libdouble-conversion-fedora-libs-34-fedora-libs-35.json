@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libdouble-conversion.so.3.1.5",
                     "spliced_lib": "libdouble-conversion.so.3.1.5",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.790855407714844e-05
+                    "seconds": 3.814697265625e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libdouble-conversion.so.3.1.5",
                     "spliced_lib": "libdouble-conversion.so.3.1.5",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.7670135498046875e-05
+                    "seconds": 3.147125244140625e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.13301610946655273,
+                    "seconds": 0.11247491836547852,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdouble-conversion.so.3.1.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdouble-conversion.so.3.1.5",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdouble-conversion.so.3.1.5",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdouble-conversion.so.3.1.5",
@@ -44,21 +48,21 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdouble-conversion.so.3.1.5\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdouble-conversion.so.3.1.5\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdouble-conversion.so.3.1.5-abi-laboratory-libdouble-conversion-so-3-1-5-libdouble-conversion-so-3-1-5.html\nFound link to libdouble-conversion.so.3.1.5-3.1.5-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdouble-conversion.so.3.1.5-3.1.5-6.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 29279\nERROR: incomplete info for symbol 29639\nERROR: incomplete info for symbol 30019\nERROR: incomplete info for symbol 30435\nERROR: incomplete info for symbol 31727\nERROR: incomplete info for symbol 33897\nERROR: incomplete info for symbol 43263\nERROR: incomplete info for symbol 46203\nERROR: incomplete info for symbol 47068\nERROR: incomplete info for symbol 47739\nERROR: incomplete info for symbol 48644\nERROR: incomplete info for symbol 49521\nERROR: incomplete info for symbol 50342\nERROR: incomplete info for symbol 57320\nERROR: incomplete info for symbol 57436\nERROR: incomplete info for symbol 62868\nERROR: incomplete info for symbol 62984\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-e5v1r.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdouble-conversion.so.3.1.5-3.1.5-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdouble-conversion.so.3.1.5-3.1.5-6.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 29279\nERROR: incomplete info for symbol 29639\nERROR: incomplete info for symbol 30019\nERROR: incomplete info for symbol 30435\nERROR: incomplete info for symbol 31727\nERROR: incomplete info for symbol 33897\nERROR: incomplete info for symbol 43263\nERROR: incomplete info for symbol 46203\nERROR: incomplete info for symbol 47068\nERROR: incomplete info for symbol 47739\nERROR: incomplete info for symbol 48644\nERROR: incomplete info for symbol 49521\nERROR: incomplete info for symbol 50342\nERROR: incomplete info for symbol 57320\nERROR: incomplete info for symbol 57436\nERROR: incomplete info for symbol 62868\nERROR: incomplete info for symbol 62984\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-6Sogv.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdouble-conversion.so.3.1.5-abi-laboratory-libdouble-conversion-so-3-1-5-libdouble-conversion-so-3-1-5.html\n",
-                    "return_code": 0,
-                    "seconds": 1.2114934921264648,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdouble-conversion.so.3.1.5\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdouble-conversion.so.3.1.5\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdouble-conversion.so.3.1.5-abi-laboratory-libdouble-conversion-so-3-1-5-libdouble-conversion-so-3-1-5.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19318127632141113,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdouble-conversion.so.3.1.5 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdouble-conversion.so.3.1.5 libdouble-conversion-so-3-1-5-libdouble-conversion-so-3-1-5 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdouble-conversion.so.3.1.5-abi-laboratory-libdouble-conversion-so-3-1-5-libdouble-conversion-so-3-1-5.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdouble-conversion.so.3.1.5",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdouble-conversion.so.3.1.5",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdouble-conversion.so.3.1.5": 82664,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdouble-conversion.so.3.1.5": 82664
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdouble-conversion.so.3.1.5": 86712,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdouble-conversion.so.3.1.5": 86584
             }
         },
         "experiment": "usr/lib64/libdouble-conversion-fedora-libs-34-fedora-libs-35",

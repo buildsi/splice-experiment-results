@@ -15,15 +15,19 @@
                     "splice_type": "different_lib",
                     "original_lib": "skel.so",
                     "spliced_lib": "skel.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.384185791015625e-05
+                    "seconds": 3.075599670410156e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "skel.so",
                     "spliced_lib": "skel.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
@@ -32,25 +36,25 @@
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.012734174728393555,
+                    "message": "Functions changes summary: 1 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function int ldb_init_module(const char*)'    {ldb_init_module@@LDB_2.5.2_LDB}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.014943599700927734,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/skel.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/skel.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/skel.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/skel.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/skel.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/skel.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/skel.so-abi-laboratory-skel-so-skel-so.html\nFound link to skel.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file skel.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-TSpIf.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to skel.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file skel.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-JLDhs.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/skel.so-abi-laboratory-skel-so-skel-so.html\n",
-                    "return_code": 0,
-                    "seconds": 0.49272727966308594,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/skel.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/skel.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/skel.so-abi-laboratory-skel-so-skel-so.html\nFound link to skel.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file skel.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-pid67.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to skel.so-2.6.1-1.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file skel.so-2.6.1-1.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.6.1-1.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-ziQQ3.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 1, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/skel.so-abi-laboratory-skel-so-skel-so.html\n",
+                    "return_code": 1,
+                    "seconds": 0.49271416664123535,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/skel.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/skel.so skel-so-skel-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/skel.so-abi-laboratory-skel-so-skel-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/skel.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/skel.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]

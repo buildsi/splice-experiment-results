@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libqwayland-generic.so",
                     "spliced_lib": "libqwayland-generic.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.5510787963867188e-05
+                    "seconds": 2.86102294921875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libqwayland-generic.so",
                     "spliced_lib": "libqwayland-generic.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.3909759521484375e-06
+                    "seconds": 6.9141387939453125e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.6172614097595215,
+                    "seconds": 0.48060035705566406,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so-abi-laboratory-libqwayland-generic-so-libqwayland-generic-so.html\nFound link to libqwayland-generic.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqwayland-generic.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtwayland-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-clNkC.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqwayland-generic.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqwayland-generic.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtwayland-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-GIxAd.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so-abi-laboratory-libqwayland-generic-so-libqwayland-generic-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so-abi-laboratory-libqwayland-generic-so-libqwayland-generic-so.html\nFound link to libqwayland-generic.so-5.15.2-22.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libqwayland-generic.so-5.15.2-22.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtwayland-5.15.2-22.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-cl2BL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqwayland-generic.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqwayland-generic.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtwayland-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-lpx7c.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so-abi-laboratory-libqwayland-generic-so-libqwayland-generic-so.html\n",
                     "return_code": 0,
-                    "seconds": 14.246108770370483,
+                    "seconds": 11.663235902786255,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so libqwayland-generic-so-libqwayland-generic-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so-abi-laboratory-libqwayland-generic-so-libqwayland-generic-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so": 20400,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so": 20216,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqwayland-generic.so": 20400
             }
         },

@@ -15,50 +15,54 @@
                     "splice_type": "different_lib",
                     "original_lib": "libX11-xcb.so.1.0.0",
                     "spliced_lib": "libX11-xcb.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.52587890625e-05
+                    "seconds": 1.6689300537109375e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libX11-xcb.so.1.0.0",
                     "spliced_lib": "libX11-xcb.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.775161743164062e-06
+                    "seconds": 3.218650817871094e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (2 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
                     "return_code": 0,
-                    "seconds": 0.04896903038024902,
+                    "seconds": 0.07794356346130371,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libX11-xcb.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libX11-xcb.so.1.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libX11-xcb.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libX11-xcb.so.1.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libX11-xcb.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libX11-xcb.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libX11-xcb.so.1.0.0-abi-laboratory-libX11-xcb-so-1-0-0-libX11-xcb-so-1-0-0.html\nFound link to libX11-xcb.so.1.0.0-1.7.3.1-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libX11-xcb.so.1.0.0-1.7.3.1-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libX11-1.7.3.1-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-3HqWZ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libX11-xcb.so.1.0.0-1.7.3.1-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libX11-xcb.so.1.0.0-1.7.3.1-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libX11-1.7.3.1-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-mp1IB.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libX11-xcb.so.1.0.0-abi-laboratory-libX11-xcb-so-1-0-0-libX11-xcb-so-1-0-0.html\n",
-                    "return_code": 0,
-                    "seconds": 0.8659627437591553,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libX11-xcb.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libX11-xcb.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libX11-xcb.so.1.0.0-abi-laboratory-libX11-xcb-so-1-0-0-libX11-xcb-so-1-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.21159958839416504,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libX11-xcb.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libX11-xcb.so.1.0.0 libX11-xcb-so-1-0-0-libX11-xcb-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libX11-xcb.so.1.0.0-abi-laboratory-libX11-xcb-so-1-0-0-libX11-xcb-so-1-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libX11-xcb.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libX11-xcb.so.1.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libX11-xcb.so.1.0.0": 15640,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libX11-xcb.so.1.0.0": 15640
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libX11-xcb.so.1.0.0": 15456,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libX11-xcb.so.1.0.0": 15656
             }
         },
         "experiment": "usr/lib64/libX11-xcb-fedora-libs-35-fedora-libs-37",

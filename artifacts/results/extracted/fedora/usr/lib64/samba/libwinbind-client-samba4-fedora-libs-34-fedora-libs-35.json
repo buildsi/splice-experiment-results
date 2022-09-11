@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libwinbind-client-samba4.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libwinbind-client-samba4.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libwinbind-client-samba4.so",
+                    "spliced_lib": "libwinbind-client-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.24249267578125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libwinbind-client-samba4.so",
+                    "spliced_lib": "libwinbind-client-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.106231689453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 6 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n6 Removed functions:\n\n  [D] 'function void winbind_set_client_name(const char*)'    {winbind_set_client_name@@SAMBA_4.14.12}\n  [D] 'function winbindd_context* winbindd_ctx_create()'    {winbindd_ctx_create@@SAMBA_4.14.12}\n  [D] 'function void winbindd_ctx_free(winbindd_context*)'    {winbindd_ctx_free@@SAMBA_4.14.12}\n  [D] 'function void winbindd_free_response(winbindd_response*)'    {winbindd_free_response@@SAMBA_4.14.12}\n  [D] 'function NSS_STATUS winbindd_priv_request_response(winbindd_context*, int, winbindd_request*, winbindd_response*)'    {winbindd_priv_request_response@@SAMBA_4.14.12}\n  [D] 'function NSS_STATUS winbindd_request_response(winbindd_context*, int, winbindd_request*, winbindd_response*)'    {winbindd_request_response@@SAMBA_4.14.12}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.02995896339416504,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libwinbind-client-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libwinbind-client-samba4.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libwinbind-client-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libwinbind-client-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libwinbind-client-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libwinbind-client-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libwinbind-client-samba4.so-abi-laboratory-libwinbind-client-samba4-so-libwinbind-client-samba4-so.html\nFound link to libwinbind-client-samba4.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libwinbind-client-samba4.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-WRFx8.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libwinbind-client-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libwinbind-client-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Ve0O6.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 6, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libwinbind-client-samba4.so-abi-laboratory-libwinbind-client-samba4-so-libwinbind-client-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 14.64122486114502,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libwinbind-client-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libwinbind-client-samba4.so libwinbind-client-samba4-so-libwinbind-client-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libwinbind-client-samba4.so-abi-laboratory-libwinbind-client-samba4-so-libwinbind-client-samba4-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libwinbind-client-samba4.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libwinbind-client-samba4.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libwinbind-client-samba4.so": 15880,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libwinbind-client-samba4.so": 16360
+            }
+        },
+        "experiment": "usr/lib64/samba/libwinbind-client-samba4-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libwinbind-client-samba4.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libwinbind-client-samba4.so",
+        "different_libs": true
+    }
+]

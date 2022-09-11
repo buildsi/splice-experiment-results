@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libflexiblas_netlib.so",
                     "spliced_lib": "libflexiblas_netlib.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.245208740234375e-05
+                    "seconds": 6.437301635742188e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libflexiblas_netlib.so",
                     "spliced_lib": "libflexiblas_netlib.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00025725364685058594
+                    "seconds": 0.0002579689025878906
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.0236356258392334,
+                    "seconds": 0.023653030395507812,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_netlib.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_netlib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_netlib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so-abi-laboratory-libflexiblas_netlib-so-libflexiblas_netlib-so.html\nFound link to libflexiblas_netlib.so-3.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libflexiblas_netlib.so-3.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/flexiblas/../../../.dwz/flexiblas-3.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nERROR: incomplete info for symbol 645\nERROR: incomplete info for symbol 955\nERROR: incomplete info for symbol 1835\nERROR: incomplete info for symbol 3189\nERROR: incomplete info for symbol 3500\nERROR: incomplete info for symbol 4129\nERROR: incomplete info for symbol 4782\nERROR: incomplete info for symbol 4980\nERROR: incomplete info for symbol 5291\nERROR: incomplete info for symbol 5920\nERROR: incomplete info for symbol 6932\nERROR: incomplete info for symbol 7243\nERROR: incomplete info for symbol 8118\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-MZEXA.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libflexiblas_netlib.so-3.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libflexiblas_netlib.so-3.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/flexiblas/../../../.dwz/flexiblas-3.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nERROR: incomplete info for symbol 645\nERROR: incomplete info for symbol 955\nERROR: incomplete info for symbol 1835\nERROR: incomplete info for symbol 3189\nERROR: incomplete info for symbol 3500\nERROR: incomplete info for symbol 4129\nERROR: incomplete info for symbol 4782\nERROR: incomplete info for symbol 4980\nERROR: incomplete info for symbol 5291\nERROR: incomplete info for symbol 5920\nERROR: incomplete info for symbol 6932\nERROR: incomplete info for symbol 7243\nERROR: incomplete info for symbol 8118\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-oSrmK.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so-abi-laboratory-libflexiblas_netlib-so-libflexiblas_netlib-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_netlib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so-abi-laboratory-libflexiblas_netlib-so-libflexiblas_netlib-so.html\nFound link to libflexiblas_netlib.so-3.2.1-1.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libflexiblas_netlib.so-3.2.1-1.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/flexiblas/../../../.dwz/flexiblas-3.2.1-1.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nERROR: incomplete info for symbol 667\nERROR: incomplete info for symbol 981\nERROR: incomplete info for symbol 1861\nERROR: incomplete info for symbol 3255\nERROR: incomplete info for symbol 3570\nERROR: incomplete info for symbol 4206\nERROR: incomplete info for symbol 4859\nERROR: incomplete info for symbol 5057\nERROR: incomplete info for symbol 5372\nERROR: incomplete info for symbol 6008\nERROR: incomplete info for symbol 7043\nERROR: incomplete info for symbol 7358\nERROR: incomplete info for symbol 8233\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Rcb4Z.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libflexiblas_netlib.so-3.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libflexiblas_netlib.so-3.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/flexiblas/../../../.dwz/flexiblas-3.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nERROR: incomplete info for symbol 645\nERROR: incomplete info for symbol 955\nERROR: incomplete info for symbol 1835\nERROR: incomplete info for symbol 3189\nERROR: incomplete info for symbol 3500\nERROR: incomplete info for symbol 4129\nERROR: incomplete info for symbol 4782\nERROR: incomplete info for symbol 4980\nERROR: incomplete info for symbol 5291\nERROR: incomplete info for symbol 5920\nERROR: incomplete info for symbol 6932\nERROR: incomplete info for symbol 7243\nERROR: incomplete info for symbol 8118\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Nq5Ae.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so-abi-laboratory-libflexiblas_netlib-so-libflexiblas_netlib-so.html\n",
                     "return_code": 0,
-                    "seconds": 5.3853747844696045,
+                    "seconds": 5.62810754776001,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_netlib.so libflexiblas_netlib-so-libflexiblas_netlib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so-abi-laboratory-libflexiblas_netlib-so-libflexiblas_netlib-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_netlib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so": 386888,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_netlib.so": 394928,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_netlib.so": 386888
             }
         },

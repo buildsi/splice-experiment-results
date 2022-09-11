@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkImagingOpenGL2.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkImagingOpenGL2.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkImagingOpenGL2.so.9.0.3",
+                    "spliced_lib": "libvtkImagingOpenGL2.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.9604644775390625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkImagingOpenGL2.so.9.0.3",
+                    "spliced_lib": "libvtkImagingOpenGL2.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.0967254638671875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (7 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'method vtkOpenGLImageGradient* vtkOpenGLImageGradient::New()' at vtkOpenGLImageGradient.cxx:31:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'class vtkOpenGLImageGradient' at vtkOpenGLImageGradient.h:29:1:\n        type size hasn't changed\n        2 member function changes (7 filtered):\n          'method virtual vtkObjectBase* vtkOpenGLImageGradient::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkOpenGLImageGradient::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkOpenGLImageGradient\n          'method virtual void vtkOpenGLImageGradient::ThreadedRequestData(vtkInformation*, vtkInformationVector**, vtkInformationVector*, vtkImageData***, vtkImageData**, int*, int)' has some sub-type changes:\n            the vtable offset of method virtual void vtkOpenGLImageGradient::ThreadedRequestData(vtkInformation*, vtkInformationVector**, vtkInformationVector*, vtkImageData***, vtkImageData**, int*, int) changed from 86 to 85\n              note that this is an ABI incompatible change to the vtable of class vtkOpenGLImageGradient\n\n",
+                    "return_code": 12,
+                    "seconds": 20.884105682373047,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkImagingOpenGL2.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkImagingOpenGL2.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkImagingOpenGL2.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkImagingOpenGL2.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkImagingOpenGL2.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkImagingOpenGL2.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkImagingOpenGL2.so.9.0.3-abi-laboratory-libvtkImagingOpenGL2-so-9-0-3-libvtkImagingOpenGL2-so-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.23427414894104004,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkImagingOpenGL2.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkImagingOpenGL2.so.9.1.0 libvtkImagingOpenGL2-so-9-0-3-libvtkImagingOpenGL2-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkImagingOpenGL2.so.9.0.3-abi-laboratory-libvtkImagingOpenGL2-so-9-0-3-libvtkImagingOpenGL2-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkImagingOpenGL2.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkImagingOpenGL2.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkImagingOpenGL2.so.9.0.3": 50216,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkImagingOpenGL2.so.9.1.0": 50872
+            }
+        },
+        "experiment": "usr/lib64/libvtkImagingOpenGL2-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkImagingOpenGL2.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkImagingOpenGL2.so.9.0.3",
+        "different_libs": true
+    }
+]

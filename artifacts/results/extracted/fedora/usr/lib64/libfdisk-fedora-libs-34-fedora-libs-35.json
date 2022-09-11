@@ -15,38 +15,44 @@
                     "splice_type": "different_lib",
                     "original_lib": "libfdisk.so.1.1.0",
                     "spliced_lib": "libfdisk.so.1.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 0.00013446807861328125
+                    "message": [
+                        "strncpy"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00010395050048828125
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libfdisk.so.1.1.0",
                     "spliced_lib": "libfdisk.so.1.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0006937980651855469
+                    "seconds": 0.0005662441253662109
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.011876583099365234,
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (162 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function int fdisk_add_partition(fdisk_context*, fdisk_partition*, size_t*)' at partition.c:1438:1 has some indirect sub-type changes:\n    parameter 1 of type 'fdisk_context*' has sub-type changes:\n      in pointed to type 'struct fdisk_context' at fdiskP.h:380:1:\n        type size hasn't changed\n        1 data member insertion:\n          'unsigned int is_excl', at offset 1928 (in bits) at fdiskP.h:408:1\n        1 data member changes (6 filtered):\n          'unsigned int listonly' offset changed from 1928 to 1929 (in bits) (by +1 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.21672916412353516,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0-abi-laboratory-libfdisk-so-1-1-0-libfdisk-so-1-1-0.html\nFound link to libfdisk.so.1.1.0-2.38-1.fc36.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file libfdisk.so.1.1.0-2.38-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
-                    "return_code": 10,
-                    "seconds": 0.13531994819641113,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0-abi-laboratory-libfdisk-so-1-1-0-libfdisk-so-1-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19010353088378906,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0 libfdisk-so-1-1-0-libfdisk-so-1-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0-abi-laboratory-libfdisk-so-1-1-0-libfdisk-so-1-1-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0",
@@ -57,8 +63,8 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0": 361400,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0": 361400
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0": 340072,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0": 341920
             }
         },
         "experiment": "usr/lib64/libfdisk-fedora-libs-34-fedora-libs-35",

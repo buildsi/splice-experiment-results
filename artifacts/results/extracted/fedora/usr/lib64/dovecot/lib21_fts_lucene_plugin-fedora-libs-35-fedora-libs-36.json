@@ -15,38 +15,45 @@
                     "splice_type": "different_lib",
                     "original_lib": "lib21_fts_lucene_plugin.so",
                     "spliced_lib": "lib21_fts_lucene_plugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 6.198883056640625e-05
+                    "message": [
+                        "printf",
+                        "abort"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.29425048828125e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "lib21_fts_lucene_plugin.so",
                     "spliced_lib": "lib21_fts_lucene_plugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.1021575927734375e-05
+                    "seconds": 6.222724914550781e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (4 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
                     "return_code": 0,
-                    "seconds": 0.4017167091369629,
+                    "seconds": 0.5076532363891602,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib21_fts_lucene_plugin.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib21_fts_lucene_plugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib21_fts_lucene_plugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so-abi-laboratory-lib21_fts_lucene_plugin-so-lib21_fts_lucene_plugin-so.html\nFound link to lib21_fts_lucene_plugin.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file lib21_fts_lucene_plugin.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 25481\nERROR: incomplete info for symbol 25543\nERROR: incomplete info for symbol 25618\nERROR: incomplete info for symbol 25801\nERROR: incomplete info for symbol 28735\nERROR: incomplete info for symbol 28831\nERROR: incomplete info for symbol 38456\nERROR: incomplete info for symbol 39685\nERROR: incomplete info for symbol 40521\nERROR: incomplete info for symbol 40616\nERROR: incomplete info for symbol 43193\nERROR: incomplete info for symbol 43554\nERROR: incomplete info for symbol 54523\nERROR: incomplete info for symbol 68210\nReading v-tables\nlibclucene-core.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ZPkvH.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to lib21_fts_lucene_plugin.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file lib21_fts_lucene_plugin.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 25481\nERROR: incomplete info for symbol 25543\nERROR: incomplete info for symbol 25618\nERROR: incomplete info for symbol 25801\nERROR: incomplete info for symbol 28735\nERROR: incomplete info for symbol 28831\nERROR: incomplete info for symbol 38456\nERROR: incomplete info for symbol 39685\nERROR: incomplete info for symbol 40521\nERROR: incomplete info for symbol 40616\nERROR: incomplete info for symbol 43193\nERROR: incomplete info for symbol 43554\nERROR: incomplete info for symbol 54523\nERROR: incomplete info for symbol 68210\nReading v-tables\nlibclucene-core.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-1cjbv.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so-abi-laboratory-lib21_fts_lucene_plugin-so-lib21_fts_lucene_plugin-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib21_fts_lucene_plugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so-abi-laboratory-lib21_fts_lucene_plugin-so-lib21_fts_lucene_plugin-so.html\nFound link to lib21_fts_lucene_plugin.so-2.3.19.1-3.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file lib21_fts_lucene_plugin.so-2.3.19.1-3.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 25300\nERROR: incomplete info for symbol 25362\nERROR: incomplete info for symbol 25437\nERROR: incomplete info for symbol 25620\nERROR: incomplete info for symbol 28570\nERROR: incomplete info for symbol 28666\nERROR: incomplete info for symbol 38033\nERROR: incomplete info for symbol 39262\nERROR: incomplete info for symbol 40108\nERROR: incomplete info for symbol 40203\nERROR: incomplete info for symbol 42780\nERROR: incomplete info for symbol 43141\nERROR: incomplete info for symbol 54114\nERROR: incomplete info for symbol 70979\nReading v-tables\nlibclucene-core.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-vSX4N.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to lib21_fts_lucene_plugin.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file lib21_fts_lucene_plugin.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 25481\nERROR: incomplete info for symbol 25543\nERROR: incomplete info for symbol 25618\nERROR: incomplete info for symbol 25801\nERROR: incomplete info for symbol 28735\nERROR: incomplete info for symbol 28831\nERROR: incomplete info for symbol 38456\nERROR: incomplete info for symbol 39685\nERROR: incomplete info for symbol 40521\nERROR: incomplete info for symbol 40616\nERROR: incomplete info for symbol 43193\nERROR: incomplete info for symbol 43554\nERROR: incomplete info for symbol 54523\nERROR: incomplete info for symbol 68210\nReading v-tables\nlibclucene-core.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-1IqED.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so-abi-laboratory-lib21_fts_lucene_plugin-so-lib21_fts_lucene_plugin-so.html\n",
                     "return_code": 0,
-                    "seconds": 7.7068986892700195,
+                    "seconds": 9.317955255508423,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib21_fts_lucene_plugin.so lib21_fts_lucene_plugin-so-lib21_fts_lucene_plugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so-abi-laboratory-lib21_fts_lucene_plugin-so-lib21_fts_lucene_plugin-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib21_fts_lucene_plugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so",
@@ -57,7 +64,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so": 87896,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/lib21_fts_lucene_plugin.so": 87168,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/lib21_fts_lucene_plugin.so": 87896
             }
         },

@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libbrotlicommon.so.1.0.9",
                     "spliced_lib": "libbrotlicommon.so.1.0.9",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.6226043701171875e-05
+                    "seconds": 2.3365020751953125e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libbrotlicommon.so.1.0.9",
                     "spliced_lib": "libbrotlicommon.so.1.0.9",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.58306884765625e-06
+                    "seconds": 7.152557373046875e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.017395734786987305,
+                    "seconds": 0.011445045471191406,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlicommon.so.1.0.9 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlicommon.so.1.0.9",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlicommon.so.1.0.9",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlicommon.so.1.0.9",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlicommon.so.1.0.9\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlicommon.so.1.0.9\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlicommon.so.1.0.9-abi-laboratory-libbrotlicommon-so-1-0-9-libbrotlicommon-so-1-0-9.html\nFound link to libbrotlicommon.so.1.0.9-1.0.9-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libbrotlicommon.so.1.0.9-1.0.9-7.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/brotli-1.0.9-7.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-qOCPy.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libbrotlicommon.so.1.0.9-1.0.9-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libbrotlicommon.so.1.0.9-1.0.9-7.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/brotli-1.0.9-7.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-qMnfl.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlicommon.so.1.0.9-abi-laboratory-libbrotlicommon-so-1-0-9-libbrotlicommon-so-1-0-9.html\n",
-                    "return_code": 0,
-                    "seconds": 1.128005027770996,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlicommon.so.1.0.9\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlicommon.so.1.0.9\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlicommon.so.1.0.9-abi-laboratory-libbrotlicommon-so-1-0-9-libbrotlicommon-so-1-0-9.html\n",
+                    "return_code": 139,
+                    "seconds": 0.1868877410888672,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlicommon.so.1.0.9 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlicommon.so.1.0.9 libbrotlicommon-so-1-0-9-libbrotlicommon-so-1-0-9 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlicommon.so.1.0.9-abi-laboratory-libbrotlicommon-so-1-0-9-libbrotlicommon-so-1-0-9.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlicommon.so.1.0.9",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlicommon.so.1.0.9",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlicommon.so.1.0.9": 138800,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlicommon.so.1.0.9": 138744,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlicommon.so.1.0.9": 138800
             }
         },

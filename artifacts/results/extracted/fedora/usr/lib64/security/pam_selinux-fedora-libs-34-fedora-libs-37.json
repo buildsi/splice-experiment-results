@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "pam_selinux.so",
                     "spliced_lib": "pam_selinux.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.0994415283203125e-05
+                    "seconds": 3.170967102050781e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "pam_selinux.so",
                     "spliced_lib": "pam_selinux.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.106231689453125e-06
+                    "seconds": 7.152557373046875e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.013125419616699219,
+                    "seconds": 0.009573698043823242,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_selinux.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_selinux.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_selinux.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_selinux.so",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_selinux.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_selinux.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_selinux.so-abi-laboratory-pam_selinux-so-pam_selinux-so.html\nFound link to pam_selinux.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_selinux.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-bPvCZ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_selinux.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_selinux.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-avC1s.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_selinux.so-abi-laboratory-pam_selinux-so-pam_selinux-so.html\n",
-                    "return_code": 0,
-                    "seconds": 0.5744163990020752,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_selinux.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_selinux.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_selinux.so-abi-laboratory-pam_selinux-so-pam_selinux-so.html\nFound link to pam_selinux.so-1.5.1-8.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_selinux.so-1.5.1-8.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.1-8.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-YpeMW.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_selinux.so-1.5.2-12.fc37.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file pam_selinux.so-1.5.2-12.fc37.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.2947654724121094,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_selinux.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_selinux.so pam_selinux-so-pam_selinux-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_selinux.so-abi-laboratory-pam_selinux-so-pam_selinux-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_selinux.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_selinux.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_selinux.so": 28328,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_selinux.so": 28240,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_selinux.so": 28328
             }
         },

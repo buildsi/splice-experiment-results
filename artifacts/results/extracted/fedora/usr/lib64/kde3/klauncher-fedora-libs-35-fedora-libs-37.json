@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "klauncher.so",
                     "spliced_lib": "klauncher.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.3126602172851562e-05
+                    "seconds": 2.0742416381835938e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "klauncher.so",
                     "spliced_lib": "klauncher.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.2636184692382812e-05
+                    "seconds": 6.4373016357421875e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.22008848190307617,
+                    "seconds": 0.2069563865661621,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/klauncher.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/klauncher.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/klauncher.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so-abi-laboratory-klauncher-so-klauncher-so.html\nFound link to klauncher.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file klauncher.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkdeinit_klauncher.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-I8sQs.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to klauncher.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file klauncher.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkdeinit_klauncher.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-2NnyN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so-abi-laboratory-klauncher-so-klauncher-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/klauncher.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so-abi-laboratory-klauncher-so-klauncher-so.html\nFound link to klauncher.so-3.5.10-111.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file klauncher.so-3.5.10-111.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-111.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkdeinit_klauncher.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-cUz4Q.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to klauncher.so-3.5.10-117.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file klauncher.so-3.5.10-117.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-117.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkdeinit_klauncher.so: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-GUJmf.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so-abi-laboratory-klauncher-so-klauncher-so.html\n",
                     "return_code": 0,
-                    "seconds": 15.432228803634644,
+                    "seconds": 14.462156772613525,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/klauncher.so klauncher-so-klauncher-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so-abi-laboratory-klauncher-so-klauncher-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/klauncher.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so",
@@ -57,8 +61,8 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so": 15616,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/klauncher.so": 15616
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/klauncher.so": 15344,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/klauncher.so": 15552
             }
         },
         "experiment": "usr/lib64/kde3/klauncher-fedora-libs-35-fedora-libs-37",

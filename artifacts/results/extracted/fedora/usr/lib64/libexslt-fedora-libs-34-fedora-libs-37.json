@@ -15,38 +15,42 @@
                     "splice_type": "different_lib",
                     "original_lib": "libexslt.so.0.8.20",
                     "spliced_lib": "libexslt.so.0.8.20",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.2928924560546875e-05
+                    "seconds": 5.650520324707031e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libexslt.so.0.8.20",
                     "spliced_lib": "libexslt.so.0.8.20",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.1444091796875e-05
+                    "seconds": 1.0967254638671875e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.008558273315429688,
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (3 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function int exsltDateXpathCtxtRegister(xmlXPathContextPtr, const xmlChar*)' at date.c:3786:1 has some indirect sub-type changes:\n    parameter 1 of type 'typedef xmlXPathContextPtr' has sub-type changes:\n      underlying type 'xmlXPathContext*' changed:\n        in pointed to type 'typedef xmlXPathContext' at xpath.h:39:1:\n          underlying type 'struct _xmlXPathContext' at xpath.h:290:1 changed:\n            type size changed from 3072 to 3008 (in bits)\n            2 data member deletions:\n              'int maxDepth', at offset 2976 (in bits) at xpath.h:362:1\n              'int maxParserDepth', at offset 3008 (in bits) at xpath.h:363:1\n            no data member changes (2 filtered);\n\n",
+                    "return_code": 4,
+                    "seconds": 0.07776403427124023,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20-abi-laboratory-libexslt-so-0-8-20-libexslt-so-0-8-20.html\nFound link to libexslt.so.0.8.20-1.1.35-2.fc36.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file libexslt.so.0.8.20-1.1.35-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
-                    "return_code": 10,
-                    "seconds": 0.11214566230773926,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20-abi-laboratory-libexslt-so-0-8-20-libexslt-so-0-8-20.html\n",
+                    "return_code": 139,
+                    "seconds": 0.18952512741088867,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20 libexslt-so-0-8-20-libexslt-so-0-8-20 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20-abi-laboratory-libexslt-so-0-8-20-libexslt-so-0-8-20.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20": 95096,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20": 90992,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20": 95096
             }
         },

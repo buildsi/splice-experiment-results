@@ -15,26 +15,33 @@
                     "splice_type": "different_lib",
                     "original_lib": "libqconnmanbearer.so",
                     "spliced_lib": "libqconnmanbearer.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 7.081031799316406e-05
+                    "message": [
+                        "abort",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.580352783203125e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libqconnmanbearer.so",
                     "spliced_lib": "libqconnmanbearer.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.4836273193359375e-06
+                    "seconds": 7.62939453125e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 5.74383282661438,
+                    "seconds": 4.326219797134399,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so",
@@ -44,9 +51,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so-abi-laboratory-libqconnmanbearer-so-libqconnmanbearer-so.html\nFound link to libqconnmanbearer.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqconnmanbearer.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/bearer/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Network.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-4n4Pm.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqconnmanbearer.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqconnmanbearer.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/bearer/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Network.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-xXy8a.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so-abi-laboratory-libqconnmanbearer-so-libqconnmanbearer-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so-abi-laboratory-libqconnmanbearer-so-libqconnmanbearer-so.html\nFound link to libqconnmanbearer.so-5.15.2-31.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libqconnmanbearer.so-5.15.2-31.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/bearer/../../../../../.dwz/qt5-qtbase-5.15.2-31.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Network.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-IdugZ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqconnmanbearer.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqconnmanbearer.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/bearer/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Network.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-wcvR3.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so-abi-laboratory-libqconnmanbearer-so-libqconnmanbearer-so.html\n",
                     "return_code": 0,
-                    "seconds": 214.79417967796326,
+                    "seconds": 174.2697479724884,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so libqconnmanbearer-so-libqconnmanbearer-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so-abi-laboratory-libqconnmanbearer-so-libqconnmanbearer-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so",
@@ -57,7 +64,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so": 244280,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so": 239984,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/bearer/libqconnmanbearer.so": 244280
             }
         },

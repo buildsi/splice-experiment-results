@@ -3,69 +3,73 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.2"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.3"
         ],
         "paths": {},
         "predictions": {
             "symbols": [
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libtalloc.so.2.3.4",
-                    "spliced_lib": "libtalloc.so.2.3.4",
+                    "original_lib": "libtalloc.so.2.3.2",
+                    "spliced_lib": "libtalloc.so.2.3.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.506111145019531e-05
+                    "seconds": 4.2438507080078125e-05
                 },
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libtalloc.so.2.3.4",
-                    "spliced_lib": "libtalloc.so.2.3.4",
+                    "original_lib": "libtalloc.so.2.3.2",
+                    "spliced_lib": "libtalloc.so.2.3.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.125999450683594e-05
+                    "seconds": 3.838539123535156e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.02855968475341797,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4",
+                    "seconds": 0.0225677490234375,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.3",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.2",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4-abi-laboratory-libtalloc-so-2-3-4-libtalloc-so-2-3-4.html\nFound link to libtalloc.so.2.3.4-2.3.4-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libtalloc.so.2.3.4-2.3.4-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libtalloc-2.3.4-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-6c3o3.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libtalloc.so.2.3.4-2.3.4-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libtalloc.so.2.3.4-2.3.4-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libtalloc-2.3.4-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-XamzV.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4-abi-laboratory-libtalloc-so-2-3-4-libtalloc-so-2-3-4.html\n",
-                    "return_code": 0,
-                    "seconds": 0.6809239387512207,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4 libtalloc-so-2-3-4-libtalloc-so-2-3-4 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4-abi-laboratory-libtalloc-so-2-3-4-libtalloc-so-2-3-4.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4",
-                    "prediction": true,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.3\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.2-abi-laboratory-libtalloc-so-2-3-2-libtalloc-so-2-3-3.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.18567180633544922,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.3 libtalloc-so-2-3-2-libtalloc-so-2-3-3 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.2-abi-laboratory-libtalloc-so-2-3-2-libtalloc-so-2-3-3.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.3",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.2",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4": 50504,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4": 50504
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.2": 57440,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.3": 57584
             }
         },
         "experiment": "usr/lib64/libtalloc-fedora-libs-34-fedora-libs-35",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.4",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.4",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtalloc.so.2.3.3",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtalloc.so.2.3.2",
         "different_libs": true
     }
 ]

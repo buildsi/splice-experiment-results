@@ -15,6 +15,8 @@
                     "splice_type": "different_lib",
                     "original_lib": "libxcb-res.so.0.0.0",
                     "spliced_lib": "libxcb-res.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
@@ -24,17 +26,19 @@
                     "splice_type": "different_lib",
                     "original_lib": "libxcb-res.so.0.0.0",
                     "spliced_lib": "libxcb-res.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.7670135498046875e-05
+                    "seconds": 3.504753112792969e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.020905733108520508,
+                    "seconds": 0.022221088409423828,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-res.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-res.so.0.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-res.so.0.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-res.so.0.0.0",
@@ -44,21 +48,21 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-res.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-res.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-res.so.0.0.0-abi-laboratory-libxcb-res-so-0-0-0-libxcb-res-so-0-0-0.html\nFound link to libxcb-res.so.0.0.0-1.13.1-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxcb-res.so.0.0.0-1.13.1-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libxcb-1.13.1-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-1WLZU.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libxcb-res.so.0.0.0-1.13.1-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxcb-res.so.0.0.0-1.13.1-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libxcb-1.13.1-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-RADpx.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-res.so.0.0.0-abi-laboratory-libxcb-res-so-0-0-0-libxcb-res-so-0-0-0.html\n",
-                    "return_code": 0,
-                    "seconds": 0.5162010192871094,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-res.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-res.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-res.so.0.0.0-abi-laboratory-libxcb-res-so-0-0-0-libxcb-res-so-0-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19471454620361328,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-res.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-res.so.0.0.0 libxcb-res-so-0-0-0-libxcb-res-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-res.so.0.0.0-abi-laboratory-libxcb-res-so-0-0-0-libxcb-res-so-0-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-res.so.0.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-res.so.0.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-res.so.0.0.0": 20136,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-res.so.0.0.0": 20136
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-res.so.0.0.0": 20144,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-res.so.0.0.0": 19952
             }
         },
         "experiment": "usr/lib64/libxcb-res-fedora-libs-34-fedora-libs-35",

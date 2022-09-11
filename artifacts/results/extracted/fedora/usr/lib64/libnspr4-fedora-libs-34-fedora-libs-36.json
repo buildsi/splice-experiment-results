@@ -15,49 +15,53 @@
                     "splice_type": "different_lib",
                     "original_lib": "libnspr4.so",
                     "spliced_lib": "libnspr4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00015974044799804688
+                    "seconds": 0.00014925003051757812
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libnspr4.so",
                     "spliced_lib": "libnspr4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0013647079467773438
+                    "seconds": 0.0011398792266845703
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.22186732292175293,
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (91 filtered out), 1 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Added function:\n\n  [A] 'function PRStatus PR_GetPrefLoopbackAddrInfo(PRNetAddr*, PRUint16)'    {PR_GetPrefLoopbackAddrInfo}\n\n",
+                    "return_code": 4,
+                    "seconds": 0.20947813987731934,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so-abi-laboratory-libnspr4-so-libnspr4-so.html\nFound link to libnspr4.so-3.81.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnspr4.so-3.81.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/nss-3.81.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-cegUA.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libnspr4.so-3.81.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnspr4.so-3.81.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/nss-3.81.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-wR9Bu.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so-abi-laboratory-libnspr4-so-libnspr4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 4.2140960693359375,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so-abi-laboratory-libnspr4-so-libnspr4-so.html\nFound link to libnspr4.so-3.77.0-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libnspr4.so-3.77.0-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/nss-3.77.0-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-tVZBm.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libnspr4.so-3.81.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnspr4.so-3.81.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/nss-3.81.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-8m1K4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 80.4%\nTotal binary compatibility problems: 0, warnings: 2\nTotal source compatibility problems: 2, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so-abi-laboratory-libnspr4-so-libnspr4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 3.3242905139923096,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so libnspr4-so-libnspr4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so-abi-laboratory-libnspr4-so-libnspr4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so": 271024,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnspr4.so": 269376,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnspr4.so": 271024
             }
         },

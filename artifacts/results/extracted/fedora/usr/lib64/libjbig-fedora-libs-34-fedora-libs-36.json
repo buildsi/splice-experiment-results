@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libjbig.so.2.1",
                     "spliced_lib": "libjbig.so.2.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0001723766326904297
+                    "seconds": 0.0006182193756103516
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libjbig.so.2.1",
                     "spliced_lib": "libjbig.so.2.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0008969306945800781
+                    "seconds": 0.00031948089599609375
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.054099321365356445,
+                    "seconds": 0.07188105583190918,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjbig.so.2.1",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjbig.so.2.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjbig.so.2.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1-abi-laboratory-libjbig-so-2-1-libjbig-so-2-1.html\nFound link to libjbig.so.2.1-2.1-23.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjbig.so.2.1-2.1-23.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/jbigkit-2.1-23.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-UDxIe.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libjbig.so.2.1-2.1-23.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjbig.so.2.1-2.1-23.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/jbigkit-2.1-23.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-pmxVj.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1-abi-laboratory-libjbig-so-2-1-libjbig-so-2-1.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjbig.so.2.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1-abi-laboratory-libjbig-so-2-1-libjbig-so-2-1.html\nFound link to libjbig.so.2.1-2.1-21.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libjbig.so.2.1-2.1-21.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/jbigkit-2.1-21.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-M0jjL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libjbig.so.2.1-2.1-23.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libjbig.so.2.1-2.1-23.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/jbigkit-2.1-23.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-LdEyA.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1-abi-laboratory-libjbig-so-2-1-libjbig-so-2-1.html\n",
                     "return_code": 0,
-                    "seconds": 0.612633466720581,
+                    "seconds": 0.7393629550933838,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjbig.so.2.1 libjbig-so-2-1-libjbig-so-2-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1-abi-laboratory-libjbig-so-2-1-libjbig-so-2-1.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjbig.so.2.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1": 56080,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libjbig.so.2.1": 56024,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libjbig.so.2.1": 56080
             }
         },

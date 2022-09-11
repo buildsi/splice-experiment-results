@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libbrotlienc.so.1.0.9",
                     "spliced_lib": "libbrotlienc.so.1.0.9",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.4080276489257812e-05
+                    "seconds": 3.075599670410156e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libbrotlienc.so.1.0.9",
                     "spliced_lib": "libbrotlienc.so.1.0.9",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.867813110351562e-06
+                    "seconds": 9.298324584960938e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.10271096229553223,
+                    "seconds": 0.033753395080566406,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9-abi-laboratory-libbrotlienc-so-1-0-9-libbrotlienc-so-1-0-9.html\nFound link to libbrotlienc.so.1.0.9-1.0.9-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libbrotlienc.so.1.0.9-1.0.9-7.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/brotli-1.0.9-7.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ojBRL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libbrotlienc.so.1.0.9-1.0.9-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libbrotlienc.so.1.0.9-1.0.9-7.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/brotli-1.0.9-7.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-M9HtQ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9-abi-laboratory-libbrotlienc-so-1-0-9-libbrotlienc-so-1-0-9.html\n",
-                    "return_code": 0,
-                    "seconds": 3.372303009033203,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9-abi-laboratory-libbrotlienc-so-1-0-9-libbrotlienc-so-1-0-9.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.23563814163208008,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9 libbrotlienc-so-1-0-9-libbrotlienc-so-1-0-9 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9-abi-laboratory-libbrotlienc-so-1-0-9-libbrotlienc-so-1-0-9.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9": 591576,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libbrotlienc.so.1.0.9": 591408,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libbrotlienc.so.1.0.9": 591576
             }
         },

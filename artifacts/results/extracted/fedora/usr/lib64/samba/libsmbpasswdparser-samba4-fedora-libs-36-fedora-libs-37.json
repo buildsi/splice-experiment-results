@@ -15,42 +15,46 @@
                     "splice_type": "different_lib",
                     "original_lib": "libsmbpasswdparser-samba4.so",
                     "spliced_lib": "libsmbpasswdparser-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.288818359375e-05
+                    "seconds": 2.5987625122070312e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libsmbpasswdparser-samba4.so",
                     "spliced_lib": "libsmbpasswdparser-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.106231689453125e-06
+                    "seconds": 7.3909759521484375e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.019042253494262695,
+                    "message": "Functions changes summary: 2 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 Removed functions:\n\n  [D] 'function samr_Password* smbpasswd_gethexpwd(TALLOC_CTX*, const char*)'    {smbpasswd_gethexpwd@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function char* smbpasswd_sethexpwd(TALLOC_CTX*, samr_Password*, uint16_t)'    {smbpasswd_sethexpwd@@SAMBA_4.16.4_SAMBA4}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.020618438720703125,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbpasswdparser-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbpasswdparser-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbpasswdparser-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbpasswdparser-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbpasswdparser-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbpasswdparser-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbpasswdparser-samba4.so-abi-laboratory-libsmbpasswdparser-samba4-so-libsmbpasswdparser-samba4-so.html\nFound link to libsmbpasswdparser-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmbpasswdparser-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-CJIPm.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsmbpasswdparser-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmbpasswdparser-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-oDRmb.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbpasswdparser-samba4.so-abi-laboratory-libsmbpasswdparser-samba4-so-libsmbpasswdparser-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 12.294093370437622,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbpasswdparser-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbpasswdparser-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbpasswdparser-samba4.so-abi-laboratory-libsmbpasswdparser-samba4-so-libsmbpasswdparser-samba4-so.html\nFound link to libsmbpasswdparser-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmbpasswdparser-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-zSGUS.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsmbpasswdparser-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmbpasswdparser-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-oOIKU.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 2, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbpasswdparser-samba4.so-abi-laboratory-libsmbpasswdparser-samba4-so-libsmbpasswdparser-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 12.978996276855469,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbpasswdparser-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbpasswdparser-samba4.so libsmbpasswdparser-samba4-so-libsmbpasswdparser-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbpasswdparser-samba4.so-abi-laboratory-libsmbpasswdparser-samba4-so-libsmbpasswdparser-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbpasswdparser-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbpasswdparser-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
@@ -58,7 +62,7 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbpasswdparser-samba4.so": 16024,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbpasswdparser-samba4.so": 16024
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbpasswdparser-samba4.so": 16032
             }
         },
         "experiment": "usr/lib64/samba/libsmbpasswdparser-samba4-fedora-libs-36-fedora-libs-37",

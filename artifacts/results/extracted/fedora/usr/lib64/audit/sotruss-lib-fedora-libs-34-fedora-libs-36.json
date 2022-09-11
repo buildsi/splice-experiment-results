@@ -15,49 +15,56 @@
                     "splice_type": "different_lib",
                     "original_lib": "sotruss-lib.so",
                     "spliced_lib": "sotruss-lib.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 2.765655517578125e-05
+                    "message": [
+                        "open",
+                        "fcntl"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.528594970703125e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "sotruss-lib.so",
                     "spliced_lib": "sotruss-lib.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.3589859008789062e-05
+                    "seconds": 8.821487426757812e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.034343719482421875,
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (2 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function unsigned int la_objopen(link_map*, Lmid_t, uintptr_t*)' at sotruss-lib.c:160:1 has some indirect sub-type changes:\n    parameter 1 of type 'link_map*' has sub-type changes:\n      in pointed to type 'struct link_map' at link.h:95:1:\n        type size hasn't changed\n        7 data member insertions:\n          'unsigned int l_main_map', at offset 6375 (in bits) at link.h:184:1\n          'unsigned int l_visited', at offset 6376 (in bits) at link.h:185:1\n          'unsigned int l_map_used', at offset 6377 (in bits) at link.h:187:1\n          'unsigned int l_map_done', at offset 6378 (in bits) at link.h:188:1\n          'unsigned int l_ld_readonly', at offset 6389 (in bits) at link.h:213:1\n          'unsigned int l_find_object_processed', at offset 6390 (in bits) at link.h:214:1\n          'unsigned int l_1_needed', at offset 6496 (in bits) at link_map.h:2:1\n        10 data member changes (13 filtered):\n          'unsigned int l_phdr_allocated' offset changed from 6375 to 6379 (in bits) (by +4 bits)\n          'unsigned int l_soname_added' offset changed from 6376 to 6380 (in bits) (by +4 bits)\n          'unsigned int l_faked' offset changed from 6377 to 6381 (in bits) (by +4 bits)\n          'unsigned int l_need_tls_init' offset changed from 6378 to 6382 (in bits) (by +4 bits)\n          'unsigned int l_auditing' offset changed from 6379 to 6383 (in bits) (by +4 bits)\n          'unsigned int l_audit_any_plt' offset changed from 6380 to 6384 (in bits) (by +4 bits)\n          'unsigned int l_removed' offset changed from 6381 to 6385 (in bits) (by +4 bits)\n          'unsigned int l_contiguous' offset changed from 6382 to 6386 (in bits) (by +4 bits)\n          'unsigned int l_symbolic_in_local_scope' offset changed from 6383 to 6387 (in bits) (by +4 bits)\n          'unsigned int l_free_initfini' offset changed from 6384 to 6388 (in bits) (by +4 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.04984116554260254,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/audit/sotruss-lib.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/audit/sotruss-lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/audit/sotruss-lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so-abi-laboratory-sotruss-lib-so-sotruss-lib-so.html\nFound link to sotruss-lib.so-2.35-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file sotruss-lib.so-2.35-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/audit/../../../.dwz/glibc-2.35-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Pezrg.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to sotruss-lib.so-2.35-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file sotruss-lib.so-2.35-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/audit/../../../.dwz/glibc-2.35-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-40RCj.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so-abi-laboratory-sotruss-lib-so-sotruss-lib-so.html\n",
-                    "return_code": 0,
-                    "seconds": 2.022965908050537,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/audit/sotruss-lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so-abi-laboratory-sotruss-lib-so-sotruss-lib-so.html\nFound link to sotruss-lib.so-2.33-21.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file sotruss-lib.so-2.33-21.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/audit/../../../.dwz/glibc-2.33-21.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-AxtIi.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to sotruss-lib.so-2.35-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file sotruss-lib.so-2.35-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/audit/../../../.dwz/glibc-2.35-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-ZsoRu.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 90%\nSource compatibility: 60%\nTotal binary compatibility problems: 1, warnings: 3\nTotal source compatibility problems: 3, warnings: 1\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so-abi-laboratory-sotruss-lib-so-sotruss-lib-so.html\n",
+                    "return_code": 1,
+                    "seconds": 2.6862220764160156,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/audit/sotruss-lib.so sotruss-lib-so-sotruss-lib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so-abi-laboratory-sotruss-lib-so-sotruss-lib-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/audit/sotruss-lib.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so": 15960,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/audit/sotruss-lib.so": 16032,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/audit/sotruss-lib.so": 15960
             }
         },

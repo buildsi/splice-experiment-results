@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libkabc_file.so.1.0.0",
                     "spliced_lib": "libkabc_file.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.465217590332031e-05
+                    "seconds": 0.0001380443572998047
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libkabc_file.so.1.0.0",
                     "spliced_lib": "libkabc_file.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.981590270996094e-05
+                    "seconds": 4.6253204345703125e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.5903449058532715,
+                    "seconds": 0.7096269130706787,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_file.so.1.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_file.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_file.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0-abi-laboratory-libkabc_file-so-1-0-0-libkabc_file-so-1-0-0.html\nFound link to libkabc_file.so.1.0.0-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkabc_file.so.1.0.0-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 702\nERROR: incomplete info for symbol 1798\nERROR: incomplete info for symbol 1951\nERROR: incomplete info for symbol 2042\nERROR: incomplete info for symbol 6367\nERROR: incomplete info for symbol 6968\nERROR: incomplete info for symbol 9464\nERROR: incomplete info for symbol 12601\nERROR: incomplete info for symbol 12667\nERROR: incomplete info for symbol 24991\nERROR: incomplete info for symbol 25506\nReading v-tables\nlibkabc.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-wCu2k.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkabc_file.so.1.0.0-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkabc_file.so.1.0.0-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 702\nERROR: incomplete info for symbol 1798\nERROR: incomplete info for symbol 1951\nERROR: incomplete info for symbol 2042\nERROR: incomplete info for symbol 6367\nERROR: incomplete info for symbol 6968\nERROR: incomplete info for symbol 9464\nERROR: incomplete info for symbol 12601\nERROR: incomplete info for symbol 12667\nERROR: incomplete info for symbol 24991\nERROR: incomplete info for symbol 25506\nReading v-tables\nlibkabc.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-5txas.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0-abi-laboratory-libkabc_file-so-1-0-0-libkabc_file-so-1-0-0.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_file.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0-abi-laboratory-libkabc_file-so-1-0-0-libkabc_file-so-1-0-0.html\nFound link to libkabc_file.so.1.0.0-3.5.10-110.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libkabc_file.so.1.0.0-3.5.10-110.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-110.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 742\nERROR: incomplete info for symbol 1838\nERROR: incomplete info for symbol 1991\nERROR: incomplete info for symbol 2082\nERROR: incomplete info for symbol 6416\nERROR: incomplete info for symbol 7022\nERROR: incomplete info for symbol 9524\nERROR: incomplete info for symbol 12668\nERROR: incomplete info for symbol 12734\nERROR: incomplete info for symbol 25100\nERROR: incomplete info for symbol 25617\nReading v-tables\nlibkabc.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-CRlQM.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkabc_file.so.1.0.0-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkabc_file.so.1.0.0-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 702\nERROR: incomplete info for symbol 1798\nERROR: incomplete info for symbol 1951\nERROR: incomplete info for symbol 2042\nERROR: incomplete info for symbol 6367\nERROR: incomplete info for symbol 6968\nERROR: incomplete info for symbol 9464\nERROR: incomplete info for symbol 12601\nERROR: incomplete info for symbol 12667\nERROR: incomplete info for symbol 24991\nERROR: incomplete info for symbol 25506\nReading v-tables\nlibkabc.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-CRU7n.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0-abi-laboratory-libkabc_file-so-1-0-0-libkabc_file-so-1-0-0.html\n",
                     "return_code": 0,
-                    "seconds": 16.697246551513672,
+                    "seconds": 20.183825254440308,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_file.so.1.0.0 libkabc_file-so-1-0-0-libkabc_file-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0-abi-laboratory-libkabc_file-so-1-0-0-libkabc_file-so-1-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_file.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0": 65416,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkabc_file.so.1.0.0": 65352,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkabc_file.so.1.0.0": 65416
             }
         },

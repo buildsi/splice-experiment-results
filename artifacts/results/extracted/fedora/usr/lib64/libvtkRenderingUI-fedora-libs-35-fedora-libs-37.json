@@ -1,0 +1,87 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingUI.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingUI.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkRenderingUI.so.9.0.3",
+                    "spliced_lib": "libvtkRenderingUI.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "_ZN26vtkXRenderWindowInteractor15BreakLoopFlagOnEv",
+                        "abort",
+                        "printf",
+                        "_ZN26vtkXRenderWindowInteractor13BreakLoopFlagE",
+                        "_ZN26vtkXRenderWindowInteractor16BreakLoopFlagOffEv",
+                        "_ZN26vtkXRenderWindowInteractor16SetBreakLoopFlagEi"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.367134094238281e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkRenderingUI.so.9.0.3",
+                    "spliced_lib": "libvtkRenderingUI.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZN26vtkXRenderWindowInteractor13BreakLoopFlagE",
+                        "_ZN26vtkXRenderWindowInteractor16BreakLoopFlagOffEv",
+                        "_ZN26vtkXRenderWindowInteractor16SetBreakLoopFlagEi",
+                        "_ZN26vtkXRenderWindowInteractor15BreakLoopFlagOnEv"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.600120544433594e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 3 Removed, 4 Changed (26 filtered out), 0 Added (2 filtered out) functions\nVariables changes summary: 1 Removed, 0 Changed, 0 Added variable\n\n3 Removed functions:\n\n  [D] 'method void vtkXRenderWindowInteractor::BreakLoopFlagOff()'    {_ZN26vtkXRenderWindowInteractor16BreakLoopFlagOffEv}\n  [D] 'method void vtkXRenderWindowInteractor::BreakLoopFlagOn()'    {_ZN26vtkXRenderWindowInteractor15BreakLoopFlagOnEv}\n  [D] 'method void vtkXRenderWindowInteractor::SetBreakLoopFlag(int)'    {_ZN26vtkXRenderWindowInteractor16SetBreakLoopFlagEi}\n\n4 functions with some indirect sub-type change:\n\n  [C] 'method virtual int vtkGenericRenderWindowInteractor::InternalCreateTimer(int, int, unsigned long int)' at vtkGenericRenderWindowInteractor.cxx:48:1 has some indirect sub-type changes:\n    the vtable offset of method virtual int vtkGenericRenderWindowInteractor::InternalCreateTimer(int, int, unsigned long int) changed from 173 to 174\n      note that this is an ABI incompatible change to the vtable of class vtkGenericRenderWindowInteractor\n    implicit parameter 0 of type 'vtkGenericRenderWindowInteractor*' has sub-type changes:\n      in pointed to type 'class vtkGenericRenderWindowInteractor' at vtkGenericRenderWindowInteractor.h:32:1:\n        type size hasn't changed\n        7 member function changes (8 filtered):\n          'method virtual vtkObjectBase* vtkGenericRenderWindowInteractor::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkGenericRenderWindowInteractor::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkGenericRenderWindowInteractor\n          'method virtual int vtkGenericRenderWindowInteractor::InternalDestroyTimer(int)' has some sub-type changes:\n            the vtable offset of method virtual int vtkGenericRenderWindowInteractor::InternalDestroyTimer(int) changed from 174 to 175\n              note that this is an ABI incompatible change to the vtable of class vtkGenericRenderWindowInteractor\n          'method virtual void vtkGenericRenderWindowInteractor::TimerEvent()' has some sub-type changes:\n            the vtable offset of method virtual void vtkGenericRenderWindowInteractor::TimerEvent() changed from 177 to 178\n              note that this is an ABI incompatible change to the vtable of class vtkGenericRenderWindowInteractor\n          'method virtual void vtkGenericRenderWindowInteractor::SetTimerEventResetsTimer(vtkTypeBool)' has some sub-type changes:\n            the vtable offset of method virtual void vtkGenericRenderWindowInteractor::SetTimerEventResetsTimer(vtkTypeBool) changed from 178 to 179\n              note that this is an ABI incompatible change to the vtable of class vtkGenericRenderWindowInteractor\n          'method virtual vtkTypeBool vtkGenericRenderWindowInteractor::GetTimerEventResetsTimer()' has some sub-type changes:\n            the vtable offset of method virtual vtkTypeBool vtkGenericRenderWindowInteractor::GetTimerEventResetsTimer() changed from 179 to 180\n              note that this is an ABI incompatible change to the vtable of class vtkGenericRenderWindowInteractor\n          'method virtual void vtkGenericRenderWindowInteractor::TimerEventResetsTimerOn()' has some sub-type changes:\n            the vtable offset of method virtual void vtkGenericRenderWindowInteractor::TimerEventResetsTimerOn() changed from 180 to 181\n              note that this is an ABI incompatible change to the vtable of class vtkGenericRenderWindowInteractor\n          'method virtual void vtkGenericRenderWindowInteractor::TimerEventResetsTimerOff()' has some sub-type changes:\n            the vtable offset of method virtual void vtkGenericRenderWindowInteractor::TimerEventResetsTimerOff() changed from 181 to 182\n              note that this is an ABI incompatible change to the vtable of class vtkGenericRenderWindowInteractor\n\n  [C] 'method virtual const char* vtkRenderingUIObjectFactory::GetVTKSourceVersion()' at vtkRenderingUIObjectFactory.cxx:38:1 has some indirect sub-type changes:\n    the vtable offset of method virtual const char* vtkRenderingUIObjectFactory::GetVTKSourceVersion() changed from 21 to 20\n      note that this is an ABI incompatible change to the vtable of class vtkRenderingUIObjectFactory\n\n  [C] 'method vtkRenderingUIObjectFactory* vtkRenderingUIObjectFactory::New()' at vtkRenderingUIObjectFactory.cxx:26:1 has some indirect sub-type changes:\n    return type changed:\n      in pointed to type 'class vtkRenderingUIObjectFactory' at vtkRenderingUIObjectFactory.h:22:1:\n        type size changed from 832 to 768 (in bits)\n        2 member function changes (5 filtered):\n          'method virtual vtkObjectBase* vtkRenderingUIObjectFactory::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkRenderingUIObjectFactory::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkRenderingUIObjectFactory\n          'method virtual const char* vtkRenderingUIObjectFactory::GetDescription()' has some sub-type changes:\n            the vtable offset of method virtual const char* vtkRenderingUIObjectFactory::GetDescription() changed from 22 to 21\n              note that this is an ABI incompatible change to the vtable of class vtkRenderingUIObjectFactory\n            implicit parameter 0 of type 'vtkRenderingUIObjectFactory*' has sub-type changes:\n              pointed to type 'class vtkRenderingUIObjectFactory' changed, as being reported\n\n  [C] 'method virtual void vtkXRenderWindowInteractor::Disable()' at vtkXRenderWindowInteractor.cxx:406:1 has some indirect sub-type changes:\n    the vtable offset of method virtual void vtkXRenderWindowInteractor::Disable() changed from 27 to 26\n      note that this is an ABI incompatible change to the vtable of class vtkXRenderWindowInteractor\n    implicit parameter 0 of type 'vtkXRenderWindowInteractor*' has sub-type changes:\n      in pointed to type 'class vtkXRenderWindowInteractor' at vtkXRenderWindowInteractor.h:42:1:\n        type size changed from 4928 to 5248 (in bits)\n        1 member function deletion:\n          'method virtual int vtkXRenderWindowInteractor::GetBreakLoopFlag()' at vtkXRenderWindowInteractor.h:75:1, virtual at voffset 177/177\n        10 member function changes (8 filtered):\n          'method virtual vtkObjectBase* vtkXRenderWindowInteractor::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkXRenderWindowInteractor::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkXRenderWindowInteractor\n          'method virtual void vtkXRenderWindowInteractor::Initialize()' has some sub-type changes:\n            the vtable offset of method virtual void vtkXRenderWindowInteractor::Initialize() changed from 21 to 20\n              note that this is an ABI incompatible change to the vtable of class vtkXRenderWindowInteractor\n          'method virtual void vtkXRenderWindowInteractor::ProcessEvents()' has some sub-type changes:\n            the vtable offset of method virtual void vtkXRenderWindowInteractor::ProcessEvents() changed from 23 to 22\n              note that this is an ABI incompatible change to the vtable of class vtkXRenderWindowInteractor\n          'method virtual void vtkXRenderWindowInteractor::Enable()' has some sub-type changes:\n            the vtable offset of method virtual void vtkXRenderWindowInteractor::Enable() changed from 26 to 25\n              note that this is an ABI incompatible change to the vtable of class vtkXRenderWindowInteractor\n          'method virtual void vtkXRenderWindowInteractor::UpdateSize(int, int)' has some sub-type changes:\n            the vtable offset of method virtual void vtkXRenderWindowInteractor::UpdateSize(int, int) changed from 35 to 34\n              note that this is an ABI incompatible change to the vtable of class vtkXRenderWindowInteractor\n          'method virtual void vtkXRenderWindowInteractor::TerminateApp()' has some sub-type changes:\n            the vtable offset of method virtual void vtkXRenderWindowInteractor::TerminateApp() changed from 51 to 50\n              note that this is an ABI incompatible change to the vtable of class vtkXRenderWindowInteractor\n          'method virtual void vtkXRenderWindowInteractor::GetMousePosition(int*, int*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkXRenderWindowInteractor::GetMousePosition(int*, int*) changed from 76 to 75\n              note that this is an ABI incompatible change to the vtable of class vtkXRenderWindowInteractor\n          'method virtual int vtkXRenderWindowInteractor::InternalCreateTimer(int, int, unsigned long int)' has some sub-type changes:\n            the vtable offset of method virtual int vtkXRenderWindowInteractor::InternalCreateTimer(int, int, unsigned long int) changed from 173 to 174\n              note that this is an ABI incompatible change to the vtable of class vtkXRenderWindowInteractor\n          'method virtual int vtkXRenderWindowInteractor::InternalDestroyTimer(int)' has some sub-type changes:\n            the vtable offset of method virtual int vtkXRenderWindowInteractor::InternalDestroyTimer(int) changed from 174 to 175\n              note that this is an ABI incompatible change to the vtable of class vtkXRenderWindowInteractor\n          'method virtual void vtkXRenderWindowInteractor::StartEventLoop()' has some sub-type changes:\n            the vtable offset of method virtual void vtkXRenderWindowInteractor::StartEventLoop() changed from 175 to 176\n              note that this is an ABI incompatible change to the vtable of class vtkXRenderWindowInteractor\n        5 data member insertions:\n          'int XdndSourceVersion', at offset 4544 (in bits) at vtkXRenderWindowInteractor.h:115:1\n          'Atom XdndFormatAtom', at offset 4672 (in bits) at vtkXRenderWindowInteractor.h:117:1\n          'Atom XdndURIListAtom', at offset 4736 (in bits) at vtkXRenderWindowInteractor.h:118:1\n          'Atom XdndTypeListAtom', at offset 4800 (in bits) at vtkXRenderWindowInteractor.h:119:1\n          'Atom XdndEnterAtom', at offset 4864 (in bits) at vtkXRenderWindowInteractor.h:120:1\n        6 data member changes (1 filtered):\n          'Window XdndSource' offset changed from 4544 to 4608 (in bits) (by +64 bits)\n          'Atom XdndPositionAtom' offset changed from 4608 to 4928 (in bits) (by +320 bits)\n          'Atom XdndDropAtom' offset changed from 4672 to 4992 (in bits) (by +320 bits)\n          'Atom XdndActionCopyAtom' offset changed from 4736 to 5056 (in bits) (by +320 bits)\n          'Atom XdndStatusAtom' offset changed from 4800 to 5120 (in bits) (by +320 bits)\n          'Atom XdndFinishedAtom' offset changed from 4864 to 5184 (in bits) (by +320 bits)\n\n1 Removed variable:\n\n  [D] 'static int vtkXRenderWindowInteractor::BreakLoopFlag'    {_ZN26vtkXRenderWindowInteractor13BreakLoopFlagE}\n\n",
+                    "return_code": 12,
+                    "seconds": 19.162774562835693,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingUI.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingUI.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingUI.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingUI.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingUI.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingUI.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingUI.so.9.0.3-abi-laboratory-libvtkRenderingUI-so-9-0-3-libvtkRenderingUI-so-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.20861315727233887,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingUI.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingUI.so.9.1.0 libvtkRenderingUI-so-9-0-3-libvtkRenderingUI-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingUI.so.9.0.3-abi-laboratory-libvtkRenderingUI-so-9-0-3-libvtkRenderingUI-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingUI.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingUI.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingUI.so.9.0.3": 117168,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingUI.so.9.1.0": 117872
+            }
+        },
+        "experiment": "usr/lib64/libvtkRenderingUI-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkRenderingUI.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkRenderingUI.so.9.0.3",
+        "different_libs": true
+    }
+]

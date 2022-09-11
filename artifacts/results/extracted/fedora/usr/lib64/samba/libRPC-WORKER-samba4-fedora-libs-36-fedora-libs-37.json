@@ -15,42 +15,46 @@
                     "splice_type": "different_lib",
                     "original_lib": "libRPC-WORKER-samba4.so",
                     "spliced_lib": "libRPC-WORKER-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.888938903808594e-05
+                    "seconds": 5.459785461425781e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libRPC-WORKER-samba4.so",
                     "spliced_lib": "libRPC-WORKER-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.1920928955078125e-05
+                    "seconds": 9.298324584960938e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.10764837265014648,
+                    "message": "Functions changes summary: 10 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 1 Removed, 0 Changed, 0 Added variable\n\n10 Removed functions:\n\n  [D] 'function dcesrv_context* global_dcesrv_context()'    {global_dcesrv_context@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function void global_dcesrv_context_free()'    {global_dcesrv_context_free@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function void ndr_print_rpc_host_client(ndr_print*, const char*, const rpc_host_client*)'    {ndr_print_rpc_host_client@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function void ndr_print_rpc_worker_status(ndr_print*, const char*, const rpc_worker_status*)'    {ndr_print_rpc_worker_status@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ndr_err_code ndr_pull_rpc_host_client(ndr_pull*, int, rpc_host_client*)'    {ndr_pull_rpc_host_client@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ndr_err_code ndr_pull_rpc_worker_status(ndr_pull*, int, rpc_worker_status*)'    {ndr_pull_rpc_worker_status@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ndr_err_code ndr_push_rpc_host_client(ndr_push*, int, const rpc_host_client*)'    {ndr_push_rpc_host_client@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function ndr_err_code ndr_push_rpc_worker_status(ndr_push*, int, const rpc_worker_status*)'    {ndr_push_rpc_worker_status@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function int rpc_worker_main(int, const char**, const char*, int, int, typedef size_t (const ndr_interface_table***, void*)*, typedef size_t (dcesrv_context*, const dcesrv_endpoint_server***, void*)*, void*)'    {rpc_worker_main@@SAMBA_4.16.4_SAMBA4}\n  [D] 'function bool samba_cmdline_init(TALLOC_CTX*, samba_cmdline_config_type, bool)'    {samba_cmdline_init@@SAMBA_4.16.4_SAMBA4}\n\n1 Removed variable:\n\n  [D] 'const ndr_interface_table ndr_table_rpc_host_msg'    {ndr_table_rpc_host_msg@@SAMBA_4.16.4_SAMBA4}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.08813047409057617,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-WORKER-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-WORKER-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-WORKER-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-WORKER-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-WORKER-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-WORKER-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-WORKER-samba4.so-abi-laboratory-libRPC-WORKER-samba4-so-libRPC-WORKER-samba4-so.html\nFound link to libRPC-WORKER-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libRPC-WORKER-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 11219\nERROR: incomplete info for symbol 11618\nERROR: incomplete info for symbol 12914\nERROR: incomplete info for symbol 14208\nERROR: incomplete info for symbol 22761\nERROR: incomplete info for symbol 23516\nERROR: incomplete info for symbol 24725\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-FlcG0.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libRPC-WORKER-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libRPC-WORKER-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 11219\nERROR: incomplete info for symbol 11618\nERROR: incomplete info for symbol 12914\nERROR: incomplete info for symbol 14208\nERROR: incomplete info for symbol 22761\nERROR: incomplete info for symbol 23516\nERROR: incomplete info for symbol 24725\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-edCdZ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-WORKER-samba4.so-abi-laboratory-libRPC-WORKER-samba4-so-libRPC-WORKER-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 14.942225694656372,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-WORKER-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-WORKER-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-WORKER-samba4.so-abi-laboratory-libRPC-WORKER-samba4-so-libRPC-WORKER-samba4-so.html\nFound link to libRPC-WORKER-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libRPC-WORKER-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 11219\nERROR: incomplete info for symbol 11618\nERROR: incomplete info for symbol 12914\nERROR: incomplete info for symbol 14208\nERROR: incomplete info for symbol 22761\nERROR: incomplete info for symbol 23516\nERROR: incomplete info for symbol 24725\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-3s1r5.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libRPC-WORKER-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libRPC-WORKER-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 23849\nERROR: incomplete info for symbol 24122\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-WknMp.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 54.5%\nTotal binary compatibility problems: 11, warnings: 0\nTotal source compatibility problems: 1, warnings: 6\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-WORKER-samba4.so-abi-laboratory-libRPC-WORKER-samba4-so-libRPC-WORKER-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 12.689685106277466,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-WORKER-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-WORKER-samba4.so libRPC-WORKER-samba4-so-libRPC-WORKER-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-WORKER-samba4.so-abi-laboratory-libRPC-WORKER-samba4-so-libRPC-WORKER-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-WORKER-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-WORKER-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
@@ -58,7 +62,7 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libRPC-WORKER-samba4.so": 65680,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-WORKER-samba4.so": 65680
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libRPC-WORKER-samba4.so": 65696
             }
         },
         "experiment": "usr/lib64/samba/libRPC-WORKER-samba4-fedora-libs-36-fedora-libs-37",

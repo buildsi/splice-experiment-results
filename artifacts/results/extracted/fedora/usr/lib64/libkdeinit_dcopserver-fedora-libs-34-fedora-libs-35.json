@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libkdeinit_dcopserver.so",
                     "spliced_lib": "libkdeinit_dcopserver.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00016379356384277344
+                    "seconds": 0.00013637542724609375
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libkdeinit_dcopserver.so",
                     "spliced_lib": "libkdeinit_dcopserver.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00046563148498535156
+                    "seconds": 0.0004057884216308594
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.49936413764953613,
+                    "seconds": 0.43134212493896484,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_dcopserver.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_dcopserver.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_dcopserver.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_dcopserver.so",
@@ -44,21 +48,21 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_dcopserver.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_dcopserver.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_dcopserver.so-abi-laboratory-libkdeinit_dcopserver-so-libkdeinit_dcopserver-so.html\nFound link to libkdeinit_dcopserver.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdeinit_dcopserver.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 24726\nERROR: incomplete info for symbol 24777\nERROR: incomplete info for symbol 24848\nERROR: incomplete info for symbol 24952\nERROR: incomplete info for symbol 25056\nERROR: incomplete info for symbol 25219\nERROR: incomplete info for symbol 25338\nERROR: incomplete info for symbol 25542\nERROR: incomplete info for symbol 28805\nERROR: incomplete info for symbol 33160\nERROR: incomplete info for symbol 34949\nERROR: incomplete info for symbol 46690\nReading v-tables\nlibDCOP.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-HIBAv.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkdeinit_dcopserver.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdeinit_dcopserver.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 24726\nERROR: incomplete info for symbol 24777\nERROR: incomplete info for symbol 24848\nERROR: incomplete info for symbol 24952\nERROR: incomplete info for symbol 25056\nERROR: incomplete info for symbol 25219\nERROR: incomplete info for symbol 25338\nERROR: incomplete info for symbol 25542\nERROR: incomplete info for symbol 28805\nERROR: incomplete info for symbol 33160\nERROR: incomplete info for symbol 34949\nERROR: incomplete info for symbol 46690\nReading v-tables\nlibDCOP.so.4: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-ACHyJ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_dcopserver.so-abi-laboratory-libkdeinit_dcopserver-so-libkdeinit_dcopserver-so.html\n",
-                    "return_code": 0,
-                    "seconds": 18.890966415405273,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_dcopserver.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_dcopserver.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_dcopserver.so-abi-laboratory-libkdeinit_dcopserver-so-libkdeinit_dcopserver-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.1926112174987793,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_dcopserver.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_dcopserver.so libkdeinit_dcopserver-so-libkdeinit_dcopserver-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_dcopserver.so-abi-laboratory-libkdeinit_dcopserver-so-libkdeinit_dcopserver-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_dcopserver.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_dcopserver.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_dcopserver.so": 107168,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_dcopserver.so": 107168
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_dcopserver.so": 107120,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_dcopserver.so": 107000
             }
         },
         "experiment": "usr/lib64/libkdeinit_dcopserver-fedora-libs-34-fedora-libs-35",

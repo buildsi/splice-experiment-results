@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libpixbufloader-jxl.so",
                     "spliced_lib": "libpixbufloader-jxl.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.7418136596679688e-05
+                    "seconds": 9.989738464355469e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libpixbufloader-jxl.so",
                     "spliced_lib": "libpixbufloader-jxl.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.198883056640625e-06
+                    "seconds": 9.5367431640625e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.981818437576294,
+                    "seconds": 1.6478126049041748,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so-abi-laboratory-libpixbufloader-jxl-so-libpixbufloader-jxl-so.html\nFound link to libpixbufloader-jxl.so-0.6.1-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libpixbufloader-jxl.so-0.6.1-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/../../../../../.dwz/jpegxl-0.6.1-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 66322\nERROR: incomplete info for symbol 66349\nReading v-tables\nlibjxl.so.0.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Y86q7.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libpixbufloader-jxl.so-0.6.1-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libpixbufloader-jxl.so-0.6.1-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/../../../../../.dwz/jpegxl-0.6.1-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 66322\nERROR: incomplete info for symbol 66349\nReading v-tables\nlibjxl.so.0.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-VSGln.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so-abi-laboratory-libpixbufloader-jxl-so-libpixbufloader-jxl-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so-abi-laboratory-libpixbufloader-jxl-so-libpixbufloader-jxl-so.html\nFound link to libpixbufloader-jxl.so-0.6.1-6.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libpixbufloader-jxl.so-0.6.1-6.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/../../../../../.dwz/jpegxl-0.6.1-6.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 73172\nERROR: incomplete info for symbol 73199\nReading v-tables\nlibjxl.so.0.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-KMaq1.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libpixbufloader-jxl.so-0.6.1-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libpixbufloader-jxl.so-0.6.1-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/../../../../../.dwz/jpegxl-0.6.1-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 66322\nERROR: incomplete info for symbol 66349\nReading v-tables\nlibjxl.so.0.6: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-t9ZnW.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so-abi-laboratory-libpixbufloader-jxl-so-libpixbufloader-jxl-so.html\n",
                     "return_code": 0,
-                    "seconds": 77.14654111862183,
+                    "seconds": 114.225501537323,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so libpixbufloader-jxl-so-libpixbufloader-jxl-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so-abi-laboratory-libpixbufloader-jxl-so-libpixbufloader-jxl-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so": 119224,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so": 140064,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so": 119224
             }
         },

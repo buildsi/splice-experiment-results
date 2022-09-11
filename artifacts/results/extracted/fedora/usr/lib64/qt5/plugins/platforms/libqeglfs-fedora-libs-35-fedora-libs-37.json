@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libqeglfs.so",
                     "spliced_lib": "libqeglfs.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.574920654296875e-05
+                    "seconds": 2.7179718017578125e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libqeglfs.so",
                     "spliced_lib": "libqeglfs.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.62939453125e-06
+                    "seconds": 6.67572021484375e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 2.500068187713623,
+                    "seconds": 2.5832557678222656,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqeglfs.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqeglfs.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqeglfs.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so-abi-laboratory-libqeglfs-so-libqeglfs-so.html\nFound link to libqeglfs.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqeglfs.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5EglFSDeviceIntegration.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-xzwNk.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqeglfs.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqeglfs.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5EglFSDeviceIntegration.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-DFfGZ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so-abi-laboratory-libqeglfs-so-libqeglfs-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqeglfs.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so-abi-laboratory-libqeglfs-so-libqeglfs-so.html\nFound link to libqeglfs.so-5.15.2-31.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libqeglfs.so-5.15.2-31.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtbase-5.15.2-31.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5EglFSDeviceIntegration.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-zVZBB.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqeglfs.so-5.15.5-4.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libqeglfs.so-5.15.5-4.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5EglFSDeviceIntegration.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-JFzdC.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so-abi-laboratory-libqeglfs-so-libqeglfs-so.html\n",
                     "return_code": 0,
-                    "seconds": 149.6575050354004,
+                    "seconds": 149.78804183006287,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqeglfs.so libqeglfs-so-libqeglfs-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so-abi-laboratory-libqeglfs-so-libqeglfs-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqeglfs.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so": 20968,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqeglfs.so": 20232,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqeglfs.so": 20968
             }
         },

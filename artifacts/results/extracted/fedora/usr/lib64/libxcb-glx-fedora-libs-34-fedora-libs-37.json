@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libxcb-glx.so.0.0.0",
                     "spliced_lib": "libxcb-glx.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00014710426330566406
+                    "seconds": 0.00014328956604003906
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libxcb-glx.so.0.0.0",
                     "spliced_lib": "libxcb-glx.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.002769947052001953
+                    "seconds": 0.002142190933227539
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.1413285732269287,
+                    "seconds": 0.13726329803466797,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-glx.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-glx.so.0.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-glx.so.0.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-glx.so.0.0.0",
@@ -44,21 +48,21 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-glx.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-glx.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-glx.so.0.0.0-abi-laboratory-libxcb-glx-so-0-0-0-libxcb-glx-so-0-0-0.html\nFound link to libxcb-glx.so.0.0.0-1.13.1-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxcb-glx.so.0.0.0-1.13.1-9.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-7Pemt.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libxcb-glx.so.0.0.0-1.13.1-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxcb-glx.so.0.0.0-1.13.1-9.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-rtVXQ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-glx.so.0.0.0-abi-laboratory-libxcb-glx-so-0-0-0-libxcb-glx-so-0-0-0.html\n",
-                    "return_code": 0,
-                    "seconds": 2.019415855407715,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-glx.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-glx.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-glx.so.0.0.0-abi-laboratory-libxcb-glx-so-0-0-0-libxcb-glx-so-0-0-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.21123576164245605,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-glx.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-glx.so.0.0.0 libxcb-glx-so-0-0-0-libxcb-glx-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-glx.so.0.0.0-abi-laboratory-libxcb-glx-so-0-0-0-libxcb-glx-so-0-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-glx.so.0.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-glx.so.0.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-glx.so.0.0.0": 118832,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-glx.so.0.0.0": 118832
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxcb-glx.so.0.0.0": 114736,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxcb-glx.so.0.0.0": 114744
             }
         },
         "experiment": "usr/lib64/libxcb-glx-fedora-libs-34-fedora-libs-37",

@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libXau.so.6.0.0",
                     "spliced_lib": "libXau.so.6.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.5033950805664062e-05
+                    "seconds": 3.5762786865234375e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libXau.so.6.0.0",
                     "spliced_lib": "libXau.so.6.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.58306884765625e-06
+                    "seconds": 9.775161743164062e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.01365971565246582,
+                    "seconds": 0.01916646957397461,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXau.so.6.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXau.so.6.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXau.so.6.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXau.so.6.0.0",
@@ -44,21 +48,21 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXau.so.6.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXau.so.6.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXau.so.6.0.0-abi-laboratory-libXau-so-6-0-0-libXau-so-6-0-0.html\nFound link to libXau.so.6.0.0-1.0.9-8.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libXau.so.6.0.0-1.0.9-8.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3055\nERROR: incomplete info for symbol 3801\nERROR: incomplete info for symbol 4310\nERROR: incomplete info for symbol 4690\nERROR: incomplete info for symbol 5137\nERROR: incomplete info for symbol 5217\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-pa9Mw.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libXau.so.6.0.0-1.0.9-8.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libXau.so.6.0.0-1.0.9-8.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3055\nERROR: incomplete info for symbol 3801\nERROR: incomplete info for symbol 4310\nERROR: incomplete info for symbol 4690\nERROR: incomplete info for symbol 5137\nERROR: incomplete info for symbol 5217\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-2Bi2R.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXau.so.6.0.0-abi-laboratory-libXau-so-6-0-0-libXau-so-6-0-0.html\n",
-                    "return_code": 0,
-                    "seconds": 0.4050712585449219,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXau.so.6.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXau.so.6.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXau.so.6.0.0-abi-laboratory-libXau-so-6-0-0-libXau-so-6-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2497577667236328,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXau.so.6.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXau.so.6.0.0 libXau-so-6-0-0-libXau-so-6-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXau.so.6.0.0-abi-laboratory-libXau-so-6-0-0-libXau-so-6-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXau.so.6.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXau.so.6.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXau.so.6.0.0": 20184,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXau.so.6.0.0": 20184
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libXau.so.6.0.0": 20208,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libXau.so.6.0.0": 20032
             }
         },
         "experiment": "usr/lib64/libXau-fedora-libs-34-fedora-libs-35",

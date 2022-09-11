@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "pam_timestamp.so",
                     "spliced_lib": "pam_timestamp.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.218650817871094e-05
+                    "seconds": 2.1696090698242188e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "pam_timestamp.so",
                     "spliced_lib": "pam_timestamp.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.821487426757812e-06
+                    "seconds": 4.76837158203125e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.016757726669311523,
+                    "seconds": 0.007555723190307617,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_timestamp.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_timestamp.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_timestamp.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_timestamp.so",
@@ -44,21 +48,21 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_timestamp.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_timestamp.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_timestamp.so-abi-laboratory-pam_timestamp-so-pam_timestamp-so.html\nFound link to pam_timestamp.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_timestamp.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-VYJ2X.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_timestamp.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_timestamp.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-kJV9f.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_timestamp.so-abi-laboratory-pam_timestamp-so-pam_timestamp-so.html\n",
-                    "return_code": 0,
-                    "seconds": 0.6383883953094482,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_timestamp.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_timestamp.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_timestamp.so-abi-laboratory-pam_timestamp-so-pam_timestamp-so.html\nFound link to pam_timestamp.so-1.5.1-8.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_timestamp.so-1.5.1-8.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.1-8.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-B4EH3.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_timestamp.so-1.5.2-7.fc35.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file pam_timestamp.so-1.5.2-7.fc35.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.21879911422729492,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_timestamp.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_timestamp.so pam_timestamp-so-pam_timestamp-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_timestamp.so-abi-laboratory-pam_timestamp-so-pam_timestamp-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_timestamp.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_timestamp.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_timestamp.so": 28304,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_timestamp.so": 28304
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_timestamp.so": 24312,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_timestamp.so": 24216
             }
         },
         "experiment": "usr/lib64/security/pam_timestamp-fedora-libs-34-fedora-libs-35",

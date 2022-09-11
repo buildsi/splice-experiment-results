@@ -15,50 +15,56 @@
                     "splice_type": "different_lib",
                     "original_lib": "libmscat-samba4.so",
                     "spliced_lib": "libmscat-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 3.0279159545898438e-05
+                    "message": [
+                        "__fread_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.981590270996094e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libmscat-samba4.so",
                     "spliced_lib": "libmscat-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.9141387939453125e-06
+                    "seconds": 1.0728836059570312e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.02707219123840332,
+                    "message": "Functions changes summary: 9 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 1 Removed, 0 Changed, 0 Added variable\n\n9 Removed functions:\n\n  [D] 'function int mscat_ctl_get_attribute(mscat_ctl*, TALLOC_CTX*, unsigned int, mscat_ctl_attribute**)'    {mscat_ctl_get_attribute@@SAMBA_4.14.12}\n  [D] 'function int mscat_ctl_get_attribute_count(mscat_ctl*)'    {mscat_ctl_get_attribute_count@@SAMBA_4.14.12}\n  [D] 'function int mscat_ctl_get_member(mscat_ctl*, TALLOC_CTX*, unsigned int, mscat_ctl_member**)'    {mscat_ctl_get_member@@SAMBA_4.14.12}\n  [D] 'function int mscat_ctl_get_member_count(mscat_ctl*)'    {mscat_ctl_get_member_count@@SAMBA_4.14.12}\n  [D] 'function int mscat_ctl_import(mscat_ctl*, mscat_pkcs7*)'    {mscat_ctl_import@@SAMBA_4.14.12}\n  [D] 'function mscat_ctl* mscat_ctl_init(TALLOC_CTX*)'    {mscat_ctl_init@@SAMBA_4.14.12}\n  [D] 'function int mscat_pkcs7_import_catfile(mscat_pkcs7*, const char*)'    {mscat_pkcs7_import_catfile@@SAMBA_4.14.12}\n  [D] 'function mscat_pkcs7* mscat_pkcs7_init(TALLOC_CTX*)'    {mscat_pkcs7_init@@SAMBA_4.14.12}\n  [D] 'function int mscat_pkcs7_verify(mscat_pkcs7*, const char*)'    {mscat_pkcs7_verify@@SAMBA_4.14.12}\n\n1 Removed variable:\n\n  [D] 'const asn1_static_node mscat_asn1_tab[82]'    {mscat_asn1_tab@@SAMBA_4.14.12}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.038344383239746094,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmscat-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmscat-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmscat-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so-abi-laboratory-libmscat-samba4-so-libmscat-samba4-so.html\nFound link to libmscat-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libmscat-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3097\nERROR: incomplete info for symbol 3524\nERROR: incomplete info for symbol 4931\nERROR: incomplete info for symbol 13368\nERROR: incomplete info for symbol 13467\nERROR: incomplete info for symbol 14045\nERROR: incomplete info for symbol 14144\nERROR: incomplete info for symbol 14358\nERROR: incomplete info for symbol 14927\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-K5pMY.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libmscat-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libmscat-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3097\nERROR: incomplete info for symbol 3524\nERROR: incomplete info for symbol 4931\nERROR: incomplete info for symbol 13368\nERROR: incomplete info for symbol 13467\nERROR: incomplete info for symbol 14045\nERROR: incomplete info for symbol 14144\nERROR: incomplete info for symbol 14358\nERROR: incomplete info for symbol 14927\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-TncNz.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so-abi-laboratory-libmscat-samba4-so-libmscat-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 12.72605037689209,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmscat-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so-abi-laboratory-libmscat-samba4-so-libmscat-samba4-so.html\nFound link to libmscat-samba4.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libmscat-samba4.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3094\nERROR: incomplete info for symbol 3522\nERROR: incomplete info for symbol 4925\nERROR: incomplete info for symbol 13167\nERROR: incomplete info for symbol 13266\nERROR: incomplete info for symbol 13844\nERROR: incomplete info for symbol 13943\nERROR: incomplete info for symbol 14151\nERROR: incomplete info for symbol 14720\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-QHWb2.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libmscat-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libmscat-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 3097\nERROR: incomplete info for symbol 3524\nERROR: incomplete info for symbol 4931\nERROR: incomplete info for symbol 13368\nERROR: incomplete info for symbol 13467\nERROR: incomplete info for symbol 14045\nERROR: incomplete info for symbol 14144\nERROR: incomplete info for symbol 14358\nERROR: incomplete info for symbol 14927\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-qUbs4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 10, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so-abi-laboratory-libmscat-samba4-so-libmscat-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 17.864696502685547,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmscat-samba4.so libmscat-samba4-so-libmscat-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so-abi-laboratory-libmscat-samba4-so-libmscat-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmscat-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so": 40792,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmscat-samba4.so": 40792
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libmscat-samba4.so": 40456,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libmscat-samba4.so": 40800
             }
         },
         "experiment": "usr/lib64/samba/libmscat-samba4-fedora-libs-34-fedora-libs-37",

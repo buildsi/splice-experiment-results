@@ -15,26 +15,32 @@
                     "splice_type": "different_lib",
                     "original_lib": "libdrm_amdgpu.so.1.0.0",
                     "spliced_lib": "libdrm_amdgpu.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 5.459785461425781e-05
+                    "message": [
+                        "__memcpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.008148193359375e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libdrm_amdgpu.so.1.0.0",
                     "spliced_lib": "libdrm_amdgpu.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00010037422180175781
+                    "seconds": 7.081031799316406e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.04684805870056152,
+                    "seconds": 0.04455995559692383,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_amdgpu.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_amdgpu.so.1.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_amdgpu.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_amdgpu.so.1.0.0",
@@ -44,21 +50,21 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_amdgpu.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_amdgpu.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_amdgpu.so.1.0.0-abi-laboratory-libdrm_amdgpu-so-1-0-0-libdrm_amdgpu-so-1-0-0.html\nFound link to libdrm_amdgpu.so.1.0.0-2.4.110-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdrm_amdgpu.so.1.0.0-2.4.110-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libdrm-2.4.110-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5590\nERROR: incomplete info for symbol 5816\nERROR: incomplete info for symbol 5980\nERROR: incomplete info for symbol 6301\nERROR: incomplete info for symbol 6781\nERROR: incomplete info for symbol 6807\nERROR: incomplete info for symbol 7275\nERROR: incomplete info for symbol 7560\nERROR: incomplete info for symbol 8129\nERROR: incomplete info for symbol 8902\nERROR: incomplete info for symbol 8935\nERROR: incomplete info for symbol 9232\nERROR: incomplete info for symbol 9451\nERROR: incomplete info for symbol 9687\nERROR: incomplete info for symbol 9852\nERROR: incomplete info for symbol 10013\nERROR: incomplete info for symbol 10357\nERROR: incomplete info for symbol 10538\nERROR: incomplete info for symbol 10744\nERROR: incomplete info for symbol 10977\nERROR: incomplete info for symbol 11144\nERROR: incomplete info for symbol 11527\nERROR: incomplete info for symbol 11603\nERROR: incomplete info for symbol 11963\nERROR: incomplete info for symbol 12103\nERROR: incomplete info for symbol 12303\nERROR: incomplete info for symbol 12490\nERROR: incomplete info for symbol 12664\nERROR: incomplete info for symbol 13066\nERROR: incomplete info for symbol 13325\nERROR: incomplete info for symbol 13393\nERROR: incomplete info for symbol 13625\nERROR: incomplete info for symbol 13792\nERROR: incomplete info for symbol 13935\nERROR: incomplete info for symbol 14024\nERROR: incomplete info for symbol 14093\nERROR: incomplete info for symbol 14162\nERROR: incomplete info for symbol 14251\nERROR: incomplete info for symbol 14340\nERROR: incomplete info for symbol 14449\nERROR: incomplete info for symbol 14598\nERROR: incomplete info for symbol 14763\nERROR: incomplete info for symbol 14872\nERROR: incomplete info for symbol 15001\nERROR: incomplete info for symbol 15090\nERROR: incomplete info for symbol 15179\nERROR: incomplete info for symbol 15268\nERROR: incomplete info for symbol 15357\nERROR: incomplete info for symbol 15733\nERROR: incomplete info for symbol 16075\nERROR: incomplete info for symbol 16219\nERROR: incomplete info for symbol 16472\nERROR: incomplete info for symbol 17292\nERROR: incomplete info for symbol 17470\nERROR: incomplete info for symbol 17503\nERROR: incomplete info for symbol 17536\nERROR: incomplete info for symbol 17703\nERROR: incomplete info for symbol 17912\nERROR: incomplete info for symbol 17938\nERROR: incomplete info for symbol 17964\nERROR: incomplete info for symbol 18017\nERROR: incomplete info for symbol 18168\nERROR: incomplete info for symbol 18306\nERROR: incomplete info for symbol 18455\nERROR: incomplete info for symbol 22408\nERROR: incomplete info for symbol 22546\nERROR: incomplete info for symbol 22697\nERROR: incomplete info for symbol 22935\nERROR: incomplete info for symbol 22980\nERROR: incomplete info for symbol 23226\nERROR: incomplete info for symbol 23344\nERROR: incomplete info for symbol 23497\nERROR: incomplete info for symbol 23650\nERROR: incomplete info for symbol 23697\nERROR: incomplete info for symbol 24207\nERROR: incomplete info for symbol 24353\nERROR: incomplete info for symbol 24449\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Fyz8F.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdrm_amdgpu.so.1.0.0-2.4.110-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdrm_amdgpu.so.1.0.0-2.4.110-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libdrm-2.4.110-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5590\nERROR: incomplete info for symbol 5816\nERROR: incomplete info for symbol 5980\nERROR: incomplete info for symbol 6301\nERROR: incomplete info for symbol 6781\nERROR: incomplete info for symbol 6807\nERROR: incomplete info for symbol 7275\nERROR: incomplete info for symbol 7560\nERROR: incomplete info for symbol 8129\nERROR: incomplete info for symbol 8902\nERROR: incomplete info for symbol 8935\nERROR: incomplete info for symbol 9232\nERROR: incomplete info for symbol 9451\nERROR: incomplete info for symbol 9687\nERROR: incomplete info for symbol 9852\nERROR: incomplete info for symbol 10013\nERROR: incomplete info for symbol 10357\nERROR: incomplete info for symbol 10538\nERROR: incomplete info for symbol 10744\nERROR: incomplete info for symbol 10977\nERROR: incomplete info for symbol 11144\nERROR: incomplete info for symbol 11527\nERROR: incomplete info for symbol 11603\nERROR: incomplete info for symbol 11963\nERROR: incomplete info for symbol 12103\nERROR: incomplete info for symbol 12303\nERROR: incomplete info for symbol 12490\nERROR: incomplete info for symbol 12664\nERROR: incomplete info for symbol 13066\nERROR: incomplete info for symbol 13325\nERROR: incomplete info for symbol 13393\nERROR: incomplete info for symbol 13625\nERROR: incomplete info for symbol 13792\nERROR: incomplete info for symbol 13935\nERROR: incomplete info for symbol 14024\nERROR: incomplete info for symbol 14093\nERROR: incomplete info for symbol 14162\nERROR: incomplete info for symbol 14251\nERROR: incomplete info for symbol 14340\nERROR: incomplete info for symbol 14449\nERROR: incomplete info for symbol 14598\nERROR: incomplete info for symbol 14763\nERROR: incomplete info for symbol 14872\nERROR: incomplete info for symbol 15001\nERROR: incomplete info for symbol 15090\nERROR: incomplete info for symbol 15179\nERROR: incomplete info for symbol 15268\nERROR: incomplete info for symbol 15357\nERROR: incomplete info for symbol 15733\nERROR: incomplete info for symbol 16075\nERROR: incomplete info for symbol 16219\nERROR: incomplete info for symbol 16472\nERROR: incomplete info for symbol 17292\nERROR: incomplete info for symbol 17470\nERROR: incomplete info for symbol 17503\nERROR: incomplete info for symbol 17536\nERROR: incomplete info for symbol 17703\nERROR: incomplete info for symbol 17912\nERROR: incomplete info for symbol 17938\nERROR: incomplete info for symbol 17964\nERROR: incomplete info for symbol 18017\nERROR: incomplete info for symbol 18168\nERROR: incomplete info for symbol 18306\nERROR: incomplete info for symbol 18455\nERROR: incomplete info for symbol 22408\nERROR: incomplete info for symbol 22546\nERROR: incomplete info for symbol 22697\nERROR: incomplete info for symbol 22935\nERROR: incomplete info for symbol 22980\nERROR: incomplete info for symbol 23226\nERROR: incomplete info for symbol 23344\nERROR: incomplete info for symbol 23497\nERROR: incomplete info for symbol 23650\nERROR: incomplete info for symbol 23697\nERROR: incomplete info for symbol 24207\nERROR: incomplete info for symbol 24353\nERROR: incomplete info for symbol 24449\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-fZ5X4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_amdgpu.so.1.0.0-abi-laboratory-libdrm_amdgpu-so-1-0-0-libdrm_amdgpu-so-1-0-0.html\n",
-                    "return_code": 0,
-                    "seconds": 1.0330381393432617,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_amdgpu.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_amdgpu.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_amdgpu.so.1.0.0-abi-laboratory-libdrm_amdgpu-so-1-0-0-libdrm_amdgpu-so-1-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2183840274810791,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_amdgpu.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_amdgpu.so.1.0.0 libdrm_amdgpu-so-1-0-0-libdrm_amdgpu-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_amdgpu.so.1.0.0-abi-laboratory-libdrm_amdgpu-so-1-0-0-libdrm_amdgpu-so-1-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_amdgpu.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_amdgpu.so.1.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_amdgpu.so.1.0.0": 49016,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_amdgpu.so.1.0.0": 49016
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm_amdgpu.so.1.0.0": 48840,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm_amdgpu.so.1.0.0": 49032
             }
         },
         "experiment": "usr/lib64/libdrm_amdgpu-fedora-libs-35-fedora-libs-37",

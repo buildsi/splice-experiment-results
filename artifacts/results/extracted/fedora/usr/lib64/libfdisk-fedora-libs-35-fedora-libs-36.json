@@ -15,38 +15,42 @@
                     "splice_type": "different_lib",
                     "original_lib": "libfdisk.so.1.1.0",
                     "spliced_lib": "libfdisk.so.1.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00013875961303710938
+                    "seconds": 0.00011658668518066406
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libfdisk.so.1.1.0",
                     "spliced_lib": "libfdisk.so.1.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0005495548248291016
+                    "seconds": 0.0005772113800048828
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.010645389556884766,
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 1 Added function symbol not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\n1 Added function symbol not referenced by debug info:\n\n  [A] fdisk_dos_fix_chs@@FDISK_2.38\n\n",
+                    "return_code": 4,
+                    "seconds": 0.06408429145812988,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0-abi-laboratory-libfdisk-so-1-1-0-libfdisk-so-1-1-0.html\nFound link to libfdisk.so.1.1.0-2.38-1.fc36.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file libfdisk.so.1.1.0-2.38-1.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
-                    "return_code": 10,
-                    "seconds": 0.10908985137939453,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0-abi-laboratory-libfdisk-so-1-1-0-libfdisk-so-1-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.21607542037963867,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0 libfdisk-so-1-1-0-libfdisk-so-1-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0-abi-laboratory-libfdisk-so-1-1-0-libfdisk-so-1-1-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0": 361400,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libfdisk.so.1.1.0": 341920,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libfdisk.so.1.1.0": 361400
             }
         },

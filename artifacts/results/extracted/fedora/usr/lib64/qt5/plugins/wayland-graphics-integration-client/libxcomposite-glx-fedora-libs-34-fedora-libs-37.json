@@ -15,26 +15,35 @@
                     "splice_type": "different_lib",
                     "original_lib": "libxcomposite-glx.so",
                     "spliced_lib": "libxcomposite-glx.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 5.078315734863281e-05
+                    "message": [
+                        "printf",
+                        "abort",
+                        "wl_proxy_marshal_constructor_versioned",
+                        "wl_proxy_marshal_constructor"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.103515625e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libxcomposite-glx.so",
                     "spliced_lib": "libxcomposite-glx.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.245208740234375e-06
+                    "seconds": 7.3909759521484375e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.8334894180297852,
+                    "seconds": 0.8327770233154297,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so",
@@ -44,20 +53,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so-abi-laboratory-libxcomposite-glx-so-libxcomposite-glx-so.html\nFound link to libxcomposite-glx.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxcomposite-glx.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/wayland-graphics-integration-client/../../../../../.dwz/qt5-qtwayland-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-1ch7V.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libxcomposite-glx.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxcomposite-glx.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/wayland-graphics-integration-client/../../../../../.dwz/qt5-qtwayland-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Siuyo.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so-abi-laboratory-libxcomposite-glx-so-libxcomposite-glx-so.html\n",
-                    "return_code": 0,
-                    "seconds": 14.761216163635254,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so-abi-laboratory-libxcomposite-glx-so-libxcomposite-glx-so.html\nFound link to libxcomposite-glx.so-5.15.2-19.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libxcomposite-glx.so-5.15.2-19.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/wayland-graphics-integration-client/../../../../../.dwz/qt5-qtwayland-5.15.2-19.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-JBC8u.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libxcomposite-glx.so-5.15.5-4.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libxcomposite-glx.so-5.15.5-4.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/wayland-graphics-integration-client/../../../../../.dwz/qt5-qtwayland-5.15.5-4.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5WaylandClient.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Vpb6c.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 75%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 1, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so-abi-laboratory-libxcomposite-glx-so-libxcomposite-glx-so.html\n",
+                    "return_code": 1,
+                    "seconds": 15.922819137573242,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so libxcomposite-glx-so-libxcomposite-glx-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so-abi-laboratory-libxcomposite-glx-so-libxcomposite-glx-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so": 55336,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so": 54768,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-graphics-integration-client/libxcomposite-glx.so": 55336
             }
         },

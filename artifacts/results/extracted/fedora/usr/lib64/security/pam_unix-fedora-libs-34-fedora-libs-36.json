@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "pam_unix.so",
                     "spliced_lib": "pam_unix.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.581710815429688e-05
+                    "seconds": 5.1975250244140625e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "pam_unix.so",
                     "spliced_lib": "pam_unix.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.059906005859375e-06
+                    "seconds": 8.821487426757812e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.028750181198120117,
+                    "seconds": 0.033443450927734375,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_unix.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_unix.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_unix.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so-abi-laboratory-pam_unix-so-pam_unix-so.html\nFound link to pam_unix.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_unix.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 21605\nERROR: incomplete info for symbol 23101\nERROR: incomplete info for symbol 23796\nERROR: incomplete info for symbol 24032\nERROR: incomplete info for symbol 34055\nERROR: incomplete info for symbol 34705\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-YI2YM.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_unix.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_unix.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 21605\nERROR: incomplete info for symbol 23101\nERROR: incomplete info for symbol 23796\nERROR: incomplete info for symbol 24032\nERROR: incomplete info for symbol 34055\nERROR: incomplete info for symbol 34705\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-B47fk.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so-abi-laboratory-pam_unix-so-pam_unix-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_unix.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so-abi-laboratory-pam_unix-so-pam_unix-so.html\nFound link to pam_unix.so-1.5.1-8.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_unix.so-1.5.1-8.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.1-8.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 21712\nERROR: incomplete info for symbol 23223\nERROR: incomplete info for symbol 23918\nERROR: incomplete info for symbol 24154\nERROR: incomplete info for symbol 34052\nERROR: incomplete info for symbol 34703\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-6D3Da.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_unix.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_unix.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 21605\nERROR: incomplete info for symbol 23101\nERROR: incomplete info for symbol 23796\nERROR: incomplete info for symbol 24032\nERROR: incomplete info for symbol 34055\nERROR: incomplete info for symbol 34705\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-abEJ8.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so-abi-laboratory-pam_unix-so-pam_unix-so.html\n",
                     "return_code": 0,
-                    "seconds": 0.7172629833221436,
+                    "seconds": 0.8503551483154297,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_unix.so pam_unix-so-pam_unix-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so-abi-laboratory-pam_unix-so-pam_unix-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_unix.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so": 61528,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_unix.so": 61424,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_unix.so": 61528
             }
         },

@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libworkerscriptplugin.so",
                     "spliced_lib": "libworkerscriptplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.8848648071289062e-05
+                    "seconds": 3.4332275390625e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libworkerscriptplugin.so",
                     "spliced_lib": "libworkerscriptplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.58306884765625e-06
+                    "seconds": 7.62939453125e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.9808704853057861,
+                    "seconds": 1.177678108215332,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so-abi-laboratory-libworkerscriptplugin-so-libworkerscriptplugin-so.html\nFound link to libworkerscriptplugin.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libworkerscriptplugin.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/qml/QtQml/WorkerScript.2/../../../../../../.dwz/qt5-qtdeclarative-5.15.5-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5QmlWorkerScript.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ZPinL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libworkerscriptplugin.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libworkerscriptplugin.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/qml/QtQml/WorkerScript.2/../../../../../../.dwz/qt5-qtdeclarative-5.15.5-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5QmlWorkerScript.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-4olnj.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so-abi-laboratory-libworkerscriptplugin-so-libworkerscriptplugin-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so-abi-laboratory-libworkerscriptplugin-so-libworkerscriptplugin-so.html\nFound link to libworkerscriptplugin.so-5.15.2-8.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libworkerscriptplugin.so-5.15.2-8.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/qml/QtQml/WorkerScript.2/../../../../../../.dwz/qt5-qtdeclarative-5.15.2-8.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5QmlWorkerScript.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-7VoFT.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libworkerscriptplugin.so-5.15.5-2.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libworkerscriptplugin.so-5.15.5-2.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/qml/QtQml/WorkerScript.2/../../../../../../.dwz/qt5-qtdeclarative-5.15.5-2.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5QmlWorkerScript.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-LkZzB.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so-abi-laboratory-libworkerscriptplugin-so-libworkerscriptplugin-so.html\n",
                     "return_code": 0,
-                    "seconds": 42.03870987892151,
+                    "seconds": 53.927887201309204,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so libworkerscriptplugin-so-libworkerscriptplugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so-abi-laboratory-libworkerscriptplugin-so-libworkerscriptplugin-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so": 20968,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so": 20176,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so": 20968
             }
         },

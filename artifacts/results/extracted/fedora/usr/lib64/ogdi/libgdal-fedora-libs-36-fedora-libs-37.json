@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libgdal.so",
                     "spliced_lib": "libgdal.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.5299530029296875e-05
+                    "seconds": 4.9114227294921875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libgdal.so",
                     "spliced_lib": "libgdal.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.009506225585938e-05
+                    "seconds": 5.817413330078125e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.02797222137451172,
+                    "seconds": 0.026120901107788086,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libgdal.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libgdal.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libgdal.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libgdal.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libgdal.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libgdal.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libgdal.so-abi-laboratory-libgdal-so-libgdal-so.html\nFound link to libgdal.so-4.1.0-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgdal.so-4.1.0-7.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ogdi/../../../.dwz/ogdi-4.1.0-7.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4579\nERROR: incomplete info for symbol 4808\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-EPhEn.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgdal.so-4.1.0-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgdal.so-4.1.0-7.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ogdi/../../../.dwz/ogdi-4.1.0-7.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4579\nERROR: incomplete info for symbol 4808\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-C4iTA.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libgdal.so-abi-laboratory-libgdal-so-libgdal-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libgdal.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libgdal.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libgdal.so-abi-laboratory-libgdal-so-libgdal-so.html\nFound link to libgdal.so-4.1.0-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgdal.so-4.1.0-7.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ogdi/../../../.dwz/ogdi-4.1.0-7.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4579\nERROR: incomplete info for symbol 4808\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-V7lpT.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgdal.so-4.1.0-8.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libgdal.so-4.1.0-8.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ogdi/../../../.dwz/ogdi-4.1.0-8.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4579\nERROR: incomplete info for symbol 4808\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-8rufw.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libgdal.so-abi-laboratory-libgdal-so-libgdal-so.html\n",
                     "return_code": 0,
-                    "seconds": 0.6198301315307617,
+                    "seconds": 0.5882143974304199,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libgdal.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libgdal.so libgdal-so-libgdal-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libgdal.so-abi-laboratory-libgdal-so-libgdal-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libgdal.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libgdal.so",
@@ -58,7 +62,7 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ogdi/libgdal.so": 36544,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libgdal.so": 36544
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ogdi/libgdal.so": 36552
             }
         },
         "experiment": "usr/lib64/ogdi/libgdal-fedora-libs-36-fedora-libs-37",

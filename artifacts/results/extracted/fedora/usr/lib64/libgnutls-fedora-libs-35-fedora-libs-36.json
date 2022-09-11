@@ -3,7 +3,7 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.31.0"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.30.0"
         ],
         "spliced": [
             "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgnutls.so.30.31.0"
@@ -13,51 +13,55 @@
             "symbols": [
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libgnutls.so.30.31.0",
+                    "original_lib": "libgnutls.so.30.30.0",
                     "spliced_lib": "libgnutls.so.30.31.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0005624294281005859
+                    "seconds": 0.00043320655822753906
                 },
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libgnutls.so.30.31.0",
+                    "original_lib": "libgnutls.so.30.30.0",
                     "spliced_lib": "libgnutls.so.30.31.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.012294292449951172
+                    "seconds": 0.011854887008666992
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.81693434715271,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.31.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgnutls.so.30.31.0",
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (333 filtered out), 18 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n18 Added functions:\n\n  [A] 'function int gnutls_digest_set_secure(gnutls_digest_algorithm_t, unsigned int)'    {gnutls_digest_set_secure@@GNUTLS_3_7_3}\n  [A] 'function int gnutls_ecc_curve_set_enabled(gnutls_ecc_curve_t, unsigned int)'    {gnutls_ecc_curve_set_enabled@@GNUTLS_3_7_3}\n  [A] 'function void gnutls_fips140_context_deinit(gnutls_fips140_context_t)'    {gnutls_fips140_context_deinit@@GNUTLS_3_7_3}\n  [A] 'function int gnutls_fips140_context_init(gnutls_fips140_context_t*)'    {gnutls_fips140_context_init@@GNUTLS_3_7_3}\n  [A] 'function gnutls_fips140_operation_state_t gnutls_fips140_get_operation_state(gnutls_fips140_context_t)'    {gnutls_fips140_get_operation_state@@GNUTLS_3_7_3}\n  [A] 'function int gnutls_fips140_pop_context()'    {gnutls_fips140_pop_context@@GNUTLS_3_7_3}\n  [A] 'function int gnutls_fips140_push_context(gnutls_fips140_context_t)'    {gnutls_fips140_push_context@@GNUTLS_3_7_3}\n  [A] 'function const gnutls_library_config_st* gnutls_get_library_config()'    {gnutls_get_library_config@@GNUTLS_3_7_3}\n  [A] 'function int gnutls_protocol_set_enabled(gnutls_protocol_t, unsigned int)'    {gnutls_protocol_set_enabled@@GNUTLS_3_7_3}\n  [A] 'function int gnutls_sign_set_secure(gnutls_sign_algorithm_t, unsigned int)'    {gnutls_sign_set_secure@@GNUTLS_3_7_3}\n  [A] 'function int gnutls_sign_set_secure_for_certs(gnutls_sign_algorithm_t, unsigned int)'    {gnutls_sign_set_secure_for_certs@@GNUTLS_3_7_3}\n  [A] 'function gnutls_transport_ktls_enable_flags_t gnutls_transport_is_ktls_enabled(gnutls_session_t)'    {gnutls_transport_is_ktls_enabled@@GNUTLS_3_7_3}\n  [A] 'function int gnutls_x509_ct_sct_get(const gnutls_x509_ct_scts_t, unsigned int, time_t*, gnutls_datum_t*, gnutls_sign_algorithm_t*, gnutls_datum_t*)'    {gnutls_x509_ct_sct_get@@GNUTLS_3_7_0}\n  [A] 'function int gnutls_x509_ct_sct_get_version(const gnutls_x509_ct_scts_t, unsigned int, unsigned int*)'    {gnutls_x509_ct_sct_get_version@@GNUTLS_3_7_0}\n  [A] 'function int gnutls_x509_ext_ct_export_scts(const gnutls_x509_ct_scts_t, gnutls_datum_t*)'    {gnutls_x509_ext_ct_export_scts@@GNUTLS_3_7_0}\n  [A] 'function int gnutls_x509_ext_ct_import_scts(const gnutls_datum_t*, gnutls_x509_ct_scts_t, unsigned int)'    {gnutls_x509_ext_ct_import_scts@@GNUTLS_3_7_0}\n  [A] 'function void gnutls_x509_ext_ct_scts_deinit(gnutls_x509_ct_scts_t)'    {gnutls_x509_ext_ct_scts_deinit@@GNUTLS_3_7_0}\n  [A] 'function int gnutls_x509_ext_ct_scts_init(gnutls_x509_ct_scts_t*)'    {gnutls_x509_ext_ct_scts_init@@GNUTLS_3_7_0}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function void _gnutls_hello_set_default_version(gnutls_session_t, unsigned char, unsigned char)' at state.c:1012:1 has some indirect sub-type changes:\n    parameter 1 of type 'typedef gnutls_session_t' has sub-type changes:\n      underlying type 'gnutls_session_int*' changed:\n        in pointed to type 'struct gnutls_session_int' at gnutls_int.h:1510:1:\n          type size changed from 59264 to 59328 (in bits)\n          2 data member changes (1 filtered):\n            type of 'internals_st internals' changed:\n              underlying type 'struct internals_st' at gnutls_int.h:1069:1 changed:\n                type size changed from 34304 to 34368 (in bits)\n                1 data member insertion:\n                  'int ktls_enabled', at offset 34304 (in bits) at gnutls_int.h:1498:1\n                2 data member changes (11 filtered):\n                  type of 'security_parameters_st resumed_security_parameters' changed:\n                    underlying type 'struct security_parameters_st' at gnutls_int.h:742:1 changed:\n                      type size hasn't changed\n                      1 data member change:\n                        type of 'const version_entry_st* pversion' changed:\n                          in pointed to type 'const version_entry_st':\n                            in unqualified underlying type 'typedef version_entry_st' at gnutls_int.h:714:1:\n                              underlying type 'struct version_entry_st' at gnutls_int.h:680:1 changed:\n                                type size hasn't changed\n                                1 data member insertion:\n                                  'bool supported_revertible', at offset 200 (in bits) at gnutls_int.h:693:1\n                                12 data member changes:\n                                  'bool explicit_iv' offset changed from 200 to 208 (in bits) (by +8 bits)\n                                  'bool extensions' offset changed from 208 to 216 (in bits) (by +8 bits)\n                                  'bool selectable_sighash' offset changed from 216 to 224 (in bits) (by +8 bits)\n                                  'bool selectable_prf' offset changed from 224 to 232 (in bits) (by +8 bits)\n                                  'bool obsolete' offset changed from 232 to 240 (in bits) (by +8 bits)\n                                  'bool tls13_sem' offset changed from 240 to 248 (in bits) (by +8 bits)\n                                  'bool false_start' offset changed from 248 to 256 (in bits) (by +8 bits)\n                                  'bool only_extension' offset changed from 256 to 264 (in bits) (by +8 bits)\n                                  'bool post_handshake_auth' offset changed from 264 to 272 (in bits) (by +8 bits)\n                                  'bool key_shares' offset changed from 272 to 280 (in bits) (by +8 bits)\n                                  'bool multi_ocsp' offset changed from 280 to 288 (in bits) (by +8 bits)\n                                  'uint8_t tls_sig_sem' offset changed from 288 to 296 (in bits) (by +8 bits)\n                  type of 'gnutls_privkey_st* selected_key' changed:\n                    in pointed to type 'struct gnutls_privkey_st' at abstract_int.h:32:1:\n                      type size changed from 832 to 896 (in bits)\n                      3 data member changes:\n                        type of 'union {gnutls_x509_privkey_t x509; gnutls_pkcs11_privkey_t pkcs11; struct {gnutls_privkey_sign_func sign_func; gnutls_privkey_sign_data_func sign_data_func; gnutls_privkey_sign_hash_func sign_hash_func; gnutls_privkey_decrypt_func decrypt_func; gnutls_privkey_decrypt_func2 decrypt_func2; gnutls_privkey_deinit_func deinit_func; gnutls_privkey_info_func info_func; void* userdata; unsigned int bits;} ext;} key' changed:\n                          type size changed from 576 to 640 (in bits)\n                          1 data member change:\n                            type of 'struct {gnutls_privkey_sign_func sign_func; gnutls_privkey_sign_data_func sign_data_func; gnutls_privkey_sign_hash_func sign_hash_func; gnutls_privkey_decrypt_func decrypt_func; gnutls_privkey_decrypt_func2 decrypt_func2; gnutls_privkey_deinit_func deinit_func; gnutls_privkey_info_func info_func; void* userdata; unsigned int bits;} ext' changed:\n                              type size changed from 576 to 640 (in bits)\n                              1 data member insertion:\n                                'gnutls_privkey_pk_params_func pk_params_func', at offset 448 (in bits) at abstract_int.h:49:1\n                              2 data member changes (7 filtered):\n                                'void* userdata' offset changed from 448 to 512 (in bits) (by +64 bits)\n                                'unsigned int bits' offset changed from 512 to 576 (in bits) (by +64 bits)\n                        'unsigned int flags' offset changed from 640 to 704 (in bits) (by +64 bits)\n                        'pin_info_st pin' offset changed from 704 to 768 (in bits) (by +64 bits)\n            'gnutls_key_st key' offset changed from 36608 to 36672 (in bits) (by +64 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 1.4451639652252197,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.30.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgnutls.so.30.31.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgnutls.so.30.31.0",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.31.0",
-                    "prediction": true,
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.30.0",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.31.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgnutls.so.30.31.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.31.0-abi-laboratory-libgnutls-so-30-31-0-libgnutls-so-30-31-0.html\nFound link to libgnutls.so.30.31.0-3.7.3-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgnutls.so.30.31.0-3.7.3-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-lazkG.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libgnutls.so.30.31.0-3.7.3-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libgnutls.so.30.31.0-3.7.3-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-szBZW.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.31.0-abi-laboratory-libgnutls-so-30-31-0-libgnutls-so-30-31-0.html\n",
-                    "return_code": 0,
-                    "seconds": 14.750785827636719,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.31.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgnutls.so.30.31.0 libgnutls-so-30-31-0-libgnutls-so-30-31-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.31.0-abi-laboratory-libgnutls-so-30-31-0-libgnutls-so-30-31-0.html",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.30.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgnutls.so.30.31.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.30.0-abi-laboratory-libgnutls-so-30-30-0-libgnutls-so-30-31-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22894525527954102,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.30.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgnutls.so.30.31.0 libgnutls-so-30-30-0-libgnutls-so-30-31-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.30.0-abi-laboratory-libgnutls-so-30-30-0-libgnutls-so-30-31-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgnutls.so.30.31.0",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.31.0",
-                    "prediction": true,
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.30.0",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.31.0": 2213712,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.30.0": 2180312,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgnutls.so.30.31.0": 2213712
             }
         },
@@ -65,7 +69,7 @@
         "result": "diff-libraries-present",
         "success": true,
         "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libgnutls.so.30.31.0",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.31.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libgnutls.so.30.30.0",
         "different_libs": true
     }
 ]

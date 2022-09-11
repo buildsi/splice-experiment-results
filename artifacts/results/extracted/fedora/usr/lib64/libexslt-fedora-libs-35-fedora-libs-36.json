@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libexslt.so.0.8.20",
                     "spliced_lib": "libexslt.so.0.8.20",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.863739013671875e-05
+                    "seconds": 6.246566772460938e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libexslt.so.0.8.20",
                     "spliced_lib": "libexslt.so.0.8.20",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.059906005859375e-06
+                    "seconds": 1.1682510375976562e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.008428096771240234,
+                    "seconds": 0.05293083190917969,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20-abi-laboratory-libexslt-so-0-8-20-libexslt-so-0-8-20.html\nFound link to libexslt.so.0.8.20-1.1.35-2.fc36.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file libexslt.so.0.8.20-1.1.35-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
-                    "return_code": 10,
-                    "seconds": 0.10511922836303711,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20-abi-laboratory-libexslt-so-0-8-20-libexslt-so-0-8-20.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22046184539794922,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20 libexslt-so-0-8-20-libexslt-so-0-8-20 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20-abi-laboratory-libexslt-so-0-8-20-libexslt-so-0-8-20.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20": 95096,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libexslt.so.0.8.20": 90288,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libexslt.so.0.8.20": 95096
             }
         },

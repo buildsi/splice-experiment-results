@@ -3,69 +3,79 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.3"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.1"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.3"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4"
         ],
         "paths": {},
         "predictions": {
             "symbols": [
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libudev.so.1.7.3",
-                    "spliced_lib": "libudev.so.1.7.3",
+                    "original_lib": "libudev.so.1.7.1",
+                    "spliced_lib": "libudev.so.1.7.4",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 6.175041198730469e-05
+                    "message": [
+                        "__ctype_b_loc",
+                        "strrchr",
+                        "dirname",
+                        "reallocarray",
+                        "basename"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.103515625e-05
                 },
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libudev.so.1.7.3",
-                    "spliced_lib": "libudev.so.1.7.3",
+                    "original_lib": "libudev.so.1.7.1",
+                    "spliced_lib": "libudev.so.1.7.4",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.748603820800781e-05
+                    "seconds": 6.699562072753906e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.12839865684509277,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.3",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.3",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.3",
-                    "prediction": true,
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (34 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function const char* udev_device_get_action(udev_device*)' at libudev-device.c:695:1 has some indirect sub-type changes:\n    parameter 1 of type 'udev_device*' has sub-type changes:\n      in pointed to type 'struct udev_device' at libudev-device.c:45:1:\n        type size hasn't changed\n        1 data member changes (1 filtered):\n          type of 'sd_device* device' changed:\n            in pointed to type 'typedef sd_device' at sd-device.h:33:1:\n              underlying type 'struct sd_device' at device-internal.h:13:1 changed:\n                type size changed from 3072 to 3136 (in bits)\n                2 data member deletions:\n                  'bool sysname_set', at offset 3013 (in bits) at device-internal.h:87:1\n                  'bool driver_subsystem_set', at offset 3015 (in bits) at device-internal.h:89:1\n                1 data member insertion:\n                  'uint64_t diskseq', at offset 2880 (in bits) at device-internal.h:78:1\n                15 data member changes (2 filtered):\n                  type of 'uint8_t* properties_nulstr' changed:\n                    in pointed to type 'typedef uint8_t':\n                      entity changed from 'typedef uint8_t' to compatible type 'char'\n                        type name changed from 'unsigned char' to 'char'\n                        type size hasn't changed\n                  'sd_device_action_t action' offset changed from 2880 to 2944 (in bits) (by +64 bits)\n                  'uint64_t seqnum' offset changed from 2944 to 3008 (in bits) (by +64 bits)\n                  'bool parent_set' offset changed from 3008 to 3072 (in bits) (by +64 bits)\n                  'bool sysattrs_read' offset changed from 3009 to 3073 (in bits) (by +64 bits)\n                  'bool property_tags_outdated' offset changed from 3010 to 3074 (in bits) (by +64 bits)\n                  'bool property_devlinks_outdated' offset changed from 3011 to 3075 (in bits) (by +64 bits)\n                  'bool properties_buf_outdated' offset changed from 3012 to 3076 (in bits) (by +64 bits)\n                  'bool subsystem_set' offset changed from 3014 to 3077 (in bits) (by +63 bits)\n                  'bool driver_set' offset changed from 3016 to 3078 (in bits) (by +62 bits)\n                  'bool uevent_loaded' offset changed from 3017 to 3079 (in bits) (by +62 bits)\n                  'bool db_loaded' offset changed from 3024 to 3080 (in bits) (by +56 bits)\n                  'bool is_initialized' offset changed from 3032 to 3088 (in bits) (by +56 bits)\n                  'bool sealed' offset changed from 3033 to 3089 (in bits) (by +56 bits)\n                  'bool db_persist' offset changed from 3034 to 3090 (in bits) (by +56 bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 0.12943434715270996,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.1",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.3\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.3-abi-laboratory-libudev-so-1-7-3-libudev-so-1-7-3.html\nFound link to libudev.so.1.7.3-250.3-8.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libudev.so.1.7.3-250.3-8.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/systemd-250.3-8.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 48658\nERROR: incomplete info for symbol 49479\nERROR: incomplete info for symbol 49633\nERROR: incomplete info for symbol 49771\nERROR: incomplete info for symbol 51237\nERROR: incomplete info for symbol 51624\nERROR: incomplete info for symbol 53689\nERROR: incomplete info for symbol 54474\nERROR: incomplete info for symbol 55340\nERROR: incomplete info for symbol 55671\nERROR: incomplete info for symbol 56163\nERROR: incomplete info for symbol 56374\nERROR: incomplete info for symbol 56606\nERROR: incomplete info for symbol 57349\nERROR: incomplete info for symbol 57744\nERROR: incomplete info for symbol 58156\nERROR: incomplete info for symbol 59393\nERROR: incomplete info for symbol 59582\nERROR: incomplete info for symbol 61228\nERROR: incomplete info for symbol 61364\nERROR: incomplete info for symbol 61825\nERROR: incomplete info for symbol 61977\nERROR: incomplete info for symbol 62504\nERROR: incomplete info for symbol 62865\nERROR: incomplete info for symbol 63226\nERROR: incomplete info for symbol 63622\nERROR: incomplete info for symbol 64020\nERROR: incomplete info for symbol 64394\nERROR: incomplete info for symbol 64733\nERROR: incomplete info for symbol 65315\nERROR: incomplete info for symbol 65607\nERROR: incomplete info for symbol 69114\nERROR: incomplete info for symbol 69250\nERROR: incomplete info for symbol 69711\nERROR: incomplete info for symbol 70683\nERROR: incomplete info for symbol 70710\nERROR: incomplete info for symbol 70829\nERROR: incomplete info for symbol 70856\nERROR: incomplete info for symbol 71357\nERROR: incomplete info for symbol 71507\nERROR: incomplete info for symbol 72542\nERROR: incomplete info for symbol 73417\nERROR: incomplete info for symbol 73553\nERROR: incomplete info for symbol 73767\nERROR: incomplete info for symbol 73906\nERROR: incomplete info for symbol 74176\nERROR: incomplete info for symbol 74604\nERROR: incomplete info for symbol 74997\nERROR: incomplete info for symbol 76023\nERROR: incomplete info for symbol 76191\nERROR: incomplete info for symbol 76327\nERROR: incomplete info for symbol 76549\nERROR: incomplete info for symbol 76701\nERROR: incomplete info for symbol 76728\nERROR: incomplete info for symbol 76755\nERROR: incomplete info for symbol 76820\nERROR: incomplete info for symbol 76953\nERROR: incomplete info for symbol 77112\nERROR: incomplete info for symbol 77258\nERROR: incomplete info for symbol 77304\nERROR: incomplete info for symbol 77678\nERROR: incomplete info for symbol 77816\nERROR: incomplete info for symbol 78746\nERROR: incomplete info for symbol 78885\nERROR: incomplete info for symbol 79074\nERROR: incomplete info for symbol 79210\nERROR: incomplete info for symbol 79364\nERROR: incomplete info for symbol 79398\nERROR: incomplete info for symbol 79452\nERROR: incomplete info for symbol 83273\nERROR: incomplete info for symbol 83631\nERROR: incomplete info for symbol 95654\nERROR: incomplete info for symbol 96043\nERROR: incomplete info for symbol 96392\nERROR: incomplete info for symbol 97987\nERROR: incomplete info for symbol 99112\nERROR: incomplete info for symbol 103475\nERROR: incomplete info for symbol 106366\nERROR: incomplete info for symbol 106557\nERROR: incomplete info for symbol 110582\nERROR: incomplete info for symbol 119620\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-9tkLV.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libudev.so.1.7.3-250.3-8.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libudev.so.1.7.3-250.3-8.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/systemd-250.3-8.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 48658\nERROR: incomplete info for symbol 49479\nERROR: incomplete info for symbol 49633\nERROR: incomplete info for symbol 49771\nERROR: incomplete info for symbol 51237\nERROR: incomplete info for symbol 51624\nERROR: incomplete info for symbol 53689\nERROR: incomplete info for symbol 54474\nERROR: incomplete info for symbol 55340\nERROR: incomplete info for symbol 55671\nERROR: incomplete info for symbol 56163\nERROR: incomplete info for symbol 56374\nERROR: incomplete info for symbol 56606\nERROR: incomplete info for symbol 57349\nERROR: incomplete info for symbol 57744\nERROR: incomplete info for symbol 58156\nERROR: incomplete info for symbol 59393\nERROR: incomplete info for symbol 59582\nERROR: incomplete info for symbol 61228\nERROR: incomplete info for symbol 61364\nERROR: incomplete info for symbol 61825\nERROR: incomplete info for symbol 61977\nERROR: incomplete info for symbol 62504\nERROR: incomplete info for symbol 62865\nERROR: incomplete info for symbol 63226\nERROR: incomplete info for symbol 63622\nERROR: incomplete info for symbol 64020\nERROR: incomplete info for symbol 64394\nERROR: incomplete info for symbol 64733\nERROR: incomplete info for symbol 65315\nERROR: incomplete info for symbol 65607\nERROR: incomplete info for symbol 69114\nERROR: incomplete info for symbol 69250\nERROR: incomplete info for symbol 69711\nERROR: incomplete info for symbol 70683\nERROR: incomplete info for symbol 70710\nERROR: incomplete info for symbol 70829\nERROR: incomplete info for symbol 70856\nERROR: incomplete info for symbol 71357\nERROR: incomplete info for symbol 71507\nERROR: incomplete info for symbol 72542\nERROR: incomplete info for symbol 73417\nERROR: incomplete info for symbol 73553\nERROR: incomplete info for symbol 73767\nERROR: incomplete info for symbol 73906\nERROR: incomplete info for symbol 74176\nERROR: incomplete info for symbol 74604\nERROR: incomplete info for symbol 74997\nERROR: incomplete info for symbol 76023\nERROR: incomplete info for symbol 76191\nERROR: incomplete info for symbol 76327\nERROR: incomplete info for symbol 76549\nERROR: incomplete info for symbol 76701\nERROR: incomplete info for symbol 76728\nERROR: incomplete info for symbol 76755\nERROR: incomplete info for symbol 76820\nERROR: incomplete info for symbol 76953\nERROR: incomplete info for symbol 77112\nERROR: incomplete info for symbol 77258\nERROR: incomplete info for symbol 77304\nERROR: incomplete info for symbol 77678\nERROR: incomplete info for symbol 77816\nERROR: incomplete info for symbol 78746\nERROR: incomplete info for symbol 78885\nERROR: incomplete info for symbol 79074\nERROR: incomplete info for symbol 79210\nERROR: incomplete info for symbol 79364\nERROR: incomplete info for symbol 79398\nERROR: incomplete info for symbol 79452\nERROR: incomplete info for symbol 83273\nERROR: incomplete info for symbol 83631\nERROR: incomplete info for symbol 95654\nERROR: incomplete info for symbol 96043\nERROR: incomplete info for symbol 96392\nERROR: incomplete info for symbol 97987\nERROR: incomplete info for symbol 99112\nERROR: incomplete info for symbol 103475\nERROR: incomplete info for symbol 106366\nERROR: incomplete info for symbol 106557\nERROR: incomplete info for symbol 110582\nERROR: incomplete info for symbol 119620\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-ug9Pm.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.3-abi-laboratory-libudev-so-1-7-3-libudev-so-1-7-3.html\n",
-                    "return_code": 0,
-                    "seconds": 12.516832113265991,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.3 libudev-so-1-7-3-libudev-so-1-7-3 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.3-abi-laboratory-libudev-so-1-7-3-libudev-so-1-7-3.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.3",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.3",
-                    "prediction": true,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.1-abi-laboratory-libudev-so-1-7-1-libudev-so-1-7-4.html\n",
+                    "return_code": 139,
+                    "seconds": 0.1842498779296875,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4 libudev-so-1-7-1-libudev-so-1-7-4 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.1-abi-laboratory-libudev-so-1-7-1-libudev-so-1-7-4.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.1",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.3": 184600,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.3": 184600
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.1": 179696,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4": 188880
             }
         },
         "experiment": "usr/lib64/libudev-fedora-libs-34-fedora-libs-37",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.3",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.3",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libudev.so.1.7.4",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libudev.so.1.7.1",
         "different_libs": true
     }
 ]

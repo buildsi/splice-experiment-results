@@ -15,15 +15,21 @@
                     "splice_type": "different_lib",
                     "original_lib": "libfullscreen-shell-v1.so",
                     "spliced_lib": "libfullscreen-shell-v1.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 3.0994415283203125e-05
+                    "message": [
+                        "wl_proxy_marshal"
+                    ],
+                    "prediction": false,
+                    "seconds": 4.124641418457031e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libfullscreen-shell-v1.so",
                     "spliced_lib": "libfullscreen-shell-v1.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
@@ -34,7 +40,7 @@
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.7557907104492188,
+                    "seconds": 1.0623068809509277,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so",
@@ -44,9 +50,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so-abi-laboratory-libfullscreen-shell-v1-so-libfullscreen-shell-v1-so.html\nFound link to libfullscreen-shell-v1.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libfullscreen-shell-v1.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/wayland-shell-integration/../../../../../.dwz/qt5-qtwayland-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2867\nERROR: incomplete info for symbol 9652\nERROR: incomplete info for symbol 10121\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-EzmuR.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libfullscreen-shell-v1.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libfullscreen-shell-v1.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/wayland-shell-integration/../../../../../.dwz/qt5-qtwayland-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2867\nERROR: incomplete info for symbol 9652\nERROR: incomplete info for symbol 10121\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-szZ5M.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so-abi-laboratory-libfullscreen-shell-v1-so-libfullscreen-shell-v1-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so-abi-laboratory-libfullscreen-shell-v1-so-libfullscreen-shell-v1-so.html\nFound link to libfullscreen-shell-v1.so-5.15.2-19.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libfullscreen-shell-v1.so-5.15.2-19.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/wayland-shell-integration/../../../../../.dwz/qt5-qtwayland-5.15.2-19.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2882\nERROR: incomplete info for symbol 7603\nERROR: incomplete info for symbol 8012\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ZXeAX.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libfullscreen-shell-v1.so-5.15.2-22.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libfullscreen-shell-v1.so-5.15.2-22.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/wayland-shell-integration/../../../../../.dwz/qt5-qtwayland-5.15.2-22.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2882\nERROR: incomplete info for symbol 7598\nERROR: incomplete info for symbol 8072\nReading v-tables\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-PCqjw.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so-abi-laboratory-libfullscreen-shell-v1-so-libfullscreen-shell-v1-so.html\n",
                     "return_code": 0,
-                    "seconds": 13.658180236816406,
+                    "seconds": 19.29374861717224,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so libfullscreen-shell-v1-so-libfullscreen-shell-v1-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so-abi-laboratory-libfullscreen-shell-v1-so-libfullscreen-shell-v1-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so",
@@ -57,8 +63,8 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so": 33432,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so": 33432
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so": 28752,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1.so": 29168
             }
         },
         "experiment": "usr/lib64/qt5/plugins/wayland-shell-integration/libfullscreen-shell-v1-fedora-libs-34-fedora-libs-35",

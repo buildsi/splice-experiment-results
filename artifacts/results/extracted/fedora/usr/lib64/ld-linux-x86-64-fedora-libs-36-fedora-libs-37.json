@@ -15,42 +15,46 @@
                     "splice_type": "different_lib",
                     "original_lib": "ld-linux-x86-64.so.2",
                     "spliced_lib": "ld-linux-x86-64.so.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.3365020751953125e-05
+                    "seconds": 3.4332275390625e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "ld-linux-x86-64.so.2",
                     "spliced_lib": "ld-linux-x86-64.so.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.0265579223632812e-05
+                    "seconds": 2.193450927734375e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (5 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed (2 filtered out), 0 Added variables\n\n",
                     "return_code": 0,
-                    "seconds": 0.07669639587402344,
+                    "seconds": 0.15497255325317383,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2-abi-laboratory-ld-linux-x86-64-so-2-ld-linux-x86-64-so-2.html\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-yv6du.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Z6nha.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2-abi-laboratory-ld-linux-x86-64-so-2-ld-linux-x86-64-so-2.html\n",
-                    "return_code": 0,
-                    "seconds": 1.6725564002990723,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2-abi-laboratory-ld-linux-x86-64-so-2-ld-linux-x86-64-so-2.html\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-d3NAZ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-7mVdL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 93.9%\nSource compatibility: 93%\nTotal binary compatibility problems: 14, warnings: 5\nTotal source compatibility problems: 11, warnings: 2\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2-abi-laboratory-ld-linux-x86-64-so-2-ld-linux-x86-64-so-2.html\n",
+                    "return_code": 1,
+                    "seconds": 1.7503609657287598,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2 ld-linux-x86-64-so-2-ld-linux-x86-64-so-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2-abi-laboratory-ld-linux-x86-64-so-2-ld-linux-x86-64-so-2.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
@@ -58,7 +62,7 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ld-linux-x86-64.so.2": 990376,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2": 990376
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ld-linux-x86-64.so.2": 928896
             }
         },
         "experiment": "usr/lib64/ld-linux-x86-64-fedora-libs-36-fedora-libs-37",

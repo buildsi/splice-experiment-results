@@ -3,53 +3,88 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.11.0.1"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.1.0"
         ],
         "paths": {},
         "predictions": {
             "symbols": [
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libdynC_API.so.12.0.1",
-                    "spliced_lib": "libdynC_API.so.12.0.1",
+                    "original_lib": "libdynC_API.so.11.0.1",
+                    "spliced_lib": "libdynC_API.so.12.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 7.295608520507812e-05
+                    "message": [
+                        "_ZTISt13runtime_error",
+                        "_ZSt20__throw_system_errori",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance",
+                        "_ZTVN5boost6system12system_errorE",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_",
+                        "abort",
+                        "_ZTSN5boost6system12system_errorE",
+                        "pthread_mutex_lock",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_",
+                        "_ZNSt13runtime_errorD2Ev",
+                        "_ZTIN5boost6system12system_errorE",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE7map_mx_",
+                        "printf",
+                        "pthread_mutex_unlock",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance",
+                        "__pthread_key_create",
+                        "_ZNKSt13runtime_error4whatEv"
+                    ],
+                    "prediction": false,
+                    "seconds": 8.630752563476562e-05
                 },
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libdynC_API.so.12.0.1",
-                    "spliced_lib": "libdynC_API.so.12.0.1",
+                    "original_lib": "libdynC_API.so.11.0.1",
+                    "spliced_lib": "libdynC_API.so.12.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 2.5987625122070312e-05
+                    "message": [
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance",
+                        "_ZTIN5boost6system12system_errorE",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance",
+                        "_ZTSN5boost6system12system_errorE",
+                        "_ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_",
+                        "_ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE7map_mx_",
+                        "_ZTVN5boost6system12system_errorE"
+                    ],
+                    "prediction": false,
+                    "seconds": 2.8371810913085938e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 1.4303572177886963,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1",
-                    "prediction": true,
+                    "message": "ELF SONAME changed\nFunctions changes summary: 0 Removed, 0 Changed (7 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 0 Removed, 0 Added function symbol not referenced by debug info\nVariable symbols changes summary: 10 Removed, 3 Added variable symbols not referenced by debug info\n\nSONAME changed from 'libdynC_API.so.11.0' to 'libdynC_API.so.12.1'\n\n10 Removed variable symbols not referenced by debug info:\n\n  [D] _ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance\n  [D] _ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance\n  [D] _ZGVZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_\n  [D] _ZTIN5boost6system12system_errorE\n  [D] _ZTSN5boost6system12system_errorE\n  [D] _ZTVN5boost6system12system_errorE\n  [D] _ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE15system_instance\n  [D] _ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE16generic_instance\n  [D] _ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE4map_\n  [D] _ZZN5boost6system6detail15to_std_categoryERKNS0_14error_categoryEE7map_mx_\n\n3 Added variable symbols not referenced by debug info:\n\n  [A] _ZTIN5boost6system6detail22interop_error_categoryE\n  [A] _ZTSN5boost6system6detail22interop_error_categoryE\n  [A] _ZTVN5boost6system6detail22interop_error_categoryE\n\n",
+                    "return_code": 12,
+                    "seconds": 1.4519259929656982,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.11.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.11.0.1",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1-abi-laboratory-libdynC_API-so-12-0-1-libdynC_API-so-12-0-1.html\nFound link to libdynC_API.so.12.0.1-12.0.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdynC_API.so.12.0.1-12.0.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-12.0.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 105515\nERROR: incomplete info for symbol 121010\nReading v-tables\nlibdyninstAPI.so.12.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-3EmNk.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdynC_API.so.12.0.1-12.0.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdynC_API.so.12.0.1-12.0.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-12.0.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 105515\nERROR: incomplete info for symbol 121010\nReading v-tables\nlibdyninstAPI.so.12.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-GO2d7.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1-abi-laboratory-libdynC_API-so-12-0-1-libdynC_API-so-12-0-1.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.11.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.11.0.1-abi-laboratory-libdynC_API-so-11-0-1-libdynC_API-so-12-1-0.html\nFound link to libdynC_API.so.11.0.1-11.0.1-3.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libdynC_API.so.11.0.1-11.0.1-3.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-11.0.1-3.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 94446\nERROR: incomplete info for symbol 109685\nReading v-tables\nlibdyninstAPI.so.11.0: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-u3CxS.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdynC_API.so.12.1.0-12.1.0-4.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libdynC_API.so.12.1.0-12.1.0-4.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dyninst/../../../.dwz/dyninst-12.1.0-4.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 89486\nERROR: incomplete info for symbol 104859\nReading v-tables\nlibdyninstAPI.so.12.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Pmp5o.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.11.0.1-abi-laboratory-libdynC_API-so-11-0-1-libdynC_API-so-12-1-0.html\n",
                     "return_code": 0,
-                    "seconds": 20.970922231674194,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1 libdynC_API-so-12-0-1-libdynC_API-so-12-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1-abi-laboratory-libdynC_API-so-12-0-1-libdynC_API-so-12-0-1.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1",
+                    "seconds": 21.672879457473755,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.11.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.1.0 libdynC_API-so-11-0-1-libdynC_API-so-12-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.11.0.1-abi-laboratory-libdynC_API-so-11-0-1-libdynC_API-so-12-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.11.0.1",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
@@ -57,15 +92,15 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1": 153728,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1": 153728
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.11.0.1": 149456,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.1.0": 149688
             }
         },
         "experiment": "usr/lib64/dyninst/libdynC_API-fedora-libs-35-fedora-libs-37",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.0.1",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.12.0.1",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dyninst/libdynC_API.so.12.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dyninst/libdynC_API.so.11.0.1",
         "different_libs": true
     }
 ]

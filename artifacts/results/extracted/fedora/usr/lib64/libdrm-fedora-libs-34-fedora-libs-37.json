@@ -15,50 +15,57 @@
                     "splice_type": "different_lib",
                     "original_lib": "libdrm.so.2.4.0",
                     "spliced_lib": "libdrm.so.2.4.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 6.532669067382812e-05
+                    "message": [
+                        "fputs",
+                        "fwrite"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.556510925292969e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libdrm.so.2.4.0",
                     "spliced_lib": "libdrm.so.2.4.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0003151893615722656
+                    "seconds": 0.00031876564025878906
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.05770134925842285,
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (7 filtered out), 2 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n2 Added functions:\n\n  [A] 'function uint32_t drmModeConnectorGetPossibleCrtcs(int, const drmModeConnector*)'    {drmModeConnectorGetPossibleCrtcs}\n  [A] 'function const char* drmModeGetConnectorTypeName(uint32_t)'    {drmModeGetConnectorTypeName}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function int drmModeAtomicAddProperty(drmModeAtomicReqPtr, uint32_t, uint32_t, uint64_t)' at xf86drmMode.c:1450:1 has some indirect sub-type changes:\n    parameter 1 of type 'typedef drmModeAtomicReqPtr' has sub-type changes:\n      underlying type '_drmModeAtomicReq*' changed:\n        in pointed to type 'struct _drmModeAtomicReq' at xf86drmMode.c:1353:1:\n          type size hasn't changed\n          1 data member change:\n            type of 'drmModeAtomicReqItemPtr items' changed:\n              underlying type '_drmModeAtomicReqItem*' changed:\n                in pointed to type 'struct _drmModeAtomicReqItem' at xf86drmMode.c:1346:1:\n                  type size changed from 128 to 192 (in bits)\n                  1 data member insertion:\n                    'uint32_t cursor', at offset 128 (in bits) at xf86drmMode.c:1350:1\n\n",
+                    "return_code": 4,
+                    "seconds": 0.06290268898010254,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0-abi-laboratory-libdrm-so-2-4-0-libdrm-so-2-4-0.html\nFound link to libdrm.so.2.4.0-2.4.110-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdrm.so.2.4.0-2.4.110-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/libdrm-2.4.110-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 38902\nERROR: incomplete info for symbol 39059\nERROR: incomplete info for symbol 39119\nERROR: incomplete info for symbol 39223\nERROR: incomplete info for symbol 39286\nERROR: incomplete info for symbol 39337\nERROR: incomplete info for symbol 39659\nERROR: incomplete info for symbol 39852\nERROR: incomplete info for symbol 40387\nERROR: incomplete info for symbol 41179\nERROR: incomplete info for symbol 41407\nERROR: incomplete info for symbol 41508\nERROR: incomplete info for symbol 42060\nERROR: incomplete info for symbol 42356\nERROR: incomplete info for symbol 42540\nERROR: incomplete info for symbol 42795\nERROR: incomplete info for symbol 42939\nERROR: incomplete info for symbol 43043\nERROR: incomplete info for symbol 43619\nERROR: incomplete info for symbol 43670\nERROR: incomplete info for symbol 43801\nERROR: incomplete info for symbol 43852\nERROR: incomplete info for symbol 43903\nERROR: incomplete info for symbol 44034\nERROR: incomplete info for symbol 44085\nERROR: incomplete info for symbol 44177\nERROR: incomplete info for symbol 45345\nERROR: incomplete info for symbol 45703\nERROR: incomplete info for symbol 46175\nERROR: incomplete info for symbol 46350\nERROR: incomplete info for symbol 46572\nERROR: incomplete info for symbol 46772\nERROR: incomplete info for symbol 47074\nERROR: incomplete info for symbol 47342\nERROR: incomplete info for symbol 47780\nERROR: incomplete info for symbol 48095\nERROR: incomplete info for symbol 48432\nERROR: incomplete info for symbol 48734\nERROR: incomplete info for symbol 48933\nERROR: incomplete info for symbol 49009\nERROR: incomplete info for symbol 49085\nERROR: incomplete info for symbol 49376\nERROR: incomplete info for symbol 49667\nERROR: incomplete info for symbol 50811\nERROR: incomplete info for symbol 50932\nERROR: incomplete info for symbol 51419\nERROR: incomplete info for symbol 51675\nERROR: incomplete info for symbol 51774\nERROR: incomplete info for symbol 52045\nERROR: incomplete info for symbol 52649\nERROR: incomplete info for symbol 52946\nERROR: incomplete info for symbol 53243\nERROR: incomplete info for symbol 53557\nERROR: incomplete info for symbol 53872\nERROR: incomplete info for symbol 54169\nERROR: incomplete info for symbol 54525\nERROR: incomplete info for symbol 55049\nERROR: incomplete info for symbol 55148\nERROR: incomplete info for symbol 55658\nERROR: incomplete info for symbol 55757\nERROR: incomplete info for symbol 56513\nERROR: incomplete info for symbol 56623\nERROR: incomplete info for symbol 56987\nERROR: incomplete info for symbol 57157\nERROR: incomplete info for symbol 57344\nERROR: incomplete info for symbol 57370\nERROR: incomplete info for symbol 57403\nERROR: incomplete info for symbol 57553\nERROR: incomplete info for symbol 57615\nERROR: incomplete info for symbol 58533\nERROR: incomplete info for symbol 58883\nERROR: incomplete info for symbol 59128\nERROR: incomplete info for symbol 59534\nERROR: incomplete info for symbol 60080\nERROR: incomplete info for symbol 60626\nERROR: incomplete info for symbol 60946\nERROR: incomplete info for symbol 61450\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-lFNtM.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdrm.so.2.4.0-2.4.110-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdrm.so.2.4.0-2.4.110-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/libdrm-2.4.110-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 38902\nERROR: incomplete info for symbol 39059\nERROR: incomplete info for symbol 39119\nERROR: incomplete info for symbol 39223\nERROR: incomplete info for symbol 39286\nERROR: incomplete info for symbol 39337\nERROR: incomplete info for symbol 39659\nERROR: incomplete info for symbol 39852\nERROR: incomplete info for symbol 40387\nERROR: incomplete info for symbol 41179\nERROR: incomplete info for symbol 41407\nERROR: incomplete info for symbol 41508\nERROR: incomplete info for symbol 42060\nERROR: incomplete info for symbol 42356\nERROR: incomplete info for symbol 42540\nERROR: incomplete info for symbol 42795\nERROR: incomplete info for symbol 42939\nERROR: incomplete info for symbol 43043\nERROR: incomplete info for symbol 43619\nERROR: incomplete info for symbol 43670\nERROR: incomplete info for symbol 43801\nERROR: incomplete info for symbol 43852\nERROR: incomplete info for symbol 43903\nERROR: incomplete info for symbol 44034\nERROR: incomplete info for symbol 44085\nERROR: incomplete info for symbol 44177\nERROR: incomplete info for symbol 45345\nERROR: incomplete info for symbol 45703\nERROR: incomplete info for symbol 46175\nERROR: incomplete info for symbol 46350\nERROR: incomplete info for symbol 46572\nERROR: incomplete info for symbol 46772\nERROR: incomplete info for symbol 47074\nERROR: incomplete info for symbol 47342\nERROR: incomplete info for symbol 47780\nERROR: incomplete info for symbol 48095\nERROR: incomplete info for symbol 48432\nERROR: incomplete info for symbol 48734\nERROR: incomplete info for symbol 48933\nERROR: incomplete info for symbol 49009\nERROR: incomplete info for symbol 49085\nERROR: incomplete info for symbol 49376\nERROR: incomplete info for symbol 49667\nERROR: incomplete info for symbol 50811\nERROR: incomplete info for symbol 50932\nERROR: incomplete info for symbol 51419\nERROR: incomplete info for symbol 51675\nERROR: incomplete info for symbol 51774\nERROR: incomplete info for symbol 52045\nERROR: incomplete info for symbol 52649\nERROR: incomplete info for symbol 52946\nERROR: incomplete info for symbol 53243\nERROR: incomplete info for symbol 53557\nERROR: incomplete info for symbol 53872\nERROR: incomplete info for symbol 54169\nERROR: incomplete info for symbol 54525\nERROR: incomplete info for symbol 55049\nERROR: incomplete info for symbol 55148\nERROR: incomplete info for symbol 55658\nERROR: incomplete info for symbol 55757\nERROR: incomplete info for symbol 56513\nERROR: incomplete info for symbol 56623\nERROR: incomplete info for symbol 56987\nERROR: incomplete info for symbol 57157\nERROR: incomplete info for symbol 57344\nERROR: incomplete info for symbol 57370\nERROR: incomplete info for symbol 57403\nERROR: incomplete info for symbol 57553\nERROR: incomplete info for symbol 57615\nERROR: incomplete info for symbol 58533\nERROR: incomplete info for symbol 58883\nERROR: incomplete info for symbol 59128\nERROR: incomplete info for symbol 59534\nERROR: incomplete info for symbol 60080\nERROR: incomplete info for symbol 60626\nERROR: incomplete info for symbol 60946\nERROR: incomplete info for symbol 61450\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-xiwQg.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0-abi-laboratory-libdrm-so-2-4-0-libdrm-so-2-4-0.html\n",
-                    "return_code": 0,
-                    "seconds": 1.1126470565795898,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0-abi-laboratory-libdrm-so-2-4-0-libdrm-so-2-4-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.19572758674621582,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0 libdrm-so-2-4-0-libdrm-so-2-4-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0-abi-laboratory-libdrm-so-2-4-0-libdrm-so-2-4-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0": 91528,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0": 91528
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdrm.so.2.4.0": 87352,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdrm.so.2.4.0": 95632
             }
         },
         "experiment": "usr/lib64/libdrm-fedora-libs-34-fedora-libs-37",

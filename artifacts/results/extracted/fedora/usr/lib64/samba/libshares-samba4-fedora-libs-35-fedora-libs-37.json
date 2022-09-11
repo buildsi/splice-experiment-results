@@ -15,49 +15,53 @@
                     "splice_type": "different_lib",
                     "original_lib": "libshares-samba4.so",
                     "spliced_lib": "libshares-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.457069396972656e-05
+                    "seconds": 3.7670135498046875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libshares-samba4.so",
                     "spliced_lib": "libshares-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.049041748046875e-05
+                    "seconds": 1.0967254638671875e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.026945829391479492,
+                    "message": "Functions changes summary: 13 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n13 Removed functions:\n\n  [D] 'function bool share_bool_option(share_config*, const char*, bool)'    {share_bool_option@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS share_classic_init(TALLOC_CTX*)'    {share_classic_init@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS share_create(share_context*, const char*, share_info*, int)'    {share_create@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS share_get_config(TALLOC_CTX*, share_context*, const char*, share_config**)'    {share_get_config@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS share_get_context(TALLOC_CTX*, loadparm_context*, share_context**)'    {share_get_context@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS share_init()'    {share_init@@SAMBA_4.15.9}\n  [D] 'function int share_int_option(share_config*, const char*, int)'    {share_int_option@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS share_list_all(TALLOC_CTX*, share_context*, int*, const char***)'    {share_list_all@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS share_register(const share_ops*)'    {share_register@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS share_remove(share_context*, const char*)'    {share_remove@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS share_set(share_context*, const char*, share_info*, int)'    {share_set@@SAMBA_4.15.9}\n  [D] 'function const char** share_string_list_option(TALLOC_CTX*, share_config*, const char*)'    {share_string_list_option@@SAMBA_4.15.9}\n  [D] 'function char* share_string_option(TALLOC_CTX*, share_config*, const char*, const char*)'    {share_string_option@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.028077125549316406,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libshares-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libshares-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libshares-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so-abi-laboratory-libshares-samba4-so-libshares-samba4-so.html\nFound link to libshares-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libshares-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7013\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-o33vl.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libshares-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libshares-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7013\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-8dhn9.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so-abi-laboratory-libshares-samba4-so-libshares-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 12.891257047653198,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libshares-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so-abi-laboratory-libshares-samba4-so-libshares-samba4-so.html\nFound link to libshares-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libshares-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7018\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-QA6dV.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libshares-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libshares-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5688\nERROR: incomplete info for symbol 5797\nERROR: incomplete info for symbol 5886\nERROR: incomplete info for symbol 5978\nERROR: incomplete info for symbol 6067\nERROR: incomplete info for symbol 6176\nERROR: incomplete info for symbol 6285\nERROR: incomplete info for symbol 6394\nERROR: incomplete info for symbol 6503\nERROR: incomplete info for symbol 6572\nERROR: incomplete info for symbol 7013\nERROR: incomplete info for symbol 7070\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-Oy2B6.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 15.4%\nTotal binary compatibility problems: 13, warnings: 0\nTotal source compatibility problems: 1, warnings: 8\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so-abi-laboratory-libshares-samba4-so-libshares-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 13.155328750610352,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libshares-samba4.so libshares-samba4-so-libshares-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so-abi-laboratory-libshares-samba4-so-libshares-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libshares-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so": 28504,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libshares-samba4.so": 20384,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libshares-samba4.so": 28504
             }
         },

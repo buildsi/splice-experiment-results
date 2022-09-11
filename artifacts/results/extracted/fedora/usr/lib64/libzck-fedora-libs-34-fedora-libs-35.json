@@ -3,69 +3,73 @@
         "specs": {},
         "ids": {},
         "original": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.2.1"
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.1.15"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.2.1"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.1.15"
         ],
         "paths": {},
         "predictions": {
             "symbols": [
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libzck.so.1.2.1",
-                    "spliced_lib": "libzck.so.1.2.1",
+                    "original_lib": "libzck.so.1.1.15",
+                    "spliced_lib": "libzck.so.1.1.15",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.0067901611328125e-05
+                    "seconds": 5.269050598144531e-05
                 },
                 {
                     "splice_type": "different_lib",
-                    "original_lib": "libzck.so.1.2.1",
-                    "spliced_lib": "libzck.so.1.2.1",
+                    "original_lib": "libzck.so.1.1.15",
+                    "spliced_lib": "libzck.so.1.1.15",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.628036499023438e-05
+                    "seconds": 5.650520324707031e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.06365656852722168,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.2.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.2.1",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.2.1",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.2.1",
+                    "seconds": 0.025693655014038086,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.1.15 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.1.15",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.1.15",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.1.15",
                     "prediction": true,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.2.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.2.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.2.1-abi-laboratory-libzck-so-1-2-1-libzck-so-1-2-1.html\nFound link to libzck.so.1.2.1-1.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libzck.so.1.2.1-1.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/zchunk-1.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 15616\nERROR: incomplete info for symbol 16820\nERROR: incomplete info for symbol 22905\nERROR: incomplete info for symbol 23384\nERROR: incomplete info for symbol 26242\nERROR: incomplete info for symbol 26334\nERROR: incomplete info for symbol 26426\nERROR: incomplete info for symbol 26518\nERROR: incomplete info for symbol 26610\nERROR: incomplete info for symbol 26749\nERROR: incomplete info for symbol 26888\nERROR: incomplete info for symbol 30056\nERROR: incomplete info for symbol 30997\nERROR: incomplete info for symbol 32265\nERROR: incomplete info for symbol 32341\nERROR: incomplete info for symbol 32541\nERROR: incomplete info for symbol 32741\nERROR: incomplete info for symbol 32833\nERROR: incomplete info for symbol 33020\nERROR: incomplete info for symbol 33112\nERROR: incomplete info for symbol 33209\nERROR: incomplete info for symbol 33306\nERROR: incomplete info for symbol 33403\nERROR: incomplete info for symbol 33500\nERROR: incomplete info for symbol 33597\nERROR: incomplete info for symbol 33694\nERROR: incomplete info for symbol 33816\nERROR: incomplete info for symbol 33996\nERROR: incomplete info for symbol 34177\nERROR: incomplete info for symbol 34231\nERROR: incomplete info for symbol 35565\nERROR: incomplete info for symbol 35677\nERROR: incomplete info for symbol 36414\nERROR: incomplete info for symbol 36534\nERROR: incomplete info for symbol 37784\nERROR: incomplete info for symbol 38237\nERROR: incomplete info for symbol 38358\nERROR: incomplete info for symbol 38479\nERROR: incomplete info for symbol 38801\nERROR: incomplete info for symbol 39269\nERROR: incomplete info for symbol 39338\nERROR: incomplete info for symbol 39459\nERROR: incomplete info for symbol 39598\nERROR: incomplete info for symbol 39737\nERROR: incomplete info for symbol 39858\nERROR: incomplete info for symbol 39997\nERROR: incomplete info for symbol 40136\nERROR: incomplete info for symbol 40275\nERROR: incomplete info for symbol 40414\nERROR: incomplete info for symbol 41727\nERROR: incomplete info for symbol 42089\nERROR: incomplete info for symbol 43899\nERROR: incomplete info for symbol 45156\nERROR: incomplete info for symbol 45724\nERROR: incomplete info for symbol 50349\nERROR: incomplete info for symbol 51086\nERROR: incomplete info for symbol 51191\nERROR: incomplete info for symbol 52004\nERROR: incomplete info for symbol 52096\nERROR: incomplete info for symbol 52201\nERROR: incomplete info for symbol 52304\nERROR: incomplete info for symbol 57316\nERROR: incomplete info for symbol 57631\nERROR: incomplete info for symbol 57723\nERROR: incomplete info for symbol 57831\nERROR: incomplete info for symbol 58145\nERROR: incomplete info for symbol 58811\nERROR: incomplete info for symbol 59463\nERROR: incomplete info for symbol 59555\nERROR: incomplete info for symbol 59660\nERROR: incomplete info for symbol 59797\nERROR: incomplete info for symbol 59952\nERROR: incomplete info for symbol 60291\nERROR: incomplete info for symbol 60443\nERROR: incomplete info for symbol 61669\nERROR: incomplete info for symbol 61694\nERROR: incomplete info for symbol 61719\nERROR: incomplete info for symbol 64672\nERROR: incomplete info for symbol 64704\nERROR: incomplete info for symbol 64736\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-UUMx6.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libzck.so.1.2.1-1.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libzck.so.1.2.1-1.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/zchunk-1.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 15616\nERROR: incomplete info for symbol 16820\nERROR: incomplete info for symbol 22905\nERROR: incomplete info for symbol 23384\nERROR: incomplete info for symbol 26242\nERROR: incomplete info for symbol 26334\nERROR: incomplete info for symbol 26426\nERROR: incomplete info for symbol 26518\nERROR: incomplete info for symbol 26610\nERROR: incomplete info for symbol 26749\nERROR: incomplete info for symbol 26888\nERROR: incomplete info for symbol 30056\nERROR: incomplete info for symbol 30997\nERROR: incomplete info for symbol 32265\nERROR: incomplete info for symbol 32341\nERROR: incomplete info for symbol 32541\nERROR: incomplete info for symbol 32741\nERROR: incomplete info for symbol 32833\nERROR: incomplete info for symbol 33020\nERROR: incomplete info for symbol 33112\nERROR: incomplete info for symbol 33209\nERROR: incomplete info for symbol 33306\nERROR: incomplete info for symbol 33403\nERROR: incomplete info for symbol 33500\nERROR: incomplete info for symbol 33597\nERROR: incomplete info for symbol 33694\nERROR: incomplete info for symbol 33816\nERROR: incomplete info for symbol 33996\nERROR: incomplete info for symbol 34177\nERROR: incomplete info for symbol 34231\nERROR: incomplete info for symbol 35565\nERROR: incomplete info for symbol 35677\nERROR: incomplete info for symbol 36414\nERROR: incomplete info for symbol 36534\nERROR: incomplete info for symbol 37784\nERROR: incomplete info for symbol 38237\nERROR: incomplete info for symbol 38358\nERROR: incomplete info for symbol 38479\nERROR: incomplete info for symbol 38801\nERROR: incomplete info for symbol 39269\nERROR: incomplete info for symbol 39338\nERROR: incomplete info for symbol 39459\nERROR: incomplete info for symbol 39598\nERROR: incomplete info for symbol 39737\nERROR: incomplete info for symbol 39858\nERROR: incomplete info for symbol 39997\nERROR: incomplete info for symbol 40136\nERROR: incomplete info for symbol 40275\nERROR: incomplete info for symbol 40414\nERROR: incomplete info for symbol 41727\nERROR: incomplete info for symbol 42089\nERROR: incomplete info for symbol 43899\nERROR: incomplete info for symbol 45156\nERROR: incomplete info for symbol 45724\nERROR: incomplete info for symbol 50349\nERROR: incomplete info for symbol 51086\nERROR: incomplete info for symbol 51191\nERROR: incomplete info for symbol 52004\nERROR: incomplete info for symbol 52096\nERROR: incomplete info for symbol 52201\nERROR: incomplete info for symbol 52304\nERROR: incomplete info for symbol 57316\nERROR: incomplete info for symbol 57631\nERROR: incomplete info for symbol 57723\nERROR: incomplete info for symbol 57831\nERROR: incomplete info for symbol 58145\nERROR: incomplete info for symbol 58811\nERROR: incomplete info for symbol 59463\nERROR: incomplete info for symbol 59555\nERROR: incomplete info for symbol 59660\nERROR: incomplete info for symbol 59797\nERROR: incomplete info for symbol 59952\nERROR: incomplete info for symbol 60291\nERROR: incomplete info for symbol 60443\nERROR: incomplete info for symbol 61669\nERROR: incomplete info for symbol 61694\nERROR: incomplete info for symbol 61719\nERROR: incomplete info for symbol 64672\nERROR: incomplete info for symbol 64704\nERROR: incomplete info for symbol 64736\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-YqKFx.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.2.1-abi-laboratory-libzck-so-1-2-1-libzck-so-1-2-1.html\n",
-                    "return_code": 0,
-                    "seconds": 0.8867342472076416,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.2.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.2.1 libzck-so-1-2-1-libzck-so-1-2-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.2.1-abi-laboratory-libzck-so-1-2-1-libzck-so-1-2-1.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.2.1",
-                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.2.1",
-                    "prediction": true,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.1.15\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.1.15\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.1.15-abi-laboratory-libzck-so-1-1-15-libzck-so-1-1-15.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19403624534606934,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.1.15 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.1.15 libzck-so-1-1-15-libzck-so-1-1-15 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.1.15-abi-laboratory-libzck-so-1-1-15-libzck-so-1-1-15.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.1.15",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.1.15",
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.2.1": 95504,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.2.1": 95504
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.1.15": 86800,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.1.15": 86640
             }
         },
         "experiment": "usr/lib64/libzck-fedora-libs-34-fedora-libs-35",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.2.1",
-        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.2.1",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libzck.so.1.1.15",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libzck.so.1.1.15",
         "different_libs": true
     }
 ]

@@ -15,50 +15,54 @@
                     "splice_type": "different_lib",
                     "original_lib": "libxattr-tdb-samba4.so",
                     "spliced_lib": "libxattr-tdb-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.956390380859375e-05
+                    "seconds": 3.266334533691406e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libxattr-tdb-samba4.so",
                     "spliced_lib": "libxattr-tdb-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.106231689453125e-06
+                    "seconds": 8.344650268554688e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.02258443832397461,
+                    "message": "Functions changes summary: 5 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n5 Removed functions:\n\n  [D] 'function ssize_t xattr_tdb_getattr(db_context*, TALLOC_CTX*, const file_id*, const char*, DATA_BLOB*)'    {xattr_tdb_getattr@@SAMBA_4.14.12}\n  [D] 'function ssize_t xattr_tdb_listattr(db_context*, const file_id*, char*, size_t)'    {xattr_tdb_listattr@@SAMBA_4.14.12}\n  [D] 'function void xattr_tdb_remove_all_attrs(db_context*, const file_id*)'    {xattr_tdb_remove_all_attrs@@SAMBA_4.14.12}\n  [D] 'function int xattr_tdb_removeattr(db_context*, const file_id*, const char*)'    {xattr_tdb_removeattr@@SAMBA_4.14.12}\n  [D] 'function int xattr_tdb_setattr(db_context*, const file_id*, const char*, void*, size_t, int)'    {xattr_tdb_setattr@@SAMBA_4.14.12}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.03403353691101074,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libxattr-tdb-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libxattr-tdb-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libxattr-tdb-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so-abi-laboratory-libxattr-tdb-samba4-so-libxattr-tdb-samba4-so.html\nFound link to libxattr-tdb-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxattr-tdb-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-f2zzh.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libxattr-tdb-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxattr-tdb-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-7ubEw.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so-abi-laboratory-libxattr-tdb-samba4-so-libxattr-tdb-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 11.638149499893188,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libxattr-tdb-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so-abi-laboratory-libxattr-tdb-samba4-so-libxattr-tdb-samba4-so.html\nFound link to libxattr-tdb-samba4.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libxattr-tdb-samba4.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ZWfj4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libxattr-tdb-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libxattr-tdb-samba4.so-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-d0Y9M.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 0%\nTotal binary compatibility problems: 5, warnings: 0\nTotal source compatibility problems: 1, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so-abi-laboratory-libxattr-tdb-samba4-so-libxattr-tdb-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 16.587181091308594,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libxattr-tdb-samba4.so libxattr-tdb-samba4-so-libxattr-tdb-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so-abi-laboratory-libxattr-tdb-samba4-so-libxattr-tdb-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libxattr-tdb-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so": 28400,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libxattr-tdb-samba4.so": 28400
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libxattr-tdb-samba4.so": 19872,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libxattr-tdb-samba4.so": 28408
             }
         },
         "experiment": "usr/lib64/samba/libxattr-tdb-samba4-fedora-libs-34-fedora-libs-37",

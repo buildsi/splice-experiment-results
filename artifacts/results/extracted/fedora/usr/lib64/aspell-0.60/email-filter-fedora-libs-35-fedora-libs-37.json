@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "email-filter.so",
                     "spliced_lib": "email-filter.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.956390380859375e-05
+                    "seconds": 3.1948089599609375e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "email-filter.so",
                     "spliced_lib": "email-filter.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.775161743164062e-06
+                    "seconds": 9.5367431640625e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.1423492431640625,
+                    "seconds": 0.16856956481933594,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/email-filter.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/email-filter.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/email-filter.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so-abi-laboratory-email-filter-so-email-filter-so.html\nFound link to email-filter.so-0.60.8-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file email-filter.so-0.60.8-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/aspell-0.60/../../../.dwz/aspell-0.60.8-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-3wzYs.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to email-filter.so-0.60.8-9.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file email-filter.so-0.60.8-9.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/aspell-0.60/../../../.dwz/aspell-0.60.8-9.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-2Dkw6.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so-abi-laboratory-email-filter-so-email-filter-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/email-filter.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so-abi-laboratory-email-filter-so-email-filter-so.html\nFound link to email-filter.so-0.60.8-8.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file email-filter.so-0.60.8-8.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/aspell-0.60/../../../.dwz/aspell-0.60.8-8.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-iQyWk.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to email-filter.so-0.60.8-10.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file email-filter.so-0.60.8-10.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/aspell-0.60/../../../.dwz/aspell-0.60.8-10.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibaspell.so.15: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-sUsdf.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so-abi-laboratory-email-filter-so-email-filter-so.html\n",
                     "return_code": 0,
-                    "seconds": 1.3033640384674072,
+                    "seconds": 1.5326919555664062,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/email-filter.so email-filter-so-email-filter-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so-abi-laboratory-email-filter-so-email-filter-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/email-filter.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so": 23896,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/aspell-0.60/email-filter.so": 19616,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/aspell-0.60/email-filter.so": 23896
             }
         },

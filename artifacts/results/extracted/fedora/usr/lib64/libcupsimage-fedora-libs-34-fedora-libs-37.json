@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libcupsimage.so.2",
                     "spliced_lib": "libcupsimage.so.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.220008850097656e-05
+                    "seconds": 2.9087066650390625e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libcupsimage.so.2",
                     "spliced_lib": "libcupsimage.so.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.9073486328125e-05
+                    "seconds": 9.298324584960938e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.022748231887817383,
+                    "seconds": 0.020797014236450195,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcupsimage.so.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcupsimage.so.2",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcupsimage.so.2",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcupsimage.so.2",
@@ -44,21 +48,21 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcupsimage.so.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcupsimage.so.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcupsimage.so.2-abi-laboratory-libcupsimage-so-2-libcupsimage-so-2.html\nFound link to libcupsimage.so.2-2.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcupsimage.so.2-2.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/cups-2.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-HLbcz.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libcupsimage.so.2-2.4.2-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libcupsimage.so.2-2.4.2-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/cups-2.4.2-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-KlAtq.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcupsimage.so.2-abi-laboratory-libcupsimage-so-2-libcupsimage-so-2.html\n",
-                    "return_code": 0,
-                    "seconds": 1.0831871032714844,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcupsimage.so.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcupsimage.so.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcupsimage.so.2-abi-laboratory-libcupsimage-so-2-libcupsimage-so-2.html\n/usr/bin/perl: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_ABI_DT_RELR' not found (required by /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libm.so.6)\n",
+                    "return_code": 1,
+                    "seconds": 0.008251190185546875,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcupsimage.so.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcupsimage.so.2 libcupsimage-so-2-libcupsimage-so-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcupsimage.so.2-abi-laboratory-libcupsimage-so-2-libcupsimage-so-2.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcupsimage.so.2",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcupsimage.so.2",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcupsimage.so.2": 15864,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcupsimage.so.2": 15864
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libcupsimage.so.2": 15248,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libcupsimage.so.2": 15856
             }
         },
         "experiment": "usr/lib64/libcupsimage-fedora-libs-34-fedora-libs-37",

@@ -15,26 +15,32 @@
                     "splice_type": "different_lib",
                     "original_lib": "libpopt.so.0.0.1",
                     "spliced_lib": "libpopt.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 4.935264587402344e-05
+                    "message": [
+                        "mbsrtowcs"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.555152893066406e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libpopt.so.0.0.1",
                     "spliced_lib": "libpopt.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.361701965332031e-05
+                    "seconds": 3.0040740966796875e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.03070068359375,
+                    "seconds": 0.018706321716308594,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpopt.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpopt.so.0.0.1",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpopt.so.0.0.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpopt.so.0.0.1",
@@ -44,20 +50,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpopt.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpopt.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpopt.so.0.0.1-abi-laboratory-libpopt-so-0-0-1-libpopt-so-0-0-1.html\nFound link to libpopt.so.0.0.1-1.18-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libpopt.so.0.0.1-1.18-7.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 23143\nERROR: incomplete info for symbol 28059\nERROR: incomplete info for symbol 28501\nERROR: incomplete info for symbol 29477\nERROR: incomplete info for symbol 29633\nERROR: incomplete info for symbol 30223\nERROR: incomplete info for symbol 31500\nERROR: incomplete info for symbol 32101\nERROR: incomplete info for symbol 32743\nERROR: incomplete info for symbol 32794\nERROR: incomplete info for symbol 32998\nERROR: incomplete info for symbol 33443\nERROR: incomplete info for symbol 34324\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-yXkZC.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libpopt.so.0.0.1-1.18-7.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libpopt.so.0.0.1-1.18-7.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 23143\nERROR: incomplete info for symbol 28059\nERROR: incomplete info for symbol 28501\nERROR: incomplete info for symbol 29477\nERROR: incomplete info for symbol 29633\nERROR: incomplete info for symbol 30223\nERROR: incomplete info for symbol 31500\nERROR: incomplete info for symbol 32101\nERROR: incomplete info for symbol 32743\nERROR: incomplete info for symbol 32794\nERROR: incomplete info for symbol 32998\nERROR: incomplete info for symbol 33443\nERROR: incomplete info for symbol 34324\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-uihQz.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpopt.so.0.0.1-abi-laboratory-libpopt-so-0-0-1-libpopt-so-0-0-1.html\n",
-                    "return_code": 0,
-                    "seconds": 0.6360390186309814,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpopt.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpopt.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpopt.so.0.0.1-abi-laboratory-libpopt-so-0-0-1-libpopt-so-0-0-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.20887041091918945,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpopt.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpopt.so.0.0.1 libpopt-so-0-0-1-libpopt-so-0-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpopt.so.0.0.1-abi-laboratory-libpopt-so-0-0-1-libpopt-so-0-0-1.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpopt.so.0.0.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpopt.so.0.0.1",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpopt.so.0.0.1": 58448,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libpopt.so.0.0.1": 58264,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libpopt.so.0.0.1": 58448
             }
         },

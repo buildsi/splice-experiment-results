@@ -15,49 +15,53 @@
                     "splice_type": "different_lib",
                     "original_lib": "libsmbldaphelper-samba4.so",
                     "spliced_lib": "libsmbldaphelper-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.2901763916015625e-05
+                    "seconds": 2.956390380859375e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libsmbldaphelper-samba4.so",
                     "spliced_lib": "libsmbldaphelper-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.0013580322265625e-05
+                    "seconds": 8.58306884765625e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.024829864501953125,
+                    "message": "Functions changes summary: 3 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 6 Removed, 0 Changed, 0 Added variables\nFunction symbols changes summary: 0 Removed, 0 Added function symbol not referenced by debug info\nVariable symbols changes summary: 1 Removed, 0 Added variable symbol not referenced by debug info\n\n3 Removed functions:\n\n  [D] 'function const char* get_attr_key2string(ATTRIB_MAP_ENTRY*, int)'    {get_attr_key2string@@SAMBA_4.14.12}\n  [D] 'function const char** get_attr_list(TALLOC_CTX*, ATTRIB_MAP_ENTRY*)'    {get_attr_list@@SAMBA_4.14.12}\n  [D] 'function NTSTATUS smbldap_search_domain_info(smbldap_state*, LDAPMessage**, const char*, bool)'    {smbldap_search_domain_info@@SAMBA_4.14.12}\n\n6 Removed variables:\n\n  [D] 'ATTRIB_MAP_ENTRY attrib_map_to_delete_v30[]'    {attrib_map_to_delete_v30@@SAMBA_4.14.12}\n  [D] 'ATTRIB_MAP_ENTRY attrib_map_v30[]'    {attrib_map_v30@@SAMBA_4.14.12}\n  [D] 'ATTRIB_MAP_ENTRY groupmap_attr_list[]'    {groupmap_attr_list@@SAMBA_4.14.12}\n  [D] 'ATTRIB_MAP_ENTRY groupmap_attr_list_to_delete[]'    {groupmap_attr_list_to_delete@@SAMBA_4.14.12}\n  [D] 'ATTRIB_MAP_ENTRY idpool_attr_list[]'    {idpool_attr_list@@SAMBA_4.14.12}\n  [D] 'ATTRIB_MAP_ENTRY sidmap_attr_list[]'    {sidmap_attr_list@@SAMBA_4.14.12}\n\n1 Removed variable symbol not referenced by debug info:\n\n  [D] dominfo_attr_list@@SAMBA_4.14.12\n\n",
+                    "return_code": 12,
+                    "seconds": 0.025474071502685547,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbldaphelper-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbldaphelper-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbldaphelper-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so-abi-laboratory-libsmbldaphelper-samba4-so-libsmbldaphelper-samba4-so.html\nFound link to libsmbldaphelper-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmbldaphelper-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2780\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-jyMcp.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsmbldaphelper-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmbldaphelper-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2780\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-LeTrN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so-abi-laboratory-libsmbldaphelper-samba4-so-libsmbldaphelper-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 12.829054594039917,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbldaphelper-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so-abi-laboratory-libsmbldaphelper-samba4-so-libsmbldaphelper-samba4-so.html\nFound link to libsmbldaphelper-samba4.so-4.14.12-0.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmbldaphelper-samba4.so-4.14.12-0.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.14.12-0.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2792\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Rma1Z.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsmbldaphelper-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsmbldaphelper-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2780\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-CLGgY.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 10, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so-abi-laboratory-libsmbldaphelper-samba4-so-libsmbldaphelper-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 13.882787704467773,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbldaphelper-samba4.so libsmbldaphelper-samba4-so-libsmbldaphelper-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so-abi-laboratory-libsmbldaphelper-samba4-so-libsmbldaphelper-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbldaphelper-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so": 29944,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libsmbldaphelper-samba4.so": 25432,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libsmbldaphelper-samba4.so": 29944
             }
         },

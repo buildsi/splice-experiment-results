@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libacl.so.1.1.2301",
                     "spliced_lib": "libacl.so.1.1.2301",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.719329833984375e-05
+                    "seconds": 3.552436828613281e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libacl.so.1.1.2301",
                     "spliced_lib": "libacl.so.1.1.2301",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.5987625122070312e-05
+                    "seconds": 2.193450927734375e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.02638721466064453,
+                    "seconds": 0.0180208683013916,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libacl.so.1.1.2301 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libacl.so.1.1.2301",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libacl.so.1.1.2301",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libacl.so.1.1.2301",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libacl.so.1.1.2301\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libacl.so.1.1.2301\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libacl.so.1.1.2301-abi-laboratory-libacl-so-1-1-2301-libacl-so-1-1-2301.html\nFound link to libacl.so.1.1.2301-2.3.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libacl.so.1.1.2301-2.3.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/acl-2.3.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7573\nERROR: incomplete info for symbol 7855\nERROR: incomplete info for symbol 8066\nERROR: incomplete info for symbol 8543\nERROR: incomplete info for symbol 8846\nERROR: incomplete info for symbol 9417\nERROR: incomplete info for symbol 9667\nERROR: incomplete info for symbol 9800\nERROR: incomplete info for symbol 10255\nERROR: incomplete info for symbol 10479\nERROR: incomplete info for symbol 11140\nERROR: incomplete info for symbol 11276\nERROR: incomplete info for symbol 11575\nERROR: incomplete info for symbol 11799\nERROR: incomplete info for symbol 12036\nERROR: incomplete info for symbol 12303\nERROR: incomplete info for symbol 12496\nERROR: incomplete info for symbol 12573\nERROR: incomplete info for symbol 13806\nERROR: incomplete info for symbol 14189\nERROR: incomplete info for symbol 14545\nERROR: incomplete info for symbol 14950\nERROR: incomplete info for symbol 15161\nERROR: incomplete info for symbol 15372\nERROR: incomplete info for symbol 15583\nERROR: incomplete info for symbol 15682\nERROR: incomplete info for symbol 15954\nERROR: incomplete info for symbol 16036\nERROR: incomplete info for symbol 16475\nERROR: incomplete info for symbol 16956\nERROR: incomplete info for symbol 17202\nERROR: incomplete info for symbol 17386\nERROR: incomplete info for symbol 17549\nERROR: incomplete info for symbol 17600\nERROR: incomplete info for symbol 17651\nERROR: incomplete info for symbol 17820\nERROR: incomplete info for symbol 18135\nERROR: incomplete info for symbol 18508\nERROR: incomplete info for symbol 18635\nERROR: incomplete info for symbol 19636\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-nd9ZQ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libacl.so.1.1.2301-2.3.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libacl.so.1.1.2301-2.3.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/acl-2.3.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 7573\nERROR: incomplete info for symbol 7855\nERROR: incomplete info for symbol 8066\nERROR: incomplete info for symbol 8543\nERROR: incomplete info for symbol 8846\nERROR: incomplete info for symbol 9417\nERROR: incomplete info for symbol 9667\nERROR: incomplete info for symbol 9800\nERROR: incomplete info for symbol 10255\nERROR: incomplete info for symbol 10479\nERROR: incomplete info for symbol 11140\nERROR: incomplete info for symbol 11276\nERROR: incomplete info for symbol 11575\nERROR: incomplete info for symbol 11799\nERROR: incomplete info for symbol 12036\nERROR: incomplete info for symbol 12303\nERROR: incomplete info for symbol 12496\nERROR: incomplete info for symbol 12573\nERROR: incomplete info for symbol 13806\nERROR: incomplete info for symbol 14189\nERROR: incomplete info for symbol 14545\nERROR: incomplete info for symbol 14950\nERROR: incomplete info for symbol 15161\nERROR: incomplete info for symbol 15372\nERROR: incomplete info for symbol 15583\nERROR: incomplete info for symbol 15682\nERROR: incomplete info for symbol 15954\nERROR: incomplete info for symbol 16036\nERROR: incomplete info for symbol 16475\nERROR: incomplete info for symbol 16956\nERROR: incomplete info for symbol 17202\nERROR: incomplete info for symbol 17386\nERROR: incomplete info for symbol 17549\nERROR: incomplete info for symbol 17600\nERROR: incomplete info for symbol 17651\nERROR: incomplete info for symbol 17820\nERROR: incomplete info for symbol 18135\nERROR: incomplete info for symbol 18508\nERROR: incomplete info for symbol 18635\nERROR: incomplete info for symbol 19636\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-n6dLe.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libacl.so.1.1.2301-abi-laboratory-libacl-so-1-1-2301-libacl-so-1-1-2301.html\n",
-                    "return_code": 0,
-                    "seconds": 0.5814700126647949,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libacl.so.1.1.2301\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libacl.so.1.1.2301\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libacl.so.1.1.2301-abi-laboratory-libacl-so-1-1-2301-libacl-so-1-1-2301.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.22007966041564941,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libacl.so.1.1.2301 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libacl.so.1.1.2301 libacl-so-1-1-2301-libacl-so-1-1-2301 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libacl.so.1.1.2301-abi-laboratory-libacl-so-1-1-2301-libacl-so-1-1-2301.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libacl.so.1.1.2301",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libacl.so.1.1.2301",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libacl.so.1.1.2301": 37096,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libacl.so.1.1.2301": 41032,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libacl.so.1.1.2301": 37096
             }
         },

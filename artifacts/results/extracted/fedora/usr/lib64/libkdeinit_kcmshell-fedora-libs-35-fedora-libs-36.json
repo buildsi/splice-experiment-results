@@ -15,15 +15,19 @@
                     "splice_type": "different_lib",
                     "original_lib": "libkdeinit_kcmshell.so",
                     "spliced_lib": "libkdeinit_kcmshell.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.393692016601562e-05
+                    "seconds": 9.036064147949219e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libkdeinit_kcmshell.so",
                     "spliced_lib": "libkdeinit_kcmshell.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
@@ -34,7 +38,7 @@
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.5653128623962402,
+                    "seconds": 0.6883265972137451,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kcmshell.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kcmshell.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kcmshell.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kcmshell.so",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kcmshell.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kcmshell.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kcmshell.so-abi-laboratory-libkdeinit_kcmshell-so-libkdeinit_kcmshell-so.html\nFound link to libkdeinit_kcmshell.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdeinit_kcmshell.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 29634\nERROR: incomplete info for symbol 30851\nERROR: incomplete info for symbol 31614\nReading v-tables\nlibkutils.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-nRrln.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libkdeinit_kcmshell.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libkdeinit_kcmshell.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 29634\nERROR: incomplete info for symbol 30851\nERROR: incomplete info for symbol 31614\nReading v-tables\nlibkutils.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-jK26d.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kcmshell.so-abi-laboratory-libkdeinit_kcmshell-so-libkdeinit_kcmshell-so.html\n",
-                    "return_code": 0,
-                    "seconds": 16.674018383026123,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kcmshell.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kcmshell.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kcmshell.so-abi-laboratory-libkdeinit_kcmshell-so-libkdeinit_kcmshell-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.242628812789917,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kcmshell.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kcmshell.so libkdeinit_kcmshell-so-libkdeinit_kcmshell-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kcmshell.so-abi-laboratory-libkdeinit_kcmshell-so-libkdeinit_kcmshell-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kcmshell.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kcmshell.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kcmshell.so": 61720,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libkdeinit_kcmshell.so": 61552,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libkdeinit_kcmshell.so": 61720
             }
         },

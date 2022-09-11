@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOTecplotTable.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOTecplotTable.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkIOTecplotTable.so.9.0.3",
+                    "spliced_lib": "libvtkIOTecplotTable.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.628036499023438e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkIOTecplotTable.so.9.0.3",
+                    "spliced_lib": "libvtkIOTecplotTable.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.2636184692382812e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (6 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'method vtkStdString vtkTecplotTableReader::GetLastError()' at vtkTecplotTableReader.cxx:379:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'vtkTecplotTableReader* const' has sub-type changes:\n      in unqualified underlying type 'vtkTecplotTableReader*':\n        in pointed to type 'class vtkTecplotTableReader' at vtkTecplotTableReader.h:41:1:\n          type size hasn't changed\n          22 member function changes (7 filtered):\n            'method virtual vtkObjectBase* vtkTecplotTableReader::NewInstanceInternal() const' has some sub-type changes:\n              the vtable offset of method virtual vtkObjectBase* vtkTecplotTableReader::NewInstanceInternal() const changed from 16 to 15\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual int vtkTecplotTableReader::RequestData(vtkInformation*, vtkInformationVector**, vtkInformationVector*)' has some sub-type changes:\n              the vtable offset of method virtual int vtkTecplotTableReader::RequestData(vtkInformation*, vtkInformationVector**, vtkInformationVector*) changed from 74 to 73\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual char* vtkTecplotTableReader::GetFileName()' has some sub-type changes:\n              the vtable offset of method virtual char* vtkTecplotTableReader::GetFileName() changed from 76 to 75\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual void vtkTecplotTableReader::SetFileName(const char*)' has some sub-type changes:\n              the vtable offset of method virtual void vtkTecplotTableReader::SetFileName(const char*) changed from 77 to 76\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual vtkIdType vtkTecplotTableReader::GetMaxRecords()' has some sub-type changes:\n              the vtable offset of method virtual vtkIdType vtkTecplotTableReader::GetMaxRecords() changed from 78 to 77\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual void vtkTecplotTableReader::SetMaxRecords(vtkIdType)' has some sub-type changes:\n              the vtable offset of method virtual void vtkTecplotTableReader::SetMaxRecords(vtkIdType) changed from 79 to 78\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual vtkIdType vtkTecplotTableReader::GetHeaderLines()' has some sub-type changes:\n              the vtable offset of method virtual vtkIdType vtkTecplotTableReader::GetHeaderLines() changed from 80 to 79\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual void vtkTecplotTableReader::SetHeaderLines(vtkIdType)' has some sub-type changes:\n              the vtable offset of method virtual void vtkTecplotTableReader::SetHeaderLines(vtkIdType) changed from 81 to 80\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual vtkIdType vtkTecplotTableReader::GetColumnNamesOnLine()' has some sub-type changes:\n              the vtable offset of method virtual vtkIdType vtkTecplotTableReader::GetColumnNamesOnLine() changed from 82 to 81\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual void vtkTecplotTableReader::SetColumnNamesOnLine(vtkIdType)' has some sub-type changes:\n              the vtable offset of method virtual void vtkTecplotTableReader::SetColumnNamesOnLine(vtkIdType) changed from 83 to 82\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual vtkIdType vtkTecplotTableReader::GetSkipColumnNames()' has some sub-type changes:\n              the vtable offset of method virtual vtkIdType vtkTecplotTableReader::GetSkipColumnNames() changed from 84 to 83\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual void vtkTecplotTableReader::SetSkipColumnNames(vtkIdType)' has some sub-type changes:\n              the vtable offset of method virtual void vtkTecplotTableReader::SetSkipColumnNames(vtkIdType) changed from 85 to 84\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual void vtkTecplotTableReader::SetPedigreeIdArrayName(const char*)' has some sub-type changes:\n              the vtable offset of method virtual void vtkTecplotTableReader::SetPedigreeIdArrayName(const char*) changed from 86 to 85\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual char* vtkTecplotTableReader::GetPedigreeIdArrayName()' has some sub-type changes:\n              the vtable offset of method virtual char* vtkTecplotTableReader::GetPedigreeIdArrayName() changed from 87 to 86\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual void vtkTecplotTableReader::SetGeneratePedigreeIds(bool)' has some sub-type changes:\n              the vtable offset of method virtual void vtkTecplotTableReader::SetGeneratePedigreeIds(bool) changed from 88 to 87\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual bool vtkTecplotTableReader::GetGeneratePedigreeIds()' has some sub-type changes:\n              the vtable offset of method virtual bool vtkTecplotTableReader::GetGeneratePedigreeIds() changed from 89 to 88\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual void vtkTecplotTableReader::GeneratePedigreeIdsOn()' has some sub-type changes:\n              the vtable offset of method virtual void vtkTecplotTableReader::GeneratePedigreeIdsOn() changed from 90 to 89\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual void vtkTecplotTableReader::GeneratePedigreeIdsOff()' has some sub-type changes:\n              the vtable offset of method virtual void vtkTecplotTableReader::GeneratePedigreeIdsOff() changed from 91 to 90\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual void vtkTecplotTableReader::SetOutputPedigreeIds(bool)' has some sub-type changes:\n              the vtable offset of method virtual void vtkTecplotTableReader::SetOutputPedigreeIds(bool) changed from 92 to 91\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual bool vtkTecplotTableReader::GetOutputPedigreeIds()' has some sub-type changes:\n              the vtable offset of method virtual bool vtkTecplotTableReader::GetOutputPedigreeIds() changed from 93 to 92\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual void vtkTecplotTableReader::OutputPedigreeIdsOn()' has some sub-type changes:\n              the vtable offset of method virtual void vtkTecplotTableReader::OutputPedigreeIdsOn() changed from 94 to 93\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n            'method virtual void vtkTecplotTableReader::OutputPedigreeIdsOff()' has some sub-type changes:\n              the vtable offset of method virtual void vtkTecplotTableReader::OutputPedigreeIdsOff() changed from 95 to 94\n                note that this is an ABI incompatible change to the vtable of class vtkTecplotTableReader\n          no data member change (1 filtered);\n\n",
+                    "return_code": 12,
+                    "seconds": 19.2150936126709,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOTecplotTable.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOTecplotTable.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOTecplotTable.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOTecplotTable.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOTecplotTable.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOTecplotTable.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOTecplotTable.so.9.0.3-abi-laboratory-libvtkIOTecplotTable-so-9-0-3-libvtkIOTecplotTable-so-9-1-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.2219400405883789,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOTecplotTable.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOTecplotTable.so.9.1.0 libvtkIOTecplotTable-so-9-0-3-libvtkIOTecplotTable-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOTecplotTable.so.9.0.3-abi-laboratory-libvtkIOTecplotTable-so-9-0-3-libvtkIOTecplotTable-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOTecplotTable.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOTecplotTable.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOTecplotTable.so.9.0.3": 66880,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOTecplotTable.so.9.1.0": 67416
+            }
+        },
+        "experiment": "usr/lib64/libvtkIOTecplotTable-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkIOTecplotTable.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkIOTecplotTable.so.9.0.3",
+        "different_libs": true
+    }
+]

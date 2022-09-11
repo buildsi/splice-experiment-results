@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs.so.1.14.37.2"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs.so.1.14.39.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libibverbs.so.1.14.37.2",
+                    "spliced_lib": "libibverbs.so.1.14.39.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.866455078125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libibverbs.so.1.14.37.2",
+                    "spliced_lib": "libibverbs.so.1.14.39.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 0.0001804828643798828
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (4 filtered out), 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
+                    "return_code": 0,
+                    "seconds": 0.1541295051574707,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs.so.1.14.37.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs.so.1.14.39.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs.so.1.14.39.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs.so.1.14.37.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs.so.1.14.37.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs.so.1.14.39.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs.so.1.14.37.2-abi-laboratory-libibverbs-so-1-14-37-2-libibverbs-so-1-14-39-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.19159698486328125,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs.so.1.14.37.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs.so.1.14.39.0 libibverbs-so-1-14-37-2-libibverbs-so-1-14-39-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs.so.1.14.37.2-abi-laboratory-libibverbs-so-1-14-37-2-libibverbs-so-1-14-39-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs.so.1.14.39.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs.so.1.14.37.2",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs.so.1.14.37.2": 138864,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs.so.1.14.39.0": 138744
+            }
+        },
+        "experiment": "usr/lib64/libibverbs-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs.so.1.14.39.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs.so.1.14.37.2",
+        "different_libs": true
+    }
+]

@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libsigsegv.so.2.0.7",
                     "spliced_lib": "libsigsegv.so.2.0.7",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.0517578125e-05
+                    "seconds": 2.86102294921875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libsigsegv.so.2.0.7",
                     "spliced_lib": "libsigsegv.so.2.0.7",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.106231689453125e-06
+                    "seconds": 1.0251998901367188e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.018923521041870117,
+                    "seconds": 0.015110492706298828,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigsegv.so.2.0.7 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigsegv.so.2.0.7",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigsegv.so.2.0.7",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigsegv.so.2.0.7",
@@ -44,13 +48,13 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigsegv.so.2.0.7\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigsegv.so.2.0.7\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigsegv.so.2.0.7-abi-laboratory-libsigsegv-so-2-0-7-libsigsegv-so-2-0-7.html\nFound link to libsigsegv.so.2.0.7-2.14-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsigsegv.so.2.0.7-2.14-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2921\nERROR: incomplete info for symbol 5392\nERROR: incomplete info for symbol 5418\nERROR: incomplete info for symbol 5660\nERROR: incomplete info for symbol 5820\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-FcUAZ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsigsegv.so.2.0.7-2.14-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsigsegv.so.2.0.7-2.14-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2921\nERROR: incomplete info for symbol 5392\nERROR: incomplete info for symbol 5418\nERROR: incomplete info for symbol 5660\nERROR: incomplete info for symbol 5820\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-RHDz5.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigsegv.so.2.0.7-abi-laboratory-libsigsegv-so-2-0-7-libsigsegv-so-2-0-7.html\n",
-                    "return_code": 0,
-                    "seconds": 0.44274282455444336,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigsegv.so.2.0.7\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigsegv.so.2.0.7\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigsegv.so.2.0.7-abi-laboratory-libsigsegv-so-2-0-7-libsigsegv-so-2-0-7.html\nFound link to libsigsegv.so.2.0.7-2.14-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsigsegv.so.2.0.7-2.14-2.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2921\nERROR: incomplete info for symbol 5392\nERROR: incomplete info for symbol 5418\nERROR: incomplete info for symbol 5660\nERROR: incomplete info for symbol 5820\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-N9g2Y.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsigsegv.so.2.0.7-2.14-2.fc36.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file libsigsegv.so.2.0.7-2.14-2.fc36.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.29882287979125977,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigsegv.so.2.0.7 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigsegv.so.2.0.7 libsigsegv-so-2-0-7-libsigsegv-so-2-0-7 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigsegv.so.2.0.7-abi-laboratory-libsigsegv-so-2-0-7-libsigsegv-so-2-0-7.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsigsegv.so.2.0.7",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsigsegv.so.2.0.7",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]

@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libdriver_sqlite.so",
                     "spliced_lib": "libdriver_sqlite.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.24249267578125e-05
+                    "seconds": 3.337860107421875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libdriver_sqlite.so",
                     "spliced_lib": "libdriver_sqlite.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.0251998901367188e-05
+                    "seconds": 8.821487426757812e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.034178733825683594,
+                    "seconds": 0.0372929573059082,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdriver_sqlite.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdriver_sqlite.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so",
@@ -44,21 +48,21 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdriver_sqlite.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so-abi-laboratory-libdriver_sqlite-so-libdriver_sqlite-so.html\nFound link to libdriver_sqlite.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdriver_sqlite.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-GKW29.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdriver_sqlite.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdriver_sqlite.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-4eS3B.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so-abi-laboratory-libdriver_sqlite-so-libdriver_sqlite-so.html\n",
-                    "return_code": 0,
-                    "seconds": 6.090370178222656,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdriver_sqlite.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so-abi-laboratory-libdriver_sqlite-so-libdriver_sqlite-so.html\nFound link to libdriver_sqlite.so-2.3.17.1-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libdriver_sqlite.so-2.3.17.1-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.17.1-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-yNpwL.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdriver_sqlite.so-2.3.19.1-3.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libdriver_sqlite.so-2.3.19.1-3.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-0vnWB.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 50%\nSource compatibility: 50%\nTotal binary compatibility problems: 5, warnings: 8\nTotal source compatibility problems: 2, warnings: 5\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so-abi-laboratory-libdriver_sqlite-so-libdriver_sqlite-so.html\n",
+                    "return_code": 1,
+                    "seconds": 7.283932685852051,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdriver_sqlite.so libdriver_sqlite-so-libdriver_sqlite-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so-abi-laboratory-libdriver_sqlite-so-libdriver_sqlite-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdriver_sqlite.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so": 24576,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdriver_sqlite.so": 24576
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdriver_sqlite.so": 24488,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdriver_sqlite.so": 23880
             }
         },
         "experiment": "usr/lib64/dovecot/libdriver_sqlite-fedora-libs-34-fedora-libs-35",

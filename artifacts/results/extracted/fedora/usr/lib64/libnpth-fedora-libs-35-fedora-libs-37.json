@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libnpth.so.0.1.2",
                     "spliced_lib": "libnpth.so.0.1.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.790855407714844e-05
+                    "seconds": 5.0067901611328125e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libnpth.so.0.1.2",
                     "spliced_lib": "libnpth.so.0.1.2",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.002716064453125e-05
+                    "seconds": 2.2649765014648438e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.021327733993530273,
+                    "seconds": 0.021747112274169922,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnpth.so.0.1.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnpth.so.0.1.2",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnpth.so.0.1.2",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnpth.so.0.1.2",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnpth.so.0.1.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnpth.so.0.1.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnpth.so.0.1.2-abi-laboratory-libnpth-so-0-1-2-libnpth-so-0-1-2.html\nFound link to libnpth.so.0.1.2-1.6-8.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnpth.so.0.1.2-1.6-8.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6795\nERROR: incomplete info for symbol 7172\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-nn7Gs.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libnpth.so.0.1.2-1.6-8.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libnpth.so.0.1.2-1.6-8.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 6795\nERROR: incomplete info for symbol 7172\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-rddQJ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnpth.so.0.1.2-abi-laboratory-libnpth-so-0-1-2-libnpth-so-0-1-2.html\n",
-                    "return_code": 0,
-                    "seconds": 0.4541914463043213,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnpth.so.0.1.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnpth.so.0.1.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnpth.so.0.1.2-abi-laboratory-libnpth-so-0-1-2-libnpth-so-0-1-2.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.24418163299560547,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnpth.so.0.1.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnpth.so.0.1.2 libnpth-so-0-1-2-libnpth-so-0-1-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnpth.so.0.1.2-abi-laboratory-libnpth-so-0-1-2-libnpth-so-0-1-2.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnpth.so.0.1.2",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnpth.so.0.1.2",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnpth.so.0.1.2": 24120,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libnpth.so.0.1.2": 23952,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libnpth.so.0.1.2": 24120
             }
         },

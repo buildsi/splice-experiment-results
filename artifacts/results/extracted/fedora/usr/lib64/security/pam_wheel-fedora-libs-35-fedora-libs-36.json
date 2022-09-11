@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "pam_wheel.so",
                     "spliced_lib": "pam_wheel.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.5272369384765625e-05
+                    "seconds": 7.939338684082031e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "pam_wheel.so",
                     "spliced_lib": "pam_wheel.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.867813110351562e-06
+                    "seconds": 7.3909759521484375e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.010209083557128906,
+                    "seconds": 0.015934228897094727,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_wheel.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_wheel.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_wheel.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_wheel.so",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_wheel.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_wheel.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_wheel.so-abi-laboratory-pam_wheel-so-pam_wheel-so.html\nFound link to pam_wheel.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_wheel.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-An6p7.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_wheel.so-1.5.2-12.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_wheel.so-1.5.2-12.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.2-12.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-zv9o5.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_wheel.so-abi-laboratory-pam_wheel-so-pam_wheel-so.html\n",
-                    "return_code": 0,
-                    "seconds": 0.4940338134765625,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_wheel.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_wheel.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_wheel.so-abi-laboratory-pam_wheel-so-pam_wheel-so.html\nFound link to pam_wheel.so-1.5.2-7.fc35.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file pam_wheel.so-1.5.2-7.fc35.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.12366104125976562,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_wheel.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_wheel.so pam_wheel-so-pam_wheel-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_wheel.so-abi-laboratory-pam_wheel-so-pam_wheel-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_wheel.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_wheel.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_wheel.so": 15960,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_wheel.so": 15776,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_wheel.so": 15960
             }
         },

@@ -6,7 +6,7 @@
             "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1.0.0"
         ],
         "paths": {},
         "predictions": {
@@ -14,43 +14,47 @@
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libsamba-errors.so.1",
-                    "spliced_lib": "libsamba-errors.so.1",
+                    "spliced_lib": "libsamba-errors.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.8848648071289062e-05
+                    "seconds": 3.3855438232421875e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libsamba-errors.so.1",
-                    "spliced_lib": "libsamba-errors.so.1",
+                    "spliced_lib": "libsamba-errors.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.1920928955078125e-05
+                    "seconds": 1.049041748046875e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.02357196807861328,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1",
+                    "message": "Functions changes summary: 15 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n15 Removed functions:\n\n  [D] 'function const char* get_friendly_nt_error_msg(NTSTATUS)'    {get_friendly_nt_error_msg@@SAMBA_ERRORS_1}\n  [D] 'function const char* get_friendly_werror_msg(WERROR)'    {get_friendly_werror_msg@@SAMBA_ERRORS_1}\n  [D] 'function const char* get_nt_error_c_code(TALLOC_CTX*, NTSTATUS)'    {get_nt_error_c_code@@SAMBA_ERRORS_1}\n  [D] 'function const char* hresult_errstr(HRESULT)'    {hresult_errstr@@SAMBA_ERRORS_1}\n  [D] 'function const char* hresult_errstr_const(HRESULT)'    {hresult_errstr_const@@SAMBA_ERRORS_1}\n  [D] 'function int map_errno_from_nt_status(NTSTATUS)'    {map_errno_from_nt_status@@SAMBA_ERRORS_1}\n  [D] 'function NTSTATUS map_nt_error_from_unix_common(int)'    {map_nt_error_from_unix_common@@SAMBA_ERRORS_1}\n  [D] 'function const char* nt_errstr(NTSTATUS)'    {nt_errstr@@SAMBA_ERRORS_1}\n  [D] 'function NTSTATUS nt_status_squash(NTSTATUS)'    {nt_status_squash@@SAMBA_ERRORS_1}\n  [D] 'function NTSTATUS nt_status_string_to_code(const char*)'    {nt_status_string_to_code@@SAMBA_ERRORS_1}\n  [D] 'function void ntstatus_to_dos(NTSTATUS, uint8_t*, uint32_t*)'    {ntstatus_to_dos@@SAMBA_ERRORS_1}\n  [D] 'function WERROR ntstatus_to_werror(NTSTATUS)'    {ntstatus_to_werror@@SAMBA_ERRORS_1}\n  [D] 'function WERROR unix_to_werror(int)'    {unix_to_werror@@SAMBA_ERRORS_1}\n  [D] 'function NTSTATUS werror_to_ntstatus(WERROR)'    {werror_to_ntstatus@@SAMBA_ERRORS_1}\n  [D] 'function const char* win_errstr(WERROR)'    {win_errstr@@SAMBA_ERRORS_1}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.025577545166015625,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1-abi-laboratory-libsamba-errors-so-1-libsamba-errors-so-1.html\nFound link to libsamba-errors.so.1-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsamba-errors.so.1-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 435\nERROR: incomplete info for symbol 501\nERROR: incomplete info for symbol 546\nERROR: incomplete info for symbol 591\nERROR: incomplete info for symbol 700\nERROR: incomplete info for symbol 827\nERROR: incomplete info for symbol 859\nERROR: incomplete info for symbol 1031\nERROR: incomplete info for symbol 1087\nERROR: incomplete info for symbol 1126\nERROR: incomplete info for symbol 1190\nERROR: incomplete info for symbol 1394\nERROR: incomplete info for symbol 1483\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-owdLO.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsamba-errors.so.1-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsamba-errors.so.1-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 435\nERROR: incomplete info for symbol 501\nERROR: incomplete info for symbol 546\nERROR: incomplete info for symbol 591\nERROR: incomplete info for symbol 700\nERROR: incomplete info for symbol 827\nERROR: incomplete info for symbol 859\nERROR: incomplete info for symbol 1031\nERROR: incomplete info for symbol 1087\nERROR: incomplete info for symbol 1126\nERROR: incomplete info for symbol 1190\nERROR: incomplete info for symbol 1394\nERROR: incomplete info for symbol 1483\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-6QOaS.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1-abi-laboratory-libsamba-errors-so-1-libsamba-errors-so-1.html\n",
-                    "return_code": 0,
-                    "seconds": 12.858423709869385,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1 libsamba-errors-so-1-libsamba-errors-so-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1-abi-laboratory-libsamba-errors-so-1-libsamba-errors-so-1.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1-abi-laboratory-libsamba-errors-so-1-libsamba-errors-so-1-0-0.html\nFound link to libsamba-errors.so.1-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsamba-errors.so.1-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 435\nERROR: incomplete info for symbol 501\nERROR: incomplete info for symbol 546\nERROR: incomplete info for symbol 591\nERROR: incomplete info for symbol 700\nERROR: incomplete info for symbol 827\nERROR: incomplete info for symbol 859\nERROR: incomplete info for symbol 1031\nERROR: incomplete info for symbol 1087\nERROR: incomplete info for symbol 1126\nERROR: incomplete info for symbol 1190\nERROR: incomplete info for symbol 1394\nERROR: incomplete info for symbol 1483\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-eiMd4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsamba-errors.so.1.0.0-4.17.0-0.8.rc3.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libsamba-errors.so.1.0.0-4.17.0-0.8.rc3.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/samba-4.17.0-0.8.rc3.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 435\nERROR: incomplete info for symbol 501\nERROR: incomplete info for symbol 546\nERROR: incomplete info for symbol 591\nERROR: incomplete info for symbol 700\nERROR: incomplete info for symbol 827\nERROR: incomplete info for symbol 859\nERROR: incomplete info for symbol 1031\nERROR: incomplete info for symbol 1087\nERROR: incomplete info for symbol 1126\nERROR: incomplete info for symbol 1190\nERROR: incomplete info for symbol 1394\nERROR: incomplete info for symbol 1483\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-4GUd0.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 15, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1-abi-laboratory-libsamba-errors-so-1-libsamba-errors-so-1-0-0.html\n",
+                    "return_code": 1,
+                    "seconds": 16.120092153549194,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1.0.0 libsamba-errors-so-1-libsamba-errors-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1-abi-laboratory-libsamba-errors-so-1-libsamba-errors-so-1-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
@@ -58,13 +62,13 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1": 1355608,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1": 1355608
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1.0.0": 1355624
             }
         },
         "experiment": "usr/lib64/libsamba-errors-fedora-libs-36-fedora-libs-37",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libsamba-errors.so.1.0.0",
         "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libsamba-errors.so.1",
         "different_libs": true
     }

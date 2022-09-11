@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libqmllocalstorageplugin.so",
                     "spliced_lib": "libqmllocalstorageplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 4.9591064453125e-05
+                    "seconds": 9.107589721679688e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libqmllocalstorageplugin.so",
                     "spliced_lib": "libqmllocalstorageplugin.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 8.58306884765625e-06
+                    "seconds": 2.002716064453125e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 1.7607841491699219,
+                    "seconds": 2.5919504165649414,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so-abi-laboratory-libqmllocalstorageplugin-so-libqmllocalstorageplugin-so.html\nFound link to libqmllocalstorageplugin.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqmllocalstorageplugin.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/qml/QtQuick/LocalStorage/../../../../../../.dwz/qt5-qtdeclarative-5.15.5-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Qml.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Ykqje.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqmllocalstorageplugin.so-5.15.5-2.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqmllocalstorageplugin.so-5.15.5-2.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/qml/QtQuick/LocalStorage/../../../../../../.dwz/qt5-qtdeclarative-5.15.5-2.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Qml.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-4uVcJ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so-abi-laboratory-libqmllocalstorageplugin-so-libqmllocalstorageplugin-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so-abi-laboratory-libqmllocalstorageplugin-so-libqmllocalstorageplugin-so.html\nFound link to libqmllocalstorageplugin.so-5.15.2-7.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libqmllocalstorageplugin.so-5.15.2-7.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/qml/QtQuick/LocalStorage/../../../../../../.dwz/qt5-qtdeclarative-5.15.2-7.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Qml.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-lumZy.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqmllocalstorageplugin.so-5.15.2-8.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libqmllocalstorageplugin.so-5.15.2-8.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/qml/QtQuick/LocalStorage/../../../../../../.dwz/qt5-qtdeclarative-5.15.2-8.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Qml.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-zOxyy.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so-abi-laboratory-libqmllocalstorageplugin-so-libqmllocalstorageplugin-so.html\n",
                     "return_code": 0,
-                    "seconds": 46.94296193122864,
+                    "seconds": 64.84503507614136,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so libqmllocalstorageplugin-so-libqmllocalstorageplugin-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so-abi-laboratory-libqmllocalstorageplugin-so-libqmllocalstorageplugin-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so",
@@ -57,8 +61,8 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so": 62976,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so": 62976
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so": 61656,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so": 62056
             }
         },
         "experiment": "usr/lib64/qt5/qml/QtQuick/LocalStorage/libqmllocalstorageplugin-fedora-libs-34-fedora-libs-35",

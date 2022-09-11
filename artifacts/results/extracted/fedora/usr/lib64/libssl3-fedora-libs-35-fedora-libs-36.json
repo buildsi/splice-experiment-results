@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libssl3.so",
                     "spliced_lib": "libssl3.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.0001163482666015625
+                    "seconds": 0.00012993812561035156
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libssl3.so",
                     "spliced_lib": "libssl3.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00010704994201660156
+                    "seconds": 8.726119995117188e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.21059513092041016,
+                    "seconds": 0.22082042694091797,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssl3.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssl3.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssl3.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssl3.so",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssl3.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssl3.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssl3.so-abi-laboratory-libssl3-so-libssl3-so.html\nFound link to libssl3.so-3.81.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libssl3.so-3.81.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/nss-3.81.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-bnURM.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libssl3.so-3.81.0-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libssl3.so-3.81.0-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/nss-3.81.0-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-fEYkP.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssl3.so-abi-laboratory-libssl3-so-libssl3-so.html\n",
-                    "return_code": 0,
-                    "seconds": 4.357310056686401,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssl3.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssl3.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssl3.so-abi-laboratory-libssl3-so-libssl3-so.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.202805757522583,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssl3.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssl3.so libssl3-so-libssl3-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssl3.so-abi-laboratory-libssl3-so-libssl3-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssl3.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssl3.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssl3.so": 430944,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libssl3.so": 431024,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libssl3.so": 430944
             }
         },

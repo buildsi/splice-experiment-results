@@ -15,42 +15,51 @@
                     "splice_type": "different_lib",
                     "original_lib": "libmagic.so.1.0.0",
                     "spliced_lib": "libmagic.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 4.9114227294921875e-05
+                    "message": [
+                        "__dprintf_chk",
+                        "vfork",
+                        "_exit",
+                        "execvp"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.222724914550781e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libmagic.so.1.0.0",
                     "spliced_lib": "libmagic.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.2636184692382812e-05
+                    "seconds": 1.4066696166992188e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.04682207107543945,
+                    "message": "Functions changes summary: 0 Removed, 1 Changed (15 filtered out), 1 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Added function:\n\n  [A] 'function char* file_printable(magic_set*, char*, size_t, const char*, size_t)'    {file_printable}\n\n1 function with some indirect sub-type change:\n\n  [C] 'function const char* magic_buffer(magic_set*, void*, size_t)' at magic.c:549:1 has some indirect sub-type changes:\n    parameter 1 of type 'magic_set*' has sub-type changes:\n      in pointed to type 'struct magic_set' at file.h:445:1:\n        type size changed from 2368 to 2432 (in bits)\n        1 data member insertion:\n          'locale_t c_lc_ctype', at offset 2368 (in bits) at file.h:495:1\n        1 data member change:\n          type of 'mlist* mlist[2]' changed:\n            array element type 'mlist*' changed:\n              in pointed to type 'struct mlist' at file.h:411:1:\n                type size changed from 320 to 384 (in bits)\n                1 data member insertion:\n                  'file_regex_t** magic_rxcomp', at offset 64 (in bits) at file.h:413:1\n                4 data member changes:\n                  type of 'uint32_t nmagic' changed:\n                    typedef name changed from uint32_t to size_t at stddef.h:214:1\n                    underlying type 'typedef __uint32_t' at types.h:42:1 changed:\n                      entity changed from 'typedef __uint32_t' to compatible type 'unsigned long int'\n                        type name changed from 'unsigned int' to 'unsigned long int'\n                        type size changed from 32 to 64 (in bits)\n                  and offset changed from 64 to 128 (in bits) (by +64 bits)\n                  'void* map' offset changed from 128 to 192 (in bits) (by +64 bits)\n                  'mlist* next' offset changed from 192 to 256 (in bits) (by +64 bits)\n                  'mlist* prev' offset changed from 256 to 320 (in bits) (by +64 bits)\n            type size hasn't changed\n\n",
+                    "return_code": 4,
+                    "seconds": 0.07574343681335449,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0-abi-laboratory-libmagic-so-1-0-0-libmagic-so-1-0-0.html\nFound link to libmagic.so.1.0.0-5.41-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libmagic.so.1.0.0-5.41-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/file-5.41-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 29918\nERROR: incomplete info for symbol 30709\nERROR: incomplete info for symbol 30927\nERROR: incomplete info for symbol 32090\nERROR: incomplete info for symbol 32410\nERROR: incomplete info for symbol 32436\nERROR: incomplete info for symbol 32462\nERROR: incomplete info for symbol 32488\nERROR: incomplete info for symbol 32521\nERROR: incomplete info for symbol 32774\nERROR: incomplete info for symbol 32846\nERROR: incomplete info for symbol 42632\nERROR: incomplete info for symbol 42708\nERROR: incomplete info for symbol 42784\nERROR: incomplete info for symbol 42860\nERROR: incomplete info for symbol 45303\nERROR: incomplete info for symbol 45379\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-gvdMb.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libmagic.so.1.0.0-5.41-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libmagic.so.1.0.0-5.41-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/file-5.41-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 29918\nERROR: incomplete info for symbol 30709\nERROR: incomplete info for symbol 30927\nERROR: incomplete info for symbol 32090\nERROR: incomplete info for symbol 32410\nERROR: incomplete info for symbol 32436\nERROR: incomplete info for symbol 32462\nERROR: incomplete info for symbol 32488\nERROR: incomplete info for symbol 32521\nERROR: incomplete info for symbol 32774\nERROR: incomplete info for symbol 32846\nERROR: incomplete info for symbol 42632\nERROR: incomplete info for symbol 42708\nERROR: incomplete info for symbol 42784\nERROR: incomplete info for symbol 42860\nERROR: incomplete info for symbol 45303\nERROR: incomplete info for symbol 45379\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-YkWix.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0-abi-laboratory-libmagic-so-1-0-0-libmagic-so-1-0-0.html\n",
-                    "return_code": 0,
-                    "seconds": 1.018089771270752,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0-abi-laboratory-libmagic-so-1-0-0-libmagic-so-1-0-0.html\nFound link to libmagic.so.1.0.0-5.41-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libmagic.so.1.0.0-5.41-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/file-5.41-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 29918\nERROR: incomplete info for symbol 30709\nERROR: incomplete info for symbol 30927\nERROR: incomplete info for symbol 32090\nERROR: incomplete info for symbol 32410\nERROR: incomplete info for symbol 32436\nERROR: incomplete info for symbol 32462\nERROR: incomplete info for symbol 32488\nERROR: incomplete info for symbol 32521\nERROR: incomplete info for symbol 32774\nERROR: incomplete info for symbol 32846\nERROR: incomplete info for symbol 42632\nERROR: incomplete info for symbol 42708\nERROR: incomplete info for symbol 42784\nERROR: incomplete info for symbol 42860\nERROR: incomplete info for symbol 45303\nERROR: incomplete info for symbol 45379\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-RHTRg.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libmagic.so.1.0.0-5.42-4.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libmagic.so.1.0.0-5.42-4.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/file-5.42-4.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 24856\nERROR: incomplete info for symbol 25652\nERROR: incomplete info for symbol 25993\nERROR: incomplete info for symbol 27096\nERROR: incomplete info for symbol 27418\nERROR: incomplete info for symbol 27444\nERROR: incomplete info for symbol 27470\nERROR: incomplete info for symbol 27496\nERROR: incomplete info for symbol 27529\nERROR: incomplete info for symbol 27883\nERROR: incomplete info for symbol 27955\nERROR: incomplete info for symbol 35058\nERROR: incomplete info for symbol 35134\nERROR: incomplete info for symbol 35210\nERROR: incomplete info for symbol 35286\nERROR: incomplete info for symbol 37678\nERROR: incomplete info for symbol 37754\nERROR: incomplete info for symbol 65414\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-HpcoK.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 55.6%\nSource compatibility: 100%\nTotal binary compatibility problems: 2, warnings: 3\nTotal source compatibility problems: 0, warnings: 3\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0-abi-laboratory-libmagic-so-1-0-0-libmagic-so-1-0-0.html\n",
+                    "return_code": 1,
+                    "seconds": 1.4364018440246582,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0 libmagic-so-1-0-0-libmagic-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0-abi-laboratory-libmagic-so-1-0-0-libmagic-so-1-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
@@ -58,7 +67,7 @@
         "stats": {
             "sizes_bytes": {
                 "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmagic.so.1.0.0": 165744,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0": 165744
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmagic.so.1.0.0": 169856
             }
         },
         "experiment": "usr/lib64/libmagic-fedora-libs-36-fedora-libs-37",

@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkViewsContext2D.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkViewsContext2D.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkViewsContext2D.so.9.0.3",
+                    "spliced_lib": "libvtkViewsContext2D.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.748603820800781e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtkViewsContext2D.so.9.0.3",
+                    "spliced_lib": "libvtkViewsContext2D.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.337860107421875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 2 Changed (31 filtered out), 3 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n3 Added functions:\n\n  [A] 'method virtual void vtkContextInteractorStyle::OnLeftButtonDoubleClick()'    {_ZN25vtkContextInteractorStyle23OnLeftButtonDoubleClickEv}\n    note that this adds a new entry to the vtable of class vtkContextInteractorStyle\n  [A] 'method virtual void vtkContextInteractorStyle::OnMiddleButtonDoubleClick()'    {_ZN25vtkContextInteractorStyle25OnMiddleButtonDoubleClickEv}\n    note that this adds a new entry to the vtable of class vtkContextInteractorStyle\n  [A] 'method virtual void vtkContextInteractorStyle::OnRightButtonDoubleClick()'    {_ZN25vtkContextInteractorStyle24OnRightButtonDoubleClickEv}\n    note that this adds a new entry to the vtable of class vtkContextInteractorStyle\n\n2 functions with some indirect sub-type change:\n\n  [C] 'method void vtkContextInteractorStyle::BeginProcessingEvent()' at vtkContextInteractorStyle.cxx:162:1 has some indirect sub-type changes:\n    implicit parameter 0 of type 'vtkContextInteractorStyle* const' has sub-type changes:\n      in unqualified underlying type 'vtkContextInteractorStyle*':\n        in pointed to type 'class vtkContextInteractorStyle' at vtkContextInteractorStyle.h:36:1:\n          type size hasn't changed\n          3 member function insertions:\n            'method virtual void vtkContextInteractorStyle::OnLeftButtonDoubleClick()' at vtkContextInteractorStyle.cxx:261:1, virtual at voffset 71/160    {_ZN25vtkContextInteractorStyle23OnLeftButtonDoubleClickEv}\n            'method virtual void vtkContextInteractorStyle::OnMiddleButtonDoubleClick()' at vtkContextInteractorStyle.cxx:317:1, virtual at voffset 72/160    {_ZN25vtkContextInteractorStyle25OnMiddleButtonDoubleClickEv}\n            'method virtual void vtkContextInteractorStyle::OnRightButtonDoubleClick()' at vtkContextInteractorStyle.cxx:373:1, virtual at voffset 73/160    {_ZN25vtkContextInteractorStyle24OnRightButtonDoubleClickEv}\n          16 member function changes (7 filtered):\n            'method virtual vtkObjectBase* vtkContextInteractorStyle::NewInstanceInternal() const' has some sub-type changes:\n              the vtable offset of method virtual vtkObjectBase* vtkContextInteractorStyle::NewInstanceInternal() const changed from 16 to 15\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnChar()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnChar() changed from 42 to 41\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnMouseMove()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnMouseMove() changed from 65 to 64\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnLeftButtonDown()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnLeftButtonDown() changed from 66 to 65\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnLeftButtonUp()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnLeftButtonUp() changed from 67 to 66\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnMiddleButtonDown()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnMiddleButtonDown() changed from 68 to 67\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnMiddleButtonUp()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnMiddleButtonUp() changed from 69 to 68\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnRightButtonDown()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnRightButtonDown() changed from 70 to 69\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnRightButtonUp()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnRightButtonUp() changed from 71 to 70\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnMouseWheelForward()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnMouseWheelForward() changed from 72 to 74\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnMouseWheelBackward()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnMouseWheelBackward() changed from 73 to 75\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnKeyPress()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnKeyPress() changed from 82 to 93\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnKeyRelease()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnKeyRelease() changed from 83 to 94\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnSceneModified()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnSceneModified() changed from 147 to 158\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::OnSelection(unsigned int*)' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::OnSelection(unsigned int*) changed from 148 to 159\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n            'method virtual void vtkContextInteractorStyle::RenderNow()' has some sub-type changes:\n              the vtable offset of method virtual void vtkContextInteractorStyle::RenderNow() changed from 149 to 160\n                note that this is an ABI incompatible change to the vtable of class vtkContextInteractorStyle\n\n  [C] 'method virtual vtkContext2D* vtkContextView::GetContext()' at vtkContextView.cxx:63:1 has some indirect sub-type changes:\n    the vtable offset of method virtual vtkContext2D* vtkContextView::GetContext() changed from 42 to 41\n      note that this is an ABI incompatible change to the vtable of class vtkContextView\n    implicit parameter 0 of type 'vtkContextView*' has sub-type changes:\n      in pointed to type 'class vtkContextView' at vtkContextView.h:38:1:\n        type size hasn't changed\n        4 member function changes (8 filtered):\n          'method virtual vtkObjectBase* vtkContextView::NewInstanceInternal() const' has some sub-type changes:\n            the vtable offset of method virtual vtkObjectBase* vtkContextView::NewInstanceInternal() const changed from 16 to 15\n              note that this is an ABI incompatible change to the vtable of class vtkContextView\n          'method virtual void vtkContextView::SetContext(vtkContext2D*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkContextView::SetContext(vtkContext2D*) changed from 41 to 40\n              note that this is an ABI incompatible change to the vtable of class vtkContextView\n          'method virtual void vtkContextView::SetScene(vtkContextScene*)' has some sub-type changes:\n            the vtable offset of method virtual void vtkContextView::SetScene(vtkContextScene*) changed from 43 to 42\n              note that this is an ABI incompatible change to the vtable of class vtkContextView\n          'method virtual vtkContextScene* vtkContextView::GetScene()' has some sub-type changes:\n            the vtable offset of method virtual vtkContextScene* vtkContextView::GetScene() changed from 44 to 43\n              note that this is an ABI incompatible change to the vtable of class vtkContextView\n\n",
+                    "return_code": 12,
+                    "seconds": 18.743757963180542,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkViewsContext2D.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkViewsContext2D.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkViewsContext2D.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkViewsContext2D.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkViewsContext2D.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkViewsContext2D.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkViewsContext2D.so.9.0.3-abi-laboratory-libvtkViewsContext2D-so-9-0-3-libvtkViewsContext2D-so-9-1-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.2106006145477295,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkViewsContext2D.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkViewsContext2D.so.9.1.0 libvtkViewsContext2D-so-9-0-3-libvtkViewsContext2D-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkViewsContext2D.so.9.0.3-abi-laboratory-libvtkViewsContext2D-so-9-0-3-libvtkViewsContext2D-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkViewsContext2D.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkViewsContext2D.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkViewsContext2D.so.9.0.3": 67272,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkViewsContext2D.so.9.1.0": 68024
+            }
+        },
+        "experiment": "usr/lib64/libvtkViewsContext2D-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtkViewsContext2D.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtkViewsContext2D.so.9.0.3",
+        "different_libs": true
+    }
+]

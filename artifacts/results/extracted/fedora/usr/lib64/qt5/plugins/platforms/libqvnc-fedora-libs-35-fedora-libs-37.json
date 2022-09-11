@@ -15,26 +15,33 @@
                     "splice_type": "different_lib",
                     "original_lib": "libqvnc.so",
                     "spliced_lib": "libqvnc.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 0.00013208389282226562
+                    "message": [
+                        "abort",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.00014925003051757812
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libqvnc.so",
                     "spliced_lib": "libqvnc.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.67572021484375e-06
+                    "seconds": 9.298324584960938e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 6.121392726898193,
+                    "seconds": 6.346867561340332,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqvnc.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqvnc.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so",
@@ -44,9 +51,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqvnc.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so-abi-laboratory-libqvnc-so-libqvnc-so.html\nFound link to libqvnc.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqvnc.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Gui.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-FoZ9J.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqvnc.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqvnc.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Gui.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-LW8aH.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so-abi-laboratory-libqvnc-so-libqvnc-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqvnc.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so-abi-laboratory-libqvnc-so-libqvnc-so.html\nFound link to libqvnc.so-5.15.2-31.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libqvnc.so-5.15.2-31.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtbase-5.15.2-31.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Gui.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-y6OYT.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqvnc.so-5.15.5-4.fc38.x86_64.debug (gnu_debuglink)\nReading debug-info file libqvnc.so-5.15.5-4.fc38.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/platforms/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc38.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5Gui.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-BH3gx.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so-abi-laboratory-libqvnc-so-libqvnc-so.html\n",
                     "return_code": 0,
-                    "seconds": 188.54153394699097,
+                    "seconds": 189.84641885757446,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqvnc.so libqvnc-so-libqvnc-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so-abi-laboratory-libqvnc-so-libqvnc-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqvnc.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so",
@@ -57,8 +64,8 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so": 267072,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqvnc.so": 267072
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platforms/libqvnc.so": 266312,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platforms/libqvnc.so": 267056
             }
         },
         "experiment": "usr/lib64/qt5/plugins/platforms/libqvnc-fedora-libs-35-fedora-libs-37",

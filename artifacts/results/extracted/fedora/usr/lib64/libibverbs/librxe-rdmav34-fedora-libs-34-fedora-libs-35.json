@@ -1,0 +1,80 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs/librxe-rdmav34.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs/librxe-rdmav34.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "librxe-rdmav34.so",
+                    "spliced_lib": "librxe-rdmav34.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "stderr",
+                        "fwrite",
+                        "malloc",
+                        "puts"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.600120544433594e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "librxe-rdmav34.so",
+                    "spliced_lib": "librxe-rdmav34.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.67572021484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.061693668365478516,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs/librxe-rdmav34.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs/librxe-rdmav34.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs/librxe-rdmav34.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs/librxe-rdmav34.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs/librxe-rdmav34.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs/librxe-rdmav34.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs/librxe-rdmav34.so-abi-laboratory-librxe-rdmav34-so-librxe-rdmav34-so.html\nFound link to librxe-rdmav34.so-37.2-2.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file librxe-rdmav34.so-37.2-2.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/libibverbs/../../../.dwz/rdma-core-37.2-2.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: can't find exported symbols in object(s), please add a shared object on command line\n",
+                    "return_code": 12,
+                    "seconds": 0.746809720993042,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs/librxe-rdmav34.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs/librxe-rdmav34.so librxe-rdmav34-so-librxe-rdmav34-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs/librxe-rdmav34.so-abi-laboratory-librxe-rdmav34-so-librxe-rdmav34-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs/librxe-rdmav34.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs/librxe-rdmav34.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs/librxe-rdmav34.so": 37000,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs/librxe-rdmav34.so": 36888
+            }
+        },
+        "experiment": "usr/lib64/libibverbs/librxe-rdmav34-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libibverbs/librxe-rdmav34.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libibverbs/librxe-rdmav34.so",
+        "different_libs": true
+    }
+]

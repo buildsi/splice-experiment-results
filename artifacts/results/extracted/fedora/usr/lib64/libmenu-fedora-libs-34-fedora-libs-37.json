@@ -6,7 +6,7 @@
             "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2"
         ],
         "spliced": [
-            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.2"
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.3"
         ],
         "paths": {},
         "predictions": {
@@ -14,57 +14,63 @@
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libmenu.so.6.2",
-                    "spliced_lib": "libmenu.so.6.2",
+                    "spliced_lib": "libmenu.so.6.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 5.14984130859375e-05
+                    "message": [
+                        "__memcpy_chk"
+                    ],
+                    "prediction": false,
+                    "seconds": 5.173683166503906e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libmenu.so.6.2",
-                    "spliced_lib": "libmenu.so.6.2",
+                    "spliced_lib": "libmenu.so.6.3",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.365776062011719e-05
+                    "seconds": 6.175041198730469e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.036679744720458984,
-                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.2",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.2",
+                    "message": "Functions changes summary: 0 Removed, 1 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 function with some indirect sub-type change:\n\n  [C] 'function MENU* new_menu_sp(SCREEN*, ITEM**)' at m_new.c:55:1 has some indirect sub-type changes:\n    parameter 1 of type 'SCREEN*' has sub-type changes:\n      in pointed to type 'typedef SCREEN' at curses.priv.h:1191:1:\n        underlying type 'struct screen' at curses.priv.h:1110:1 changed:\n          type size hasn't changed\n          2 data member changes (8 filtered):\n            type of 'TERMINAL* _term' changed:\n              in pointed to type 'typedef TERMINAL' at term.priv.h:123:1:\n                underlying type 'struct term' at term.h:689:1 changed:\n                  type size changed from 1664 to 5504 (in bits)\n                  1 data member insertion:\n                    'TPARM_STATE tparm_state', at offset 1664 (in bits) at term.priv.h:118:1\n            type of 'bool (SCREEN*)* _mouse_event' changed:\n              in pointed to type 'function type bool (SCREEN*)':\n                parameter 1 of type 'SCREEN*' has sub-type changes:\n                  in pointed to type 'typedef SCREEN' at curses.priv.h:906:1:\n                    entity changed from 'typedef SCREEN' to compatible type 'struct screen' at curses.priv.h:906:1\n\n",
+                    "return_code": 4,
+                    "seconds": 0.04046940803527832,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.3",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.3",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.2\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2-abi-laboratory-libmenu-so-6-2-libmenu-so-6-2.html\nFound link to libmenu.so.6.2-6.2-9.20210508.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libmenu.so.6.2-6.2-9.20210508.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/ncurses-6.2-9.20210508.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5752\nERROR: incomplete info for symbol 5824\nERROR: incomplete info for symbol 6178\nERROR: incomplete info for symbol 6420\nERROR: incomplete info for symbol 6466\nERROR: incomplete info for symbol 6555\nERROR: incomplete info for symbol 6581\nERROR: incomplete info for symbol 6620\nERROR: incomplete info for symbol 6782\nERROR: incomplete info for symbol 7103\nERROR: incomplete info for symbol 7311\nERROR: incomplete info for symbol 7512\nERROR: incomplete info for symbol 7568\nERROR: incomplete info for symbol 7600\nERROR: incomplete info for symbol 7656\nERROR: incomplete info for symbol 7688\nERROR: incomplete info for symbol 7744\nERROR: incomplete info for symbol 7776\nERROR: incomplete info for symbol 7832\nERROR: incomplete info for symbol 7864\nERROR: incomplete info for symbol 7890\nERROR: incomplete info for symbol 7916\nERROR: incomplete info for symbol 7942\nERROR: incomplete info for symbol 7968\nERROR: incomplete info for symbol 8234\nERROR: incomplete info for symbol 8354\nERROR: incomplete info for symbol 8386\nERROR: incomplete info for symbol 8418\nERROR: incomplete info for symbol 8444\nERROR: incomplete info for symbol 8500\nERROR: incomplete info for symbol 8532\nERROR: incomplete info for symbol 8564\nERROR: incomplete info for symbol 8603\nERROR: incomplete info for symbol 8759\nERROR: incomplete info for symbol 8785\nERROR: incomplete info for symbol 8811\nERROR: incomplete info for symbol 8965\nERROR: incomplete info for symbol 9016\nERROR: incomplete info for symbol 9133\nERROR: incomplete info for symbol 9263\nERROR: incomplete info for symbol 9353\nERROR: incomplete info for symbol 9443\nERROR: incomplete info for symbol 9475\nERROR: incomplete info for symbol 9507\nERROR: incomplete info for symbol 9548\nERROR: incomplete info for symbol 10494\nERROR: incomplete info for symbol 10782\nERROR: incomplete info for symbol 11707\nERROR: incomplete info for symbol 11823\nERROR: incomplete info for symbol 11977\nERROR: incomplete info for symbol 12235\nERROR: incomplete info for symbol 12372\nERROR: incomplete info for symbol 12503\nERROR: incomplete info for symbol 12593\nERROR: incomplete info for symbol 12743\nERROR: incomplete info for symbol 13474\nERROR: incomplete info for symbol 13787\nERROR: incomplete info for symbol 13919\nERROR: incomplete info for symbol 14272\nERROR: incomplete info for symbol 14465\nERROR: incomplete info for symbol 14536\nERROR: incomplete info for symbol 14775\nERROR: incomplete info for symbol 14844\nERROR: incomplete info for symbol 14973\nERROR: incomplete info for symbol 15068\nERROR: incomplete info for symbol 15242\nERROR: incomplete info for symbol 15287\nERROR: incomplete info for symbol 15343\nERROR: incomplete info for symbol 15375\nERROR: incomplete info for symbol 15544\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-clgkV.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libmenu.so.6.2-6.2-9.20210508.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libmenu.so.6.2-6.2-9.20210508.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/ncurses-6.2-9.20210508.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5752\nERROR: incomplete info for symbol 5824\nERROR: incomplete info for symbol 6178\nERROR: incomplete info for symbol 6420\nERROR: incomplete info for symbol 6466\nERROR: incomplete info for symbol 6555\nERROR: incomplete info for symbol 6581\nERROR: incomplete info for symbol 6620\nERROR: incomplete info for symbol 6782\nERROR: incomplete info for symbol 7103\nERROR: incomplete info for symbol 7311\nERROR: incomplete info for symbol 7512\nERROR: incomplete info for symbol 7568\nERROR: incomplete info for symbol 7600\nERROR: incomplete info for symbol 7656\nERROR: incomplete info for symbol 7688\nERROR: incomplete info for symbol 7744\nERROR: incomplete info for symbol 7776\nERROR: incomplete info for symbol 7832\nERROR: incomplete info for symbol 7864\nERROR: incomplete info for symbol 7890\nERROR: incomplete info for symbol 7916\nERROR: incomplete info for symbol 7942\nERROR: incomplete info for symbol 7968\nERROR: incomplete info for symbol 8234\nERROR: incomplete info for symbol 8354\nERROR: incomplete info for symbol 8386\nERROR: incomplete info for symbol 8418\nERROR: incomplete info for symbol 8444\nERROR: incomplete info for symbol 8500\nERROR: incomplete info for symbol 8532\nERROR: incomplete info for symbol 8564\nERROR: incomplete info for symbol 8603\nERROR: incomplete info for symbol 8759\nERROR: incomplete info for symbol 8785\nERROR: incomplete info for symbol 8811\nERROR: incomplete info for symbol 8965\nERROR: incomplete info for symbol 9016\nERROR: incomplete info for symbol 9133\nERROR: incomplete info for symbol 9263\nERROR: incomplete info for symbol 9353\nERROR: incomplete info for symbol 9443\nERROR: incomplete info for symbol 9475\nERROR: incomplete info for symbol 9507\nERROR: incomplete info for symbol 9548\nERROR: incomplete info for symbol 10494\nERROR: incomplete info for symbol 10782\nERROR: incomplete info for symbol 11707\nERROR: incomplete info for symbol 11823\nERROR: incomplete info for symbol 11977\nERROR: incomplete info for symbol 12235\nERROR: incomplete info for symbol 12372\nERROR: incomplete info for symbol 12503\nERROR: incomplete info for symbol 12593\nERROR: incomplete info for symbol 12743\nERROR: incomplete info for symbol 13474\nERROR: incomplete info for symbol 13787\nERROR: incomplete info for symbol 13919\nERROR: incomplete info for symbol 14272\nERROR: incomplete info for symbol 14465\nERROR: incomplete info for symbol 14536\nERROR: incomplete info for symbol 14775\nERROR: incomplete info for symbol 14844\nERROR: incomplete info for symbol 14973\nERROR: incomplete info for symbol 15068\nERROR: incomplete info for symbol 15242\nERROR: incomplete info for symbol 15287\nERROR: incomplete info for symbol 15343\nERROR: incomplete info for symbol 15375\nERROR: incomplete info for symbol 15544\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-2AxV3.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2-abi-laboratory-libmenu-so-6-2-libmenu-so-6-2.html\n",
-                    "return_code": 0,
-                    "seconds": 1.2025301456451416,
-                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.2 libmenu-so-6-2-libmenu-so-6-2 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2-abi-laboratory-libmenu-so-6-2-libmenu-so-6-2.html",
-                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.2",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.3\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2-abi-laboratory-libmenu-so-6-2-libmenu-so-6-3.html\n",
+                    "return_code": 139,
+                    "seconds": 0.1907792091369629,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.3 libmenu-so-6-2-libmenu-so-6-3 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2-abi-laboratory-libmenu-so-6-2-libmenu-so-6-3.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.3",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2": 41544,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.2": 41544
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2": 41480,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.3": 41552
             }
         },
         "experiment": "usr/lib64/libmenu-fedora-libs-34-fedora-libs-37",
         "result": "diff-libraries-present",
         "success": true,
-        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.2",
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libmenu.so.6.3",
         "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libmenu.so.6.2",
         "different_libs": true
     }

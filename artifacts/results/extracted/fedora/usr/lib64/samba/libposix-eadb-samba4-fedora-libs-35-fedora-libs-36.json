@@ -15,49 +15,53 @@
                     "splice_type": "different_lib",
                     "original_lib": "libposix-eadb-samba4.so",
                     "spliced_lib": "libposix-eadb-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.956390380859375e-05
+                    "seconds": 3.266334533691406e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libposix-eadb-samba4.so",
                     "spliced_lib": "libposix-eadb-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.775161743164062e-06
+                    "seconds": 8.821487426757812e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.024988889694213867,
+                    "message": "Functions changes summary: 5 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n5 Removed functions:\n\n  [D] 'function NTSTATUS delete_posix_eadb_raw(tdb_wrap*, const char*, const char*, int)'    {delete_posix_eadb_raw@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS list_posix_eadb_raw(tdb_wrap*, TALLOC_CTX*, const char*, int, DATA_BLOB*)'    {list_posix_eadb_raw@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS pull_xattr_blob_tdb_raw(tdb_wrap*, TALLOC_CTX*, const char*, const char*, int, size_t, DATA_BLOB*)'    {pull_xattr_blob_tdb_raw@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS push_xattr_blob_tdb_raw(tdb_wrap*, const char*, const char*, int, const DATA_BLOB*)'    {push_xattr_blob_tdb_raw@@SAMBA_4.15.9}\n  [D] 'function NTSTATUS unlink_posix_eadb_raw(tdb_wrap*, const char*, int)'    {unlink_posix_eadb_raw@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.024480104446411133,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libposix-eadb-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libposix-eadb-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libposix-eadb-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so-abi-laboratory-libposix-eadb-samba4-so-libposix-eadb-samba4-so.html\nFound link to libposix-eadb-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libposix-eadb-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-2YBlR.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libposix-eadb-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libposix-eadb-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-a9KNQ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so-abi-laboratory-libposix-eadb-samba4-so-libposix-eadb-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 14.94476866722107,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libposix-eadb-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so-abi-laboratory-libposix-eadb-samba4-so-libposix-eadb-samba4-so.html\nFound link to libposix-eadb-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libposix-eadb-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-ndzC2.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libposix-eadb-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libposix-eadb-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-odPJF.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 5, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so-abi-laboratory-libposix-eadb-samba4-so-libposix-eadb-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 13.937235355377197,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libposix-eadb-samba4.so libposix-eadb-samba4-so-libposix-eadb-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so-abi-laboratory-libposix-eadb-samba4-so-libposix-eadb-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libposix-eadb-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so": 16104,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libposix-eadb-samba4.so": 12080,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libposix-eadb-samba4.so": 16104
             }
         },

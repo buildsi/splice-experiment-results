@@ -15,49 +15,59 @@
                     "splice_type": "different_lib",
                     "original_lib": "libdcerpc-server-core.so.0.0.1",
                     "spliced_lib": "libdcerpc-server-core.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 6.532669067382812e-05
+                    "message": [
+                        "uid_wrapper_enabled",
+                        "_talloc_move",
+                        "dcesrv_reinit_context"
+                    ],
+                    "prediction": false,
+                    "seconds": 8.177757263183594e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libdcerpc-server-core.so.0.0.1",
                     "spliced_lib": "libdcerpc-server-core.so.0.0.1",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 4.315376281738281e-05
+                    "message": [
+                        "dcesrv_reinit_context"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.170967102050781e-05
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.07607007026672363,
+                    "message": "Functions changes summary: 1 Removed, 0 Changed, 3 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function NTSTATUS dcesrv_reinit_context(dcesrv_context*)'    {dcesrv_reinit_context@@DCERPC_SERVER_CORE_0.0.1}\n\n3 Added functions:\n\n  [A] 'function void dcesrv_context_set_callbacks(dcesrv_context*, dcesrv_context_callbacks*)'    {dcesrv_context_set_callbacks@@DCERPC_SERVER_CORE_0.0.1}\n  [A] 'function NTSTATUS dcesrv_interface_register_b(dcesrv_context*, dcerpc_binding*, dcerpc_binding*, const dcesrv_interface*, const security_descriptor*)'    {dcesrv_interface_register_b@@DCERPC_SERVER_CORE_0.0.1}\n  [A] 'function void dcesrv_loop_next_packet(dcesrv_connection*, ncacn_packet*, DATA_BLOB)'    {dcesrv_loop_next_packet@@DCERPC_SERVER_CORE_0.0.1}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.07571935653686523,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1-abi-laboratory-libdcerpc-server-core-so-0-0-1-libdcerpc-server-core-so-0-0-1.html\nFound link to libdcerpc-server-core.so.0.0.1-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdcerpc-server-core.so.0.0.1-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 27730\nERROR: incomplete info for symbol 27801\nERROR: incomplete info for symbol 27970\nERROR: incomplete info for symbol 28543\nERROR: incomplete info for symbol 28845\nERROR: incomplete info for symbol 28957\nERROR: incomplete info for symbol 29117\nERROR: incomplete info for symbol 29213\nERROR: incomplete info for symbol 29407\nERROR: incomplete info for symbol 29600\nERROR: incomplete info for symbol 32724\nERROR: incomplete info for symbol 33397\nERROR: incomplete info for symbol 34567\nERROR: incomplete info for symbol 34643\nERROR: incomplete info for symbol 41995\nERROR: incomplete info for symbol 42424\nERROR: incomplete info for symbol 43426\nERROR: incomplete info for symbol 43577\nERROR: incomplete info for symbol 43708\nERROR: incomplete info for symbol 43843\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-8JWIM.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdcerpc-server-core.so.0.0.1-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdcerpc-server-core.so.0.0.1-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 27730\nERROR: incomplete info for symbol 27801\nERROR: incomplete info for symbol 27970\nERROR: incomplete info for symbol 28543\nERROR: incomplete info for symbol 28845\nERROR: incomplete info for symbol 28957\nERROR: incomplete info for symbol 29117\nERROR: incomplete info for symbol 29213\nERROR: incomplete info for symbol 29407\nERROR: incomplete info for symbol 29600\nERROR: incomplete info for symbol 32724\nERROR: incomplete info for symbol 33397\nERROR: incomplete info for symbol 34567\nERROR: incomplete info for symbol 34643\nERROR: incomplete info for symbol 41995\nERROR: incomplete info for symbol 42424\nERROR: incomplete info for symbol 43426\nERROR: incomplete info for symbol 43577\nERROR: incomplete info for symbol 43708\nERROR: incomplete info for symbol 43843\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-VXMrn.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1-abi-laboratory-libdcerpc-server-core-so-0-0-1-libdcerpc-server-core-so-0-0-1.html\n",
-                    "return_code": 0,
-                    "seconds": 16.14866828918457,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1-abi-laboratory-libdcerpc-server-core-so-0-0-1-libdcerpc-server-core-so-0-0-1.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.21647906303405762,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1 libdcerpc-server-core-so-0-0-1-libdcerpc-server-core-so-0-0-1 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1-abi-laboratory-libdcerpc-server-core-so-0-0-1-libdcerpc-server-core-so-0-0-1.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1": 82816,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libdcerpc-server-core.so.0.0.1": 78752,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libdcerpc-server-core.so.0.0.1": 82816
             }
         },

@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libdcrypt_openssl.so",
                     "spliced_lib": "libdcrypt_openssl.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 5.7220458984375e-05
+                    "seconds": 4.935264587402344e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libdcrypt_openssl.so",
                     "spliced_lib": "libdcrypt_openssl.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.0728836059570312e-05
+                    "seconds": 6.67572021484375e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.05028700828552246,
+                    "seconds": 0.04487299919128418,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdcrypt_openssl.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdcrypt_openssl.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdcrypt_openssl.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdcrypt_openssl.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdcrypt_openssl.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdcrypt_openssl.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdcrypt_openssl.so-abi-laboratory-libdcrypt_openssl-so-libdcrypt_openssl-so.html\nFound link to libdcrypt_openssl.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdcrypt_openssl.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Et8Mi.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdcrypt_openssl.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdcrypt_openssl.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-OFW7e.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdcrypt_openssl.so-abi-laboratory-libdcrypt_openssl-so-libdcrypt_openssl-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdcrypt_openssl.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdcrypt_openssl.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdcrypt_openssl.so-abi-laboratory-libdcrypt_openssl-so-libdcrypt_openssl-so.html\nFound link to libdcrypt_openssl.so-2.3.19.1-3.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libdcrypt_openssl.so-2.3.19.1-3.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-3.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-hBNhy.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libdcrypt_openssl.so-2.3.19.1-4.fc37.x86_64.debug (gnu_debuglink)\nReading debug-info file libdcrypt_openssl.so-2.3.19.1-4.fc37.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/dovecot/../../../.dwz/dovecot-2.3.19.1-4.fc37.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-uuUfN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdcrypt_openssl.so-abi-laboratory-libdcrypt_openssl-so-libdcrypt_openssl-so.html\n",
                     "return_code": 0,
-                    "seconds": 5.9303553104400635,
+                    "seconds": 5.4829325675964355,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdcrypt_openssl.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdcrypt_openssl.so libdcrypt_openssl-so-libdcrypt_openssl-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdcrypt_openssl.so-abi-laboratory-libdcrypt_openssl-so-libdcrypt_openssl-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/dovecot/libdcrypt_openssl.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/dovecot/libdcrypt_openssl.so",

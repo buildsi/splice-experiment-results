@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libqgtk3.so",
                     "spliced_lib": "libqgtk3.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 0.00014495849609375
+                    "seconds": 0.00016045570373535156
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libqgtk3.so",
                     "spliced_lib": "libqgtk3.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 6.9141387939453125e-06
+                    "seconds": 8.58306884765625e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 9.167735576629639,
+                    "seconds": 12.138837814331055,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so-abi-laboratory-libqgtk3-so-libqgtk3-so.html\nFound link to libqgtk3.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqgtk3.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/platformthemes/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5DBus.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-EnJar.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqgtk3.so-5.15.5-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libqgtk3.so-5.15.5-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/platformthemes/../../../../../.dwz/qt5-qtbase-5.15.5-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5DBus.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-i9w8u.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so-abi-laboratory-libqgtk3-so-libqgtk3-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so-abi-laboratory-libqgtk3-so-libqgtk3-so.html\nFound link to libqgtk3.so-5.15.2-30.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libqgtk3.so-5.15.2-30.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/qt5/plugins/platformthemes/../../../../../.dwz/qt5-qtbase-5.15.2-30.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5DBus.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-rrJbS.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libqgtk3.so-5.15.2-31.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libqgtk3.so-5.15.2-31.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/qt5/plugins/platformthemes/../../../../../.dwz/qt5-qtbase-5.15.2-31.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibQt5DBus.so.5: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-iQHNi.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so-abi-laboratory-libqgtk3-so-libqgtk3-so.html\n",
                     "return_code": 0,
-                    "seconds": 245.5193133354187,
+                    "seconds": 277.0943372249603,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so libqgtk3-so-libqgtk3-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so-abi-laboratory-libqgtk3-so-libqgtk3-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so",
@@ -57,8 +61,8 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so": 359624,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so": 359624
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so": 355136,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/qt5/plugins/platformthemes/libqgtk3.so": 354600
             }
         },
         "experiment": "usr/lib64/qt5/plugins/platformthemes/libqgtk3-fedora-libs-34-fedora-libs-35",

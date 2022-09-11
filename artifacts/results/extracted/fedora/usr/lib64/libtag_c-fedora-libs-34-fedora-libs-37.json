@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libtag_c.so.0.0.0",
                     "spliced_lib": "libtag_c.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.409385681152344e-05
+                    "seconds": 4.315376281738281e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libtag_c.so.0.0.0",
                     "spliced_lib": "libtag_c.so.0.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.8358230590820312e-05
+                    "seconds": 1.9073486328125e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.10143899917602539,
+                    "seconds": 0.10848522186279297,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag_c.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag_c.so.0.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag_c.so.0.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag_c.so.0.0.0",
@@ -44,21 +48,21 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag_c.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag_c.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag_c.so.0.0.0-abi-laboratory-libtag_c-so-0-0-0-libtag_c-so-0-0-0.html\nFound link to libtag_c.so.0.0.0-1.12-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libtag_c.so.0.0.0-1.12-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/../../.dwz/taglib-1.12-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibtag.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-UOGbA.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libtag_c.so.0.0.0-1.12-6.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libtag_c.so.0.0.0-1.12-6.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/../../.dwz/taglib-1.12-6.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibtag.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-0JFu5.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag_c.so.0.0.0-abi-laboratory-libtag_c-so-0-0-0-libtag_c-so-0-0-0.html\n",
-                    "return_code": 0,
-                    "seconds": 0.7497193813323975,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag_c.so.0.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag_c.so.0.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag_c.so.0.0.0-abi-laboratory-libtag_c-so-0-0-0-libtag_c-so-0-0-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.20534825325012207,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag_c.so.0.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag_c.so.0.0.0 libtag_c-so-0-0-0-libtag_c-so-0-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag_c.so.0.0.0-abi-laboratory-libtag_c-so-0-0-0-libtag_c-so-0-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag_c.so.0.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag_c.so.0.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag_c.so.0.0.0": 25088,
-                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag_c.so.0.0.0": 25088
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libtag_c.so.0.0.0": 24552,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libtag_c.so.0.0.0": 25040
             }
         },
         "experiment": "usr/lib64/libtag_c-fedora-libs-34-fedora-libs-37",

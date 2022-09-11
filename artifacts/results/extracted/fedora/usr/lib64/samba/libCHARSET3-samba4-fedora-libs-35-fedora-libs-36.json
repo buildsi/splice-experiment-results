@@ -15,49 +15,53 @@
                     "splice_type": "different_lib",
                     "original_lib": "libCHARSET3-samba4.so",
                     "spliced_lib": "libCHARSET3-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.24249267578125e-05
+                    "seconds": 2.8133392333984375e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libCHARSET3-samba4.so",
                     "spliced_lib": "libCHARSET3-samba4.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.239776611328125e-05
+                    "seconds": 8.106231689453125e-06
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.05685567855834961,
+                    "message": "Functions changes summary: 12 Removed, 0 Changed, 0 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n12 Removed functions:\n\n  [D] 'function size_t dos_PutUniCode(char*, const char*, size_t, bool)'    {dos_PutUniCode@@SAMBA_4.15.9}\n  [D] 'function void gfree_charcnv()'    {gfree_charcnv@@SAMBA_4.15.9}\n  [D] 'function size_t pull_ascii(char*, void*, size_t, size_t, int)'    {pull_ascii@@SAMBA_4.15.9}\n  [D] 'function size_t pull_ascii_fstring(char*, void*)'    {pull_ascii_fstring@@SAMBA_4.15.9}\n  [D] 'function size_t pull_ascii_nstring(char*, size_t, void*)'    {pull_ascii_nstring@@SAMBA_4.15.9}\n  [D] 'function size_t pull_string_talloc(TALLOC_CTX*, void*, uint16_t, char**, void*, size_t, int)'    {pull_string_talloc@@SAMBA_4.15.9}\n  [D] 'function size_t push_ascii(void*, const char*, size_t, int)'    {push_ascii@@SAMBA_4.15.9}\n  [D] 'function size_t push_ascii_fstring(void*, const char*)'    {push_ascii_fstring@@SAMBA_4.15.9}\n  [D] 'function size_t push_ascii_nstring(void*, const char*)'    {push_ascii_nstring@@SAMBA_4.15.9}\n  [D] 'function size_t push_string_base(const char*, uint16_t, void*, const char*, size_t, int)'    {push_string_base@@SAMBA_4.15.9}\n  [D] 'function size_t push_string_check_fn(void*, const char*, size_t, int)'    {push_string_check_fn@@SAMBA_4.15.9}\n  [D] 'function int rpcstr_push_talloc(TALLOC_CTX*, smb_ucs2_t**, const char*)'    {rpcstr_push_talloc@@SAMBA_4.15.9}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.0449528694152832,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libCHARSET3-samba4.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libCHARSET3-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libCHARSET3-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so-abi-laboratory-libCHARSET3-samba4-so-libCHARSET3-samba4-so.html\nFound link to libCHARSET3-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libCHARSET3-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2949\nERROR: incomplete info for symbol 3032\nERROR: incomplete info for symbol 3165\nERROR: incomplete info for symbol 3254\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-VZB2D.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libCHARSET3-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libCHARSET3-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2949\nERROR: incomplete info for symbol 3032\nERROR: incomplete info for symbol 3165\nERROR: incomplete info for symbol 3254\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-2KDbg.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so-abi-laboratory-libCHARSET3-samba4-so-libCHARSET3-samba4-so.html\n",
-                    "return_code": 0,
-                    "seconds": 15.399742841720581,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libCHARSET3-samba4.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so-abi-laboratory-libCHARSET3-samba4-so-libCHARSET3-samba4-so.html\nFound link to libCHARSET3-samba4.so-4.15.9-0.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file libCHARSET3-samba4.so-4.15.9-0.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.15.9-0.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2966\nERROR: incomplete info for symbol 3049\nERROR: incomplete info for symbol 3182\nERROR: incomplete info for symbol 3271\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-4o7MR.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libCHARSET3-samba4.so-4.16.4-0.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libCHARSET3-samba4.so-4.16.4-0.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/samba/../../../.dwz/samba-4.16.4-0.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 2949\nERROR: incomplete info for symbol 3032\nERROR: incomplete info for symbol 3165\nERROR: incomplete info for symbol 3254\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-RvamT.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 0%\nSource compatibility: 100%\nTotal binary compatibility problems: 12, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so-abi-laboratory-libCHARSET3-samba4-so-libCHARSET3-samba4-so.html\n",
+                    "return_code": 1,
+                    "seconds": 11.632047653198242,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libCHARSET3-samba4.so libCHARSET3-samba4-so-libCHARSET3-samba4-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so-abi-laboratory-libCHARSET3-samba4-so-libCHARSET3-samba4-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libCHARSET3-samba4.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so": 16176,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/samba/libCHARSET3-samba4.so": 16256,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/samba/libCHARSET3-samba4.so": 16176
             }
         },

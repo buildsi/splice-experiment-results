@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "libxshmfence.so.1.0.0",
                     "spliced_lib": "libxshmfence.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.9087066650390625e-05
+                    "seconds": 2.5510787963867188e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libxshmfence.so.1.0.0",
                     "spliced_lib": "libxshmfence.so.1.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 9.5367431640625e-06
+                    "seconds": 7.3909759521484375e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.013128042221069336,
+                    "seconds": 0.009339094161987305,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxshmfence.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxshmfence.so.1.0.0",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxshmfence.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxshmfence.so.1.0.0",
@@ -44,20 +48,20 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxshmfence.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxshmfence.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxshmfence.so.1.0.0-abi-laboratory-libxshmfence-so-1-0-0-libxshmfence-so-1-0-0.html\nFound link to libxshmfence.so.1.0.0-1.3-10.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxshmfence.so.1.0.0-1.3-10.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 538\nERROR: incomplete info for symbol 819\nERROR: incomplete info for symbol 1066\nERROR: incomplete info for symbol 1145\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Sr1fi.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libxshmfence.so.1.0.0-1.3-10.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libxshmfence.so.1.0.0-1.3-10.fc36.x86_64.debug linked from gnu_debuglink\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 538\nERROR: incomplete info for symbol 819\nERROR: incomplete info for symbol 1066\nERROR: incomplete info for symbol 1145\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-sTpc1.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxshmfence.so.1.0.0-abi-laboratory-libxshmfence-so-1-0-0-libxshmfence-so-1-0-0.html\n",
-                    "return_code": 0,
-                    "seconds": 0.43148183822631836,
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxshmfence.so.1.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxshmfence.so.1.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxshmfence.so.1.0.0-abi-laboratory-libxshmfence-so-1-0-0-libxshmfence-so-1-0-0.html\n*** stack smashing detected ***: terminated\n",
+                    "return_code": 134,
+                    "seconds": 0.1823256015777588,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxshmfence.so.1.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxshmfence.so.1.0.0 libxshmfence-so-1-0-0-libxshmfence-so-1-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxshmfence.so.1.0.0-abi-laboratory-libxshmfence-so-1-0-0-libxshmfence-so-1-0-0.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxshmfence.so.1.0.0",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxshmfence.so.1.0.0",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ]
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxshmfence.so.1.0.0": 15960,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libxshmfence.so.1.0.0": 15784,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libxshmfence.so.1.0.0": 15960
             }
         },

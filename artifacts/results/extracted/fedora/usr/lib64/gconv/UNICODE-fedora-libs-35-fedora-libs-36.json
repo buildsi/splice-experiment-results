@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "UNICODE.so",
                     "spliced_lib": "UNICODE.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.9073486328125e-05
+                    "seconds": 4.410743713378906e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "UNICODE.so",
                     "spliced_lib": "UNICODE.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 1.049041748046875e-05
+                    "seconds": 2.4080276489257812e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.016523122787475586,
+                    "seconds": 0.017280101776123047,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/UNICODE.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/UNICODE.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/UNICODE.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so-abi-laboratory-UNICODE-so-UNICODE-so.html\nFound link to UNICODE.so-2.35-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file UNICODE.so-2.35-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gconv/../../../.dwz/glibc-2.35-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-WcF8S.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to UNICODE.so-2.35-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file UNICODE.so-2.35-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gconv/../../../.dwz/glibc-2.35-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-jooei.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so-abi-laboratory-UNICODE-so-UNICODE-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/UNICODE.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so-abi-laboratory-UNICODE-so-UNICODE-so.html\nFound link to UNICODE.so-2.34-40.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file UNICODE.so-2.34-40.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/gconv/../../../.dwz/glibc-2.34-40.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-KmfHN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to UNICODE.so-2.35-4.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file UNICODE.so-2.35-4.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/gconv/../../../.dwz/glibc-2.35-4.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-laEuX.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so-abi-laboratory-UNICODE-so-UNICODE-so.html\n",
                     "return_code": 0,
-                    "seconds": 1.8441901206970215,
+                    "seconds": 2.6556100845336914,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/UNICODE.so UNICODE-so-UNICODE-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so-abi-laboratory-UNICODE-so-UNICODE-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/UNICODE.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so": 20008,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/gconv/UNICODE.so": 20208,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/gconv/UNICODE.so": 20008
             }
         },

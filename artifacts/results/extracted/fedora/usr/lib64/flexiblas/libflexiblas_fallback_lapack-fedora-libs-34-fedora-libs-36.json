@@ -15,38 +15,48 @@
                     "splice_type": "different_lib",
                     "original_lib": "libflexiblas_fallback_lapack.so",
                     "spliced_lib": "libflexiblas_fallback_lapack.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 0.0006511211395263672
+                    "message": [
+                        "scombssq_",
+                        "dcombssq_"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0004925727844238281
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "libflexiblas_fallback_lapack.so",
                     "spliced_lib": "libflexiblas_fallback_lapack.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
-                    "message": [],
-                    "prediction": true,
-                    "seconds": 0.033171892166137695
+                    "message": [
+                        "dcombssq_",
+                        "scombssq_"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.03241896629333496
                 }
             ],
             "libabigail": [
                 {
-                    "message": "",
-                    "return_code": 0,
-                    "seconds": 0.02093982696533203,
+                    "message": "Functions changes summary: 0 Removed, 0 Changed, 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\nFunction symbols changes summary: 2 Removed, 34 Added function symbols not referenced by debug info\nVariable symbols changes summary: 0 Removed, 0 Added variable symbol not referenced by debug info\n\n2 Removed function symbols not referenced by debug info:\n\n  [D] dcombssq_\n  [D] scombssq_\n\n34 Added function symbols not referenced by debug info:\n\n  [A] __la_xisnan_MOD_disnan\n  [A] __la_xisnan_MOD_sisnan\n  [A] cgetsqrhrt_\n  [A] claqz0_\n  [A] claqz1_\n  [A] claqz2_\n  [A] claqz3_\n  [A] clarfb_gett_\n  [A] cungtsqr_row_\n  [A] dgetsqrhrt_\n  [A] dlaqz0_\n  [A] dlaqz1_\n  [A] dlaqz2_\n  [A] dlaqz3_\n  [A] dlaqz4_\n  [A] dlarfb_gett_\n  [A] dorgtsqr_row_\n  [A] droundup_lwork_\n  [A] sgetsqrhrt_\n  [A] slaqz0_\n  [A] slaqz1_\n  [A] slaqz2_\n  [A] slaqz3_\n  [A] slaqz4_\n  [A] slarfb_gett_\n  [A] sorgtsqr_row_\n  [A] sroundup_lwork_\n  [A] zgetsqrhrt_\n  [A] zlaqz0_\n  [A] zlaqz1_\n  [A] zlaqz2_\n  [A] zlaqz3_\n  [A] zlarfb_gett_\n  [A] zungtsqr_row_\n\n",
+                    "return_code": 12,
+                    "seconds": 0.02505946159362793,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so",
-                    "prediction": true,
+                    "prediction": false,
                     "splice_type": "different_lib"
                 }
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so-abi-laboratory-libflexiblas_fallback_lapack-so-libflexiblas_fallback_lapack-so.html\nFound link to libflexiblas_fallback_lapack.so-3.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libflexiblas_fallback_lapack.so-3.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/flexiblas/../../../.dwz/flexiblas-3.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-C0AeQ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libflexiblas_fallback_lapack.so-3.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libflexiblas_fallback_lapack.so-3.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/flexiblas/../../../.dwz/flexiblas-3.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-QIMmc.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nERROR: no symbols info in the ABI dump\nPreparing, please wait ...\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so-abi-laboratory-libflexiblas_fallback_lapack-so-libflexiblas_fallback_lapack-so.html\nFound link to libflexiblas_fallback_lapack.so-3.1.3-1.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libflexiblas_fallback_lapack.so-3.1.3-1.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/flexiblas/../../../.dwz/flexiblas-3.1.3-1.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-muQnS.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libflexiblas_fallback_lapack.so-3.2.1-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libflexiblas_fallback_lapack.so-3.2.1-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/flexiblas/../../../.dwz/flexiblas-3.2.1-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O3 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-w6jo4.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nERROR: no symbols info in the ABI dump\nPreparing, please wait ...\n",
                     "return_code": 7,
-                    "seconds": 5.384593725204468,
+                    "seconds": 5.342796087265015,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so libflexiblas_fallback_lapack-so-libflexiblas_fallback_lapack-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so-abi-laboratory-libflexiblas_fallback_lapack-so-libflexiblas_fallback_lapack-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so",
@@ -57,7 +67,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so": 7232008,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so": 7025936,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/flexiblas/libflexiblas_fallback_lapack.so": 7232008
             }
         },

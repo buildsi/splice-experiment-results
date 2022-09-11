@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "paged_searches.so",
                     "spliced_lib": "paged_searches.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.7894973754882812e-05
+                    "seconds": 3.123283386230469e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "paged_searches.so",
                     "spliced_lib": "paged_searches.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 7.867813110351562e-06
+                    "seconds": 6.4373016357421875e-06
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.013983964920043945,
+                    "seconds": 0.016015291213989258,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/paged_searches.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/paged_searches.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/paged_searches.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so-abi-laboratory-paged_searches-so-paged_searches-so.html\nFound link to paged_searches.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file paged_searches.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-RogD3.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to paged_searches.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file paged_searches.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-uT3Or.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so-abi-laboratory-paged_searches-so-paged_searches-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/paged_searches.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so-abi-laboratory-paged_searches-so-paged_searches-so.html\nFound link to paged_searches.so-2.4.4-1.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file paged_searches.so-2.4.4-1.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.4.4-1.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-9wAUN.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to paged_searches.so-2.5.2-1.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file paged_searches.so-2.5.2-1.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/ldb/modules/ldb/../../../../../.dwz/libldb-2.5.2-1.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-DW01f.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so-abi-laboratory-paged_searches-so-paged_searches-so.html\n",
                     "return_code": 0,
-                    "seconds": 0.5005581378936768,
+                    "seconds": 0.5130774974822998,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/paged_searches.so paged_searches-so-paged_searches-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so-abi-laboratory-paged_searches-so-paged_searches-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/paged_searches.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so": 20272,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/ldb/modules/ldb/paged_searches.so": 15896,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/ldb/modules/ldb/paged_searches.so": 20272
             }
         },

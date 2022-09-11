@@ -1,0 +1,82 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtksys.so.9.0.3"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtksys.so.9.1.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtksys.so.9.0.3",
+                    "spliced_lib": "libvtksys.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "__memcpy_chk",
+                        "_ZNSt8_Rb_treeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS5_S5_ESt10_Select1stIS8_ESt4lessIS5_ESaIS8_EE16_M_insert_uniqueIS8_EES6_ISt17_Rb_tree_iteratorIS8_EbEOT_",
+                        "_ZSt17__throw_bad_allocv",
+                        "printf"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0001614093780517578
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libvtksys.so.9.0.3",
+                    "spliced_lib": "libvtksys.so.9.1.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_ZNSt8_Rb_treeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIKS5_S5_ESt10_Select1stIS8_ESt4lessIS5_ESaIS8_EE16_M_insert_uniqueIS8_EES6_ISt17_Rb_tree_iteratorIS8_EbEOT_"
+                    ],
+                    "prediction": false,
+                    "seconds": 0.0011854171752929688
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed (1 filtered out), 19 Changed (241 filtered out), 5 Added (5 filtered out) functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n5 Added functions:\n\n  [A] 'method std::string vtksys::Status::GetString() const'    {_ZNK6vtksys6Status9GetStringB5cxx11Ev}\n  [A] 'method vtksys::Status vtksys::Status::POSIX_errno()'    {_ZN6vtksys6Status11POSIX_errnoEv}\n  [A] 'method vtksys::Status vtksys::SystemTools::CloneFileContent(const std::string&)'    {_ZN6vtksys11SystemTools16CloneFileContentERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_}\n  [A] 'method vtksys::Status vtksys::SystemTools::CopyFileContentBlockwise(const std::string&)'    {_ZN6vtksys11SystemTools24CopyFileContentBlockwiseERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_}\n  [A] 'method std::string vtksys::SystemTools::Join(const std::string&)'    {_ZN6vtksys11SystemTools4JoinERKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS7_EERKS7_}\n\n19 functions with some indirect sub-type change:\n\n  [C] 'method bool vtksys::Directory::Load(const std::string&, std::string*)' at Directory.cxx:220:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method int vtksys::SystemTools::ChangeDirectory()' at SystemTools.cxx:3186:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'int' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 32 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::CopyADirectory(const std::string&, bool)' at SystemTools.cxx:2485:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::CopyAFile(const std::string&, bool)' at SystemTools.cxx:2471:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::CopyFileAlways(const std::string&)' at SystemTools.cxx:2416:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::CopyFileIfDifferent(const std::string&)' at SystemTools.cxx:2170:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::CreateSymlink(const std::string&)' at SystemTools.cxx:3089:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::FileTimeCompare(const std::string&, int*)' at SystemTools.cxx:1494:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::GetPermissions(mode_t&)' at SystemTools.cxx:4243:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::GetPermissions(mode_t&)' at SystemTools.cxx:4251:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::GetShortPath(std::string&)' at SystemTools.cxx:4114:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::MakeDirectory(const mode_t*)' at SystemTools.cxx:923:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::MakeDirectory(const mode_t*)' at SystemTools.cxx:931:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::ReadSymlink(std::string&)' at SystemTools.cxx:3127:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::RemoveADirectory()' at SystemTools.cxx:2650:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::RemoveFile()' at SystemTools.cxx:2604:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::SetPermissions(mode_t, bool)' at SystemTools.cxx:4287:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::SetPermissions(mode_t, bool)' at SystemTools.cxx:4296:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n  [C] 'method bool vtksys::SystemTools::Touch(bool)' at SystemTools.cxx:1451:1 has some indirect sub-type changes:\n    return type changed:\n      entity changed from 'bool' to 'class vtksys::Status' at Status.hxx:15:1\n      type size changed from 8 to 64 (in bits)\n\n",
+                    "return_code": 4,
+                    "seconds": 19.89425277709961,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtksys.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtksys.so.9.1.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtksys.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtksys.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtksys.so.9.0.3\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtksys.so.9.1.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtksys.so.9.0.3-abi-laboratory-libvtksys-so-9-0-3-libvtksys-so-9-1-0.html\n",
+                    "return_code": 139,
+                    "seconds": 0.22013139724731445,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtksys.so.9.0.3 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtksys.so.9.1.0 libvtksys-so-9-0-3-libvtksys-so-9-1-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtksys.so.9.0.3-abi-laboratory-libvtksys-so-9-0-3-libvtksys-so-9-1-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtksys.so.9.1.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtksys.so.9.0.3",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtksys.so.9.0.3": 345952,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtksys.so.9.1.0": 346176
+            }
+        },
+        "experiment": "usr/lib64/libvtksys-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/libvtksys.so.9.1.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/libvtksys.so.9.0.3",
+        "different_libs": true
+    }
+]

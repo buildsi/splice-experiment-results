@@ -15,26 +15,30 @@
                     "splice_type": "different_lib",
                     "original_lib": "kabcformat_binary.so",
                     "spliced_lib": "kabcformat_binary.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-symbols",
                     "message": [],
                     "prediction": true,
-                    "seconds": 3.2901763916015625e-05
+                    "seconds": 4.553794860839844e-05
                 },
                 {
                     "splice_type": "different_lib",
                     "original_lib": "kabcformat_binary.so",
                     "spliced_lib": "kabcformat_binary.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
                     "command": "missing-previously-found-exports",
                     "message": [],
                     "prediction": true,
-                    "seconds": 2.86102294921875e-05
+                    "seconds": 1.4066696166992188e-05
                 }
             ],
             "libabigail": [
                 {
                     "message": "",
                     "return_code": 0,
-                    "seconds": 0.385162353515625,
+                    "seconds": 0.5724010467529297,
                     "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kabcformat_binary.so",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kabcformat_binary.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so",
@@ -44,9 +48,9 @@
             ],
             "abi-laboratory": [
                 {
-                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kabcformat_binary.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so-abi-laboratory-kabcformat_binary-so-kabcformat_binary-so.html\nFound link to kabcformat_binary.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kabcformat_binary.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkabc.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-UYpia.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to kabcformat_binary.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kabcformat_binary.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkabc.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-VJ114.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so-abi-laboratory-kabcformat_binary-so-kabcformat_binary-so.html\n",
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kabcformat_binary.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so-abi-laboratory-kabcformat_binary-so-kabcformat_binary-so.html\nFound link to kabcformat_binary.so-3.5.10-111.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file kabcformat_binary.so-3.5.10-111.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-111.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkabc.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-mMVKa.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to kabcformat_binary.so-3.5.10-114.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file kabcformat_binary.so-3.5.10-114.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/kde3/../../../.dwz/kdelibs3-3.5.10-114.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nReading v-tables\nlibkabc.so.1: cannot open shared object file: No such file or directory\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-hQIr2.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so-abi-laboratory-kabcformat_binary-so-kabcformat_binary-so.html\n",
                     "return_code": 0,
-                    "seconds": 14.535882711410522,
+                    "seconds": 20.918267488479614,
                     "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kabcformat_binary.so kabcformat_binary-so-kabcformat_binary-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so-abi-laboratory-kabcformat_binary-so-kabcformat_binary-so.html",
                     "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kabcformat_binary.so",
                     "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so",
@@ -57,7 +61,7 @@
         },
         "stats": {
             "sizes_bytes": {
-                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so": 20072,
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/kde3/kabcformat_binary.so": 19888,
                 "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/kde3/kabcformat_binary.so": 20072
             }
         },
