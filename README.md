@@ -26,18 +26,8 @@ export GITHUB_TOKEN=xxxxxxxxxxx
 $ python get_artifacts.py
 ```
 
-You can also ask for a specific run. Since we had too much data for a single run and 50 results,
-we split the runs into two groups. You can edit the [fedora_installs.sh](https://github.com/buildsi/splice-experiment-runs/blob/main/fedora_installs.sh)
-to see the groups. Here are results for:
-
-```bash
-declare -a libs=("libadwaita-qt5" "aspell" "boost-log", "clucene-core" "libdap" "samba-libs" "djvulibre-libs"
-  "dovecot" "exiv2-libs" "gdal-libs" "geos" "glibmm24" "hdf5" "libicu" "dyninst" "webkit2gtk3-jsc"
-  "libjxl" "libkml" "libmusicbrainz5" "openexr-libs" "openh264" "mesa-libOSMesa" "proj"
-  "qt5-qtwayland" "qt5-qtxmlpatterns" "SDL2_image" "libstdc++" "taglib" "vtk"
-  "webrtc-audio-processing" "python3"
-)
-```
+You can also ask for a specific run, and this is how we were able to run
+jobs in batches (a range of libraries per batch):
 
 ```bash
 $ rm -rf artifacts/*
@@ -67,14 +57,8 @@ $ python get_artifacts.py 3027772125  # fedora results 1400-1450
 $ python get_artifacts.py 3027773113  # fedora results 1450-1500
 $ python get_artifacts.py 3028703062  # fedora resutls 1500-1550
 $ python get_artifacts.py 3028703764  # fedora results 1550-1600
-
+$ python get_artifacts.py 3030132290  # fedora results 1600-1650
 $ python get_artifacts.py 3029103477  # fedora resuts 1650-1700
-```
-
-And then group 2:
-
-```bash
-TBA
 ```
 
 And then to open (and run/update the notebook)

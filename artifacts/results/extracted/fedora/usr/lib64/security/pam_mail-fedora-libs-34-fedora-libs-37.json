@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_mail.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_mail.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_mail.so",
+                    "spliced_lib": "pam_mail.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.7418136596679688e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_mail.so",
+                    "spliced_lib": "pam_mail.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 6.9141387939453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.008580923080444336,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_mail.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_mail.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_mail.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_mail.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_mail.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_mail.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_mail.so-abi-laboratory-pam_mail-so-pam_mail-so.html\nFound link to pam_mail.so-1.5.1-8.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_mail.so-1.5.1-8.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.1-8.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Pd1IO.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_mail.so-1.5.2-12.fc37.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file pam_mail.so-1.5.2-12.fc37.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.28345274925231934,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_mail.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_mail.so pam_mail-so-pam_mail-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_mail.so-abi-laboratory-pam_mail-so-pam_mail-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_mail.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_mail.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_mail.so": 19936,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_mail.so": 20032
+            }
+        },
+        "experiment": "usr/lib64/security/pam_mail-fedora-libs-34-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_mail.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_mail.so",
+        "different_libs": true
+    }
+]

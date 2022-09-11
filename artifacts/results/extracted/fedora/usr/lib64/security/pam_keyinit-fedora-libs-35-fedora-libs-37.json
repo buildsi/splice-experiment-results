@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_keyinit.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_keyinit.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_keyinit.so",
+                    "spliced_lib": "pam_keyinit.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.170967102050781e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_keyinit.so",
+                    "spliced_lib": "pam_keyinit.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 8.106231689453125e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007772207260131836,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_keyinit.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_keyinit.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_keyinit.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_keyinit.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_keyinit.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_keyinit.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_keyinit.so-abi-laboratory-pam_keyinit-so-pam_keyinit-so.html\nFound link to pam_keyinit.so-1.5.2-7.fc35.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file pam_keyinit.so-1.5.2-7.fc35.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.14602279663085938,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_keyinit.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_keyinit.so pam_keyinit-so-pam_keyinit-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_keyinit.so-abi-laboratory-pam_keyinit-so-pam_keyinit-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_keyinit.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_keyinit.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_keyinit.so": 15800,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_keyinit.so": 15976
+            }
+        },
+        "experiment": "usr/lib64/security/pam_keyinit-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_keyinit.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_keyinit.so",
+        "different_libs": true
+    }
+]

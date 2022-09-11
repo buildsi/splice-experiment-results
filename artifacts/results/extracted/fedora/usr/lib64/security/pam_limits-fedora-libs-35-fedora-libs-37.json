@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_limits.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_limits.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_limits.so",
+                    "spliced_lib": "pam_limits.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 3.4809112548828125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_limits.so",
+                    "spliced_lib": "pam_limits.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 7.3909759521484375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007537364959716797,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_limits.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_limits.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_limits.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_limits.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_limits.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_limits.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_limits.so-abi-laboratory-pam_limits-so-pam_limits-so.html\nFound link to pam_limits.so-1.5.2-7.fc35.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file pam_limits.so-1.5.2-7.fc35.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.12843918800354004,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_limits.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_limits.so pam_limits-so-pam_limits-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_limits.so-abi-laboratory-pam_limits-so-pam_limits-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_limits.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_limits.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_limits.so": 28072,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_limits.so": 28256
+            }
+        },
+        "experiment": "usr/lib64/security/pam_limits-fedora-libs-35-fedora-libs-37",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_limits.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_limits.so",
+        "different_libs": true
+    }
+]

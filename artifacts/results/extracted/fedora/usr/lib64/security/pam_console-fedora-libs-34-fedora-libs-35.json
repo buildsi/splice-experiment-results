@@ -1,0 +1,75 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_console.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_console.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_console.so",
+                    "spliced_lib": "pam_console.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 2.3126602172851562e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_console.so",
+                    "spliced_lib": "pam_console.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.9604644775390625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.007917165756225586,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_console.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_console.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_console.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_console.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_console.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_console.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_console.so-abi-laboratory-pam_console-so-pam_console-so.html\nFound link to pam_console.so-1.5.1-8.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_console.so-1.5.1-8.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/pam-1.5.1-8.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-w4jUq.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_console.so-1.5.2-7.fc35.x86_64.debug (gnu_debuglink)\nERROR: missed debug-info file pam_console.so-1.5.2-7.fc35.x86_64.debug linked from gnu_debuglink (try --search-debuginfo=DIR option)\nERROR: can't find debug info in object(s)\n",
+                    "return_code": 10,
+                    "seconds": 0.21935033798217773,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_console.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_console.so pam_console-so-pam_console-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_console.so-abi-laboratory-pam_console-so-pam_console-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_console.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_console.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_console.so": 36712,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_console.so": 32520
+            }
+        },
+        "experiment": "usr/lib64/security/pam_console-fedora-libs-34-fedora-libs-35",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_console.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_console.so",
+        "different_libs": true
+    }
+]

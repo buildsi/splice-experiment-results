@@ -1,0 +1,77 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_systemd_home.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_systemd_home.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_systemd_home.so",
+                    "spliced_lib": "pam_systemd_home.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "usleep"
+                    ],
+                    "prediction": false,
+                    "seconds": 7.05718994140625e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "pam_systemd_home.so",
+                    "spliced_lib": "pam_systemd_home.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 9.5367431640625e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.21909809112548828,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_systemd_home.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_systemd_home.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_systemd_home.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_systemd_home.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_systemd_home.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_systemd_home.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_systemd_home.so-abi-laboratory-pam_systemd_home-so-pam_systemd_home-so.html\nFound link to pam_systemd_home.so-249.12-5.fc35.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_systemd_home.so-249.12-5.fc35.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/security/../../../.dwz/systemd-249.12-5.fc35.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 45853\nERROR: incomplete info for symbol 46086\nERROR: incomplete info for symbol 46133\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-KKCMJ.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to pam_systemd_home.so-250.3-8.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file pam_systemd_home.so-250.3-8.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/security/../../../.dwz/systemd-250.3-8.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 47448\nERROR: incomplete info for symbol 47681\nERROR: incomplete info for symbol 47728\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-ir3i3.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_systemd_home.so-abi-laboratory-pam_systemd_home-so-pam_systemd_home-so.html\n",
+                    "return_code": 0,
+                    "seconds": 15.93420696258545,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_systemd_home.so /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_systemd_home.so pam_systemd_home-so-pam_systemd_home-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_systemd_home.so-abi-laboratory-pam_systemd_home-so-pam_systemd_home-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_systemd_home.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_systemd_home.so",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_systemd_home.so": 448808,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_systemd_home.so": 448832
+            }
+        },
+        "experiment": "usr/lib64/security/pam_systemd_home-fedora-libs-35-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/security/pam_systemd_home.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/security/pam_systemd_home.so",
+        "different_libs": true
+    }
+]

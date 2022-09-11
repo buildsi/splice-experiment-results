@@ -1,0 +1,78 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libsasldb.so.3.0.0"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libsasldb.so.3.0.0"
+        ],
+        "paths": {},
+        "predictions": {
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsasldb.so.3.0.0",
+                    "spliced_lib": "libsasldb.so.3.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "db_strerror",
+                        "db_create"
+                    ],
+                    "prediction": false,
+                    "seconds": 3.361701965332031e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "libsasldb.so.3.0.0",
+                    "spliced_lib": "libsasldb.so.3.0.0",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.811981201171875e-05
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "",
+                    "return_code": 0,
+                    "seconds": 0.03881955146789551,
+                    "command": "/usr/local/bin/abidiff --debug-info-dir1 /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug --debug-info-dir2 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug  /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libsasldb.so.3.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libsasldb.so.3.0.0",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libsasldb.so.3.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libsasldb.so.3.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libsasldb.so.3.0.0\nnew: /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libsasldb.so.3.0.0\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libsasldb.so.3.0.0-abi-laboratory-libsasldb-so-3-0-0-libsasldb-so-3-0-0.html\nFound link to libsasldb.so.3.0.0-2.1.27-8.fc34.x86_64.debug (gnu_debuglink)\nReading debug-info file libsasldb.so.3.0.0-2.1.27-8.fc34.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib/debug/usr/lib64/sasl2/../../../.dwz/cyrus-sasl-2.1.27-8.fc34.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 5373\nERROR: incomplete info for symbol 6373\nERROR: incomplete info for symbol 7153\nERROR: incomplete info for symbol 7540\nERROR: incomplete info for symbol 8368\nERROR: incomplete info for symbol 8490\nERROR: incomplete info for symbol 8907\nERROR: incomplete info for symbol 9038\nERROR: incomplete info for symbol 9345\nERROR: incomplete info for symbol 9811\nERROR: incomplete info for symbol 9933\nERROR: incomplete info for symbol 10555\nERROR: incomplete info for symbol 11328\nERROR: incomplete info for symbol 11577\nERROR: incomplete info for symbol 12123\nERROR: incomplete info for symbol 12394\nERROR: incomplete info for symbol 12488\nERROR: incomplete info for symbol 12533\nERROR: incomplete info for symbol 12585\nERROR: incomplete info for symbol 12886\nERROR: incomplete info for symbol 13280\nERROR: incomplete info for symbol 13608\nERROR: incomplete info for symbol 13894\nERROR: incomplete info for symbol 14287\nERROR: incomplete info for symbol 14389\nERROR: incomplete info for symbol 15060\nERROR: incomplete info for symbol 15092\nERROR: incomplete info for symbol 16665\nERROR: incomplete info for symbol 17067\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-1-Wf0mc.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nFound link to libsasldb.so.3.0.0-2.1.27-18.fc36.x86_64.debug (gnu_debuglink)\nReading debug-info file libsasldb.so.3.0.0-2.1.27-18.fc36.x86_64.debug linked from gnu_debuglink\nSet alternate debug-info file to '/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib/debug/usr/lib64/sasl2/../../../.dwz/cyrus-sasl-2.1.27-18.fc36.x86_64' (use -alt option to change it)\nReading alternate debug-info\nReading debug-info\nWARNING: incompatible build option detected: -O2 (required -Og for better analysis)\nERROR: incomplete info for symbol 4818\nERROR: incomplete info for symbol 5850\nERROR: incomplete info for symbol 6851\nERROR: incomplete info for symbol 7234\nERROR: incomplete info for symbol 8032\nERROR: incomplete info for symbol 8154\nERROR: incomplete info for symbol 8602\nERROR: incomplete info for symbol 8733\nERROR: incomplete info for symbol 9189\nERROR: incomplete info for symbol 9408\nERROR: incomplete info for symbol 9493\nERROR: incomplete info for symbol 10114\nERROR: incomplete info for symbol 11002\nERROR: incomplete info for symbol 11251\nERROR: incomplete info for symbol 11797\nERROR: incomplete info for symbol 12067\nERROR: incomplete info for symbol 12161\nERROR: incomplete info for symbol 12206\nERROR: incomplete info for symbol 12258\nERROR: incomplete info for symbol 12559\nERROR: incomplete info for symbol 12953\nERROR: incomplete info for symbol 13279\nERROR: incomplete info for symbol 13563\nERROR: incomplete info for symbol 13939\nERROR: incomplete info for symbol 14041\nERROR: incomplete info for symbol 14716\nERROR: incomplete info for symbol 14748\nERROR: incomplete info for symbol 16260\nERROR: incomplete info for symbol 16661\nCreating ABI dump\n\nThe object ABI has been dumped to:\n  /tmp/ABI-2-bksIl.dump\n/__w/splice-experiment-runs/splice-experiment-runs\nPreparing, please wait ...\nComparing ABIs ...\nComparing APIs ...\nCreating compatibility report ...\nBinary compatibility: 100%\nSource compatibility: 100%\nTotal binary compatibility problems: 0, warnings: 0\nTotal source compatibility problems: 0, warnings: 0\nReport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libsasldb.so.3.0.0-abi-laboratory-libsasldb-so-3-0-0-libsasldb-so-3-0-0.html\n",
+                    "return_code": 0,
+                    "seconds": 1.0824720859527588,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libsasldb.so.3.0.0 /__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libsasldb.so.3.0.0 libsasldb-so-3-0-0-libsasldb-so-3-0-0 /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libsasldb.so.3.0.0-abi-laboratory-libsasldb-so-3-0-0-libsasldb-so-3-0-0.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libsasldb.so.3.0.0",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libsasldb.so.3.0.0",
+                    "prediction": true,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libsasldb.so.3.0.0": 36904,
+                "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libsasldb.so.3.0.0": 36872
+            }
+        },
+        "experiment": "usr/lib64/sasl2/libsasldb-fedora-libs-34-fedora-libs-36",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/second/usr/lib64/sasl2/libsasldb.so.3.0.0",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/first/usr/lib64/sasl2/libsasldb.so.3.0.0",
+        "different_libs": true
+    }
+]
