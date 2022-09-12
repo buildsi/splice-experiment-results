@@ -156,12 +156,8 @@ def create_fedora_results_table(experiments, filename=False):
         for res in data:
 
             # If we don't have predictions, it's a full (non symbols) result
-            if "predictions" not in res:
-                
+            if "predictions" not in res:                
                 continue
-                original = res['original_lib'].rsplit("splice-experiment-runs")[-1].strip("/")
-                changed = res['spliced_lib'].rsplit("splice-experiment-runs")[-1].strip("/")
-                add_prediction_row(before, after, original, changed, res, "symbols", e)            
             else:
                 # Split on right repo name to get relative path
                 original = (
@@ -169,10 +165,10 @@ def create_fedora_results_table(experiments, filename=False):
                 )
                 changed = res["spliced"][0].rsplit("splice-experiment-runs")[-1].strip("/")
                 for predictor, listing in res["predictions"].items():
-                    # We aren't including symbols from these runs
-                    #if predictor == "symbols":
-                    #    continue
                     for p in listing:
+                        # ABI lab has several terminated results for "stack smashing"
+                        if "message" in p and isinstance(p['message'], str) and "***: terminated" in p['message'].lower():
+                            p['prediction'] = "Terminated"
                         add_prediction_row(before, after, original, changed, p, predictor, e)
     return df
 
