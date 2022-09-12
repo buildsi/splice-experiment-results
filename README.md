@@ -70,7 +70,11 @@ $ jupyter notebook
 
 ### 1. Interface Generation
 
-The docs directory should already exist.
+The docs directory should already exist. Make sure yu have dependencies installed:
+
+```bash
+$ pip install -r requirements.txt
+```
 
 ```bash
 $ python analysis.py ./artifacts --outdir ./docs
