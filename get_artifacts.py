@@ -14,6 +14,7 @@ from datetime import datetime, timedelta
 from zipfile import ZipFile
 
 here = os.path.abspath(os.path.dirname(__file__))
+repo_name = os.environ.get("REPO_NAME", "splice-experiment-runs")
 
 
 ################################################################################
@@ -217,11 +218,12 @@ def download_artifacts(artifacts, output, days):
         os.makedirs(output)
 
     # Make cache output and results output
-    for subpath in ["results", "cache"]:
+    for subpath in ["results", "tests"]:
         path = os.path.join(output, subpath)
         if not os.path.exists(path):
             os.makedirs(path)
 
+    
     for artifact in artifacts:
         if artifact["expired"]:
             print(
@@ -251,7 +253,7 @@ def download_artifacts(artifacts, output, days):
             os.makedirs(extract_dir)
 
         # Don't download chonker -vs- artifacts
-        if "fedora" in artifact['name'] and "-vs-" not in artifact["name"]:
+        if "fedora" in artifact["name"] and "-vs-" not in artifact["name"]:
             continue
         print(f"Downloading {artifact_url}")
 
@@ -265,15 +267,22 @@ def download_artifacts(artifacts, output, days):
         zipfile = ZipFile(zip_file, mode="r")
         zipfile.extractall(extract_dir)
 
-        if "cache" in artifact["name"]:
-            save_to = os.path.join(output, "cache")
+        is_test = False
+        if "fedora" not in artifact["name"]:
+            save_to = os.path.join(output, "tests")
+            is_test = True
         # Fedora results will be prefixed with fedora
         else:
             save_to = os.path.join(output, "results")
 
         # Loop through files, add those that aren't present
         for filename in recursive_find(extract_dir):
+
+            # Split tests as splice-experiment-runs (or repo name)
             relpath = filename.replace(tmp, "").strip(os.sep)
+            if is_test:
+                relpath = relpath.split(repo_name)[-1].strip(os.sep)
+
             finalpath = os.path.join(save_to, relpath)
 
             if "fedora" in artifact["name"] and "fedora" not in relpath:

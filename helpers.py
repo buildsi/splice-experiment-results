@@ -116,12 +116,12 @@ def create_fedora_results_table(experiments, filename=False):
         """
         # Different predictors use different data
         prediction = p.get("prediction", False)
-        seconds = p.get("seconds") or p.get('time') or "unknown"
+        seconds = p.get("seconds") or p.get("time") or "unknown"
 
         # symbols has two diff cases
         analysis = "abi-compliance-tester"
         if predictor == "symbols":
-            analysis = p['command']
+            analysis = p["command"]
         elif predictor == "libabigail":
             analysis = "abidiff"
 
@@ -142,9 +142,11 @@ def create_fedora_results_table(experiments, filename=False):
     # Of the splice successes, now look into results
     for e in experiments:
         basename = os.path.basename(e)
-        libname, comparison = basename.split('-', 1)
-        comparison = comparison.replace('.json', '')        
-        comparison = [(f"fedora{x}").strip('-') for x in comparison.rsplit('fedora') if x]
+        libname, comparison = basename.split("-", 1)
+        comparison = comparison.replace(".json", "")
+        comparison = [
+            (f"fedora{x}").strip("-") for x in comparison.rsplit("fedora") if x
+        ]
         before = comparison[-2]
         after = comparison[-1]
         data = read_json(e)
@@ -156,21 +158,30 @@ def create_fedora_results_table(experiments, filename=False):
         for res in data:
 
             # If we don't have predictions, it's a full (non symbols) result
-            if "predictions" not in res:                
+            if "predictions" not in res:
                 continue
             else:
                 # Split on right repo name to get relative path
                 original = (
                     res["original"][0].rsplit("splice-experiment-runs")[-1].strip("/")
                 )
-                changed = res["spliced"][0].rsplit("splice-experiment-runs")[-1].strip("/")
+                changed = (
+                    res["spliced"][0].rsplit("splice-experiment-runs")[-1].strip("/")
+                )
                 for predictor, listing in res["predictions"].items():
                     for p in listing:
                         # ABI lab has several terminated results for "stack smashing"
-                        if "message" in p and isinstance(p['message'], str) and "***: terminated" in p['message'].lower():
-                            p['prediction'] = "Terminated"
-                        add_prediction_row(before, after, original, changed, p, predictor, e)
+                        if (
+                            "message" in p
+                            and isinstance(p["message"], str)
+                            and "***: terminated" in p["message"].lower()
+                        ):
+                            p["prediction"] = "Terminated"
+                        add_prediction_row(
+                            before, after, original, changed, p, predictor, e
+                        )
     return df
+
 
 def create_sizes_table(experiments):
     """

@@ -27,11 +27,17 @@ $ python get_artifacts.py
 ```
 
 You can also ask for a specific run, and this is how we were able to run
-jobs in batches (a range of libraries per batch):
+jobs in batches (a range of libraries per batch). For the first (high fidelity
+results) if you need to change the repository basename from `splice-experiment-runs`:
+
+```bash
+export REPO_NAME=splice-experiment-another-run
+```
+Here is how the artifacts were retrieved that are present here.
 
 ```bash
 $ rm -rf artifacts/*
-$ python get_artifacts.py 2864059558  # main results
+$ python get_artifacts.py 3056175039  # high fidelity results
 
 $ python get_artifacts.py 3017137349  # fedora results 0-50
 $ python get_artifacts.py 3017172931  # fedora results 50-100
@@ -61,7 +67,7 @@ $ python get_artifacts.py 3030132290  # fedora results 1600-1650
 $ python get_artifacts.py 3029103477  # fedora resuts 1650-1700
 ```
 
-And then to open (and run/update the notebook)
+And then to open (and run/update the notebooks)
 
 
 ```bash
@@ -70,7 +76,7 @@ $ jupyter notebook
 
 ### 1. Interface Generation
 
-The docs directory should already exist. Make sure yu have dependencies installed:
+The docs directory should already exist. Make sure you have dependencies installed:
 
 ```bash
 $ pip install -r requirements.txt
