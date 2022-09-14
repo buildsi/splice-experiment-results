@@ -1,0 +1,84 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_enum_enumerator/lib.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "smeagle": [
+                {
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so",
+                    "lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_enum_enumerator/lib.so",
+                    "prediction": true,
+                    "seconds": 0.002630949020385742
+                }
+            ],
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "lib.so",
+                    "spliced_lib": "lib.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 1.71661376953125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "lib.so",
+                    "spliced_lib": "lib.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [],
+                    "prediction": true,
+                    "seconds": 5.4836273193359375e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 0 Removed, 0 Changed (1 filtered out), 0 Added function\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n",
+                    "return_code": 0,
+                    "seconds": 0.007353544235229492,
+                    "command": "/usr/local/bin/abidiff    /__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so /__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_enum_enumerator/lib.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_enum_enumerator/lib.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_enum_enumerator/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so-abi-laboratory-lib-so-lib-so.html\n/usr/bin/run_abi_laboratory.sh: line 36: ABILAB_DEBUGINFO_DIR1: unbound variable\n",
+                    "return_code": 1,
+                    "seconds": 0.007363796234130859,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so /__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_enum_enumerator/lib.so lib-so-lib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so-abi-laboratory-lib-so-lib-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_enum_enumerator/lib.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so": 17472,
+                "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_enum_enumerator/lib.so": 17512
+            },
+            "lib.so-lib.so": {}
+        },
+        "experiment": "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so-/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_enum_enumerator/lib.so-clang-12",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/enum/breaks/add_enum_enumerator/lib.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/enum/lib.so",
+        "different_libs": true
+    }
+]

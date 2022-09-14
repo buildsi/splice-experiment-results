@@ -1,0 +1,88 @@
+[
+    {
+        "specs": {},
+        "ids": {},
+        "original": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so"
+        ],
+        "spliced": [
+            "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so"
+        ],
+        "paths": {},
+        "predictions": {
+            "smeagle": [
+                {
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",
+                    "lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so",
+                    "prediction": true,
+                    "seconds": 0.0027446746826171875
+                }
+            ],
+            "symbols": [
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "lib.so",
+                    "spliced_lib": "lib.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-symbols",
+                    "message": [
+                        "_Z3fooCeS_"
+                    ],
+                    "prediction": false,
+                    "seconds": 1.71661376953125e-05
+                },
+                {
+                    "splice_type": "different_lib",
+                    "original_lib": "lib.so",
+                    "spliced_lib": "lib.so",
+                    "is_stripped_original": false,
+                    "is_stripped_splice": false,
+                    "command": "missing-previously-found-exports",
+                    "message": [
+                        "_Z3fooCeS_"
+                    ],
+                    "prediction": false,
+                    "seconds": 6.4373016357421875e-06
+                }
+            ],
+            "libabigail": [
+                {
+                    "message": "Functions changes summary: 1 Removed, 0 Changed, 1 Added functions\nVariables changes summary: 0 Removed, 0 Changed, 0 Added variable\n\n1 Removed function:\n\n  [D] 'function void foo(complex, complex)'    {_Z3fooCeS_}\n\n1 Added function:\n\n  [A] 'function void foo(complex, complex)'    {_Z3fooCdS_}\n\n",
+                    "return_code": 12,
+                    "seconds": 0.021816492080688477,
+                    "command": "/usr/local/bin/abidiff    /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ],
+            "abi-laboratory": [
+                {
+                    "message": "old: /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so\nnew: /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so\nreport: /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html\n/usr/bin/run_abi_laboratory.sh: line 36: ABILAB_DEBUGINFO_DIR1: unbound variable\n",
+                    "return_code": 1,
+                    "seconds": 0.00844120979309082,
+                    "command": "/bin/bash /usr/bin/run_abi_laboratory.sh /__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so /__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so lib-so-lib-so /tmp/cache/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-abi-laboratory-lib-so-lib-so.html",
+                    "spliced_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so",
+                    "original_lib": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",
+                    "prediction": false,
+                    "splice_type": "different_lib"
+                }
+            ]
+        },
+        "stats": {
+            "sizes_bytes": {
+                "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so": 16656,
+                "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so": 16688
+            },
+            "lib.so-lib.so": {}
+        },
+        "experiment": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so-/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so-clang-10",
+        "result": "diff-libraries-present",
+        "success": true,
+        "splice": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/breaks/narrow_to_double/lib.so",
+        "package": "/__w/splice-experiment-runs/splice-experiment-runs/complex-double/lib.so",
+        "different_libs": true
+    }
+]

@@ -27,11 +27,17 @@ $ python get_artifacts.py
 ```
 
 You can also ask for a specific run, and this is how we were able to run
-jobs in batches (a range of libraries per batch):
+jobs in batches (a range of libraries per batch). For the first (high fidelity
+results) if you need to change the repository basename from `splice-experiment-runs`:
+
+```bash
+export REPO_NAME=splice-experiment-another-run
+```
+Here is how the artifacts were retrieved that are present here.
 
 ```bash
 $ rm -rf artifacts/*
-$ python get_artifacts.py 2864059558  # main results
+$ python get_artifacts.py 3056175039  # high fidelity results
 
 $ python get_artifacts.py 3017137349  # fedora results 0-50
 $ python get_artifacts.py 3017172931  # fedora results 50-100
@@ -61,7 +67,7 @@ $ python get_artifacts.py 3030132290  # fedora results 1600-1650
 $ python get_artifacts.py 3029103477  # fedora resuts 1650-1700
 ```
 
-And then to open (and run/update the notebook)
+And then to open (and run/update the notebooks)
 
 
 ```bash
@@ -70,14 +76,17 @@ $ jupyter notebook
 
 ### 1. Interface Generation
 
-The docs directory should already exist. Make sure yu have dependencies installed:
+The docs directory should already exist. Make sure you have dependencies installed:
 
 ```bash
 $ pip install -r requirements.txt
 ```
 
+This small UI is just intended to show the different compiler results "high fidelity tests"
+so target that directory:
+
 ```bash
-$ python analysis.py ./artifacts --outdir ./docs
+$ python analysis.py ./artifacts/tests --outdir ./docs
 ```
 
 Notice that we provide the input folder run1 and the output directory for the data,
@@ -85,20 +94,4 @@ where a subfolder run1 will be created. We are creating in a jekyll structure un
 anticipating creating some kind of interface to explore results. **Important** I had to minify
 the `results-list.json` for openmpi because it was too big. Once we have even bigger results
 we will need to refactor the interface to render tables for differen testers or similar.
-
-### 2. Graph Generation
-
-Ben had an idea to generate a graph, so you can do that:
-
-```bash
-$ mkdir docs/graph
-$ python graph.py run1 --outdir docs/graph
-```
-
-It will generate `docs/graph/cypher.graph` that you can copy paste into a neo4j interface,
-usually a [sandbox](https://neo4j.com/sandbox/) will work. To then see ALL the graph:
-
-```cypher
-MATCH p=()-->() RETURN p
-```
 

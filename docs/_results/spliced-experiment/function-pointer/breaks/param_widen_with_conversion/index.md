@@ -9,7 +9,7 @@ svg: spliced-experiment-table.svg
 results: results-list.json
 table: results-table.json
 data: df-subset.json
-summary: {'smeagle': {False: {False: 15}}, 'symbols': {False: {False: 30}}, 'libabigail': {False: {False: 15}}, 'abi-laboratory': {False: {False: 15}}}
+summary: {'symbols': {False: {False: 24}}, 'libabigail': {False: {False: 12}}, 'abi-laboratory': {False: {False: 12}}}
 
 maths: 1
 toc: 1
