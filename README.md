@@ -82,8 +82,11 @@ The docs directory should already exist. Make sure you have dependencies install
 $ pip install -r requirements.txt
 ```
 
+This small UI is just intended to show the different compiler results "high fidelity tests"
+so target that directory:
+
 ```bash
-$ python analysis.py ./artifacts --outdir ./docs
+$ python analysis.py ./artifacts/tests --outdir ./docs
 ```
 
 Notice that we provide the input folder run1 and the output directory for the data,
@@ -91,20 +94,4 @@ where a subfolder run1 will be created. We are creating in a jekyll structure un
 anticipating creating some kind of interface to explore results. **Important** I had to minify
 the `results-list.json` for openmpi because it was too big. Once we have even bigger results
 we will need to refactor the interface to render tables for differen testers or similar.
-
-### 2. Graph Generation
-
-Ben had an idea to generate a graph, so you can do that:
-
-```bash
-$ mkdir docs/graph
-$ python graph.py run1 --outdir docs/graph
-```
-
-It will generate `docs/graph/cypher.graph` that you can copy paste into a neo4j interface,
-usually a [sandbox](https://neo4j.com/sandbox/) will work. To then see ALL the graph:
-
-```cypher
-MATCH p=()-->() RETURN p
-```
 
