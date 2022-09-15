@@ -223,7 +223,6 @@ def download_artifacts(artifacts, output, days):
         if not os.path.exists(path):
             os.makedirs(path)
 
-    
     for artifact in artifacts:
         if artifact["expired"]:
             print(

@@ -105,6 +105,8 @@ def create_fedora_results_table(experiments, filename=False):
         "seconds",
         "predictor",
         "prediction",
+        "size_original",
+        "size_changed",
     ]
     if filename:
         columns.append("file")
@@ -134,6 +136,8 @@ def create_fedora_results_table(experiments, filename=False):
             seconds,
             predictor,
             prediction,
+            p["size_original"],
+            p["size_changed"],
         ]
         if filename:
             row.append(e)
@@ -157,10 +161,16 @@ def create_fedora_results_table(experiments, filename=False):
 
         for res in data:
 
+            # Add size to table
+            size_lookup = res["stats"]["sizes_bytes"]
+
             # If we don't have predictions, it's a full (non symbols) result
             if "predictions" not in res:
                 continue
             else:
+                size_original = size_lookup[res["original"][0]]
+                size_changed = size_lookup[res["spliced"][0]]
+
                 # Split on right repo name to get relative path
                 original = (
                     res["original"][0].rsplit("splice-experiment-runs")[-1].strip("/")
@@ -170,6 +180,7 @@ def create_fedora_results_table(experiments, filename=False):
                 )
                 for predictor, listing in res["predictions"].items():
                     for p in listing:
+
                         # ABI lab has several terminated results for "stack smashing"
                         if (
                             "message" in p
@@ -177,6 +188,9 @@ def create_fedora_results_table(experiments, filename=False):
                             and "***: terminated" in p["message"].lower()
                         ):
                             p["prediction"] = "Terminated"
+
+                        p["size_original"] = size_original
+                        p["size_changed"] = size_changed
                         add_prediction_row(
                             before, after, original, changed, p, predictor, e
                         )
@@ -193,8 +207,6 @@ def create_sizes_table(experiments):
     for e in experiments:
         data = read_json(e)
         for res in data:
-            if res["result"] != "splice-success":
-                continue
             for libname, size in res["stats"]["sizes_bytes"].items():
                 sizes.loc[len(sizes.index), :] = [libname, size]
 
