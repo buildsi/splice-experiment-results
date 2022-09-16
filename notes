@@ -1,0 +1,106 @@
+TODO:
+  - How often does any predictor disagree with libabigail (the most robust tool)?
+    - What reasons do they give?
+  - For each predictor, how often does it disagree with the others?
+    - What reasons does it give?
+  - What is the agreement rate for the three-predictor case
+    - For the two-predictor case?
+
+Filter out linker scripts
+  symbols reports 'Unknown' iff it's a linker script
+  For now, I've removed all runs on files for which symbols reports 'Unknown'
+
+Total number of unique libs:
+  - across all OS versions
+    - 1736
+  - with three predictors
+    - 993
+
+Number of predictions:
+  - all
+    - 30496
+  - Two predictors
+    - 22872
+  - Three predictors
+    - 18340
+
+Results for two predictors: (%breakage=20.780)
+  |predictor |analysis                        |prediction|count(1)|
+  |----------|--------------------------------|----------|--------|
+  |libabigail|abidiff                         |False     |2,215   |
+  |libabigail|abidiff                         |True      |5,409   |
+  |symbols   |missing-previously-found-exports|False     |680     |
+  |symbols   |missing-previously-found-exports|True      |6,944   |
+  |symbols   |missing-previously-found-symbols|False     |1,858   |
+  |symbols   |missing-previously-found-symbols|True      |5,766   |
+
+Results for three predictors: (%breakage=18.146)
+  |predictor     |analysis                        |prediction|count(1)|
+  |--------------|--------------------------------|----------|--------|
+  |abi-laboratory|abi-compliance-tester           |False     |1,326   |
+  |abi-laboratory|abi-compliance-tester           |True      |3,259   |
+  |libabigail    |abidiff                         |False     |1,059   |
+  |libabigail    |abidiff                         |True      |3,526   |
+  |symbols       |missing-previously-found-exports|False     |245     |
+  |symbols       |missing-previously-found-exports|True      |4,340   |
+  |symbols       |missing-previously-found-symbols|False     |698     |
+  |symbols       |missing-previously-found-symbols|True      |3,887   |
+
+
+library name changes:
+  Two predictors:
+    |total |name_changed|no_name_change|perc_changed |
+    |------|------------|--------------|-------------|
+    |22,872|2,922       |19,950        |12.7754459601|
+
+  Three predictors:
+    |total |name_changed|no_name_change|perc_changed|
+    |------|------------|--------------|------------|
+    |18,340|480         |17,860        |2.6172300981|
+
+
+Results when name changed:
+  Two predictors: (%breakage=68.822)
+    |predictor |analysis                        |prediction|total|
+    |----------|--------------------------------|----------|-----|
+    |libabigail|abidiff                         |False     |839  |
+    |libabigail|abidiff                         |True      |135  |
+    |symbols   |missing-previously-found-exports|False     |447  |
+    |symbols   |missing-previously-found-exports|True      |527  |
+    |symbols   |missing-previously-found-symbols|False     |725  |
+    |symbols   |missing-previously-found-symbols|True      |249  |
+  
+  Three predictors: (%breakage=73.125)
+    |predictor     |analysis                        |prediction|total|
+    |--------------|--------------------------------|----------|-----|
+    |abi-laboratory|abi-compliance-tester           |False     |88   |
+    |abi-laboratory|abi-compliance-tester           |True      |32   |
+    |libabigail    |abidiff                         |False     |107  |
+    |libabigail    |abidiff                         |True      |13   |
+    |symbols       |missing-previously-found-exports|False     |64   |
+    |symbols       |missing-previously-found-exports|True      |56   |
+    |symbols       |missing-previously-found-symbols|False     |92   |
+    |symbols       |missing-previously-found-symbols|True      |28   |
+
+Results when name did not change:
+  Two predictors: (%breakage=13.744)
+    |predictor |analysis                        |prediction|total|
+    |----------|--------------------------------|----------|-----|
+    |libabigail|abidiff                         |False     |1,376|
+    |libabigail|abidiff                         |True      |5,274|
+    |symbols   |missing-previously-found-exports|False     |233  |
+    |symbols   |missing-previously-found-exports|True      |6,417|
+    |symbols   |missing-previously-found-symbols|False     |1,133|
+    |symbols   |missing-previously-found-symbols|True      |5,517|
+
+  Three predictors: (%breakage=16.668)
+    |predictor     |analysis                        |prediction|total|
+    |--------------|--------------------------------|----------|-----|
+    |abi-laboratory|abi-compliance-tester           |False     |1,238|
+    |abi-laboratory|abi-compliance-tester           |True      |3,227|
+    |libabigail    |abidiff                         |False     |952  |
+    |libabigail    |abidiff                         |True      |3,513|
+    |symbols       |missing-previously-found-exports|False     |181  |
+    |symbols       |missing-previously-found-exports|True      |4,284|
+    |symbols       |missing-previously-found-symbols|False     |606  |
+    |symbols       |missing-previously-found-symbols|True      |3,859|
