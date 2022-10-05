@@ -1,9 +1,8 @@
 import sqlite3
-from Xlib.error import BadFont
 con = sqlite3.connect('results.sqlite3')
 cur = con.cursor()
 
-def disagreement(table, pred1_name, pred1_state, pred2_name, pred2_state):
+def disagreement(table, pred1_name, pred1_state, pred2_name, pred2_state, filename_changed):
     query = f"""
     SELECT
         count(1) as cnt
@@ -19,28 +18,31 @@ def disagreement(table, pred1_name, pred1_state, pred2_name, pred2_state):
         analysis=?
         and pr.prediction=?
     """
+
+    if(filename_changed):
+        query += " and pr.original<>pr.changed"
+    else:
+        query += " and pr.original=pr.changed"
+
     cur.execute(query, (pred1_name, pred1_state, pred2_name, pred2_state))
     return cur.fetchone()
 
+def run(table, predictors):
+    for fnc in (True, False):
+        print("filename {0:s}changed".format("" if fnc else "un"), "\n", "-"*20)
+        for p1 in predictors:
+            print(p1)
+            padding = '  '
+            for p2 in predictors:
+                print(padding, p2)
+                print(padding, *disagreement(table, p1, 'True', p2, 'True', filename_changed=fnc),',',end='')
+                print(padding, *disagreement(table, p1, 'True', p2, 'False', filename_changed=fnc),',',end='')
+                print(padding, *disagreement(table, p1, 'False', p2, 'True', filename_changed=fnc),',',end='')
+                print(padding, *disagreement(table, p1, 'False', p2, 'False', filename_changed=fnc))
+        print("\n")
+
 predictors=('missing-previously-found-exports', 'missing-previously-found-symbols', 'abidiff')
-for p1 in predictors:
-    for p2 in predictors:
-        print(*disagreement('two_predictors', p1, 'True', p2, 'True'),',',end='')
-        print(*disagreement('two_predictors', p1, 'True', p2, 'False'),',',end='')
-        print(*disagreement('two_predictors', p1, 'False', p2, 'True'),',',end='')
-        print(*disagreement('two_predictors', p1, 'False', p2, 'False'))
-    print("\n")
+run('two_predictors', predictors)
 
 predictors=('missing-previously-found-exports', 'missing-previously-found-symbols', 'abidiff', 'abi-compliance-tester')
-for p1 in predictors:
-    for p2 in predictors:
-        print(*disagreement('three_predictors', p1, 'True', p2, 'True'),',',end='')
-        print(*disagreement('three_predictors', p1, 'True', p2, 'False'),',',end='')
-        print(*disagreement('three_predictors', p1, 'False', p2, 'True'),',',end='')
-        print(*disagreement('three_predictors', p1, 'False', p2, 'False'))
-    print("\n")
-
-
-def get_prefix(lib):
-    import os
-    return os.path.basename(lib).split(".")[0]
+run('three_predictors', predictors)

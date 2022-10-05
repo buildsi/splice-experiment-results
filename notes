@@ -1,106 +1,19 @@
-TODO:
-  - How often does any predictor disagree with libabigail (the most robust tool)?
-    - What reasons do they give?
-  - For each predictor, how often does it disagree with the others?
-    - What reasons does it give?
-  - What is the agreement rate for the three-predictor case
-    - For the two-predictor case?
-
 Filter out linker scripts
   symbols reports 'Unknown' iff it's a linker script
   For now, I've removed all runs on files for which symbols reports 'Unknown'
+---------------------------------------------------------------------------------------------------------
 
-Total number of unique libs:
-  - across all OS versions
-    - 1736
-  - with three predictors
-    - 993
+python3 error_messages.py 
+for f in *.messages*; do echo $f; perl parse_messages.pl $f; echo; done >messages.summary
+for f in *.messages*; do echo $f; grep -nw True $f; echo; done # should find none
 
-Number of predictions:
-  - all
-    - 30496
-  - Two predictors
-    - 22872
-  - Three predictors
-    - 18340
+---------------------------------------------------------------------------------------------------------
+/usr/lib64/libSDL2-2-fedora-libs-34-fedora-libs-35.json
+libabigail,False--Functions changes summary: 0 Removed, 7 Changed (215 filtered out), 20 Added functions Variables changes summary: 0 Removed, 0 Changed, 0 Added variable  20 Added functions:    [A] 'function SDL_GUID SDL_GUIDFromString(const char*)'    {SDL_GUIDFromString}   [A] 'function void SDL_GUIDToString(SDL_GUID, char*, int)'    {SDL_GUIDToString}   [A] 'function Uint16 SDL_GameControllerGetFirmwareVersion(SDL_GameController*)'    {SDL_GameControllerGetFirmwareVersion}   [A] 'function const char* SDL_GameControllerPath(SDL_GameController*)'    {SDL_GameControllerPath}   [A] 'function const char* SDL_GameControllerPathForIndex(int)'    {SDL_GameControllerPathForIndex}   [A] 'function int SDL_GetDefaultAudioInfo(char**, SDL_AudioSpec*, int)'    {SDL_GetDefaultAudioInfo}   [A] 'function void SDL_GetOriginalMemoryFunctions(SDL_malloc_func*, SDL_calloc_func*, SDL_realloc_func*, SDL_free_func*)'    {SDL_GetOriginalMemoryFunctions}   [A] 'function int SDL_GetPointDisplayIndex(const SDL_Point*)'    {SDL_GetPointDisplayIndex}   [A] 'function int SDL_GetRectDisplayIndex(const SDL_Rect*)'    {SDL_GetRectDisplayIndex}   [A] 'function SDL_bool SDL_HasLASX()'    {SDL_HasLASX}   [A] 'function SDL_bool SDL_HasLSX()'    {SDL_HasLSX}   [A] 'function int SDL_JoystickAttachVirtualEx(const SDL_VirtualJoystickDesc*)'    {SDL_JoystickAttachVirtualEx}   [A] 'function Uint16 SDL_JoystickGetFirmwareVersion(SDL_Joystick*)'    {SDL_JoystickGetFirmwareVersion}   [A] 'function const char* SDL_JoystickPath(SDL_Joystick*)'    {SDL_JoystickPath}   [A] 'function const char* SDL_JoystickPathForIndex(int)'    {SDL_JoystickPathForIndex}   [A] 'function SDL_bool SDL_ResetHint(const char*)'    {SDL_ResetHint}   [A] 'function void SDL_ResetKeyboard()'    {SDL_ResetKeyboard}   [A] 'function void* SDL_bsearch(void*, void*, size_t, size_t, int (void*, void*)*)'    {SDL_bsearch}   [A] 'function Uint16 SDL_crc16(Uint16, void*, size_t)'    {SDL_crc16}   [A] 'function size_t SDL_utf8strnlen(const char*, size_t)'    {SDL_utf8strnlen}  7 functions with some indirect sub-type change:    [C] 'function SDL_Surface* SDL_ConvertSurface(SDL_Surface*, const SDL_PixelFormat*, Uint32)' at SDL_dynapi_procs.h:495:1 has some indirect sub-type changes:     return type changed:       in pointed to type 'typedef SDL_Surface' at SDL_surface.h:97:1:         underlying type 'struct SDL_Surface' at SDL_surface.h:70:1 changed:           type size hasn't changed           1 data member change:             type of 'SDL_BlitMap* map' changed:               in pointed to type 'struct SDL_BlitMap' at SDL_surface.h:64:1:                 entity changed from 'struct SDL_BlitMap' to compatible type 'typedef SDL_BlitMap' at SDL_surface.h:64:1    [C] 'function SDL_Thread* SDL_CreateThread(SDL_ThreadFunction, const char*, void*)' at SDL_dynapi_procs.h:56:1 has some indirect sub-type changes:     return type changed:       in pointed to type 'typedef SDL_Thread' at SDL_thread.h:57:1:         underlying type 'struct SDL_Thread' at SDL_thread_c.h:58:1 changed:           type size changed from 1664 to 896 (in bits)           7 data member changes:             type of 'SDL_error errbuf' changed:               underlying type 'struct SDL_error' at SDL_error_c.h:32:1 changed:                 type size changed from 1056 to 320 (in bits)                 3 data member insertions:                   'size_t len', at offset 128 (in bits) at SDL_error_c.h:34:1                   'SDL_realloc_func realloc_func', at offset 192 (in bits) at SDL_error_c.h:35:1                   'SDL_free_func free_func', at offset 256 (in bits) at SDL_error_c.h:36:1                 1 data member change:                   type of 'char str[128]' changed:                     entity changed from 'char[128]' to 'char*'                     type size changed from 1024 to 64 (in bits)                   and offset changed from 32 to 64 (in bits) (by +32 bits)             'char* name' offset changed from 1280 to 512 (in bits) (by -768 bits)             'size_t stacksize' offset changed from 1344 to 576 (in bits) (by -768 bits)             'int (void*)* userfunc' offset changed from 1408 to 640 (in bits) (by -768 bits)             'void* userdata' offset changed from 1472 to 704 (in bits) (by -768 bits)             'void* data' offset changed from 1536 to 768 (in bits) (by -768 bits)             'void* endfunc' offset changed from 1600 to 832 (in bits) (by -768 bits)    [C] 'function char* SDL_GameControllerMappingForGUID(SDL_JoystickGUID)' at SDL_dynapi_procs.h:170:1 has some indirect sub-type changes:     parameter 1 of type 'typedef SDL_JoystickGUID' changed:       underlying type 'struct SDL_JoystickGUID' at SDL_joystick.h:72:1 changed:         entity changed from 'struct SDL_JoystickGUID' to compatible type 'typedef SDL_GUID' at SDL_guid.h:57:1           type name changed from 'SDL_JoystickGUID' to 'SDL_GUID'           type size hasn't changed    [C] 'function SDL_JoystickGUID SDL_JoystickGetDeviceGUID(int)' at SDL_dynapi_procs.h:233:1 has some indirect sub-type changes:    [C] 'function SDL_JoystickGUID SDL_JoystickGetGUID(SDL_Joystick*)' at SDL_dynapi_procs.h:234:1 has some indirect sub-type changes:    [C] 'function SDL_JoystickGUID SDL_JoystickGetGUIDFromString(const char*)' at SDL_dynapi_procs.h:236:1 has some indirect sub-type changes:    [C] 'function void SDL_JoystickGetGUIDString(SDL_JoystickGUID, char*, int)' at SDL_dynapi_procs.h:235:1 has some indirect sub-type changes:  
+missing-previously-found-symbols,False--__snprintf_chk __read_chk
+   For gcc there are options -fno-stack-protector -fno-mudflap. May be also -D_FORTIFY_SOURCE=0 (for any glibc)
 
-Results for two predictors: (%breakage=20.780)
-  |predictor |analysis                        |prediction|count(1)|
-  |----------|--------------------------------|----------|--------|
-  |libabigail|abidiff                         |False     |2,215   |
-  |libabigail|abidiff                         |True      |5,409   |
-  |symbols   |missing-previously-found-exports|False     |680     |
-  |symbols   |missing-previously-found-exports|True      |6,944   |
-  |symbols   |missing-previously-found-symbols|False     |1,858   |
-  |symbols   |missing-previously-found-symbols|True      |5,766   |
+artifacts/results/extracted/fedora//usr/lib64/libflexiblas64_mgmt-fedora-libs-34-fedora-libs-35.json
+missing-previously-found-symbols,False--__getdelim
+----------------------------------------------------------------------------------------------------------
 
-Results for three predictors: (%breakage=18.146)
-  |predictor     |analysis                        |prediction|count(1)|
-  |--------------|--------------------------------|----------|--------|
-  |abi-laboratory|abi-compliance-tester           |False     |1,326   |
-  |abi-laboratory|abi-compliance-tester           |True      |3,259   |
-  |libabigail    |abidiff                         |False     |1,059   |
-  |libabigail    |abidiff                         |True      |3,526   |
-  |symbols       |missing-previously-found-exports|False     |245     |
-  |symbols       |missing-previously-found-exports|True      |4,340   |
-  |symbols       |missing-previously-found-symbols|False     |698     |
-  |symbols       |missing-previously-found-symbols|True      |3,887   |
-
-
-library name changes:
-  Two predictors:
-    |total |name_changed|no_name_change|perc_changed |
-    |------|------------|--------------|-------------|
-    |22,872|2,922       |19,950        |12.7754459601|
-
-  Three predictors:
-    |total |name_changed|no_name_change|perc_changed|
-    |------|------------|--------------|------------|
-    |18,340|480         |17,860        |2.6172300981|
-
-
-Results when name changed:
-  Two predictors: (%breakage=68.822)
-    |predictor |analysis                        |prediction|total|
-    |----------|--------------------------------|----------|-----|
-    |libabigail|abidiff                         |False     |839  |
-    |libabigail|abidiff                         |True      |135  |
-    |symbols   |missing-previously-found-exports|False     |447  |
-    |symbols   |missing-previously-found-exports|True      |527  |
-    |symbols   |missing-previously-found-symbols|False     |725  |
-    |symbols   |missing-previously-found-symbols|True      |249  |
-  
-  Three predictors: (%breakage=73.125)
-    |predictor     |analysis                        |prediction|total|
-    |--------------|--------------------------------|----------|-----|
-    |abi-laboratory|abi-compliance-tester           |False     |88   |
-    |abi-laboratory|abi-compliance-tester           |True      |32   |
-    |libabigail    |abidiff                         |False     |107  |
-    |libabigail    |abidiff                         |True      |13   |
-    |symbols       |missing-previously-found-exports|False     |64   |
-    |symbols       |missing-previously-found-exports|True      |56   |
-    |symbols       |missing-previously-found-symbols|False     |92   |
-    |symbols       |missing-previously-found-symbols|True      |28   |
-
-Results when name did not change:
-  Two predictors: (%breakage=13.744)
-    |predictor |analysis                        |prediction|total|
-    |----------|--------------------------------|----------|-----|
-    |libabigail|abidiff                         |False     |1,376|
-    |libabigail|abidiff                         |True      |5,274|
-    |symbols   |missing-previously-found-exports|False     |233  |
-    |symbols   |missing-previously-found-exports|True      |6,417|
-    |symbols   |missing-previously-found-symbols|False     |1,133|
-    |symbols   |missing-previously-found-symbols|True      |5,517|
-
-  Three predictors: (%breakage=16.668)
-    |predictor     |analysis                        |prediction|total|
-    |--------------|--------------------------------|----------|-----|
-    |abi-laboratory|abi-compliance-tester           |False     |1,238|
-    |abi-laboratory|abi-compliance-tester           |True      |3,227|
-    |libabigail    |abidiff                         |False     |952  |
-    |libabigail    |abidiff                         |True      |3,513|
-    |symbols       |missing-previously-found-exports|False     |181  |
-    |symbols       |missing-previously-found-exports|True      |4,284|
-    |symbols       |missing-previously-found-symbols|False     |606  |
-    |symbols       |missing-previously-found-symbols|True      |3,859|
