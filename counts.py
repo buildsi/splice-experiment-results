@@ -46,3 +46,24 @@ run('two_predictors', predictors)
 
 predictors=('missing-previously-found-exports', 'missing-previously-found-symbols', 'abidiff', 'abi-compliance-tester')
 run('three_predictors', predictors)
+
+# Calculate the fraction of libraries missing in the three-predictor case
+cur.execute("""
+select
+  twop.a,
+  twop.b,
+  twop.cnt,
+  threep.cnt,
+  (twop.cnt-threep.cnt)/((twop.cnt+threep.cnt)/2.0) * 100.0 as pdiff
+from
+  (select a,b,count(distinct original) as cnt from two_predictors group by a,b) as twop
+  join (select a,b,count(distinct original) as cnt from three_predictors group by a,b) as threep on
+    twop.a= threep.a
+    and twop.b = threep.b
+""")
+print("Fraction of libraries missing in the three-predictor case")
+avg=0.0
+for r in cur.fetchall():
+  print(*r)
+  avg+=r[4]
+print("Average is ", avg/6)
