@@ -41,10 +41,10 @@ def run(table, predictors):
                 print(padding, *disagreement(table, p1, 'False', p2, 'False', filename_changed=fnc))
         print("\n")
 
-predictors=('missing-previously-found-exports', 'missing-previously-found-symbols', 'abidiff')
+predictors=('missing-previously-found-symbols', 'abidiff')
 run('two_predictors', predictors)
 
-predictors=('missing-previously-found-exports', 'missing-previously-found-symbols', 'abidiff', 'abi-compliance-tester')
+predictors=('missing-previously-found-symbols', 'abidiff', 'abi-compliance-tester')
 run('three_predictors', predictors)
 
 # Calculate the fraction of libraries missing in the three-predictor case
