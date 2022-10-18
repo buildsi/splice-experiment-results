@@ -43,8 +43,9 @@ for t,m in (('two_predictors',3), ('three_predictors',4)):
           print(f"FILE--{filename}", file=fdout)
           for p in predictors[t]:
             for r in res["predictions"][p]:
-              if "message" in r and r["message"]:
-                if p == 'abi-laboratory' and str(r["prediction"]) == "True":
+              if "message" in r:
+                # Some predictors have output even when they return True; skip it
+                if str(r["prediction"]) == "True":
                   continue
                 msg = r["message"]
                 if isinstance(msg, list):
