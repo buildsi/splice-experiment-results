@@ -5,7 +5,7 @@ import sqlite3
 con = sqlite3.connect('results.sqlite3')
 cur = con.cursor()
 
-def any_disagreements(table, filename_changed, max_match):
+def any_disagreements(table, filename_changed):
   changed="original<>changed" if filename_changed else "original=changed"
   
   query = f"""
@@ -18,7 +18,7 @@ def any_disagreements(table, filename_changed, max_match):
     group by
       a,b,original
     having
-      sum(case prediction when "True" then 1 else 0 end) not in(0,{max_match})
+      sum(case prediction when "False" then 1 else 0 end) > 0
     """
 
   cur.execute(query)
@@ -28,10 +28,11 @@ predictors = {
   'two_predictors': ("libabigail", "symbols"),
   'three_predictors': ("libabigail", "symbols", "abi-laboratory")
 }
-for t,m in (('two_predictors',3), ('three_predictors',4)):
+
+for t in ('two_predictors','three_predictors'):
     for fnc in (True, False):
       with open("{0}.{1}.messages".format(t, "changed" if fnc else "unchanged"), "w") as fdout:
-        for l in any_disagreements(t, fnc, max_match=m):
+        for l in any_disagreements(t, fnc):
           a,b,libpath = l
           dir, libname = os.path.split(libpath)
           prefix = libname.split(".")[0]
