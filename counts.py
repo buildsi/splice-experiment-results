@@ -66,26 +66,6 @@ for r in cur.fetchall():
 print("  avg: {0:.2f}%, min: {1:.2f}%, max: {2:.2f}%".format(sum(pdiff)/len(pdiff), min(pdiff), max(pdiff)))
 
 
-# Average fraction of libraries by predictor and filename cases
-# Only show for changed case- changed cases are complementary
-def frac_by_category(table):
-  cur.execute(f"""
-    select
-      c1.cnt/cast(c2.cnt as float)*100.0 as frac
-    from
-      (select a,b,count(distinct original) as cnt from {table} where original<>changed group by a,b) as c1
-      join (select a,b,count(distinct original) as cnt from {table} group by a,b) as c2 on
-        c1.a=c2.a
-        and c1.b=c2.b
-    """)
-  return cur.fetchall()
-
-print("\nBy predictor count, filename status")
-for t in ('two_predictors','three_predictors'):
-  frac=[]
-  for r in frac_by_category(t):
-    frac.append(r[0])
-  print("  {0}, changed: avg: {1:.2f}%, min: {2:.2f}%, max: {3:.2f}%".format(t, sum(frac)/len(frac), min(frac), max(frac)))
 
 # At least one predictor detects a breakage
 def frac_breakages(table, fnc):
