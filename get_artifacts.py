@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 
-import sys
-import os
 import fnmatch
 import hashlib
+import os
+import pathlib
+import shutil
+import sys
 import tempfile
 import time
-import shutil
-import requests
-import pathlib
-
 from datetime import datetime, timedelta
 from zipfile import ZipFile
+
+import requests
 
 here = os.path.abspath(os.path.dirname(__file__))
 repo_name = os.environ.get("REPO_NAME", "splice-experiment-runs")

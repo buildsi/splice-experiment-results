@@ -1,8 +1,9 @@
-import os
-import pandas
-from glob import glob
 import fnmatch
 import json
+import os
+from glob import glob
+
+import pandas
 
 
 def recursive_find(base, pattern="*experiment.json"):

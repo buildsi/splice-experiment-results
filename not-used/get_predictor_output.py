@@ -2,8 +2,8 @@
 
 import argparse
 import json
-import sys
 import os
+import sys
 
 # usage
 # All predictors

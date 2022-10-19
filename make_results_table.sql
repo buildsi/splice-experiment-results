@@ -1,6 +1,9 @@
-CREATE TABLE results("a" text, "b" text, "original" text, "changed" text, "analysis" text, "time" float, "predictor" text, "prediction" text);
-.mode csv
-.import results.csv results
+-- Uncomment these to create manually from results.csv
+-- This is done by pandas connecting to our database:
+-- CREATE TABLE results("a" text, "b" text, "original" text, "changed" text, "analysis" text, "time" float, "predictor" text, "prediction" text);
+-- These are sqlite (shell) commands, won't work outside of it
+-- .mode csv
+-- .import results.csv results
 
 -- 'Unknown' results are linker script files
 delete from results where original in(select distinct original from results where prediction="Unknown");
