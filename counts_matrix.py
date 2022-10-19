@@ -44,13 +44,7 @@ def run(table, predictors):
                 print(padding, p2)
                 print(
                     padding,
-                    *disagreement(table, p1, 0, p2, 0, filename_changed=fnc),
-                    ",",
-                    end="",
-                )
-                print(
-                    padding,
-                    *disagreement(table, p1, 0, p2, 1, filename_changed=fnc),
+                    *disagreement(table, p1, 1, p2, 1, filename_changed=fnc),
                     ",",
                     end="",
                 )
@@ -62,7 +56,13 @@ def run(table, predictors):
                 )
                 print(
                     padding,
-                    *disagreement(table, p1, 1, p2, 1, filename_changed=fnc),
+                    *disagreement(table, p1, 0, p2, 1, filename_changed=fnc),
+                    ",",
+                    end="",
+                )
+                print(
+                    padding,
+                    *disagreement(table, p1, 0, p2, 0, filename_changed=fnc),
                 )
         print("\n")
 

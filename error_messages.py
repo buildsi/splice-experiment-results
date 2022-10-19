@@ -11,7 +11,7 @@ cur = con.cursor()
 def any_disagreements(table, filename_changed):
     changed = "original<>changed" if filename_changed else "original=changed"
 
-    # A prediction of 1 is False (error code) and 0 is True (will work)
+    # A prediction of 0 is False and 1 is True (will work)
     query = f"""
     select
       a,b,original
@@ -22,7 +22,7 @@ def any_disagreements(table, filename_changed):
     group by
       a,b,original
     having
-      sum(case prediction when 1 then 1 else 0 end) > 0
+      sum(case prediction when 0 then 1 else 0 end) > 0
     """
 
     cur.execute(query)

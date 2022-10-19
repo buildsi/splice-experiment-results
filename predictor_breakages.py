@@ -11,7 +11,7 @@ def frac_breakages(table, fnc):
     cur.execute(
         f"""
     select
-      sum(case prediction when 'False' then 1 else 0 end) / cast(count(1) as float) * 100.0 as frac
+      sum(case prediction when 0 then 1 else 0 end) / cast(count(1) as float) * 100.0 as frac
     from
       {table}
     where
@@ -19,7 +19,7 @@ def frac_breakages(table, fnc):
     group by
       a,b
     having
-      sum(case prediction when 1 then 1 else 0 end) > 0
+      sum(case prediction when 0 then 1 else 0 end) > 0
     """
     )
     return cur.fetchall()
