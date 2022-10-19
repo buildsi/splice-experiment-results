@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 
-import pandas
 import argparse
-import sys
-import os
-import json
 import fnmatch
+import json
+import os
 import shutil
+import sys
 
-import numpy as np
-import seaborn as sns
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas
+import seaborn as sns
 from matplotlib.patches import Patch
 
 here = os.getcwd()
