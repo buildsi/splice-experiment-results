@@ -74,7 +74,75 @@ And then to open (and run/update the notebooks)
 $ jupyter notebook
 ```
 
-### 1. Interface Generation
+### 3. Running analysis scripts
+
+1. Export results to CSV
+
+```bash
+$ python3 make_csv.py
+```
+
+2. Generate SQLite database
+
+```bash
+$ sqlite3 results.sqlite3
+sqlite> .read results.sql
+sqlite> .exit
+```
+
+3. Extract error messages from JSON results
+
+```bash
+$ python3 error_messages.py
+```
+
+4. Parse error messages
+
+```bash
+$ for f in *.messages; do echo $f; perl parse_messages.pl $f; echo; done >messages.summary
+```
+
+5. Run analyses
+
+These can be run in any order.
+
+Calculate counts matrix (Main tables in Results section)
+
+```bash
+$ python3 counts_matrix.py
+```
+
+Fraction of libraries where all predictors agree
+
+```bash
+$ python3 agreement.py
+```
+
+Average fraction of libraries by predictor and filename cases. Only show for changed case- unchanged cases are complementary
+
+```bash
+$ python3 libraries_by_predictor.py
+```
+
+At least one predictor detects a breakage
+
+```bash
+$ python3 predictor_breakages.py
+```
+
+Fraction of libraries missing in the three-predictor case
+
+```bash
+$ python3 three_predictors_missing.py
+```
+
+Show error messages for a JSON file. Used for debugging.
+
+```bash
+$ python3 read_errors.py
+```
+
+### 4. Interface Generation
 
 The docs directory should already exist. Make sure you have dependencies installed:
 
