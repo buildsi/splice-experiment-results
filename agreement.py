@@ -10,33 +10,55 @@ def agreement(table, filename_changed, max_match):
     changed = "original<>changed" if filename_changed else "original=changed"
 
     query = f"""
-			select
-				count(1) / cast((select count(distinct original) from {table} where {changed}) as float)
-			from (
-				select
-					1
-				from
-					{table}
-				where
-				  {changed}
-				group by
-					original
-				having
-					count(case prediction when 1 then 1 else 0 end) in(0,{max_match})
-			)
-			"""
+      select
+        agree.cnt / cast(total.cnt as float) * 100.0
+      from
+      (
+        select
+          a, b, count(1) as cnt
+        from
+        (
+          select
+            a, b, original
+          from
+            {table}
+          where
+            {changed}
+          group by
+            a, b, original
+          having
+            sum(prediction) in(0, {max_match})
+        )
+        group by a, b
+      ) as agree
+      join (
+        select
+          a,b,count(distinct original) as cnt
+        from
+          {table}
+        where
+          {changed}
+        group by a,b
+      ) as total on
+        agree.a = total.a
+        and agree.b = total.b
+		"""
 
     cur.execute(query)
-    return cur.fetchone()
+    return cur.fetchall()
 
 
+print("Fraction of libraries where all predictors agree:")
+print("-" * 70)
 for t, m in (("two_predictors", 3), ("three_predictors", 4)):
-    print(f"Table: {t}\n", "-" * 20)
+    print(f" {t}\n", "-" * 20)
     for fnc in (True, False):
+        frac = []
+        for r in agreement(t, fnc, max_match=m):
+            frac.append(r[0])
         print(
-            "  ",
-            "filename {0:s}changed".format("" if fnc else "un"),
-            ":",
-            100.0 * agreement(t, fnc, max_match=m)[0],
+            "  {0:s}changed: avg: {1:.2f}%, min: {2:.2f}%, max: {3:.2f}%".format(
+                "" if fnc else "un", sum(frac) / len(frac), min(frac), max(frac)
+            )
         )
     print()
