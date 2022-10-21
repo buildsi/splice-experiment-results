@@ -7,7 +7,7 @@ open my $fdOut, '<', $ARGV[0] or die "Unable to open '$ARGV[0]': $!\n";
 
 my $num_libs=0;
 my %counts;
-
+my $file;
 while(<$fdOut>) {
 	chomp;
 	if(/^FILE--/) {
@@ -38,6 +38,14 @@ while(<$fdOut>) {
 		if(/Variable symbols changes summary/) {
 			/Variable symbols changes summary: (\d+) Removed.*?, (\d+) Added.*? variable symbol[s]? not referenced by debug info/;
 			&_update_abigail_syms($soname, 'varsyms', $1, $2);
+		}
+		if(/this (.+) a new entry to the vtable of class/) {
+			$counts{'libabigail'}{'vtable'}{'count'}++;
+			if($1 eq 'adds') {
+				$counts{'libabigail'}{'vtable'}{'added'}++;
+			} elsif($1 eq 'removes') {
+				$counts{'libabigail'}{'vtable'}{'removed'}++;
+			}
 		}
 	} elsif(/^abi-laboratory/) {
 		$counts{'abilab'}{'count'}++;
@@ -85,6 +93,8 @@ for my $soname ('soname_changed', 'soname_unchanged') {
 	print "          added: $tmp->{'added'}{'any'},$tmp->{'added'}{'only'}";
 		print "    Function subtype changes:";
 	print "          total: ", $tmp->{'subtype_changed'}{'count'}||0;
+	print "    Virtual Table modified:";
+	print "          total: ", $counts{'libabigail'}{'vtable'}{'count'}||0;
 	print "    Function symbols:";
 	$tmp = $counts{'libabigail'}{$soname}{'funcsyms'};
 	print "          total: $tmp->{'count'}";
