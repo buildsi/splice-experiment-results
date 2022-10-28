@@ -2,6 +2,7 @@ import fnmatch
 import json
 import os
 from glob import glob
+import re
 
 import pandas
 
@@ -127,6 +128,12 @@ def create_fedora_results_table(experiments, filename=False):
             analysis = p["command"]
         elif predictor == "libabigail":
             analysis = "abidiff"
+        
+        # ABI lab generate pass/fail results even when it can't find a debug file
+        # The debug files are present. This appears to be a bug in ABI lab.
+        if analysis == "abi-compliance-tester":
+          if re.search("ERROR: can't find debug info in object", p["message"], re.DOTALL):
+            prediction = "NODEBUG"
 
         row = [
             before,
