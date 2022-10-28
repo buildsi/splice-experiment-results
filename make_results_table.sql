@@ -12,6 +12,6 @@ delete from results where original in(select distinct original from results wher
 CREATE TABLE two_predictors("a" text, "b" text, "original" text, "changed" text, "analysis" text, "time" float, "predictor" text, "prediction" text);
 insert into two_predictors select * from results where predictor<>'abi-laboratory';
 
--- 'three_predictors' contains all results from predictors except those libraries where abi-lab crashed
+-- 'three_predictors' contains all results from predictors except those libraries where abi-lab crashed or couldn't find a debuginfo file
 CREATE TABLE three_predictors("a" text, "b" text, "original" text, "changed" text, "analysis" text, "time" float, "predictor" text, "prediction" text);
-insert into three_predictors select * from results where original not in(select distinct original from results where prediction='Terminated');
+insert into three_predictors select * from results where original not in(select distinct original from results where prediction in('Terminated','NODEBUG'));
