@@ -48,6 +48,19 @@ while(<$fdOut>) {
 				$counts{'libabigail'}{$soname}{'vtable'}{'removed'}++;
 			}
 		}
+		if(/\d+\s+enumerator\s+(.+)?\:/) {
+		  my $action = $1;
+		  $counts{'libabigail'}{$soname}{'enumerator'}{'count'}++;
+		  if($action =~ /change/) {
+				$counts{'libabigail'}{$soname}{'enumerator'}{'changed'}++;
+			}
+			if($action =~ /deletion/) {
+				$counts{'libabigail'}{$soname}{'enumerator'}{'removed'}++;
+			}
+			if($action =~ /insertion/) {
+				$counts{'libabigail'}{$soname}{'enumerator'}{'added'}++;
+			}
+		}
 	} elsif(/^abi-laboratory/) {
 		$counts{'abilab'}{'count'}++;
 		if(/ERROR\: can\'t find debug info in object/) {
@@ -98,6 +111,11 @@ for my $soname ('soname_changed', 'soname_unchanged') {
 	print "          total: ", $counts{'libabigail'}{$soname}{'vtable'}{'count'}||0;
 	print "          added: ", $counts{'libabigail'}{$soname}{'vtable'}{'added'}||0;
 	print "        removed: ", $counts{'libabigail'}{$soname}{'vtable'}{'removed'}||0;
+	print "    Enumerator changes:";
+	print "          total: ", $counts{'libabigail'}{$soname}{'enumerator'}{'count'}||0;
+	print "          added: ", $counts{'libabigail'}{$soname}{'enumerator'}{'added'}||0;
+	print "        removed: ", $counts{'libabigail'}{$soname}{'enumerator'}{'removed'}||0;
+	print "        changed: ", $counts{'libabigail'}{$soname}{'enumerator'}{'changed'}||0;
 	print "    Function symbols:";
 	$tmp = $counts{'libabigail'}{$soname}{'funcsyms'};
 	print "          total: $tmp->{'count'}";
