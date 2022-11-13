@@ -9,28 +9,36 @@ cur = con.cursor()
 def disagreement(
     table, pred1_name, pred1_state, pred2_name, pred2_state, filename_changed
 ):
+    changed = "original<>changed" if filename_changed else "original=changed"
     query = f"""
-    SELECT
-        count(1) as cnt
-    FROM
-        {table} as pr
-        JOIN  (
-        SELECT DISTINCT a,b,original FROM {table} WHERE analysis=? and prediction=?
-        ) AS syms ON
-            pr.a = syms.a
-            and pr.b = syms.b
-            and pr.original = syms.original
-    WHERE
-        analysis=?
-        and pr.prediction=?
+    select
+      count(1)
+    from
+    (
+      select
+        distinct a,b,original
+      from
+        {table}
+      where
+        analysis = '{pred1_name}'
+        and prediction = '{pred1_state}'
+        and {changed}
+    ) as pred1 join (
+      select
+        distinct a,b,original
+      from
+        {table}
+      where
+        analysis = '{pred2_name}'
+        and prediction = '{pred2_state}'
+        and {changed}
+    ) as pred2 on
+      pred1.a = pred2.a
+      and pred1.b = pred2.b
+      and pred1.original = pred2.original
     """
 
-    if filename_changed:
-        query += " and pr.original<>pr.changed"
-    else:
-        query += " and pr.original=pr.changed"
-
-    cur.execute(query, (pred1_name, pred1_state, pred2_name, pred2_state))
+    cur.execute(query)
     return cur.fetchone()
 
 
