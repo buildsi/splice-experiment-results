@@ -68,9 +68,6 @@ while(<$fdOut>) {
 		}
 	} elsif(/^missing-previously-found-symbols/) {
 		$counts{'symbols'}{'count'}++;
-		if(/\b.+_chk\b/) {
-			$counts{'symbols'}{'missing_chk'}++;
-		}
 	}
 }
 
@@ -138,4 +135,3 @@ print "abilab total: ", $counts{'abilab'}{'count'}||0;
 print "    no debug: ", $counts{'abilab'}{'nodebug'}||0;
 print '-'x20;
 print "symbols total: $counts{'symbols'}{'count'}";
-print "      no _chk: $counts{'symbols'}{'missing_chk'}";

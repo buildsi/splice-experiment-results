@@ -50,7 +50,7 @@ def agreement(table, filename_changed, max_match):
 
 print("Fraction of libraries where all predictors agree:")
 print("-" * 70)
-for t, m in (("two_predictors", 3), ("three_predictors", 4)):
+for t, m in (("two_predictors", 2), ("three_predictors", 3)):
     print(f" {t}\n", "-" * 20)
     for fnc in (True, False):
         frac = []
