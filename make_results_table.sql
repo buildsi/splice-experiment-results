@@ -8,6 +8,9 @@
 -- 'Unknown' results are linker script files
 delete from results where original in(select distinct original from results where prediction="Unknown");
 
+-- Keep only the missing-previously-found-exports from the symbols predictor
+delete from results where predictor = 'symbols' and analysis = 'missing-previously-found-symbols';
+
 -- 'two_predictors' contains all results except those from abi-laboratory
 CREATE TABLE two_predictors("a" text, "b" text, "original" text, "changed" text, "analysis" text, "time" float, "predictor" text, "prediction" text);
 insert into two_predictors select * from results where predictor<>'abi-laboratory';

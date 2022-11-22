@@ -75,8 +75,8 @@ def run(table, predictors):
         print("\n")
 
 
-predictors = ("missing-previously-found-symbols", "abidiff")
+predictors = ("missing-previously-found-exports", "abidiff")
 run("two_predictors", predictors)
 
-predictors = ("missing-previously-found-symbols", "abidiff", "abi-compliance-tester")
+predictors = ("missing-previously-found-exports", "abidiff", "abi-compliance-tester")
 run("three_predictors", predictors)
